@@ -31,14 +31,13 @@ def generate_interactive_farm_graph(output_filename=f"{outp}/{outp_file}"):
         detail_url = f"{detail_dir}/details_{name.lower().replace(' ', '_')}.html"
         net.add_node(name, label=name, shape="image", image=get_base64_asset(name, "machines"), size=MACHINE_SIZE, url=detail_url)
         prods = [item for item in ITEMS.values() if getattr(item, 'machine', None) and item.machine.name == name]
-        generate_detail_page_non_item(name, "machines", prods)
+        generate_detail_page_machine(name, prods)
 
     for name in INFRASTRUCTURE["pens"].keys():
         detail_url = f"{detail_dir}/details_{name.lower().replace(' ', '_')}.html"
         net.add_node(name, label=name, shape="image", image=get_base64_asset(name, "pens"), size=PEN_SIZE, url=detail_url)
         residents = [anim for anim_name, anim in LIVESTOCK.items() if anim.pen and anim.pen.name == name]
-        extra_info = {"Residents": ", ".join([r.name for r in residents])} if residents else None
-        generate_detail_page_non_item(name, "pens", [], extra_info)
+        generate_detail_page_pen(name, residents)
 
     for name in INFRASTRUCTURE["plant_structures"].keys():
         detail_url = f"{detail_dir}/details_{name.lower().replace(' ', '_')}.html"
@@ -49,7 +48,7 @@ def generate_interactive_farm_graph(output_filename=f"{outp}/{outp_file}"):
                 first_word_item = item_name.lower().split()[0]
                 if item_name.lower() in name.lower() or first_word_item in name.lower():
                     prods.append(item)
-        generate_detail_page_non_item(name, "plant_structures", prods)
+        generate_detail_page_plantable_structure(name, prods)
 
     for name in INFRASTRUCTURE["special_structures"].keys():
         detail_url = f"{detail_dir}/details_{name.lower().replace(' ', '_')}.html"
@@ -59,13 +58,13 @@ def generate_interactive_farm_graph(output_filename=f"{outp}/{outp_file}"):
             prods = [item for item_name, item in ITEMS.items() if item_name in ["Silver Ore", "Gold Ore", "Platinum Ore", "Iron Ore", "Coal"]]
         elif name == "Fishing Lake":
             prods = [item for item_name, item in ITEMS.items() if item_name == "Fish Fillet"]
-        generate_detail_page_non_item(name, "special_structures", prods)
+        generate_detail_page_special_structure(name, prods)
 
     for obj in INFRASTRUCTURE["fields"].keys():
         detail_url = f"{detail_dir}/details_{obj.lower().replace(' ', '_')}.html"
         net.add_node(obj, label=obj, shape="image", image=get_base64_asset(obj, "fields"), size=FIELD_SIZE, url=detail_url)
         prods = [item for item in ITEMS.values() if hasattr(item, 'planted_on') and item.planted_on and list(item.planted_on.keys())[0] == obj]
-        generate_detail_page_non_item(obj, "fields", prods)
+        generate_detail_page_field(obj, prods)
 
     # =====================================================================
     # 2. GENERATE LIVESTOCK (ANIMALS) NODES
@@ -80,8 +79,7 @@ def generate_interactive_farm_graph(output_filename=f"{outp}/{outp_file}"):
         if animal_obj.required_food:
             extra_info["Eats"] = f'<a href="details_{animal_obj.required_food.name.lower().replace(" ", "_")}.html" style="color:#f1a80a; font-weight:bold;">{animal_obj.required_food.name}</a>'
 
-        prods = [animal_obj.produces_item] if animal_obj.produces_item else []
-        generate_detail_page_non_item(name, "animals", prods, extra_info)
+        generate_detail_page_animal(name, animal_obj)
 
     # =====================================================================
     # 3. GENERATE ALL ITEM NODES & INGREDIENT LINKS
@@ -148,7 +146,6 @@ def generate_interactive_farm_graph(output_filename=f"{outp}/{outp_file}"):
 
 
 def generate_detail_page_item(name, item_obj, filename):
-    """Generates details view for individual catalog items."""
     item_img_base64 = get_base64_asset(name, "items")
     img_tag = f'<img class="item-image" src="{item_img_base64}" alt="{name}">' if item_img_base64 else ""
 
@@ -345,25 +342,16 @@ def generate_detail_page_item(name, item_obj, filename):
         f.write(html_content)
 
 
-def generate_detail_page_non_item(name, category, produces_items, extra_info=None):
-    """Generates a detail page for non-item nodes (Machines, Animals, Structures, etc.)"""
-    img_base64 = get_base64_asset(name, category)
+def generate_detail_page_machine(name, prods):
+    img_base64 = get_base64_asset(name, "machines")
     img_tag = f'<img class="item-image" src="{img_base64}" alt="{name}">' if img_base64 else ""
 
-    extra_html = ""
-    if extra_info:
-        extra_html += '<div class="financial-summary" style="flex-direction: column; text-align: left; gap: 8px;">'
-        for k, v in extra_info.items():
-            extra_html += f'<div><span class="fin-label" style="display:inline; margin-right:5px;">{k}:</span><span class="fin-val" style="font-size:0.9rem; color:#ffffff;">{v}</span></div>'
-        extra_html += '</div>'
-
     produces_html = ""
-    if produces_items:
-        for prod_item in produces_items:
+    if prods:
+        for prod_item in prods:
             prod_img = get_base64_asset(prod_item.name, "items")
             prod_url = f"details_{prod_item.name.lower().replace(' ', '_')}.html"
             time_lbl = ""
-
             raw_time = getattr(prod_item, 'time_to_make', None)
             if raw_time:
                 formatted_time = format_duration(raw_time)
@@ -381,12 +369,173 @@ def generate_detail_page_non_item(name, category, produces_items, extra_info=Non
         produces_html = '<div class="no-items">💤 Nothing directly produced here.</div>'
 
     filename = f"details_{name.lower().replace(' ', '_')}.html"
-    html_content = templates.render_non_item_page(
-        name=name, img_tag=img_tag, extra_html=extra_html,
-        produces_html=produces_html, back_target=outp_file
-    )
+    html_content = templates.render_machine_page(name, img_tag, produces_html, outp_file)
+    with open(os.path.join(outp, "details", filename), "w", encoding="utf-8") as f:
+        f.write(html_content)
 
-    os.makedirs(os.path.join(outp, "details"), exist_ok=True)
+
+def generate_detail_page_pen(name, residents):
+    img_base64 = get_base64_asset(name, "pens")
+    img_tag = f'<img class="item-image" src="{img_base64}" alt="{name}">' if img_base64 else ""
+
+    residents_html = ""
+    if residents:
+        for res in residents:
+            res_img = get_base64_asset(res.name, "animals")
+            res_url = f"details_{res.name.lower().replace(' ', '_')}.html"
+            residents_html += f"""
+            <a class="grid-item" href="{res_url}">
+                <img src="{res_img}" alt="{res.name}">
+                <div class="name">{res.name}</div>
+            </a>
+            """
+    else:
+        residents_html = '<div class="no-items">💤 Vacant Habitat.</div>'
+
+    filename = f"details_{name.lower().replace(' ', '_')}.html"
+    html_content = templates.render_pen_page(name, img_tag, residents_html, outp_file)
+    with open(os.path.join(outp, "details", filename), "w", encoding="utf-8") as f:
+        f.write(html_content)
+
+
+def generate_detail_page_plantable_structure(name, prods):
+    img_base64 = get_base64_asset(name, "plant_structures")
+    img_tag = f'<img class="item-image" src="{img_base64}" alt="{name}">' if img_base64 else ""
+
+    produces_html = ""
+    if prods:
+        for prod_item in prods:
+            prod_img = get_base64_asset(prod_item.name, "items")
+            prod_url = f"details_{prod_item.name.lower().replace(' ', '_')}.html"
+            produces_html += f"""
+            <a class="grid-item" href="{prod_url}">
+                <img src="{prod_img}" alt="{prod_item.name}">
+                <div class="name">{prod_item.name}</div>
+            </a>
+            """
+    else:
+        produces_html = '<div class="no-items">💤 Nothing grown here.</div>'
+
+    filename = f"details_{name.lower().replace(' ', '_')}.html"
+    html_content = templates.render_plantable_structure_page(name, img_tag, produces_html, outp_file)
+    with open(os.path.join(outp, "details", filename), "w", encoding="utf-8") as f:
+        f.write(html_content)
+
+
+def generate_detail_page_special_structure(name, prods):
+    img_base64 = get_base64_asset(name, "special_structures")
+    img_tag = f'<img class="item-image" src="{img_base64}" alt="{name}">' if img_base64 else ""
+
+    produces_html = ""
+    if prods:
+        for prod_item in prods:
+            prod_img = get_base64_asset(prod_item.name, "items")
+            prod_url = f"details_{prod_item.name.lower().replace(' ', '_')}.html"
+            produces_html += f"""
+            <a class="grid-item" href="{prod_url}">
+                <img src="{prod_img}" alt="{prod_item.name}">
+                <div class="name">{prod_item.name}</div>
+            </a>
+            """
+    else:
+        produces_html = '<div class="no-items">💤 Nothing harvested here.</div>'
+
+    filename = f"details_{name.lower().replace(' ', '_')}.html"
+    html_content = templates.render_special_structure_page(name, img_tag, produces_html, outp_file)
+    with open(os.path.join(outp, "details", filename), "w", encoding="utf-8") as f:
+        f.write(html_content)
+
+
+def generate_detail_page_field(name, prods):
+    img_base64 = get_base64_asset(name, "fields")
+    img_tag = f'<img class="item-image" src="{img_base64}" alt="{name}">' if img_base64 else ""
+
+    produces_html = ""
+    if prods:
+        for prod_item in prods:
+            prod_img = get_base64_asset(prod_item.name, "items")
+            prod_url = f"details_{prod_item.name.lower().replace(' ', '_')}.html"
+
+            # Extract and format growing time (similar to machine yields)
+            time_lbl = ""
+            raw_time = getattr(prod_item, 'time_to_make', None)
+            if raw_time:
+                formatted_time = format_duration(raw_time)
+                if formatted_time:
+                    time_lbl = f'<div class="qty-badge" style="background-color: #3498db; color: white; font-size: 0.6rem;">{formatted_time}</div>'
+
+            produces_html += f"""
+                <a class="grid-item" href="{prod_url}">
+                    {time_lbl}
+                    <img src="{prod_img}" alt="{prod_item.name}">
+                    <div class="name">{prod_item.name}</div>
+                </a>
+                """
+    else:
+        produces_html = '<div class="no-items">💤 Crop soil is currently fallow.</div>'
+
+    filename = f"details_{name.lower().replace(' ', '_')}.html"
+    html_content = templates.render_field_page(name, img_tag, produces_html, outp_file)
+    with open(os.path.join(outp, "details", filename), "w", encoding="utf-8") as f:
+        f.write(html_content)
+
+
+def generate_detail_page_animal(name, animal_obj):
+    img_base64 = get_base64_asset(name, "animals")
+    img_tag = f'<img class="item-image" src="{img_base64}" alt="{name}">' if img_base64 else ""
+
+    # Lives in Habitat Setup
+    lives_in_html = '<span style="color:#888;">Nomad / No Pen</span>'
+    if animal_obj.pen:
+        pen_name = animal_obj.pen.name
+        pen_img = get_base64_asset(pen_name, "pens")
+        pen_url = f"details_{pen_name.lower().replace(' ', '_')}.html"
+        lives_in_html = f"""
+        <a href="{pen_url}" style="text-decoration:none; display:flex; align-items:center; gap:8px;">
+            <img src="{pen_img}" style="width:24px; height:24px; object-fit:contain;" alt="{pen_name}">
+            <span style="color:#f1a80a; font-weight:bold; font-size:0.85rem;">{pen_name}</span>
+        </a>
+        """
+
+    # Diet Setup
+    food_html = '<span style="color:#888;">Forages / No Food</span>'
+    if animal_obj.required_food:
+        food_name = animal_obj.required_food.name
+        food_img = get_base64_asset(food_name, "items")
+        food_url = f"details_{food_name.lower().replace(' ', '_')}.html"
+        food_html = f"""
+        <a href="{food_url}" style="text-decoration:none; display:flex; align-items:center; gap:8px;">
+            <img src="{food_img}" style="width:24px; height:24px; object-fit:contain;" alt="{food_name}">
+            <span style="color:#f1a80a; font-weight:bold; font-size:0.85rem;">{food_name}</span>
+        </a>
+        """
+
+    # Produces Product setup
+    produces_html = ""
+    if animal_obj.produces_item:
+        prod_name = animal_obj.produces_item.name
+        prod_img = get_base64_asset(prod_name, "items")
+        prod_url = f"details_{prod_name.lower().replace(' ', '_')}.html"
+
+        time_lbl = ""
+        raw_time = getattr(animal_obj.produces_item, 'time_to_make', None)
+        if raw_time:
+            formatted_time = format_duration(raw_time)
+            if formatted_time:
+                time_lbl = f'<div class="qty-badge" style="background-color: #3498db; color: white; font-size: 0.6rem;">{formatted_time}</div>'
+
+        produces_html += f"""
+        <a class="grid-item" href="{prod_url}">
+            {time_lbl}
+            <img src="{prod_img}" alt="{prod_name}">
+            <div class="name">{prod_name}</div>
+        </a>
+        """
+    else:
+        produces_html = '<div class="no-items">💤 Yields no products.</div>'
+
+    filename = f"details_{name.lower().replace(' ', '_')}.html"
+    html_content = templates.render_animal_page(name, img_tag, food_html, produces_html, lives_in_html, outp_file)
     with open(os.path.join(outp, "details", filename), "w", encoding="utf-8") as f:
         f.write(html_content)
 
