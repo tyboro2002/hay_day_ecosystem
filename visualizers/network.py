@@ -7,6 +7,11 @@ from visualizers.helpers.formatting import format_duration, get_base64_asset
 import visualizers.helpers.formatting as formatting
 import visualizers.helpers.templates as templates
 
+# get new assets from
+# https://fankit.supercell.com/d/QSVyhmM7gdGe/game-assets
+# if not found there look at
+# https://hayday.fandom.com/wiki
+
 outp = "docs"
 outp_file = "index.html"
 detail_dir = "details"

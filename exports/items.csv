@@ -42,7 +42,7 @@ Raspberry Muffin,MachinedItem,140.4,45,Bakery,"Wheat x2, Egg x1, Raspberry x2"
 Blackberry Muffin,MachinedItem,226.8,45,Bakery,"Wheat x2, Egg x2, Blackberry x2"
 Pizza,MachinedItem,190.8,15,Bakery,"Wheat x2, Tomato x1, Cheese x1"
 Blueberry muffin,MachinedItem,230.4,45,Bakery,"Wheat x1, Egg x2, Blueberry x2"
-Spicy pizza,MachinedItem,226.0,15,Bakery,"Wheat x2, Tomato x1, Cheese x1, Chili Pepper x1"
+Spicy pizza,MachinedItem,226.8,15,Bakery,"Wheat x2, Tomato x1, Cheese x1, Chili Pepper x1"
 Potato Bread,MachinedItem,284.4,45,Bakery,"Potato x2, White Sugar x1, Egg x3, Butter x1"
 Cream,MachinedItem,50.4,20,Dairy,Milk x1
 Butter,MachinedItem,82.8,30,Dairy,Milk x2
@@ -55,6 +55,7 @@ Popcorn,MachinedItem,32.4,30,Popcorn Pot,Corn x2
 Buttered Popcorn,MachinedItem,126.0,60,Popcorn Pot,"Corn x2, Butter x1"
 Chili Popcorn,MachinedItem,122.4,120,Popcorn Pot,"Corn x2, Chili Pepper x1"
 Honey Popcorn,MachinedItem,360.0,90,Popcorn Pot,"Corn x2, Honey x2"
+Chocolate Popcorn,MachinedItem,248.0,150,Popcorn Pot,"Corn x2, Cacao x2"
 Pancake,MachinedItem,108.0,30,BBQ Grill,"Egg x3, Brown Sugar x1"
 Bacon And Eggs,MachinedItem,201.6,60,BBQ Grill,"Egg x4, Bacon x2"
 Hamburger,MachinedItem,180.0,120,BBQ Grill,"Bread x2, Bacon x2"
@@ -85,8 +86,8 @@ Cheesecake,MachinedItem,284.4,240,Cake Oven,"Cookie x1, Cheese x1"
 Blueberry Cheesecake,MachinedItem,500.4,240,Cake Oven,"Cheesecake x1, Blueberry x2"
 Strawberry Cake,MachinedItem,316.8,180,Cake Oven,"Cream x1, Strawberry x2, Wheat x3, White Sugar x1"
 Chocolate Cake,MachinedItem,320.4,120,Cake Oven,"Brown Sugar x1, Butter x1, Cacao x2"
-Potato Feta Cake,MachinedItem,309.0,120,Cake Oven,"Egg x4, Goat Cheese x1, Potato x1"
-Honey Apple Cake,MachinedItem,482.0,200,Cake Oven,"Honey x2, Apple x2, Egg x2, Wheat x2"
+Potato Feta Cake,MachinedItem,309.6,120,Cake Oven,"Egg x4, Goat Cheese x1, Potato x1"
+Honey Apple Cake,MachinedItem,482.4,200,Cake Oven,"Honey x2, Apple x2, Egg x2, Wheat x2"
 Silver Bar,MachinedItem,147.6,480,Smelter,Silver Ore x3
 Gold Bar,MachinedItem,180.0,720,Smelter,Gold Ore x3
 Platinum Bar,MachinedItem,205.2,960,Smelter,Platinum Ore x3
@@ -107,12 +108,14 @@ Apple Jam,MachinedItem,219.0,360,Jam Maker,Apple x3
 Raspberry Jam,MachinedItem,252.0,420,Jam Maker,Raspberry x3
 Blackberry Jam,MachinedItem,388.8,480,Jam Maker,Blackberry x3
 Cherry Jam,MachinedItem,334.0,420,Jam Maker,Cherry x3
-Bracelet,MachinedItem,514.0,120,Jeweler,"Gold Bar x1, Silver Bar x2"
+Bracelet,MachinedItem,514.8,120,Jeweler,"Gold Bar x1, Silver Bar x2"
 Necklace,MachinedItem,727.2,180,Jeweler,"Gold Bar x1, Platinum Bar x1, Silver Bar x2"
 Diamond Ring,MachinedItem,824.4,240,Jeweler,"Diamond x1, Platinum Bar x2, Gold Bar x2"
-Iron Bracelet,MachinedItem,658.0,90,Jeweler,"Iron Bar x2, Refined coal x2, Silver Bar x1"
+Iron Bracelet,MachinedItem,658.8,90,Jeweler,"Iron Bar x2, Refined coal x2, Silver Bar x1"
 Honey,MachinedItem,154.0,20,Honey Extractor,Honeycomb x2
 Espresso,MachinedItem,248.0,5,Coffee Kiosk,"Coffee Bean x3, White Sugar x1"
+Caffè Latte,MachinedItem,219.0,10,Coffee Kiosk,"Coffee Bean x2, White Sugar x1, Milk x1"
+Lobster Tail,MachinedItem,201.0,360,Lobster Pool,None
 Axe,SpecialItem,36.0,0,None,None
 Saw,SpecialItem,54.0,0,None,None
 Dynamite,SpecialItem,25.2,0,None,None

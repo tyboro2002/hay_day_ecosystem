@@ -76,7 +76,8 @@ item_measurements = {
     "Baked Potato":{1: 298, 2: 597, 3: 896, 4: 1195},
     "Honey":{1: 154, 2: 309, 3: 464, 4: 619, 5: 774},
     "Espresso": {},
-    "Caffè Latte": {1: 219, 2: 439, 3: 658, 4: 878}
+    "Caffè Latte": {1: 219, 2: 439, 3: 658, 4: 878},
+    "Lobster Tail": {}
 }
 
 def run_report():
