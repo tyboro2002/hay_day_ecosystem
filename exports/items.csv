@@ -1,0 +1,142 @@
+Item Name,Class Type,Sell Price,Time To Make (Mins),Source Machine/Structure,Ingredients Needed
+Wheat,Crop,3.6,2,None,None
+Corn,Crop,7.2,5,None,None
+Carrot,Crop,7.2,10,None,None
+Sugarcane,Crop,14.4,30,None,None
+Soybean,Crop,10.8,20,None,None
+Indigo,Crop,25.2,120,None,None
+Pumpkin,Crop,32.4,180,None,None
+Black Bean,Crop,7.2,10,None,None
+Chili Pepper,Crop,36.0,240,None,None
+Cotton,Crop,28.8,150,None,None
+Tomato,Crop,43.2,360,None,None
+Strawberry,Crop,50.4,480,None,None
+Potato,Crop,36.0,220,None,None
+Apple,PlantableItem,39.6,960,None,None
+Raspberry,PlantableItem,46.8,1080,None,None
+Cherry,PlantableItem,68.4,1620,None,None
+Blackberry,PlantableItem,82.8,2040,None,None
+Blueberry,PlantableItem,82.8,2160,None,None
+Cacao,PlantableItem,86.4,2160,None,None
+Coffee Bean,PlantableItem,64.8,1500,None,None
+Egg,AnimalItem,18.0,20,Chicken Coop,None
+Milk,AnimalItem,32.4,60,Cow Pasture,None
+Bacon,AnimalItem,50.4,240,Pig Pen,None
+Wool,AnimalItem,54.0,360,Sheep Pasture,None
+Lamb Chop,AnimalItem,36.0,30,Lamb Pasture,None
+Fish Fillet,AnimalItem,54.0,0,Fishing Lake,None
+Goat Milk,AnimalItem,64.8,480,Goat Yard,None
+Honeycomb,AnimalItem,68.4,35,Beehive Tree,None
+Chicken Feed,MachinedItem,7.2,5,Feed Mill,"Wheat x0.6666666666666666, Corn x0.3333333333333333"
+Cow Feed,MachinedItem,14.4,10,Feed Mill,"Corn x0.3333333333333333, Soybean x0.6666666666666666"
+Pig Feed,MachinedItem,14.4,20,Feed Mill,"Carrot x0.6666666666666666, Soybean x0.3333333333333333"
+Sheep Feed,MachinedItem,14.4,30,Feed Mill,"Wheat x1.0, Soybean x0.3333333333333333"
+Lamb Feed,MachinedItem,18.0,10,Feed Mill,"Black Bean x1.3333333333333333, Soybean x0.6666666666666666"
+Goat Feed,MachinedItem,14.4,40,Feed Mill,"Carrot x0.6666666666666666, Corn x0.3333333333333333, Wheat x0.3333333333333333"
+Wheat Bundle,MachinedItem,50.4,90,Feed Mill,Wheat x25.0
+Meat Bucket,MachinedItem,72.0,45,Feed Mill,"Fish Fillet x1.0, Carrot x1.6666666666666667"
+Bread,MachinedItem,21.6,5,Bakery,Wheat x3
+Corn Bread,MachinedItem,72.0,30,Bakery,"Corn x2, Egg x2"
+Cookie,MachinedItem,104.4,60,Bakery,"Wheat x2, Egg x2, Brown Sugar x1"
+Raspberry Muffin,MachinedItem,140.4,45,Bakery,"Wheat x2, Egg x1, Raspberry x2"
+Blackberry Muffin,MachinedItem,226.8,45,Bakery,"Wheat x2, Egg x2, Blackberry x2"
+Pizza,MachinedItem,190.8,15,Bakery,"Wheat x2, Tomato x1, Cheese x1"
+Blueberry muffin,MachinedItem,230.4,45,Bakery,"Wheat x1, Egg x2, Blueberry x2"
+Spicy pizza,MachinedItem,226.0,15,Bakery,"Wheat x2, Tomato x1, Cheese x1, Chili Pepper x1"
+Potato Bread,MachinedItem,284.4,45,Bakery,"Potato x2, White Sugar x1, Egg x3, Butter x1"
+Cream,MachinedItem,50.4,20,Dairy,Milk x1
+Butter,MachinedItem,82.8,30,Dairy,Milk x2
+Cheese,MachinedItem,122.4,60,Dairy,Milk x3
+Goat Cheese,MachinedItem,162.0,90,Dairy,Goat Milk x2
+Brown Sugar,MachinedItem,32.4,20,Sugar Mill,Sugarcane x1
+White Sugar,MachinedItem,50.4,40,Sugar Mill,Sugarcane x2
+Syrup,MachinedItem,90.0,90,Sugar Mill,Sugarcane x4
+Popcorn,MachinedItem,32.4,30,Popcorn Pot,Corn x2
+Buttered Popcorn,MachinedItem,126.0,60,Popcorn Pot,"Corn x2, Butter x1"
+Chili Popcorn,MachinedItem,122.4,120,Popcorn Pot,"Corn x2, Chili Pepper x1"
+Honey Popcorn,MachinedItem,360.0,90,Popcorn Pot,"Corn x2, Honey x2"
+Pancake,MachinedItem,108.0,30,BBQ Grill,"Egg x3, Brown Sugar x1"
+Bacon And Eggs,MachinedItem,201.6,60,BBQ Grill,"Egg x4, Bacon x2"
+Hamburger,MachinedItem,180.0,120,BBQ Grill,"Bread x2, Bacon x2"
+Grilled Lamb Skewer,MachinedItem,90.0,20,BBQ Grill,Lamb Chop x2
+Fish Burger,MachinedItem,226.8,120,BBQ Grill,"Bread x2, Fish Fillet x2, Chili Pepper x1"
+Roasted Tomatoes,MachinedItem,118.8,90,BBQ Grill,Tomato x2
+Baked Potato,MachinedItem,298.0,35,BBQ Grill,"Cheese x1, Chili Pepper x1, Cream x1, Potato x2"
+Fish And Chips,MachinedItem,244.8,90,BBQ Grill,"Fish Fillet x2, Potato x3"
+Carrot Pie,MachinedItem,82.8,60,Pie Oven,"Wheat x2, Egg x1, Carrot x3"
+Pumpkin Pie,MachinedItem,158.4,120,Pie Oven,"Wheat x2, Egg x1, Pumpkin x3"
+Bacon Pie,MachinedItem,219.6,180,Pie Oven,"Wheat x2, Egg x1, Bacon x3"
+Apple Pie,MachinedItem,270.0,150,Pie Oven,"Wheat x2, Egg x1, Syrup x1, Apple x3"
+Fish Pie,MachinedItem,226.8,120,Pie Oven,"Wheat x2, Egg x1, Fish Fillet x3"
+Feta Pie,MachinedItem,223.2,90,Pie Oven,"Goat Cheese x1, Egg x1, Wheat x2"
+Casserole,MachinedItem,367.2,120,Pie Oven,"Bacon x2, Cheese x1, Egg x2, Potato x2"
+Shepherd's Pie,MachinedItem,280.8,100,Pie Oven,"Potato x2, Carrot x2, Bacon x2, Pumpkin x2"
+Sweater,MachinedItem,151.2,120,Loom,Wool x2
+Cotton Fabric,MachinedItem,108.0,30,Loom,Cotton x3
+Blue Woolly Hat,MachinedItem,111.6,60,Loom,"Wool x1, Indigo x1"
+Blue Sweater,MachinedItem,208.8,180,Loom,"Wool x2, Indigo x2"
+Cotton Shirt,MachinedItem,241.2,45,Sewing Machine,Cotton Fabric x2
+Wooly Chaps,MachinedItem,309.6,90,Sewing Machine,"Wool x3, Cotton Fabric x1"
+Violet Dress,MachinedItem,327.6,135,Sewing Machine,"Indigo x1, Cotton Fabric x2, Raspberry x1"
+Carrot Cake,MachinedItem,165.6,90,Cake Oven,"Carrot x2, Butter x1, Brown Sugar x1"
+Cream Cake,MachinedItem,219.6,180,Cake Oven,"Wheat x5, Cream x1, White Sugar x1"
+Red Berry Cake,MachinedItem,255.6,60,Cake Oven,"Milk x1, Egg x1, Raspberry x1, Cherry x2"
+Cheesecake,MachinedItem,284.4,240,Cake Oven,"Cookie x1, Cheese x1"
+Blueberry Cheesecake,MachinedItem,500.4,240,Cake Oven,"Cheesecake x1, Blueberry x2"
+Strawberry Cake,MachinedItem,316.8,180,Cake Oven,"Cream x1, Strawberry x2, Wheat x3, White Sugar x1"
+Chocolate Cake,MachinedItem,320.4,120,Cake Oven,"Brown Sugar x1, Butter x1, Cacao x2"
+Potato Feta Cake,MachinedItem,309.0,120,Cake Oven,"Egg x4, Goat Cheese x1, Potato x1"
+Honey Apple Cake,MachinedItem,482.0,200,Cake Oven,"Honey x2, Apple x2, Egg x2, Wheat x2"
+Silver Bar,MachinedItem,147.6,480,Smelter,Silver Ore x3
+Gold Bar,MachinedItem,180.0,720,Smelter,Gold Ore x3
+Platinum Bar,MachinedItem,205.2,960,Smelter,Platinum Ore x3
+Refined coal,MachinedItem,108.0,360,Smelter,Coal x3
+Iron Bar,MachinedItem,129.6,420,Smelter,Iron Ore x3
+Carrot Juice,MachinedItem,46.8,30,Juice Press,Carrot x3
+Apple Juice,MachinedItem,129.6,120,Juice Press,Apple x2
+Cherry Juice,MachinedItem,216.0,150,Juice Press,Cherry x2
+Tomato Juice,MachinedItem,162.0,90,Juice Press,Tomato x3
+Berry Juice,MachinedItem,205.2,180,Juice Press,"Blackberry x1, Raspberry x1"
+Vanilla Ice Cream,MachinedItem,172.8,120,Ice Cream Maker,"Milk x1, Cream x1, White Sugar x1"
+Cherry Popsicle,MachinedItem,352.8,180,Ice Cream Maker,"Cherry Juice x1, Syrup x1"
+Strawberry Ice Cream,MachinedItem,331.2,240,Ice Cream Maker,"Milk x1, Cream x1, White Sugar x1, Strawberry x3"
+Chocolate Ice Cream,MachinedItem,342.0,150,Ice Cream Maker,"Milk x1, Cream x1, White Sugar x1, Cacao x2"
+Lamb doner wrap,MachinedItem,172.8,20,Doner Kebab Stand,"Grilled Lamb Skewer x1, Tomato x1, Bread x1"
+Spicy bean doner,MachinedItem,172.8,30,Doner Kebab Stand,"Black Bean x3, Chili Pepper x3, Cheese x2, Corn Bread x1"
+Apple Jam,MachinedItem,219.0,360,Jam Maker,Apple x3
+Raspberry Jam,MachinedItem,252.0,420,Jam Maker,Raspberry x3
+Blackberry Jam,MachinedItem,388.8,480,Jam Maker,Blackberry x3
+Cherry Jam,MachinedItem,334.0,420,Jam Maker,Cherry x3
+Bracelet,MachinedItem,514.0,120,Jeweler,"Gold Bar x1, Silver Bar x2"
+Necklace,MachinedItem,727.2,180,Jeweler,"Gold Bar x1, Platinum Bar x1, Silver Bar x2"
+Diamond Ring,MachinedItem,824.4,240,Jeweler,"Diamond x1, Platinum Bar x2, Gold Bar x2"
+Iron Bracelet,MachinedItem,658.0,90,Jeweler,"Iron Bar x2, Refined coal x2, Silver Bar x1"
+Honey,MachinedItem,154.0,20,Honey Extractor,Honeycomb x2
+Espresso,MachinedItem,248.0,5,Coffee Kiosk,"Coffee Bean x3, White Sugar x1"
+Axe,SpecialItem,36.0,0,None,None
+Saw,SpecialItem,54.0,0,None,None
+Dynamite,SpecialItem,25.2,0,None,None
+TNT,SpecialItem,72.0,0,None,None
+Shovel,SpecialItem,108.0,0,None,None
+Silver Ore,SpecialItem,18.0,0,Mine,None
+Gold Ore,SpecialItem,21.6,0,Mine,None
+Platinum Ore,SpecialItem,32.4,0,Mine,None
+Coal,SpecialItem,10.8,0,Mine,None
+Iron Ore,SpecialItem,14.4,0,Mine,None
+Nail,SpecialItem,270.0,0,None,None
+Screw,SpecialItem,270.0,0,None,None
+Wood Panel,SpecialItem,270.0,0,None,None
+Bolt,SpecialItem,270.0,0,None,None
+Plank,SpecialItem,270.0,0,None,None
+Duct Tape,SpecialItem,270.0,0,None,None
+Land Deed,SpecialItem,403.2,0,None,None
+Mallet,SpecialItem,403.2,0,None,None
+Marker Stake,SpecialItem,403.2,0,None,None
+Map Piece,SpecialItem,450.0,0,None,None
+Stone Block,SpecialItem,342.0,0,None,None
+Hammer,SpecialItem,342.0,0,None,None
+Paint Bucket,SpecialItem,342.0,0,None,None
+Tar Bucket,SpecialItem,342.0,0,None,None
+Hand Drill,SpecialItem,342.0,0,None,None
+Brick,SpecialItem,342.0,0,None,None
+Diamond,SpecialItem,,0,None,None

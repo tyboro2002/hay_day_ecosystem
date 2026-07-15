@@ -1,0 +1,25 @@
+# --- SEWING MACHINE PRODUCTION ---
+
+Cotton Shirt:
+  time_to_make: 45
+  sell_price: 241.2
+  xp: 29
+  ingredients:
+    Cotton Fabric: 2
+
+Wooly Chaps:
+  time_to_make: 90 # (1 * 60) + 30
+  sell_price: 309.6
+  xp: 37
+  ingredients:
+    Wool: 3
+    Cotton Fabric: 1
+
+Violet Dress:
+  time_to_make: 135 # (2 * 60) + 15
+  sell_price: 327.6
+  xp: 39
+  ingredients:
+    Indigo: 1
+    Cotton Fabric: 2
+    Raspberry: 1

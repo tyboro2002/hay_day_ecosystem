@@ -1,0 +1,36 @@
+# --- JEWELER PRODUCTION ---
+
+Bracelet:
+  time_to_make: 120 # 2h
+  sell_price: 514.8
+  xp: 61
+  ingredients:
+    Gold Bar: 1
+    Silver Bar: 2
+
+Necklace:
+  time_to_make: 180 # 3h
+  sell_price: 727.2
+  xp: 87
+  ingredients:
+    Gold Bar: 1
+    Platinum Bar: 1
+    Silver Bar: 2
+
+Diamond Ring:
+  time_to_make: 240 # 4h
+  sell_price: 824.4
+  xp: 98
+  ingredients:
+    Diamond: 1
+    Platinum Bar: 2
+    Gold Bar: 2
+
+Iron Bracelet:
+  time_to_make: 90 # 1h30
+  sell_price: 658.8
+  xp: 79
+  ingredients:
+    Iron Bar: 2
+    Refined coal: 2
+    Silver Bar: 1

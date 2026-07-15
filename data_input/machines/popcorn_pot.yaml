@@ -1,0 +1,32 @@
+# --- POPCORN POT PRODUCTION ---
+
+Popcorn:
+  time_to_make: 30
+  sell_price: 32.4
+  xp: 4
+  ingredients:
+    Corn: 2
+
+Buttered Popcorn:
+  time_to_make: 60 # 1 * 60
+  sell_price: 126.0
+  xp: 15
+  ingredients:
+    Corn: 2
+    Butter: 1
+
+Chili Popcorn:
+  time_to_make: 120 # 2 * 60
+  sell_price: 122.4
+  xp: 15
+  ingredients:
+    Corn: 2
+    Chili Pepper: 1
+
+Honey Popcorn:
+  time_to_make: 90 # 1h30
+  sell_price: 360.0 # TODO: check price
+  xp: 43
+  ingredients:
+    Corn: 2
+    Honey: 2

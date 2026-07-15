@@ -1,0 +1,67 @@
+# --- ANIMAL FEED PRODUCTION ---
+# Note: batch_recipe represents the total ingredients required for a full batch of 3 bags.
+# All items in this file are automatically assigned to the "Feed Mill" machine.
+
+Chicken Feed:
+  time_to_make: 5
+  sell_price: 7.2
+  xp: 1
+  batch_recipe:
+    Wheat: 2
+    Corn: 1
+
+Cow Feed:
+  time_to_make: 10
+  sell_price: 14.4
+  xp: 2
+  batch_recipe:
+    Corn: 1
+    Soybean: 2
+
+Pig Feed:
+  time_to_make: 20
+  sell_price: 14.4
+  xp: 2
+  batch_recipe:
+    Carrot: 2
+    Soybean: 1
+
+Sheep Feed:
+  time_to_make: 30
+  sell_price: 14.4
+  xp: 3
+  batch_recipe:
+    Wheat: 3
+    Soybean: 1
+
+Lamb Feed:
+  time_to_make: 10
+  sell_price: 18.0
+  xp: 4
+  batch_recipe:
+    Black Bean: 4
+    Soybean: 2
+
+Goat Feed:
+  time_to_make: 40
+  sell_price: 14.4
+  xp: 3
+  batch_recipe:
+    Carrot: 2
+    Corn: 1
+    Wheat: 1
+
+Wheat Bundle:
+  time_to_make: 90 # 1h30
+  sell_price: 50.4
+  xp: 10
+  batch_recipe:
+    Wheat: 75
+
+Meat Bucket: # TODO check price
+  time_to_make: 45
+  sell_price: 72.0
+  xp: 15
+  batch_recipe:
+    Fish Fillet: 3
+    Carrot: 5

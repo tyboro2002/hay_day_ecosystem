@@ -1,0 +1,81 @@
+# --- BAKERY PRODUCTION ---
+
+Bread:
+  time_to_make: 5
+  sell_price: 21.6
+  xp: 3
+  ingredients:
+    Wheat: 3
+
+Corn Bread:
+  time_to_make: 30
+  sell_price: 72.0
+  xp: 8
+  ingredients:
+    Corn: 2
+    Egg: 2
+
+Cookie:
+  time_to_make: 60 # 1 * 60
+  sell_price: 104.4
+  xp: 13
+  ingredients:
+    Wheat: 2
+    Egg: 2
+    Brown Sugar: 1
+
+Raspberry Muffin:
+  time_to_make: 45
+  sell_price: 140.4
+  xp: 17
+  ingredients:
+    Wheat: 2
+    Egg: 1
+    Raspberry: 2
+
+Blackberry Muffin:
+  time_to_make: 45
+  sell_price: 226.8
+  xp: 27
+  ingredients:
+    Wheat: 2
+    Egg: 2
+    Blackberry: 2
+
+Pizza:
+  time_to_make: 15
+  sell_price: 190.8
+  xp: 23
+  ingredients:
+    Wheat: 2
+    Tomato: 1
+    Cheese: 1
+
+Blueberry muffin:
+  time_to_make: 45
+  sell_price: 230.4
+  xp: 28
+  ingredients:
+    Wheat: 1
+    Egg: 2
+    Blueberry: 2
+
+Spicy pizza:
+  time_to_make: 15
+  sell_price: 226.8
+  xp: 27
+  ingredients:
+    Wheat: 2
+    Tomato: 1
+    Cheese: 1
+    Chili Pepper: 1
+
+Potato Bread:
+  time_to_make: 45
+  sell_price: 284.4
+  xp: 34
+  ingredients:
+    Potato: 2
+    White Sugar: 1
+    Egg: 3
+    Butter: 1

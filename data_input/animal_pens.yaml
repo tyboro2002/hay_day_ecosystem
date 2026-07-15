@@ -1,0 +1,36 @@
+# --- ANIMAL PEN INFRASTRUCTURE ---
+
+Chicken Coop:
+  max_capacity: 6
+  current_capacity: 6
+  amount_owned: 3
+
+Cow Pasture:
+  max_capacity: 5
+  current_capacity: 5
+  amount_owned: 3
+
+Pig Pen:
+  max_capacity: 5
+  current_capacity: 5
+  amount_owned: 3
+
+Sheep Pasture:
+  max_capacity: 5
+  current_capacity: 5
+  amount_owned: 2
+
+Lamb Pasture:
+  max_capacity: 5
+  current_capacity: 5
+  amount_owned: 1
+
+Goat Yard:
+  max_capacity: 4
+  current_capacity: 4
+  amount_owned: 1
+
+Beehive Tree:
+  max_capacity: 4
+  current_capacity: 1
+  amount_owned: 1

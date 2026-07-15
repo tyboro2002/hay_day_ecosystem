@@ -1,0 +1,66 @@
+# --- BBQ GRILL PRODUCTION ---
+
+Pancake:
+  time_to_make: 30
+  sell_price: 108.0 # TODO: check price
+  xp: 13
+  ingredients:
+    Egg: 3
+    Brown Sugar: 1
+
+Bacon And Eggs:
+  time_to_make: 60 # 1 * 60
+  sell_price: 201.6
+  xp: 24
+  ingredients:
+    Egg: 4
+    Bacon: 2
+
+Hamburger:
+  time_to_make: 120 # 2 * 60
+  sell_price: 180.0
+  xp: 22
+  ingredients:
+    Bread: 2
+    Bacon: 2
+
+Grilled Lamb Skewer:
+  time_to_make: 20
+  sell_price: 90.0
+  xp: 11
+  ingredients:
+    Lamb Chop: 2
+
+Fish Burger:
+  time_to_make: 120 # 2 * 60
+  sell_price: 226.8
+  xp: 27
+  ingredients:
+    Bread: 2
+    Fish Fillet: 2
+    Chili Pepper: 1
+
+Roasted Tomatoes:
+  time_to_make: 90 # (1 * 60) + 30
+  sell_price: 118.8
+  xp: 14
+  ingredients:
+    Tomato: 2
+
+Baked Potato:
+  time_to_make: 35
+  sell_price: 298.0 # TODO: check price
+  xp: 36
+  ingredients:
+    Cheese: 1
+    Chili Pepper: 1
+    Cream: 1
+    Potato: 2
+
+Fish And Chips:
+  time_to_make: 90 # 1h30
+  sell_price: 244.8
+  xp: 26
+  ingredients:
+    Fish Fillet: 2
+    Potato: 3

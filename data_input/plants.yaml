@@ -1,0 +1,44 @@
+# --- HARVESTABLE PLANT PRODUCTS ---
+# Time is represented in total minutes.
+
+Apple:
+  time_to_make: 960 # 16 * 60
+  sell_price: 39.6
+  xp: 7
+  struct_name: Apple Tree
+
+Raspberry:
+  time_to_make: 1080 # 18 * 60
+  sell_price: 46.8
+  xp: 9
+  struct_name: Raspberry Bush
+
+Cherry:
+  time_to_make: 1620 # (1 * 24 * 60) + (3 * 60)
+  sell_price: 68.4
+  xp: 13
+  struct_name: Cherry Tree
+
+Blackberry:
+  time_to_make: 2040 # (1 * 24 * 60) + (8 * 60)
+  sell_price: 82.8
+  xp: 16
+  struct_name: Blackberry Bush
+
+Blueberry:
+  time_to_make: 2160 # (1 * 24 * 60) + (10 * 60)
+  sell_price: 82.8
+  xp: 16
+  struct_name: Blueberry Bush
+
+Cacao:
+  time_to_make: 2160 # (1 * 24 * 60) + (10 * 60)
+  sell_price: 86.4
+  xp: 16
+  struct_name: Cacao Tree
+
+Coffee Bean:
+  time_to_make: 1500 # (1 * 24 * 60) + (1 * 60)
+  sell_price: 64.8
+  xp: 12
+  struct_name: Coffee Bush

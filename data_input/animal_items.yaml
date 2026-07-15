@@ -1,0 +1,50 @@
+# --- ANIMAL PRODUCT DATA ---
+# Time is in minutes.
+
+Egg:
+  time_to_make: 20
+  sell_price: 18.0
+  xp: 2
+  pen_name: Chicken Coop
+
+Milk:
+  time_to_make: 60 # 1 * 60
+  sell_price: 32.4
+  xp: 3
+  pen_name: Cow Pasture
+
+Bacon:
+  time_to_make: 240 # 4 * 60
+  sell_price: 50.4
+  xp: 5
+  pen_name: Pig Pen
+
+Wool:
+  time_to_make: 360 # 6 * 60
+  sell_price: 54.0
+  xp: 5
+  pen_name: Sheep Pasture
+
+Lamb Chop:
+  time_to_make: 30
+  sell_price: 36.0
+  xp: 4
+  pen_name: Lamb Pasture
+
+Fish Fillet:
+  time_to_make: 0
+  sell_price: 54.0
+  xp: 4
+  pen_name: null # Represents None in YAML
+
+Goat Milk:
+  time_to_make: 480 # 8 * 60
+  sell_price: 64.8
+  xp: 6
+  pen_name: Goat Yard
+
+Honeycomb:
+  time_to_make: 35 # approximately 35 minutes but needs 100 nectar drops
+  sell_price: 68.4
+  xp: 8
+  pen_name: Beehive Tree

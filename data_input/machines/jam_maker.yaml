@@ -1,0 +1,29 @@
+# --- JAM MAKER PRODUCTION ---
+
+Apple Jam:
+  time_to_make: 360 # 6 * 60
+  sell_price: 219.0 # TODO: check price
+  xp: 29
+  ingredients:
+    Apple: 3
+
+Raspberry Jam:
+  time_to_make: 420 # 7 * 60
+  sell_price: 252.0 # TODO: check price
+  xp: 30
+  ingredients:
+    Raspberry: 3
+
+Blackberry Jam:
+  time_to_make: 480 # 8 * 60
+  sell_price: 388.8
+  xp: 46
+  ingredients:
+    Blackberry: 3
+
+Cherry Jam:
+  time_to_make: 420 # 7 * 60
+  sell_price: 334.0 # TODO: check price
+  xp: 40
+  ingredients:
+    Cherry: 3

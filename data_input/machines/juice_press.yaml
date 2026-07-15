@@ -1,0 +1,37 @@
+# --- JUICE PRESS PRODUCTION ---
+
+Carrot Juice:
+  time_to_make: 30
+  sell_price: 46.8
+  xp: 6
+  ingredients:
+    Carrot: 3
+
+Apple Juice:
+  time_to_make: 120 # 2 * 60
+  sell_price: 129.6
+  xp: 15
+  ingredients:
+    Apple: 2
+
+Cherry Juice:
+  time_to_make: 150 # (2 * 60) + 30
+  sell_price: 216.0
+  xp: 26
+  ingredients:
+    Cherry: 2
+
+Tomato Juice:
+  time_to_make: 90 # (1 * 60) + 30
+  sell_price: 162.0
+  xp: 19
+  ingredients:
+    Tomato: 3
+
+Berry Juice:
+  time_to_make: 180 # 3 * 60
+  sell_price: 205.2
+  xp: 24
+  ingredients:
+    Blackberry: 1
+    Raspberry: 1

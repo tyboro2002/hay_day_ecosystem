@@ -1,0 +1,29 @@
+# --- DAIRY PRODUCTION ---
+
+Cream:
+  time_to_make: 20
+  sell_price: 50.4
+  xp: 6
+  ingredients:
+    Milk: 1
+
+Butter:
+  time_to_make: 30
+  sell_price: 82.8
+  xp: 10
+  ingredients:
+    Milk: 2
+
+Cheese:
+  time_to_make: 60 # 1 * 60
+  sell_price: 122.4
+  xp: 15
+  ingredients:
+    Milk: 3
+
+Goat Cheese:
+  time_to_make: 90 # (1 * 60) + 30
+  sell_price: 162.0
+  xp: 19
+  ingredients:
+    Goat Milk: 2

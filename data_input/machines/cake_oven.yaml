@@ -1,0 +1,83 @@
+# --- CAKE OVEN PRODUCTION ---
+
+Carrot Cake:
+  time_to_make: 90 # (1 * 60) + 30
+  sell_price: 165.6
+  xp: 20
+  ingredients:
+    Carrot: 2
+    Butter: 1
+    Brown Sugar: 1
+
+Cream Cake:
+  time_to_make: 180 # 3 * 60
+  sell_price: 219.6
+  xp: 26
+  ingredients:
+    Wheat: 5
+    Cream: 1
+    White Sugar: 1
+
+Red Berry Cake:
+  time_to_make: 60 # 1 * 60
+  sell_price: 255.6
+  xp: 31
+  ingredients:
+    Milk: 1
+    Egg: 1
+    Raspberry: 1
+    Cherry: 2
+
+Cheesecake:
+  time_to_make: 240 # 4 * 60
+  sell_price: 284.4
+  xp: 34
+  ingredients:
+    Cookie: 1
+    Cheese: 1
+
+Blueberry Cheesecake:
+  time_to_make: 240 # 4 * 60
+  sell_price: 500.4
+  xp: 60
+  ingredients:
+    Cheesecake: 1
+    Blueberry: 2
+
+Strawberry Cake:
+  time_to_make: 180 # 3h
+  sell_price: 316.8
+  xp: 38
+  ingredients:
+    Cream: 1
+    Strawberry: 2
+    Wheat: 3
+    White Sugar: 1
+
+Chocolate Cake:
+  time_to_make: 120 # 2h
+  sell_price: 320.4
+  xp: 38
+  ingredients:
+    Brown Sugar: 1
+    Butter: 1
+    Cacao: 2
+
+Potato Feta Cake:
+  time_to_make: 120 # 2h
+  sell_price: 309.6
+  xp: 37
+  ingredients:
+    Egg: 4
+    Goat Cheese: 1
+    Potato: 1
+
+Honey Apple Cake:
+  time_to_make: 200 # 3h20
+  sell_price: 482.4
+  xp: 57
+  ingredients:
+    Honey: 2
+    Apple: 2
+    Egg: 2
+    Wheat: 2

@@ -1,0 +1,36 @@
+# --- ANIMAL CONFIGURATION ---
+
+Chicken:
+  pen_name: Chicken Coop
+  item_name: Egg
+  food_name: Chicken Feed
+
+Cow:
+  pen_name: Cow Pasture
+  item_name: Milk
+  food_name: Cow Feed
+
+Pig:
+  pen_name: Pig Pen
+  item_name: Bacon
+  food_name: Pig Feed
+
+Sheep:
+  pen_name: Sheep Pasture
+  item_name: Wool
+  food_name: Sheep Feed
+
+Lamb:
+  pen_name: Lamb Pasture
+  item_name: Lamb Chop
+  food_name: Lamb Feed
+
+Goat:
+  pen_name: Goat Yard
+  item_name: Goat Milk
+  food_name: Goat Feed
+
+Bee:
+  pen_name: Beehive Tree
+  item_name: Honeycomb
+  food_name: null  # Represents None in YAML

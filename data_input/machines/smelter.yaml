@@ -1,0 +1,36 @@
+# --- SMELTER PRODUCTION ---
+
+Silver Bar:
+  time_to_make: 480 # 8 * 60
+  sell_price: 147.6
+  xp: 18
+  ingredients:
+    Silver Ore: 3
+
+Gold Bar:
+  time_to_make: 720 # 12 * 60
+  sell_price: 180.0
+  xp: 21
+  ingredients:
+    Gold Ore: 3
+
+Platinum Bar:
+  time_to_make: 960 # 16 * 60
+  sell_price: 205.2
+  xp: 24
+  ingredients:
+    Platinum Ore: 3
+
+Refined coal:
+  time_to_make: 360 # 6 * 60
+  sell_price: 108.0
+  xp: 13
+  ingredients:
+    Coal: 3
+
+Iron Bar:
+  time_to_make: 420 # 7 * 60
+  sell_price: 129.6
+  xp: 15
+  ingredients:
+    Iron Ore: 3

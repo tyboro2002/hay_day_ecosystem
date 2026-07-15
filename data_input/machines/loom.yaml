@@ -1,0 +1,31 @@
+# --- LOOM PRODUCTION ---
+
+Sweater:
+  time_to_make: 120 # 2 * 60
+  sell_price: 151.2
+  xp: 18
+  ingredients:
+    Wool: 2
+
+Cotton Fabric:
+  time_to_make: 30
+  sell_price: 108.0
+  xp: 13
+  ingredients:
+    Cotton: 3
+
+Blue Woolly Hat:
+  time_to_make: 60 # 1 * 60
+  sell_price: 111.6
+  xp: 13
+  ingredients:
+    Wool: 1
+    Indigo: 1
+
+Blue Sweater:
+  time_to_make: 180 # 3 * 60
+  sell_price: 208.8
+  xp: 25
+  ingredients:
+    Wool: 2
+    Indigo: 2

@@ -1,0 +1,38 @@
+# --- ICE CREAM MAKER PRODUCTION ---
+
+Vanilla Ice Cream:
+  time_to_make: 120 # 2 * 60
+  sell_price: 172.8
+  xp: 20
+  ingredients:
+    Milk: 1
+    Cream: 1
+    White Sugar: 1
+
+Cherry Popsicle:
+  time_to_make: 180 # 3 * 60
+  sell_price: 352.8
+  xp: 42
+  ingredients:
+    Cherry Juice: 1
+    Syrup: 1
+
+Strawberry Ice Cream:
+  time_to_make: 240 # 4 * 60
+  sell_price: 331.2
+  xp: 40
+  ingredients:
+    Milk: 1
+    Cream: 1
+    White Sugar: 1
+    Strawberry: 3
+
+Chocolate Ice Cream:
+  time_to_make: 150 # 2h30
+  sell_price: 342.0
+  xp: 41
+  ingredients:
+    Milk: 1
+    Cream: 1
+    White Sugar: 1
+    Cacao: 2

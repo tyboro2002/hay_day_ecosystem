@@ -1,0 +1,76 @@
+# --- PIE OVEN PRODUCTION ---
+
+Carrot Pie:
+  time_to_make: 60 # 1 * 60
+  sell_price: 82.8
+  xp: 10
+  ingredients:
+    Wheat: 2
+    Egg: 1
+    Carrot: 3
+
+Pumpkin Pie:
+  time_to_make: 120 # 2 * 60
+  sell_price: 158.4
+  xp: 19
+  ingredients:
+    Wheat: 2
+    Egg: 1
+    Pumpkin: 3
+
+Bacon Pie:
+  time_to_make: 180 # 3 * 60
+  sell_price: 219.6
+  xp: 26
+  ingredients:
+    Wheat: 2
+    Egg: 1
+    Bacon: 3
+
+Apple Pie:
+  time_to_make: 150 # (2 * 60) + 30
+  sell_price: 270.0
+  xp: 32
+  ingredients:
+    Wheat: 2
+    Egg: 1
+    Syrup: 1
+    Apple: 3
+
+Fish Pie:
+  time_to_make: 120 # 2 * 60
+  sell_price: 226.8
+  xp: 27
+  ingredients:
+    Wheat: 2
+    Egg: 1
+    Fish Fillet: 3
+
+Feta Pie:
+  time_to_make: 90 # (1 * 60) + 30
+  sell_price: 223.2
+  xp: 26
+  ingredients:
+    Goat Cheese: 1
+    Egg: 1
+    Wheat: 2
+
+Casserole:
+  time_to_make: 120 # 2 * 60
+  sell_price: 367.2
+  xp: 44
+  ingredients:
+    Bacon: 2
+    Cheese: 1
+    Egg: 2
+    Potato: 2
+
+Shepherd's Pie:
+  time_to_make: 100 # 1h40
+  sell_price: 280.8
+  xp: 34
+  ingredients:
+    Potato: 2
+    Carrot: 2
+    Bacon: 2
+    Pumpkin: 2
