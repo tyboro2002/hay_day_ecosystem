@@ -261,14 +261,33 @@ def generate_detail_page_item(name, item_obj, filename):
 
     price_display = f"{sell_price} Coins" if sell_price != 'N/A' else "Unsellable"
 
+    # --- NEW: COMBINE DIRECT INGREDIENTS & ANIMAL FEED ---
+    ingredients_dict = {}
+
+    # 1. Grab base recipes ingredients (if any)
+    if hasattr(item_obj, 'ingredients') and item_obj.ingredients:
+        for ing_item, qty in item_obj.ingredients.items():
+            ingredients_dict[ing_item] = qty
+
+    # 2. Reverse-lookup if this item is produced by livestock to fetch its feed
+    associated_feed = None
+    for animal_name, animal_obj in LIVESTOCK.items():
+        if hasattr(animal_obj, 'produces_item') and animal_obj.produces_item:
+            if animal_obj.produces_item.name.lower().strip() == name.lower().strip():
+                if hasattr(animal_obj, 'required_food') and animal_obj.required_food:
+                    associated_feed = animal_obj.required_food
+                    # Treat 1 bag of feed as the ingredient required for 1 animal product
+                    ingredients_dict[associated_feed] = 1
+                    break
+
     # --- 1. GENERATE VISUAL INGREDIENTS GRID (Inputs) ---
     ingredients_html = ""
     total_ingredient_cost = 0
-    has_ingredients = hasattr(item_obj, 'ingredients') and item_obj.ingredients
+    has_ingredients = len(ingredients_dict) > 0
     unsellable_ingredients = False
 
     if has_ingredients:
-        for ing_item, qty in item_obj.ingredients.items():
+        for ing_item, qty in ingredients_dict.items():
             ing_name = ing_item.name
             ing_img = get_base64_asset(ing_name, "items")
             ing_url = f"details_{ing_name.lower().replace(' ', '_')}.html"
@@ -284,9 +303,13 @@ def generate_detail_page_item(name, item_obj, filename):
             else:
                 total_ingredient_cost += ing_price * qty
 
+            # Highlight feed badge with a green tone to differentiate from regular ingredients
+            is_feed = associated_feed and ing_name == associated_feed.name
+            badge_style = 'style="background-color: #2ecc71; color: #ffffff;"' if is_feed else ""
+
             ingredients_html += f"""
             <a class="grid-item" href="{ing_url}">
-                <div class="qty-badge">{qty_str}</div>
+                <div class="qty-badge" {badge_style}>{qty_str}</div>
                 <img src="{ing_img}" alt="{ing_name}">
                 <div class="name">{ing_name}</div>
             </a>
@@ -341,7 +364,7 @@ def generate_detail_page_item(name, item_obj, filename):
             status_class = "profit-negative"
             status_icon = "📉"
             status_label = "Net Loss"
-            val_prefix = "" # Standard negative sign handled automatically by python float string conversion
+            val_prefix = "" # Standard negative sign handled automatically
         else:
             status_class = "profit-neutral"
             status_icon = "⚖️"
