@@ -2,7 +2,7 @@
 
 Espresso:
   time_to_make: 5
-  sell_price: 248.0 # TODO: check price
+  sell_price: 248.4
   xp: 29
   ingredients:
     Coffee Bean: 3
@@ -16,3 +16,12 @@ Caffè Latte:
     Coffee Bean: 2
     White Sugar: 1
     Milk: 1
+
+Caffè Mocha:
+  time_to_make: 15
+  sell_price: 291.0 # TODO: check price
+  xp: 35
+  ingredients:
+    Coffee Bean: 1
+    Cream: 1
+    Cacao: 2
