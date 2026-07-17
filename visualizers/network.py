@@ -1,4 +1,5 @@
 import os
+
 from pyvis.network import Network
 from game_data import ITEMS, INFRASTRUCTURE, LIVESTOCK
 
@@ -6,6 +7,8 @@ from game_data import ITEMS, INFRASTRUCTURE, LIVESTOCK
 from visualizers.helpers.formatting import format_duration, get_base64_asset
 import visualizers.helpers.formatting as formatting
 import visualizers.helpers.templates as templates
+from visualizers.helpers.overnight_profit_page import generate_overnight_page
+from visualizers.helpers.profit_ranking_page import generate_profitability_ranking_page
 
 # get new assets from
 # https://fankit.supercell.com/d/QSVyhmM7gdGe/game-assets
@@ -94,7 +97,7 @@ def generate_interactive_farm_graph(output_filename=f"{outp}/{outp_file}"):
         detail_url = f"{detail_dir}/{detail_filename}"
 
         class_type = type(item_obj).__name__
-        price_lbl = f"\n({item_obj.sell_price}c)" if hasattr(item_obj, 'sell_price') else ""
+        price_lbl = f"\n({item_obj.sell_price}🪙)" if hasattr(item_obj, 'sell_price') else ""
         net.add_node(name, label=f"{name}{price_lbl}", shape="image", image=get_base64_asset(name, "items"), size=ITEM_SIZE, url=detail_url)
 
         generate_detail_page_item(name, item_obj, detail_filename)
@@ -139,7 +142,7 @@ def generate_interactive_farm_graph(output_filename=f"{outp}/{outp_file}"):
     # Generate and inject templates
     net.html = net.generate_html()
     net.html = net.html.replace("</head>", templates.LAYOUT_STYLE_RESET + "</head>")
-    net.html = net.html.replace("</body>", templates.DISCLAIMER_FOOTER + templates.INTERACTIVE_NAV_SCRIPT + "</body>")
+    net.html = net.html.replace("</body>", templates.DISCLAIMER_FOOTER.format(path_prefix="") + templates.INTERACTIVE_NAV_SCRIPT + "</body>")
 
     os.makedirs(os.path.dirname(output_filename), exist_ok=True)
     with open(output_filename, "w", encoding="utf-8") as f:
@@ -149,6 +152,14 @@ def generate_interactive_farm_graph(output_filename=f"{outp}/{outp_file}"):
     if formatting.non_found:
         print(f"{formatting.non_found} asset(s) were not found")
 
+    # create profitability ranking page
+    generate_profitability_ranking_page(outp)
+    print(f"Profit Rankings generated")
+
+    # create overnight strategy page
+    generate_overnight_page(outp)
+    print(f"Overnight Strategy generated")
+
 
 def generate_detail_page_item(name, item_obj, filename):
     item_img_base64 = get_base64_asset(name, "items")
@@ -157,7 +168,12 @@ def generate_detail_page_item(name, item_obj, filename):
     sell_price = getattr(item_obj, 'sell_price', 'N/A')
     if sell_price is None:
         sell_price = 'N/A'
-    price_display = f"{sell_price} Coins" if sell_price != 'N/A' else "Unsellable"
+    # 1. Grab your asset string first
+    coin_b64 = get_base64_asset("coin", "items")
+    coin_img = f'<img src="{coin_b64}" alt="coins" style="width: 18px; height: 18px; object-fit: contain; vertical-align: middle; margin-left: 3px; margin-top: -2px; display: inline-block;">' if coin_b64 else " Coins"
+
+    # 2. Your single-line logic remains exactly the same structure:
+    price_display = f"{sell_price}{coin_img}" if sell_price != 'N/A' else "Unsellable"
 
     producer_name = None
     producer_folder = None
@@ -269,11 +285,17 @@ def generate_detail_page_item(name, item_obj, filename):
         </div>
         """
     elif not has_ingredients:
+        # Fetch coin image asset
+        coin_b64 = get_base64_asset("coin", "items")
+        coin_img_html = f'<img src="{coin_b64}" alt="coins" style="width: 18px; height: 18px; object-fit: contain; vertical-align: middle; margin-left: 3px; margin-top: -2px; display: inline-block;">' if coin_b64 else "Coins"
+
         profit_html = f"""
         <div class="financial-summary">
             <div class="fin-col profit-positive" style="width: 100%;">
                 <span class="fin-label">Production Status</span>
-                <span class="fin-val">🌱 Pure Profit (+{sell_price} Coins / 100%)</span>
+                <span class="fin-val" style="display: inline-flex; align-items: center; vertical-align: middle;">
+                    🌱 Pure Profit (+{sell_price}{coin_img_html} / 100%)
+                </span>
             </div>
         </div>
         """
@@ -543,7 +565,6 @@ def generate_detail_page_animal(name, animal_obj):
     html_content = templates.render_animal_page(name, img_tag, food_html, produces_html, lives_in_html, outp_file)
     with open(os.path.join(outp, "details", filename), "w", encoding="utf-8") as f:
         f.write(html_content)
-
 
 if __name__ == "__main__":
     generate_interactive_farm_graph()

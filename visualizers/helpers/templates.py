@@ -1,6 +1,12 @@
 # Floating disclaimer footer
 DISCLAIMER_FOOTER = """
 <div class="sc-disclaimer-footer">
+    <div style="margin-bottom: 6px; font-weight: bold;">
+        📊 Quick Links: 
+        <a href="{path_prefix}general_profitability.html">Profit Rankings</a> | 
+        <a href="{path_prefix}overnight_strategies.html">Overnight Strategy</a>
+    </div>
+    <hr style="border: 0; border-top: 1px solid #444; margin: 6px 0;">
     This material is unofficial and is not endorsed by Supercell. For more information see <a href="https://www.supercell.com/fan-content-policy" target="_blank">Supercell's Fan Content Policy</a>.
 </div>
 """
@@ -160,7 +166,7 @@ def render_item_page(name, img_tag, price_display, time_display_html, producer_h
     </style>
 </head>
 <body>
-    {DISCLAIMER_FOOTER}
+    {DISCLAIMER_FOOTER.format(path_prefix="../")}
     <div class="card">
         {img_tag}
         <h1>{name}</h1>
@@ -204,7 +210,7 @@ def render_machine_page(name, img_tag, produces_html, back_target):
     </style>
 </head>
 <body>
-    {DISCLAIMER_FOOTER}
+    {DISCLAIMER_FOOTER.format(path_prefix="../")}
     <div class="card">
         {img_tag}
         <h1>{name}</h1>
@@ -233,7 +239,7 @@ def render_pen_page(name, img_tag, residents_html, back_target):
     </style>
 </head>
 <body>
-    {DISCLAIMER_FOOTER}
+    {DISCLAIMER_FOOTER.format(path_prefix="../")}
     <div class="card">
         {img_tag}
         <h1>{name}</h1>
@@ -262,7 +268,7 @@ def render_plantable_structure_page(name, img_tag, produces_html, back_target):
     </style>
 </head>
 <body>
-    {DISCLAIMER_FOOTER}
+    {DISCLAIMER_FOOTER.format(path_prefix="../")}
     <div class="card">
         {img_tag}
         <h1>{name}</h1>
@@ -291,7 +297,7 @@ def render_special_structure_page(name, img_tag, produces_html, back_target):
     </style>
 </head>
 <body>
-    {DISCLAIMER_FOOTER}
+    {DISCLAIMER_FOOTER.format(path_prefix="../")}
     <div class="card">
         {img_tag}
         <h1>{name}</h1>
@@ -320,7 +326,7 @@ def render_field_page(name, img_tag, produces_html, back_target):
     </style>
 </head>
 <body>
-    {DISCLAIMER_FOOTER}
+    {DISCLAIMER_FOOTER.format(path_prefix="../")}
     <div class="card">
         {img_tag}
         <h1>{name}</h1>
@@ -352,7 +358,7 @@ def render_animal_page(name, img_tag, food_html, produces_html, lives_in_html, b
     </style>
 </head>
 <body>
-    {DISCLAIMER_FOOTER}
+    {DISCLAIMER_FOOTER.format(path_prefix="../")}
     <div class="card">
         {img_tag}
         <h1>{name}</h1>

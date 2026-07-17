@@ -63,7 +63,7 @@ def print_time_reports(reports):
         indicator = "⚠️ " if r["value_added"] < 0 else "  "
         print(f"{indicator}{r['name']:<20} | {r['value_added']:>+10.1f}c | {r['time_hours']:>10.2f}h | {r['pph']:>+13.2f}c/h | {r['roi']:>6.1f}%")
 
-def analyze_value_added():
+def analyze_value_added(silent=False):
     raw_reports = []
 
     for name, item_obj in ITEMS.items():
@@ -109,35 +109,37 @@ def analyze_value_added():
                 "pph": pph
             })
 
-    # =====================================================================
-    # REPORTS PRINTING
-    # =====================================================================
-    print("\n=========================================================================")
-    print("             HAY DAY ENGINE - SORTED BY VALUE-ADDED COINS                ")
-    print("=========================================================================\n")
-    by_value_added = sorted(raw_reports, key=lambda x: x["value_added"], reverse=True)
-    print_table_header(with_time=False)
-    print_standard_reports(by_value_added)
+    if not silent:
+        # =====================================================================
+        # REPORTS PRINTING
+        # =====================================================================
+        print("\n=========================================================================")
+        print("             HAY DAY ENGINE - SORTED BY VALUE-ADDED COINS                ")
+        print("=========================================================================\n")
+        by_value_added = sorted(raw_reports, key=lambda x: x["value_added"], reverse=True)
+        print_table_header(with_time=False)
+        print_standard_reports(by_value_added)
 
-    print("\n" * 2)
+        print("\n" * 2)
 
-    print("=========================================================================")
-    print("                HAY DAY ENGINE - SORTED BY RETURN ON INVESTMENT          ")
-    print("=========================================================================\n")
-    by_roi = sorted(raw_reports, key=lambda x: x["roi"], reverse=True)
-    by_roi = [x for x in by_roi if x["direct_cost"] > 0]
-    print_table_header(with_time=False)
-    print_standard_reports(by_roi)
+        print("=========================================================================")
+        print("                HAY DAY ENGINE - SORTED BY RETURN ON INVESTMENT          ")
+        print("=========================================================================\n")
+        by_roi = sorted(raw_reports, key=lambda x: x["roi"], reverse=True)
+        by_roi = [x for x in by_roi if x["direct_cost"] > 0]
+        print_table_header(with_time=False)
+        print_standard_reports(by_roi)
 
-    print("\n" * 2)
+        print("\n" * 2)
 
-    print("=========================================================================")
-    print("                HAY DAY ENGINE - SORTED BY PROFIT PER HOUR               ")
-    print("             (The true measure of active factory efficiency)             ")
-    print("=========================================================================\n")
-    by_pph = sorted(raw_reports, key=lambda x: x["pph"], reverse=True)
-    print_table_header(with_time=True)
-    print_time_reports(by_pph)
+        print("=========================================================================")
+        print("                HAY DAY ENGINE - SORTED BY PROFIT PER HOUR               ")
+        print("             (The true measure of active factory efficiency)             ")
+        print("=========================================================================\n")
+        by_pph = sorted(raw_reports, key=lambda x: x["pph"], reverse=True)
+        print_table_header(with_time=True)
+        print_time_reports(by_pph)
+    return raw_reports
 
 if __name__ == "__main__":
     analyze_value_added()
