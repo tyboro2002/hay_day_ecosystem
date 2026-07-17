@@ -71,7 +71,7 @@ item_measurements = {
     "Cherry Jam":{1: 334},
     "Caffè Latte": {1: 219, 2: 439, 3: 658, 4: 878},
     "Caffè Mocha": {},
-    "Frutti Di Mare Pizza": {},
+    "Frutti Di Mare Pizza": {1: 403, 2: 806},
     "Soothing Pad": {}
 }
 
