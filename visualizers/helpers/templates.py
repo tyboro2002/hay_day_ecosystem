@@ -2,7 +2,6 @@
 DISCLAIMER_FOOTER = """
 <div class="sc-disclaimer-footer">
     <div style="margin-bottom: 6px; font-weight: bold;">
-        📊 Quick Links: 
         <a href="{path_prefix}general_profitability.html">Profit Rankings</a> | 
         <a href="{path_prefix}overnight_strategies.html">Overnight Strategy</a>
     </div>
