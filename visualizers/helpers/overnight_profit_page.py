@@ -251,22 +251,28 @@ def generate_overnight_page(outp):
                 <li class="tab-link active" onclick="switchTab(event, 'tab-4h')">4-Hour Power Nap</li>
                 <li class="tab-link" onclick="switchTab(event, 'tab-8h')">8-Hour Standard Sleep</li>
                 <li class="tab-link" onclick="switchTab(event, 'tab-12h')">12-Hour Extended Hibernation</li>
+                <li class="tab-link" onclick="switchTab(event, 'tab-24h')">24-Hour Day Off</li>
             </ul>
 
             <div class="tab-content">
                 <!-- PANEL 1: 4 HOURS -->
                 <div id="tab-4h" class="content-panel active">
-                    {build_duration_html(240)}
+                    {build_duration_html(4*60)}
                 </div>
 
                 <!-- PANEL 2: 8 HOURS -->
                 <div id="tab-8h" class="content-panel">
-                    {build_duration_html(480)}
+                    {build_duration_html(8*60)}
                 </div>
 
                 <!-- PANEL 3: 12 HOURS -->
                 <div id="tab-12h" class="content-panel">
-                    {build_duration_html(720)}
+                    {build_duration_html(12*60)}
+                </div>
+                
+                <!-- PANEL 4: 24 HOURS -->
+                <div id="tab-24h" class="content-panel">
+                    {build_duration_html(24*60)}
                 </div>
             </div>
 
