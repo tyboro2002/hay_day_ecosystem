@@ -12,7 +12,7 @@ Cotton,Crop,28.8,150,None,None
 Tomato,Crop,43.2,360,None,None
 Strawberry,Crop,50.4,480,None,None
 Potato,Crop,36.0,220,None,None
-Chamomile,Crop,10.0,20,None,None
+Chamomile,Crop,10.8,20,None,None
 Apple,PlantableItem,39.6,960,None,None
 Raspberry,PlantableItem,46.8,1080,None,None
 Cherry,PlantableItem,68.4,1620,None,None
@@ -45,7 +45,7 @@ Pizza,MachinedItem,190.8,15,Bakery,"Wheat x2, Tomato x1, Cheese x1"
 Blueberry muffin,MachinedItem,230.4,45,Bakery,"Wheat x1, Egg x2, Blueberry x2"
 Spicy pizza,MachinedItem,226.8,15,Bakery,"Wheat x2, Tomato x1, Cheese x1, Chili Pepper x1"
 Potato Bread,MachinedItem,284.4,45,Bakery,"Potato x2, White Sugar x1, Egg x3, Butter x1"
-Frutti Di Mare Pizza,MachinedItem,403.0,15,Bakery,"Wheat x2, Cheese x1, Fish Fillet x1, Lobster Tail x1"
+Frutti Di Mare Pizza,MachinedItem,403.2,15,Bakery,"Wheat x2, Cheese x1, Fish Fillet x1, Lobster Tail x1"
 Cream,MachinedItem,50.4,20,Dairy,Milk x1
 Butter,MachinedItem,82.8,30,Dairy,Milk x2
 Cheese,MachinedItem,122.4,60,Dairy,Milk x3
@@ -117,9 +117,12 @@ Diamond Ring,MachinedItem,824.4,240,Jeweler,"Diamond x1, Platinum Bar x2, Gold B
 Iron Bracelet,MachinedItem,658.8,90,Jeweler,"Iron Bar x2, Refined coal x2, Silver Bar x1"
 Honey,MachinedItem,154.8,20,Honey Extractor,Honeycomb x2
 Espresso,MachinedItem,248.4,5,Coffee Kiosk,"Coffee Bean x3, White Sugar x1"
-Caffè Latte,MachinedItem,219.0,10,Coffee Kiosk,"Coffee Bean x2, White Sugar x1, Milk x1"
-Caffè Mocha,MachinedItem,291.0,15,Coffee Kiosk,"Coffee Bean x1, Cream x1, Cacao x2"
+Caffè Latte,MachinedItem,219.6,10,Coffee Kiosk,"Coffee Bean x2, White Sugar x1, Milk x1"
+Caffè Mocha,MachinedItem,291.6,15,Coffee Kiosk,"Coffee Bean x1, Cream x1, Cacao x2"
+Raspberry Mocha,MachinedItem,259.0,30,Coffee Kiosk,"Coffee Bean x1, Cream x1, Cacao x1, Raspberry x1"
 Lobster Tail,MachinedItem,201.6,360,Lobster Pool,None
+Lobster Soup,MachinedItem,612.0,150,Soup Kitchen,"Chili Pepper x2, Lobster Tail x1, Cream x1, Tomato x1"
+Lamb Soup,MachinedItem,180.0,120,Soup Kitchen,"Grilled Lamb Skewer x1, Potato x1, Carrot x2"
 Axe,SpecialItem,36.0,0,None,None
 Saw,SpecialItem,54.0,0,None,None
 Dynamite,SpecialItem,25.2,0,None,None
