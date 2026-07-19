@@ -68,11 +68,9 @@ item_measurements = {
     "Meat Bucket":{},
     "Apple Jam":{},
     "Raspberry Jam":{1: 388, 2: 777, 3: 1166, 4: 1555},
-    "Cherry Jam":{1: 334},
-    "Caffè Latte": {1: 219, 2: 439, 3: 658, 4: 878},
-    "Caffè Mocha": {},
+    "Cherry Jam":{1: 334, 2: 669},
     "Frutti Di Mare Pizza": {1: 403, 2: 806},
-    "Soothing Pad": {}
+    "Soothing Pad": {1: 324, 2: 648, 3: 972, 4: 1296}
 }
 
 def run_report():
