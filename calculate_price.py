@@ -69,7 +69,6 @@ item_measurements = {
     "Apple Jam":{},
     "Raspberry Jam":{1: 388, 2: 777, 3: 1166, 4: 1555},
     "Cherry Jam":{1: 334, 2: 669},
-    "Soothing Pad": {1: 324, 2: 648, 3: 972, 4: 1296, 5: 1620},
     "Raspberry Mocha": {},
     "Lobster Soup": {},
     "Lamb Soup": {}
