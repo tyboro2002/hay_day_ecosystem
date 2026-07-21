@@ -66,12 +66,13 @@ def find_first_multivalue_discriminator(report):
 
 item_measurements = {
     "Meat Bucket":{},
-    "Apple Jam":{},
+    "Apple Jam":{1: 219},
     "Raspberry Jam":{1: 388, 2: 777, 3: 1166, 4: 1555},
-    "Cherry Jam":{1: 334, 2: 669},
-    "Raspberry Mocha": {},
-    "Lobster Soup": {},
-    "Lamb Soup": {}
+    "Cherry Jam":{1: 334, 2: 669, 3: 1004, 4: 1339, 5: 1674},
+    "Lobster Soup": {1: 612},
+    "Lamb Soup": {1: 180, 2: 360, 3: 540, 4: 720, 5: 900},
+    "Hot Chocolate": {1: 316, 2: 633, 3: 950, 4: 1267, 5: 1584},
+    "Tomato Soup": {}
 }
 
 def run_report():
