@@ -1,4 +1,8 @@
 # Floating disclaimer footer
+import math
+
+from visualizers.helpers.formatting import get_base64_asset
+
 DISCLAIMER_FOOTER = """
 <div class="sc-disclaimer-footer">
     <div style="margin-bottom: 6px; font-weight: bold;">
@@ -139,7 +143,7 @@ BASE_CSS = """
 # INDIVIDUAL DETAIL PAGE RENDERING TEMPLATES
 # =====================================================================
 
-def render_item_page(name, img_tag, price_display, time_display_html, producer_html, profit_html, ingredients_html, used_in_html, back_target):
+def render_item_page(name, img_tag, price_display, time_display_html, producer_html, profit_html, price_breakdown_html, ingredients_html, used_in_html, back_target):
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -191,6 +195,7 @@ def render_item_page(name, img_tag, price_display, time_display_html, producer_h
         </div>
 
         <a class="back-btn" href="../{back_target}">Back to Map</a>
+        {price_breakdown_html}
     </div>
 </body>
 </html>
@@ -383,3 +388,47 @@ def render_animal_page(name, img_tag, food_html, produces_html, lives_in_html, b
 </body>
 </html>
 """
+
+def render_price_breakdown_component(name, unit_price, max_qty=10):
+    """
+    Returns an HTML snippet containing a bulk price breakdown list (1 to max_qty).
+    Displays the item icon, quantity, and total floored price formatted to .1f.
+    """
+    if unit_price == 'N/A' or unit_price is None:
+        return '<div class="no-items" style="margin-top: 25px;">⚠️ Bulk pricing unavailable (Unsellable)</div>'
+
+    # Fetch item thumbnail image asset
+    item_b64 = get_base64_asset(name, "items")
+    item_img = f'<img src="{item_b64}" alt="{name}" style="width: 22px; height: 22px; object-fit: contain; vertical-align: middle; margin-right: 6px;">' if item_b64 else ""
+
+    # Fetch coin icon asset
+    coin_b64 = get_base64_asset("coin", "items")
+    coin_img = f'<img src="{coin_b64}" style="width: 14px; height: 14px; object-fit: contain; vertical-align: middle; margin-left: 3px;">' if coin_b64 else " Coins"
+
+    rows_html = ""
+    for qty in range(1, max_qty + 1):
+        total_cost = math.floor(float(unit_price) * qty)
+        rows_html += f"""
+        <div class="summary-row">
+            <span class="sum-label" style="display: inline-flex; align-items: center;">
+                {item_img} <b>x{qty}</b>
+            </span>
+            <span class="sum-val">{total_cost:.0f}{coin_img}</span>
+        </div>
+        """
+
+    return f"""
+    <style>
+        .bulk-breakdown-wrapper {{
+            margin-top: 30px;
+            text-align: left;
+        }}
+    </style>
+
+    <div class="bulk-breakdown-wrapper">
+        <div class="section-title">Bulk Cost Summary</div>
+        <div class="summary-box">
+            {rows_html}
+        </div>
+    </div>
+    """

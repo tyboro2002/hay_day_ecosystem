@@ -6,7 +6,7 @@ from visualizers.helpers.formatting import get_base64_asset
 from visualizers.helpers.templates import DISCLAIMER_FOOTER
 
 
-def generate_profitability_ranking_page(outp):
+def generate_profitability_ranking_page(outp, detail_dir):
     """Generates a complete, interactive HTML ranking report with scannable tables."""
     data = analyze_value_added(silent=True)
 
@@ -37,12 +37,16 @@ def generate_profitability_ranking_page(outp):
             else:
                 metric_td = f"<td><b>{item['roi']:.1f}%</b></td>"
 
+            clean_filename = f"{detail_dir}/details_{item['name'].lower().replace(' ', '_').replace('-', '_')}.html"
+
             rows_html += f"""
             <tr>
                 <td class="item-name-cell">
                     {warning}
-                    {img_tag}
-                    <span>{item['name']}</span>
+                    <a href="{clean_filename}" class="item-link">
+                        {img_tag}
+                        <span>{item['name']}</span>
+                    </a>
                 </td>
                 <td style="white-space:nowrap;">{item['final_price']}{coin_img_html}</td>
                 <td style="white-space:nowrap;">{item['direct_cost']:.1f}{coin_img_html}</td>
@@ -122,7 +126,11 @@ def generate_profitability_ranking_page(outp):
             /* Layout styling for inline item assets */
             .item-name-cell {{ display: flex; align-items: center; gap: 10px; }}
             .table-item-img {{ width: 32px; height: 32px; object-fit: contain; filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.5)); }}
-
+            
+            /* Seamless Item Link Styling */
+            .item-link {{ display: inline-flex; align-items: center; gap: 10px; color: inherit; text-decoration: none; }}
+            .item-link:hover, .item-link:visited, .item-link:active {{ color: inherit; text-decoration: none; }}
+            
             /* Global footer styles match inside template variables */
             .sc-disclaimer-footer {{ margin-top: 40px; color: #666; font-size: 0.8rem; text-align: center; line-height: 1.4; }}
             .sc-disclaimer-footer a {{ color: #3498db; text-decoration: none; }}

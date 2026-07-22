@@ -10,7 +10,7 @@ from visualizers.helpers.formatting import get_base64_asset
 from visualizers.helpers.templates import DISCLAIMER_FOOTER
 
 
-def build_duration_html(sleep_duration_mins):
+def build_duration_html(sleep_duration_mins, detail_dir):
     """Calculates strategy data and generates the localized template blocks for a given time window."""
     plan, global_profit = get_best_overnight_strategy(sleep_duration_mins)
 
@@ -34,11 +34,14 @@ def build_duration_html(sleep_duration_mins):
 
         machine_img_html = f'<img class="inline-machine-img" src="{machine_b64}" alt="{source_name}">' if machine_b64 else ""
 
+        machine_clean_filename = f"{detail_dir}/details_{source_name.lower().replace(' ', '_').replace('-', '_')}.html"
+
         combo_parts = []
         for item_obj, count in data['combination'].items():
+            clean_filename = f"{detail_dir}/details_{item_obj.name.lower().replace(' ', '_').replace('-', '_')}.html"
             img_b64 = get_base64_asset(item_obj.name, "items")
             img_html = f'<img class="inline-item-img" src="{img_b64}" alt="{item_obj.name}">' if img_b64 else ""
-            combo_parts.append(f'<span class="queue-pill">{img_html} {count}x {item_obj.name}</span>')
+            combo_parts.append(f'<a href="{clean_filename}" class="item-link queue-pill">{img_html} {count}x {item_obj.name}</a>')
 
             # Aggregate ingredient requirements
             ingredients_dict = getattr(item_obj, 'ingredients', {})
@@ -49,10 +52,10 @@ def build_duration_html(sleep_duration_mins):
         machine_rows_html += f"""
         <tr>
             <td class="source-cell">
-                <div class="machine-label-wrapper">
+                <a href="{machine_clean_filename}" class="machine-label-wrapper item-link">
                     {machine_img_html}
                     <b>{source_name}</b>
-                </div>
+                </a>
             </td>
             <td><div class="queue-flex">{" ".join(combo_parts)}</div></td>
             <td style="color:#2ecc71; font-weight:bold; white-space:nowrap;">
@@ -72,10 +75,11 @@ def build_duration_html(sleep_duration_mins):
     shopping_list_html = ""
 
     for ing_name, qty in sorted(global_ingredients.items(), key=lambda x: x[1], reverse=True):
+        clean_filename = f"{detail_dir}/details_{ing_name.lower().replace(' ', '_').replace('-', '_')}.html"
         img_b64 = get_base64_asset(ing_name, "items")
         img_html = f'<img class="inline-item-img" src="{img_b64}" alt="{ing_name}">' if img_b64 else ""
 
-        shopping_list_html += f"<li>{img_html} <b>{qty}x</b> {ing_name}</li>"
+        shopping_list_html += f'<li><a href="{clean_filename}" class="item-link">{img_html} <b>{qty}x</b> {ing_name}</a></li>'
         if ing_name in CROPS or ing_name in PLANTS:
             silo_space += qty
         else:
@@ -145,7 +149,7 @@ def build_duration_html(sleep_duration_mins):
     """
 
 
-def generate_overnight_page(outp):
+def generate_overnight_page(outp, detail_dir):
     """Assembles independent sleep strategy options into a comprehensive web panel document."""
 
     # Also grab coin for the top notice banner inside generate_overnight_page
@@ -216,7 +220,7 @@ def generate_overnight_page(outp):
             .source-cell {{ color: #f39c12; }}
 
             /* Machine Labels Alignment */
-            .machine-label-wrapper {{ display: flex; align-items: center; gap: 10px; }}
+            .machine-label-wrapper {{ display: flex; align-items: center; gap: 10px; color: #f39c12; }}
             .inline-machine-img {{ width: 32px; height: 32px; object-fit: contain; flex-shrink: 0; }}
 
             /* Queue Pills */
@@ -228,7 +232,12 @@ def generate_overnight_page(outp):
             .shopping-list {{ list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }}
             .shopping-list li {{ background: #282828; padding: 8px 12px; border-radius: 4px; border: 1px solid #333; font-size: 0.9rem; display: flex; align-items: center; gap: 10px; }}
             .shopping-list b {{ color: #e67e22; min-width: 28px; display: inline-block; }}
-
+            
+            /* Seamless Item Link Styling */
+            .item-link {{ color: inherit; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }}
+            .item-link:hover, .item-link:visited, .item-link:active {{ color: inherit; text-decoration: none; }}
+            .shopping-list li .item-link {{ gap: 10px; width: 100%; }}
+            
             /* Global footer styles */
             .sc-disclaimer-footer {{ margin-top: 40px; color: #666; font-size: 0.8rem; text-align: center; line-height: 1.4; }}
             .sc-disclaimer-footer a {{ color: #3498db; text-decoration: none; }}
@@ -259,32 +268,32 @@ def generate_overnight_page(outp):
             <div class="tab-content">
                 <!-- PANEL 1: 1 HOURS -->
                 <div id="tab-1h" class="content-panel active">
-                    {build_duration_html(1*60)}
+                    {build_duration_html(1*60, detail_dir)}
                 </div>
                 
                 <!-- PANEL 2: 2 HOURS -->
                 <div id="tab-2h" class="content-panel">
-                    {build_duration_html(2*60)}
+                    {build_duration_html(2*60, detail_dir)}
                 </div>
                 
                 <!-- PANEL 3: 4 HOURS -->
                 <div id="tab-4h" class="content-panel">
-                    {build_duration_html(4*60)}
+                    {build_duration_html(4*60, detail_dir)}
                 </div>
 
                 <!-- PANEL 4: 8 HOURS -->
                 <div id="tab-8h" class="content-panel">
-                    {build_duration_html(8*60)}
+                    {build_duration_html(8*60, detail_dir)}
                 </div>
 
                 <!-- PANEL 5: 12 HOURS -->
                 <div id="tab-12h" class="content-panel">
-                    {build_duration_html(12*60)}
+                    {build_duration_html(12*60, detail_dir)}
                 </div>
                 
                 <!-- PANEL 6: 24 HOURS -->
                 <div id="tab-24h" class="content-panel">
-                    {build_duration_html(24*60)}
+                    {build_duration_html(24*60, detail_dir)}
                 </div>
             </div>
 

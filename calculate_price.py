@@ -71,7 +71,6 @@ item_measurements = {
     "Cherry Jam":{1: 334, 2: 669, 3: 1004, 4: 1339, 5: 1674},
     "Lobster Soup": {1: 612},
     "Lamb Soup": {1: 180, 2: 360, 3: 540, 4: 720, 5: 900},
-    "Hot Chocolate": {1: 316, 2: 633, 3: 950, 4: 1267, 5: 1584},
     "Tomato Soup": {}
 }
 

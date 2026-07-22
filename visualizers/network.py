@@ -153,11 +153,11 @@ def generate_interactive_farm_graph(output_filename=f"{outp}/{outp_file}"):
         print(f"{formatting.non_found} asset(s) were not found")
 
     # create profitability ranking page
-    generate_profitability_ranking_page(outp)
+    generate_profitability_ranking_page(outp, detail_dir=detail_dir)
     print(f"Profit Rankings generated")
 
     # create overnight strategy page
-    generate_overnight_page(outp)
+    generate_overnight_page(outp, detail_dir=detail_dir)
     print(f"Overnight Strategy generated")
 
 
@@ -357,11 +357,14 @@ def generate_detail_page_item(name, item_obj, filename):
     else:
         used_in_html = '<div class="no-items">📦 Final Product (Not used in other recipes)</div>'
 
+    price_breakdown_html = templates.render_price_breakdown_component(name, sell_price)
+
     html_content = templates.render_item_page(
         name=name, img_tag=img_tag, price_display=price_display,
         time_display_html=time_display_html, producer_html=producer_html,
-        profit_html=profit_html, ingredients_html=ingredients_html,
-        used_in_html=used_in_html, back_target=outp_file
+        profit_html=profit_html, price_breakdown_html=price_breakdown_html,
+        ingredients_html=ingredients_html, used_in_html=used_in_html,
+        back_target=outp_file
     )
 
     os.makedirs(os.path.join(outp, "details"), exist_ok=True)
