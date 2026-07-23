@@ -68,11 +68,10 @@ item_measurements = {
     "Meat Bucket":{},
     "Raspberry Jam":{1: 388, 2: 777, 3: 1166, 4: 1555},
     "Cherry Jam":{1: 334, 2: 669, 3: 1004, 4: 1339, 5: 1674},
-    "Lobster Soup": {1: 612},
-    "Tomato Soup": {1: 478, 2: 957, 3: 1436},
-    "Red Scarf": {},
+    "Lobster Soup": {1: 612, 2: 1224},
+    "Red Scarf": {5: 1440, 6: 1728, 7: 2016},
     "Lobster Skewer": {},
-    "Beeswax": {},
+    "Beeswax": {1: 234},
     "Strawberry Candle": {}
 }
 
