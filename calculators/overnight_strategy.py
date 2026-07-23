@@ -7,6 +7,7 @@ from game_data.fields_data import FARM_FIELDS
 from game_data.machined_items_data import MACHINED_ITEMS
 from game_data.machines_data import MACHINES
 from game_data.plants_data import PLANTS
+from visualizers.helpers.formatting import CYAN, RESET
 
 TOTAL_FIELDS = FARM_FIELDS["fields"].amount_owned
 
@@ -23,7 +24,7 @@ def get_best_overnight_strategy(sleep_duration_mins=480):
         candidates = [i for i in MACHINED_ITEMS.values() if i.machine.name == machine_name] + [i for i in FEEDS.values() if i.machine.name == machine_name]
         valid_items = [i for i in candidates if i.time_to_make <= sleep_duration_mins]
         if not valid_items:
-            print(f"{machine_name} has no valid items in this time constraint")
+            print(f"{CYAN}{machine_name} has no valid items in this time constraint{RESET}")
             continue
 
         best_profit_per_machine = 0 # Default to 0 (don't run machine if no profit)

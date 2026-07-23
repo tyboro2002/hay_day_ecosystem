@@ -69,7 +69,11 @@ item_measurements = {
     "Raspberry Jam":{1: 388, 2: 777, 3: 1166, 4: 1555},
     "Cherry Jam":{1: 334, 2: 669, 3: 1004, 4: 1339, 5: 1674},
     "Lobster Soup": {1: 612},
-    "Tomato Soup": {1: 478, 2: 957, 3: 1436}
+    "Tomato Soup": {1: 478, 2: 957, 3: 1436},
+    "Red Scarf": {},
+    "Lobster Skewer": {},
+    "Beeswax": {},
+    "Strawberry Candle": {}
 }
 
 def run_report():

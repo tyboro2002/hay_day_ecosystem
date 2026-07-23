@@ -5,6 +5,11 @@ import base64
 
 # Keep track of missing assets globally across generators
 non_found = 0
+RED = "\033[91m"
+YELLOW = "\033[33m"
+CYAN = "\033[36m"
+ORANGE = "\033[38;5;208m" # 256-color mode for Orange (Color 208)
+RESET = "\033[0m"
 
 def format_duration(minutes):
     """Formats a duration from raw minutes to a human-readable day/hour/minute string."""
@@ -32,7 +37,7 @@ def image_to_base64(image_path):
     if not os.path.exists(image_path):
         non_found += 1
         # Fallback to a default if the specific asset isn't found
-        print(f"Did not find {image_path}")
+        print(f"{ORANGE}Did not find {image_path}{RESET}")
         image_path = os.path.join("assets", "default_icon.png")
 
     try:
