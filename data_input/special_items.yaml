@@ -2,70 +2,97 @@
 
 # Clearing Tools
 Axe:
+  unlock_level: 5
   sell_price: 36.0
 Saw:
+  unlock_level: 5
   sell_price: 54.0
 Dynamite:
+  unlock_level: 5
   sell_price: 25.2
 TNT:
+  unlock_level: 5
   sell_price: 72.0
 Shovel:
+  unlock_level: 5
   sell_price: 108.0
 
 # Mining Ores
 Silver Ore:
+  unlock_level: 24
   sell_price: 18.0
 Gold Ore:
+  unlock_level: 24
   sell_price: 21.6
 Platinum Ore:
+  unlock_level: 24
   sell_price: 32.4
 Coal:
+  unlock_level: 33
   sell_price: 10.8
 Iron Ore:
+  unlock_level: 34
   sell_price: 14.4
 
 # Silo Expansion
 Nail:
+  unlock_level: 1
   sell_price: 270.0
 Screw:
+  unlock_level: 1
   sell_price: 270.0
 Wood Panel:
+  unlock_level: 1
   sell_price: 270.0
 
 # Barn Expansion
 Bolt:
+  unlock_level: 1
   sell_price: 270.0
 Plank:
+  unlock_level: 1
   sell_price: 270.0
 Duct Tape:
+  unlock_level: 1
   sell_price: 270.0
 
 # Land Expansion
 Land Deed:
+  unlock_level: 22
   sell_price: 403.2
 Mallet:
+  unlock_level: 22
   sell_price: 403.2
 Marker Stake:
+  unlock_level: 22
   sell_price: 403.2
 
 # Town Land Expansion
 Map Piece:
+  unlock_level: 34
   sell_price: 450.0
 
 # Town Upgrade
 Stone Block:
+  unlock_level: 34
   sell_price: 342.0
 Hammer:
+  unlock_level: 34
   sell_price: 342.0
 Paint Bucket:
+  unlock_level: 34
   sell_price: 342.0
 Tar Bucket:
+  unlock_level: 34
   sell_price: 342.0
 Hand Drill:
+  unlock_level: 34
   sell_price: 342.0
 Brick:
+  unlock_level: 34
   sell_price: 342.0
 
 # Diamond currency
 Diamond:
+  unlock_level: 1
   sell_price: null # Represents None in YAML

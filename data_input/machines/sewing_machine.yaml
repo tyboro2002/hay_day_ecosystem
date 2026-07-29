@@ -1,6 +1,7 @@
 # --- SEWING MACHINE PRODUCTION ---
 
 Cotton Shirt:
+  unlock_level: 19
   time_to_make: 45
   sell_price: 241.2
   xp: 29
@@ -8,6 +9,7 @@ Cotton Shirt:
     Cotton Fabric: 2
 
 Wooly Chaps:
+  unlock_level: 21
   time_to_make: 90 # (1 * 60) + 30
   sell_price: 309.6
   xp: 37
@@ -16,6 +18,7 @@ Wooly Chaps:
     Cotton Fabric: 1
 
 Violet Dress:
+  unlock_level: 25
   time_to_make: 135 # (2 * 60) + 15
   sell_price: 327.6
   xp: 39
@@ -25,6 +28,7 @@ Violet Dress:
     Raspberry: 1
 
 Soothing Pad:
+  unlock_level: 45
   time_to_make: 60 # 1h
   sell_price: 324.0
   xp: 39

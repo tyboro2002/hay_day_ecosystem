@@ -4,33 +4,58 @@ Chicken Coop:
   max_capacity: 6
   current_capacity: 6
   amount_owned: 3
+  unlock_schedule:
+    - [ 1, 1 ]   # 1st coop unlocked at Lvl 1
+    - [ 12, 1 ]  # 2nd coop unlocked at Lvl 12
+    - [ 23, 1 ]  # 3rd coop unlocked at Lvl 23
 
 Cow Pasture:
   max_capacity: 5
   current_capacity: 5
   amount_owned: 3
+  unlock_schedule:
+    - [ 6, 1 ]
+    - [ 15, 1 ]
+    - [ 27, 1 ]
 
 Pig Pen:
   max_capacity: 5
   current_capacity: 5
   amount_owned: 3
+  unlock_schedule:
+    - [ 10, 1 ]
+    - [ 18, 1 ]
+    - [ 32, 1 ]
 
 Sheep Pasture:
   max_capacity: 5
   current_capacity: 5
   amount_owned: 2
+  unlock_schedule:
+    - [ 16, 1 ]
+    - [ 26, 1 ]
+    - [ 42, 1 ]
 
 Lamb Pasture:
   max_capacity: 5
   current_capacity: 5
   amount_owned: 1
+  unlock_schedule:
+    - [ 25, 1 ]
+    - [ 30, 1 ]
 
 Goat Yard:
   max_capacity: 4
   current_capacity: 4
   amount_owned: 1
+  unlock_schedule:
+    - [ 32, 1 ]
+    - [ 37, 1 ]
+    - [ 50, 1 ]
 
 Beehive Tree:
   max_capacity: 4
   current_capacity: 1
   amount_owned: 1
+  unlock_schedule:
+    - [ 39, 1 ]

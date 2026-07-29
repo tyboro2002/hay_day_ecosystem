@@ -2,81 +2,97 @@
 # Time is in total minutes. Calculations are provided for reference.
 
 Wheat:
+  unlock_level: 1
   time_to_make: 2
   sell_price: 3.6
   xp: 1
 
 Corn:
+  unlock_level: 2
   time_to_make: 5
   sell_price: 7.2
   xp: 1
 
 Carrot:
+  unlock_level: 9
   time_to_make: 10
   sell_price: 7.2
   xp: 2
 
 Sugarcane:
+  unlock_level: 7
   time_to_make: 30
   sell_price: 14.4
   xp: 3
 
 Soybean:
+  unlock_level: 5
   time_to_make: 20
   sell_price: 10.8
   xp: 2
 
 Indigo:
+  unlock_level: 13
   time_to_make: 120 # 2 * 60
   sell_price: 25.2
   xp: 5
 
 Pumpkin:
+  unlock_level: 15
   time_to_make: 180 # 3 * 60
   sell_price: 32.4
   xp: 6
 
 Black Bean:
+  unlock_level: 25
   time_to_make: 10
   sell_price: 7.2
   xp: 2
 
 Chili Pepper:
+  unlock_level: 25
   time_to_make: 240 # 4 * 60
   sell_price: 36.0
   xp: 6
 
 Cotton:
+  unlock_level: 18
   time_to_make: 150 # (2 * 60) + 30
   sell_price: 28.8
   xp: 6
 
 Tomato:
+  unlock_level: 30
   time_to_make: 360 # 6 * 60
   sell_price: 43.2
   xp: 8
 
 Strawberry:
+  unlock_level: 34
   time_to_make: 480 # 8 * 60
   sell_price: 50.4
   xp: 10
 
 Potato:
+  unlock_level: 35
   time_to_make: 220
   sell_price: 36.0
   xp: 7
 
 Chamomile:
+  unlock_level: 45
   time_to_make: 20
   sell_price: 10.8
   xp: 2
 
 Asparagus:
+  unlock_level: 49
   time_to_make: 360 #6h
   sell_price: 43.2
   xp: 8
 
 Sesame:
+  unlock_level: 50
   time_to_make: 60 # 1h
   sell_price: 18.0
   xp: 4

@@ -13,6 +13,8 @@ Tomato,Crop,43.2,360,None,None
 Strawberry,Crop,50.4,480,None,None
 Potato,Crop,36.0,220,None,None
 Chamomile,Crop,10.8,20,None,None
+Asparagus,Crop,43.2,360,None,None
+Sesame,Crop,18.0,60,None,None
 Apple,PlantableItem,39.6,960,None,None
 Raspberry,PlantableItem,46.8,1080,None,None
 Cherry,PlantableItem,68.4,1620,None,None
@@ -66,7 +68,7 @@ Fish Burger,MachinedItem,226.8,120,BBQ Grill,"Bread x2, Fish Fillet x2, Chili Pe
 Roasted Tomatoes,MachinedItem,118.8,90,BBQ Grill,Tomato x2
 Baked Potato,MachinedItem,298.8,35,BBQ Grill,"Cheese x1, Chili Pepper x1, Cream x1, Potato x2"
 Fish And Chips,MachinedItem,244.8,90,BBQ Grill,"Fish Fillet x2, Potato x3"
-Lobster Skewer,MachinedItem,417.0,40,BBQ Grill,"Chili Pepper x1, Honey x1, Lobster Tail x1"
+Lobster Skewer,MachinedItem,417.6,40,BBQ Grill,"Chili Pepper x1, Honey x1, Lobster Tail x1"
 Carrot Pie,MachinedItem,82.8,60,Pie Oven,"Wheat x2, Egg x1, Carrot x3"
 Pumpkin Pie,MachinedItem,158.4,120,Pie Oven,"Wheat x2, Egg x1, Pumpkin x3"
 Bacon Pie,MachinedItem,219.6,180,Pie Oven,"Wheat x2, Egg x1, Bacon x3"
@@ -75,6 +77,7 @@ Fish Pie,MachinedItem,226.8,120,Pie Oven,"Wheat x2, Egg x1, Fish Fillet x3"
 Feta Pie,MachinedItem,223.2,90,Pie Oven,"Goat Cheese x1, Egg x1, Wheat x2"
 Casserole,MachinedItem,367.2,120,Pie Oven,"Bacon x2, Cheese x1, Egg x2, Potato x2"
 Shepherd's Pie,MachinedItem,280.8,100,Pie Oven,"Potato x2, Carrot x2, Bacon x2, Pumpkin x2"
+Asparagus Quiche,MachinedItem,302.4,120,Pie Oven,"Asparagus x2, Egg x2, Wheat x4, Cheese x1"
 Sweater,MachinedItem,151.2,120,Loom,Wool x2
 Cotton Fabric,MachinedItem,108.0,30,Loom,Cotton x3
 Blue Woolly Hat,MachinedItem,111.6,60,Loom,"Wool x1, Indigo x1"
@@ -107,12 +110,14 @@ Vanilla Ice Cream,MachinedItem,172.8,120,Ice Cream Maker,"Milk x1, Cream x1, Whi
 Cherry Popsicle,MachinedItem,352.8,180,Ice Cream Maker,"Cherry Juice x1, Syrup x1"
 Strawberry Ice Cream,MachinedItem,331.2,240,Ice Cream Maker,"Milk x1, Cream x1, White Sugar x1, Strawberry x3"
 Chocolate Ice Cream,MachinedItem,342.0,150,Ice Cream Maker,"Milk x1, Cream x1, White Sugar x1, Cacao x2"
+Sesame Ice Cream,MachinedItem,176.4,120,Ice Cream Maker,"Cream x1, Sesame x3, Brown Sugar x1"
 Lamb doner wrap,MachinedItem,172.8,20,Doner Kebab Stand,"Grilled Lamb Skewer x1, Tomato x1, Bread x1"
 Spicy bean doner,MachinedItem,471.6,30,Doner Kebab Stand,"Black Bean x3, Chili Pepper x3, Cheese x2, Corn Bread x1"
 Apple Jam,MachinedItem,219.6,360,Jam Maker,Apple x3
 Raspberry Jam,MachinedItem,252.0,420,Jam Maker,Raspberry x3
 Blackberry Jam,MachinedItem,388.8,480,Jam Maker,Blackberry x3
-Cherry Jam,MachinedItem,334.0,420,Jam Maker,Cherry x3
+Cherry Jam,MachinedItem,334.8,420,Jam Maker,Cherry x3
+Strawberry Jam,MachinedItem,270.0,450,Jam Maker,Strawberry x3
 Bracelet,MachinedItem,514.8,120,Jeweler,"Gold Bar x1, Silver Bar x2"
 Necklace,MachinedItem,727.2,180,Jeweler,"Gold Bar x1, Platinum Bar x1, Silver Bar x2"
 Diamond Ring,MachinedItem,824.4,240,Jeweler,"Diamond x1, Platinum Bar x2, Gold Bar x2"
@@ -127,8 +132,11 @@ Hot Chocolate,MachinedItem,316.8,25,Coffee Kiosk,"Cacao x2, White Sugar x1, Milk
 Lobster Tail,MachinedItem,201.6,360,Lobster Pool,None
 Lobster Soup,MachinedItem,612.0,150,Soup Kitchen,"Chili Pepper x2, Lobster Tail x1, Cream x1, Tomato x1"
 Lamb Soup,MachinedItem,180.0,120,Soup Kitchen,"Grilled Lamb Skewer x1, Potato x1, Carrot x2"
-Tomato Soup,MachinedItem,478.0,90,Soup Kitchen,"Chili Pepper x1, Goat Cheese x1, Tomato Juice x1, Tomato x2"
-Strawberry Candle,MachinedItem,370.0,120,Candle Maker,"Beeswax x1, Strawberry x2"
+Tomato Soup,MachinedItem,478.8,90,Soup Kitchen,"Chili Pepper x1, Goat Cheese x1, Tomato Juice x1, Tomato x2"
+Pumpkin Soup,MachinedItem,392.4,120,Soup Kitchen,"Butter x1, Carrot x2, Honey x1, Pumpkin x3"
+Strawberry Candle,MachinedItem,370.8,120,Candle Maker,"Beeswax x1, Strawberry x2"
+Rustic Bouquet,MachinedItem,208.8,45,Flower Shop,"Wheat x5, Indigo x3, Cotton x3"
+Duck Feather,MachinedItem,140.0,180,Duck Salon,None
 Axe,SpecialItem,36.0,0,None,None
 Saw,SpecialItem,54.0,0,None,None
 Dynamite,SpecialItem,25.2,0,None,None

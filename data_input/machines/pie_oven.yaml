@@ -1,6 +1,7 @@
 # --- PIE OVEN PRODUCTION ---
 
 Carrot Pie:
+  unlock_level: 14
   time_to_make: 60 # 1 * 60
   sell_price: 82.8
   xp: 10
@@ -10,6 +11,7 @@ Carrot Pie:
     Carrot: 3
 
 Pumpkin Pie:
+  unlock_level: 15
   time_to_make: 120 # 2 * 60
   sell_price: 158.4
   xp: 19
@@ -19,6 +21,7 @@ Pumpkin Pie:
     Pumpkin: 3
 
 Bacon Pie:
+  unlock_level: 18
   time_to_make: 180 # 3 * 60
   sell_price: 219.6
   xp: 26
@@ -28,6 +31,7 @@ Bacon Pie:
     Bacon: 3
 
 Apple Pie:
+  unlock_level: 28
   time_to_make: 150 # (2 * 60) + 30
   sell_price: 270.0
   xp: 32
@@ -38,6 +42,7 @@ Apple Pie:
     Apple: 3
 
 Fish Pie:
+  unlock_level: 28
   time_to_make: 120 # 2 * 60
   sell_price: 226.8
   xp: 27
@@ -47,6 +52,7 @@ Fish Pie:
     Fish Fillet: 3
 
 Feta Pie:
+  unlock_level: 34
   time_to_make: 90 # (1 * 60) + 30
   sell_price: 223.2
   xp: 26
@@ -56,6 +62,7 @@ Feta Pie:
     Wheat: 2
 
 Casserole:
+  unlock_level: 36
   time_to_make: 120 # 2 * 60
   sell_price: 367.2
   xp: 44
@@ -66,6 +73,7 @@ Casserole:
     Potato: 2
 
 Shepherd's Pie:
+  unlock_level: 39
   time_to_make: 100 # 1h40
   sell_price: 280.8
   xp: 34
@@ -76,6 +84,7 @@ Shepherd's Pie:
     Pumpkin: 2
 
 Asparagus Quiche:
+  unlock_level: 49
   time_to_make: 120 # 2h
   sell_price: 302.4
   xp: 36

@@ -1,6 +1,7 @@
 # --- COFFEE KIOSK PRODUCTION ---
 
 Espresso:
+  unlock_level: 42
   time_to_make: 5
   sell_price: 248.4
   xp: 29
@@ -9,6 +10,7 @@ Espresso:
     White Sugar: 1
 
 Caffè Latte:
+  unlock_level: 43
   time_to_make: 10
   sell_price: 219.6
   xp: 26
@@ -18,6 +20,7 @@ Caffè Latte:
     Milk: 1
 
 Caffè Mocha:
+  unlock_level: 45
   time_to_make: 15
   sell_price: 291.6
   xp: 35
@@ -27,6 +30,7 @@ Caffè Mocha:
     Cacao: 2
 
 Raspberry Mocha:
+  unlock_level: 46
   time_to_make: 30
   sell_price: 259.2
   xp: 31
@@ -37,6 +41,7 @@ Raspberry Mocha:
     Raspberry: 1
 
 Hot Chocolate:
+  unlock_level: 47
   time_to_make: 25
   sell_price: 316.8
   xp: 38

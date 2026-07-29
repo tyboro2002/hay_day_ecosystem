@@ -1,6 +1,7 @@
 # --- POPCORN POT PRODUCTION ---
 
 Popcorn:
+  unlock_level: 8
   time_to_make: 30
   sell_price: 32.4
   xp: 4
@@ -8,6 +9,7 @@ Popcorn:
     Corn: 2
 
 Buttered Popcorn:
+  unlock_level: 16
   time_to_make: 60 # 1 * 60
   sell_price: 126.0
   xp: 15
@@ -16,6 +18,7 @@ Buttered Popcorn:
     Butter: 1
 
 Chili Popcorn:
+  unlock_level: 25
   time_to_make: 120 # 2 * 60
   sell_price: 122.4
   xp: 15
@@ -24,6 +27,7 @@ Chili Popcorn:
     Chili Pepper: 1
 
 Honey Popcorn:
+  unlock_level: 40
   time_to_make: 90 # 1h30
   sell_price: 360.0
   xp: 43
@@ -32,6 +36,7 @@ Honey Popcorn:
     Honey: 2
 
 Chocolate Popcorn:
+  unlock_level: 44
   time_to_make: 150 # 2h30
   sell_price: 248.4
   xp: 29

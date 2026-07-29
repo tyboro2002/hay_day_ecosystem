@@ -1,6 +1,7 @@
 # --- DAIRY PRODUCTION ---
 
 Cream:
+  unlock_level: 6
   time_to_make: 20
   sell_price: 50.4
   xp: 6
@@ -8,6 +9,7 @@ Cream:
     Milk: 1
 
 Butter:
+  unlock_level: 9
   time_to_make: 30
   sell_price: 82.8
   xp: 10
@@ -15,6 +17,7 @@ Butter:
     Milk: 2
 
 Cheese:
+  unlock_level: 12
   time_to_make: 60 # 1 * 60
   sell_price: 122.4
   xp: 15
@@ -22,6 +25,7 @@ Cheese:
     Milk: 3
 
 Goat Cheese:
+  unlock_level: 33
   time_to_make: 90 # (1 * 60) + 30
   sell_price: 162.0
   xp: 19

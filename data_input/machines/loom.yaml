@@ -1,6 +1,7 @@
 # --- LOOM PRODUCTION ---
 
 Sweater:
+  unlock_level: 17
   time_to_make: 120 # 2 * 60
   sell_price: 151.2
   xp: 18
@@ -8,6 +9,7 @@ Sweater:
     Wool: 2
 
 Cotton Fabric:
+  unlock_level: 18
   time_to_make: 30
   sell_price: 108.0
   xp: 13
@@ -15,6 +17,7 @@ Cotton Fabric:
     Cotton: 3
 
 Blue Woolly Hat:
+  unlock_level: 19
   time_to_make: 60 # 1 * 60
   sell_price: 111.6
   xp: 13
@@ -23,6 +26,7 @@ Blue Woolly Hat:
     Indigo: 1
 
 Blue Sweater:
+  unlock_level: 20
   time_to_make: 180 # 3 * 60
   sell_price: 208.8
   xp: 25
@@ -31,6 +35,7 @@ Blue Sweater:
     Indigo: 2
 
 Red Scarf:
+  unlock_level: 48
   time_to_make: 150 # 2h30
   sell_price: 288.0
   xp: 34

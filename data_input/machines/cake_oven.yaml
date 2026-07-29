@@ -1,6 +1,7 @@
 # --- CAKE OVEN PRODUCTION ---
 
 Carrot Cake:
+  unlock_level: 21
   time_to_make: 90 # (1 * 60) + 30
   sell_price: 165.6
   xp: 20
@@ -10,6 +11,7 @@ Carrot Cake:
     Brown Sugar: 1
 
 Cream Cake:
+  unlock_level: 23
   time_to_make: 180 # 3 * 60
   sell_price: 219.6
   xp: 26
@@ -19,6 +21,7 @@ Cream Cake:
     White Sugar: 1
 
 Red Berry Cake:
+  unlock_level: 23
   time_to_make: 60 # 1 * 60
   sell_price: 255.6
   xp: 31
@@ -29,6 +32,7 @@ Red Berry Cake:
     Cherry: 2
 
 Cheesecake:
+  unlock_level: 24
   time_to_make: 240 # 4 * 60
   sell_price: 284.4
   xp: 34
@@ -37,6 +41,7 @@ Cheesecake:
     Cheese: 1
 
 Blueberry Cheesecake:
+  unlock_level: 31
   time_to_make: 240 # 4 * 60
   sell_price: 500.4
   xp: 60
@@ -45,6 +50,7 @@ Blueberry Cheesecake:
     Blueberry: 2
 
 Strawberry Cake:
+  unlock_level: 35
   time_to_make: 180 # 3h
   sell_price: 316.8
   xp: 38
@@ -55,6 +61,7 @@ Strawberry Cake:
     White Sugar: 1
 
 Chocolate Cake:
+  unlock_level: 36
   time_to_make: 120 # 2h
   sell_price: 320.4
   xp: 38
@@ -64,6 +71,7 @@ Chocolate Cake:
     Cacao: 2
 
 Potato Feta Cake:
+  unlock_level: 38
   time_to_make: 120 # 2h
   sell_price: 309.6
   xp: 37
@@ -73,6 +81,7 @@ Potato Feta Cake:
     Potato: 1
 
 Honey Apple Cake:
+  unlock_level: 42
   time_to_make: 200 # 3h20
   sell_price: 482.4
   xp: 57

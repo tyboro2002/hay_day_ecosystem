@@ -1,6 +1,7 @@
 # --- SMELTER PRODUCTION ---
 
 Silver Bar:
+  unlock_level: 24
   time_to_make: 480 # 8 * 60
   sell_price: 147.6
   xp: 18
@@ -8,6 +9,7 @@ Silver Bar:
     Silver Ore: 3
 
 Gold Bar:
+  unlock_level: 25
   time_to_make: 720 # 12 * 60
   sell_price: 180.0
   xp: 21
@@ -15,6 +17,7 @@ Gold Bar:
     Gold Ore: 3
 
 Platinum Bar:
+  unlock_level: 25
   time_to_make: 960 # 16 * 60
   sell_price: 205.2
   xp: 24
@@ -22,6 +25,7 @@ Platinum Bar:
     Platinum Ore: 3
 
 Refined coal:
+  unlock_level: 33
   time_to_make: 360 # 6 * 60
   sell_price: 108.0
   xp: 13
@@ -29,6 +33,7 @@ Refined coal:
     Coal: 3
 
 Iron Bar:
+  unlock_level: 34
   time_to_make: 420 # 7 * 60
   sell_price: 129.6
   xp: 15

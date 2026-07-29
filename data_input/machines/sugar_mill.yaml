@@ -1,6 +1,7 @@
 # --- SUGAR MILL PRODUCTION ---
 
 Brown Sugar:
+  unlock_level: 7
   time_to_make: 20
   sell_price: 32.4
   xp: 4
@@ -8,6 +9,7 @@ Brown Sugar:
     Sugarcane: 1
 
 White Sugar:
+  unlock_level: 13
   time_to_make: 40
   sell_price: 50.4
   xp: 6
@@ -15,6 +17,7 @@ White Sugar:
     Sugarcane: 2
 
 Syrup:
+  unlock_level: 18
   time_to_make: 90 # (1 * 60) + 30
   sell_price: 90.0
   xp: 11

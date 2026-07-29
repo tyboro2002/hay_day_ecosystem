@@ -10,6 +10,10 @@ def load_pens_yaml(filepath):
 
     pens = {}
     for name, data in raw_data.items():
+        # Converts list of lists [[1, 1], [12, 1]] into tuples if needed
+        if 'unlock_schedule' in data:
+            data['unlock_schedule'] = [tuple(item) for item in data['unlock_schedule']]
+
         pens[name] = AnimalPen(name=name, **data)
     return pens
 

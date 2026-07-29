@@ -1,6 +1,7 @@
 # --- BBQ GRILL PRODUCTION ---
 
 Pancake:
+  unlock_level: 9
   time_to_make: 30
   sell_price: 108.0
   xp: 13
@@ -9,6 +10,7 @@ Pancake:
     Brown Sugar: 1
 
 Bacon And Eggs:
+  unlock_level: 11
   time_to_make: 60 # 1 * 60
   sell_price: 201.6
   xp: 24
@@ -17,6 +19,7 @@ Bacon And Eggs:
     Bacon: 2
 
 Hamburger:
+  unlock_level: 18
   time_to_make: 120 # 2 * 60
   sell_price: 180.0
   xp: 22
@@ -25,6 +28,7 @@ Hamburger:
     Bacon: 2
 
 Grilled Lamb Skewer:
+  unlock_level: 25
   time_to_make: 20
   sell_price: 90.0
   xp: 11
@@ -32,6 +36,7 @@ Grilled Lamb Skewer:
     Lamb Chop: 2
 
 Fish Burger:
+  unlock_level: 27
   time_to_make: 120 # 2 * 60
   sell_price: 226.8
   xp: 27
@@ -41,6 +46,7 @@ Fish Burger:
     Chili Pepper: 1
 
 Roasted Tomatoes:
+  unlock_level: 30
   time_to_make: 90 # (1 * 60) + 30
   sell_price: 118.8
   xp: 14
@@ -48,6 +54,7 @@ Roasted Tomatoes:
     Tomato: 2
 
 Baked Potato:
+  unlock_level: 35
   time_to_make: 35
   sell_price: 298.8
   xp: 36
@@ -58,6 +65,7 @@ Baked Potato:
     Potato: 2
 
 Fish And Chips:
+  unlock_level: 41
   time_to_make: 90 # 1h30
   sell_price: 244.8
   xp: 26
@@ -66,6 +74,7 @@ Fish And Chips:
     Potato: 3
 
 Lobster Skewer:
+  unlock_level: 48
   time_to_make: 40
   sell_price: 417.6
   xp: 50

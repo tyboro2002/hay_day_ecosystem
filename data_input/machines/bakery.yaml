@@ -1,6 +1,7 @@
 # --- BAKERY PRODUCTION ---
 
 Bread:
+  unlock_level: 4
   time_to_make: 5
   sell_price: 21.6
   xp: 3
@@ -8,6 +9,7 @@ Bread:
     Wheat: 3
 
 Corn Bread:
+  unlock_level: 7
   time_to_make: 30
   sell_price: 72.0
   xp: 8
@@ -16,6 +18,7 @@ Corn Bread:
     Egg: 2
 
 Cookie:
+  unlock_level: 10
   time_to_make: 60 # 1 * 60
   sell_price: 104.4
   xp: 13
@@ -25,6 +28,7 @@ Cookie:
     Brown Sugar: 1
 
 Raspberry Muffin:
+  unlock_level: 19
   time_to_make: 45
   sell_price: 140.4
   xp: 17
@@ -34,6 +38,7 @@ Raspberry Muffin:
     Raspberry: 2
 
 Blackberry Muffin:
+  unlock_level: 26
   time_to_make: 45
   sell_price: 226.8
   xp: 27
@@ -43,6 +48,7 @@ Blackberry Muffin:
     Blackberry: 2
 
 Pizza:
+  unlock_level: 33
   time_to_make: 15
   sell_price: 190.8
   xp: 23
@@ -52,6 +58,7 @@ Pizza:
     Cheese: 1
 
 Blueberry muffin:
+  unlock_level: 33
   time_to_make: 45
   sell_price: 230.4
   xp: 28
@@ -61,6 +68,7 @@ Blueberry muffin:
     Blueberry: 2
 
 Spicy pizza:
+  unlock_level: 37
   time_to_make: 15
   sell_price: 226.8
   xp: 27
@@ -71,6 +79,7 @@ Spicy pizza:
     Chili Pepper: 1
 
 Potato Bread:
+  unlock_level: 39
   time_to_make: 45
   sell_price: 284.4
   xp: 34
@@ -81,6 +90,7 @@ Potato Bread:
     Butter: 1
 
 Frutti Di Mare Pizza:
+  unlock_level: 45
   time_to_make: 15
   sell_price: 403.2
   xp: 48
