@@ -87,3 +87,7 @@ Candle Maker:
 Flower Shop:
   max_slots: 2
   amount_owned: 0
+
+Duck Salon: # if more slots are unlocked for this one add them as amount_owned as they are in parallel like an animal pen
+  max_slots: 1
+  amount_owned: 0
