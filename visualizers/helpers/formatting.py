@@ -2,6 +2,7 @@ import io
 from PIL import Image
 import os
 import base64
+from functools import lru_cache
 
 # Keep track of missing assets globally across generators
 non_found = 0
@@ -30,28 +31,28 @@ def format_duration(minutes):
 
     return " ".join(parts)
 
-
+@lru_cache(maxsize=1024)  # Caches duplicate images so they only encode ONCE
 def image_to_base64(image_path):
-    """Converts a local image file to a base64 string for embedding."""
+    """Converts a local image file to a compressed base64 webp string quickly."""
     global non_found
     if not os.path.exists(image_path):
         non_found += 1
-        # Fallback to a default if the specific asset isn't found
         print(f"{ORANGE}Did not find {image_path}{RESET}")
         image_path = os.path.join("assets", "default_icon.png")
 
     try:
         with Image.open(image_path) as img:
-            # Force all images to a standard size for consistency
-            img = img.convert("RGBA")
-            img.thumbnail((128, 128), Image.Resampling.LANCZOS)
+            # BILINEAR or BOX resampling is significantly faster than LANCZOS for tiny icons
+            img.thumbnail((128, 128), Image.Resampling.BILINEAR)
 
-            # Save to buffer
             buffered = io.BytesIO()
-            img.save(buffered, format="PNG")
+
+            # method=0 or method=4 gives 95% of the compression at a fraction of the time
+            # quality=75 is the WebP sweet spot for small UI icons
+            img.save(buffered, format="WEBP", quality=75, method=4)
 
             encoded = base64.b64encode(buffered.getvalue()).decode('utf-8')
-            return f"data:image/png;base64,{encoded}"
+            return f"data:image/webp;base64,{encoded}"
     except Exception as e:
         print(f"Error encoding {image_path}: {e}")
         return None

@@ -4,6 +4,7 @@ from calculators.profitability import calculate_direct_ingredient_cost
 from game_data.animal_feeds_data import FEEDS
 from game_data.crops_data import CROPS
 from game_data.fields_data import FARM_FIELDS
+from game_data.game_data import MAX_LEVEL, CURRENT_LEVEL
 from game_data.machined_items_data import MACHINED_ITEMS
 from game_data.machines_data import MACHINES
 from game_data.plants_data import PLANTS
@@ -11,29 +12,42 @@ from visualizers.helpers.formatting import CYAN, RESET
 
 TOTAL_FIELDS = FARM_FIELDS["fields"].amount_owned
 
-def get_best_overnight_strategy(sleep_duration_mins=480):
+
+def calculate_strategy_for_single_level(sleep_duration_mins, player_level):
+    """Calculates the absolute best overnight strategy restricted strictly to items unlocked at or below player_level."""
     strategy = {}
     total_global_profit = 0
 
     # 1. MACHINE STRATEGY
     for machine_name, machine_obj in MACHINES.items():
-        # print(f"Processing {machine_name}...")
+        # Skip machines not owned or unlocked yet at this level
         if machine_obj.amount_owned == 0 or machine_obj.max_slots == 0:
             continue
 
-        candidates = [i for i in MACHINED_ITEMS.values() if i.machine.name == machine_name] + [i for i in FEEDS.values() if i.machine.name == machine_name]
-        valid_items = [i for i in candidates if i.time_to_make <= sleep_duration_mins]
-        if not valid_items:
-            print(f"{CYAN}{machine_name} has no valid items in this time constraint{RESET}")
+        # Skip machine entirely if player hasn't reached the machine's unlock level yet
+        if getattr(machine_obj, 'unlock_level', 1) > player_level:
             continue
 
-        best_profit_per_machine = 0 # Default to 0 (don't run machine if no profit)
+        candidates = [i for i in MACHINED_ITEMS.values() if i.machine.name == machine_name] + [
+            i for i in FEEDS.values() if i.machine.name == machine_name
+        ]
+
+        # Filter strictly by unlock level AND time limit
+        valid_items = [
+            i for i in candidates
+            if getattr(i, 'unlock_level', 1) <= player_level and i.time_to_make <= sleep_duration_mins
+        ]
+
+        if not valid_items:
+            print(f"{CYAN}{machine_name} has no valid items in this time constraint at level {player_level} {RESET}")
+            continue
+
+        best_profit_per_machine = 0
         best_combo_per_machine = []
 
-        # Iterate through every possible number of slots from 0 up to max_slots
+        # Find the absolute best combination within time constraint
         for num_slots in range(machine_obj.max_slots + 1):
             for combo in itertools.combinations_with_replacement(valid_items, num_slots):
-                # Check if this specific combination finishes within sleep_duration
                 if sum(i.time_to_make for i in combo) <= sleep_duration_mins:
                     current_profit = sum((i.sell_price - calculate_direct_ingredient_cost(i)) for i in combo)
 
@@ -50,24 +64,46 @@ def get_best_overnight_strategy(sleep_duration_mins=480):
                 "combination": {item: count * machine_obj.amount_owned for item, count in counts.items()},
                 "total_profit": total_machine_profit
             }
-        else:
-            strategy[machine_name] = {
-                "combination": {},
-                "total_profit": 0
-            }
 
     # 2. CROP STRATEGY
-    valid_crops = [c for c in CROPS.values() if c.time_to_make <= sleep_duration_mins]
+    valid_crops = [
+        c for c in CROPS.values()
+        if getattr(c, 'unlock_level', 1) <= player_level and c.time_to_make <= sleep_duration_mins
+    ]
+    fields_count = FARM_FIELDS["fields"].max_allowed_at_level(player_level)
     if valid_crops:
-        best_crop = max(valid_crops, key=lambda c: c.sell_price * TOTAL_FIELDS)
-        profit = best_crop.sell_price * TOTAL_FIELDS
+        best_crop = max(valid_crops, key=lambda c: c.sell_price * fields_count)
+        profit = best_crop.sell_price * fields_count
         total_global_profit += profit
         strategy["Fields"] = {
-            "combination": {best_crop: TOTAL_FIELDS},
+            "combination": {best_crop: fields_count},
             "total_profit": profit
         }
 
     return strategy, total_global_profit
+
+
+def get_best_overnight_strategy(sleep_duration_mins=480, max_level=-1):
+    """
+    Returns a list where:
+      - Element 0 [index 0] = (strategy_dict, total_profit) for Level 1
+      - Element 1 [index 1] = (strategy_dict, total_profit) for Level 2
+      ...
+      - Element N-1 [index N-1] = (strategy_dict, total_profit) for Level N
+    """
+    print("============================================")
+    print(f"running for {sleep_duration_mins//60}h")
+    print("============================================")
+    if max_level == -1:
+        return calculate_strategy_for_single_level(sleep_duration_mins, CURRENT_LEVEL)
+
+    all_level_strategies = []
+
+    for lvl in range(1, max_level + 1):
+        plan, profit = calculate_strategy_for_single_level(sleep_duration_mins, lvl)
+        all_level_strategies.append((plan, profit))
+
+    return all_level_strategies
 
 def run_report():
     plan, global_profit = get_best_overnight_strategy(480)

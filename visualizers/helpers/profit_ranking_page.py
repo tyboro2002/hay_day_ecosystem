@@ -4,6 +4,7 @@ from calculators.profitability import analyze_value_added
 from game_data.game_data import DIAMOND_COST
 from visualizers.helpers.formatting import get_base64_asset
 from visualizers.helpers.templates import DISCLAIMER_FOOTER
+from game_data.game_data import MAX_LEVEL, CURRENT_LEVEL
 
 
 def generate_profitability_ranking_page(outp, detail_dir):
@@ -25,6 +26,10 @@ def generate_profitability_ranking_page(outp, detail_dir):
         for item in dataset:
             warning = "⚠️" if item["value_added"] < 0 else ""
 
+            # Retrieve item unlock level (defaults to 1 if not present)
+            unlock_level = item.get("unlock_level", getattr(item.get("item_obj", None), "unlock_level", 1))
+            # print(item["name"], unlock_level)
+
             # Retrieve the base64 string for the item's image
             img_base64 = get_base64_asset(item['name'], "items")
             img_tag = f'<img class="table-item-img" src="{img_base64}" alt="{item["name"]}">' if img_base64 else ""
@@ -40,7 +45,7 @@ def generate_profitability_ranking_page(outp, detail_dir):
             clean_filename = f"{detail_dir}/details_{item['name'].lower().replace(' ', '_').replace('-', '_')}.html"
 
             rows_html += f"""
-            <tr>
+            <tr class="item-row" data-unlock-level="{unlock_level}">
                 <td class="item-name-cell">
                     {warning}
                     <a href="{clean_filename}" class="item-link">
@@ -48,6 +53,7 @@ def generate_profitability_ranking_page(outp, detail_dir):
                         <span>{item['name']}</span>
                     </a>
                 </td>
+                <td style="white-space:nowrap;">Lvl {unlock_level}</td>
                 <td style="white-space:nowrap;">{item['final_price']}{coin_img_html}</td>
                 <td style="white-space:nowrap;">{item['direct_cost']:.1f}{coin_img_html}</td>
                 <td>{item['time_hours']:.2f}h</td>
@@ -66,6 +72,55 @@ def generate_profitability_ranking_page(outp, detail_dir):
             body {{ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #1a1a1a; color: #e0e0e0; padding: 20px; }}
             h1 {{ color: #e67e22; text-align: center; margin-bottom: 5px; }}
             p.subtitle {{ text-align: center; color: #888; margin-bottom: 30px; }}
+
+            /* Level Filter Slider Section */
+            .level-filter-container {{
+                max-width: 1000px;
+                margin: 0 auto 20px auto;
+                background-color: #252525;
+                border: 1px solid #333;
+                border-radius: 6px;
+                padding: 15px 20px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 20px;
+            }}
+            .level-slider-group {{
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                flex-grow: 1;
+            }}
+            .level-slider-group label {{
+                font-weight: bold;
+                color: #e67e22;
+                white-space: nowrap;
+            }}
+            .level-slider {{
+                flex-grow: 1;
+                accent-color: #e67e22;
+                cursor: pointer;
+                height: 6px;
+            }}
+            .level-badge {{
+                background-color: #e67e22;
+                color: #fff;
+                padding: 4px 12px;
+                border-radius: 12px;
+                font-weight: bold;
+                font-size: 0.9rem;
+                min-width: 70px;
+                text-align: center;
+            }}
+            .item-count-badge {{
+                font-size: 0.85rem;
+                color: #aaa;
+                background-color: #1a1a1a;
+                padding: 4px 10px;
+                border-radius: 4px;
+                border: 1px solid #333;
+            }}
 
             /* Diamond Cost Notice Banner */
             .diamond-notice {{ 
@@ -126,11 +181,11 @@ def generate_profitability_ranking_page(outp, detail_dir):
             /* Layout styling for inline item assets */
             .item-name-cell {{ display: flex; align-items: center; gap: 10px; }}
             .table-item-img {{ width: 32px; height: 32px; object-fit: contain; filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.5)); }}
-            
+
             /* Seamless Item Link Styling */
             .item-link {{ display: inline-flex; align-items: center; gap: 10px; color: inherit; text-decoration: none; }}
             .item-link:hover, .item-link:visited, .item-link:active {{ color: inherit; text-decoration: none; }}
-            
+
             /* Global footer styles match inside template variables */
             .sc-disclaimer-footer {{ margin-top: 40px; color: #666; font-size: 0.8rem; text-align: center; line-height: 1.4; }}
             .sc-disclaimer-footer a {{ color: #3498db; text-decoration: none; }}
@@ -142,6 +197,16 @@ def generate_profitability_ranking_page(outp, detail_dir):
         <div class="tabs-container">
             <a class="back-btn" href="index.html">⬅ Back to Farm Map</a>
             <h1>Profit Analytics</h1>
+
+            <!-- Dynamic Level Selector Control -->
+            <div class="level-filter-container">
+                <div class="level-slider-group">
+                    <label for="levelRange">Filter Level:</label>
+                    <input type="range" id="levelRange" class="level-slider" min="1" max="{MAX_LEVEL}" value="{CURRENT_LEVEL}" oninput="filterByLevel(this.value)">
+                    <span id="levelDisplay" class="level-badge">Lvl {CURRENT_LEVEL}</span>
+                </div>
+                <div id="unlockedCount" class="item-count-badge">Showing all items</div>
+            </div>
 
             <!-- Dynamic Diamond Cost Disclaimer Banner -->
             <div class="diamond-notice">
@@ -165,7 +230,7 @@ def generate_profitability_ranking_page(outp, detail_dir):
                     </div>
                     <table>
                         <thead>
-                            <tr><th>Item Name</th><th>Max Price</th><th>Material Costs</th><th>Craft Time</th><th>Value Added</th></tr>
+                            <tr><th>Item Name</th><th>Req Lvl</th><th>Max Price</th><th>Material Costs</th><th>Craft Time</th><th>Value Added</th></tr>
                         </thead>
                         <tbody>{build_table_rows(by_value, "value")}</tbody>
                     </table>
@@ -181,7 +246,7 @@ def generate_profitability_ranking_page(outp, detail_dir):
                     </div>
                     <table>
                         <thead>
-                            <tr><th>Item Name</th><th>Max Price</th><th>Material Costs</th><th>Craft Time</th><th>Profit / Hour</th></tr>
+                            <tr><th>Item Name</th><th>Req Lvl</th><th>Max Price</th><th>Material Costs</th><th>Craft Time</th><th>Profit / Hour</th></tr>
                         </thead>
                         <tbody>{build_table_rows(by_pph, "pph")}</tbody>
                     </table>
@@ -197,7 +262,7 @@ def generate_profitability_ranking_page(outp, detail_dir):
                     </div>
                     <table>
                         <thead>
-                            <tr><th>Item Name</th><th>Max Price</th><th>Material Costs</th><th>Craft Time</th><th>ROI Margin</th></tr>
+                            <tr><th>Item Name</th><th>Req Lvl</th><th>Max Price</th><th>Material Costs</th><th>Craft Time</th><th>ROI Margin</th></tr>
                         </thead>
                         <tbody>{build_table_rows(by_roi, "roi")}</tbody>
                     </table>
@@ -217,6 +282,34 @@ def generate_profitability_ranking_page(outp, detail_dir):
                 document.getElementById(tabId).classList.add("active");
                 evt.currentTarget.classList.add("active");
             }}
+
+            function filterByLevel(selectedLevel) {{
+                selectedLevel = parseInt(selectedLevel);
+                document.getElementById("levelDisplay").innerText = "Lvl " + selectedLevel;
+
+                let rows = document.querySelectorAll(".item-row");
+                let visibleCount = 0;
+                let activePanelRows = 0;
+
+                rows.forEach(row => {{
+                    let itemLevel = parseInt(row.getAttribute("data-unlock-level")) || 1;
+                    if (itemLevel <= selectedLevel) {{
+                        row.style.display = "";
+                        visibleCount++;
+                    }} else {{
+                        row.style.display = "none";
+                    }}
+                }});
+
+                // Divide visible count by 3 (since items appear in all 3 tabs)
+                let uniqueVisible = Math.floor(visibleCount / 3);
+                document.getElementById("unlockedCount").innerText = "Unlocked items: " + uniqueVisible;
+            }}
+
+            // Run initial filter on page load
+            document.addEventListener("DOMContentLoaded", function() {{
+                filterByLevel(document.getElementById("levelRange").value);
+            }});
         </script>
     </body>
     </html>

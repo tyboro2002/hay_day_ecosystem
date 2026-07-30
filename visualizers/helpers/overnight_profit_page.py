@@ -1,4 +1,5 @@
 import os
+import json
 from collections import defaultdict
 
 from calculators.overnight_strategy import get_best_overnight_strategy, TOTAL_FIELDS
@@ -10,40 +11,107 @@ from visualizers.helpers.formatting import get_base64_asset
 from visualizers.helpers.templates import DISCLAIMER_FOOTER
 
 
-def build_duration_html(sleep_duration_mins, detail_dir):
-    """Calculates strategy data and generates the localized template blocks for a given time window."""
-    plan, global_profit = get_best_overnight_strategy(sleep_duration_mins)
+def load_all_assets(base, folders):
+    """
+    Scans a specified list of folder paths and builds a dictionary mapping
+    asset keys to their base64 representation.
 
-    # Fetch global coin image asset for dynamic inline use
-    coin_b64 = get_base64_asset("coin", "items")  # Resolves path items/coin.png via system asset helpers
-    coin_img_html = f'<img class="coin-icon" src="{coin_b64}" alt="coins">' if coin_b64 else "coins"
+    Only processes files directly inside the listed folders (no subfolders).
+    Keys are stored in lowercase without file extensions (e.g., 'wheat', 'barn').
+    """
+    asset_bank = {}
+    valid_extensions = ('.png',)
+
+    for folder in folders:
+        folder = base + folder
+        if not os.path.exists(folder):
+            continue
+
+        # Extract category from the folder name (e.g., 'assets/items' -> 'items')
+        category = os.path.basename(os.path.normpath(folder))
+
+        # os.listdir only checks the current folder, ignoring subdirectories
+        for entry in os.listdir(folder):
+            full_path = os.path.join(folder, entry)
+
+            # Ensure it is a file and has a valid extension
+            if os.path.isfile(full_path) and entry.lower().endswith(valid_extensions):
+                asset_name = os.path.splitext(entry)[0].lower().strip()
+
+                # Fetch Base64 string via helper
+                b64_val = get_base64_asset(asset_name, category)
+
+                if b64_val:
+                    asset_bank[asset_name] = b64_val
+
+    return asset_bank
+
+
+# Example Usage:
+TARGET_FOLDERS = [
+    # "animals",
+    "items",
+    "storage",
+    "machines",
+    "fields",
+    # "pens",
+    # "plant_structures",
+    # "special_structures"
+]
+
+GLOBAL_ASSETS = load_all_assets("assets/", TARGET_FOLDERS)
+
+
+def get_asset_ref(asset_name, category="items", css_class="", alt_text=""):
+    """
+    Helper to check if an asset exists in the bank.
+    If present, renders a lightweight <img data-asset="..."> tag.
+    Otherwise, falls back to direct Base64 embedding.
+    """
+    key = asset_name.lower().strip()
+    class_attr = f' class="{css_class}"' if css_class else ""
+    alt_attr = f' alt="{alt_text or asset_name}"'
+
+    # Check if the asset is registered in our bank
+    if key in GLOBAL_ASSETS and GLOBAL_ASSETS[key]:
+        return f'<img{class_attr} data-asset="{key}"{alt_attr}>'
+
+    # Fallback to direct Base64 inline string
+    b64 = get_base64_asset(asset_name, category)
+    if b64:
+        return f'<img{class_attr} src="{b64}"{alt_attr}>'
+
+    return alt_text or asset_name
+
+
+def render_single_level_panel(plan, global_profit, detail_dir):
+    """Helper to generate HTML for a single specific level calculation."""
+    coin_img_html = get_asset_ref("coin", "items", css_class="coin-icon", alt_text="coins")
 
     global_ingredients = defaultdict(int)
     machine_rows_html = ""
 
-    # Process Field/Machine allocations
     for source_name, data in plan.items():
         if not data['combination']:
             continue
 
-        # Fetch machine/building visual asset with fallback for fields
         if source_name == "Fields":
             machine_b64 = get_base64_asset("fields", "fields")
         else:
             machine_b64 = get_base64_asset(source_name, "machines")
 
         machine_img_html = f'<img class="inline-machine-img" src="{machine_b64}" alt="{source_name}">' if machine_b64 else ""
-
         machine_clean_filename = f"{detail_dir}/details_{source_name.lower().replace(' ', '_').replace('-', '_')}.html"
 
         combo_parts = []
         for item_obj, count in data['combination'].items():
             clean_filename = f"{detail_dir}/details_{item_obj.name.lower().replace(' ', '_').replace('-', '_')}.html"
-            img_b64 = get_base64_asset(item_obj.name, "items")
-            img_html = f'<img class="inline-item-img" src="{img_b64}" alt="{item_obj.name}">' if img_b64 else ""
-            combo_parts.append(f'<a href="{clean_filename}" class="item-link queue-pill">{img_html} {count}x {item_obj.name}</a>')
+            img_html = get_asset_ref(item_obj.name, "items", css_class="inline-item-img", alt_text=item_obj.name)
+            combo_parts.append(
+                f'<a href="{clean_filename}" class="item-link queue-pill">'
+                f'{img_html} {count}x {item_obj.name}</a>'
+            )
 
-            # Aggregate ingredient requirements
             ingredients_dict = getattr(item_obj, 'ingredients', {})
             if isinstance(ingredients_dict, dict):
                 for ing_obj, qty in ingredients_dict.items():
@@ -64,20 +132,17 @@ def build_duration_html(sleep_duration_mins, detail_dir):
         </tr>
         """
 
-    # Append required seeds to pre-stock inventory if field production is used
     if "Fields" in plan:
         for crop_obj in plan["Fields"]["combination"].keys():
             global_ingredients[crop_obj.name] += TOTAL_FIELDS
 
-    # Compute storage footprints
     silo_space = 0
     barn_space = 0
     shopping_list_html = ""
 
     for ing_name, qty in sorted(global_ingredients.items(), key=lambda x: x[1], reverse=True):
         clean_filename = f"{detail_dir}/details_{ing_name.lower().replace(' ', '_').replace('-', '_')}.html"
-        img_b64 = get_base64_asset(ing_name, "items")
-        img_html = f'<img class="inline-item-img" src="{img_b64}" alt="{ing_name}">' if img_b64 else ""
+        img_html = get_asset_ref(ing_name, "items", css_class="inline-item-img", alt_text=ing_name)
 
         shopping_list_html += f'<li><a href="{clean_filename}" class="item-link">{img_html} <b>{qty}x</b> {ing_name}</a></li>'
         if ing_name in CROPS or ing_name in PLANTS:
@@ -85,18 +150,12 @@ def build_duration_html(sleep_duration_mins, detail_dir):
         else:
             barn_space += qty
 
-    # Clean display formatting for storage values (up to 2 decimals, trailing zeroes stripped)
     silo_space_str = f"{silo_space:,.2f}".rstrip('0').rstrip('.')
     barn_space_str = f"{barn_space:,.2f}".rstrip('0').rstrip('.')
 
-    # Fetch storage assets
-    silo_b64 = get_base64_asset("silo", "storage")
-    barn_b64 = get_base64_asset("barn", "storage")
+    silo_img_html = get_asset_ref("silo", "storage", css_class="stat-icon", alt_text="Silo")
+    barn_img_html = get_asset_ref("barn", "storage", css_class="stat-icon", alt_text="Barn")
 
-    silo_img_html = f'<img class="stat-icon" src="{silo_b64}" alt="Silo">' if silo_b64 else ""
-    barn_img_html = f'<img class="stat-icon" src="{barn_b64}" alt="Barn">' if barn_b64 else ""
-
-    # Construct and return the full localized panel block
     return f"""
     <div class="dashboard-grid">
         <div class="stat-card">
@@ -135,7 +194,7 @@ def build_duration_html(sleep_duration_mins, detail_dir):
                     <tr><th style="width:25%">Production Line</th><th style="width:60%">Optimal Loading Queue</th><th style="width:15%">Net Value</th></tr>
                 </thead>
                 <tbody>
-                    {machine_rows_html}
+                    {machine_rows_html or '<tr><td colspan="3">No unlocked machines available for this time window.</td></tr>'}
                 </tbody>
             </table>
         </div>
@@ -149,12 +208,32 @@ def build_duration_html(sleep_duration_mins, detail_dir):
     """
 
 
-def generate_overnight_page(outp, detail_dir):
-    """Assembles independent sleep strategy options into a comprehensive web panel document."""
+def build_duration_html(sleep_duration_mins, detail_dir, max_level=50):
+    """Fetches per-level strategy array and constructs level containers with DOM deduplication."""
+    level_strategies = get_best_overnight_strategy(sleep_duration_mins, max_level=max_level)
 
-    # Also grab coin for the top notice banner inside generate_overnight_page
-    coin_b64 = get_base64_asset("coin", "items")
-    coin_img_html = f'<img class="coin-icon" src="{coin_b64}" alt="coins">' if coin_b64 else "coins"
+    # Combine identical HTML panels across levels into a single DOM element to conserve space
+    rendered_panels = {}
+    for idx, (plan, global_profit) in enumerate(level_strategies):
+        lvl = idx + 1
+        panel_html = render_single_level_panel(plan, global_profit, detail_dir)
+
+        if panel_html in rendered_panels:
+            rendered_panels[panel_html].append(str(lvl))
+        else:
+            rendered_panels[panel_html] = [str(lvl)]
+
+    html_blocks = []
+    for panel_html, levels in rendered_panels.items():
+        levels_attr = ",".join(levels)
+        html_blocks.append(f'<div class="level-panel" data-levels="{levels_attr}" style="display: none;">{panel_html}</div>')
+
+    return "\n".join(html_blocks)
+
+
+def generate_overnight_page(outp, detail_dir, current_level=50, max_level=50):
+    coin_img_html = get_asset_ref("coin", "items", css_class="coin-icon", alt_text="coins")
+    asset_bank_json = json.dumps(GLOBAL_ASSETS)
 
     html_content = f"""
     <!DOCTYPE html>
@@ -169,6 +248,29 @@ def generate_overnight_page(outp, detail_dir):
 
             .back-btn {{ display: inline-block; background-color: #34495e; color: #fff; padding: 8px 15px; border-radius: 4px; text-decoration: none; margin-bottom: 20px; font-size: 0.9rem; }}
             .back-btn:hover {{ background-color: #2c3e50; }}
+
+            /* Dynamic Level Selector Bar */
+            .level-filter-container {{
+                max-width: 1100px;
+                margin: 0 auto 20px auto;
+                background-color: #252525;
+                border: 1px solid #333;
+                border-radius: 6px;
+                padding: 15px 20px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 20px;
+            }}
+            .level-slider-group {{
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                flex-grow: 1;
+            }}
+            .level-slider-group label {{ font-weight: bold; color: #e67e22; white-space: nowrap; }}
+            .level-slider {{ flex-grow: 1; accent-color: #e67e22; cursor: pointer; height: 6px; }}
+            .level-badge {{ background-color: #e67e22; color: #fff; padding: 4px 12px; border-radius: 12px; font-weight: bold; font-size: 0.9rem; min-width: 70px; text-align: center; }}
 
             /* Diamond Cost Notice Banner */
             .diamond-notice {{ 
@@ -232,12 +334,12 @@ def generate_overnight_page(outp, detail_dir):
             .shopping-list {{ list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }}
             .shopping-list li {{ background: #282828; padding: 8px 12px; border-radius: 4px; border: 1px solid #333; font-size: 0.9rem; display: flex; align-items: center; gap: 10px; }}
             .shopping-list b {{ color: #e67e22; min-width: 28px; display: inline-block; }}
-            
+
             /* Seamless Item Link Styling */
             .item-link {{ color: inherit; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }}
             .item-link:hover, .item-link:visited, .item-link:active {{ color: inherit; text-decoration: none; }}
             .shopping-list li .item-link {{ gap: 10px; width: 100%; }}
-            
+
             /* Global footer styles */
             .sc-disclaimer-footer {{ margin-top: 40px; color: #666; font-size: 0.8rem; text-align: center; line-height: 1.4; }}
             .sc-disclaimer-footer a {{ color: #3498db; text-decoration: none; }}
@@ -250,6 +352,15 @@ def generate_overnight_page(outp, detail_dir):
             <a class="back-btn" href="index.html">⬅ Back to Farm Map</a>
             <h1>Overnight Queue Optimization</h1>
             <p class="subtitle">Calculates the most profitable combination of long-running items to fill your production slots before you log off, ensuring your farm keeps making coins efficiently while you sleep.</p>
+
+            <!-- Level Selector Control -->
+            <div class="level-filter-container">
+                <div class="level-slider-group">
+                    <label for="overnightLevelRange">Filter Level:</label>
+                    <input type="range" id="overnightLevelRange" class="level-slider" min="1" max="{max_level}" value="{current_level}" oninput="switchLevel(this.value)">
+                    <span id="overnightLevelDisplay" class="level-badge">Lvl {current_level}</span>
+                </div>
+            </div>
 
             <!-- Dynamic Diamond Cost Disclaimer Banner -->
             <div class="diamond-notice">
@@ -266,34 +377,28 @@ def generate_overnight_page(outp, detail_dir):
             </ul>
 
             <div class="tab-content">
-                <!-- PANEL 1: 1 HOURS -->
                 <div id="tab-1h" class="content-panel active">
-                    {build_duration_html(1*60, detail_dir)}
+                    {build_duration_html(1*60, detail_dir, max_level=max_level)}
                 </div>
-                
-                <!-- PANEL 2: 2 HOURS -->
+
                 <div id="tab-2h" class="content-panel">
-                    {build_duration_html(2*60, detail_dir)}
+                    {build_duration_html(2*60, detail_dir, max_level=max_level)}
                 </div>
-                
-                <!-- PANEL 3: 4 HOURS -->
+
                 <div id="tab-4h" class="content-panel">
-                    {build_duration_html(4*60, detail_dir)}
+                    {build_duration_html(4*60, detail_dir, max_level=max_level)}
                 </div>
 
-                <!-- PANEL 4: 8 HOURS -->
                 <div id="tab-8h" class="content-panel">
-                    {build_duration_html(8*60, detail_dir)}
+                    {build_duration_html(8*60, detail_dir, max_level=max_level)}
                 </div>
 
-                <!-- PANEL 5: 12 HOURS -->
                 <div id="tab-12h" class="content-panel">
-                    {build_duration_html(12*60, detail_dir)}
+                    {build_duration_html(12*60, detail_dir, max_level=max_level)}
                 </div>
-                
-                <!-- PANEL 6: 24 HOURS -->
+
                 <div id="tab-24h" class="content-panel">
-                    {build_duration_html(24*60, detail_dir)}
+                    {build_duration_html(24*60, detail_dir, max_level=max_level)}
                 </div>
             </div>
 
@@ -301,6 +406,18 @@ def generate_overnight_page(outp, detail_dir):
         </div>
 
         <script>
+            // Asset Bank JSON storage for runtime hydration
+            const ASSET_BANK = {asset_bank_json};
+
+            function hydrateAssets() {{
+                document.querySelectorAll("img[data-asset]").forEach(img => {{
+                    const key = img.getAttribute("data-asset");
+                    if (ASSET_BANK[key]) {{
+                        img.src = ASSET_BANK[key];
+                    }}
+                }});
+            }}
+
             function switchTab(evt, tabId) {{
                 let panels = document.getElementsByClassName("content-panel");
                 for (let p of panels) {{ p.classList.remove("active"); }}
@@ -311,12 +428,33 @@ def generate_overnight_page(outp, detail_dir):
                 document.getElementById(tabId).classList.add("active");
                 evt.currentTarget.classList.add("active");
             }}
+
+            function switchLevel(selectedLevel) {{
+                selectedLevel = selectedLevel.toString();
+                document.getElementById("overnightLevelDisplay").innerText = "Lvl " + selectedLevel;
+
+                let levelPanels = document.querySelectorAll(".level-panel");
+                levelPanels.forEach(panel => {{
+                    let validLevels = (panel.getAttribute("data-levels") || panel.getAttribute("data-level") || "").split(",");
+                    if (validLevels.includes(selectedLevel)) {{
+                        panel.style.display = "block";
+                    }} else {{
+                        panel.style.display = "none";
+                    }}
+                }});
+            }}
+
+            // Initialize correct level view and asset hydration on load
+            document.addEventListener("DOMContentLoaded", function() {{
+                hydrateAssets();
+                let slider = document.getElementById("overnightLevelRange");
+                if (slider) switchLevel(slider.value);
+            }});
         </script>
     </body>
     </html>
     """
 
-    # Ensure output target directory exists and save the file
     target_path = os.path.join(outp, "overnight_strategies.html")
     os.makedirs(os.path.dirname(target_path), exist_ok=True)
     with open(target_path, "w", encoding="utf-8") as f:

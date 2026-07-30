@@ -1,7 +1,13 @@
+# get new assets from
+# https://fankit.supercell.com/d/QSVyhmM7gdGe/game-assets
+# if not found there look at
+# https://hayday.fandom.com/wiki
+
 import os
 
 from pyvis.network import Network
 from game_data import ITEMS, INFRASTRUCTURE, LIVESTOCK
+from game_data.game_data import MAX_LEVEL, CURRENT_LEVEL
 
 # Import helpers from the subdirectory package!
 from visualizers.helpers.formatting import format_duration, get_base64_asset
@@ -9,11 +15,6 @@ import visualizers.helpers.formatting as formatting
 import visualizers.helpers.templates as templates
 from visualizers.helpers.overnight_profit_page import generate_overnight_page
 from visualizers.helpers.profit_ranking_page import generate_profitability_ranking_page
-
-# get new assets from
-# https://fankit.supercell.com/d/QSVyhmM7gdGe/game-assets
-# if not found there look at
-# https://hayday.fandom.com/wiki
 
 outp = "docs"
 outp_file = "index.html"
@@ -28,28 +29,36 @@ FIELD_SIZE = NODE_SIZE
 ANIMAL_SIZE = NODE_SIZE
 ITEM_SIZE = NODE_SIZE
 
+
 def generate_interactive_farm_graph(output_filename=f"{outp}/{outp_file}"):
     net = Network(height="800px", width="100%", bgcolor="#222222", font_color="white", directed=True)
     net.barnes_hut()
 
+    # Helper to resolve item unlock level safely
+    def get_unlock_level(obj):
+        return getattr(obj, "unlock_level", 1)
+
     # =====================================================================
     # 1. GENERATE ALL INFRASTRUCTURE NODES
     # =====================================================================
-    for name in INFRASTRUCTURE["machines"].keys():
+    for name, mach_obj in INFRASTRUCTURE["machines"].items():
         detail_url = f"{detail_dir}/details_{name.lower().replace(' ', '_')}.html"
-        net.add_node(name, label=name, shape="image", image=get_base64_asset(name, "machines"), size=MACHINE_SIZE, url=detail_url)
+        lvl = get_unlock_level(mach_obj)
+        net.add_node(name, label=name, shape="image", image=get_base64_asset(name, "machines"), size=MACHINE_SIZE, url=detail_url, unlock_level=lvl)
         prods = [item for item in ITEMS.values() if getattr(item, 'machine', None) and item.machine.name == name]
         generate_detail_page_machine(name, prods)
 
-    for name in INFRASTRUCTURE["pens"].keys():
+    for name, pen_obj in INFRASTRUCTURE["pens"].items():
         detail_url = f"{detail_dir}/details_{name.lower().replace(' ', '_')}.html"
-        net.add_node(name, label=name, shape="image", image=get_base64_asset(name, "pens"), size=PEN_SIZE, url=detail_url)
+        lvl = get_unlock_level(pen_obj)
+        net.add_node(name, label=name, shape="image", image=get_base64_asset(name, "pens"), size=PEN_SIZE, url=detail_url, unlock_level=lvl)
         residents = [anim for anim_name, anim in LIVESTOCK.items() if anim.pen and anim.pen.name == name]
         generate_detail_page_pen(name, residents)
 
-    for name in INFRASTRUCTURE["plant_structures"].keys():
+    for name, plant_obj in INFRASTRUCTURE["plant_structures"].items():
         detail_url = f"{detail_dir}/details_{name.lower().replace(' ', '_')}.html"
-        net.add_node(name, label=name, shape="image", image=get_base64_asset(name, "plant_structures"), size=PLANT_STRUCTURE_SIZE, url=detail_url)
+        lvl = get_unlock_level(plant_obj)
+        net.add_node(name, label=name, shape="image", image=get_base64_asset(name, "plant_structures"), size=PLANT_STRUCTURE_SIZE, url=detail_url, unlock_level=lvl)
         prods = []
         for item_name, item in ITEMS.items():
             if type(item).__name__ == "PlantableItem":
@@ -58,9 +67,10 @@ def generate_interactive_farm_graph(output_filename=f"{outp}/{outp_file}"):
                     prods.append(item)
         generate_detail_page_plantable_structure(name, prods)
 
-    for name in INFRASTRUCTURE["special_structures"].keys():
+    for name, spec_obj in INFRASTRUCTURE["special_structures"].items():
         detail_url = f"{detail_dir}/details_{name.lower().replace(' ', '_')}.html"
-        net.add_node(name, label=name, shape="image", image=get_base64_asset(name, "special_structures"), size=SPECIAL_STRUCTURE_SIZE, url=detail_url)
+        lvl = get_unlock_level(spec_obj)
+        net.add_node(name, label=name, shape="image", image=get_base64_asset(name, "special_structures"), size=SPECIAL_STRUCTURE_SIZE, url=detail_url, unlock_level=lvl)
         prods = []
         if name == "Mine":
             prods = [item for item_name, item in ITEMS.items() if item_name in ["Silver Ore", "Gold Ore", "Platinum Ore", "Iron Ore", "Coal"]]
@@ -70,7 +80,7 @@ def generate_interactive_farm_graph(output_filename=f"{outp}/{outp_file}"):
 
     for obj in INFRASTRUCTURE["fields"].keys():
         detail_url = f"{detail_dir}/details_{obj.lower().replace(' ', '_')}.html"
-        net.add_node(obj, label=obj, shape="image", image=get_base64_asset(obj, "fields"), size=FIELD_SIZE, url=detail_url)
+        net.add_node(obj, label=obj, shape="image", image=get_base64_asset(obj, "fields"), size=FIELD_SIZE, unlock_level=1)
         prods = [item for item in ITEMS.values() if hasattr(item, 'planted_on') and item.planted_on and list(item.planted_on.keys())[0] == obj]
         generate_detail_page_field(obj, prods)
 
@@ -79,7 +89,8 @@ def generate_interactive_farm_graph(output_filename=f"{outp}/{outp_file}"):
     # =====================================================================
     for name, animal_obj in LIVESTOCK.items():
         detail_url = f"{detail_dir}/details_{name.lower().replace(' ', '_')}.html"
-        net.add_node(name, label=name, shape="image", image=get_base64_asset(name, "animals"), size=ANIMAL_SIZE, url=detail_url)
+        lvl = get_unlock_level(animal_obj)
+        net.add_node(name, label=name, shape="image", image=get_base64_asset(name, "animals"), size=ANIMAL_SIZE, url=detail_url, unlock_level=lvl)
 
         extra_info = {}
         if animal_obj.pen:
@@ -98,7 +109,9 @@ def generate_interactive_farm_graph(output_filename=f"{outp}/{outp_file}"):
 
         class_type = type(item_obj).__name__
         price_lbl = f"\n({item_obj.sell_price}🪙)" if hasattr(item_obj, 'sell_price') else ""
-        net.add_node(name, label=f"{name}{price_lbl}", shape="image", image=get_base64_asset(name, "items"), size=ITEM_SIZE, url=detail_url)
+        lvl = get_unlock_level(item_obj)
+
+        net.add_node(name, label=f"{name}{price_lbl}", shape="image", image=get_base64_asset(name, "items"), size=ITEM_SIZE, url=detail_url, unlock_level=lvl)
 
         generate_detail_page_item(name, item_obj, detail_filename)
 
@@ -139,10 +152,126 @@ def generate_interactive_farm_graph(output_filename=f"{outp}/{outp_file}"):
         if animal_obj.required_food:
             net.add_edge(animal_obj.required_food.name, name, color="crimson", style="dotted", penwidth="1.5", label=" eats")
 
-    # Generate and inject templates
+    # Generate html template
     net.html = net.generate_html()
+
+    # Top level filter bar fixed UI component
+    top_slider_html = f"""
+    <div id="top-fixed-dock" style="
+        position: fixed;
+        top: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 99999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+        width: max-content;
+        max-width: 95vw;
+        pointer-events: none;
+    ">
+        <div id="graph-level-filter-bar" style="
+            pointer-events: auto;
+            background-color: rgba(30, 30, 30, 0.95);
+            border: 1px solid #e67e22;
+            border-radius: 30px;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(5px);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        ">
+            <label for="graphLevelRange" style="font-weight: bold; color: #e67e22; white-space: nowrap; font-size: 0.9rem;">
+                Filter Level:
+            </label>
+            <input type="range" id="graphLevelRange" min="1" max="{MAX_LEVEL}" value="{CURRENT_LEVEL}" oninput="filterGraphByLevel(this.value)" style="
+                width: 150px;
+                accent-color: #e67e22;
+                cursor: pointer;
+            ">
+            <span id="graphLevelDisplay" style="
+                background-color: #e67e22;
+                color: #fff;
+                padding: 3px 10px;
+                border-radius: 12px;
+                font-weight: bold;
+                font-size: 0.85rem;
+                min-width: 55px;
+                text-align: center;
+            ">Lvl {CURRENT_LEVEL}</span>
+            <span id="graphNodeCount" style="
+                font-size: 0.8rem;
+                color: #aaa;
+                background-color: #111;
+                padding: 3px 8px;
+                border-radius: 4px;
+                border: 1px solid #333;
+                white-space: nowrap;
+            ">Visible Nodes: -</span>
+        </div>
+    </div>
+
+    <script>
+        function filterGraphByLevel(selectedLevel) {{
+            selectedLevel = parseInt(selectedLevel);
+            document.getElementById("graphLevelDisplay").innerText = "Lvl " + selectedLevel;
+
+            if (typeof network === "undefined" || typeof nodes === "undefined") return;
+
+            let allNodes = nodes.get();
+            let allEdges = edges.get();
+
+            let hiddenNodeIds = new Set();
+            let updateNodes = [];
+            let visibleCount = 0;
+
+            allNodes.forEach(node => {{
+                let nodeLvl = parseInt(node.unlock_level) || 1;
+                let shouldHide = nodeLvl > selectedLevel;
+
+                if (shouldHide) {{
+                    hiddenNodeIds.add(node.id);
+                }} else {{
+                    visibleCount++;
+                }}
+
+                updateNodes.push({{
+                    id: node.id,
+                    hidden: shouldHide
+                }});
+            }});
+
+            let updateEdges = allEdges.map(edge => ({{
+                id: edge.id,
+                hidden: hiddenNodeIds.has(edge.from) || hiddenNodeIds.has(edge.to)
+            }}));
+
+            nodes.update(updateNodes);
+            edges.update(updateEdges);
+
+            document.getElementById("graphNodeCount").innerText = "Visible Nodes: " + visibleCount;
+        }}
+
+        // Initialize filtering once vis.js network is ready
+        window.addEventListener("load", function() {{
+            setTimeout(function() {{
+                let slider = document.getElementById("graphLevelRange");
+                if (slider) filterGraphByLevel(slider.value);
+            }}, 300);
+        }});
+    </script>
+    """
+
+    # Inject layout styles, top slider bar, interactive nav script, and footer disclaimer
     net.html = net.html.replace("</head>", templates.LAYOUT_STYLE_RESET + "</head>")
-    net.html = net.html.replace("</body>", templates.DISCLAIMER_FOOTER.format(path_prefix="") + templates.INTERACTIVE_NAV_SCRIPT + "</body>")
+    net.html = net.html.replace(
+        "</body>",
+        templates.INTERACTIVE_NAV_SCRIPT + top_slider_html + templates.DISCLAIMER_FOOTER.format(path_prefix="") + "</body>"
+    )
 
     os.makedirs(os.path.dirname(output_filename), exist_ok=True)
     with open(output_filename, "w", encoding="utf-8") as f:
@@ -168,11 +297,10 @@ def generate_detail_page_item(name, item_obj, filename):
     sell_price = getattr(item_obj, 'sell_price', 'N/A')
     if sell_price is None:
         sell_price = 'N/A'
-    # 1. Grab your asset string first
+
     coin_b64 = get_base64_asset("coin", "items")
     coin_img = f'<img src="{coin_b64}" alt="coins" style="width: 18px; height: 18px; object-fit: contain; vertical-align: middle; margin-left: 3px; margin-top: -2px; display: inline-block;">' if coin_b64 else " Coins"
 
-    # 2. Your single-line logic remains exactly the same structure:
     price_display = f"{sell_price}{coin_img}" if sell_price != 'N/A' else "Unsellable"
 
     producer_name = None
@@ -285,7 +413,6 @@ def generate_detail_page_item(name, item_obj, filename):
         </div>
         """
     elif not has_ingredients:
-        # Fetch coin image asset
         coin_b64 = get_base64_asset("coin", "items")
         coin_img_html = f'<img src="{coin_b64}" alt="coins" style="width: 18px; height: 18px; object-fit: contain; vertical-align: middle; margin-left: 3px; margin-top: -2px; display: inline-block;">' if coin_b64 else "Coins"
 
@@ -486,7 +613,6 @@ def generate_detail_page_field(name, prods):
             prod_img = get_base64_asset(prod_item.name, "items")
             prod_url = f"details_{prod_item.name.lower().replace(' ', '_')}.html"
 
-            # Extract and format growing time (similar to machine yields)
             time_lbl = ""
             raw_time = getattr(prod_item, 'time_to_make', None)
             if raw_time:
@@ -514,7 +640,6 @@ def generate_detail_page_animal(name, animal_obj):
     img_base64 = get_base64_asset(name, "animals")
     img_tag = f'<img class="item-image" src="{img_base64}" alt="{name}">' if img_base64 else ""
 
-    # Lives in Habitat Setup
     lives_in_html = '<span style="color:#888;">Nomad / No Pen</span>'
     if animal_obj.pen:
         pen_name = animal_obj.pen.name
@@ -527,7 +652,6 @@ def generate_detail_page_animal(name, animal_obj):
         </a>
         """
 
-    # Diet Setup
     food_html = '<span style="color:#888;">Forages / No Food</span>'
     if animal_obj.required_food:
         food_name = animal_obj.required_food.name
@@ -540,7 +664,6 @@ def generate_detail_page_animal(name, animal_obj):
         </a>
         """
 
-    # Produces Product setup
     produces_html = ""
     if animal_obj.produces_item:
         prod_name = animal_obj.produces_item.name
@@ -568,6 +691,7 @@ def generate_detail_page_animal(name, animal_obj):
     html_content = templates.render_animal_page(name, img_tag, food_html, produces_html, lives_in_html, outp_file)
     with open(os.path.join(outp, "details", filename), "w", encoding="utf-8") as f:
         f.write(html_content)
+
 
 if __name__ == "__main__":
     generate_interactive_farm_graph()

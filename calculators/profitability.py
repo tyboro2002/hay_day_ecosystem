@@ -69,6 +69,7 @@ def analyze_value_added(silent=False):
     for name, item_obj in ITEMS.items():
         class_type = type(item_obj).__name__
         has_recipe = hasattr(item_obj, 'ingredients') and item_obj.ingredients
+        unlock_level = item_obj.unlock_level
         is_animal_product = find_animal_food_for_item(name) is not None
         is_plantable = find_structure_for_plantable(name) is not None
         is_crop = class_type == "Crop"
@@ -106,7 +107,8 @@ def analyze_value_added(silent=False):
                 "value_added": value_added,
                 "roi": roi,
                 "time_hours": time_hours,
-                "pph": pph
+                "pph": pph,
+                "unlock_level": unlock_level
             })
 
     if not silent:

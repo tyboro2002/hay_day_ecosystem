@@ -21,12 +21,19 @@ class HayDayMachine:
     def __repr__(self):
         return f"Machine: {self.name}"
 
+    @property
+    def unlock_level(self):
+        """Returns the minimum player level required to unlock the first machine."""
+        if not self.unlock_schedule:
+            return 1
+        return min(lvl for lvl, _ in self.unlock_schedule)
+
     def total_queued_time(self):
         return sum(item.time_to_make for item in self.queue)
 
     def is_unlocked(self, player_level):
-        """Returns True if at least 1 machine is unlocked."""
-        return any(lvl <= player_level for lvl, _ in self.unlock_schedule)
+        """Returns True if at least 1 machine is unlocked at the given player level."""
+        return player_level >= self.unlock_level
 
     def max_allowed_at_level(self, player_level):
         """
@@ -48,6 +55,17 @@ class AnimalPen:
     def __repr__(self):
         return f"Pen: {self.name} ({self.current_capacity}/{self.max_capacity} animals) ({self.amount_owned} owned)"
 
+    @property
+    def unlock_level(self):
+        """Returns the minimum level required to unlock the first pen."""
+        if not self.unlock_schedule:
+            return 1
+        return min(lvl for lvl, _ in self.unlock_schedule)
+
+    def is_unlocked(self, player_level):
+        """Returns True if the player level meets or exceeds the minimum unlock level."""
+        return player_level >= self.unlock_level
+
     def max_pens_at_level(self, player_level):
         """Calculates total pens unlocked at level."""
         return sum(extra for lvl, extra in self.unlock_schedule if player_level >= lvl)
@@ -67,6 +85,15 @@ class Animal:
 
     def __repr__(self):
         return self.name
+
+    @property
+    def unlock_level(self):
+        """Returns the level at which the animal's pen first unlocks."""
+        return self.pen.unlock_level if self.pen else 1
+
+    def is_unlocked(self, player_level):
+        """Returns True if the animal's home pen is unlocked at the given player level."""
+        return player_level >= self.unlock_level
 
     def max_allowed(self, player_level):
         """Upper cap on how many animals the player could own at their level."""
@@ -214,6 +241,21 @@ class PlantableItem(HayDayItem):
         # Auto-register product to its tree/bush structure
         if self.structure:
             self.structure.product = self
+
+    @property
+    def unlock_level(self):
+        """Dynamically fetches unlock_level from the associated structure."""
+        if self.structure:
+            return getattr(self.structure, "unlock_level", 1)
+        return 1
+
+    @unlock_level.setter
+    def unlock_level(self, value):
+        """
+        Dummy setter so HayDayItem.__init__ setting self.unlock_level=1
+        doesn't crash with AttributeError.
+        """
+        pass
 
     def is_unlocked(self, player_level):
         """Delegates directly to the structure's unlock requirement."""
