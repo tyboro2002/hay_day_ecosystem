@@ -1,6 +1,8 @@
 # Floating disclaimer footer
+import json
 import math
 
+from game_data.game_data import CURRENT_LEVEL, MAX_LEVEL
 from visualizers.helpers.formatting import get_base64_asset
 
 DISCLAIMER_FOOTER = """
@@ -137,7 +139,127 @@ BASE_CSS = """
     .sc-disclaimer-footer a:hover {
         text-decoration: underline !important;
     }
+    
+    /* Level Slider Control */
+    .level-control { background: #1e1e1e; border: 1px solid #3a3a3a; border-radius: 12px; padding: 14px 18px; margin-bottom: 25px; text-align: left; }
+    .level-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+    .level-title { font-size: 0.75rem; color: #888888; text-transform: uppercase; letter-spacing: 0.8px; font-weight: bold; }
+    .level-value { font-size: 1.1rem; font-weight: 800; color: #f1a80a; }
+    .level-slider { -webkit-appearance: none; appearance: none; width: 100%; height: 6px; background: #444; outline: none; border-radius: 3px; cursor: pointer; }
+    .level-slider::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 18px; height: 18px; border-radius: 50%; background: #f1a80a; cursor: pointer; box-shadow: 0 0 8px rgba(241, 168, 10, 0.5); }
+    
+    /* Machine Count Banner */
+    .machine-count-status { font-size: 0.85rem; font-weight: bold; color: #2ecc71; margin-top: 8px; border-top: 1px solid #2d2d2d; padding-top: 6px; }
+    .machine-count-status.zero { color: #e74c3c; }
+
+    /* Locked Grid Items */
+    .grid-item.locked { filter: grayscale(100%) opacity(0.35); pointer-events: none; border-color: #333333 !important; }
+    .grid-item .lock-badge { display: none; position: absolute; top: 4px; left: 4px; background: rgba(0,0,0,0.85); color: #e74c3c; font-size: 0.65rem; font-weight: 800; padding: 2px 5px; border-radius: 4px; border: 1px solid #e74c3c; z-index: 2; }
+    .grid-item.locked .lock-badge { display: block; }
+
+    /* Main Machine Lock Visuals */
+    .machine-img-wrapper {
+        position: relative;
+        display: inline-block;
+    }
+    .machine-img-wrapper.locked .item-image {
+        filter: grayscale(100%) opacity(0.35) drop-shadow(0px 0px 0px transparent);
+    }
+    .machine-img-wrapper .main-lock-badge {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(0, 0, 0, 0.85);
+        color: #e74c3c;
+        padding: 8px 14px;
+        border-radius: 20px;
+        border: 1.5px solid #e74c3c;
+        font-weight: 800;
+        font-size: 0.9rem;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        white-space: nowrap;
+        pointer-events: none;
+    }
+    .machine-img-wrapper.locked .main-lock-badge {
+        display: block;
+    }
 """
+
+def render_level_slider_script(current_level, unlock_schedule=None, max_level=MAX_LEVEL):
+    schedule_json = json.dumps(unlock_schedule or [])
+
+    # Calculate the absolute minimum level required to unlock the 1st machine
+    machine_unlock_level = min([lvl for lvl, _ in unlock_schedule]) if unlock_schedule else 1
+
+    return f"""
+    <div class="level-control">
+        <div class="level-header">
+            <span class="level-title">Level Filter</span>
+            <span class="level-value" id="levelDisplay">Level {current_level}</span>
+        </div>
+        <input type="range" min="1" max="{max_level}" value="{current_level}" class="level-slider" id="levelSlider">
+        <div class="machine-count-status" id="machineCountDisplay"></div>
+    </div>
+
+    <script type="text/javascript">
+        (function() {{
+            const slider = document.getElementById('levelSlider');
+            const display = document.getElementById('levelDisplay');
+            const countDisplay = document.getElementById('machineCountDisplay');
+            const unlockSchedule = {schedule_json};
+            const machineUnlockLevel = {machine_unlock_level};
+
+            function updateLevel(currentLevel) {{
+                display.textContent = 'Level ' + currentLevel;
+
+                // 1. Toggle Grayed Out State on Main Machine Header Image
+                const machWrapper = document.getElementById('mainMachineWrapper');
+                if (machWrapper) {{
+                    if (currentLevel < machineUnlockLevel) {{
+                        machWrapper.classList.add('locked');
+                    }} else {{
+                        machWrapper.classList.remove('locked');
+                    }}
+                }}
+
+                // 2. Calculate unlocked machine count from unlock_schedule
+                if (unlockSchedule.length > 0) {{
+                    let totalUnlocked = 0;
+                    for (let i = 0; i < unlockSchedule.length; i++) {{
+                        const [lvl, count] = unlockSchedule[i];
+                        if (currentLevel >= lvl) {{
+                            totalUnlocked += count;
+                        }}
+                    }}
+
+                    if (totalUnlocked === 0) {{
+                        countDisplay.className = 'machine-count-status zero';
+                        countDisplay.textContent = 'Locked (Requires Level ' + machineUnlockLevel + ')';
+                    }} else {{
+                        countDisplay.className = 'machine-count-status';
+                        countDisplay.textContent = totalUnlocked + ' Unlocked at Level ' + currentLevel;
+                    }}
+                }}
+
+                // 3. Lock / Unlock product grid items
+                const unlockables = document.querySelectorAll('[data-unlock-level]');
+                unlockables.forEach(el => {{
+                    const reqLevel = parseInt(el.getAttribute('data-unlock-level'), 10);
+                    if (currentLevel < reqLevel) {{
+                        el.classList.add('locked');
+                    }} else {{
+                        el.classList.remove('locked');
+                    }}
+                }});
+            }}
+
+            slider.addEventListener('input', (e) => updateLevel(parseInt(e.target.value, 10)));
+            updateLevel({current_level});
+        }})();
+    </script>
+    """
 
 # =====================================================================
 # INDIVIDUAL DETAIL PAGE RENDERING TEMPLATES
@@ -202,7 +324,12 @@ def render_item_page(name, img_tag, price_display, time_display_html, producer_h
 """
 
 
-def render_machine_page(name, img_tag, produces_html, back_target):
+def render_machine_page(name, img_tag, produces_html, unlock_schedule_html, mastery_html, back_target, unlock_schedule=None):
+    slider_html = render_level_slider_script(
+        current_level=CURRENT_LEVEL,
+        unlock_schedule=unlock_schedule
+    )
+
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -210,7 +337,6 @@ def render_machine_page(name, img_tag, produces_html, back_target):
     <title>{name} - Production Machine</title>
     <style>
         {BASE_CSS}
-        .header-tag {{ font-size: 0.75rem; font-weight: bold; color: #e74c3c; text-transform: uppercase; letter-spacing: 1.5px; border: 1.5px solid #e74c3c; padding: 4px 12px; border-radius: 15px; display: inline-block; margin-bottom: 12px; }}
     </style>
 </head>
 <body>
@@ -219,17 +345,22 @@ def render_machine_page(name, img_tag, produces_html, back_target):
         {img_tag}
         <h1>{name}</h1>
 
+        {slider_html}
+
         <div class="section-title">Products</div>
         <div class="grid">
             {produces_html}
         </div>
+
+        {unlock_schedule_html}
+
+        {mastery_html}
 
         <a class="back-btn" href="../{back_target}">Back to Map</a>
     </div>
 </body>
 </html>
 """
-
 
 def render_pen_page(name, img_tag, residents_html, back_target):
     return f"""<!DOCTYPE html>

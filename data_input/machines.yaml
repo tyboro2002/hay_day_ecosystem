@@ -6,152 +6,399 @@ Feed Mill:
   min_allowed_slots: 3
   max_allowed_slots: 9
   amount_owned: 2
+  costs:
+    - 5       # Cost for 1st Feed Mill (at Level 2)
+    - 3200   # Cost for 2nd Feed Mill (at Level 12)
   unlock_schedule:
     - [ 2, 1 ]    # 1st feed mill at level 2
     - [ 12, 1 ]   # +1 extra feed mill at level 12
+  mastery_level: 1
+  mastery:
+    star_1:
+      hours_required: 120
+      speed_bonus: 0.05
+    star_2:
+      hours_required: 840
+      speed_bonus: 0.10
+    star_3:
+      hours_required: 5880
+      speed_bonus: 0.15
 
 Bakery:
   max_slots: 4
   min_allowed_slots: 2
   max_allowed_slots: 9
   amount_owned: 1
+  costs:
+    - 20
   unlock_schedule:
     - [ 4, 1 ]    # 1st bakery at level 4
+  mastery_level: 2
+  mastery:
+    star_1:
+      hours_required: 35    # First 35 hours
+      coin_bonus: 0.10      # New bonus at Star 1
+    star_2:
+      hours_required: 140   # 140 hours AFTER Star 1 (175 total so far)
+      xp_bonus: 0.10        # New bonus at Star 2
+    star_3:
+      hours_required: 560   # 560 hours AFTER Star 2 (735 total)
+      speed_bonus: 0.15     # New bonus at Star 3 (-15% crafting time)
 
 Dairy:
   max_slots: 4
   min_allowed_slots: 2
   max_allowed_slots: 9
   amount_owned: 1
+  costs:
+    - 50
   unlock_schedule:
     - [ 6, 1 ]
+  mastery_level: 3
+  mastery:
+    star_1:
+      hours_required: 40
+      coin_bonus: 0.10
+    star_2:
+      hours_required: 120
+      xp_bonus: 0.10
+    star_3:
+      hours_required: 360
+      speed_bonus: 0.15
 
 Sugar Mill:
   max_slots: 4
   min_allowed_slots: 2
   max_allowed_slots: 9
   amount_owned: 1
+  costs:
+    - 350
+    - 199750
   unlock_schedule:
     - [ 7, 1 ]
     - [ 76, 1 ]
+  mastery_level: 3
+  mastery:
+    star_1:
+      hours_required: 25
+      coin_bonus: 0.10
+    star_2:
+      hours_required: 100
+      xp_bonus: 0.10
+    star_3:
+      hours_required: 400
+      speed_bonus: 0.15
 
 Popcorn Pot:
   max_slots: 4
   min_allowed_slots: 2
   max_allowed_slots: 9
   amount_owned: 1
+  costs:
+    - 650
   unlock_schedule:
     - [ 8, 1 ]
+  mastery_level: 2
+  mastery:
+    star_1:
+      hours_required: 50
+      coin_bonus: 0.10
+    star_2:
+      hours_required: 150
+      xp_bonus: 0.10
+    star_3:
+      hours_required: 450
+      speed_bonus: 0.15
 
 BBQ Grill:
   max_slots: 4
   min_allowed_slots: 2
   max_allowed_slots: 9
   amount_owned: 1
+  costs:
+    - 730
   unlock_schedule:
     - [ 9, 1 ]
+  mastery_level: 2
+  mastery:
+    star_1:
+      hours_required: 30
+      coin_bonus: 0.10
+    star_2:
+      hours_required: 120
+      xp_bonus: 0.10
+    star_3:
+      hours_required: 480
+      speed_bonus: 0.15
 
 Pie Oven:
   max_slots: 4
   min_allowed_slots: 2
   max_allowed_slots: 9
   amount_owned: 1
+  costs:
+    - 2200
   unlock_schedule:
     - [ 14, 1 ]
+  mastery_level: 2
+  mastery:
+    star_1:
+      hours_required: 40
+      coin_bonus: 0.10
+    star_2:
+      hours_required: 160
+      xp_bonus: 0.10
+    star_3:
+      hours_required: 640
+      speed_bonus: 0.15
 
 Loom:
   max_slots: 5
   min_allowed_slots: 2
   max_allowed_slots: 9
   amount_owned: 1
+  costs:
+    - 3200
   unlock_schedule:
     - [ 17, 1 ]
+  mastery_level: 2
+  mastery:
+    star_1:
+      hours_required: 36
+      coin_bonus: 0.10
+    star_2:
+      hours_required: 180
+      xp_bonus: 0.10
+    star_3:
+      hours_required: 900
+      speed_bonus: 0.15
 
 Sewing Machine:
   max_slots: 3
   min_allowed_slots: 2
   max_allowed_slots: 9
   amount_owned: 1
+  costs:
+    - 4500
   unlock_schedule:
     - [ 19, 1 ]
+  mastery_level: 1
+  mastery:
+    star_1:
+      hours_required: 72
+      coin_bonus: 0.10
+    star_2:
+      hours_required: 288
+      xp_bonus: 0.05
+    star_3:
+      hours_required: 1152
+      speed_bonus: 0.15
 
 Cake Oven:
   max_slots: 5
   min_allowed_slots: 2
   max_allowed_slots: 9
   amount_owned: 1
+  costs:
+    - 12100
   unlock_schedule:
     - [ 21, 1 ]
+  mastery_level: 2
+  mastery:
+    star_1:
+      hours_required: 65
+      coin_bonus: 0.10
+    star_2:
+      hours_required: 260
+      xp_bonus: 0.10
+    star_3:
+      hours_required: 1040
+      speed_bonus: 0.15
 
 Smelter:
   max_slots: 2
   min_allowed_slots: 1
   max_allowed_slots: 9
   amount_owned: 4
+  costs:
+    - 12500
+    - 22000
+    - 31500
+    - 41000
+    - 50500
   unlock_schedule:
     - [ 24, 5 ]
+  mastery_level: 2
+  mastery:
+    star_1:
+      hours_required: 390
+      coin_bonus: 0.10
+    star_2:
+      hours_required: 1540
+      xp_bonus: 0.10
+    star_3:
+      hours_required: 6180
+      speed_bonus: 0.15
 
 Juice Press:
   max_slots: 5
   min_allowed_slots: 2
   max_allowed_slots: 9
   amount_owned: 1
+  costs:
+    - 31000
   unlock_schedule:
     - [ 26, 1 ]
+  mastery_level: 2
+  mastery:
+    star_1:
+      hours_required: 50
+      coin_bonus: 0.10
+    star_2:
+      hours_required: 250
+      xp_bonus: 0.10
+    star_3:
+      hours_required: 1250
+      speed_bonus: 0.15
 
 Ice Cream Maker:
   max_slots: 4
   min_allowed_slots: 2
   max_allowed_slots: 9
   amount_owned: 1
+  costs:
+    - 38000
   unlock_schedule:
     - [ 29, 1 ]
+  mastery_level: 2
+  mastery:
+    star_1:
+      hours_required: 60
+      coin_bonus: 0.10
+    star_2:
+      hours_required: 240
+      xp_bonus: 0.05
+    star_3:
+      hours_required: 360
+      speed_bonus: 0.15
 
 Doner Kebab Stand:
   max_slots: 3
   min_allowed_slots: 2
   max_allowed_slots: 9
   amount_owned: 1
+  costs:
+    - 22000
   unlock_schedule:
     - [ 32, 1 ]
+  mastery_level: 0
+  mastery:
+    star_1:
+      hours_required: 90
+      coin_bonus: 0.10
+    star_2:
+      hours_required: 280
+      xp_bonus: 0.05
+    star_3:
+      hours_required: 1110
+      speed_bonus: 0.15
 
 Jam Maker:
   max_slots: 4
   min_allowed_slots: 2
   max_allowed_slots: 9
   amount_owned: 1
+  costs:
+    - 59000
   unlock_schedule:
     - [ 35, 1 ]
+  mastery_level: 1
+  mastery:
+    star_1:
+      hours_required: 90
+      coin_bonus: 0.10
+    star_2:
+      hours_required: 360
+      xp_bonus: 0.10
+    star_3:
+      hours_required: 1440
+      speed_bonus: 0.15
 
 Jeweler:
   max_slots: 3
   min_allowed_slots: 2
   max_allowed_slots: 9
   amount_owned: 1
+  costs:
+    - 68000
   unlock_schedule:
     - [ 38, 1 ]
+  mastery_level: 1
+  mastery:
+    star_1:
+      hours_required: 70
+      coin_bonus: 0.10
+    star_2:
+      hours_required: 280
+      xp_bonus: 0.05
+    star_3:
+      hours_required: 1120
+      speed_bonus: 0.15
 
 Honey Extractor:
   max_slots: 2
   min_allowed_slots: 2
   max_allowed_slots: 9
   amount_owned: 1
+  costs:
+    - 35000
   unlock_schedule:
     - [ 39, 1 ]
+  mastery_level: 1
+  mastery:
+    star_1:
+      hours_required: 50
+      coin_bonus: 0.10
+    star_2:
+      hours_required: 150
+      xp_bonus: 0.05
+    star_3:
+      hours_required: 4500
+      speed_bonus: 0.15
 
 Coffee Kiosk:
   max_slots: 4
   min_allowed_slots: 2
   max_allowed_slots: 9
   amount_owned: 1
+  costs:
+    - 75000
   unlock_schedule:
     - [ 42, 1 ]
+  mastery_level: 0
+  mastery:
+    star_1:
+      hours_required: 70
+      coin_bonus: 0.10
+    star_2:
+      hours_required: 240
+      xp_bonus: 0.05
+    star_3:
+      hours_required: 960
+      speed_bonus: 0.15
 
 Lobster Pool: # if more slots are unlocked for this one add them as amount_owned as they are in parallel like an animal pen
   max_slots: 1
   min_allowed_slots: 1
   max_allowed_slots: 1
   amount_owned: 1
+  costs:
+    - 80000
+    - 45000
+    - 52500
+    - 63800
+    - 79800
+    - 102000
   unlock_schedule:
     - [ 44, 6 ]
 
@@ -160,29 +407,75 @@ Soup Kitchen:
   min_allowed_slots: 2
   max_allowed_slots: 9
   amount_owned: 1
+  costs:
+    - 115000
   unlock_schedule:
     - [ 46, 1 ]
+  mastery_level: 0
+  mastery:
+    star_1:
+      hours_required: 72
+      coin_bonus: 0.10
+    star_2:
+      hours_required: 288
+      xp_bonus: 0.05
+    star_3:
+      hours_required: 1152
+      speed_bonus: 0.15
 
 Candle Maker:
   max_slots: 2
   min_allowed_slots: 2
   max_allowed_slots: 9
   amount_owned: 1
+  costs:
+    - 118000
   unlock_schedule:
     - [ 48, 1 ]
+  mastery_level: 0
+  mastery:
+    star_1:
+      hours_required: 72
+      coin_bonus: 0.10
+    star_2:
+      hours_required: 288
+      xp_bonus: 0.05
+    star_3:
+      hours_required: 1152
+      speed_bonus: 0.15
 
 Flower Shop:
   max_slots: 2
   min_allowed_slots: 2
   max_allowed_slots: 9
   amount_owned: 0
+  costs:
+    - 120000
   unlock_schedule:
     - [ 49, 1 ]
+  mastery_level: 0
+  mastery:
+    star_1:
+      hours_required: 72
+      coin_bonus: 0.10
+    star_2:
+      hours_required: 288
+      xp_bonus: 0.05
+    star_3:
+      hours_required: 1152
+      speed_bonus: 0.15
 
 Duck Salon: # if more slots are unlocked for this one add them as amount_owned as they are in parallel like an animal pen
   max_slots: 1
   min_allowed_slots: 1
   max_allowed_slots: 1
   amount_owned: 0
+  costs:
+    - 90000
+    - 51000
+    - 59000
+    - 72000
+    - 90000
+    - 115000
   unlock_schedule:
     - [ 50, 6 ]

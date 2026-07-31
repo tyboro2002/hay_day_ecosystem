@@ -46,7 +46,7 @@ def generate_interactive_farm_graph(output_filename=f"{outp}/{outp_file}"):
         lvl = get_unlock_level(mach_obj)
         net.add_node(name, label=name, shape="image", image=get_base64_asset(name, "machines"), size=MACHINE_SIZE, url=detail_url, unlock_level=lvl)
         prods = [item for item in ITEMS.values() if getattr(item, 'machine', None) and item.machine.name == name]
-        generate_detail_page_machine(name, prods)
+        generate_detail_page_machine(name, prods, mach_obj)
 
     for name, pen_obj in INFRASTRUCTURE["pens"].items():
         detail_url = f"{detail_dir}/details_{name.lower().replace(' ', '_')}.html"
@@ -499,10 +499,35 @@ def generate_detail_page_item(name, item_obj, filename):
         f.write(html_content)
 
 
-def generate_detail_page_machine(name, prods):
-    img_base64 = get_base64_asset(name, "machines")
-    img_tag = f'<img class="item-image" src="{img_base64}" alt="{name}">' if img_base64 else ""
+def generate_detail_page_machine(name, prods, mach_obj):
+    # 1. Fetch full schedule [(level, count, [costs]), ...] or fallback
+    full_schedule = mach_obj.full_unlock_schedule if mach_obj else [(1, 1)]
+    machine_unlock_lvl = mach_obj.unlock_level if mach_obj else 1
 
+    img_base64 = get_base64_asset(name, "machines")
+
+    # Main image wrapped in wrapper div for JS lock toggling & overlay
+    if img_base64:
+        img_tag = f"""
+        <div class="machine-img-wrapper" id="mainMachineWrapper">
+            <span class="main-lock-badge">Requires Lvl {machine_unlock_lvl}</span>
+            <img class="item-image" src="{img_base64}" alt="{name}">
+        </div>
+        """
+    else:
+        img_tag = ""
+
+    # Inline machine thumbnail for summary rows
+    inline_mach_img = (
+        f'<img src="{img_base64}" alt="{name}" style="width: 30px; height: 30px; object-fit: contain; vertical-align: middle; margin: 0 6px;">'
+        if img_base64 else " Machine"
+    )
+
+    # Fetch inline coin icon
+    coin_asset = get_base64_asset("coin", "items")
+    coin_img = f'<img src="{coin_asset}" alt="Coins" style="width: 16px; height: 16px; object-fit: contain; vertical-align: middle; margin-left: 3px;">' if coin_asset else " Coins"
+
+    # 2. Build HTML for produced items
     produces_html = ""
     if prods:
         for prod_item in prods:
@@ -515,8 +540,11 @@ def generate_detail_page_machine(name, prods):
                 if formatted_time:
                     time_lbl = f'<div class="qty-badge" style="background-color: #3498db; color: white; font-size: 0.6rem;">{formatted_time}</div>'
 
+            prod_unlock_lvl = getattr(prod_item, 'unlock_level', 1)
+
             produces_html += f"""
-            <a class="grid-item" href="{prod_url}">
+            <a class="grid-item" href="{prod_url}" data-unlock-level="{prod_unlock_lvl}">
+                <span class="lock-badge">🔒 Lvl {prod_unlock_lvl}</span>
                 {time_lbl}
                 <img src="{prod_img}" alt="{prod_item.name}">
                 <div class="name">{prod_item.name}</div>
@@ -525,8 +553,119 @@ def generate_detail_page_machine(name, prods):
     else:
         produces_html = '<div class="no-items">💤 Nothing directly produced here.</div>'
 
+    # 3. Generate Unlock Schedule HTML
+    schedule_rows = ""
+    total_unlocked = 0
+
+    for lvl, count, tier_costs in full_schedule:
+        cost_groups = []
+        for cost in tier_costs:
+            if cost_groups and cost_groups[-1]['cost'] == cost:
+                cost_groups[-1]['qty'] += 1
+            else:
+                cost_groups.append({'cost': cost, 'qty': 1})
+
+        for group in cost_groups:
+            sub_qty = group['qty']
+            cost = group['cost']
+            total_unlocked += sub_qty
+
+            cost_display = f"{cost:,}{coin_img}" if cost > 0 else "Free"
+
+            schedule_rows += f"""
+            <div class="summary-row" style="min-height: 48px;" data-unlock-level="{lvl}">
+                <span class="sum-label">Level {lvl}</span>
+                <span class="sum-val" style="display: inline-flex; align-items: center;">
+                    +{sub_qty} {inline_mach_img} 
+                    <span style="font-size: 0.85rem; color: #f1a80a; margin-left: 6px; margin-right: 8px; font-weight: bold; display: inline-flex; align-items: center;">
+                        ({cost_display})
+                    </span>
+                    <span style="font-size: 0.8rem; color: #888888;">({total_unlocked} Total)</span>
+                </span>
+            </div>
+            """
+
+    unlock_schedule_html = f"""
+    <div class="section-title">Unlock Schedule</div>
+    <div class="summary-box">
+        {schedule_rows}
+    </div>
+    """
+
+    # 4. Check if machine supports mastery
+    has_mastery = False
+    if mach_obj:
+        # Check if any star tier provides real information
+        star1_info = mach_obj.get_star_info(1) or {}
+        star2_info = mach_obj.get_star_info(2) or {}
+        star3_info = mach_obj.get_star_info(3) or {}
+
+        if any([star1_info, star2_info, star3_info]):
+            has_mastery = True
+
+    if has_mastery:
+        mastery_columns_html = ""
+        for star in range(1, 4):
+            info = mach_obj.get_star_info(star) if mach_obj else {}
+            hours = info.get("hours_required", 0)
+            hours_str = f"{hours:,} hrs" if hours > 0 else "-"
+
+            bonus_desc = formatting.format_mastery_bonus_text(info)
+
+            # Build image filename dynamically, passing machine name
+            asset_key = formatting.get_mastery_image_filename(star, info, name)
+            mastery_img_b64 = get_base64_asset(asset_key, "mastery")
+
+            if mastery_img_b64:
+                img_element = f'<img src="{mastery_img_b64}" alt="{asset_key}" style="max-width: 100%; max-height: 80px; object-fit: contain;">'
+            else:
+                stars_render = "⭐" * star
+                img_element = f'<div style="font-size: 1.5rem; padding: 10px;">{stars_render}</div>'
+
+            is_active = (mach_obj and mach_obj.mastery_level >= star)
+            active_class = "mastery-col active" if is_active else "mastery-col"
+
+            mastery_columns_html += f"""
+            <div class="{active_class}" style="flex: 1; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; overflow: hidden; background: rgba(0, 0, 0, 0.25); display: flex; flex-direction: column; text-align: center;">
+                <div style="background: rgba(255, 255, 255, 0.05); padding: 6px 4px; font-weight: bold; font-size: 0.9rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1); color: #f1a80a;">
+                    {"★" * star}
+                    <div style="font-size: 0.85rem; color: #d0d0d0; margin-top: 2px;">{hours_str}</div>
+                </div>
+                <div style="padding: 10px 4px; flex-grow: 1; display: flex; align-items: center; justify-content: center; min-height: 85px;">
+                    {img_element}
+                </div>
+                <div style="background: rgba(0, 0, 0, 0.15); padding: 8px 4px; font-weight: bold; font-size: 0.85rem; border-top: 1px solid rgba(255, 255, 255, 0.1); color: #ffffff;">
+                    {bonus_desc}
+                </div>
+            </div>
+            """
+
+        mastery_content = f"""
+        <div class="mastery-container" style="display: flex; gap: 10px; margin-top: 10px;">
+            {mastery_columns_html}
+        </div>
+        """
+    else:
+        mastery_content = '<div class="no-items">This machine cannot be mastered.</div>'
+
+    mastery_html = f"""
+    <div class="section-title">Mastery</div>
+    {mastery_content}
+    """
+
     filename = f"details_{name.lower().replace(' ', '_')}.html"
-    html_content = templates.render_machine_page(name, img_tag, produces_html, outp_file)
+
+    # 5. Render machine page template and write file
+    html_content = templates.render_machine_page(
+        name=name,
+        img_tag=img_tag,
+        produces_html=produces_html,
+        unlock_schedule_html=unlock_schedule_html,
+        mastery_html=mastery_html,
+        back_target=outp_file,
+        unlock_schedule=mach_obj.unlock_schedule if mach_obj else [(1, 1)]
+    )
+
     with open(os.path.join(outp, "details", filename), "w", encoding="utf-8") as f:
         f.write(html_content)
 

@@ -58,6 +58,52 @@
     .sc-disclaimer-footer a:hover {
         text-decoration: underline !important;
     }
+    
+    /* Level Slider Control */
+    .level-control { background: #1e1e1e; border: 1px solid #3a3a3a; border-radius: 12px; padding: 14px 18px; margin-bottom: 25px; text-align: left; }
+    .level-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+    .level-title { font-size: 0.75rem; color: #888888; text-transform: uppercase; letter-spacing: 0.8px; font-weight: bold; }
+    .level-value { font-size: 1.1rem; font-weight: 800; color: #f1a80a; }
+    .level-slider { -webkit-appearance: none; appearance: none; width: 100%; height: 6px; background: #444; outline: none; border-radius: 3px; cursor: pointer; }
+    .level-slider::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 18px; height: 18px; border-radius: 50%; background: #f1a80a; cursor: pointer; box-shadow: 0 0 8px rgba(241, 168, 10, 0.5); }
+    
+    /* Machine Count Banner */
+    .machine-count-status { font-size: 0.85rem; font-weight: bold; color: #2ecc71; margin-top: 8px; border-top: 1px solid #2d2d2d; padding-top: 6px; }
+    .machine-count-status.zero { color: #e74c3c; }
+
+    /* Locked Grid Items */
+    .grid-item.locked { filter: grayscale(100%) opacity(0.35); pointer-events: none; border-color: #333333 !important; }
+    .grid-item .lock-badge { display: none; position: absolute; top: 4px; left: 4px; background: rgba(0,0,0,0.85); color: #e74c3c; font-size: 0.65rem; font-weight: 800; padding: 2px 5px; border-radius: 4px; border: 1px solid #e74c3c; z-index: 2; }
+    .grid-item.locked .lock-badge { display: block; }
+
+    /* Main Machine Lock Visuals */
+    .machine-img-wrapper {
+        position: relative;
+        display: inline-block;
+    }
+    .machine-img-wrapper.locked .item-image {
+        filter: grayscale(100%) opacity(0.35) drop-shadow(0px 0px 0px transparent);
+    }
+    .machine-img-wrapper .main-lock-badge {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(0, 0, 0, 0.85);
+        color: #e74c3c;
+        padding: 8px 14px;
+        border-radius: 20px;
+        border: 1.5px solid #e74c3c;
+        font-weight: 800;
+        font-size: 0.9rem;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        white-space: nowrap;
+        pointer-events: none;
+    }
+    .machine-img-wrapper.locked .main-lock-badge {
+        display: block;
+    }
 
         .header-tag { font-size: 0.75rem; font-weight: bold; color: #1abc9c; text-transform: uppercase; letter-spacing: 1.5px; border: 1.5px solid #1abc9c; padding: 4px 12px; border-radius: 15px; display: inline-block; margin-bottom: 12px; }
         .split-grid { display: flex; gap: 20px; justify-content: space-between; text-align: left; margin-bottom: 30px; }
