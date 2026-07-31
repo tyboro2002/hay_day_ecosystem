@@ -80,9 +80,9 @@ def generate_interactive_farm_graph(output_filename=f"{outp}/{outp_file}"):
 
     for obj in INFRASTRUCTURE["fields"].keys():
         detail_url = f"{detail_dir}/details_{obj.lower().replace(' ', '_')}.html"
-        net.add_node(obj, label=obj, shape="image", image=get_base64_asset(obj, "fields"), size=FIELD_SIZE, unlock_level=1)
+        net.add_node(obj, label=obj, shape="image", image=get_base64_asset(obj, "fields"), size=FIELD_SIZE, url=detail_url, unlock_level=1)
         prods = [item for item in ITEMS.values() if hasattr(item, 'planted_on') and item.planted_on and list(item.planted_on.keys())[0] == obj]
-        generate_detail_page_field(obj, prods)
+        generate_detail_page_field(obj, prods, obj)
 
     # =====================================================================
     # 2. GENERATE LIVESTOCK (ANIMALS) NODES
@@ -714,15 +714,34 @@ def generate_detail_page_special_structure(name, prods):
         f.write(html_content)
 
 
-def generate_detail_page_field(name, prods):
+def generate_detail_page_field(name, prods, field_obj=None):
+    # Determine schedule or base unlock level
+    full_schedule = getattr(field_obj, 'full_unlock_schedule', None) if field_obj else None
+
+    if full_schedule:
+        field_unlock_lvl = full_schedule[0][0]
+    else:
+        # Fallback to the lowest crop unlock level or 1
+        field_unlock_lvl = min([getattr(p, 'unlock_level', 1) for p in prods]) if prods else 1
+        full_schedule = field_unlock_lvl
+
     img_base64 = get_base64_asset(name, "fields")
-    img_tag = f'<img class="item-image" src="{img_base64}" alt="{name}">' if img_base64 else ""
+    if img_base64:
+        img_tag = f"""
+        <div class="item-img-wrapper" id="mainMachineWrapper" data-unlock-level="{field_unlock_lvl}">
+            <span class="main-lock-badge">Requires Lvl {field_unlock_lvl}</span>
+            <img class="item-image" src="{img_base64}" alt="{name}">
+        </div>
+        """
+    else:
+        img_tag = ""
 
     produces_html = ""
     if prods:
         for prod_item in prods:
             prod_img = get_base64_asset(prod_item.name, "items")
             prod_url = f"details_{prod_item.name.lower().replace(' ', '_')}.html"
+            prod_unlock_lvl = getattr(prod_item, 'unlock_level', 1)
 
             time_lbl = ""
             raw_time = getattr(prod_item, 'time_to_make', None)
@@ -732,17 +751,32 @@ def generate_detail_page_field(name, prods):
                     time_lbl = f'<div class="qty-badge" style="background-color: #3498db; color: white; font-size: 0.6rem;">{formatted_time}</div>'
 
             produces_html += f"""
-                <a class="grid-item" href="{prod_url}">
-                    {time_lbl}
-                    <img src="{prod_img}" alt="{prod_item.name}">
-                    <div class="name">{prod_item.name}</div>
-                </a>
-                """
+            <a class="grid-item" href="{prod_url}" data-unlock-level="{prod_unlock_lvl}">
+                <span class="lock-badge">🔒 Lvl {prod_unlock_lvl}</span>
+                {time_lbl}
+                <img src="{prod_img}" alt="{prod_item.name}">
+                <div class="name">{prod_item.name}</div>
+            </a>
+            """
     else:
         produces_html = '<div class="no-items">💤 Crop soil is currently fallow.</div>'
 
+    # Generate schedule section if a schedule list is present
+    unlock_schedule_html = ""
+    if isinstance(full_schedule, list) and len(full_schedule) > 0:
+        unlock_schedule_html = templates.generate_unlock_schedule_component(full_schedule, name, asset_folder="fields")
+
     filename = f"details_{name.lower().replace(' ', '_')}.html"
-    html_content = templates.render_field_page(name, img_tag, produces_html, outp_file)
+    html_content = templates.render_field_page(
+        name=name,
+        img_tag=img_tag,
+        produces_html=produces_html,
+        back_target=outp_file,
+        unlock_schedule=full_schedule,
+        unlock_schedule_html=unlock_schedule_html
+    )
+
+    os.makedirs(os.path.join(outp, "details"), exist_ok=True)
     with open(os.path.join(outp, "details", filename), "w", encoding="utf-8") as f:
         f.write(html_content)
 

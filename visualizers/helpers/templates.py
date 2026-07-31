@@ -590,15 +590,80 @@ def render_special_structure_page(name, img_tag, produces_html, back_target):
 """
 
 
-def render_field_page(name, img_tag, produces_html, back_target):
+def render_field_page(name, img_tag, produces_html, back_target, unlock_schedule=None, unlock_schedule_html=""):
+    slider_component = render_level_slider_script(current_level=CURRENT_LEVEL, unlock_schedule=unlock_schedule)
+
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{name} - Farm Fields</title>
     <style>
         {BASE_CSS}
         .header-tag {{ font-size: 0.75rem; font-weight: bold; color: #f1c40f; text-transform: uppercase; letter-spacing: 1.5px; border: 1.5px solid #f1c40f; padding: 4px 12px; border-radius: 15px; display: inline-block; margin-bottom: 12px; }}
+
+        /* Locking & Main Image Wrapper */
+        .item-img-wrapper {{
+            position: relative;
+            display: inline-block;
+            margin: 0 auto 15px auto;
+        }}
+        .item-img-wrapper .item-image {{
+            transition: filter 0.3s ease, opacity 0.3s ease;
+        }}
+        .item-img-wrapper .main-lock-badge {{
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(192, 57, 43, 0.9);
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 0.85rem;
+            padding: 6px 14px;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            pointer-events: none;
+            white-space: nowrap;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            z-index: 2;
+        }}
+
+        .item-img-wrapper.locked .item-image {{
+            filter: grayscale(100%) opacity(0.35);
+        }}
+        .item-img-wrapper.locked .main-lock-badge {{
+            display: block;
+        }}
+
+        /* Grid Items & Badges */
+        .grid-item {{
+            position: relative;
+            transition: filter 0.3s ease, opacity 0.3s ease;
+        }}
+        .grid-item.locked {{
+            filter: grayscale(100%) opacity(0.4);
+            pointer-events: none;
+        }}
+        .grid-item .lock-badge {{
+            display: none;
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            background: rgba(0, 0, 0, 0.75);
+            color: #ff6b6b;
+            font-size: 0.65rem;
+            font-weight: bold;
+            padding: 2px 6px;
+            border-radius: 4px;
+            border: 1px solid rgba(255, 107, 107, 0.4);
+            z-index: 2;
+        }}
+        .grid-item.locked .lock-badge {{
+            display: block;
+        }}
     </style>
 </head>
 <body>
@@ -607,10 +672,14 @@ def render_field_page(name, img_tag, produces_html, back_target):
         {img_tag}
         <h1>{name}</h1>
 
-        <div class="section-title">Crops</div>
+        {slider_component}
+
+        <div class="section-title" style="margin-top: 20px;">Crops</div>
         <div class="grid">
             {produces_html}
         </div>
+
+        {unlock_schedule_html}
 
         <a class="back-btn" href="../{back_target}">Back to Map</a>
     </div>
