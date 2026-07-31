@@ -187,6 +187,65 @@ BASE_CSS = """
     }
 """
 
+def generate_unlock_schedule_component(full_schedule, name, asset_folder="machines"):
+    """
+    Generates the HTML for an unlock schedule section given a schedule list.
+    full_schedule format: [(level, count, [costs]), ...] or [(level, count), ...]
+    """
+    img_base64 = get_base64_asset(name, asset_folder)
+    inline_img = (
+        f'<img src="{img_base64}" alt="{name}" style="width: 30px; height: 30px; object-fit: contain; vertical-align: middle; margin: 0 6px;">'
+        if img_base64 else f" {name}"
+    )
+
+    coin_asset = get_base64_asset("coin", "items")
+    coin_img = f'<img src="{coin_asset}" alt="Coins" style="width: 16px; height: 16px; object-fit: contain; vertical-align: middle; margin-left: 3px;">' if coin_asset else " Coins"
+
+    schedule_rows = ""
+    total_unlocked = 0
+
+    for item in full_schedule:
+        lvl = item[0]
+        count = item[1]
+        tier_costs = item[2] if len(item) > 2 else []
+
+        if tier_costs:
+            cost_groups = []
+            for cost in tier_costs:
+                if cost_groups and cost_groups[-1]['cost'] == cost:
+                    cost_groups[-1]['qty'] += 1
+                else:
+                    cost_groups.append({'cost': cost, 'qty': 1})
+        else:
+            cost_groups = [{'cost': 0, 'qty': count}]
+
+        for group in cost_groups:
+            sub_qty = group['qty']
+            cost = group['cost']
+            total_unlocked += sub_qty
+
+            cost_display = f"{cost:,}{coin_img}" if cost > 0 else "Free"
+
+            schedule_rows += f"""
+            <div class="summary-row" style="min-height: 48px;" data-unlock-level="{lvl}">
+                <span class="sum-label">Level {lvl}</span>
+                <span class="sum-val" style="display: inline-flex; align-items: center;">
+                    +{sub_qty} {inline_img} 
+                    <span style="font-size: 0.85rem; color: #f1a80a; margin-left: 6px; margin-right: 8px; font-weight: bold; display: inline-flex; align-items: center;">
+                        ({cost_display})
+                    </span>
+                    <span style="font-size: 0.8rem; color: #888888;">({total_unlocked} Total)</span>
+                </span>
+            </div>
+            """
+
+    return f"""
+    <div class="section-title">Unlock Schedule</div>
+    <div class="summary-box">
+        {schedule_rows}
+    </div>
+    """
+
 def render_level_slider_script(current_level, unlock_schedule=None, max_level=MAX_LEVEL):
     schedule_json = json.dumps(unlock_schedule or [])
 
@@ -362,15 +421,81 @@ def render_machine_page(name, img_tag, produces_html, unlock_schedule_html, mast
 </html>
 """
 
-def render_pen_page(name, img_tag, residents_html, back_target):
+
+def render_pen_page(name, img_tag, residents_html, back_target, unlock_schedule_html, unlock_schedule=None):
+    slider_component = render_level_slider_script(current_level=CURRENT_LEVEL, unlock_schedule=unlock_schedule)
+
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{name} - Animal Pen</title>
     <style>
         {BASE_CSS}
         .header-tag {{ font-size: 0.75rem; font-weight: bold; color: #3498db; text-transform: uppercase; letter-spacing: 1.5px; border: 1.5px solid #3498db; padding: 4px 12px; border-radius: 15px; display: inline-block; margin-bottom: 12px; }}
+
+        /* Locking & Image Wrappers */
+        .item-img-wrapper {{
+            position: relative;
+            display: inline-block;
+            margin: 0 auto 15px auto;
+        }}
+        .item-img-wrapper .item-image {{
+            transition: filter 0.3s ease, opacity 0.3s ease;
+        }}
+        .item-img-wrapper .main-lock-badge {{
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(192, 57, 43, 0.9);
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 0.85rem;
+            padding: 6px 14px;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            pointer-events: none;
+            white-space: nowrap;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            z-index: 2;
+        }}
+
+        .item-img-wrapper.locked .item-image {{
+            filter: grayscale(100%) opacity(0.35);
+        }}
+        .item-img-wrapper.locked .main-lock-badge {{
+            display: block;
+        }}
+
+        /* Resident Grid Items & Badges */
+        .grid-item {{
+            position: relative;
+            transition: filter 0.3s ease, opacity 0.3s ease;
+        }}
+        .grid-item.locked {{
+            filter: grayscale(100%) opacity(0.4);
+            pointer-events: none;
+        }}
+        .grid-item .lock-badge {{
+            display: none;
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            background: rgba(0, 0, 0, 0.75);
+            color: #ff6b6b;
+            font-size: 0.65rem;
+            font-weight: bold;
+            padding: 2px 6px;
+            border-radius: 4px;
+            border: 1px solid rgba(255, 107, 107, 0.4);
+            z-index: 2;
+        }}
+        .grid-item.locked .lock-badge {{
+            display: block;
+        }}
     </style>
 </head>
 <body>
@@ -379,10 +504,14 @@ def render_pen_page(name, img_tag, residents_html, back_target):
         {img_tag}
         <h1>{name}</h1>
 
-        <div class="section-title">Pen Inhabitants</div>
+        {slider_component}
+
+        <div class="section-title" style="margin-top: 20px;">Pen Inhabitants</div>
         <div class="grid">
             {residents_html}
         </div>
+
+        {unlock_schedule_html}
 
         <a class="back-btn" href="../{back_target}">Back to Map</a>
     </div>
@@ -519,6 +648,7 @@ def render_animal_page(name, img_tag, food_html, produces_html, lives_in_html, b
 </body>
 </html>
 """
+
 
 def render_price_breakdown_component(name, unit_price, max_qty=10):
     """

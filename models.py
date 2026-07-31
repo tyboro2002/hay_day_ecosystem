@@ -113,17 +113,37 @@ class HayDayMachine:
 
 
 class AnimalPen:
-    def __init__(self, name, amount_owned, max_capacity=5, current_capacity=5, unlock_schedule=None):
+    def __init__(self, name, amount_owned, max_capacity=5, current_capacity=5, unlock_schedule=None, costs=None):
         self.name = name
         self.current_capacity = current_capacity
         self.max_capacity = max_capacity
         self.amount_owned = amount_owned
         self.unlock_schedule = unlock_schedule or [(1, 1)]
+        self.costs = costs or []                             # [cost_1st, cost_2nd, ...]
         self.animal = None   # Holds Animal objects living here
         self.products = []  # Items this pen can produce, automatically filled by AnimalItems
 
     def __repr__(self):
         return f"Pen: {self.name} ({self.current_capacity}/{self.max_capacity} animals) ({self.amount_owned} owned)"
+
+    @property
+    def full_unlock_schedule(self):
+        """
+        Returns a list of tuples formatted as:
+        [(level, count, unit_costs_list), ...]
+        Example: [(24, 5, [100, 200, 300, 400, 500])]
+        """
+        detailed_schedule = []
+        cost_cursor = 0
+
+        for lvl, count in self.unlock_schedule:
+            # Grab the slice of costs corresponding to the machines unlocked at this level
+            tier_costs = self.costs[cost_cursor : cost_cursor + count]
+            cost_cursor += count
+
+            detailed_schedule.append((lvl, count, tier_costs))
+
+        return detailed_schedule
 
     @property
     def unlock_level(self):

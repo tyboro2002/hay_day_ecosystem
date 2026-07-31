@@ -53,7 +53,7 @@ def generate_interactive_farm_graph(output_filename=f"{outp}/{outp_file}"):
         lvl = get_unlock_level(pen_obj)
         net.add_node(name, label=name, shape="image", image=get_base64_asset(name, "pens"), size=PEN_SIZE, url=detail_url, unlock_level=lvl)
         residents = [anim for anim_name, anim in LIVESTOCK.items() if anim.pen and anim.pen.name == name]
-        generate_detail_page_pen(name, residents)
+        generate_detail_page_pen(name, residents, pen_obj)
 
     for name, plant_obj in INFRASTRUCTURE["plant_structures"].items():
         detail_url = f"{detail_dir}/details_{name.lower().replace(' ', '_')}.html"
@@ -500,16 +500,13 @@ def generate_detail_page_item(name, item_obj, filename):
 
 
 def generate_detail_page_machine(name, prods, mach_obj):
-    # 1. Fetch full schedule [(level, count, [costs]), ...] or fallback
     full_schedule = mach_obj.full_unlock_schedule if mach_obj else [(1, 1)]
     machine_unlock_lvl = mach_obj.unlock_level if mach_obj else 1
 
     img_base64 = get_base64_asset(name, "machines")
-
-    # Main image wrapped in wrapper div for JS lock toggling & overlay
     if img_base64:
         img_tag = f"""
-        <div class="machine-img-wrapper" id="mainMachineWrapper">
+        <div class="machine-img-wrapper" id="mainMachineWrapper" data-unlock-level="{machine_unlock_lvl}">
             <span class="main-lock-badge">Requires Lvl {machine_unlock_lvl}</span>
             <img class="item-image" src="{img_base64}" alt="{name}">
         </div>
@@ -517,17 +514,6 @@ def generate_detail_page_machine(name, prods, mach_obj):
     else:
         img_tag = ""
 
-    # Inline machine thumbnail for summary rows
-    inline_mach_img = (
-        f'<img src="{img_base64}" alt="{name}" style="width: 30px; height: 30px; object-fit: contain; vertical-align: middle; margin: 0 6px;">'
-        if img_base64 else " Machine"
-    )
-
-    # Fetch inline coin icon
-    coin_asset = get_base64_asset("coin", "items")
-    coin_img = f'<img src="{coin_asset}" alt="Coins" style="width: 16px; height: 16px; object-fit: contain; vertical-align: middle; margin-left: 3px;">' if coin_asset else " Coins"
-
-    # 2. Build HTML for produced items
     produces_html = ""
     if prods:
         for prod_item in prods:
@@ -553,53 +539,14 @@ def generate_detail_page_machine(name, prods, mach_obj):
     else:
         produces_html = '<div class="no-items">💤 Nothing directly produced here.</div>'
 
-    # 3. Generate Unlock Schedule HTML
-    schedule_rows = ""
-    total_unlocked = 0
+    # Extracted function used here
+    unlock_schedule_html = templates.generate_unlock_schedule_component(full_schedule, name, asset_folder="machines")
 
-    for lvl, count, tier_costs in full_schedule:
-        cost_groups = []
-        for cost in tier_costs:
-            if cost_groups and cost_groups[-1]['cost'] == cost:
-                cost_groups[-1]['qty'] += 1
-            else:
-                cost_groups.append({'cost': cost, 'qty': 1})
-
-        for group in cost_groups:
-            sub_qty = group['qty']
-            cost = group['cost']
-            total_unlocked += sub_qty
-
-            cost_display = f"{cost:,}{coin_img}" if cost > 0 else "Free"
-
-            schedule_rows += f"""
-            <div class="summary-row" style="min-height: 48px;" data-unlock-level="{lvl}">
-                <span class="sum-label">Level {lvl}</span>
-                <span class="sum-val" style="display: inline-flex; align-items: center;">
-                    +{sub_qty} {inline_mach_img} 
-                    <span style="font-size: 0.85rem; color: #f1a80a; margin-left: 6px; margin-right: 8px; font-weight: bold; display: inline-flex; align-items: center;">
-                        ({cost_display})
-                    </span>
-                    <span style="font-size: 0.8rem; color: #888888;">({total_unlocked} Total)</span>
-                </span>
-            </div>
-            """
-
-    unlock_schedule_html = f"""
-    <div class="section-title">Unlock Schedule</div>
-    <div class="summary-box">
-        {schedule_rows}
-    </div>
-    """
-
-    # 4. Check if machine supports mastery
     has_mastery = False
     if mach_obj:
-        # Check if any star tier provides real information
         star1_info = mach_obj.get_star_info(1) or {}
         star2_info = mach_obj.get_star_info(2) or {}
         star3_info = mach_obj.get_star_info(3) or {}
-
         if any([star1_info, star2_info, star3_info]):
             has_mastery = True
 
@@ -611,8 +558,6 @@ def generate_detail_page_machine(name, prods, mach_obj):
             hours_str = f"{hours:,} hrs" if hours > 0 else "-"
 
             bonus_desc = formatting.format_mastery_bonus_text(info)
-
-            # Build image filename dynamically, passing machine name
             asset_key = formatting.get_mastery_image_filename(star, info, name)
             mastery_img_b64 = get_base64_asset(asset_key, "mastery")
 
@@ -655,7 +600,6 @@ def generate_detail_page_machine(name, prods, mach_obj):
 
     filename = f"details_{name.lower().replace(' ', '_')}.html"
 
-    # 5. Render machine page template and write file
     html_content = templates.render_machine_page(
         name=name,
         img_tag=img_tag,
@@ -666,21 +610,37 @@ def generate_detail_page_machine(name, prods, mach_obj):
         unlock_schedule=mach_obj.unlock_schedule if mach_obj else [(1, 1)]
     )
 
+    os.makedirs(os.path.join(outp, "details"), exist_ok=True)
     with open(os.path.join(outp, "details", filename), "w", encoding="utf-8") as f:
         f.write(html_content)
 
 
-def generate_detail_page_pen(name, residents):
+def generate_detail_page_pen(name, residents, pen_obj=None):
+    # Retrieve schedule if pen_obj carries schedule data, otherwise fallback to resident levels
+    full_schedule = pen_obj.full_unlock_schedule if pen_obj else [(1, 1)]
+    pen_unlock_lvl = pen_obj.unlock_level if pen_obj else 1
+
     img_base64 = get_base64_asset(name, "pens")
-    img_tag = f'<img class="item-image" src="{img_base64}" alt="{name}">' if img_base64 else ""
+    if img_base64:
+        img_tag = f"""
+        <div class="item-img-wrapper" id="mainMachineWrapper" data-unlock-level="{pen_unlock_lvl}">
+            <span class="main-lock-badge">Requires Lvl {pen_unlock_lvl}</span>
+            <img class="item-image" src="{img_base64}" alt="{name}">
+        </div>
+        """
+    else:
+        img_tag = ""
 
     residents_html = ""
     if residents:
         for res in residents:
             res_img = get_base64_asset(res.name, "animals")
             res_url = f"details_{res.name.lower().replace(' ', '_')}.html"
+            res_unlock_lvl = getattr(res, 'unlock_level', 1)
+
             residents_html += f"""
-            <a class="grid-item" href="{res_url}">
+            <a class="grid-item" href="{res_url}" data-unlock-level="{res_unlock_lvl}">
+                <span class="lock-badge">🔒 Lvl {res_unlock_lvl}</span>
                 <img src="{res_img}" alt="{res.name}">
                 <div class="name">{res.name}</div>
             </a>
@@ -688,8 +648,20 @@ def generate_detail_page_pen(name, residents):
     else:
         residents_html = '<div class="no-items">💤 Vacant Habitat.</div>'
 
+    # Reuse extracted schedule component for pens
+    unlock_schedule_html = templates.generate_unlock_schedule_component(full_schedule, name, asset_folder="pens")
+
     filename = f"details_{name.lower().replace(' ', '_')}.html"
-    html_content = templates.render_pen_page(name, img_tag, residents_html, outp_file)
+    html_content = templates.render_pen_page(
+        name=name,
+        img_tag=img_tag,
+        residents_html=residents_html,
+        unlock_schedule_html=unlock_schedule_html,
+        back_target=outp_file,
+        unlock_schedule=pen_obj.unlock_schedule if pen_obj else [(1, 1)]
+    )
+
+    os.makedirs(os.path.join(outp, "details"), exist_ok=True)
     with open(os.path.join(outp, "details", filename), "w", encoding="utf-8") as f:
         f.write(html_content)
 
