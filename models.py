@@ -10,10 +10,12 @@ class HayDayMachine:
 
     Example for Sugar Mill: [(7, 1), (76, 1)]
     """
-    def __init__(self, name, amount_owned, max_slots=2, unlock_schedule=None):
+    def __init__(self, name, amount_owned, min_allowed_slots = 2, max_allowed_slots = 9, max_slots=2, unlock_schedule=None):
         self.name = name
         self.amount_owned = amount_owned
         self.max_slots = max_slots
+        self.min_allowed_slots = min_allowed_slots
+        self.max_allowed_slots = max_allowed_slots
         self.unlock_schedule = unlock_schedule or [(1, 1)] # Default: 1 unlocked at level 1
         self.queue = [] # List of items currently queued
         self.products = []  # Items this machine can produce, automatically filled by MachinedItems

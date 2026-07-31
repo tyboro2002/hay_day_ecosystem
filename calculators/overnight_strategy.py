@@ -8,62 +8,113 @@ from game_data.game_data import MAX_LEVEL, CURRENT_LEVEL
 from game_data.machined_items_data import MACHINED_ITEMS
 from game_data.machines_data import MACHINES
 from game_data.plants_data import PLANTS
-from visualizers.helpers.formatting import CYAN, RESET
 
 TOTAL_FIELDS = FARM_FIELDS["fields"].amount_owned
 
 
+def get_unlocked_machine_count_at_level(machine_obj, player_level):
+    """Calculates how many instances of a machine are unlocked at player_level."""
+    levels = getattr(machine_obj, 'unlock_schedule', None)
+    if levels and isinstance(levels, list):
+        count = 0
+        for entry in levels:
+            if isinstance(entry, (tuple, list)) and len(entry) >= 2:
+                lvl, new_unlocks = entry[0], entry[1]
+                if player_level >= lvl:
+                    count += new_unlocks
+        return count
+
+    base_unlock = getattr(machine_obj, 'unlock_level', 1)
+    return 1 if player_level >= base_unlock else 0
+
+
 def calculate_strategy_for_single_level(sleep_duration_mins, player_level):
-    """Calculates the absolute best overnight strategy restricted strictly to items unlocked at or below player_level."""
+    """
+    Calculates the best overnight strategy per machine for ALL valid slot counts
+    (min_allowed_slots to max_allowed_slots) unlocked at player_level.
+    """
     strategy = {}
     total_global_profit = 0
 
+    # Lookup set for feed items
+    feed_items_set = set(FEEDS.values())
+
     # 1. MACHINE STRATEGY
     for machine_name, machine_obj in MACHINES.items():
-        # Skip machines not owned or unlocked yet at this level
-        if machine_obj.amount_owned == 0 or machine_obj.max_slots == 0:
+        unlocked_count = get_unlocked_machine_count_at_level(machine_obj, player_level)
+        if unlocked_count == 0:
             continue
 
-        # Skip machine entirely if player hasn't reached the machine's unlock level yet
-        if getattr(machine_obj, 'unlock_level', 1) > player_level:
-            continue
+        # Safely pull candidates: if it's a Feed Mill, pull from FEEDS; otherwise pull from MACHINED_ITEMS
+        if "feed mill" in machine_name.lower():
+            candidates = list(FEEDS.values())
+        else:
+            candidates = [
+                i for i in MACHINED_ITEMS.values()
+                if getattr(i, 'machine', None) and i.machine.name == machine_name
+            ]
 
-        candidates = [i for i in MACHINED_ITEMS.values() if i.machine.name == machine_name] + [
-            i for i in FEEDS.values() if i.machine.name == machine_name
-        ]
-
-        # Filter strictly by unlock level AND time limit
         valid_items = [
             i for i in candidates
             if getattr(i, 'unlock_level', 1) <= player_level and i.time_to_make <= sleep_duration_mins
         ]
 
         if not valid_items:
-            print(f"{CYAN}{machine_name} has no valid items in this time constraint at level {player_level} {RESET}")
             continue
 
-        best_profit_per_machine = 0
-        best_combo_per_machine = []
+        # Use attributes min_allowed_slots and max_allowed_slots
+        min_slots = getattr(machine_obj, 'min_allowed_slots', 2) or (1 if machine_name in ["Lobster Pool", "Duck Salon"] else 2)
+        max_slots_cap = getattr(machine_obj, 'max_allowed_slots', 9) or 9
 
-        # Find the absolute best combination within time constraint
-        for num_slots in range(machine_obj.max_slots + 1):
-            for combo in itertools.combinations_with_replacement(valid_items, num_slots):
-                if sum(i.time_to_make for i in combo) <= sleep_duration_mins:
-                    current_profit = sum((i.sell_price - calculate_direct_ingredient_cost(i)) for i in combo)
+        # Slot-indexed strategy array (index matches slot count 0..max_allowed_slots)
+        slot_strategies = [None] * (max_slots_cap + 1)
 
-                    if current_profit > best_profit_per_machine:
-                        best_profit_per_machine = current_profit
-                        best_combo_per_machine = combo
+        for num_slots in range(min_slots, max_slots_cap + 1):
+            best_profit = float('-inf')
+            best_combo = None
 
-        if best_combo_per_machine:
-            counts = Counter(best_combo_per_machine)
-            total_machine_profit = best_profit_per_machine * machine_obj.amount_owned
-            total_global_profit += total_machine_profit
+            # Test using ANY number of items up to num_slots (1 to num_slots)
+            for k in range(1, num_slots + 1):
+                for combo in itertools.combinations_with_replacement(valid_items, k):
+                    if sum(i.time_to_make for i in combo) <= sleep_duration_mins:
+                        # Feeds produce 3 units per batch slot, so ingredient cost is 3x per batch slot
+                        current_profit = sum(
+                            ((i.sell_price * 3 if i in feed_items_set else i.sell_price) - (calculate_direct_ingredient_cost(i) * 3 if i in feed_items_set else calculate_direct_ingredient_cost(i)))
+                            for i in combo
+                        )
+                        if current_profit > best_profit:
+                            best_profit = current_profit
+                            best_combo = combo
 
-            strategy[machine_name] = {
-                "combination": {item: count * machine_obj.amount_owned for item, count in counts.items()},
-                "total_profit": total_machine_profit
-            }
+            if best_combo is not None:
+                combo_counts = dict(Counter(best_combo))
+                ingredients = defaultdict(int)
+
+                for item, count in combo_counts.items():
+                    multiplier = 3 if item in feed_items_set else 1
+                    if hasattr(item, 'ingredients') and item.ingredients:
+                        for ing_name, ing_qty in item.ingredients.items():
+                            ingredients[ing_name] += ing_qty * count * multiplier
+
+                slot_strategies[num_slots] = {
+                    "combination": combo_counts,
+                    "ingredients": dict(ingredients),
+                    "total_profit": best_profit
+                }
+
+        # max_slots represents current configured amount of slots
+        current_slots = getattr(machine_obj, 'max_slots', min_slots) or min_slots
+        default_eval = slot_strategies[current_slots] if current_slots < len(slot_strategies) else None
+
+        strategy[machine_name] = {
+            "by_slots": slot_strategies,
+            "min_slots": min_slots,
+            "max_slots": max_slots_cap,
+            "unlocked_count": unlocked_count
+        }
+
+        if default_eval:
+            total_global_profit += (default_eval["total_profit"] * unlocked_count)
 
     # 2. CROP STRATEGY
     valid_crops = [
@@ -75,93 +126,23 @@ def calculate_strategy_for_single_level(sleep_duration_mins, player_level):
         best_crop = max(valid_crops, key=lambda c: c.sell_price * fields_count)
         profit = best_crop.sell_price * fields_count
         total_global_profit += profit
+
         strategy["Fields"] = {
             "combination": {best_crop: fields_count},
-            "total_profit": profit
+            "total_profit": profit,
+            "unlocked_count": 1
         }
 
     return strategy, total_global_profit
 
 
 def get_best_overnight_strategy(sleep_duration_mins=480, max_level=-1):
-    """
-    Returns a list where:
-      - Element 0 [index 0] = (strategy_dict, total_profit) for Level 1
-      - Element 1 [index 1] = (strategy_dict, total_profit) for Level 2
-      ...
-      - Element N-1 [index N-1] = (strategy_dict, total_profit) for Level N
-    """
-    print("============================================")
-    print(f"running for {sleep_duration_mins//60}h")
-    print("============================================")
     if max_level == -1:
         return calculate_strategy_for_single_level(sleep_duration_mins, CURRENT_LEVEL)
 
     all_level_strategies = []
-
     for lvl in range(1, max_level + 1):
         plan, profit = calculate_strategy_for_single_level(sleep_duration_mins, lvl)
         all_level_strategies.append((plan, profit))
 
     return all_level_strategies
-
-def run_report():
-    plan, global_profit = get_best_overnight_strategy(480)
-
-    # Header
-    print(f"{'Machine/Source':<20} | {'Optimal Queue Strategy':<40} | {'Profit'}")
-    print("-" * 85)
-
-    global_ingredients = defaultdict(int)
-    machine_requirements = {}
-
-    # Print Strategy and collect ingredients
-    for m, data in plan.items():
-        combo_parts = [f"{count}x {item_obj.name}" for item_obj, count in data['combination'].items()]
-        print(f"{m:<20} | {', '.join(combo_parts):<40} | {data['total_profit']:.1f}c")
-
-        current_machine_ing = defaultdict(int)
-        for item_obj, count in data['combination'].items():
-            if hasattr(item_obj, 'ingredients'):
-                for ing, qty in item_obj.ingredients.items():
-                    total_qty = qty * count
-                    current_machine_ing[ing.name] += total_qty
-                    global_ingredients[ing.name] += total_qty
-        machine_requirements[m] = current_machine_ing
-
-    # Global Summary
-    print("-" * 85)
-    print(f"TOTAL OVERNIGHT PROFIT: {global_profit:.1f}c")
-
-    # 1. Global Shopping List
-    print("\nGLOBAL SHOPPING LIST:")
-    silo_space = 0
-    barn_space = 0
-
-    # Add seeds for fields to the requirements (if applicable)
-    if "Fields" in plan:
-        for crop_obj in plan["Fields"]["combination"].keys():
-            global_ingredients[crop_obj.name] += TOTAL_FIELDS
-
-    for ing, qty in global_ingredients.items():
-        print(f"- {qty}x {ing}")
-        # Categorize storage
-        if ing in CROPS or ing in PLANTS:
-            silo_space += qty
-        else:
-            barn_space += qty
-
-    # 2. Storage Impact
-    print("\nSTORAGE IMPACT:")
-    print(f"-> Silo (Crops/Seeds): {silo_space} items")
-    print(f"-> Barn (Processed Goods/Animal Products): {barn_space} items")
-
-    # 3. Per-Machine Breakdown
-    print("\nPER-MACHINE INGREDIENT REQUIREMENTS:")
-    for m, ingredients in machine_requirements.items():
-        if ingredients:
-            ing_str = ", ".join([f"{qty}x {name}" for name, qty in ingredients.items()])
-            print(f"- {m}: {ing_str}")
-
-if __name__ == "__main__":
-    run_report()
