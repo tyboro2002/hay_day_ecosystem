@@ -1,6 +1,8 @@
 # Floating disclaimer footer
+import json
 import math
 
+from game_data.game_data import CURRENT_LEVEL, MAX_LEVEL
 from visualizers.helpers.formatting import get_base64_asset
 
 DISCLAIMER_FOOTER = """
@@ -137,13 +139,206 @@ BASE_CSS = """
     .sc-disclaimer-footer a:hover {
         text-decoration: underline !important;
     }
+    
+    /* Level Slider Control */
+    .level-control { background: #1e1e1e; border: 1px solid #3a3a3a; border-radius: 12px; padding: 14px 18px; margin-bottom: 25px; text-align: left; }
+    .level-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+    .level-title { font-size: 0.75rem; color: #888888; text-transform: uppercase; letter-spacing: 0.8px; font-weight: bold; }
+    .level-value { font-size: 1.1rem; font-weight: 800; color: #f1a80a; }
+    .level-slider { -webkit-appearance: none; appearance: none; width: 100%; height: 6px; background: #444; outline: none; border-radius: 3px; cursor: pointer; }
+    .level-slider::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 18px; height: 18px; border-radius: 50%; background: #f1a80a; cursor: pointer; box-shadow: 0 0 8px rgba(241, 168, 10, 0.5); }
+    
+    /* Machine Count Banner */
+    .machine-count-status { font-size: 0.85rem; font-weight: bold; color: #2ecc71; margin-top: 8px; border-top: 1px solid #2d2d2d; padding-top: 6px; }
+    .machine-count-status.zero { color: #e74c3c; }
+
+    /* Locked Grid Items */
+    .grid-item.locked { filter: grayscale(100%) opacity(0.35); pointer-events: none; border-color: #333333 !important; }
+    .grid-item .lock-badge { display: none; position: absolute; top: 4px; left: 4px; background: rgba(0,0,0,0.85); color: #e74c3c; font-size: 0.65rem; font-weight: 800; padding: 2px 5px; border-radius: 4px; border: 1px solid #e74c3c; z-index: 2; }
+    .grid-item.locked .lock-badge { display: block; }
+
+    /* Main Machine Lock Visuals */
+    .machine-img-wrapper {
+        position: relative;
+        display: inline-block;
+    }
+    .machine-img-wrapper.locked .item-image {
+        filter: grayscale(100%) opacity(0.35) drop-shadow(0px 0px 0px transparent);
+    }
+    .machine-img-wrapper .main-lock-badge {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(0, 0, 0, 0.85);
+        color: #e74c3c;
+        padding: 8px 14px;
+        border-radius: 20px;
+        border: 1.5px solid #e74c3c;
+        font-weight: 800;
+        font-size: 0.9rem;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        white-space: nowrap;
+        pointer-events: none;
+    }
+    .machine-img-wrapper.locked .main-lock-badge {
+        display: block;
+    }
 """
+
+def generate_unlock_schedule_component(full_schedule, name, asset_folder="machines"):
+    """
+    Generates the HTML for an unlock schedule section given a schedule list.
+    full_schedule format: [(level, count, [costs]), ...] or [(level, count), ...]
+    """
+    img_base64 = get_base64_asset(name, asset_folder)
+    inline_img = (
+        f'<img src="{img_base64}" alt="{name}" style="width: 30px; height: 30px; object-fit: contain; vertical-align: middle; margin: 0 6px;">'
+        if img_base64 else f" {name}"
+    )
+
+    coin_asset = get_base64_asset("coin", "items")
+    coin_img = f'<img src="{coin_asset}" alt="Coins" style="width: 16px; height: 16px; object-fit: contain; vertical-align: middle; margin-left: 3px;">' if coin_asset else " Coins"
+
+    schedule_rows = ""
+    total_unlocked = 0
+
+    for item in full_schedule:
+        lvl = item[0]
+        count = item[1]
+        tier_costs = item[2] if len(item) > 2 else []
+
+        if tier_costs:
+            cost_groups = []
+            for cost in tier_costs:
+                if cost_groups and cost_groups[-1]['cost'] == cost:
+                    cost_groups[-1]['qty'] += 1
+                else:
+                    cost_groups.append({'cost': cost, 'qty': 1})
+        else:
+            cost_groups = [{'cost': 0, 'qty': count}]
+
+        for group in cost_groups:
+            sub_qty = group['qty']
+            cost = group['cost']
+            total_unlocked += sub_qty
+
+            cost_display = f"{cost:,}{coin_img}" if cost > 0 else "Free"
+
+            schedule_rows += f"""
+            <div class="summary-row" style="min-height: 48px;" data-unlock-level="{lvl}">
+                <span class="sum-label">Level {lvl}</span>
+                <span class="sum-val" style="display: inline-flex; align-items: center;">
+                    +{sub_qty} {inline_img} 
+                    <span style="font-size: 0.85rem; color: #f1a80a; margin-left: 6px; margin-right: 8px; font-weight: bold; display: inline-flex; align-items: center;">
+                        ({cost_display})
+                    </span>
+                    <span style="font-size: 0.8rem; color: #888888;">({total_unlocked} Total)</span>
+                </span>
+            </div>
+            """
+
+    return f"""
+    <div class="section-title">Unlock Schedule</div>
+    <div class="summary-box">
+        {schedule_rows}
+    </div>
+    """
+
+def render_level_slider_script(current_level, unlock_schedule=None, max_level=MAX_LEVEL):
+    # Normalize unlock_schedule if passed as an int/float single level value
+    if isinstance(unlock_schedule, (int, float)):
+        unlock_schedule = [(int(unlock_schedule), 1)]
+
+    schedule_list = unlock_schedule or []
+    schedule_json = json.dumps(schedule_list)
+
+    # Determine minimum unlock level
+    if schedule_list:
+        machine_unlock_level = min([lvl for lvl, *_ in schedule_list])
+    else:
+        machine_unlock_level = 1
+
+    # Hide status text element if no schedule was originally provided or if it's a single value
+    show_status_badge = bool(unlock_schedule) and not (len(schedule_list) == 1 and schedule_list[0][1] == 1)
+
+    return f"""
+    <div class="level-control">
+        <div class="level-header">
+            <span class="level-title">Level Filter</span>
+            <span class="level-value" id="levelDisplay">Level {current_level}</span>
+        </div>
+        <input type="range" min="1" max="{max_level}" value="{current_level}" class="level-slider" id="levelSlider">
+        <div class="machine-count-status" id="machineCountDisplay" style="display: {'block' if show_status_badge else 'none'};"></div>
+    </div>
+
+    <script type="text/javascript">
+        (function() {{
+            const slider = document.getElementById('levelSlider');
+            const display = document.getElementById('levelDisplay');
+            const countDisplay = document.getElementById('machineCountDisplay');
+            const unlockSchedule = {schedule_json};
+            const machineUnlockLevel = {machine_unlock_level};
+
+            function updateLevel(currentLevel) {{
+                display.textContent = 'Level ' + currentLevel;
+
+                // 1. Toggle Grayed Out State on Main Image Header
+                const machWrapper = document.getElementById('mainMachineWrapper');
+                if (machWrapper) {{
+                    const mainReqLvl = parseInt(machWrapper.getAttribute('data-unlock-level') || machineUnlockLevel, 10);
+                    if (currentLevel < mainReqLvl) {{
+                        machWrapper.classList.add('locked');
+                    }} else {{
+                        machWrapper.classList.remove('locked');
+                    }}
+                }}
+
+                // 2. Calculate unlocked count if schedule is present
+                if (unlockSchedule.length > 0 && countDisplay && countDisplay.style.display !== 'none') {{
+                    let totalUnlocked = 0;
+                    for (let i = 0; i < unlockSchedule.length; i++) {{
+                        const [lvl, count] = unlockSchedule[i];
+                        if (currentLevel >= lvl) {{
+                            totalUnlocked += count;
+                        }}
+                    }}
+
+                    if (totalUnlocked === 0) {{
+                        countDisplay.className = 'machine-count-status zero';
+                        countDisplay.textContent = 'Locked (Requires Level ' + machineUnlockLevel + ')';
+                    }} else {{
+                        countDisplay.className = 'machine-count-status';
+                        countDisplay.textContent = totalUnlocked + ' Unlocked at Level ' + currentLevel;
+                    }}
+                }}
+
+                // 3. Lock / Unlock child elements, habitat links, feed links, & product cards
+                const unlockables = document.querySelectorAll('[data-unlock-level]');
+                unlockables.forEach(el => {{
+                    const reqLevel = parseInt(el.getAttribute('data-unlock-level'), 10);
+                    if (currentLevel < reqLevel) {{
+                        el.classList.add('locked');
+                    }} else {{
+                        el.classList.remove('locked');
+                    }}
+                }});
+            }}
+
+            slider.addEventListener('input', (e) => updateLevel(parseInt(e.target.value, 10)));
+            updateLevel({current_level});
+        }})();
+    </script>
+    """
 
 # =====================================================================
 # INDIVIDUAL DETAIL PAGE RENDERING TEMPLATES
 # =====================================================================
 
-def render_item_page(name, img_tag, price_display, time_display_html, producer_html, profit_html, price_breakdown_html, ingredients_html, used_in_html, back_target):
+def render_item_page(name, img_tag, price_display, time_display_html, producer_html, profit_html, price_breakdown_html, ingredients_html, used_in_html, back_target, unlock_schedule=None):
+    slider_component = render_level_slider_script(current_level=CURRENT_LEVEL, unlock_schedule=unlock_schedule)
+
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -154,7 +349,7 @@ def render_item_page(name, img_tag, price_display, time_display_html, producer_h
         {BASE_CSS}
         .producer-section {{ margin-bottom: 25px; }}
         .producer-label {{ font-size: 0.72rem; color: #888888; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 8px; }}
-        .producer-badge {{ display: inline-flex; align-items: center; background-color: #1e1e1e; padding: 8px 18px; border-radius: 25px; border: 1px solid #3a3a3a; gap: 12px; }}
+        .producer-badge {{ display: inline-flex; align-items: center; background-color: #1e1e1e; padding: 8px 18px; border-radius: 25px; border: 1px solid #3a3a3a; gap: 12px; transition: filter 0.3s ease, opacity 0.3s ease; }}
         .producer-badge img {{ width: 32px; height: 32px; object-fit: contain; filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.5)); }}
         .producer-badge span {{ font-size: 0.9rem; font-weight: 700; color: #ffffff; }}
 
@@ -166,6 +361,69 @@ def render_item_page(name, img_tag, price_display, time_display_html, producer_h
         .profit-positive .fin-val {{ color: #2ecc71; }}
         .profit-negative .fin-val {{ color: #e74c3c; }}
         .profit-neutral .fin-val {{ color: #b0b0b0; }}
+
+        /* Locking & Main Image Wrapper */
+        .item-img-wrapper {{
+            position: relative;
+            display: inline-block;
+            margin: 0 auto 15px auto;
+        }}
+        .item-img-wrapper .item-image {{
+            transition: filter 0.3s ease, opacity 0.3s ease;
+        }}
+        .item-img-wrapper .main-lock-badge {{
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(192, 57, 43, 0.9);
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 0.85rem;
+            padding: 6px 14px;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            pointer-events: none;
+            white-space: nowrap;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            z-index: 2;
+        }}
+
+        .item-img-wrapper.locked .item-image {{
+            filter: grayscale(100%) opacity(0.35);
+        }}
+        .item-img-wrapper.locked .main-lock-badge {{
+            display: block;
+        }}
+
+        /* Grid Items, Producer Badge & Dynamic Locking */
+        [data-unlock-level].locked {{
+            filter: grayscale(100%) opacity(0.4);
+            pointer-events: none;
+        }}
+
+        .grid-item {{
+            position: relative;
+            transition: filter 0.3s ease, opacity 0.3s ease;
+        }}
+        .grid-item .lock-badge {{
+            display: none;
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            background: rgba(0, 0, 0, 0.75);
+            color: #ff6b6b;
+            font-size: 0.65rem;
+            font-weight: bold;
+            padding: 2px 6px;
+            border-radius: 4px;
+            border: 1px solid rgba(255, 107, 107, 0.4);
+            z-index: 2;
+        }}
+        .grid-item.locked .lock-badge {{
+            display: block;
+        }}
     </style>
 </head>
 <body>
@@ -173,18 +431,21 @@ def render_item_page(name, img_tag, price_display, time_display_html, producer_h
     <div class="card">
         {img_tag}
         <h1>{name}</h1>
+
         <div style="display: flex; justify-content: center; align-items: center; gap: 12px; margin-bottom: 25px;">
             <div class="price" style="margin-bottom: 0;">💰 {price_display}</div>
             {time_display_html}
         </div>
 
-        <div style="margin-top: 25px;">
+        <div>
             {producer_html}
         </div>
 
         {profit_html}
 
-        <div class="section-title">Ingredients Required</div>
+        {slider_component}
+
+        <div class="section-title" style="margin-top: 20px;">Ingredients Required</div>
         <div class="grid">
             {ingredients_html}
         </div>
@@ -202,7 +463,12 @@ def render_item_page(name, img_tag, price_display, time_display_html, producer_h
 """
 
 
-def render_machine_page(name, img_tag, produces_html, back_target):
+def render_machine_page(name, img_tag, produces_html, unlock_schedule_html, mastery_html, back_target, unlock_schedule=None):
+    slider_html = render_level_slider_script(
+        current_level=CURRENT_LEVEL,
+        unlock_schedule=unlock_schedule
+    )
+
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -210,7 +476,6 @@ def render_machine_page(name, img_tag, produces_html, back_target):
     <title>{name} - Production Machine</title>
     <style>
         {BASE_CSS}
-        .header-tag {{ font-size: 0.75rem; font-weight: bold; color: #e74c3c; text-transform: uppercase; letter-spacing: 1.5px; border: 1.5px solid #e74c3c; padding: 4px 12px; border-radius: 15px; display: inline-block; margin-bottom: 12px; }}
     </style>
 </head>
 <body>
@@ -218,12 +483,18 @@ def render_machine_page(name, img_tag, produces_html, back_target):
     <div class="card">
         {img_tag}
         <h1>{name}</h1>
+
+        {slider_html}
 
         <div class="section-title">Products</div>
         <div class="grid">
             {produces_html}
         </div>
 
+        {unlock_schedule_html}
+
+        {mastery_html}
+
         <a class="back-btn" href="../{back_target}">Back to Map</a>
     </div>
 </body>
@@ -231,15 +502,80 @@ def render_machine_page(name, img_tag, produces_html, back_target):
 """
 
 
-def render_pen_page(name, img_tag, residents_html, back_target):
+def render_pen_page(name, img_tag, residents_html, back_target, unlock_schedule_html, unlock_schedule=None):
+    slider_component = render_level_slider_script(current_level=CURRENT_LEVEL, unlock_schedule=unlock_schedule)
+
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{name} - Animal Pen</title>
     <style>
         {BASE_CSS}
         .header-tag {{ font-size: 0.75rem; font-weight: bold; color: #3498db; text-transform: uppercase; letter-spacing: 1.5px; border: 1.5px solid #3498db; padding: 4px 12px; border-radius: 15px; display: inline-block; margin-bottom: 12px; }}
+
+        /* Locking & Image Wrappers */
+        .item-img-wrapper {{
+            position: relative;
+            display: inline-block;
+            margin: 0 auto 15px auto;
+        }}
+        .item-img-wrapper .item-image {{
+            transition: filter 0.3s ease, opacity 0.3s ease;
+        }}
+        .item-img-wrapper .main-lock-badge {{
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(192, 57, 43, 0.9);
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 0.85rem;
+            padding: 6px 14px;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            pointer-events: none;
+            white-space: nowrap;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            z-index: 2;
+        }}
+
+        .item-img-wrapper.locked .item-image {{
+            filter: grayscale(100%) opacity(0.35);
+        }}
+        .item-img-wrapper.locked .main-lock-badge {{
+            display: block;
+        }}
+
+        /* Resident Grid Items & Badges */
+        .grid-item {{
+            position: relative;
+            transition: filter 0.3s ease, opacity 0.3s ease;
+        }}
+        .grid-item.locked {{
+            filter: grayscale(100%) opacity(0.4);
+            pointer-events: none;
+        }}
+        .grid-item .lock-badge {{
+            display: none;
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            background: rgba(0, 0, 0, 0.75);
+            color: #ff6b6b;
+            font-size: 0.65rem;
+            font-weight: bold;
+            padding: 2px 6px;
+            border-radius: 4px;
+            border: 1px solid rgba(255, 107, 107, 0.4);
+            z-index: 2;
+        }}
+        .grid-item.locked .lock-badge {{
+            display: block;
+        }}
     </style>
 </head>
 <body>
@@ -248,11 +584,15 @@ def render_pen_page(name, img_tag, residents_html, back_target):
         {img_tag}
         <h1>{name}</h1>
 
-        <div class="section-title">Pen Inhabitants</div>
+        {slider_component}
+
+        <div class="section-title" style="margin-top: 20px;">Pen Inhabitants</div>
         <div class="grid">
             {residents_html}
         </div>
 
+        {unlock_schedule_html}
+
         <a class="back-btn" href="../{back_target}">Back to Map</a>
     </div>
 </body>
@@ -260,15 +600,80 @@ def render_pen_page(name, img_tag, residents_html, back_target):
 """
 
 
-def render_plantable_structure_page(name, img_tag, produces_html, back_target):
+def render_plantable_structure_page(name, img_tag, produces_html, back_target, unlock_schedule=None, unlock_schedule_html=""):
+    slider_component = render_level_slider_script(current_level=CURRENT_LEVEL, unlock_schedule=unlock_schedule)
+
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{name} - Plantable Structure</title>
     <style>
         {BASE_CSS}
         .header-tag {{ font-size: 0.75rem; font-weight: bold; color: #2ecc71; text-transform: uppercase; letter-spacing: 1.5px; border: 1.5px solid #2ecc71; padding: 4px 12px; border-radius: 15px; display: inline-block; margin-bottom: 12px; }}
+
+        /* Locking & Main Image Wrapper */
+        .item-img-wrapper {{
+            position: relative;
+            display: inline-block;
+            margin: 0 auto 15px auto;
+        }}
+        .item-img-wrapper .item-image {{
+            transition: filter 0.3s ease, opacity 0.3s ease;
+        }}
+        .item-img-wrapper .main-lock-badge {{
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(192, 57, 43, 0.9);
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 0.85rem;
+            padding: 6px 14px;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            pointer-events: none;
+            white-space: nowrap;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            z-index: 2;
+        }}
+
+        .item-img-wrapper.locked .item-image {{
+            filter: grayscale(100%) opacity(0.35);
+        }}
+        .item-img-wrapper.locked .main-lock-badge {{
+            display: block;
+        }}
+
+        /* Grid Items & Badges */
+        .grid-item {{
+            position: relative;
+            transition: filter 0.3s ease, opacity 0.3s ease;
+        }}
+        .grid-item.locked {{
+            filter: grayscale(100%) opacity(0.4);
+            pointer-events: none;
+        }}
+        .grid-item .lock-badge {{
+            display: none;
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            background: rgba(0, 0, 0, 0.75);
+            color: #ff6b6b;
+            font-size: 0.65rem;
+            font-weight: bold;
+            padding: 2px 6px;
+            border-radius: 4px;
+            border: 1px solid rgba(255, 107, 107, 0.4);
+            z-index: 2;
+        }}
+        .grid-item.locked .lock-badge {{
+            display: block;
+        }}
     </style>
 </head>
 <body>
@@ -277,10 +682,14 @@ def render_plantable_structure_page(name, img_tag, produces_html, back_target):
         {img_tag}
         <h1>{name}</h1>
 
-        <div class="section-title">Produces</div>
+        {slider_component}
+
+        <div class="section-title" style="margin-top: 20px;">Produces</div>
         <div class="grid">
             {produces_html}
         </div>
+
+        {unlock_schedule_html}
 
         <a class="back-btn" href="../{back_target}">Back to Map</a>
     </div>
@@ -289,15 +698,80 @@ def render_plantable_structure_page(name, img_tag, produces_html, back_target):
 """
 
 
-def render_special_structure_page(name, img_tag, produces_html, back_target):
+def render_special_structure_page(name, img_tag, produces_html, back_target, unlock_schedule=None, unlock_schedule_html=""):
+    slider_component = render_level_slider_script(current_level=CURRENT_LEVEL, unlock_schedule=unlock_schedule)
+
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{name} - Special Structure</title>
     <style>
         {BASE_CSS}
         .header-tag {{ font-size: 0.75rem; font-weight: bold; color: #9b59b6; text-transform: uppercase; letter-spacing: 1.5px; border: 1.5px solid #9b59b6; padding: 4px 12px; border-radius: 15px; display: inline-block; margin-bottom: 12px; }}
+
+        /* Locking & Main Image Wrapper */
+        .item-img-wrapper {{
+            position: relative;
+            display: inline-block;
+            margin: 0 auto 15px auto;
+        }}
+        .item-img-wrapper .item-image {{
+            transition: filter 0.3s ease, opacity 0.3s ease;
+        }}
+        .item-img-wrapper .main-lock-badge {{
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(192, 57, 43, 0.9);
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 0.85rem;
+            padding: 6px 14px;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            pointer-events: none;
+            white-space: nowrap;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            z-index: 2;
+        }}
+
+        .item-img-wrapper.locked .item-image {{
+            filter: grayscale(100%) opacity(0.35);
+        }}
+        .item-img-wrapper.locked .main-lock-badge {{
+            display: block;
+        }}
+
+        /* Grid Items & Badges */
+        .grid-item {{
+            position: relative;
+            transition: filter 0.3s ease, opacity 0.3s ease;
+        }}
+        .grid-item.locked {{
+            filter: grayscale(100%) opacity(0.4);
+            pointer-events: none;
+        }}
+        .grid-item .lock-badge {{
+            display: none;
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            background: rgba(0, 0, 0, 0.75);
+            color: #ff6b6b;
+            font-size: 0.65rem;
+            font-weight: bold;
+            padding: 2px 6px;
+            border-radius: 4px;
+            border: 1px solid rgba(255, 107, 107, 0.4);
+            z-index: 2;
+        }}
+        .grid-item.locked .lock-badge {{
+            display: block;
+        }}
     </style>
 </head>
 <body>
@@ -306,10 +780,14 @@ def render_special_structure_page(name, img_tag, produces_html, back_target):
         {img_tag}
         <h1>{name}</h1>
 
-        <div class="section-title">Available Resources</div>
+        {slider_component}
+
+        <div class="section-title" style="margin-top: 20px;">Available Resources</div>
         <div class="grid">
             {produces_html}
         </div>
+
+        {unlock_schedule_html}
 
         <a class="back-btn" href="../{back_target}">Back to Map</a>
     </div>
@@ -318,15 +796,80 @@ def render_special_structure_page(name, img_tag, produces_html, back_target):
 """
 
 
-def render_field_page(name, img_tag, produces_html, back_target):
+def render_field_page(name, img_tag, produces_html, back_target, unlock_schedule=None, unlock_schedule_html=""):
+    slider_component = render_level_slider_script(current_level=CURRENT_LEVEL, unlock_schedule=unlock_schedule)
+
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{name} - Farm Fields</title>
     <style>
         {BASE_CSS}
         .header-tag {{ font-size: 0.75rem; font-weight: bold; color: #f1c40f; text-transform: uppercase; letter-spacing: 1.5px; border: 1.5px solid #f1c40f; padding: 4px 12px; border-radius: 15px; display: inline-block; margin-bottom: 12px; }}
+
+        /* Locking & Main Image Wrapper */
+        .item-img-wrapper {{
+            position: relative;
+            display: inline-block;
+            margin: 0 auto 15px auto;
+        }}
+        .item-img-wrapper .item-image {{
+            transition: filter 0.3s ease, opacity 0.3s ease;
+        }}
+        .item-img-wrapper .main-lock-badge {{
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(192, 57, 43, 0.9);
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 0.85rem;
+            padding: 6px 14px;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            pointer-events: none;
+            white-space: nowrap;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            z-index: 2;
+        }}
+
+        .item-img-wrapper.locked .item-image {{
+            filter: grayscale(100%) opacity(0.35);
+        }}
+        .item-img-wrapper.locked .main-lock-badge {{
+            display: block;
+        }}
+
+        /* Grid Items & Badges */
+        .grid-item {{
+            position: relative;
+            transition: filter 0.3s ease, opacity 0.3s ease;
+        }}
+        .grid-item.locked {{
+            filter: grayscale(100%) opacity(0.4);
+            pointer-events: none;
+        }}
+        .grid-item .lock-badge {{
+            display: none;
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            background: rgba(0, 0, 0, 0.75);
+            color: #ff6b6b;
+            font-size: 0.65rem;
+            font-weight: bold;
+            padding: 2px 6px;
+            border-radius: 4px;
+            border: 1px solid rgba(255, 107, 107, 0.4);
+            z-index: 2;
+        }}
+        .grid-item.locked .lock-badge {{
+            display: block;
+        }}
     </style>
 </head>
 <body>
@@ -335,10 +878,14 @@ def render_field_page(name, img_tag, produces_html, back_target):
         {img_tag}
         <h1>{name}</h1>
 
-        <div class="section-title">Crops</div>
+        {slider_component}
+
+        <div class="section-title" style="margin-top: 20px;">Crops</div>
         <div class="grid">
             {produces_html}
         </div>
+
+        {unlock_schedule_html}
 
         <a class="back-btn" href="../{back_target}">Back to Map</a>
     </div>
@@ -347,11 +894,14 @@ def render_field_page(name, img_tag, produces_html, back_target):
 """
 
 
-def render_animal_page(name, img_tag, food_html, produces_html, lives_in_html, back_target):
+def render_animal_page(name, img_tag, food_html, produces_html, lives_in_html, back_target, unlock_schedule=None):
+    slider_component = render_level_slider_script(current_level=CURRENT_LEVEL, unlock_schedule=unlock_schedule)
+
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{name} - Livestock</title>
     <style>
         {BASE_CSS}
@@ -359,6 +909,69 @@ def render_animal_page(name, img_tag, food_html, produces_html, lives_in_html, b
         .split-grid {{ display: flex; gap: 20px; justify-content: space-between; text-align: left; margin-bottom: 30px; }}
         .split-panel {{ flex: 1; background-color: #1e1e1e; border: 1px solid #3a3a3a; border-radius: 12px; padding: 15px; }}
         .split-title {{ font-size: 0.75rem; color: #888888; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 12px; border-bottom: 1px solid #2d2d2d; padding-bottom: 5px; font-weight: bold; }}
+
+        /* Locking & Image Wrappers */
+        .item-img-wrapper {{
+            position: relative;
+            display: inline-block;
+            margin: 0 auto 15px auto;
+        }}
+        .item-img-wrapper .item-image {{
+            transition: filter 0.3s ease, opacity 0.3s ease;
+        }}
+        .item-img-wrapper .main-lock-badge {{
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(192, 57, 43, 0.9);
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 0.85rem;
+            padding: 6px 14px;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            pointer-events: none;
+            white-space: nowrap;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            z-index: 2;
+        }}
+
+        .item-img-wrapper.locked .item-image {{
+            filter: grayscale(100%) opacity(0.35);
+        }}
+        .item-img-wrapper.locked .main-lock-badge {{
+            display: block;
+        }}
+
+        /* Grid & Link Locking */
+        [data-unlock-level].locked {{
+            filter: grayscale(100%) opacity(0.4);
+            pointer-events: none;
+        }}
+
+        .grid-item {{
+            position: relative;
+            transition: filter 0.3s ease, opacity 0.3s ease;
+        }}
+        .grid-item .lock-badge {{
+            display: none;
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            background: rgba(0, 0, 0, 0.75);
+            color: #ff6b6b;
+            font-size: 0.65rem;
+            font-weight: bold;
+            padding: 2px 6px;
+            border-radius: 4px;
+            border: 1px solid rgba(255, 107, 107, 0.4);
+            z-index: 2;
+        }}
+        .grid-item.locked .lock-badge {{
+            display: block;
+        }}
     </style>
 </head>
 <body>
@@ -367,7 +980,9 @@ def render_animal_page(name, img_tag, food_html, produces_html, lives_in_html, b
         {img_tag}
         <h1>{name}</h1>
 
-        <div class="split-grid">
+        {slider_component}
+
+        <div class="split-grid" style="margin-top: 20px;">
             <div class="split-panel">
                 <div class="split-title">🏡 Habitat</div>
                 {lives_in_html}
@@ -388,6 +1003,7 @@ def render_animal_page(name, img_tag, food_html, produces_html, lives_in_html, b
 </body>
 </html>
 """
+
 
 def render_price_breakdown_component(name, unit_price, max_qty=10):
     """

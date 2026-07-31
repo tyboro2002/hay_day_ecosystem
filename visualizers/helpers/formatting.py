@@ -63,3 +63,60 @@ def get_base64_asset(name, subfolder):
     filename = f"{name.lower().replace(' ', '_')}.png"
     filepath = os.path.join("assets", subfolder, filename)
     return image_to_base64(filepath)
+
+def get_mastery_image_filename(star_number, info, machine_name):
+    """
+    Constructs image filenames based on active bonus parameters:
+    - Coin:  plus_10_coins_1_star
+    - XP:    plus_5_xp_2_star
+    - Speed: 15_speed_3_star_bakery (includes machine name for machine-specific art)
+    """
+    clean_mach_name = machine_name.lower().replace(" ", "_")
+
+    if info.get("coin_bonus"):
+        pct = int(info["coin_bonus"] * 100)
+        return f"plus_{pct}_coins_{star_number}_star"
+
+    if info.get("xp_bonus"):
+        pct = int(info["xp_bonus"] * 100)
+        return f"plus_{pct}_xp_{star_number}_star"
+
+    if info.get("speed_bonus"):
+        pct = int(info["speed_bonus"] * 100)
+        return f"{pct}_speed_{star_number}_star_{clean_mach_name}"
+
+    return f"star_{star_number}"
+
+
+def format_mastery_bonus_text(info):
+    """Formats raw mastery YAML data into human-readable text + inline asset icons."""
+    # 1. Fetch base64 icons from the mastery directory
+    coin_asset = get_base64_asset("coins", "mastery")
+    xp_asset = get_base64_asset("xp", "mastery")
+    time_asset = get_base64_asset("time", "mastery")
+
+    # Helper inline HTML image generator with clean alignment styling
+    def make_icon(src, alt):
+        if src:
+            return f'<img src="{src}" alt="{alt}" style="width: 16px; height: 16px; object-fit: contain; vertical-align: middle; margin-left: 3px;">'
+        return f" {alt}"  # Fallback text if asset isn't found
+
+    coins_img = make_icon(coin_asset, "Coins")
+    xp_img = make_icon(xp_asset, "XP")
+    time_img = make_icon(time_asset, "Time")
+
+    # 2. Build bonus parts using image badges
+    parts = []
+    if info.get("coin_bonus"):
+        pct = int(info["coin_bonus"] * 100)
+        parts.append(f"+{pct}%{coins_img}")
+
+    if info.get("xp_bonus"):
+        pct = int(info["xp_bonus"] * 100)
+        parts.append(f"+{pct}%{xp_img}")
+
+    if info.get("speed_bonus"):
+        pct = int(info["speed_bonus"] * 100)
+        parts.append(f"{pct}% faster{time_img}")
+
+    return " / ".join(parts) if parts else "No bonus"

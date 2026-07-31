@@ -10,18 +10,86 @@ class HayDayMachine:
 
     Example for Sugar Mill: [(7, 1), (76, 1)]
     """
-    def __init__(self, name, amount_owned, min_allowed_slots = 2, max_allowed_slots = 9, max_slots=2, unlock_schedule=None):
+    def __init__(self, name, amount_owned, min_allowed_slots = 2, max_allowed_slots = 9, max_slots=2,
+                 unlock_schedule=None, mastery_level=0, mastery=None, costs=None):
         self.name = name
         self.amount_owned = amount_owned
         self.max_slots = max_slots
         self.min_allowed_slots = min_allowed_slots
         self.max_allowed_slots = max_allowed_slots
         self.unlock_schedule = unlock_schedule or [(1, 1)] # Default: 1 unlocked at level 1
+        self.costs = costs or []                             # [cost_1st, cost_2nd, ...]
+        self.mastery_level = min(max(mastery_level, 0), 3)  # Active star level (0..3)
+        self.mastery_config = mastery or {}          # Raw incremental YAML block
         self.queue = [] # List of items currently queued
         self.products = []  # Items this machine can produce, automatically filled by MachinedItems
 
     def __repr__(self):
         return f"Machine: {self.name}"
+
+    @property
+    def full_unlock_schedule(self):
+        """
+        Returns a list of tuples formatted as:
+        [(level, count, unit_costs_list), ...]
+        Example: [(24, 5, [100, 200, 300, 400, 500])]
+        """
+        detailed_schedule = []
+        cost_cursor = 0
+
+        for lvl, count in self.unlock_schedule:
+            # Grab the slice of costs corresponding to the machines unlocked at this level
+            tier_costs = self.costs[cost_cursor : cost_cursor + count]
+            cost_cursor += count
+
+            detailed_schedule.append((lvl, count, tier_costs))
+
+        return detailed_schedule
+
+    def get_star_info(self, star_number):
+        """Returns the incremental data for a specific star from YAML."""
+        return self.mastery_config.get(f"star_{star_number}", {})
+
+    def get_total_hours_for_star(self, star_number):
+        """
+        Calculates cumulative hours required from 0 to target star level.
+        Example for Bakery Star 3: 35 + 140 + 560 = 735 total hours.
+        """
+        return sum(
+            self.get_star_info(s).get("hours_required", 0)
+            for s in range(1, star_number + 1)
+        )
+
+    @property
+    def total_mastery_hours(self):
+        """Returns total hours to fully 3-star (master) this machine."""
+        return self.get_total_hours_for_star(3)
+
+    @property
+    def cumulative_bonuses(self):
+        """Accumulates all active incremental bonuses up to current mastery_level."""
+        bonuses = {"coin_bonus": 0.0, "xp_bonus": 0.0, "speed_bonus": 0.0}
+
+        for star in range(1, self.mastery_level + 1):
+            info = self.get_star_info(star)
+            bonuses["coin_bonus"] += info.get("coin_bonus", 0.0)
+            bonuses["xp_bonus"] += info.get("xp_bonus", 0.0)
+            bonuses["speed_bonus"] += info.get("speed_bonus", 0.0)
+
+        return bonuses
+
+    @property
+    def speed_multiplier(self):
+        """Crafting time multiplier used for RSS optimization."""
+        return 1.0 - self.cumulative_bonuses["speed_bonus"]
+
+    @property
+    def coin_multiplier(self):
+        return 1.0 + self.cumulative_bonuses["coin_bonus"]
+
+    @property
+    def xp_multiplier(self):
+        return 1.0 + self.cumulative_bonuses["xp_bonus"]
 
     @property
     def unlock_level(self):
@@ -45,17 +113,37 @@ class HayDayMachine:
 
 
 class AnimalPen:
-    def __init__(self, name, amount_owned, max_capacity=5, current_capacity=5, unlock_schedule=None):
+    def __init__(self, name, amount_owned, max_capacity=5, current_capacity=5, unlock_schedule=None, costs=None):
         self.name = name
         self.current_capacity = current_capacity
         self.max_capacity = max_capacity
         self.amount_owned = amount_owned
         self.unlock_schedule = unlock_schedule or [(1, 1)]
+        self.costs = costs or []                             # [cost_1st, cost_2nd, ...]
         self.animal = None   # Holds Animal objects living here
         self.products = []  # Items this pen can produce, automatically filled by AnimalItems
 
     def __repr__(self):
         return f"Pen: {self.name} ({self.current_capacity}/{self.max_capacity} animals) ({self.amount_owned} owned)"
+
+    @property
+    def full_unlock_schedule(self):
+        """
+        Returns a list of tuples formatted as:
+        [(level, count, unit_costs_list), ...]
+        Example: [(24, 5, [100, 200, 300, 400, 500])]
+        """
+        detailed_schedule = []
+        cost_cursor = 0
+
+        for lvl, count in self.unlock_schedule:
+            # Grab the slice of costs corresponding to the machines unlocked at this level
+            tier_costs = self.costs[cost_cursor : cost_cursor + count]
+            cost_cursor += count
+
+            detailed_schedule.append((lvl, count, tier_costs))
+
+        return detailed_schedule
 
     @property
     def unlock_level(self):
