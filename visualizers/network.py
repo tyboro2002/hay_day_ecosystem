@@ -8,11 +8,12 @@ import os
 from pyvis.network import Network
 from game_data import ITEMS, INFRASTRUCTURE, LIVESTOCK
 from game_data.game_data import MAX_LEVEL, CURRENT_LEVEL
+from visualizers.helpers import templates
 
 # Import helpers from the subdirectory package!
 from visualizers.helpers.formatting import format_duration, get_base64_asset
 import visualizers.helpers.formatting as formatting
-import visualizers.helpers.templates as templates
+from visualizers.helpers.templates import generate_unlock_schedule_component
 from visualizers.helpers.overnight_profit_page import generate_overnight_page
 from visualizers.helpers.profit_ranking_page import generate_profitability_ranking_page
 
@@ -76,7 +77,7 @@ def generate_interactive_farm_graph(output_filename=f"{outp}/{outp_file}"):
             prods = [item for item_name, item in ITEMS.items() if item_name in ["Silver Ore", "Gold Ore", "Platinum Ore", "Iron Ore", "Coal"]]
         elif name == "Fishing Lake":
             prods = [item for item_name, item in ITEMS.items() if item_name == "Fish Fillet"]
-        generate_detail_page_special_structure(name, prods)
+        generate_detail_page_special_structure(name, prods, spec_obj)
 
     for obj in INFRASTRUCTURE["fields"].keys():
         detail_url = f"{detail_dir}/details_{obj.lower().replace(' ', '_')}.html"
@@ -540,7 +541,7 @@ def generate_detail_page_machine(name, prods, mach_obj):
         produces_html = '<div class="no-items">💤 Nothing directly produced here.</div>'
 
     # Extracted function used here
-    unlock_schedule_html = templates.generate_unlock_schedule_component(full_schedule, name, asset_folder="machines")
+    unlock_schedule_html = generate_unlock_schedule_component(full_schedule, name, asset_folder="machines")
 
     has_mastery = False
     if mach_obj:
@@ -649,7 +650,7 @@ def generate_detail_page_pen(name, residents, pen_obj=None):
         residents_html = '<div class="no-items">💤 Vacant Habitat.</div>'
 
     # Reuse extracted schedule component for pens
-    unlock_schedule_html = templates.generate_unlock_schedule_component(full_schedule, name, asset_folder="pens")
+    unlock_schedule_html = generate_unlock_schedule_component(full_schedule, name, asset_folder="pens")
 
     filename = f"details_{name.lower().replace(' ', '_')}.html"
     html_content = templates.render_pen_page(
@@ -666,17 +667,48 @@ def generate_detail_page_pen(name, residents, pen_obj=None):
         f.write(html_content)
 
 
-def generate_detail_page_plantable_structure(name, prods):
+def generate_detail_page_plantable_structure(name, prods, plant_obj=None):
+    # Determine schedule or base unlock level
+    full_schedule = getattr(plant_obj, 'full_unlock_schedule', None) if plant_obj else None
+
+    if full_schedule:
+        plant_unlock_lvl = full_schedule[0][0]
+    else:
+        # Fallback to structure object's unlock level or lowest produced crop's unlock level (default 1)
+        plant_unlock_lvl = getattr(plant_obj, 'unlock_level', None)
+        if plant_unlock_lvl is None:
+            plant_unlock_lvl = min([getattr(p, 'unlock_level', 1) for p in prods]) if prods else 1
+        full_schedule = plant_unlock_lvl
+
     img_base64 = get_base64_asset(name, "plant_structures")
-    img_tag = f'<img class="item-image" src="{img_base64}" alt="{name}">' if img_base64 else ""
+    if img_base64:
+        img_tag = f"""
+        <div class="item-img-wrapper" id="mainMachineWrapper" data-unlock-level="{plant_unlock_lvl}">
+            <span class="main-lock-badge">Requires Lvl {plant_unlock_lvl}</span>
+            <img class="item-image" src="{img_base64}" alt="{name}">
+        </div>
+        """
+    else:
+        img_tag = ""
 
     produces_html = ""
     if prods:
         for prod_item in prods:
             prod_img = get_base64_asset(prod_item.name, "items")
             prod_url = f"details_{prod_item.name.lower().replace(' ', '_')}.html"
+            prod_unlock_lvl = getattr(prod_item, 'unlock_level', 1)
+
+            time_lbl = ""
+            raw_time = getattr(prod_item, 'time_to_make', None)
+            if raw_time:
+                formatted_time = format_duration(raw_time)
+                if formatted_time:
+                    time_lbl = f'<div class="qty-badge" style="background-color: #3498db; color: white; font-size: 0.6rem;">{formatted_time}</div>'
+
             produces_html += f"""
-            <a class="grid-item" href="{prod_url}">
+            <a class="grid-item" href="{prod_url}" data-unlock-level="{prod_unlock_lvl}">
+                <span class="lock-badge">🔒 Lvl {prod_unlock_lvl}</span>
+                {time_lbl}
                 <img src="{prod_img}" alt="{prod_item.name}">
                 <div class="name">{prod_item.name}</div>
             </a>
@@ -684,23 +716,68 @@ def generate_detail_page_plantable_structure(name, prods):
     else:
         produces_html = '<div class="no-items">💤 Nothing grown here.</div>'
 
+    # Generate schedule section if a schedule list is available
+    unlock_schedule_html = ""
+    if isinstance(full_schedule, list) and len(full_schedule) > 0:
+        unlock_schedule_html = generate_unlock_schedule_component(full_schedule, name, asset_folder="plant_structures")
+
     filename = f"details_{name.lower().replace(' ', '_')}.html"
-    html_content = templates.render_plantable_structure_page(name, img_tag, produces_html, outp_file)
+    html_content = templates.render_plantable_structure_page(
+        name=name,
+        img_tag=img_tag,
+        produces_html=produces_html,
+        back_target=outp_file,
+        unlock_schedule=full_schedule,
+        unlock_schedule_html=unlock_schedule_html
+    )
+
+    os.makedirs(os.path.join(outp, "details"), exist_ok=True)
     with open(os.path.join(outp, "details", filename), "w", encoding="utf-8") as f:
         f.write(html_content)
 
 
-def generate_detail_page_special_structure(name, prods):
+def generate_detail_page_special_structure(name, prods, structure_obj=None):
+    # Determine schedule or base unlock level
+    full_schedule = getattr(structure_obj, 'full_unlock_schedule', None) if structure_obj else None
+
+    if full_schedule:
+        structure_unlock_lvl = full_schedule[0][0]
+    else:
+        # Fallback to the lowest resource unlock level or structure attribute (defaulting to 1)
+        structure_unlock_lvl = getattr(structure_obj, 'unlock_level', None)
+        if structure_unlock_lvl is None:
+            structure_unlock_lvl = min([getattr(p, 'unlock_level', 1) for p in prods]) if prods else 1
+        full_schedule = structure_unlock_lvl
+
     img_base64 = get_base64_asset(name, "special_structures")
-    img_tag = f'<img class="item-image" src="{img_base64}" alt="{name}">' if img_base64 else ""
+    if img_base64:
+        img_tag = f"""
+        <div class="item-img-wrapper" id="mainMachineWrapper" data-unlock-level="{structure_unlock_lvl}">
+            <span class="main-lock-badge">Requires Lvl {structure_unlock_lvl}</span>
+            <img class="item-image" src="{img_base64}" alt="{name}">
+        </div>
+        """
+    else:
+        img_tag = ""
 
     produces_html = ""
     if prods:
         for prod_item in prods:
             prod_img = get_base64_asset(prod_item.name, "items")
             prod_url = f"details_{prod_item.name.lower().replace(' ', '_')}.html"
+            prod_unlock_lvl = getattr(prod_item, 'unlock_level', 1)
+
+            time_lbl = ""
+            raw_time = getattr(prod_item, 'time_to_make', None)
+            if raw_time:
+                formatted_time = format_duration(raw_time)
+                if formatted_time:
+                    time_lbl = f'<div class="qty-badge" style="background-color: #3498db; color: white; font-size: 0.6rem;">{formatted_time}</div>'
+
             produces_html += f"""
-            <a class="grid-item" href="{prod_url}">
+            <a class="grid-item" href="{prod_url}" data-unlock-level="{prod_unlock_lvl}">
+                <span class="lock-badge">🔒 Lvl {prod_unlock_lvl}</span>
+                {time_lbl}
                 <img src="{prod_img}" alt="{prod_item.name}">
                 <div class="name">{prod_item.name}</div>
             </a>
@@ -708,8 +785,22 @@ def generate_detail_page_special_structure(name, prods):
     else:
         produces_html = '<div class="no-items">💤 Nothing harvested here.</div>'
 
+    # Generate schedule section if a schedule list is provided
+    unlock_schedule_html = ""
+    if isinstance(full_schedule, list) and len(full_schedule) > 0:
+        unlock_schedule_html = generate_unlock_schedule_component(full_schedule, name, asset_folder="special_structures")
+
     filename = f"details_{name.lower().replace(' ', '_')}.html"
-    html_content = templates.render_special_structure_page(name, img_tag, produces_html, outp_file)
+    html_content = templates.render_special_structure_page(
+        name=name,
+        img_tag=img_tag,
+        produces_html=produces_html,
+        back_target=outp_file,
+        unlock_schedule=full_schedule,
+        unlock_schedule_html=unlock_schedule_html
+    )
+
+    os.makedirs(os.path.join(outp, "details"), exist_ok=True)
     with open(os.path.join(outp, "details", filename), "w", encoding="utf-8") as f:
         f.write(html_content)
 
@@ -764,7 +855,7 @@ def generate_detail_page_field(name, prods, field_obj=None):
     # Generate schedule section if a schedule list is present
     unlock_schedule_html = ""
     if isinstance(full_schedule, list) and len(full_schedule) > 0:
-        unlock_schedule_html = templates.generate_unlock_schedule_component(full_schedule, name, asset_folder="fields")
+        unlock_schedule_html = generate_unlock_schedule_component(full_schedule, name, asset_folder="fields")
 
     filename = f"details_{name.lower().replace(' ', '_')}.html"
     html_content = templates.render_field_page(
