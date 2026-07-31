@@ -134,7 +134,7 @@
             <span class="level-value" id="levelDisplay">Level 50</span>
         </div>
         <input type="range" min="1" max="50" value="50" class="level-slider" id="levelSlider">
-        <div class="machine-count-status" id="machineCountDisplay"></div>
+        <div class="machine-count-status" id="machineCountDisplay" style="display: block;"></div>
     </div>
 
     <script type="text/javascript">
@@ -148,18 +148,19 @@
             function updateLevel(currentLevel) {
                 display.textContent = 'Level ' + currentLevel;
 
-                // 1. Toggle Grayed Out State on Main Machine Header Image
+                // 1. Toggle Grayed Out State on Main Image Header
                 const machWrapper = document.getElementById('mainMachineWrapper');
                 if (machWrapper) {
-                    if (currentLevel < machineUnlockLevel) {
+                    const mainReqLvl = parseInt(machWrapper.getAttribute('data-unlock-level') || machineUnlockLevel, 10);
+                    if (currentLevel < mainReqLvl) {
                         machWrapper.classList.add('locked');
                     } else {
                         machWrapper.classList.remove('locked');
                     }
                 }
 
-                // 2. Calculate unlocked machine count from unlock_schedule
-                if (unlockSchedule.length > 0) {
+                // 2. Calculate unlocked count if schedule is present
+                if (unlockSchedule.length > 0 && countDisplay && countDisplay.style.display !== 'none') {
                     let totalUnlocked = 0;
                     for (let i = 0; i < unlockSchedule.length; i++) {
                         const [lvl, count] = unlockSchedule[i];
@@ -177,7 +178,7 @@
                     }
                 }
 
-                // 3. Lock / Unlock product grid items
+                // 3. Lock / Unlock child elements, habitat links, feed links, & product cards
                 const unlockables = document.querySelectorAll('[data-unlock-level]');
                 unlockables.forEach(el => {
                     const reqLevel = parseInt(el.getAttribute('data-unlock-level'), 10);

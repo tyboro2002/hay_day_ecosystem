@@ -247,10 +247,21 @@ def generate_unlock_schedule_component(full_schedule, name, asset_folder="machin
     """
 
 def render_level_slider_script(current_level, unlock_schedule=None, max_level=MAX_LEVEL):
-    schedule_json = json.dumps(unlock_schedule or [])
+    # Normalize unlock_schedule if passed as an int/float single level value
+    if isinstance(unlock_schedule, (int, float)):
+        unlock_schedule = [(int(unlock_schedule), 1)]
 
-    # Calculate the absolute minimum level required to unlock the 1st machine
-    machine_unlock_level = min([lvl for lvl, _ in unlock_schedule]) if unlock_schedule else 1
+    schedule_list = unlock_schedule or []
+    schedule_json = json.dumps(schedule_list)
+
+    # Determine minimum unlock level
+    if schedule_list:
+        machine_unlock_level = min([lvl for lvl, *_ in schedule_list])
+    else:
+        machine_unlock_level = 1
+
+    # Hide status text element if no schedule was originally provided or if it's a single value
+    show_status_badge = bool(unlock_schedule) and not (len(schedule_list) == 1 and schedule_list[0][1] == 1)
 
     return f"""
     <div class="level-control">
@@ -259,7 +270,7 @@ def render_level_slider_script(current_level, unlock_schedule=None, max_level=MA
             <span class="level-value" id="levelDisplay">Level {current_level}</span>
         </div>
         <input type="range" min="1" max="{max_level}" value="{current_level}" class="level-slider" id="levelSlider">
-        <div class="machine-count-status" id="machineCountDisplay"></div>
+        <div class="machine-count-status" id="machineCountDisplay" style="display: {'block' if show_status_badge else 'none'};"></div>
     </div>
 
     <script type="text/javascript">
@@ -273,18 +284,19 @@ def render_level_slider_script(current_level, unlock_schedule=None, max_level=MA
             function updateLevel(currentLevel) {{
                 display.textContent = 'Level ' + currentLevel;
 
-                // 1. Toggle Grayed Out State on Main Machine Header Image
+                // 1. Toggle Grayed Out State on Main Image Header
                 const machWrapper = document.getElementById('mainMachineWrapper');
                 if (machWrapper) {{
-                    if (currentLevel < machineUnlockLevel) {{
+                    const mainReqLvl = parseInt(machWrapper.getAttribute('data-unlock-level') || machineUnlockLevel, 10);
+                    if (currentLevel < mainReqLvl) {{
                         machWrapper.classList.add('locked');
                     }} else {{
                         machWrapper.classList.remove('locked');
                     }}
                 }}
 
-                // 2. Calculate unlocked machine count from unlock_schedule
-                if (unlockSchedule.length > 0) {{
+                // 2. Calculate unlocked count if schedule is present
+                if (unlockSchedule.length > 0 && countDisplay && countDisplay.style.display !== 'none') {{
                     let totalUnlocked = 0;
                     for (let i = 0; i < unlockSchedule.length; i++) {{
                         const [lvl, count] = unlockSchedule[i];
@@ -302,7 +314,7 @@ def render_level_slider_script(current_level, unlock_schedule=None, max_level=MA
                     }}
                 }}
 
-                // 3. Lock / Unlock product grid items
+                // 3. Lock / Unlock child elements, habitat links, feed links, & product cards
                 const unlockables = document.querySelectorAll('[data-unlock-level]');
                 unlockables.forEach(el => {{
                     const reqLevel = parseInt(el.getAttribute('data-unlock-level'), 10);
@@ -607,11 +619,14 @@ def render_field_page(name, img_tag, produces_html, back_target):
 """
 
 
-def render_animal_page(name, img_tag, food_html, produces_html, lives_in_html, back_target):
+def render_animal_page(name, img_tag, food_html, produces_html, lives_in_html, back_target, unlock_schedule=None):
+    slider_component = render_level_slider_script(current_level=CURRENT_LEVEL, unlock_schedule=unlock_schedule)
+
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{name} - Livestock</title>
     <style>
         {BASE_CSS}
@@ -619,6 +634,69 @@ def render_animal_page(name, img_tag, food_html, produces_html, lives_in_html, b
         .split-grid {{ display: flex; gap: 20px; justify-content: space-between; text-align: left; margin-bottom: 30px; }}
         .split-panel {{ flex: 1; background-color: #1e1e1e; border: 1px solid #3a3a3a; border-radius: 12px; padding: 15px; }}
         .split-title {{ font-size: 0.75rem; color: #888888; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 12px; border-bottom: 1px solid #2d2d2d; padding-bottom: 5px; font-weight: bold; }}
+
+        /* Locking & Image Wrappers */
+        .item-img-wrapper {{
+            position: relative;
+            display: inline-block;
+            margin: 0 auto 15px auto;
+        }}
+        .item-img-wrapper .item-image {{
+            transition: filter 0.3s ease, opacity 0.3s ease;
+        }}
+        .item-img-wrapper .main-lock-badge {{
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(192, 57, 43, 0.9);
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 0.85rem;
+            padding: 6px 14px;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            pointer-events: none;
+            white-space: nowrap;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            z-index: 2;
+        }}
+
+        .item-img-wrapper.locked .item-image {{
+            filter: grayscale(100%) opacity(0.35);
+        }}
+        .item-img-wrapper.locked .main-lock-badge {{
+            display: block;
+        }}
+
+        /* Grid & Link Locking */
+        [data-unlock-level].locked {{
+            filter: grayscale(100%) opacity(0.4);
+            pointer-events: none;
+        }}
+
+        .grid-item {{
+            position: relative;
+            transition: filter 0.3s ease, opacity 0.3s ease;
+        }}
+        .grid-item .lock-badge {{
+            display: none;
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            background: rgba(0, 0, 0, 0.75);
+            color: #ff6b6b;
+            font-size: 0.65rem;
+            font-weight: bold;
+            padding: 2px 6px;
+            border-radius: 4px;
+            border: 1px solid rgba(255, 107, 107, 0.4);
+            z-index: 2;
+        }}
+        .grid-item.locked .lock-badge {{
+            display: block;
+        }}
     </style>
 </head>
 <body>
@@ -627,7 +705,9 @@ def render_animal_page(name, img_tag, food_html, produces_html, lives_in_html, b
         {img_tag}
         <h1>{name}</h1>
 
-        <div class="split-grid">
+        {slider_component}
+
+        <div class="split-grid" style="margin-top: 20px;">
             <div class="split-panel">
                 <div class="split-title">🏡 Habitat</div>
                 {lives_in_html}

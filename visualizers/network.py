@@ -748,16 +748,28 @@ def generate_detail_page_field(name, prods):
 
 
 def generate_detail_page_animal(name, animal_obj):
+    animal_unlock_lvl = getattr(animal_obj, 'unlock_level', 1)
+
     img_base64 = get_base64_asset(name, "animals")
-    img_tag = f'<img class="item-image" src="{img_base64}" alt="{name}">' if img_base64 else ""
+    if img_base64:
+        img_tag = f"""
+        <div class="item-img-wrapper" id="mainMachineWrapper" data-unlock-level="{animal_unlock_lvl}">
+            <span class="main-lock-badge">Requires Lvl {animal_unlock_lvl}</span>
+            <img class="item-image" src="{img_base64}" alt="{name}">
+        </div>
+        """
+    else:
+        img_tag = ""
 
     lives_in_html = '<span style="color:#888;">Nomad / No Pen</span>'
     if animal_obj.pen:
         pen_name = animal_obj.pen.name
         pen_img = get_base64_asset(pen_name, "pens")
         pen_url = f"details_{pen_name.lower().replace(' ', '_')}.html"
+        pen_unlock_lvl = getattr(animal_obj.pen, 'unlock_level', 1)
+
         lives_in_html = f"""
-        <a href="{pen_url}" style="text-decoration:none; display:flex; align-items:center; gap:8px;">
+        <a href="{pen_url}" style="text-decoration:none; display:flex; align-items:center; gap:8px;" data-unlock-level="{pen_unlock_lvl}">
             <img src="{pen_img}" style="width:24px; height:24px; object-fit:contain;" alt="{pen_name}">
             <span style="color:#f1a80a; font-weight:bold; font-size:0.85rem;">{pen_name}</span>
         </a>
@@ -768,8 +780,10 @@ def generate_detail_page_animal(name, animal_obj):
         food_name = animal_obj.required_food.name
         food_img = get_base64_asset(food_name, "items")
         food_url = f"details_{food_name.lower().replace(' ', '_')}.html"
+        food_unlock_lvl = getattr(animal_obj.required_food, 'unlock_level', 1)
+
         food_html = f"""
-        <a href="{food_url}" style="text-decoration:none; display:flex; align-items:center; gap:8px;">
+        <a href="{food_url}" style="text-decoration:none; display:flex; align-items:center; gap:8px;" data-unlock-level="{food_unlock_lvl}">
             <img src="{food_img}" style="width:24px; height:24px; object-fit:contain;" alt="{food_name}">
             <span style="color:#f1a80a; font-weight:bold; font-size:0.85rem;">{food_name}</span>
         </a>
@@ -780,6 +794,7 @@ def generate_detail_page_animal(name, animal_obj):
         prod_name = animal_obj.produces_item.name
         prod_img = get_base64_asset(prod_name, "items")
         prod_url = f"details_{prod_name.lower().replace(' ', '_')}.html"
+        prod_unlock_lvl = getattr(animal_obj.produces_item, 'unlock_level', 1)
 
         time_lbl = ""
         raw_time = getattr(animal_obj.produces_item, 'time_to_make', None)
@@ -789,7 +804,8 @@ def generate_detail_page_animal(name, animal_obj):
                 time_lbl = f'<div class="qty-badge" style="background-color: #3498db; color: white; font-size: 0.6rem;">{formatted_time}</div>'
 
         produces_html += f"""
-        <a class="grid-item" href="{prod_url}">
+        <a class="grid-item" href="{prod_url}" data-unlock-level="{prod_unlock_lvl}">
+            <span class="lock-badge">🔒 Lvl {prod_unlock_lvl}</span>
             {time_lbl}
             <img src="{prod_img}" alt="{prod_name}">
             <div class="name">{prod_name}</div>
@@ -799,10 +815,21 @@ def generate_detail_page_animal(name, animal_obj):
         produces_html = '<div class="no-items">💤 Yields no products.</div>'
 
     filename = f"details_{name.lower().replace(' ', '_')}.html"
-    html_content = templates.render_animal_page(name, img_tag, food_html, produces_html, lives_in_html, outp_file)
+
+    # Pass animal_unlock_lvl directly as an integer or tuple/list
+    html_content = templates.render_animal_page(
+        name=name,
+        img_tag=img_tag,
+        food_html=food_html,
+        produces_html=produces_html,
+        lives_in_html=lives_in_html,
+        back_target=outp_file,
+        unlock_schedule=animal_unlock_lvl
+    )
+
+    os.makedirs(os.path.join(outp, "details"), exist_ok=True)
     with open(os.path.join(outp, "details", filename), "w", encoding="utf-8") as f:
         f.write(html_content)
-
 
 if __name__ == "__main__":
     generate_interactive_farm_graph()
