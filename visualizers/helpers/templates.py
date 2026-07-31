@@ -336,7 +336,9 @@ def render_level_slider_script(current_level, unlock_schedule=None, max_level=MA
 # INDIVIDUAL DETAIL PAGE RENDERING TEMPLATES
 # =====================================================================
 
-def render_item_page(name, img_tag, price_display, time_display_html, producer_html, profit_html, price_breakdown_html, ingredients_html, used_in_html, back_target):
+def render_item_page(name, img_tag, price_display, time_display_html, producer_html, profit_html, price_breakdown_html, ingredients_html, used_in_html, back_target, unlock_schedule=None):
+    slider_component = render_level_slider_script(current_level=CURRENT_LEVEL, unlock_schedule=unlock_schedule)
+
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -347,7 +349,7 @@ def render_item_page(name, img_tag, price_display, time_display_html, producer_h
         {BASE_CSS}
         .producer-section {{ margin-bottom: 25px; }}
         .producer-label {{ font-size: 0.72rem; color: #888888; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 8px; }}
-        .producer-badge {{ display: inline-flex; align-items: center; background-color: #1e1e1e; padding: 8px 18px; border-radius: 25px; border: 1px solid #3a3a3a; gap: 12px; }}
+        .producer-badge {{ display: inline-flex; align-items: center; background-color: #1e1e1e; padding: 8px 18px; border-radius: 25px; border: 1px solid #3a3a3a; gap: 12px; transition: filter 0.3s ease, opacity 0.3s ease; }}
         .producer-badge img {{ width: 32px; height: 32px; object-fit: contain; filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.5)); }}
         .producer-badge span {{ font-size: 0.9rem; font-weight: 700; color: #ffffff; }}
 
@@ -359,6 +361,69 @@ def render_item_page(name, img_tag, price_display, time_display_html, producer_h
         .profit-positive .fin-val {{ color: #2ecc71; }}
         .profit-negative .fin-val {{ color: #e74c3c; }}
         .profit-neutral .fin-val {{ color: #b0b0b0; }}
+
+        /* Locking & Main Image Wrapper */
+        .item-img-wrapper {{
+            position: relative;
+            display: inline-block;
+            margin: 0 auto 15px auto;
+        }}
+        .item-img-wrapper .item-image {{
+            transition: filter 0.3s ease, opacity 0.3s ease;
+        }}
+        .item-img-wrapper .main-lock-badge {{
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(192, 57, 43, 0.9);
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 0.85rem;
+            padding: 6px 14px;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            pointer-events: none;
+            white-space: nowrap;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            z-index: 2;
+        }}
+
+        .item-img-wrapper.locked .item-image {{
+            filter: grayscale(100%) opacity(0.35);
+        }}
+        .item-img-wrapper.locked .main-lock-badge {{
+            display: block;
+        }}
+
+        /* Grid Items, Producer Badge & Dynamic Locking */
+        [data-unlock-level].locked {{
+            filter: grayscale(100%) opacity(0.4);
+            pointer-events: none;
+        }}
+
+        .grid-item {{
+            position: relative;
+            transition: filter 0.3s ease, opacity 0.3s ease;
+        }}
+        .grid-item .lock-badge {{
+            display: none;
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            background: rgba(0, 0, 0, 0.75);
+            color: #ff6b6b;
+            font-size: 0.65rem;
+            font-weight: bold;
+            padding: 2px 6px;
+            border-radius: 4px;
+            border: 1px solid rgba(255, 107, 107, 0.4);
+            z-index: 2;
+        }}
+        .grid-item.locked .lock-badge {{
+            display: block;
+        }}
     </style>
 </head>
 <body>
@@ -366,18 +431,21 @@ def render_item_page(name, img_tag, price_display, time_display_html, producer_h
     <div class="card">
         {img_tag}
         <h1>{name}</h1>
+
         <div style="display: flex; justify-content: center; align-items: center; gap: 12px; margin-bottom: 25px;">
             <div class="price" style="margin-bottom: 0;">💰 {price_display}</div>
             {time_display_html}
         </div>
 
-        <div style="margin-top: 25px;">
+        <div>
             {producer_html}
         </div>
 
         {profit_html}
 
-        <div class="section-title">Ingredients Required</div>
+        {slider_component}
+
+        <div class="section-title" style="margin-top: 20px;">Ingredients Required</div>
         <div class="grid">
             {ingredients_html}
         </div>

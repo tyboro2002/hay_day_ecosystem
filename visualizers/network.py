@@ -292,8 +292,18 @@ def generate_interactive_farm_graph(output_filename=f"{outp}/{outp_file}"):
 
 
 def generate_detail_page_item(name, item_obj, filename):
+    item_unlock_lvl = getattr(item_obj, 'unlock_level', 1)
+
     item_img_base64 = get_base64_asset(name, "items")
-    img_tag = f'<img class="item-image" src="{item_img_base64}" alt="{name}">' if item_img_base64 else ""
+    if item_img_base64:
+        img_tag = f"""
+        <div class="item-img-wrapper" id="mainMachineWrapper" data-unlock-level="{item_unlock_lvl}">
+            <span class="main-lock-badge">Requires Lvl {item_unlock_lvl}</span>
+            <img class="item-image" src="{item_img_base64}" alt="{name}">
+        </div>
+        """
+    else:
+        img_tag = ""
 
     sell_price = getattr(item_obj, 'sell_price', 'N/A')
     if sell_price is None:
@@ -306,17 +316,20 @@ def generate_detail_page_item(name, item_obj, filename):
 
     producer_name = None
     producer_folder = None
+    producer_unlock_lvl = 1
     class_type = type(item_obj).__name__
 
     if hasattr(item_obj, 'machine') and item_obj.machine:
         producer_name = item_obj.machine.name
         producer_folder = "machines"
+        producer_unlock_lvl = getattr(item_obj.machine, 'unlock_level', 1)
     else:
         for animal_name, animal_obj in LIVESTOCK.items():
             if hasattr(animal_obj, 'produces_item') and animal_obj.produces_item:
                 if animal_obj.produces_item.name.lower().strip() == name.lower().strip():
                     producer_name = animal_name
                     producer_folder = "animals"
+                    producer_unlock_lvl = getattr(animal_obj, 'unlock_level', 1)
                     break
 
     if not producer_name:
@@ -324,15 +337,19 @@ def generate_detail_page_item(name, item_obj, filename):
             field_obj = item_obj.planted_on
             producer_name = field_obj.name if hasattr(field_obj, 'name') else "Fields"
             producer_folder = "fields"
+            producer_unlock_lvl = getattr(field_obj, 'unlock_level', 1)
         elif class_type == "PlantableItem" and hasattr(item_obj, 'structure') and item_obj.structure:
             producer_name = item_obj.structure.name
             producer_folder = "plant_structures"
+            producer_unlock_lvl = getattr(item_obj.structure, 'unlock_level', 1)
         elif name in ["Silver Ore", "Gold Ore", "Platinum Ore", "Iron Ore", "Coal"]:
             producer_name = "Mine"
             producer_folder = "special_structures"
+            producer_unlock_lvl = 1
         elif name == "Fish Fillet":
             producer_name = "Fishing Lake"
             producer_folder = "special_structures"
+            producer_unlock_lvl = 1
 
     producer_html = ""
     if producer_name and producer_folder:
@@ -341,7 +358,7 @@ def generate_detail_page_item(name, item_obj, filename):
         producer_html = f"""
         <div class="producer-section">
             <div class="producer-label">Source / Producer</div>
-            <a class="producer-badge" href="{producer_url}" style="text-decoration: none; transition: transform 0.2s ease;">
+            <a class="producer-badge" href="{producer_url}" style="text-decoration: none; transition: transform 0.2s ease;" data-unlock-level="{producer_unlock_lvl}">
                 <img src="{producer_img}" alt="{producer_name}">
                 <span>{producer_name}</span>
             </a>
@@ -379,6 +396,7 @@ def generate_detail_page_item(name, item_obj, filename):
             ing_name = ing_item.name
             ing_img = get_base64_asset(ing_name, "items")
             ing_url = f"details_{ing_name.lower().replace(' ', '_')}.html"
+            ing_unlock_lvl = getattr(ing_item, 'unlock_level', 1)
             qty_str = f"x{qty:.1f}" if isinstance(qty, float) else f"x{qty}"
 
             ing_price = getattr(ing_item, 'sell_price', 'N/A')
@@ -394,7 +412,8 @@ def generate_detail_page_item(name, item_obj, filename):
             badge_style = 'style="background-color: #2ecc71; color: #ffffff;"' if is_feed else ""
 
             ingredients_html += f"""
-            <a class="grid-item" href="{ing_url}">
+            <a class="grid-item" href="{ing_url}" data-unlock-level="{ing_unlock_lvl}">
+                <span class="lock-badge">🔒 Lvl {ing_unlock_lvl}</span>
                 <div class="qty-badge" {badge_style}>{qty_str}</div>
                 <img src="{ing_img}" alt="{ing_name}">
                 <div class="name">{ing_name}</div>
@@ -467,16 +486,19 @@ def generate_detail_page_item(name, item_obj, filename):
         if hasattr(other_item, 'ingredients') and other_item.ingredients:
             for ing_item, qty in other_item.ingredients.items():
                 if ing_item.name.lower().strip() == name.lower().strip():
-                    used_in_list.append((other_name, qty))
+                    used_in_list.append((other_name, other_item, qty))
                     break
 
     if used_in_list:
-        for recipe_name, qty in used_in_list:
+        for recipe_name, recipe_obj, qty in used_in_list:
             recipe_img = get_base64_asset(recipe_name, "items")
             recipe_url = f"details_{recipe_name.lower().replace(' ', '_')}.html"
+            recipe_unlock_lvl = getattr(recipe_obj, 'unlock_level', 1)
             qty_str = f"x{qty:.1f}" if isinstance(qty, float) else f"x{qty}"
+
             used_in_html += f"""
-            <a class="grid-item" href="{recipe_url}">
+            <a class="grid-item" href="{recipe_url}" data-unlock-level="{recipe_unlock_lvl}">
+                <span class="lock-badge">🔒 Lvl {recipe_unlock_lvl}</span>
                 <div class="qty-badge">{qty_str}</div>
                 <img src="{recipe_img}" alt="{recipe_name}">
                 <div class="name">{recipe_name}</div>
@@ -492,7 +514,7 @@ def generate_detail_page_item(name, item_obj, filename):
         time_display_html=time_display_html, producer_html=producer_html,
         profit_html=profit_html, price_breakdown_html=price_breakdown_html,
         ingredients_html=ingredients_html, used_in_html=used_in_html,
-        back_target=outp_file
+        back_target=outp_file, unlock_schedule=item_unlock_lvl
     )
 
     os.makedirs(os.path.join(outp, "details"), exist_ok=True)
