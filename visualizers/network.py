@@ -256,13 +256,23 @@ def generate_interactive_farm_graph(output_filename=f"{outp}/{outp_file}"):
             edges.update(updateEdges);
 
             document.getElementById("graphNodeCount").innerText = "Visible Nodes: " + visibleCount;
+
+            if (window.HayDayLevelFilterPersistence) {{
+                window.HayDayLevelFilterPersistence.writeStoredLevel(selectedLevel);
+            }}
         }}
 
         // Initialize filtering once vis.js network is ready
         window.addEventListener("load", function() {{
             setTimeout(function() {{
                 let slider = document.getElementById("graphLevelRange");
-                if (slider) filterGraphByLevel(slider.value);
+                if (slider) {{
+                    const initialLevel = window.HayDayLevelFilterPersistence
+                        ? window.HayDayLevelFilterPersistence.readStoredLevel(parseInt(slider.value || "{CURRENT_LEVEL}", 10), parseInt(slider.max || "{MAX_LEVEL}", 10))
+                        : parseInt(slider.value || "{CURRENT_LEVEL}", 10);
+                    slider.value = String(initialLevel);
+                    filterGraphByLevel(slider.value);
+                }}
             }}, 300);
         }});
     </script>

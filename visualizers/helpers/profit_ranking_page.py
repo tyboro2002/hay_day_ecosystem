@@ -3,7 +3,7 @@ import os
 from calculators.profitability import analyze_value_added
 from game_data.game_data import DIAMOND_COST
 from visualizers.helpers.formatting import get_base64_asset
-from visualizers.helpers.templates import DISCLAIMER_FOOTER
+from visualizers.helpers.templates import DISCLAIMER_FOOTER, render_level_filter_persistence_script
 from game_data.game_data import MAX_LEVEL, CURRENT_LEVEL
 
 
@@ -271,6 +271,8 @@ def generate_profitability_ranking_page(outp, detail_dir):
             {DISCLAIMER_FOOTER.format(path_prefix="")}
         </div>
 
+        {render_level_filter_persistence_script()}
+
         <script>
             function switchTab(evt, tabId) {{
                 let panels = document.getElementsByClassName("content-panel");
@@ -304,11 +306,20 @@ def generate_profitability_ranking_page(outp, detail_dir):
                 // Divide visible count by 3 (since items appear in all 3 tabs)
                 let uniqueVisible = Math.floor(visibleCount / 3);
                 document.getElementById("unlockedCount").innerText = "Unlocked items: " + uniqueVisible;
+
+                if (window.HayDayLevelFilterPersistence) {{
+                    window.HayDayLevelFilterPersistence.writeStoredLevel(selectedLevel);
+                }}
             }}
 
             // Run initial filter on page load
             document.addEventListener("DOMContentLoaded", function() {{
-                filterByLevel(document.getElementById("levelRange").value);
+                const slider = document.getElementById("levelRange");
+                const initialLevel = window.HayDayLevelFilterPersistence
+                    ? window.HayDayLevelFilterPersistence.readStoredLevel(parseInt(slider.value || "{CURRENT_LEVEL}", 10), parseInt(slider.max || "{MAX_LEVEL}", 10))
+                    : parseInt(slider.value || "{CURRENT_LEVEL}", 10);
+                slider.value = String(initialLevel);
+                filterByLevel(slider.value);
             }});
         </script>
     </body>

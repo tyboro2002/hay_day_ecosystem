@@ -6097,6 +6097,61 @@
 
         </div>
 
+        
+    <script type="text/javascript">
+        window.HayDayLevelFilterPersistence = window.HayDayLevelFilterPersistence || (function() {
+            const storageKey = "hayday_shared_level_filter_v1";
+
+            function readWindowNameValue() {
+                const prefix = storageKey + '=';
+                const parts = String(window.name || '').split('').filter(Boolean);
+                const match = parts.find(part => part.startsWith(prefix));
+                return match ? match.slice(prefix.length) : null;
+            }
+
+            function writeWindowNameValue(level) {
+                const prefix = storageKey + '=';
+                const parts = String(window.name || '').split('').filter(part => !part.startsWith(prefix));
+                parts.push(prefix + String(level));
+                window.name = parts.join('');
+            }
+
+            function readStoredLevel(defaultLevel, maxLevel) {
+                try {
+                    const raw = localStorage.getItem(storageKey);
+                    const fallbackRaw = raw !== null ? raw : readWindowNameValue();
+                    if (fallbackRaw === null) return defaultLevel;
+
+                    const parsed = parseInt(fallbackRaw, 10);
+                    if (Number.isNaN(parsed)) return defaultLevel;
+                    return typeof maxLevel === 'number' ? Math.min(Math.max(parsed, 1), maxLevel) : Math.max(parsed, 1);
+                } catch (error) {
+                    const fallbackRaw = readWindowNameValue();
+                    if (fallbackRaw === null) return defaultLevel;
+
+                    const parsed = parseInt(fallbackRaw, 10);
+                    if (Number.isNaN(parsed)) return defaultLevel;
+                    return typeof maxLevel === 'number' ? Math.min(Math.max(parsed, 1), maxLevel) : Math.max(parsed, 1);
+                }
+            }
+
+            function writeStoredLevel(level) {
+                try {
+                    localStorage.setItem(storageKey, String(level));
+                } catch (error) {
+                    writeWindowNameValue(level);
+                    console.warn('Could not persist level filter:', error);
+                    return;
+                }
+
+                writeWindowNameValue(level);
+            }
+
+            return { readStoredLevel, writeStoredLevel };
+        })();
+    </script>
+    
+
         <script>
             function switchTab(evt, tabId) {
                 let panels = document.getElementsByClassName("content-panel");
@@ -6130,11 +6185,20 @@
                 // Divide visible count by 3 (since items appear in all 3 tabs)
                 let uniqueVisible = Math.floor(visibleCount / 3);
                 document.getElementById("unlockedCount").innerText = "Unlocked items: " + uniqueVisible;
+
+                if (window.HayDayLevelFilterPersistence) {
+                    window.HayDayLevelFilterPersistence.writeStoredLevel(selectedLevel);
+                }
             }
 
             // Run initial filter on page load
             document.addEventListener("DOMContentLoaded", function() {
-                filterByLevel(document.getElementById("levelRange").value);
+                const slider = document.getElementById("levelRange");
+                const initialLevel = window.HayDayLevelFilterPersistence
+                    ? window.HayDayLevelFilterPersistence.readStoredLevel(parseInt(slider.value || "51", 10), parseInt(slider.max || "51", 10))
+                    : parseInt(slider.value || "51", 10);
+                slider.value = String(initialLevel);
+                filterByLevel(slider.value);
             });
         </script>
     </body>

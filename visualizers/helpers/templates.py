@@ -188,6 +188,65 @@ BASE_CSS = """
     }
 """
 
+LEVEL_FILTER_STORAGE_KEY = "hayday_shared_level_filter_v1"
+
+
+def render_level_filter_persistence_script(storage_key=LEVEL_FILTER_STORAGE_KEY):
+    return f"""
+    <script type="text/javascript">
+        window.HayDayLevelFilterPersistence = window.HayDayLevelFilterPersistence || (function() {{
+            const storageKey = "{storage_key}";
+
+            function readWindowNameValue() {{
+                const prefix = storageKey + '=';
+                const parts = String(window.name || '').split('\u001f').filter(Boolean);
+                const match = parts.find(part => part.startsWith(prefix));
+                return match ? match.slice(prefix.length) : null;
+            }}
+
+            function writeWindowNameValue(level) {{
+                const prefix = storageKey + '=';
+                const parts = String(window.name || '').split('\u001f').filter(part => !part.startsWith(prefix));
+                parts.push(prefix + String(level));
+                window.name = parts.join('\u001f');
+            }}
+
+            function readStoredLevel(defaultLevel, maxLevel) {{
+                try {{
+                    const raw = localStorage.getItem(storageKey);
+                    const fallbackRaw = raw !== null ? raw : readWindowNameValue();
+                    if (fallbackRaw === null) return defaultLevel;
+
+                    const parsed = parseInt(fallbackRaw, 10);
+                    if (Number.isNaN(parsed)) return defaultLevel;
+                    return typeof maxLevel === 'number' ? Math.min(Math.max(parsed, 1), maxLevel) : Math.max(parsed, 1);
+                }} catch (error) {{
+                    const fallbackRaw = readWindowNameValue();
+                    if (fallbackRaw === null) return defaultLevel;
+
+                    const parsed = parseInt(fallbackRaw, 10);
+                    if (Number.isNaN(parsed)) return defaultLevel;
+                    return typeof maxLevel === 'number' ? Math.min(Math.max(parsed, 1), maxLevel) : Math.max(parsed, 1);
+                }}
+            }}
+
+            function writeStoredLevel(level) {{
+                try {{
+                    localStorage.setItem(storageKey, String(level));
+                }} catch (error) {{
+                    writeWindowNameValue(level);
+                    console.warn('Could not persist level filter:', error);
+                    return;
+                }}
+
+                writeWindowNameValue(level);
+            }}
+
+            return {{ readStoredLevel, writeStoredLevel }};
+        }})();
+    </script>
+    """
+
 def generate_unlock_schedule_component(full_schedule, name, asset_folder="machines"):
     """
     Generates the HTML for an unlock schedule section given a schedule list.
@@ -264,7 +323,10 @@ def render_level_slider_script(current_level, unlock_schedule=None, max_level=MA
     # Hide status text element if no schedule was originally provided or if it's a single value
     show_status_badge = bool(unlock_schedule) and not (len(schedule_list) == 1 and schedule_list[0][1] == 1)
 
+    persistence_script = render_level_filter_persistence_script()
+
     return f"""
+    {persistence_script}
     <div class="level-control">
         <div class="level-header">
             <span class="level-title">Level Filter</span>
@@ -281,6 +343,8 @@ def render_level_slider_script(current_level, unlock_schedule=None, max_level=MA
             const countDisplay = document.getElementById('machineCountDisplay');
             const unlockSchedule = {schedule_json};
             const machineUnlockLevel = {machine_unlock_level};
+            const defaultLevel = {current_level};
+            const maxLevel = {max_level};
 
             function updateLevel(currentLevel) {{
                 display.textContent = 'Level ' + currentLevel;
@@ -327,8 +391,19 @@ def render_level_slider_script(current_level, unlock_schedule=None, max_level=MA
                 }});
             }}
 
-            slider.addEventListener('input', (e) => updateLevel(parseInt(e.target.value, 10)));
-            updateLevel({current_level});
+            const initialLevel = window.HayDayLevelFilterPersistence
+                ? window.HayDayLevelFilterPersistence.readStoredLevel(defaultLevel, maxLevel)
+                : defaultLevel;
+
+            slider.value = String(initialLevel);
+            slider.addEventListener('input', (e) => {{
+                const nextLevel = parseInt(e.target.value, 10);
+                updateLevel(nextLevel);
+                if (window.HayDayLevelFilterPersistence) {{
+                    window.HayDayLevelFilterPersistence.writeStoredLevel(nextLevel);
+                }}
+            }});
+            updateLevel(initialLevel);
         }})();
     </script>
     """

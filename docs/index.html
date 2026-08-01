@@ -414,13 +414,23 @@
             edges.update(updateEdges);
 
             document.getElementById("graphNodeCount").innerText = "Visible Nodes: " + visibleCount;
+
+            if (window.HayDayLevelFilterPersistence) {
+                window.HayDayLevelFilterPersistence.writeStoredLevel(selectedLevel);
+            }
         }
 
         // Initialize filtering once vis.js network is ready
         window.addEventListener("load", function() {
             setTimeout(function() {
                 let slider = document.getElementById("graphLevelRange");
-                if (slider) filterGraphByLevel(slider.value);
+                if (slider) {
+                    const initialLevel = window.HayDayLevelFilterPersistence
+                        ? window.HayDayLevelFilterPersistence.readStoredLevel(parseInt(slider.value || "51", 10), parseInt(slider.max || "51", 10))
+                        : parseInt(slider.value || "51", 10);
+                    slider.value = String(initialLevel);
+                    filterGraphByLevel(slider.value);
+                }
             }, 300);
         });
     </script>

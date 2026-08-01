@@ -261,7 +261,7 @@ def _build_countdown_html(round_seconds=120, title="Hay Day Dirt Newspaper Refre
     <main class="wrap">
         <section class="card">
             <div class="eyebrow"><span class="pulse"></span> Live refresh countdown</div>
-            <h1>Dirt Newspaper</h1>
+            <h1>Dirt Newspaper (WIP)</h1>
             <p class="subtitle">Counts down to the next 2-minute refresh cycle.</p>
 
             <div class="countdown" aria-label="Countdown to next refresh">

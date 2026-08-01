@@ -8,7 +8,7 @@ from game_data.game_data import DIAMOND_COST, MAX_LEVEL, CURRENT_LEVEL
 from game_data.machines_data import MACHINES
 from game_data.plants_data import PLANTS
 from visualizers.helpers.formatting import get_base64_asset
-from visualizers.helpers.templates import DISCLAIMER_FOOTER
+from visualizers.helpers.templates import DISCLAIMER_FOOTER, render_level_filter_persistence_script
 
 
 def load_all_assets(base, folders):
@@ -318,6 +318,46 @@ def generate_overnight_page(outp, detail_dir, current_level=CURRENT_LEVEL, max_l
             .level-slider {{ flex-grow: 1; accent-color: #e67e22; cursor: pointer; height: 6px; }}
             .level-badge {{ background-color: #e67e22; color: #fff; padding: 4px 12px; border-radius: 12px; font-weight: bold; font-size: 0.9rem; min-width: 70px; text-align: center; }}
 
+            .machine-settings-bar {{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                justify-content: center;
+                align-items: center;
+                margin: 14px 0 0;
+            }}
+            .machine-settings-btn {{
+                background: #2c3e50;
+                color: #ecf0f1;
+                border: 1px solid #44586f;
+                border-radius: 999px;
+                padding: 9px 16px;
+                font-weight: 700;
+                cursor: pointer;
+                transition: transform 0.1s ease, background-color 0.15s ease, border-color 0.15s ease;
+            }}
+            .machine-settings-btn:hover {{
+                background: #34495e;
+                border-color: #5d7690;
+                transform: translateY(-1px);
+            }}
+            .machine-settings-btn.primary {{
+                background: linear-gradient(135deg, #e67e22, #f39c12);
+                color: #1a1a1a;
+                border-color: #e67e22;
+            }}
+            .machine-settings-btn.primary:hover {{
+                background: linear-gradient(135deg, #f39c12, #f5b041);
+                border-color: #f39c12;
+            }}
+            .machine-settings-note {{
+                width: 100%;
+                text-align: center;
+                color: #888;
+                font-size: 0.82rem;
+                margin-top: 4px;
+            }}
+
             .diamond-notice {{ 
                 max-width: 1100px; 
                 margin: 0 auto 25px auto; 
@@ -381,6 +421,11 @@ def generate_overnight_page(outp, detail_dir, current_level=CURRENT_LEVEL, max_l
                 margin-top: 35px;
                 border-top: 2px dashed #444;
                 padding-top: 25px;
+            }}
+            .machine-settings-divider {{
+                margin-top: 18px;
+                margin-bottom: 16px;
+                border-top: 2px dashed #444;
             }}
             .machine-grid {{
                 display: flex;
@@ -562,6 +607,15 @@ def generate_overnight_page(outp, detail_dir, current_level=CURRENT_LEVEL, max_l
                 </div>
 
                 <div class="machine-selector-section">
+                    <div class="machine-settings-bar">
+                        <button type="button" class="machine-settings-btn primary" onclick="exportMachineSettings()">Export Machine State</button>
+                        <button type="button" class="machine-settings-btn" onclick="importMachineSettings()">Import Machine State</button>
+                        <button type="button" class="machine-settings-btn" onclick="clearMachineSettings()">Clear Local State</button>
+                        <div class="machine-settings-note">Auto-saved locally in your browser. Export creates a portable JSON file you can import on another device.</div>
+                    </div>
+
+                    <div class="machine-settings-divider"></div>
+
                     <h3>Configure Active Machine Slots & Mastery Stars (Click Body to Toggle Active State)</h3>
                     <div id="machines-container" class="machine-grid"></div>
                 </div>
@@ -570,16 +624,240 @@ def generate_overnight_page(outp, detail_dir, current_level=CURRENT_LEVEL, max_l
             {DISCLAIMER_FOOTER.format(path_prefix="")}
         </div>
 
+        {render_level_filter_persistence_script()}
+
         <script>
             const ASSET_BANK = {asset_bank_json};
             const MACHINE_CONFIGS = {machine_config_json};
             const SILO_ITEMS = new Set({crops_set}.concat({plants_set}));
             const DETAIL_DIR = "{detail_dir}";
             const machineInstances = [];
+            const MACHINE_SETTINGS_KEY = 'hayday_overnight_machine_settings_v1';
+            let skipNextAutoSave = false;
+            let currentTabId = 'tab-1h';
+
+            function getSavedMachineSettingsRaw() {{
+                try {{
+                    const value = localStorage.getItem(MACHINE_SETTINGS_KEY);
+                    if (value !== null) return value;
+                }} catch (error) {{
+                    console.warn('localStorage unavailable, falling back to window.name:', error);
+                }}
+
+                const prefix = MACHINE_SETTINGS_KEY + '=';
+                const parts = String(window.name || '').split('\u001f').filter(Boolean);
+                const match = parts.find(part => part.startsWith(prefix));
+                return match ? match.slice(prefix.length) : null;
+            }}
+
+            function setSavedMachineSettingsRaw(rawValue) {{
+                try {{
+                    localStorage.setItem(MACHINE_SETTINGS_KEY, rawValue);
+                    return true;
+                }} catch (error) {{
+                    console.warn('localStorage unavailable, falling back to window.name:', error);
+                }}
+
+                const prefix = MACHINE_SETTINGS_KEY + '=';
+                const parts = String(window.name || '').split('\u001f').filter(part => !part.startsWith(prefix));
+                parts.push(prefix + rawValue);
+                window.name = parts.join('\u001f');
+                return false;
+            }}
+
+            function clearSavedMachineSettingsRaw() {{
+                try {{
+                    localStorage.removeItem(MACHINE_SETTINGS_KEY);
+                }} catch (error) {{
+                    console.warn('localStorage unavailable, clearing window.name fallback:', error);
+                }}
+
+                const prefix = MACHINE_SETTINGS_KEY + '=';
+                const parts = String(window.name || '').split('\u001f').filter(part => part && !part.startsWith(prefix));
+                window.name = parts.join('\u001f');
+            }}
 
             function logMachineStateChange(action, machineState) {{
                 console.log(`Current Active Machines List:`, getSelectedMachinesData());
                 updateStrategyVisibility();
+                saveMachineSettings(true);
+            }}
+
+            function serializeMachineSettings() {{
+                return machineInstances.map(m => ({{
+                    id: m.id,
+                    selected: m.selected,
+                    slots: m.slots,
+                    mastery: m.mastery
+                }}));
+            }}
+
+            function getActiveTabId() {{
+                const activeTab = document.querySelector('.tab-link.active');
+                if (!activeTab) return currentTabId;
+
+                const tabOnclick = activeTab.getAttribute('onclick') || '';
+                const match = tabOnclick.match(/switchTab\\([^,]+,\\s*'([^']+)'\\)/);
+                return match ? match[1] : currentTabId;
+            }}
+
+            function serializePortableMachineState() {{
+                const levelSlider = document.getElementById('overnightLevelRange');
+
+                return {{
+                    version: 1,
+                    activeTabId: getActiveTabId(),
+                    machines: serializeMachineSettings(),
+                    selectedLevel: levelSlider ? parseInt(levelSlider.value || '1', 10) : 1,
+                }};
+            }}
+
+            function applyTab(tabId) {{
+                if (!tabId) return;
+
+                currentTabId = tabId;
+
+                document.querySelectorAll('.content-panel').forEach(panel => {{
+                    panel.classList.toggle('active', panel.id === tabId);
+                }});
+
+                document.querySelectorAll('.tab-link').forEach(tab => {{
+                    const tabOnclick = tab.getAttribute('onclick') || '';
+                    tab.classList.toggle('active', tabOnclick.includes(`'${{tabId}}'`));
+                }});
+            }}
+
+            function applyPortableMachineState(portableState, options = {{ applyLevel: false }}) {{
+                if (!portableState) return false;
+
+                const machineList = Array.isArray(portableState) ? portableState : (portableState.machines || portableState.machineSettings || portableState.settings || []);
+                const appliedAny = applyMachineSettings(machineList);
+
+                if (options.applyLevel && portableState.selectedLevel !== undefined) {{
+                    const levelSlider = document.getElementById('overnightLevelRange');
+                    if (levelSlider) {{
+                        levelSlider.value = String(portableState.selectedLevel);
+                        switchLevel(levelSlider.value);
+                    }}
+                }}
+
+                if (portableState.activeTabId) {{
+                    applyTab(portableState.activeTabId);
+                }}
+
+                updateStrategyVisibility();
+                return appliedAny;
+            }}
+
+            function exportMachineSettings() {{
+                try {{
+                    const data = JSON.stringify(serializePortableMachineState(), null, 2);
+                    const blob = new Blob([data], {{ type: 'application/json' }});
+                    const url = URL.createObjectURL(blob);
+
+                    const link = document.createElement('a');
+                    link.href = url;
+                    link.download = 'hayday_overnight_machine_state.json';
+                    document.body.appendChild(link);
+                    link.click();
+                    link.remove();
+                    URL.revokeObjectURL(url);
+                }} catch (error) {{
+                    console.warn('Could not export machine state:', error);
+                }}
+            }}
+
+            function importMachineSettings() {{
+                const fileInput = document.createElement('input');
+                fileInput.type = 'file';
+                fileInput.accept = '.json,application/json';
+
+                fileInput.addEventListener('change', () => {{
+                    const file = fileInput.files && fileInput.files[0];
+                    if (!file) return;
+
+                    const reader = new FileReader();
+                    reader.onload = () => {{
+                        try {{
+                            const parsed = JSON.parse(String(reader.result || '{{}}'));
+                            applyPortableMachineState(parsed, {{ applyLevel: true }});
+                            saveMachineSettings(true);
+                            console.log('Imported machine state.');
+                        }} catch (error) {{
+                            console.warn('Could not import machine state:', error);
+                        }}
+                    }};
+                    reader.readAsText(file);
+                }});
+
+                fileInput.click();
+            }}
+
+            function saveMachineSettings(silent = false) {{
+                try {{
+                    const machineState = {{
+                        version: 1,
+                        activeTabId: getActiveTabId(),
+                        machines: serializeMachineSettings(),
+                    }};
+                    setSavedMachineSettingsRaw(JSON.stringify(machineState));
+                    if (!silent) {{
+                        console.log('Saved machine settings.');
+                    }}
+                }} catch (error) {{
+                    console.warn('Could not save machine settings:', error);
+                }}
+            }}
+
+            function applyMachineSettings(savedSettings) {{
+                if (!Array.isArray(savedSettings) || savedSettings.length === 0) return false;
+
+                const settingsMap = new Map(savedSettings.map(entry => [entry.id, entry]));
+                let appliedAny = false;
+
+                machineInstances.forEach(state => {{
+                    const saved = settingsMap.get(state.id);
+                    if (!saved) return;
+
+                    state.selected = !!saved.selected;
+                    state.slots = Math.min(Math.max(parseInt(saved.slots ?? state.slots, 10), state.minSlots), state.maxSlots);
+                    state.mastery = Math.max(0, Math.min(3, parseInt(saved.mastery ?? state.mastery, 10)));
+
+                    state.card.classList.toggle('selected', state.selected);
+                    state.starsContainer.classList.toggle('disabled-controls', !state.selected);
+                    state.slotsGrid.classList.toggle('disabled-controls', !state.selected);
+                    state.renderStars();
+                    state.renderSlots();
+                    appliedAny = true;
+                }});
+
+                return appliedAny;
+            }}
+
+            function loadMachineSettings() {{
+                try {{
+                    const raw = getSavedMachineSettingsRaw();
+                    if (!raw) return false;
+
+                    const applied = applyPortableMachineState(JSON.parse(raw), {{ applyLevel: false }});
+                    updateStrategyVisibility();
+                    if (applied) console.log('Loaded machine settings.');
+                    return applied;
+                }} catch (error) {{
+                    console.warn('Could not load machine settings:', error);
+                    return false;
+                }}
+            }}
+
+            function clearMachineSettings() {{
+                skipNextAutoSave = true;
+                try {{
+                    clearSavedMachineSettingsRaw();
+                }} catch (error) {{
+                    console.warn('Could not clear machine settings:', error);
+                }}
+
+                window.location.reload();
             }}
 
             function hydrateAssets(container = document) {{
@@ -838,6 +1116,11 @@ def generate_overnight_page(outp, detail_dir, current_level=CURRENT_LEVEL, max_l
 
                 renderStars();
                 renderSlots();
+                state.card = card;
+                state.starsContainer = starsContainer;
+                state.slotsGrid = slotsGrid;
+                state.renderStars = renderStars;
+                state.renderSlots = renderSlots;
                 machineInstances.push(state);
             }}
 
@@ -851,14 +1134,7 @@ def generate_overnight_page(outp, detail_dir, current_level=CURRENT_LEVEL, max_l
             }}
 
             function switchTab(evt, tabId) {{
-                let panels = document.getElementsByClassName("content-panel");
-                for (let p of panels) {{ p.classList.remove("active"); }}
-
-                let tabs = document.getElementsByClassName("tab-link");
-                for (let t of tabs) {{ t.classList.remove("active"); }}
-
-                document.getElementById(tabId).classList.add("active");
-                evt.currentTarget.classList.add("active");
+                applyTab(tabId);
                 updateStrategyVisibility();
             }}
 
@@ -885,14 +1161,29 @@ def generate_overnight_page(outp, detail_dir, current_level=CURRENT_LEVEL, max_l
                         card.style.display = 'flex';
                     }}
                 }});
+                if (window.HayDayLevelFilterPersistence) {{
+                    window.HayDayLevelFilterPersistence.writeStoredLevel(numLevel);
+                }}
                 updateStrategyVisibility();
             }}
 
             document.addEventListener("DOMContentLoaded", function() {{
                 initMachineCards();
                 hydrateAssets();
+                loadMachineSettings();
                 let slider = document.getElementById("overnightLevelRange");
-                if (slider) switchLevel(slider.value);
+                if (slider) {{
+                    const initialLevel = window.HayDayLevelFilterPersistence
+                        ? window.HayDayLevelFilterPersistence.readStoredLevel(parseInt(slider.value || "1", 10), parseInt(slider.max || "1", 10))
+                        : parseInt(slider.value || "1", 10);
+                    slider.value = String(initialLevel);
+                    switchLevel(slider.value);
+                }}
+            }});
+
+            window.addEventListener('beforeunload', () => {{
+                if (skipNextAutoSave) return;
+                saveMachineSettings(true);
             }});
         </script>
     </body>
