@@ -2,7 +2,7 @@ import os
 import json
 from collections import defaultdict
 
-from calculators.overnight_strategy import get_best_overnight_strategy, TOTAL_FIELDS
+from calculators.overnight_strategy import calculate_overnight_strategy, TOTAL_FIELDS
 from game_data.crops_data import CROPS
 from game_data.game_data import DIAMOND_COST, MAX_LEVEL, CURRENT_LEVEL
 from game_data.machines_data import MACHINES
@@ -49,18 +49,9 @@ def get_asset_ref(asset_name, css_class="", alt_text=""):
 
 
 def get_unlocked_machine_count_at_level(machine_obj, player_level):
-    levels = getattr(machine_obj, 'unlock_schedule', None)
-    if levels and isinstance(levels, list):
-        count = 0
-        for entry in levels:
-            if isinstance(entry, (tuple, list)) and len(entry) >= 2:
-                lvl, new_unlocks = entry[0], entry[1]
-                if player_level >= lvl:
-                    count += new_unlocks
-        return count
-
-    base_unlock = getattr(machine_obj, 'unlock_level', 1)
-    return 1 if player_level >= base_unlock else 0
+    if hasattr(machine_obj, 'max_allowed_at_level'):
+        return machine_obj.max_allowed_at_level(player_level)
+    return 1 if getattr(machine_obj, 'unlock_level', 1) <= player_level else 0
 
 
 def render_single_level_panel(plan, global_profit, detail_dir, player_level=1):
@@ -115,40 +106,44 @@ def render_single_level_panel(plan, global_profit, detail_dir, player_level=1):
             machine_img_html = get_asset_ref(source_name, css_class="inline-machine-img", alt_text=source_name)
             machine_clean_filename = f"{detail_dir}/details_{source_name.lower().replace(' ', '_').replace('-', '_')}.html"
 
-            by_slots_data = data.get('by_slots', [])
-            slots_payload = {}
+            by_mastery_data = data.get('by_mastery', {})
+            mastery_payload = {}
 
-            for s_count, slot_eval in enumerate(by_slots_data):
-                if not slot_eval:
-                    continue
+            for star_key, by_slots_data in by_mastery_data.items():
+                slots_payload = {}
+                if isinstance(by_slots_data, list):
+                    for s_count, slot_eval in enumerate(by_slots_data):
+                        if not slot_eval:
+                            continue
 
-                combo_html_parts = []
-                single_machine_ingredients = {}
+                        combo_html_parts = []
+                        single_machine_ingredients = {}
 
-                for item_obj, count in slot_eval['combination'].items():
-                    clean_filename = f"{detail_dir}/details_{item_obj.name.lower().replace(' ', '_').replace('-', '_')}.html"
-                    img_html = get_asset_ref(item_obj.name, css_class="inline-item-img", alt_text=item_obj.name)
-                    combo_html_parts.append(
-                        f'<a href="{clean_filename}" class="item-link queue-pill">'
-                        f'{img_html} {count}x {item_obj.name}</a>'
-                    )
+                        for item_obj, count in slot_eval['combination'].items():
+                            clean_filename = f"{detail_dir}/details_{item_obj.name.lower().replace(' ', '_').replace('-', '_')}.html"
+                            img_html = get_asset_ref(item_obj.name, css_class="inline-item-img", alt_text=item_obj.name)
+                            combo_html_parts.append(
+                                f'<a href="{clean_filename}" class="item-link queue-pill">'
+                                f'{img_html} {count}x {item_obj.name}</a>'
+                            )
 
-                    ingredients_dict = getattr(item_obj, 'ingredients', {})
-                    if isinstance(ingredients_dict, dict):
-                        for ing_obj, qty in ingredients_dict.items():
-                            qty_needed = qty * count
-                            single_machine_ingredients[ing_obj.name] = single_machine_ingredients.get(ing_obj.name, 0) + qty_needed
+                            ingredients_dict = getattr(item_obj, 'ingredients', {})
+                            if isinstance(ingredients_dict, dict):
+                                for ing_obj, qty in ingredients_dict.items():
+                                    qty_needed = qty * count
+                                    single_machine_ingredients[ing_obj.name] = single_machine_ingredients.get(ing_obj.name, 0) + qty_needed
 
-                slots_payload[s_count] = {
-                    "profit": slot_eval['total_profit'],
-                    "html": " ".join(combo_html_parts),
-                    "ingredients": single_machine_ingredients
-                }
+                        slots_payload[s_count] = {
+                            "profit": slot_eval['total_profit'],
+                            "html": " ".join(combo_html_parts),
+                            "ingredients": single_machine_ingredients
+                        }
+                mastery_payload[star_key] = slots_payload
 
             unlock_schedule = getattr(m_obj, 'unlock_schedule', None)
             total_possible = sum(e[1] for e in unlock_schedule) if (unlock_schedule and isinstance(unlock_schedule, list)) else 1
 
-            slots_json_attr = json.dumps(slots_payload).replace("'", "&apos;")
+            mastery_json_attr = json.dumps(mastery_payload).replace("'", "&apos;")
 
             for idx in range(1, unlocked_count + 1):
                 instance_label = f"{source_name} #{idx}" if total_possible > 1 else source_name
@@ -156,7 +151,7 @@ def render_single_level_panel(plan, global_profit, detail_dir, player_level=1):
                 instance_id = f"{base_asset_key}_{idx}"
 
                 machine_rows_html += f"""
-                    <tr data-machine-id="{instance_id}" data-machine="{instance_label}" data-slots-map='{slots_json_attr}'>
+                    <tr data-machine-id="{instance_id}" data-machine="{instance_label}" data-mastery-map='{mastery_json_attr}'>
                         <td class="source-cell">
                             <a href="{machine_clean_filename}" class="machine-label-wrapper item-link">
                                 {machine_img_html}
@@ -226,11 +221,14 @@ def render_single_level_panel(plan, global_profit, detail_dir, player_level=1):
 
 
 def build_duration_html(sleep_duration_mins, detail_dir, max_level=MAX_LEVEL):
-    level_strategies = get_best_overnight_strategy(sleep_duration_mins, max_level=max_level)
+    level_strategies = calculate_overnight_strategy(sleep_duration_mins, max_level=max_level)
 
     html_blocks = []
-    for idx, (plan, global_profit) in enumerate(level_strategies):
-        lvl = idx + 1
+    for lvl in range(1, max_level + 1):
+        lvl_data = level_strategies.get(lvl, {})
+        plan = lvl_data.get("strategy", {})
+        global_profit = lvl_data.get("total_profit", 0)
+
         panel_html = render_single_level_panel(plan, global_profit, detail_dir, player_level=lvl)
         html_blocks.append(f'<div class="level-panel" data-levels="{lvl}" style="display: none;">{panel_html}</div>')
 
@@ -259,6 +257,7 @@ def generate_overnight_page(outp, detail_dir, current_level=CURRENT_LEVEL, max_l
 
         max_allowed = getattr(m_obj, 'max_allowed_slots', None) or 9
         current_slots = getattr(m_obj, 'max_slots', None) or min_allowed
+        current_mastery = getattr(m_obj, 'mastery_level', 0)
 
         if levels and isinstance(levels, list):
             current_total_owned = 0
@@ -277,6 +276,7 @@ def generate_overnight_page(outp, detail_dir, current_level=CURRENT_LEVEL, max_l
                             "minSlots": min_allowed,
                             "maxSlots": max_allowed,
                             "currentSlots": current_slots,
+                            "currentMastery": current_mastery,
                             "initialSelected": current_total_owned <= amount_owned
                         })
 
@@ -394,7 +394,7 @@ def generate_overnight_page(outp, detail_dir, current_level=CURRENT_LEVEL, max_l
                 background-color: #252525;
                 border-radius: 10px;
                 padding: 14px;
-                width: 200px;
+                width: 210px;
                 text-align: center;
                 box-shadow: 0 4px 6px rgba(0,0,0,0.3);
                 user-select: none;
@@ -427,7 +427,30 @@ def generate_overnight_page(outp, detail_dir, current_level=CURRENT_LEVEL, max_l
                 width: 58px;
                 height: 58px;
                 object-fit: contain;
-                margin-bottom: 12px;
+                margin-bottom: 8px;
+            }}
+
+            .mastery-stars-container {{
+                display: flex;
+                gap: 6px;
+                margin-bottom: 10px;
+                justify-content: center;
+                min-height: 28px;
+                align-items: center;
+            }}
+            .star-btn {{
+                font-size: 22px;
+                color: #555;
+                cursor: pointer;
+                line-height: 1;
+                transition: color 0.15s, transform 0.1s;
+            }}
+            .star-btn.active {{
+                color: #f1c40f;
+                text-shadow: 0 0 6px rgba(241, 196, 15, 0.6);
+            }}
+            .star-btn:hover {{
+                transform: scale(1.25);
             }}
 
             .slots-grid {{
@@ -539,7 +562,7 @@ def generate_overnight_page(outp, detail_dir, current_level=CURRENT_LEVEL, max_l
                 </div>
 
                 <div class="machine-selector-section">
-                    <h3>Configure Active Machine Slots (Click Card Body to Toggle Active State)</h3>
+                    <h3>Configure Active Machine Slots & Mastery Stars (Click Body to Toggle Active State)</h3>
                     <div id="machines-container" class="machine-grid"></div>
                 </div>
             </div>
@@ -589,7 +612,7 @@ def generate_overnight_page(outp, detail_dir, current_level=CURRENT_LEVEL, max_l
                 const coinImgHtml = `<img class="coin-icon" src="${{coinSrc}}" alt="coins">`;
 
                 document.querySelectorAll('.level-panel').forEach(panel => {{
-                    if (panel.style.display === 'none') return; // Skip updating hidden panels for speed
+                    if (panel.style.display === 'none') return;
 
                     let panelTotalProfit = 0;
                     const dynamicIngredients = {{}};
@@ -612,7 +635,9 @@ def generate_overnight_page(outp, detail_dir, current_level=CURRENT_LEVEL, max_l
                             if (mState.selected) {{
                                 row.style.display = '';
 
-                                const slotsMap = JSON.parse(row.getAttribute('data-slots-map') || '{{}}');
+                                const masteryMap = JSON.parse(row.getAttribute('data-mastery-map') || '{{}}');
+                                const starKey = mState.mastery === 1 ? "1_star" : `${{mState.mastery}}_stars`;
+                                const slotsMap = masteryMap[starKey] || {{}};
 
                                 let slotData = null;
                                 for (let s = mState.slots; s >= 1; s--) {{
@@ -696,14 +721,18 @@ def generate_overnight_page(outp, detail_dir, current_level=CURRENT_LEVEL, max_l
                 const container = document.getElementById("machines-container");
                 if (!container) return;
 
+                const isFirstInstance = config.id.endsWith('_1');
+
                 const state = {{
                     id: config.id,
+                    assetKey: config.assetKey,
                     name: config.name,
                     minLevel: config.minLevel,
                     selected: !!config.initialSelected,
                     slots: Math.min(Math.max(config.currentSlots, config.minSlots), config.maxSlots),
                     minSlots: config.minSlots,
-                    maxSlots: config.maxSlots
+                    maxSlots: config.maxSlots,
+                    mastery: config.currentMastery || 0
                 }};
 
                 const card = document.createElement('div');
@@ -717,11 +746,41 @@ def generate_overnight_page(outp, detail_dir, current_level=CURRENT_LEVEL, max_l
                     <h4>${{config.name}}</h4>
                     <div class="lvl-tag">Unlocked Level ${{config.minLevel}}</div>
                     <img src="${{imgSrc}}" class="card-img" alt="${{config.name}}">
+                    <div class="mastery-stars-container ${{state.selected ? '' : 'disabled-controls'}}"></div>
                     <div class="slots-grid ${{state.selected ? '' : 'disabled-controls'}}"></div>
                 `;
 
                 container.appendChild(card);
+                const starsContainer = card.querySelector('.mastery-stars-container');
                 const slotsGrid = card.querySelector('.slots-grid');
+
+                function renderStars() {{
+                    starsContainer.innerHTML = '';
+                    if (!isFirstInstance) return; // Only render star controls on the 1st machine instance
+
+                    for (let star = 1; star <= 3; star++) {{
+                        const starSpan = document.createElement('span');
+                        starSpan.className = `star-btn ${{star <= state.mastery ? 'active' : ''}}`;
+                        starSpan.innerHTML = '★';
+                        starSpan.title = `Mastery Star ${{star}}`;
+
+                        starSpan.addEventListener('click', (e) => {{
+                            e.stopPropagation();
+                            const newMastery = (state.mastery === star) ? star - 1 : star;
+
+                            // Propagate the star level to all matching machines (e.g. Smelters 1..5)
+                            machineInstances.forEach(other => {{
+                                if (other.assetKey === state.assetKey) {{
+                                    other.mastery = newMastery;
+                                }}
+                            }});
+
+                            renderStars();
+                            logMachineStateChange('Mastery Changed', state);
+                        }});
+                        starsContainer.appendChild(starSpan);
+                    }}
+                }}
 
                 function renderSlots() {{
                     slotsGrid.innerHTML = '';
@@ -771,11 +830,13 @@ def generate_overnight_page(outp, detail_dir, current_level=CURRENT_LEVEL, max_l
                 card.addEventListener('click', () => {{
                     state.selected = !state.selected;
                     card.classList.toggle('selected', state.selected);
+                    starsContainer.classList.toggle('disabled-controls', !state.selected);
                     slotsGrid.classList.toggle('disabled-controls', !state.selected);
 
                     logMachineStateChange(state.selected ? 'Machine Enabled' : 'Machine Disabled', state);
                 }});
 
+                renderStars();
                 renderSlots();
                 machineInstances.push(state);
             }}
@@ -784,7 +845,8 @@ def generate_overnight_page(outp, detail_dir, current_level=CURRENT_LEVEL, max_l
                 return machineInstances.filter(m => m.selected).map(m => ({{
                     id: m.id,
                     name: m.name,
-                    slots: m.slots
+                    slots: m.slots,
+                    mastery: m.mastery
                 }}));
             }}
 
