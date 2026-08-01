@@ -112,7 +112,8 @@
 <div class="sc-disclaimer-footer">
     <div style="margin-bottom: 6px; font-weight: bold;">
         <a href="../general_profitability.html">Profit Rankings</a> | 
-        <a href="../overnight_strategies.html">Overnight Strategy</a>
+        <a href="../overnight_strategies.html">Overnight Strategy</a> |
+        <a href="../daily_dirt_newspaper_countdown.html">Dirt Countdown</a>
     </div>
     <hr style="border: 0; border-top: 1px solid #444; margin: 6px 0;">
     This material is unofficial and is not endorsed by Supercell. For more information see <a href="https://www.supercell.com/fan-content-policy" target="_blank">Supercell's Fan Content Policy</a>.
@@ -131,9 +132,9 @@
     <div class="level-control">
         <div class="level-header">
             <span class="level-title">Level Filter</span>
-            <span class="level-value" id="levelDisplay">Level 50</span>
+            <span class="level-value" id="levelDisplay">Level 51</span>
         </div>
-        <input type="range" min="1" max="50" value="50" class="level-slider" id="levelSlider">
+        <input type="range" min="1" max="51" value="51" class="level-slider" id="levelSlider">
         <div class="machine-count-status" id="machineCountDisplay" style="display: none;"></div>
     </div>
 
@@ -191,7 +192,7 @@
             }
 
             slider.addEventListener('input', (e) => updateLevel(parseInt(e.target.value, 10)));
-            updateLevel(50);
+            updateLevel(51);
         })();
     </script>
     

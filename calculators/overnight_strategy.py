@@ -301,7 +301,7 @@ def calculate_overnight_strategy(sleep_duration_mins=480, max_level=CURRENT_LEVE
     engine = _OvernightStrategyEngine(sleep_duration_mins)
 
     for lvl in range(1, max_level + 1):
-        print(f"    - Level {lvl}")
+        # print(f"    - Level {lvl}")
         level_strategy, total_profit = engine.calculate_level(lvl)
         all_level_strategies[lvl] = {
             "strategy": level_strategy,

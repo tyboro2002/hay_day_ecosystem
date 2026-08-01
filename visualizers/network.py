@@ -9,6 +9,7 @@ from pyvis.network import Network
 from game_data import ITEMS, INFRASTRUCTURE, LIVESTOCK
 from game_data.game_data import MAX_LEVEL, CURRENT_LEVEL
 from visualizers.helpers import templates
+from visualizers.helpers.dirt_newspaper_countdown_page import generate_daily_dirt_newspaper_countdown_page
 
 # Import helpers from the subdirectory package!
 from visualizers.helpers.formatting import format_duration, get_base64_asset
@@ -289,6 +290,13 @@ def generate_interactive_farm_graph(output_filename=f"{outp}/{outp_file}"):
     # create overnight strategy page
     generate_overnight_page(outp, detail_dir=detail_dir)
     print(f"Overnight Strategy generated")
+
+    # create clock page
+    generate_daily_dirt_newspaper_countdown_page(
+        output_path=f"{outp}/daily_dirt_newspaper_countdown.html",
+        round_seconds=130
+    )
+    print(f"clock generated")
 
 
 def generate_detail_page_item(name, item_obj, filename):
