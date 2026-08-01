@@ -190,7 +190,8 @@
 <div class="sc-disclaimer-footer">
     <div style="margin-bottom: 6px; font-weight: bold;">
         <a href="../general_profitability.html">Profit Rankings</a> | 
-        <a href="../overnight_strategies.html">Overnight Strategy</a>
+        <a href="../overnight_strategies.html">Overnight Strategy</a> |
+        <a href="../daily_dirt_newspaper_countdown.html">Dirt Countdown</a>
     </div>
     <hr style="border: 0; border-top: 1px solid #444; margin: 6px 0;">
     This material is unofficial and is not endorsed by Supercell. For more information see <a href="https://www.supercell.com/fan-content-policy" target="_blank">Supercell's Fan Content Policy</a>.
@@ -234,12 +235,66 @@
         
 
         
+    
+    <script type="text/javascript">
+        window.HayDayLevelFilterPersistence = window.HayDayLevelFilterPersistence || (function() {
+            const storageKey = "hayday_shared_level_filter_v1";
+
+            function readWindowNameValue() {
+                const prefix = storageKey + '=';
+                const parts = String(window.name || '').split('').filter(Boolean);
+                const match = parts.find(part => part.startsWith(prefix));
+                return match ? match.slice(prefix.length) : null;
+            }
+
+            function writeWindowNameValue(level) {
+                const prefix = storageKey + '=';
+                const parts = String(window.name || '').split('').filter(part => !part.startsWith(prefix));
+                parts.push(prefix + String(level));
+                window.name = parts.join('');
+            }
+
+            function readStoredLevel(defaultLevel, maxLevel) {
+                try {
+                    const raw = localStorage.getItem(storageKey);
+                    const fallbackRaw = raw !== null ? raw : readWindowNameValue();
+                    if (fallbackRaw === null) return defaultLevel;
+
+                    const parsed = parseInt(fallbackRaw, 10);
+                    if (Number.isNaN(parsed)) return defaultLevel;
+                    return typeof maxLevel === 'number' ? Math.min(Math.max(parsed, 1), maxLevel) : Math.max(parsed, 1);
+                } catch (error) {
+                    const fallbackRaw = readWindowNameValue();
+                    if (fallbackRaw === null) return defaultLevel;
+
+                    const parsed = parseInt(fallbackRaw, 10);
+                    if (Number.isNaN(parsed)) return defaultLevel;
+                    return typeof maxLevel === 'number' ? Math.min(Math.max(parsed, 1), maxLevel) : Math.max(parsed, 1);
+                }
+            }
+
+            function writeStoredLevel(level) {
+                try {
+                    localStorage.setItem(storageKey, String(level));
+                } catch (error) {
+                    writeWindowNameValue(level);
+                    console.warn('Could not persist level filter:', error);
+                    return;
+                }
+
+                writeWindowNameValue(level);
+            }
+
+            return { readStoredLevel, writeStoredLevel };
+        })();
+    </script>
+    
     <div class="level-control">
         <div class="level-header">
             <span class="level-title">Level Filter</span>
-            <span class="level-value" id="levelDisplay">Level 50</span>
+            <span class="level-value" id="levelDisplay">Level 51</span>
         </div>
-        <input type="range" min="1" max="50" value="50" class="level-slider" id="levelSlider">
+        <input type="range" min="1" max="51" value="51" class="level-slider" id="levelSlider">
         <div class="machine-count-status" id="machineCountDisplay" style="display: none;"></div>
     </div>
 
@@ -250,6 +305,8 @@
             const countDisplay = document.getElementById('machineCountDisplay');
             const unlockSchedule = [[19, 1]];
             const machineUnlockLevel = 19;
+            const defaultLevel = 51;
+            const maxLevel = 51;
 
             function updateLevel(currentLevel) {
                 display.textContent = 'Level ' + currentLevel;
@@ -296,8 +353,19 @@
                 });
             }
 
-            slider.addEventListener('input', (e) => updateLevel(parseInt(e.target.value, 10)));
-            updateLevel(50);
+            const initialLevel = window.HayDayLevelFilterPersistence
+                ? window.HayDayLevelFilterPersistence.readStoredLevel(defaultLevel, maxLevel)
+                : defaultLevel;
+
+            slider.value = String(initialLevel);
+            slider.addEventListener('input', (e) => {
+                const nextLevel = parseInt(e.target.value, 10);
+                updateLevel(nextLevel);
+                if (window.HayDayLevelFilterPersistence) {
+                    window.HayDayLevelFilterPersistence.writeStoredLevel(nextLevel);
+                }
+            });
+            updateLevel(initialLevel);
         })();
     </script>
     

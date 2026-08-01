@@ -1,5 +1,6 @@
 import os
 import csv
+from functools import lru_cache
 from game_data import ITEMS, LIVESTOCK, INFRASTRUCTURE
 from game_data.game_data import DIAMOND_COST
 
@@ -21,6 +22,7 @@ def find_structure_for_plantable(item_name):
             return struct_obj
     return None
 
+@lru_cache(maxsize=None)
 def calculate_direct_ingredient_cost(item_obj):
     """Calculates immediate 1-level deep costs, incorporating custom orchard logic."""
     # 1. Check if it's an orchard plantable item (Apple, Raspberry, etc.)

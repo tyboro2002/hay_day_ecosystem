@@ -190,7 +190,8 @@
 <div class="sc-disclaimer-footer">
     <div style="margin-bottom: 6px; font-weight: bold;">
         <a href="../general_profitability.html">Profit Rankings</a> | 
-        <a href="../overnight_strategies.html">Overnight Strategy</a>
+        <a href="../overnight_strategies.html">Overnight Strategy</a> |
+        <a href="../daily_dirt_newspaper_countdown.html">Dirt Countdown</a>
     </div>
     <hr style="border: 0; border-top: 1px solid #444; margin: 6px 0;">
     This material is unofficial and is not endorsed by Supercell. For more information see <a href="https://www.supercell.com/fan-content-policy" target="_blank">Supercell's Fan Content Policy</a>.
@@ -234,12 +235,66 @@
         
 
         
+    
+    <script type="text/javascript">
+        window.HayDayLevelFilterPersistence = window.HayDayLevelFilterPersistence || (function() {
+            const storageKey = "hayday_shared_level_filter_v1";
+
+            function readWindowNameValue() {
+                const prefix = storageKey + '=';
+                const parts = String(window.name || '').split('').filter(Boolean);
+                const match = parts.find(part => part.startsWith(prefix));
+                return match ? match.slice(prefix.length) : null;
+            }
+
+            function writeWindowNameValue(level) {
+                const prefix = storageKey + '=';
+                const parts = String(window.name || '').split('').filter(part => !part.startsWith(prefix));
+                parts.push(prefix + String(level));
+                window.name = parts.join('');
+            }
+
+            function readStoredLevel(defaultLevel, maxLevel) {
+                try {
+                    const raw = localStorage.getItem(storageKey);
+                    const fallbackRaw = raw !== null ? raw : readWindowNameValue();
+                    if (fallbackRaw === null) return defaultLevel;
+
+                    const parsed = parseInt(fallbackRaw, 10);
+                    if (Number.isNaN(parsed)) return defaultLevel;
+                    return typeof maxLevel === 'number' ? Math.min(Math.max(parsed, 1), maxLevel) : Math.max(parsed, 1);
+                } catch (error) {
+                    const fallbackRaw = readWindowNameValue();
+                    if (fallbackRaw === null) return defaultLevel;
+
+                    const parsed = parseInt(fallbackRaw, 10);
+                    if (Number.isNaN(parsed)) return defaultLevel;
+                    return typeof maxLevel === 'number' ? Math.min(Math.max(parsed, 1), maxLevel) : Math.max(parsed, 1);
+                }
+            }
+
+            function writeStoredLevel(level) {
+                try {
+                    localStorage.setItem(storageKey, String(level));
+                } catch (error) {
+                    writeWindowNameValue(level);
+                    console.warn('Could not persist level filter:', error);
+                    return;
+                }
+
+                writeWindowNameValue(level);
+            }
+
+            return { readStoredLevel, writeStoredLevel };
+        })();
+    </script>
+    
     <div class="level-control">
         <div class="level-header">
             <span class="level-title">Level Filter</span>
-            <span class="level-value" id="levelDisplay">Level 50</span>
+            <span class="level-value" id="levelDisplay">Level 51</span>
         </div>
-        <input type="range" min="1" max="50" value="50" class="level-slider" id="levelSlider">
+        <input type="range" min="1" max="51" value="51" class="level-slider" id="levelSlider">
         <div class="machine-count-status" id="machineCountDisplay" style="display: none;"></div>
     </div>
 
@@ -250,6 +305,8 @@
             const countDisplay = document.getElementById('machineCountDisplay');
             const unlockSchedule = [[50, 1]];
             const machineUnlockLevel = 50;
+            const defaultLevel = 51;
+            const maxLevel = 51;
 
             function updateLevel(currentLevel) {
                 display.textContent = 'Level ' + currentLevel;
@@ -296,8 +353,19 @@
                 });
             }
 
-            slider.addEventListener('input', (e) => updateLevel(parseInt(e.target.value, 10)));
-            updateLevel(50);
+            const initialLevel = window.HayDayLevelFilterPersistence
+                ? window.HayDayLevelFilterPersistence.readStoredLevel(defaultLevel, maxLevel)
+                : defaultLevel;
+
+            slider.value = String(initialLevel);
+            slider.addEventListener('input', (e) => {
+                const nextLevel = parseInt(e.target.value, 10);
+                updateLevel(nextLevel);
+                if (window.HayDayLevelFilterPersistence) {
+                    window.HayDayLevelFilterPersistence.writeStoredLevel(nextLevel);
+                }
+            });
+            updateLevel(initialLevel);
         })();
     </script>
     
@@ -309,7 +377,14 @@
 
         <div class="section-title">Used in Recipes</div>
         <div class="grid">
-            <div class="no-items">📦 Final Product (Not used in other recipes)</div>
+            
+            <a class="grid-item" href="details_pillow.html" data-unlock-level="51">
+                <span class="lock-badge">🔒 Lvl 51</span>
+                <div class="qty-badge">x3</div>
+                <img src="data:image/webp;base64,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" alt="Pillow">
+                <div class="name">Pillow</div>
+            </a>
+            
         </div>
 
         <a class="back-btn" href="../index.html">Back to Map</a>

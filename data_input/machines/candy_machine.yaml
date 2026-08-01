@@ -1,0 +1,10 @@
+# --- CANDY MACHINE PRODUCTION ---
+
+Caramel Apple:
+  unlock_level: 51
+  time_to_make: 120 # 2h
+  sell_price: 255.0 # TODO: check price
+  xp: 31
+  ingredients:
+    Apple: 1
+    Syrup: 2

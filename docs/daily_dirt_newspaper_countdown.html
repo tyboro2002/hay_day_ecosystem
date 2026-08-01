@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hay Day Dirt Newspaper Refresh</title>
+    <style>
+        :root {
+            color-scheme: dark;
+            --bg-1: #0f172a;
+            --bg-2: #111827;
+            --panel: rgba(17, 24, 39, 0.78);
+            --panel-border: rgba(148, 163, 184, 0.18);
+            --text: #e5e7eb;
+            --muted: #94a3b8;
+            --accent: #f59e0b;
+            --accent-2: #fb7185;
+            --shadow: rgba(0, 0, 0, 0.35);
+        }
+
+        * { box-sizing: border-box; }
+
+        html, body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+            overflow-y: auto;
+            font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+            background:
+                radial-gradient(circle at top left, rgba(245, 158, 11, 0.16), transparent 30%),
+                radial-gradient(circle at bottom right, rgba(251, 113, 133, 0.13), transparent 28%),
+                linear-gradient(135deg, var(--bg-1), var(--bg-2));
+            color: var(--text);
+        }
+
+        body {
+            display: grid;
+            place-items: center;
+            padding: 24px 24px 104px;
+        }
+
+        .wrap {
+            width: min(960px, 100%);
+            padding: 28px;
+        }
+
+        .card {
+            position: relative;
+            background: var(--panel);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--panel-border);
+            border-radius: 30px;
+            padding: clamp(24px, 4vw, 44px);
+            box-shadow: 0 24px 80px var(--shadow);
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(120deg, rgba(245, 158, 11, 0.08), transparent 40%, rgba(251, 113, 133, 0.08));
+            pointer-events: none;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 16px;
+            border-radius: 999px;
+            background: rgba(15, 23, 42, 0.7);
+            border: 1px solid rgba(245, 158, 11, 0.18);
+            color: var(--muted);
+            font-size: 0.9rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            margin: 18px 0 10px;
+            font-size: clamp(2rem, 4.5vw, 4.6rem);
+            line-height: 0.95;
+            letter-spacing: -0.05em;
+            position: relative;
+            z-index: 1;
+        }
+
+        .subtitle {
+            margin: 0;
+            color: var(--muted);
+            font-size: clamp(1rem, 2vw, 1.15rem);
+            position: relative;
+            z-index: 1;
+        }
+
+        .countdown {
+            margin: 34px 0 20px;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .unit {
+            background: rgba(15, 23, 42, 0.72);
+            border: 1px solid rgba(148, 163, 184, 0.16);
+            border-radius: 22px;
+            padding: 22px 12px;
+            text-align: center;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
+        }
+
+        .value {
+            display: block;
+            font-size: clamp(2.2rem, 8vw, 5.5rem);
+            font-weight: 800;
+            letter-spacing: -0.06em;
+            color: #fff;
+            text-shadow: 0 8px 30px rgba(0,0,0,0.35);
+        }
+
+        .label {
+            display: block;
+            margin-top: 8px;
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            color: var(--muted);
+        }
+
+        .controls {
+            margin: 20px 0 12px;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .sync-btn {
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            color: #0f172a;
+            font-weight: 700;
+            font-size: 1rem;
+            padding: 14px 28px;
+            border: none;
+            border-radius: 999px;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(245, 158, 11, 0.35);
+            transition: transform 0.1s ease, box-shadow 0.1s ease;
+        }
+
+        .sync-btn:active {
+            transform: scale(0.96);
+            box-shadow: 0 2px 10px rgba(245, 158, 11, 0.2);
+        }
+
+        .sync-info {
+            margin: 16px 0 24px;
+            padding: 16px 20px;
+            border-radius: 16px;
+            background: rgba(15, 23, 42, 0.45);
+            border: 1px dashed rgba(245, 158, 11, 0.25);
+            color: var(--muted);
+            font-size: 0.9rem;
+            line-height: 1.5;
+            text-align: left;
+            position: relative;
+            z-index: 1;
+        }
+
+        .sync-info h3 {
+            margin: 0 0 6px;
+            color: var(--accent);
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .status {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 20px;
+            border-radius: 18px;
+            background: rgba(15, 23, 42, 0.58);
+            border: 1px solid rgba(148, 163, 184, 0.14);
+            color: var(--muted);
+            position: relative;
+            z-index: 1;
+        }
+
+        .status strong { color: var(--text); }
+
+        .sc-disclaimer-footer {
+            position: fixed !important;
+            bottom: 20px !important;
+            left: 50% !important;
+            transform: translateX(-50%) !important;
+            z-index: 999999 !important;
+            background-color: rgba(33, 33, 33, 0.95) !important;
+            border: 1px solid #444444 !important;
+            border-radius: 30px !important;
+            padding: 10px 24px !important;
+            color: #b0b0b0 !important;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+            font-size: 0.72rem !important;
+            text-align: center !important;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6) !important;
+            max-width: 90% !important;
+            width: max-content !important;
+            pointer-events: auto !important;
+            backdrop-filter: blur(8px) !important;
+            -webkit-backdrop-filter: blur(8px) !important;
+        }
+
+        .sc-disclaimer-footer a {
+            color: #f1a80a !important;
+            text-decoration: none !important;
+            font-weight: 600 !important;
+        }
+
+        .sc-disclaimer-footer a:hover {
+            text-decoration: underline !important;
+        }
+
+        .pulse {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 999px;
+            background: var(--accent);
+            box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.55);
+            animation: pulse 1.8s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.45); }
+            70% { box-shadow: 0 0 0 16px rgba(245, 158, 11, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0); }
+        }
+
+        @media (max-width: 720px) {
+            .status { justify-content: center; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <main class="wrap">
+        <section class="card">
+            <div class="eyebrow"><span class="pulse"></span> Live refresh countdown</div>
+            <h1>Dirt Newspaper</h1>
+            <p class="subtitle">Counts down to the next 2-minute refresh cycle.</p>
+
+            <div class="countdown" aria-label="Countdown to next refresh">
+                <div class="unit"><span class="value" id="minutes">00</span><span class="label">Minutes</span></div>
+                <div class="unit"><span class="value" id="seconds">00</span><span class="label">Seconds</span></div>
+            </div>
+
+            <div class="controls">
+                <button class="sync-btn" id="sync-btn">⚡ Mailbox Twitched Now! (Sync Timer)</button>
+            </div>
+
+            <!-- EXPLANATION BOX BELOW TIMER / CONTROLS -->
+            <div class="sync-info">
+                <h3>💡 Why is the Sync Button needed?</h3>
+                Hay Day refreshes the Daily Dirt newspaper every <strong>2 minutes (120 seconds)</strong>. However, the exact second-mark depends on your individual game session and server connection—there is no fixed global epoch clock for it.<br><br>
+                When your mailbox twitches in-game, tap the button above to lock this timer to your live session. It will automatically save your offset and stay synced on every 2-minute loop!<br><br>
+                There is a small drift in the timer due to the cycle not being exact 2 minutes. 
+            </div>
+
+            <div class="status">
+                <div>Next refresh target: <strong id="target-label"></strong></div>
+                <div>Current time: <strong id="now-label"></strong></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        
+<div class="sc-disclaimer-footer">
+    <div style="margin-bottom: 6px; font-weight: bold;">
+        <a href="general_profitability.html">Profit Rankings</a> | 
+        <a href="overnight_strategies.html">Overnight Strategy</a> |
+        <a href="daily_dirt_newspaper_countdown.html">Dirt Countdown</a>
+    </div>
+    <hr style="border: 0; border-top: 1px solid #444; margin: 6px 0;">
+    This material is unofficial and is not endorsed by Supercell. For more information see <a href="https://www.supercell.com/fan-content-policy" target="_blank">Supercell's Fan Content Policy</a>.
+</div>
+
+    </footer>
+
+    <script>
+        const roundSeconds = Math.max(1, 130);
+        const roundIntervalMs = roundSeconds * 1000;
+
+        let cycleOffsetMs = parseInt(localStorage.getItem("hayday_cycle_offset_ms") || "0", 10);
+
+        const minutesEl = document.getElementById("minutes");
+        const secondsEl = document.getElementById("seconds");
+        const targetLabelEl = document.getElementById("target-label");
+        const nowLabelEl = document.getElementById("now-label");
+        const syncBtn = document.getElementById("sync-btn");
+
+        function pad(value) {
+            return String(value).padStart(2, "0");
+        }
+
+        function getNextReset(now) {
+            const elapsedSinceOffset = now.getTime() - cycleOffsetMs;
+            const completedRounds = Math.floor(elapsedSinceOffset / roundIntervalMs);
+            const nextResetMs = cycleOffsetMs + (completedRounds + 1) * roundIntervalMs;
+            return new Date(nextResetMs);
+        }
+
+        function updateClock() {
+            const now = new Date();
+            const nextReset = getNextReset(now);
+            const diff = Math.max(0, nextReset - now);
+
+            const totalSeconds = Math.floor(diff / 1000);
+            const minutes = Math.floor(totalSeconds / 60);
+            const seconds = totalSeconds % 60;
+
+            minutesEl.textContent = pad(minutes);
+            secondsEl.textContent = pad(seconds);
+
+            targetLabelEl.textContent = nextReset.toLocaleTimeString();
+            nowLabelEl.textContent = now.toLocaleTimeString();
+        }
+
+        syncBtn.addEventListener("click", () => {
+            const now = new Date();
+            cycleOffsetMs = now.getTime();
+            localStorage.setItem("hayday_cycle_offset_ms", cycleOffsetMs);
+            updateClock();
+        });
+
+        updateClock();
+        setInterval(updateClock, 1000);
+    </script>
+</body>
+</html>

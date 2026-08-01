@@ -190,7 +190,8 @@
 <div class="sc-disclaimer-footer">
     <div style="margin-bottom: 6px; font-weight: bold;">
         <a href="../general_profitability.html">Profit Rankings</a> | 
-        <a href="../overnight_strategies.html">Overnight Strategy</a>
+        <a href="../overnight_strategies.html">Overnight Strategy</a> |
+        <a href="../daily_dirt_newspaper_countdown.html">Dirt Countdown</a>
     </div>
     <hr style="border: 0; border-top: 1px solid #444; margin: 6px 0;">
     This material is unofficial and is not endorsed by Supercell. For more information see <a href="https://www.supercell.com/fan-content-policy" target="_blank">Supercell's Fan Content Policy</a>.
@@ -234,12 +235,66 @@
         
 
         
+    
+    <script type="text/javascript">
+        window.HayDayLevelFilterPersistence = window.HayDayLevelFilterPersistence || (function() {
+            const storageKey = "hayday_shared_level_filter_v1";
+
+            function readWindowNameValue() {
+                const prefix = storageKey + '=';
+                const parts = String(window.name || '').split('').filter(Boolean);
+                const match = parts.find(part => part.startsWith(prefix));
+                return match ? match.slice(prefix.length) : null;
+            }
+
+            function writeWindowNameValue(level) {
+                const prefix = storageKey + '=';
+                const parts = String(window.name || '').split('').filter(part => !part.startsWith(prefix));
+                parts.push(prefix + String(level));
+                window.name = parts.join('');
+            }
+
+            function readStoredLevel(defaultLevel, maxLevel) {
+                try {
+                    const raw = localStorage.getItem(storageKey);
+                    const fallbackRaw = raw !== null ? raw : readWindowNameValue();
+                    if (fallbackRaw === null) return defaultLevel;
+
+                    const parsed = parseInt(fallbackRaw, 10);
+                    if (Number.isNaN(parsed)) return defaultLevel;
+                    return typeof maxLevel === 'number' ? Math.min(Math.max(parsed, 1), maxLevel) : Math.max(parsed, 1);
+                } catch (error) {
+                    const fallbackRaw = readWindowNameValue();
+                    if (fallbackRaw === null) return defaultLevel;
+
+                    const parsed = parseInt(fallbackRaw, 10);
+                    if (Number.isNaN(parsed)) return defaultLevel;
+                    return typeof maxLevel === 'number' ? Math.min(Math.max(parsed, 1), maxLevel) : Math.max(parsed, 1);
+                }
+            }
+
+            function writeStoredLevel(level) {
+                try {
+                    localStorage.setItem(storageKey, String(level));
+                } catch (error) {
+                    writeWindowNameValue(level);
+                    console.warn('Could not persist level filter:', error);
+                    return;
+                }
+
+                writeWindowNameValue(level);
+            }
+
+            return { readStoredLevel, writeStoredLevel };
+        })();
+    </script>
+    
     <div class="level-control">
         <div class="level-header">
             <span class="level-title">Level Filter</span>
-            <span class="level-value" id="levelDisplay">Level 50</span>
+            <span class="level-value" id="levelDisplay">Level 51</span>
         </div>
-        <input type="range" min="1" max="50" value="50" class="level-slider" id="levelSlider">
+        <input type="range" min="1" max="51" value="51" class="level-slider" id="levelSlider">
         <div class="machine-count-status" id="machineCountDisplay" style="display: none;"></div>
     </div>
 
@@ -250,6 +305,8 @@
             const countDisplay = document.getElementById('machineCountDisplay');
             const unlockSchedule = [[49, 1]];
             const machineUnlockLevel = 49;
+            const defaultLevel = 51;
+            const maxLevel = 51;
 
             function updateLevel(currentLevel) {
                 display.textContent = 'Level ' + currentLevel;
@@ -296,8 +353,19 @@
                 });
             }
 
-            slider.addEventListener('input', (e) => updateLevel(parseInt(e.target.value, 10)));
-            updateLevel(50);
+            const initialLevel = window.HayDayLevelFilterPersistence
+                ? window.HayDayLevelFilterPersistence.readStoredLevel(defaultLevel, maxLevel)
+                : defaultLevel;
+
+            slider.value = String(initialLevel);
+            slider.addEventListener('input', (e) => {
+                const nextLevel = parseInt(e.target.value, 10);
+                updateLevel(nextLevel);
+                if (window.HayDayLevelFilterPersistence) {
+                    window.HayDayLevelFilterPersistence.writeStoredLevel(nextLevel);
+                }
+            });
+            updateLevel(initialLevel);
         })();
     </script>
     
@@ -315,6 +383,13 @@
                 <div class="qty-badge">x2</div>
                 <img src="data:image/webp;base64,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" alt="Asparagus Quiche">
                 <div class="name">Asparagus Quiche</div>
+            </a>
+            
+            <a class="grid-item" href="details_asparagus_soup.html" data-unlock-level="51">
+                <span class="lock-badge">🔒 Lvl 51</span>
+                <div class="qty-badge">x3</div>
+                <img src="data:image/webp;base64,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" alt="Asparagus Soup">
+                <div class="name">Asparagus Soup</div>
             </a>
             
         </div>
