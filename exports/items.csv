@@ -15,6 +15,10 @@ Potato,Crop,36.0,220,None,None
 Chamomile,Crop,10.8,20,None,None
 Asparagus,Crop,43.2,360,None,None
 Sesame,Crop,18.0,60,None,None
+Pineapple,Crop,14.0,30,None,None
+Lily,Crop,21.0,90,None,None
+Rice,Crop,18.0,45,None,None
+Lettuce,Crop,32.0,210,None,None
 Apple,PlantableItem,39.6,960,None,None
 Raspberry,PlantableItem,46.8,1080,None,None
 Cherry,PlantableItem,68.4,1620,None,None
@@ -22,6 +26,7 @@ Blackberry,PlantableItem,82.8,2040,None,None
 Blueberry,PlantableItem,82.8,2160,None,None
 Cacao,PlantableItem,86.4,2160,None,None
 Coffee Bean,PlantableItem,64.8,1500,None,None
+Olive,PlantableItem,82.0,1440,None,None
 Egg,AnimalItem,18.0,20,Chicken Coop,None
 Milk,AnimalItem,32.4,60,Cow Pasture,None
 Bacon,AnimalItem,50.4,240,Pig Pen,None
@@ -88,6 +93,7 @@ Wooly Chaps,MachinedItem,309.6,90,Sewing Machine,"Wool x3, Cotton Fabric x1"
 Violet Dress,MachinedItem,327.6,135,Sewing Machine,"Indigo x1, Cotton Fabric x2, Raspberry x1"
 Soothing Pad,MachinedItem,324.0,60,Sewing Machine,"Cotton Fabric x2, Wheat x5, Chamomile x5"
 Pillow,MachinedItem,676.0,180,Sewing Machine,"Cotton Fabric x2, Duck Feather x3"
+Blanket,MachinedItem,1098.0,210,Sewing Machine,"Cotton Fabric x3, Duck Feather x5, Pumpkin x1"
 Carrot Cake,MachinedItem,165.6,90,Cake Oven,"Carrot x2, Butter x1, Brown Sugar x1"
 Cream Cake,MachinedItem,219.6,180,Cake Oven,"Wheat x5, Cream x1, White Sugar x1"
 Red Berry Cake,MachinedItem,255.6,60,Cake Oven,"Milk x1, Egg x1, Raspberry x1, Cherry x2"
@@ -97,6 +103,7 @@ Strawberry Cake,MachinedItem,316.8,180,Cake Oven,"Cream x1, Strawberry x2, Wheat
 Chocolate Cake,MachinedItem,320.4,120,Cake Oven,"Brown Sugar x1, Butter x1, Cacao x2"
 Potato Feta Cake,MachinedItem,309.6,120,Cake Oven,"Egg x4, Goat Cheese x1, Potato x1"
 Honey Apple Cake,MachinedItem,482.4,200,Cake Oven,"Honey x2, Apple x2, Egg x2, Wheat x2"
+Fancy Cake,MachinedItem,450.0,15,Cake Oven,"Cream Cake x1, Lily x3, Raspberry x3, Gold Ore x1"
 Silver Bar,MachinedItem,147.6,480,Smelter,Silver Ore x3
 Gold Bar,MachinedItem,180.0,720,Smelter,Gold Ore x3
 Platinum Bar,MachinedItem,205.2,960,Smelter,Platinum Ore x3
@@ -107,6 +114,7 @@ Apple Juice,MachinedItem,129.6,120,Juice Press,Apple x2
 Cherry Juice,MachinedItem,216.0,150,Juice Press,Cherry x2
 Tomato Juice,MachinedItem,162.0,90,Juice Press,Tomato x3
 Berry Juice,MachinedItem,205.2,180,Juice Press,"Blackberry x1, Raspberry x1"
+Pineapple Juice,MachinedItem,68.0,180,Juice Press,Pineapple x3
 Vanilla Ice Cream,MachinedItem,172.8,120,Ice Cream Maker,"Milk x1, Cream x1, White Sugar x1"
 Cherry Popsicle,MachinedItem,352.8,180,Ice Cream Maker,"Cherry Juice x1, Syrup x1"
 Strawberry Ice Cream,MachinedItem,331.2,240,Ice Cream Maker,"Milk x1, Cream x1, White Sugar x1, Strawberry x3"
@@ -114,6 +122,7 @@ Chocolate Ice Cream,MachinedItem,342.0,150,Ice Cream Maker,"Milk x1, Cream x1, W
 Sesame Ice Cream,MachinedItem,176.4,120,Ice Cream Maker,"Cream x1, Sesame x3, Brown Sugar x1"
 Lamb doner wrap,MachinedItem,172.8,20,Doner Kebab Stand,"Grilled Lamb Skewer x1, Tomato x1, Bread x1"
 Spicy bean doner,MachinedItem,471.6,30,Doner Kebab Stand,"Black Bean x3, Chili Pepper x3, Cheese x2, Corn Bread x1"
+Tower Doner Supreme,MachinedItem,356.0,40,Doner Kebab Stand,"Lamb Chop x3, Corn Bread x1, Goat Cheese x1, Lettuce x3"
 Apple Jam,MachinedItem,219.6,360,Jam Maker,Apple x3
 Raspberry Jam,MachinedItem,252.0,420,Jam Maker,Raspberry x3
 Blackberry Jam,MachinedItem,388.8,480,Jam Maker,Blackberry x3
@@ -136,10 +145,21 @@ Lamb Soup,MachinedItem,180.0,120,Soup Kitchen,"Grilled Lamb Skewer x1, Potato x1
 Tomato Soup,MachinedItem,478.8,90,Soup Kitchen,"Chili Pepper x1, Goat Cheese x1, Tomato Juice x1, Tomato x2"
 Pumpkin Soup,MachinedItem,392.4,120,Soup Kitchen,"Butter x1, Carrot x2, Honey x1, Pumpkin x3"
 Asparagus Soup,MachinedItem,255.0,60,Soup Kitchen,"Asparagus x3, Cream x2"
+Fish Soup,MachinedItem,298.0,180,Soup Kitchen,"Carrot x1, Fish Fillet x2, Milk x1, Potato x3"
 Strawberry Candle,MachinedItem,370.8,120,Candle Maker,"Beeswax x1, Strawberry x2"
+Raspberry Candle,MachinedItem,360.0,105,Candle Maker,"Beeswax x1, Raspberry x2"
 Rustic Bouquet,MachinedItem,208.8,45,Flower Shop,"Wheat x5, Indigo x3, Cotton x3"
 Duck Feather,MachinedItem,140.4,180,Duck Salon,None
 Caramel Apple,MachinedItem,255.0,120,Candy Machine,"Apple x1, Syrup x2"
+Toffee,MachinedItem,176.0,90,Candy Machine,"Butter x1, Wheat x1, White Sugar x1"
+Chocolate,MachinedItem,460.0,1200,Candy Machine,"Cacao x3, Cream x1, White Sugar x1"
+Lollipop,MachinedItem,342.0,720,Candy Machine,"Cherry x1, Syrup x1, Strawberry x2"
+Soy Sauce,MachinedItem,154.0,180,Sauce Maker,"Soybean x9, Wheat x1"
+Bean Dip,MachinedItem,453.0,40,Sauce Maker,"Black Bean x3, Tomato x1, Chili Pepper x1"
+Sushi Roll,MachinedItem,489.0,60,Sushi Bar,"Fish Fillet x1, Rice x15, Soy Sauce x1"
+Lobster Sushi,MachinedItem,637.0,60,Sushi Bar,"Lobster Tail x1, Rice x15, Soy Sauce x1"
+Feta Salad,MachinedItem,745.0,120,Salad Bar,"Goat Cheese x2, Lettuce x3, Olive x2, Roasted Tomatoes x1"
+Bean Salad,MachinedItem,169.0,60,Salad Bar,"Black Bean x2, Lettuce x2, Tomato x1, Corn x1"
 Axe,SpecialItem,36.0,0,None,None
 Saw,SpecialItem,54.0,0,None,None
 Dynamite,SpecialItem,25.2,0,None,None

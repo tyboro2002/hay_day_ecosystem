@@ -8,3 +8,33 @@ Caramel Apple:
   ingredients:
     Apple: 1
     Syrup: 2
+
+Toffee:
+  unlock_level: 52
+  time_to_make: 90 # 1h30m
+  sell_price: 176.0 # TODO: check price
+  xp: 21
+  ingredients:
+    Butter: 1
+    Wheat: 1
+    White Sugar: 1
+
+Chocolate:
+  unlock_level: 54
+  time_to_make: 1200 # 20h
+  sell_price: 460.0 # TODO: check price
+  xp: 55
+  ingredients:
+    Cacao: 3
+    Cream: 1
+    White Sugar: 1
+
+Lollipop:
+  unlock_level: 57
+  time_to_make: 720 # 12h
+  sell_price: 342.0 # TODO: check price
+  xp: 41
+  ingredients:
+    Cherry: 1
+    Syrup: 1
+    Strawberry: 2

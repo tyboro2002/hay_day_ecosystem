@@ -67,11 +67,33 @@ def find_first_multivalue_discriminator(report):
 item_measurements = {
     "Meat Bucket":{},
     "Raspberry Jam":{1: 252, 2: 504, 3: 756, 4: 1008, 5: 1260, 6: 1512, 7: 1764},
-    "Strawberry Jam": {},
+    "Strawberry Jam": {1: 270, 2: 540, 3: 810, 4: 1080, 5: 1350},
     "Lobster Soup": {1: 612, 2: 1224, 3: 1836, 4: 2448, 5: 3060, 6: 3672, 7: 4284, 8: 4896},
-    "Caramel Apple": {},
-    "Pillow": {},
-    "Asparagus Soup": {}
+    "Caramel Apple": {1: 255},
+    "Pillow": {1: 676, 2: 1353},
+    "Asparagus Soup": {1: 255},
+
+
+    "Toffee": {},
+    "Raspberry Candle": {},
+    "Pineapple": {},
+    "Pineapple Juice": {},
+    "Fish Soup": {},
+    "Lily": {},
+    "Soy Sauce": {},
+    "Chocolate": {},
+    "Bean Dip": {},
+    "Fancy Cake": {},
+    "Rice": {},
+    "Sushi Roll": {},
+    "Olive": {},
+    "Lollipop": {},
+    "Lettuce": {},
+    "Feta Salad": {},
+    "Bean Salad": {},
+    "Tower Doner Supreme": {},
+    "Lobster Sushi": {},
+    "Blanket": {}
 }
 
 def run_report():

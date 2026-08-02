@@ -19,7 +19,7 @@ from .fields_data import FARM_FIELDS
 # =====================================================================
 
 DIAMOND_COST = 10000.0
-MAX_LEVEL = 51
+MAX_LEVEL = 59
 CURRENT_LEVEL = 51
 
 # Combine all inventory-holding items together using the dictionary update operator (|)

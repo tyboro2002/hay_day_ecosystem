@@ -1,0 +1,20 @@
+# --- SAUCE MAKER PRODUCTION ---
+
+Soy Sauce:
+  unlock_level: 54
+  time_to_make: 180 # 3h
+  sell_price: 154.0  # TODO: check price
+  xp: 19
+  ingredients:
+    Soybean: 9
+    Wheat: 1
+
+Bean Dip:
+  unlock_level: 54
+  time_to_make: 40
+  sell_price: 453.0  # TODO: check price
+  xp: 15
+  ingredients:
+    Black Bean: 3
+    Tomato: 1
+    Chili Pepper: 1

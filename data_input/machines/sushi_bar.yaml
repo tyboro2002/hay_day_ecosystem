@@ -1,0 +1,21 @@
+# --- SUSHI BAR PRODUCTION ---
+
+Sushi Roll:
+  unlock_level: 56
+  time_to_make: 60 # 1h
+  sell_price: 489.0  # TODO: check price
+  xp: 58
+  ingredients:
+    Fish Fillet: 1
+    Rice: 15
+    Soy Sauce: 1
+
+Lobster Sushi:
+  unlock_level: 59
+  time_to_make: 60 # 1h
+  sell_price: 637.0  # TODO: check price
+  xp: 76
+  ingredients:
+    Lobster Tail: 1
+    Rice: 15
+    Soy Sauce: 1

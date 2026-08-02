@@ -1,0 +1,23 @@
+# --- SALAD BAR PRODUCTION ---
+
+Feta Salad:
+  unlock_level: 58
+  time_to_make: 120 # 1h30
+  sell_price: 745.0  # TODO: check price
+  xp: 89
+  ingredients:
+    Goat Cheese: 2
+    Lettuce: 3
+    Olive: 2
+    Roasted Tomatoes: 1
+
+Bean Salad:
+  unlock_level: 58
+  time_to_make: 60 # 1h
+  sell_price: 169.0  # TODO: check price
+  xp: 20
+  ingredients:
+    Black Bean: 2
+    Lettuce: 2
+    Tomato: 1
+    Corn: 1

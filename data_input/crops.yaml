@@ -96,3 +96,27 @@ Sesame:
   time_to_make: 60 # 1h
   sell_price: 18.0
   xp: 4
+
+Pineapple:
+  unlock_level: 52
+  time_to_make: 30
+  sell_price: 14.0  # TODO: check price
+  xp: 3
+
+Lily:
+  unlock_level: 53
+  time_to_make: 90  # 1h30
+  sell_price: 21.0  # TODO: check price
+  xp: 5
+
+Rice:
+  unlock_level: 56
+  time_to_make: 45
+  sell_price: 18.0  # TODO: check price
+  xp: 3
+
+Lettuce:
+  unlock_level: 58
+  time_to_make: 210 # 3h30
+  sell_price: 32.0  # TODO: check price
+  xp: 7

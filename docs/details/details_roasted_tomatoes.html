@@ -296,7 +296,7 @@
             <span class="level-title">Level Filter</span>
             <span class="level-value" id="levelDisplay">Level 51</span>
         </div>
-        <input type="range" min="1" max="51" value="51" class="level-slider" id="levelSlider">
+        <input type="range" min="1" max="59" value="51" class="level-slider" id="levelSlider">
         <div class="machine-count-status" id="machineCountDisplay" style="display: none;"></div>
     </div>
 
@@ -308,7 +308,7 @@
             const unlockSchedule = [[30, 1]];
             const machineUnlockLevel = 30;
             const defaultLevel = 51;
-            const maxLevel = 51;
+            const maxLevel = 59;
 
             function updateLevel(currentLevel) {
                 display.textContent = 'Level ' + currentLevel;
@@ -386,7 +386,14 @@
 
         <div class="section-title">Used in Recipes</div>
         <div class="grid">
-            <div class="no-items">📦 Final Product (Not used in other recipes)</div>
+            
+            <a class="grid-item" href="details_feta_salad.html" data-unlock-level="58">
+                <span class="lock-badge">🔒 Lvl 58</span>
+                <div class="qty-badge">x1</div>
+                <img src="data:image/webp;base64,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" alt="Feta Salad">
+                <div class="name">Feta Salad</div>
+            </a>
+            
         </div>
 
         <a class="back-btn" href="../index.html">Back to Map</a>
