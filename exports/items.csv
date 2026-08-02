@@ -19,6 +19,7 @@ Pineapple,Crop,14.0,30,None,None
 Lily,Crop,21.0,90,None,None
 Rice,Crop,18.0,45,None,None
 Lettuce,Crop,32.0,210,None,None
+Garlic,Crop,14.0,30,None,None
 Apple,PlantableItem,39.6,960,None,None
 Raspberry,PlantableItem,46.8,1080,None,None
 Cherry,PlantableItem,68.4,1620,None,None
@@ -35,6 +36,7 @@ Lamb Chop,AnimalItem,36.0,30,Lamb Pasture,None
 Fish Fillet,AnimalItem,54.0,0,Fishing Lake,None
 Goat Milk,AnimalItem,64.8,480,Goat Yard,None
 Honeycomb,AnimalItem,68.4,35,Beehive Tree,None
+Peanuts,AnimalItem,234.0,300,Squirrel House,None
 Chicken Feed,MachinedItem,7.2,5,Feed Mill,"Wheat x0.6666666666666666, Corn x0.3333333333333333"
 Cow Feed,MachinedItem,14.4,10,Feed Mill,"Corn x0.3333333333333333, Soybean x0.6666666666666666"
 Pig Feed,MachinedItem,14.4,20,Feed Mill,"Carrot x0.6666666666666666, Soybean x0.3333333333333333"
@@ -74,6 +76,7 @@ Roasted Tomatoes,MachinedItem,118.8,90,BBQ Grill,Tomato x2
 Baked Potato,MachinedItem,298.8,35,BBQ Grill,"Cheese x1, Chili Pepper x1, Cream x1, Potato x2"
 Fish And Chips,MachinedItem,244.8,90,BBQ Grill,"Fish Fillet x2, Potato x3"
 Lobster Skewer,MachinedItem,417.6,40,BBQ Grill,"Chili Pepper x1, Honey x1, Lobster Tail x1"
+Garlic Bread,MachinedItem,198.0,15,BBQ Grill,"Bread x2, Butter x1, Garlic x4"
 Carrot Pie,MachinedItem,82.8,60,Pie Oven,"Wheat x2, Egg x1, Carrot x3"
 Pumpkin Pie,MachinedItem,158.4,120,Pie Oven,"Wheat x2, Egg x1, Pumpkin x3"
 Bacon Pie,MachinedItem,219.6,180,Pie Oven,"Wheat x2, Egg x1, Bacon x3"
@@ -139,6 +142,7 @@ Caffè Latte,MachinedItem,219.6,10,Coffee Kiosk,"Coffee Bean x2, White Sugar x1,
 Caffè Mocha,MachinedItem,291.6,15,Coffee Kiosk,"Coffee Bean x1, Cream x1, Cacao x2"
 Raspberry Mocha,MachinedItem,259.2,30,Coffee Kiosk,"Coffee Bean x1, Cream x1, Cacao x1, Raspberry x1"
 Hot Chocolate,MachinedItem,316.8,25,Coffee Kiosk,"Cacao x2, White Sugar x1, Milk x1, Cream x1"
+Caramel Latte,MachinedItem,345.0,15,Coffee Kiosk,"Coffee Bean x2, Toffee x1, Milk x1"
 Lobster Tail,MachinedItem,201.6,360,Lobster Pool,None
 Lobster Soup,MachinedItem,612.0,150,Soup Kitchen,"Chili Pepper x2, Lobster Tail x1, Cream x1, Tomato x1"
 Lamb Soup,MachinedItem,180.0,120,Soup Kitchen,"Grilled Lamb Skewer x1, Potato x1, Carrot x2"
@@ -154,12 +158,17 @@ Caramel Apple,MachinedItem,255.0,120,Candy Machine,"Apple x1, Syrup x2"
 Toffee,MachinedItem,176.0,90,Candy Machine,"Butter x1, Wheat x1, White Sugar x1"
 Chocolate,MachinedItem,460.0,1200,Candy Machine,"Cacao x3, Cream x1, White Sugar x1"
 Lollipop,MachinedItem,342.0,720,Candy Machine,"Cherry x1, Syrup x1, Strawberry x2"
+Jelly Beans,MachinedItem,684.0,1440,Candy Machine,"Blackberry Jam x1, Raspberry Jam x1, White Sugar x1"
 Soy Sauce,MachinedItem,154.0,180,Sauce Maker,"Soybean x9, Wheat x1"
 Bean Dip,MachinedItem,453.0,40,Sauce Maker,"Black Bean x3, Tomato x1, Chili Pepper x1"
+Olive Oil,MachinedItem,277.0,45,Sauce Maker,Olive x3
+Mayonnaise,MachinedItem,367.0,15,Sauce Maker,"Egg x4, Olive Oil x1"
 Sushi Roll,MachinedItem,489.0,60,Sushi Bar,"Fish Fillet x1, Rice x15, Soy Sauce x1"
 Lobster Sushi,MachinedItem,637.0,60,Sushi Bar,"Lobster Tail x1, Rice x15, Soy Sauce x1"
 Feta Salad,MachinedItem,745.0,120,Salad Bar,"Goat Cheese x2, Lettuce x3, Olive x2, Roasted Tomatoes x1"
 Bean Salad,MachinedItem,169.0,60,Salad Bar,"Black Bean x2, Lettuce x2, Tomato x1, Corn x1"
+BLT Salad,MachinedItem,723.0,105,Salad Bar,"Bacon x2, Lettuce x3, Roasted Tomatoes x1, Mayonnaise x1"
+Veggie Bagel,MachinedItem,532.0,40,Sandwich Bar,"Bread x2, Lettuce x3, Olive Oil x1, Tomato x2"
 Axe,SpecialItem,36.0,0,None,None
 Saw,SpecialItem,54.0,0,None,None
 Dynamite,SpecialItem,25.2,0,None,None

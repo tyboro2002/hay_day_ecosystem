@@ -93,7 +93,16 @@ item_measurements = {
     "Bean Salad": {},
     "Tower Doner Supreme": {},
     "Lobster Sushi": {},
-    "Blanket": {}
+    "Blanket": {},
+    "Jelly Beans": {},
+    "Olive Oil": {},
+    "Garlic": {},
+    "Garlic Bread": {},
+    "Veggie Bagel": {},
+    "Mayonnaise": {},
+    "BLT Salad": {},
+    "Caramel Latte": {},
+    "Peanuts": {}
 }
 
 def run_report():

@@ -296,7 +296,7 @@
             <span class="level-title">Level Filter</span>
             <span class="level-value" id="levelDisplay">Level 51</span>
         </div>
-        <input type="range" min="1" max="59" value="51" class="level-slider" id="levelSlider">
+        <input type="range" min="1" max="62" value="51" class="level-slider" id="levelSlider">
         <div class="machine-count-status" id="machineCountDisplay" style="display: none;"></div>
     </div>
 
@@ -308,7 +308,7 @@
             const unlockSchedule = [[37, 1]];
             const machineUnlockLevel = 37;
             const defaultLevel = 51;
-            const maxLevel = 59;
+            const maxLevel = 62;
 
             function updateLevel(currentLevel) {
                 display.textContent = 'Level ' + currentLevel;
@@ -386,7 +386,14 @@
 
         <div class="section-title">Used in Recipes</div>
         <div class="grid">
-            <div class="no-items">📦 Final Product (Not used in other recipes)</div>
+            
+            <a class="grid-item" href="details_jelly_beans.html" data-unlock-level="60">
+                <span class="lock-badge">🔒 Lvl 60</span>
+                <div class="qty-badge">x1</div>
+                <img src="data:image/webp;base64,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" alt="Jelly Beans">
+                <div class="name">Jelly Beans</div>
+            </a>
+            
         </div>
 
         <a class="back-btn" href="../index.html">Back to Map</a>

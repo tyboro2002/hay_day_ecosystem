@@ -564,3 +564,24 @@ Salad Bar:
     star_3:
       hours_required: 1152
       speed_bonus: 0.15
+
+Sandwich Bar:
+  max_slots: 2
+  min_allowed_slots: 2
+  max_allowed_slots: 9
+  amount_owned: 0
+  costs:
+    - 180000
+  unlock_schedule:
+    - [ 61, 1 ]
+  mastery_level: 0
+  mastery:
+    star_1:
+      hours_required: 72
+      coin_bonus: 0.10
+    star_2:
+      hours_required: 288
+      xp_bonus: 0.05
+    star_3:
+      hours_required: 1152
+      speed_bonus: 0.15
