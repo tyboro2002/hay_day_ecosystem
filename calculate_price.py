@@ -6,7 +6,7 @@ def find_possibilities(measurements):
     # measurements is a dict of {n: y_n}
     # Range is [1, 1000] for search, or whatever your bounds are
     possible_k = []
-    for k in range(1, 8500): # Checking k up to 800.0 (on level 40 Diamond ring	with price 824 highest)
+    for k in range(1, 12000): # Checking k up to 1200.0
         x = k / 10
         if all(math.floor(n * x) == y for n, y in measurements.items()):
             possible_k.append(x)
@@ -136,7 +136,7 @@ def run_report():
             print(f"{ORANGE}{name:<20} | {count} possibilities | {possibilities} | mes: {highest_key}, min: {result} | {report}{RESET}")
         elif count == 3:
             print(f"{YELLOW}{name:<20} | {count} possibilities | {possibilities} | mes: {highest_key}, min: {result} | {report}{RESET}")
-        elif count == 8499:
+        elif count == 11999:
             print(f"{CYAN}{name:<20} | {count} possibilities {RESET}")
             unknown.append(name)
         elif count <= 10:

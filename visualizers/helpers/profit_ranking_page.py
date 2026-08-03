@@ -17,6 +17,7 @@ def generate_profitability_ranking_page(outp, detail_dir):
     coin_per_h_html = f'<span class="coin-rate">{coin_img_html}/h</span>' if coin_b64 else "coins/h"
 
     # Sort data variations
+    by_max_price = sorted(data, key=lambda x: x["final_price"], reverse=True)
     by_value = sorted(data, key=lambda x: x["value_added"], reverse=True)
     by_pph = sorted(data, key=lambda x: x["pph"], reverse=True)
     by_roi = sorted([x for x in data if x["direct_cost"] > 0], key=lambda x: x["roi"], reverse=True)
@@ -217,6 +218,7 @@ def generate_profitability_ranking_page(outp, detail_dir):
                 <li class="tab-link active" onclick="switchTab(event, 'value-tab')">Value Added / Item</li>
                 <li class="tab-link" onclick="switchTab(event, 'pph-tab')">Profit / Hour (PPH)</li>
                 <li class="tab-link" onclick="switchTab(event, 'roi-tab')">Return on Investment (ROI)</li>
+                <li class="tab-link" onclick="switchTab(event, 'max-price-tab')">Max Price</li>
             </ul>
 
             <div class="tab-content">
@@ -265,6 +267,23 @@ def generate_profitability_ranking_page(outp, detail_dir):
                             <tr><th>Item Name</th><th>Req Lvl</th><th>Max Price</th><th>Material Costs</th><th>Craft Time</th><th>ROI Margin</th></tr>
                         </thead>
                         <tbody>{build_table_rows(by_roi, "roi")}</tbody>
+                    </table>
+                </div>
+                
+                
+                <!-- PANEL 4: VALUE ADDED -->
+                <div id="max-price-tab" class="content-panel active">
+                    <h3>Sorted by Max Market Price</h3>
+                    <div class="metric-context">
+                        <b>Calculation:</b> <code>Max Roadside Price</code>.
+                        <br><b>What it means:</b> The pure coins gained solely from selling this final product.
+                        <br><b>How to use it:</b> Ideal strategy for setting up what to sell for quick coin gain.
+                    </div>
+                    <table>
+                        <thead>
+                            <tr><th>Item Name</th><th>Req Lvl</th><th>Max Price</th><th>Material Costs</th><th>Craft Time</th><th>Value Added</th></tr>
+                        </thead>
+                        <tbody>{build_table_rows(by_max_price, "max price")}</tbody>
                     </table>
                 </div>
             </div>
