@@ -661,7 +661,7 @@ def generate_detail_page_pen(name, residents, pen_obj=None):
     full_schedule = pen_obj.full_unlock_schedule if pen_obj else [(1, 1)]
     pen_unlock_lvl = pen_obj.unlock_level if pen_obj else 1
 
-    img_base64 = get_base64_asset(name, "pens")
+    img_base64 = get_base64_asset(name, "pens", base_path="../")
     if img_base64:
         img_tag = f"""
         <div class="item-img-wrapper" id="mainMachineWrapper" data-unlock-level="{pen_unlock_lvl}">
@@ -675,7 +675,7 @@ def generate_detail_page_pen(name, residents, pen_obj=None):
     residents_html = ""
     if residents:
         for res in residents:
-            res_img = get_base64_asset(res.name, "animals")
+            res_img = get_base64_asset(res.name, "animals", base_path="../")
             res_url = f"details_{res.name.lower().replace(' ', '_')}.html"
             res_unlock_lvl = getattr(res, 'unlock_level', 1)
 
@@ -690,7 +690,7 @@ def generate_detail_page_pen(name, residents, pen_obj=None):
         residents_html = '<div class="no-items">💤 Vacant Habitat.</div>'
 
     # Reuse extracted schedule component for pens
-    unlock_schedule_html = generate_unlock_schedule_component(full_schedule, name, asset_folder="pens")
+    unlock_schedule_html = generate_unlock_schedule_component(full_schedule, name, asset_folder="pens", base_path="../")
 
     filename = f"details_{name.lower().replace(' ', '_')}.html"
     html_content = templates.render_pen_page(
@@ -720,7 +720,7 @@ def generate_detail_page_plantable_structure(name, prods, plant_obj=None):
             plant_unlock_lvl = min([getattr(p, 'unlock_level', 1) for p in prods]) if prods else 1
         full_schedule = plant_unlock_lvl
 
-    img_base64 = get_base64_asset(name, "plant_structures")
+    img_base64 = get_base64_asset(name, "plant_structures", base_path="../")
     if img_base64:
         img_tag = f"""
         <div class="item-img-wrapper" id="mainMachineWrapper" data-unlock-level="{plant_unlock_lvl}">
@@ -734,7 +734,7 @@ def generate_detail_page_plantable_structure(name, prods, plant_obj=None):
     produces_html = ""
     if prods:
         for prod_item in prods:
-            prod_img = get_base64_asset(prod_item.name, "items")
+            prod_img = get_base64_asset(prod_item.name, "items", base_path="../")
             prod_url = f"details_{prod_item.name.lower().replace(' ', '_')}.html"
             prod_unlock_lvl = getattr(prod_item, 'unlock_level', 1)
 
@@ -759,7 +759,7 @@ def generate_detail_page_plantable_structure(name, prods, plant_obj=None):
     # Generate schedule section if a schedule list is available
     unlock_schedule_html = ""
     if isinstance(full_schedule, list) and len(full_schedule) > 0:
-        unlock_schedule_html = generate_unlock_schedule_component(full_schedule, name, asset_folder="plant_structures")
+        unlock_schedule_html = generate_unlock_schedule_component(full_schedule, name, asset_folder="plant_structures", base_path="../")
 
     filename = f"details_{name.lower().replace(' ', '_')}.html"
     html_content = templates.render_plantable_structure_page(
@@ -789,7 +789,7 @@ def generate_detail_page_special_structure(name, prods, structure_obj=None):
             structure_unlock_lvl = min([getattr(p, 'unlock_level', 1) for p in prods]) if prods else 1
         full_schedule = structure_unlock_lvl
 
-    img_base64 = get_base64_asset(name, "special_structures")
+    img_base64 = get_base64_asset(name, "special_structures", base_path="../")
     if img_base64:
         img_tag = f"""
         <div class="item-img-wrapper" id="mainMachineWrapper" data-unlock-level="{structure_unlock_lvl}">
@@ -803,7 +803,7 @@ def generate_detail_page_special_structure(name, prods, structure_obj=None):
     produces_html = ""
     if prods:
         for prod_item in prods:
-            prod_img = get_base64_asset(prod_item.name, "items")
+            prod_img = get_base64_asset(prod_item.name, "items", base_path="../")
             prod_url = f"details_{prod_item.name.lower().replace(' ', '_')}.html"
             prod_unlock_lvl = getattr(prod_item, 'unlock_level', 1)
 
@@ -828,7 +828,7 @@ def generate_detail_page_special_structure(name, prods, structure_obj=None):
     # Generate schedule section if a schedule list is provided
     unlock_schedule_html = ""
     if isinstance(full_schedule, list) and len(full_schedule) > 0:
-        unlock_schedule_html = generate_unlock_schedule_component(full_schedule, name, asset_folder="special_structures")
+        unlock_schedule_html = generate_unlock_schedule_component(full_schedule, name, asset_folder="special_structures", base_path="../")
 
     filename = f"details_{name.lower().replace(' ', '_')}.html"
     html_content = templates.render_special_structure_page(
@@ -856,7 +856,7 @@ def generate_detail_page_field(name, prods, field_obj=None):
         field_unlock_lvl = min([getattr(p, 'unlock_level', 1) for p in prods]) if prods else 1
         full_schedule = field_unlock_lvl
 
-    img_base64 = get_base64_asset(name, "fields")
+    img_base64 = get_base64_asset(name, "fields", base_path="../")
     if img_base64:
         img_tag = f"""
         <div class="item-img-wrapper" id="mainMachineWrapper" data-unlock-level="{field_unlock_lvl}">
@@ -870,7 +870,7 @@ def generate_detail_page_field(name, prods, field_obj=None):
     produces_html = ""
     if prods:
         for prod_item in prods:
-            prod_img = get_base64_asset(prod_item.name, "items")
+            prod_img = get_base64_asset(prod_item.name, "items", base_path="../")
             prod_url = f"details_{prod_item.name.lower().replace(' ', '_')}.html"
             prod_unlock_lvl = getattr(prod_item, 'unlock_level', 1)
 
@@ -895,7 +895,7 @@ def generate_detail_page_field(name, prods, field_obj=None):
     # Generate schedule section if a schedule list is present
     unlock_schedule_html = ""
     if isinstance(full_schedule, list) and len(full_schedule) > 0:
-        unlock_schedule_html = generate_unlock_schedule_component(full_schedule, name, asset_folder="fields")
+        unlock_schedule_html = generate_unlock_schedule_component(full_schedule, name, asset_folder="fields", base_path="../")
 
     filename = f"details_{name.lower().replace(' ', '_')}.html"
     html_content = templates.render_field_page(
@@ -915,7 +915,7 @@ def generate_detail_page_field(name, prods, field_obj=None):
 def generate_detail_page_animal(name, animal_obj):
     animal_unlock_lvl = getattr(animal_obj, 'unlock_level', 1)
 
-    img_base64 = get_base64_asset(name, "animals")
+    img_base64 = get_base64_asset(name, "animals", base_path="../")
     if img_base64:
         img_tag = f"""
         <div class="item-img-wrapper" id="mainMachineWrapper" data-unlock-level="{animal_unlock_lvl}">
@@ -929,7 +929,7 @@ def generate_detail_page_animal(name, animal_obj):
     lives_in_html = '<span style="color:#888;">Nomad / No Pen</span>'
     if animal_obj.pen:
         pen_name = animal_obj.pen.name
-        pen_img = get_base64_asset(pen_name, "pens")
+        pen_img = get_base64_asset(pen_name, "pens", base_path="../")
         pen_url = f"details_{pen_name.lower().replace(' ', '_')}.html"
         pen_unlock_lvl = getattr(animal_obj.pen, 'unlock_level', 1)
 
@@ -943,7 +943,7 @@ def generate_detail_page_animal(name, animal_obj):
     food_html = '<span style="color:#888;">Forages / No Food</span>'
     if animal_obj.required_food:
         food_name = animal_obj.required_food.name
-        food_img = get_base64_asset(food_name, "items")
+        food_img = get_base64_asset(food_name, "items", base_path="../")
         food_url = f"details_{food_name.lower().replace(' ', '_')}.html"
         food_unlock_lvl = getattr(animal_obj.required_food, 'unlock_level', 1)
 
@@ -957,7 +957,7 @@ def generate_detail_page_animal(name, animal_obj):
     produces_html = ""
     if animal_obj.produces_item:
         prod_name = animal_obj.produces_item.name
-        prod_img = get_base64_asset(prod_name, "items")
+        prod_img = get_base64_asset(prod_name, "items", base_path="../")
         prod_url = f"details_{prod_name.lower().replace(' ', '_')}.html"
         prod_unlock_lvl = getattr(animal_obj.produces_item, 'unlock_level', 1)
 
