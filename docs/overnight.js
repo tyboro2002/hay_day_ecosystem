@@ -193,6 +193,11 @@ function importMachineSettings() {
    2. DOM & DYNAMIC RENDER ENGINE (DYNAMIC DOM SHELL)
    ========================================================================== */
 
+function getDetailDir() {
+    const dir = window.DETAIL_DIR || '.';
+    return dir.endsWith('/') ? dir.slice(0, -1) : dir;
+}
+
 function hydrateAssets(container = document) {
     container.querySelectorAll("img[data-asset]").forEach(img => {
         const key = img.getAttribute("data-asset");
@@ -219,16 +224,17 @@ function updateStrategyVisibility() {
     machineInstances.forEach(m => instanceMap.set(m.id, m));
 
     const coinSrc = (window.ASSET_BANK && window.ASSET_BANK['coin']) || '';
-    const coinImgHtml = `<img class="coin-icon" src="${coinSrc}" alt="coins">`;
+    const coinImgHtml = coinSrc ? `<img class="coin-icon" src="${coinSrc}" alt="coins">` : '';
 
     let panelTotalProfit = 0;
     const dynamicIngredients = {};
     let tableHtml = '';
+    const detailDir = getDetailDir();
 
     levelRows.forEach(row => {
         if (row.type === 'fields') {
             const comboParts = (row.combination || []).map(item => {
-                const cleanFilename = `${window.DETAIL_DIR}/details_${item.name.toLowerCase().replace(/ /g, '_').replace(/-/g, '_')}.html`;
+                const cleanFilename = `${detailDir}/details_${item.name.toLowerCase().replace(/ /g, '_').replace(/-/g, '_')}.html`;
                 const assetKey = item.name.toLowerCase().trim().replace(/ /g, '_');
                 const imgSrc = (window.ASSET_BANK && window.ASSET_BANK[assetKey]) || '';
                 const imgHtml = imgSrc ? `<img class="inline-item-img" src="${imgSrc}" alt="${item.name}">` : '';
@@ -248,7 +254,7 @@ function updateStrategyVisibility() {
             tableHtml += `
                 <tr>
                     <td class="source-cell">
-                        <a href="${window.DETAIL_DIR}/details_fields.html" class="machine-label-wrapper item-link">
+                        <a href="${detailDir}/details_fields.html" class="machine-label-wrapper item-link">
                             ${fieldsImgHtml} <b>Fields</b>
                         </a>
                     </td>
@@ -272,7 +278,7 @@ function updateStrategyVisibility() {
                     }
                 }
 
-                const machineCleanFilename = `${window.DETAIL_DIR}/details_${row.source.toLowerCase().replace(/ /g, '_').replace(/-/g, '_')}.html`;
+                const machineCleanFilename = `${detailDir}/details_${row.source.toLowerCase().replace(/ /g, '_').replace(/-/g, '_')}.html`;
                 const assetKey = row.source.toLowerCase().trim().replace(/ /g, '_');
                 const mImgSrc = (window.ASSET_BANK && window.ASSET_BANK[assetKey]) || '';
                 const mImgHtml = mImgSrc ? `<img class="inline-machine-img" src="${mImgSrc}" alt="${row.source}">` : '';
@@ -282,7 +288,7 @@ function updateStrategyVisibility() {
 
                 if (slotData) {
                     const comboParts = (slotData.combination || []).map(item => {
-                        const cleanFilename = `${window.DETAIL_DIR}/details_${item.name.toLowerCase().replace(/ /g, '_').replace(/-/g, '_')}.html`;
+                        const cleanFilename = `${detailDir}/details_${item.name.toLowerCase().replace(/ /g, '_').replace(/-/g, '_')}.html`;
                         const itemAssetKey = item.name.toLowerCase().trim().replace(/ /g, '_');
                         const imgSrc = (window.ASSET_BANK && window.ASSET_BANK[itemAssetKey]) || '';
                         const imgHtml = imgSrc ? `<img class="inline-item-img" src="${imgSrc}" alt="${item.name}">` : '';
@@ -329,7 +335,7 @@ function updateStrategyVisibility() {
         listContainer.innerHTML = '<li>None (No raw items processed).</li>';
     } else {
         listContainer.innerHTML = entries.map(([ingName, qty]) => {
-            const cleanFilename = `${window.DETAIL_DIR}/details_${ingName.toLowerCase().replace(/ /g, '_').replace(/-/g, '_')}.html`;
+            const cleanFilename = `${detailDir}/details_${ingName.toLowerCase().replace(/ /g, '_').replace(/-/g, '_')}.html`;
             const assetKey = ingName.toLowerCase().trim().replace(/ /g, '_');
             const imgSrc = (window.ASSET_BANK && window.ASSET_BANK[assetKey]) || '';
             const imgHtml = imgSrc ? `<img class="inline-item-img" src="${imgSrc}" alt="${ingName}">` : '';
@@ -449,7 +455,7 @@ function createMachineCard(config) {
     card.innerHTML = `
         <h4>${config.name}</h4>
         <div class="lvl-tag">Unlocked Level ${config.minLevel}</div>
-        <img src="${imgSrc}" class="card-img" alt="${config.name}">
+        <img ${imgSrc ? `src="${imgSrc}"` : ''} data-asset="${config.assetKey}" class="card-img" alt="${config.name}">
         <div class="mastery-stars-container ${state.selected ? '' : 'disabled-controls'}"></div>
         <div class="slots-grid ${state.selected ? '' : 'disabled-controls'}"></div>
     `;
@@ -472,13 +478,14 @@ function createMachineCard(config) {
                 e.stopPropagation();
                 const newMastery = (state.mastery === star) ? star - 1 : star;
 
+                // Sync mastery across all matching machine instances (e.g., Feed Mill #1 & #2)
                 machineInstances.forEach(other => {
                     if (other.assetKey === state.assetKey) {
                         other.mastery = newMastery;
+                        other.renderStars();
                     }
                 });
 
-                renderStars();
                 logMachineStateChange('Mastery Changed', state);
             });
             starsContainer.appendChild(starSpan);
@@ -510,11 +517,7 @@ function createMachineCard(config) {
             const buyTile = document.createElement('div');
             buyTile.className = 'slot-tile buy-slot';
 
-            if (diamondImgSrc) {
-                buyTile.innerHTML = `<span style="font-size:10px; line-height:1;">+</span><img src="${diamondImgSrc}" class="buy-diamond-icon" alt="diamond">`;
-            } else {
-                buyTile.innerHTML = `<span style="font-size:10px; line-height:1;">+</span><img class="buy-diamond-icon" data-asset="diamond" alt="diamond">`;
-            }
+            buyTile.innerHTML = `<span style="font-size:10px; line-height:1;">+</span><img ${diamondImgSrc ? `src="${diamondImgSrc}"` : ''} class="buy-diamond-icon" data-asset="diamond" alt="diamond">`;
             buyTile.title = "Click to buy another slot";
 
             buyTile.addEventListener('click', (e) => {
@@ -527,6 +530,10 @@ function createMachineCard(config) {
             });
 
             slotsGrid.appendChild(buyTile);
+        }
+
+        if (typeof setupImageObserver === 'function') {
+            setupImageObserver(slotsGrid);
         }
     }
 
@@ -541,6 +548,11 @@ function createMachineCard(config) {
 
     renderStars();
     renderSlots();
+
+    if (typeof setupImageObserver === 'function') {
+        setupImageObserver(card);
+    }
+
     state.card = card;
     state.starsContainer = starsContainer;
     state.slotsGrid = slotsGrid;
@@ -549,32 +561,16 @@ function createMachineCard(config) {
     machineInstances.push(state);
 }
 
-function initMachineCards() {
-    const container = document.getElementById("machines-container");
-    if (container) container.innerHTML = "";
-    machineInstances.length = 0;
-
-    if (window.MACHINE_CONFIGS) {
-        window.MACHINE_CONFIGS.forEach(config => {
-            createMachineCard(config);
-        });
-    }
-
-    updateStrategyVisibility();
-}
-
-function getSelectedMachinesData() {
-    return machineInstances.filter(m => m.selected).map(m => ({
-        id: m.id,
-        name: m.name,
-        slots: m.slots,
-        mastery: m.mastery
-    }));
-}
-
 /* ==========================================================================
-   5. LIFECYCLE INITIALIZATION
+   5. EXPOSE FUNCTIONS TO GLOBAL SCOPE & INITIALIZATION
    ========================================================================== */
+
+// FIX 2: Explicitly attach handlers to window scope for HTML inline calls
+window.switchTab = switchTab;
+window.switchLevel = switchLevel;
+window.clearMachineSettings = clearMachineSettings;
+window.exportMachineSettings = exportMachineSettings;
+window.importMachineSettings = importMachineSettings;
 
 document.addEventListener("DOMContentLoaded", function() {
     initMachineCards();
@@ -595,3 +591,24 @@ window.addEventListener('beforeunload', () => {
     if (skipNextAutoSave) return;
     saveMachineSettings(true);
 });
+
+function initMachineCards() {
+    const container = document.getElementById("machines-container");
+    if (!container) return;
+
+    container.innerHTML = "";
+    if (Array.isArray(window.machineInstances)) {
+        window.machineInstances.length = 0; // Clear existing references
+    }
+
+    if (Array.isArray(window.MACHINE_CONFIGS)) {
+        window.MACHINE_CONFIGS.forEach(config => {
+            if (typeof createMachineCard === 'function') {
+                createMachineCard(config);
+            }
+        });
+    }
+}
+
+// Attach to window so event listeners and DOM lifecycles can invoke it
+window.initMachineCards = initMachineCards;

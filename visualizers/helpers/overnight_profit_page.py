@@ -6,36 +6,36 @@ from game_data.crops_data import CROPS
 from game_data.game_data import DIAMOND_COST, MAX_LEVEL, CURRENT_LEVEL
 from game_data.machines_data import MACHINES
 from game_data.plants_data import PLANTS
-from visualizers.helpers.formatting import get_base64_asset
 from visualizers.helpers.templates import DISCLAIMER_FOOTER, render_level_filter_persistence_script
 
 
-def load_all_assets(base, folders):
+def build_asset_url_map(base_dir, folders):
+    """
+    Scans the docs/assets/ directory and maps asset keys to relative web paths.
+    """
     asset_bank = {}
-    valid_extensions = ('.png',)
+    valid_extensions = ('.png', '.jpg', '.webp')
 
     for folder in folders:
-        folder = base + folder
-        if not os.path.exists(folder):
+        folder_path = os.path.join(base_dir, folder)
+        if not os.path.exists(folder_path):
             continue
 
-        category = os.path.basename(os.path.normpath(folder))
+        category = os.path.basename(os.path.normpath(folder_path))
 
-        for entry in os.listdir(folder):
-            full_path = os.path.join(folder, entry)
-
+        for entry in os.listdir(folder_path):
+            full_path = os.path.join(folder_path, entry)
             if os.path.isfile(full_path) and entry.lower().endswith(valid_extensions):
                 asset_name = os.path.splitext(entry)[0].lower().strip()
-                b64_val = get_base64_asset(asset_name, category)
-
-                if b64_val:
-                    asset_bank[asset_name] = b64_val
+                # Store relative static web paths: e.g., "assets/items/wheat.png"
+                asset_bank[asset_name] = f"assets/{category}/{entry}"
 
     return asset_bank
 
 
+# Base asset path points to docs/assets/ relative to execution
 TARGET_FOLDERS = ["items", "storage", "machines", "fields"]
-GLOBAL_ASSETS = load_all_assets("assets/", TARGET_FOLDERS)
+GLOBAL_ASSETS = build_asset_url_map("docs/assets/", TARGET_FOLDERS)
 
 
 def get_asset_ref(asset_name, css_class="", alt_text=""):
@@ -148,9 +148,13 @@ def generate_overnight_page(outp, detail_dir, current_level=CURRENT_LEVEL, max_l
     durations = [1*60, 2*60, 4*60, 8*60, 12*60, 24*60]
     strategy_payload = build_strategy_json_payload(durations, detail_dir, max_level=max_level)
 
-    asset_bank_json = json.dumps(GLOBAL_ASSETS)
-    strategy_data_json = json.dumps(strategy_payload)
+    # Output the heavy calculation matrix into a dedicated static JSON file
+    os.makedirs(outp, exist_ok=True)
+    json_out_path = os.path.join(outp, "overnight_data.json")
+    with open(json_out_path, "w", encoding="utf-8") as f:
+        json.dump(strategy_payload, f, separators=(',', ':'))
 
+    asset_bank_json = json.dumps(GLOBAL_ASSETS)
     crops_set = json.dumps(list(CROPS.keys()))
     plants_set = json.dumps(list(PLANTS.keys()))
 
@@ -231,7 +235,6 @@ def generate_overnight_page(outp, detail_dir, current_level=CURRENT_LEVEL, max_l
             <li class="tab-link" onclick="switchTab(event, 'tab-24h')">24-Hour Day Off</li>
         </ul>
 
-        <!-- Single reusable DOM Shell for rendering active tab views -->
         <div class="tab-content">
             <div class="dashboard-grid">
                 <div class="stat-card">
@@ -302,16 +305,25 @@ def generate_overnight_page(outp, detail_dir, current_level=CURRENT_LEVEL, max_l
 
     <script>
         window.ASSET_BANK = {asset_bank_json};
-        window.STRATEGY_DATA = {strategy_data_json};
         window.MACHINE_CONFIGS = {machine_config_json};
-        window.SILO_ITEMS = new Set({crops_set}.concat({plants_set}));
+        window.SILO_ITEMS = new Set([...{crops_set}, ...{plants_set}]);
         window.DETAIL_DIR = "{detail_dir}";
+
+        // Fetch heavy strategy data asynchronously to prevent bloated static HTML files
+        fetch('overnight_data.json')
+            .then(res => res.json())
+            .then(data => {{
+                window.STRATEGY_DATA = data;
+                if (typeof updateStrategyVisibility === 'function') {{
+                    updateStrategyVisibility();
+                }}
+            }})
+            .catch(err => console.error("Error loading overnight_data.json:", err));
     </script>
     <script src="overnight.js"></script>
 </body>
 </html>"""
 
     target_path = os.path.join(outp, "overnight_strategies.html")
-    os.makedirs(os.path.dirname(target_path), exist_ok=True)
     with open(target_path, "w", encoding="utf-8") as f:
         f.write(html_content)

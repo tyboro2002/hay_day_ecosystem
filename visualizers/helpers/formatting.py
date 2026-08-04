@@ -1,7 +1,4 @@
-import io
-from PIL import Image
 import os
-import base64
 from functools import lru_cache
 
 # Keep track of missing assets globally across generators
@@ -31,38 +28,15 @@ def format_duration(minutes):
 
     return " ".join(parts)
 
-@lru_cache(maxsize=1024)  # Caches duplicate images so they only encode ONCE
-def image_to_base64(image_path):
-    """Converts a local image file to a compressed base64 webp string quickly."""
-    global non_found
-    if not os.path.exists(image_path):
-        non_found += 1
-        print(f"{ORANGE}Did not find {image_path}{RESET}")
-        image_path = os.path.join("assets", "default_icon.png")
-
-    try:
-        with Image.open(image_path) as img:
-            # BILINEAR or BOX resampling is significantly faster than LANCZOS for tiny icons
-            img.thumbnail((128, 128), Image.Resampling.BILINEAR)
-
-            buffered = io.BytesIO()
-
-            # method=0 or method=4 gives 95% of the compression at a fraction of the time
-            # quality=75 is the WebP sweet spot for small UI icons
-            img.save(buffered, format="WEBP", quality=75, method=4)
-
-            encoded = base64.b64encode(buffered.getvalue()).decode('utf-8')
-            return f"data:image/webp;base64,{encoded}"
-    except Exception as e:
-        print(f"Error encoding {image_path}: {e}")
-        return None
-
 
 def get_base64_asset(name, subfolder):
-    """Helper to get base64 string based on name and subfolder."""
+    """
+    Returns a relative web path for HTML <img> tags instead of base64 strings.
+    Kept with the same name for backward compatibility across other visualizer scripts.
+    """
     filename = f"{name.lower().replace(' ', '_')}.png"
-    filepath = os.path.join("assets", subfolder, filename)
-    return image_to_base64(filepath)
+    return f"assets/{subfolder}/{filename}"
+
 
 def get_mastery_image_filename(star_number, info, machine_name):
     """
@@ -90,7 +64,7 @@ def get_mastery_image_filename(star_number, info, machine_name):
 
 def format_mastery_bonus_text(info):
     """Formats raw mastery YAML data into human-readable text + inline asset icons."""
-    # 1. Fetch base64 icons from the mastery directory
+    # 1. Fetch web asset paths from the mastery directory
     coin_asset = get_base64_asset("coins", "mastery")
     xp_asset = get_base64_asset("xp", "mastery")
     time_asset = get_base64_asset("time", "mastery")
