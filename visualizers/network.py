@@ -312,7 +312,7 @@ def generate_interactive_farm_graph(output_filename=f"{outp}/{outp_file}"):
 def generate_detail_page_item(name, item_obj, filename):
     item_unlock_lvl = getattr(item_obj, 'unlock_level', 1)
 
-    item_img_base64 = get_base64_asset(name, "items")
+    item_img_base64 = get_base64_asset(name, "items", base_path="../")
     if item_img_base64:
         img_tag = f"""
         <div class="item-img-wrapper" id="mainMachineWrapper" data-unlock-level="{item_unlock_lvl}">
@@ -327,7 +327,7 @@ def generate_detail_page_item(name, item_obj, filename):
     if sell_price is None:
         sell_price = 'N/A'
 
-    coin_b64 = get_base64_asset("coin", "items")
+    coin_b64 = get_base64_asset("coin", "items", base_path="../")
     coin_img = f'<img src="{coin_b64}" alt="coins" style="width: 18px; height: 18px; object-fit: contain; vertical-align: middle; margin-left: 3px; margin-top: -2px; display: inline-block;">' if coin_b64 else " Coins"
 
     price_display = f"{sell_price}{coin_img}" if sell_price != 'N/A' else "Unsellable"
@@ -371,7 +371,7 @@ def generate_detail_page_item(name, item_obj, filename):
 
     producer_html = ""
     if producer_name and producer_folder:
-        producer_img = get_base64_asset(producer_name, producer_folder)
+        producer_img = get_base64_asset(producer_name, producer_folder, base_path="../")
         producer_url = f"details_{producer_name.lower().replace(' ', '_')}.html"
         producer_html = f"""
         <div class="producer-section">
@@ -412,7 +412,7 @@ def generate_detail_page_item(name, item_obj, filename):
     if has_ingredients:
         for ing_item, qty in ingredients_dict.items():
             ing_name = ing_item.name
-            ing_img = get_base64_asset(ing_name, "items")
+            ing_img = get_base64_asset(ing_name, "items", base_path="../")
             ing_url = f"details_{ing_name.lower().replace(' ', '_')}.html"
             ing_unlock_lvl = getattr(ing_item, 'unlock_level', 1)
             qty_str = f"x{qty:.1f}" if isinstance(qty, float) else f"x{qty}"
@@ -451,7 +451,7 @@ def generate_detail_page_item(name, item_obj, filename):
         </div>
         """
     elif not has_ingredients:
-        coin_b64 = get_base64_asset("coin", "items")
+        coin_b64 = get_base64_asset("coin", "items", base_path="../")
         coin_img_html = f'<img src="{coin_b64}" alt="coins" style="width: 18px; height: 18px; object-fit: contain; vertical-align: middle; margin-left: 3px; margin-top: -2px; display: inline-block;">' if coin_b64 else "Coins"
 
         profit_html = f"""
