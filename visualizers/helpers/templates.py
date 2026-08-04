@@ -258,7 +258,7 @@ def generate_unlock_schedule_component(full_schedule, name, asset_folder="machin
         if img_base64 else f" {name}"
     )
 
-    coin_asset = get_base64_asset("coin", "items", base_path="")
+    coin_asset = get_base64_asset("coin", "items", base_path=base_path)
     coin_img = f'<img src="{coin_asset}" alt="Coins" style="width: 16px; height: 16px; object-fit: contain; vertical-align: middle; margin-left: 3px;">' if coin_asset else " Coins"
 
     schedule_rows = ""
