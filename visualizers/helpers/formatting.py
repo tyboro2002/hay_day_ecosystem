@@ -35,7 +35,7 @@ def get_base64_asset(name, subfolder):
     Kept with the same name for backward compatibility across other visualizer scripts.
     """
     filename = f"{name.lower().replace(' ', '_')}.png"
-    return f"assets/{subfolder}/{filename}"
+    return f"/assets/{subfolder}/{filename}"
 
 
 def get_mastery_image_filename(star_number, info, machine_name):
