@@ -3,8 +3,8 @@ import json
 from game_data import ITEMS, INFRASTRUCTURE
 
 base_path = "/hay_day_ecosystem/api/v1/"
-assets_path = "/assets/"
-details_path = "/details/"
+assets_path = "/hay_day_ecosystem/assets/"
+details_path = "/hay_day_ecosystem/details/"
 infrastructure_path = "/infrastructure/"
 
 # Relative base path strategy to ensure compatibility across local & GitHub Pages
