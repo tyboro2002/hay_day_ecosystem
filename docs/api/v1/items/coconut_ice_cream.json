@@ -5,8 +5,8 @@
   "unlock_level": 102,
   "time_to_make_minutes": 15,
   "_links": {
-    "self": "/api/v1/items/coconut_ice_cream.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/coconut_ice_cream.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/coconut_ice_cream.png",
     "html_details": "/details/details_coconut_ice_cream.html"
   },
@@ -15,14 +15,14 @@
       "name": "Coconut",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/coconut.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/coconut.json"
       }
     },
     {
       "name": "Syrup",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/syrup.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/syrup.json"
       }
     }
   ]

@@ -5,8 +5,8 @@
   "unlock_level": 58,
   "time_to_make_minutes": 120,
   "_links": {
-    "self": "/api/v1/items/feta_salad.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/feta_salad.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/feta_salad.png",
     "html_details": "/details/details_feta_salad.html"
   },
@@ -15,28 +15,28 @@
       "name": "Goat Cheese",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/goat_cheese.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/goat_cheese.json"
       }
     },
     {
       "name": "Lettuce",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/lettuce.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/lettuce.json"
       }
     },
     {
       "name": "Olive",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/olive.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/olive.json"
       }
     },
     {
       "name": "Roasted Tomatoes",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/roasted_tomatoes.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/roasted_tomatoes.json"
       }
     }
   ]

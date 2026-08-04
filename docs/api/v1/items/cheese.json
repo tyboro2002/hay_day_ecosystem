@@ -5,8 +5,8 @@
   "unlock_level": 12,
   "time_to_make_minutes": 60,
   "_links": {
-    "self": "/api/v1/items/cheese.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/cheese.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/cheese.png",
     "html_details": "/details/details_cheese.html"
   },
@@ -15,7 +15,7 @@
       "name": "Milk",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/milk.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/milk.json"
       }
     }
   ]

@@ -5,8 +5,8 @@
   "unlock_level": 71,
   "time_to_make_minutes": 90,
   "_links": {
-    "self": "/api/v1/items/flower_shawl.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/flower_shawl.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/flower_shawl.png",
     "html_details": "/details/details_flower_shawl.html"
   },
@@ -15,21 +15,21 @@
       "name": "Wool",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/wool.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/wool.json"
       }
     },
     {
       "name": "Sunflower",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/sunflower.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/sunflower.json"
       }
     },
     {
       "name": "Blackberry",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/blackberry.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/blackberry.json"
       }
     }
   ]

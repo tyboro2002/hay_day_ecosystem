@@ -5,8 +5,8 @@
   "unlock_level": 40,
   "time_to_make_minutes": 240,
   "_links": {
-    "self": "/api/v1/items/diamond_ring.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/diamond_ring.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/diamond_ring.png",
     "html_details": "/details/details_diamond_ring.html"
   },
@@ -15,21 +15,21 @@
       "name": "Diamond",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/diamond.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/diamond.json"
       }
     },
     {
       "name": "Platinum Bar",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/platinum_bar.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/platinum_bar.json"
       }
     },
     {
       "name": "Gold Bar",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/gold_bar.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/gold_bar.json"
       }
     }
   ]

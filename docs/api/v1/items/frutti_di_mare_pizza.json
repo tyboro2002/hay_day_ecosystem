@@ -5,8 +5,8 @@
   "unlock_level": 45,
   "time_to_make_minutes": 15,
   "_links": {
-    "self": "/api/v1/items/frutti_di_mare_pizza.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/frutti_di_mare_pizza.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/frutti_di_mare_pizza.png",
     "html_details": "/details/details_frutti_di_mare_pizza.html"
   },
@@ -15,28 +15,28 @@
       "name": "Wheat",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/wheat.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/wheat.json"
       }
     },
     {
       "name": "Cheese",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/cheese.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/cheese.json"
       }
     },
     {
       "name": "Fish Fillet",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/fish_fillet.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/fish_fillet.json"
       }
     },
     {
       "name": "Lobster Tail",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/lobster_tail.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/lobster_tail.json"
       }
     }
   ]

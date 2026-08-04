@@ -5,8 +5,8 @@
   "unlock_level": 21,
   "time_to_make_minutes": 90,
   "_links": {
-    "self": "/api/v1/items/carrot_cake.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/carrot_cake.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/carrot_cake.png",
     "html_details": "/details/details_carrot_cake.html"
   },
@@ -15,21 +15,21 @@
       "name": "Carrot",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/carrot.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/carrot.json"
       }
     },
     {
       "name": "Butter",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/butter.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/butter.json"
       }
     },
     {
       "name": "Brown Sugar",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/brown_sugar.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/brown_sugar.json"
       }
     }
   ]

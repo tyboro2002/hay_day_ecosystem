@@ -5,8 +5,8 @@
   "unlock_level": 107,
   "time_to_make_minutes": 34,
   "_links": {
-    "self": "/api/v1/items/pomegranate_tea.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/pomegranate_tea.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/pomegranate_tea.png",
     "html_details": "/details/details_pomegranate_tea.html"
   },
@@ -15,14 +15,14 @@
       "name": "Tea Leaf",
       "quantity": 4,
       "_links": {
-        "detail": "/api/v1/items/tea_leaf.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/tea_leaf.json"
       }
     },
     {
       "name": "Pomegranate",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/pomegranate.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/pomegranate.json"
       }
     }
   ]

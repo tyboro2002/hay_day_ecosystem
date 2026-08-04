@@ -5,8 +5,8 @@
   "unlock_level": 74,
   "time_to_make_minutes": 150,
   "_links": {
-    "self": "/api/v1/items/sun_hat.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/sun_hat.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/sun_hat.png",
     "html_details": "/details/details_sun_hat.html"
   },
@@ -15,28 +15,28 @@
       "name": "Wool",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/wool.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/wool.json"
       }
     },
     {
       "name": "Indigo",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/indigo.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/indigo.json"
       }
     },
     {
       "name": "Duck Feather",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/duck_feather.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/duck_feather.json"
       }
     },
     {
       "name": "Raspberry",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/raspberry.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/raspberry.json"
       }
     }
   ]

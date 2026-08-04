@@ -5,8 +5,8 @@
   "unlock_level": 64,
   "time_to_make_minutes": 45,
   "_links": {
-    "self": "/api/v1/items/snack_mix.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/snack_mix.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/snack_mix.png",
     "html_details": "/details/details_snack_mix.html"
   },
@@ -15,21 +15,21 @@
       "name": "Corn",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/corn.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/corn.json"
       }
     },
     {
       "name": "Sesame",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/sesame.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/sesame.json"
       }
     },
     {
       "name": "Peanuts",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/peanuts.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/peanuts.json"
       }
     }
   ]

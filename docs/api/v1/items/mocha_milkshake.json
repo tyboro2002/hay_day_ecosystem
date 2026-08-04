@@ -5,8 +5,8 @@
   "unlock_level": 125,
   "time_to_make_minutes": 30,
   "_links": {
-    "self": "/api/v1/items/mocha_milkshake.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/mocha_milkshake.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/mocha_milkshake.png",
     "html_details": "/details/details_mocha_milkshake.html"
   },
@@ -15,14 +15,14 @@
       "name": "Chocolate Ice Cream",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/chocolate_ice_cream.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/chocolate_ice_cream.json"
       }
     },
     {
       "name": "Espresso",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/espresso.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/espresso.json"
       }
     }
   ]

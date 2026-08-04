@@ -5,8 +5,8 @@
   "unlock_level": 33,
   "time_to_make_minutes": 360,
   "_links": {
-    "self": "/api/v1/items/refined_coal.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/refined_coal.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/refined_coal.png",
     "html_details": "/details/details_refined_coal.html"
   },
@@ -15,7 +15,7 @@
       "name": "Coal",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/coal.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/coal.json"
       }
     }
   ]

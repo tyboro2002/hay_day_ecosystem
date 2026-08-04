@@ -5,8 +5,8 @@
   "unlock_level": 93,
   "time_to_make_minutes": 45,
   "_links": {
-    "self": "/api/v1/items/black_sesame_smoothie.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/black_sesame_smoothie.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/black_sesame_smoothie.png",
     "html_details": "/details/details_black_sesame_smoothie.html"
   },
@@ -15,21 +15,21 @@
       "name": "Sesame",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/sesame.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/sesame.json"
       }
     },
     {
       "name": "Banana",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/banana.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/banana.json"
       }
     },
     {
       "name": "Goat Milk",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/goat_milk.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/goat_milk.json"
       }
     }
   ]

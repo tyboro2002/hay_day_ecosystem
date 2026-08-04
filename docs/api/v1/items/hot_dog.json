@@ -5,8 +5,8 @@
   "unlock_level": 75,
   "time_to_make_minutes": 30,
   "_links": {
-    "self": "/api/v1/items/hot_dog.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/hot_dog.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/hot_dog.png",
     "html_details": "/details/details_hot_dog.html"
   },
@@ -15,21 +15,21 @@
       "name": "Bacon",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/bacon.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/bacon.json"
       }
     },
     {
       "name": "Bread",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/bread.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/bread.json"
       }
     },
     {
       "name": "Tomato Sauce",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/tomato_sauce.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/tomato_sauce.json"
       }
     }
   ]

@@ -5,8 +5,8 @@
   "unlock_level": 36,
   "time_to_make_minutes": 120,
   "_links": {
-    "self": "/api/v1/items/casserole.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/casserole.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/casserole.png",
     "html_details": "/details/details_casserole.html"
   },
@@ -15,28 +15,28 @@
       "name": "Bacon",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/bacon.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/bacon.json"
       }
     },
     {
       "name": "Cheese",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/cheese.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/cheese.json"
       }
     },
     {
       "name": "Egg",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/egg.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/egg.json"
       }
     },
     {
       "name": "Potato",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/potato.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/potato.json"
       }
     }
   ]

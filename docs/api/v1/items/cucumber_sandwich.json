@@ -5,8 +5,8 @@
   "unlock_level": 79,
   "time_to_make_minutes": 35,
   "_links": {
-    "self": "/api/v1/items/cucumber_sandwich.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/cucumber_sandwich.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/cucumber_sandwich.png",
     "html_details": "/details/details_cucumber_sandwich.html"
   },
@@ -15,21 +15,21 @@
       "name": "Cucumber",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/cucumber.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/cucumber.json"
       }
     },
     {
       "name": "Bread",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/bread.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/bread.json"
       }
     },
     {
       "name": "Mayonnaise",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/mayonnaise.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/mayonnaise.json"
       }
     }
   ]

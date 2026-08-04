@@ -5,8 +5,8 @@
   "unlock_level": 65,
   "time_to_make_minutes": 20,
   "_links": {
-    "self": "/api/v1/items/bright_bouquet.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/bright_bouquet.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/bright_bouquet.png",
     "html_details": "/details/details_bright_bouquet.html"
   },
@@ -15,28 +15,28 @@
       "name": "Sunflower",
       "quantity": 5,
       "_links": {
-        "detail": "/api/v1/items/sunflower.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/sunflower.json"
       }
     },
     {
       "name": "Iron Ore",
       "quantity": 5,
       "_links": {
-        "detail": "/api/v1/items/iron_ore.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/iron_ore.json"
       }
     },
     {
       "name": "Indigo",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/indigo.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/indigo.json"
       }
     },
     {
       "name": "Cotton",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/cotton.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/cotton.json"
       }
     }
   ]

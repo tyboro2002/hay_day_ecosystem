@@ -5,8 +5,8 @@
   "unlock_level": 41,
   "time_to_make_minutes": 90,
   "_links": {
-    "self": "/api/v1/items/fish_and_chips.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/fish_and_chips.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/fish_and_chips.png",
     "html_details": "/details/details_fish_and_chips.html"
   },
@@ -15,14 +15,14 @@
       "name": "Fish Fillet",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/fish_fillet.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/fish_fillet.json"
       }
     },
     {
       "name": "Potato",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/potato.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/potato.json"
       }
     }
   ]

@@ -5,8 +5,8 @@
   "unlock_level": 14,
   "time_to_make_minutes": 60,
   "_links": {
-    "self": "/api/v1/items/carrot_pie.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/carrot_pie.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/carrot_pie.png",
     "html_details": "/details/details_carrot_pie.html"
   },
@@ -15,21 +15,21 @@
       "name": "Wheat",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/wheat.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/wheat.json"
       }
     },
     {
       "name": "Egg",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/egg.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/egg.json"
       }
     },
     {
       "name": "Carrot",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/carrot.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/carrot.json"
       }
     }
   ]

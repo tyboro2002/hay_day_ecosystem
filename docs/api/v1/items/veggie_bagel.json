@@ -5,8 +5,8 @@
   "unlock_level": 61,
   "time_to_make_minutes": 40,
   "_links": {
-    "self": "/api/v1/items/veggie_bagel.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/veggie_bagel.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/veggie_bagel.png",
     "html_details": "/details/details_veggie_bagel.html"
   },
@@ -15,28 +15,28 @@
       "name": "Bread",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/bread.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/bread.json"
       }
     },
     {
       "name": "Lettuce",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/lettuce.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/lettuce.json"
       }
     },
     {
       "name": "Olive Oil",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/olive_oil.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/olive_oil.json"
       }
     },
     {
       "name": "Tomato",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/tomato.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/tomato.json"
       }
     }
   ]

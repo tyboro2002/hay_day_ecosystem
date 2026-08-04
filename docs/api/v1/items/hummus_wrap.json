@@ -5,8 +5,8 @@
   "unlock_level": 109,
   "time_to_make_minutes": 30,
   "_links": {
-    "self": "/api/v1/items/hummus_wrap.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/hummus_wrap.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/hummus_wrap.png",
     "html_details": "/details/details_hummus_wrap.html"
   },
@@ -15,21 +15,21 @@
       "name": "Hummus",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/hummus.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/hummus.json"
       }
     },
     {
       "name": "Bread",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/bread.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/bread.json"
       }
     },
     {
       "name": "Lettuce",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/lettuce.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/lettuce.json"
       }
     }
   ]

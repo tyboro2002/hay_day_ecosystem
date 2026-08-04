@@ -5,8 +5,8 @@
   "unlock_level": 65,
   "time_to_make_minutes": 75,
   "_links": {
-    "self": "/api/v1/items/chocolate_pie.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/chocolate_pie.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/chocolate_pie.png",
     "html_details": "/details/details_chocolate_pie.html"
   },
@@ -15,28 +15,28 @@
       "name": "Wheat",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/wheat.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/wheat.json"
       }
     },
     {
       "name": "Cacao",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/cacao.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/cacao.json"
       }
     },
     {
       "name": "Egg",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/egg.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/egg.json"
       }
     },
     {
       "name": "Peanuts",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/peanuts.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/peanuts.json"
       }
     }
   ]

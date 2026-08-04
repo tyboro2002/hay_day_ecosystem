@@ -5,8 +5,8 @@
   "unlock_level": 30,
   "time_to_make_minutes": 90,
   "_links": {
-    "self": "/api/v1/items/roasted_tomatoes.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/roasted_tomatoes.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/roasted_tomatoes.png",
     "html_details": "/details/details_roasted_tomatoes.html"
   },
@@ -15,7 +15,7 @@
       "name": "Tomato",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/tomato.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/tomato.json"
       }
     }
   ]

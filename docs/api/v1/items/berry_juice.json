@@ -5,8 +5,8 @@
   "unlock_level": 31,
   "time_to_make_minutes": 180,
   "_links": {
-    "self": "/api/v1/items/berry_juice.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/berry_juice.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/berry_juice.png",
     "html_details": "/details/details_berry_juice.html"
   },
@@ -15,14 +15,14 @@
       "name": "Blackberry",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/blackberry.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/blackberry.json"
       }
     },
     {
       "name": "Raspberry",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/raspberry.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/raspberry.json"
       }
     }
   ]

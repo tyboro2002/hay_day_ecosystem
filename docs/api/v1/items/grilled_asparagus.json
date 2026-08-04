@@ -5,8 +5,8 @@
   "unlock_level": 67,
   "time_to_make_minutes": 75,
   "_links": {
-    "self": "/api/v1/items/grilled_asparagus.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/grilled_asparagus.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/grilled_asparagus.png",
     "html_details": "/details/details_grilled_asparagus.html"
   },
@@ -15,21 +15,21 @@
       "name": "Asparagus",
       "quantity": 5,
       "_links": {
-        "detail": "/api/v1/items/asparagus.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/asparagus.json"
       }
     },
     {
       "name": "Bacon",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/bacon.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/bacon.json"
       }
     },
     {
       "name": "Lemon",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/lemon.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/lemon.json"
       }
     }
   ]

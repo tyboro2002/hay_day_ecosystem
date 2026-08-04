@@ -5,8 +5,8 @@
   "unlock_level": 101,
   "time_to_make_minutes": 75,
   "_links": {
-    "self": "/api/v1/items/mushroom_pasta.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/mushroom_pasta.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/mushroom_pasta.png",
     "html_details": "/details/details_mushroom_pasta.html"
   },
@@ -15,21 +15,21 @@
       "name": "Mushroom",
       "quantity": 5,
       "_links": {
-        "detail": "/api/v1/items/mushroom.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/mushroom.json"
       }
     },
     {
       "name": "Fresh Pasta",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/fresh_pasta.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/fresh_pasta.json"
       }
     },
     {
       "name": "Goat Milk",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/goat_milk.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/goat_milk.json"
       }
     }
   ]

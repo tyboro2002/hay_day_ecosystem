@@ -5,8 +5,8 @@
   "unlock_level": 93,
   "time_to_make_minutes": 35,
   "_links": {
-    "self": "/api/v1/items/filled_donut.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/filled_donut.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/filled_donut.png",
     "html_details": "/details/details_filled_donut.html"
   },
@@ -15,14 +15,14 @@
       "name": "Plain Donut",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/plain_donut.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/plain_donut.json"
       }
     },
     {
       "name": "Raspberry Jam",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/raspberry_jam.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/raspberry_jam.json"
       }
     }
   ]

@@ -5,8 +5,8 @@
   "unlock_level": 38,
   "time_to_make_minutes": 120,
   "_links": {
-    "self": "/api/v1/items/potato_feta_cake.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/potato_feta_cake.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/potato_feta_cake.png",
     "html_details": "/details/details_potato_feta_cake.html"
   },
@@ -15,21 +15,21 @@
       "name": "Egg",
       "quantity": 4,
       "_links": {
-        "detail": "/api/v1/items/egg.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/egg.json"
       }
     },
     {
       "name": "Goat Cheese",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/goat_cheese.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/goat_cheese.json"
       }
     },
     {
       "name": "Potato",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/potato.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/potato.json"
       }
     }
   ]

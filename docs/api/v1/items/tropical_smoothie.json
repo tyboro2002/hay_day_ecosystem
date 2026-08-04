@@ -5,8 +5,8 @@
   "unlock_level": 102,
   "time_to_make_minutes": 35,
   "_links": {
-    "self": "/api/v1/items/tropical_smoothie.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/tropical_smoothie.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/tropical_smoothie.png",
     "html_details": "/details/details_tropical_smoothie.html"
   },
@@ -15,28 +15,28 @@
       "name": "Plum",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/plum.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/plum.json"
       }
     },
     {
       "name": "Grapes",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/grapes.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/grapes.json"
       }
     },
     {
       "name": "Mint",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/mint.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/mint.json"
       }
     },
     {
       "name": "Honey",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/honey.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/honey.json"
       }
     }
   ]

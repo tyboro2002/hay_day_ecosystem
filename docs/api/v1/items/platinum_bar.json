@@ -5,8 +5,8 @@
   "unlock_level": 25,
   "time_to_make_minutes": 960,
   "_links": {
-    "self": "/api/v1/items/platinum_bar.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/platinum_bar.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/platinum_bar.png",
     "html_details": "/details/details_platinum_bar.html"
   },
@@ -15,7 +15,7 @@
       "name": "Platinum Ore",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/platinum_ore.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/platinum_ore.json"
       }
     }
   ]

@@ -5,8 +5,8 @@
   "unlock_level": 32,
   "time_to_make_minutes": 20,
   "_links": {
-    "self": "/api/v1/items/lamb_doner_wrap.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/lamb_doner_wrap.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/lamb_doner_wrap.png",
     "html_details": "/details/details_lamb_doner_wrap.html"
   },
@@ -15,21 +15,21 @@
       "name": "Grilled Lamb Skewer",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/grilled_lamb_skewer.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/grilled_lamb_skewer.json"
       }
     },
     {
       "name": "Tomato",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/tomato.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/tomato.json"
       }
     },
     {
       "name": "Bread",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/bread.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/bread.json"
       }
     }
   ]

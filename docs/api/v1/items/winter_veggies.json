@@ -5,8 +5,8 @@
   "unlock_level": 72,
   "time_to_make_minutes": 25,
   "_links": {
-    "self": "/api/v1/items/winter_veggies.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/winter_veggies.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/winter_veggies.png",
     "html_details": "/details/details_winter_veggies.html"
   },
@@ -15,28 +15,28 @@
       "name": "Beetroot",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/beetroot.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/beetroot.json"
       }
     },
     {
       "name": "Carrot",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/carrot.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/carrot.json"
       }
     },
     {
       "name": "Potato",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/potato.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/potato.json"
       }
     },
     {
       "name": "Pumpkin",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/pumpkin.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/pumpkin.json"
       }
     }
   ]

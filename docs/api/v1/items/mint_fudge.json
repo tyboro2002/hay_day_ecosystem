@@ -5,8 +5,8 @@
   "unlock_level": 102,
   "time_to_make_minutes": 150,
   "_links": {
-    "self": "/api/v1/items/mint_fudge.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/mint_fudge.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/mint_fudge.png",
     "html_details": "/details/details_mint_fudge.html"
   },
@@ -15,28 +15,28 @@
       "name": "Butter",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/butter.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/butter.json"
       }
     },
     {
       "name": "Cacao",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/cacao.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/cacao.json"
       }
     },
     {
       "name": "White Sugar",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/white_sugar.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/white_sugar.json"
       }
     },
     {
       "name": "Mint",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/mint.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/mint.json"
       }
     }
   ]

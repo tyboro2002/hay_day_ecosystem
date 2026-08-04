@@ -5,8 +5,8 @@
   "unlock_level": 54,
   "time_to_make_minutes": 180,
   "_links": {
-    "self": "/api/v1/items/soy_sauce.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/soy_sauce.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/soy_sauce.png",
     "html_details": "/details/details_soy_sauce.html"
   },
@@ -15,14 +15,14 @@
       "name": "Soybean",
       "quantity": 9,
       "_links": {
-        "detail": "/api/v1/items/soybean.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/soybean.json"
       }
     },
     {
       "name": "Wheat",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/wheat.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/wheat.json"
       }
     }
   ]

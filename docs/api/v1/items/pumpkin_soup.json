@@ -5,8 +5,8 @@
   "unlock_level": 49,
   "time_to_make_minutes": 120,
   "_links": {
-    "self": "/api/v1/items/pumpkin_soup.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/pumpkin_soup.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/pumpkin_soup.png",
     "html_details": "/details/details_pumpkin_soup.html"
   },
@@ -15,28 +15,28 @@
       "name": "Butter",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/butter.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/butter.json"
       }
     },
     {
       "name": "Carrot",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/carrot.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/carrot.json"
       }
     },
     {
       "name": "Honey",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/honey.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/honey.json"
       }
     },
     {
       "name": "Pumpkin",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/pumpkin.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/pumpkin.json"
       }
     }
   ]

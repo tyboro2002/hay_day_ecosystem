@@ -5,8 +5,8 @@
   "unlock_level": 59,
   "time_to_make_minutes": 60,
   "_links": {
-    "self": "/api/v1/items/lobster_sushi.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/lobster_sushi.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/lobster_sushi.png",
     "html_details": "/details/details_lobster_sushi.html"
   },
@@ -15,21 +15,21 @@
       "name": "Lobster Tail",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/lobster_tail.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/lobster_tail.json"
       }
     },
     {
       "name": "Rice",
       "quantity": 15,
       "_links": {
-        "detail": "/api/v1/items/rice.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/rice.json"
       }
     },
     {
       "name": "Soy Sauce",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/soy_sauce.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/soy_sauce.json"
       }
     }
   ]

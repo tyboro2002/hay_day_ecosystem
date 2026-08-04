@@ -5,8 +5,8 @@
   "unlock_level": 81,
   "time_to_make_minutes": 45,
   "_links": {
-    "self": "/api/v1/items/milk_tea.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/milk_tea.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/milk_tea.png",
     "html_details": "/details/details_milk_tea.html"
   },
@@ -15,14 +15,14 @@
       "name": "Tea Leaf",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/tea_leaf.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/tea_leaf.json"
       }
     },
     {
       "name": "Milk",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/milk.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/milk.json"
       }
     }
   ]

@@ -5,8 +5,8 @@
   "unlock_level": 70,
   "time_to_make_minutes": 60,
   "_links": {
-    "self": "/api/v1/items/yogurt_smoothie.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/yogurt_smoothie.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/yogurt_smoothie.png",
     "html_details": "/details/details_yogurt_smoothie.html"
   },
@@ -15,28 +15,28 @@
       "name": "Cream",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/cream.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/cream.json"
       }
     },
     {
       "name": "Raspberry",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/raspberry.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/raspberry.json"
       }
     },
     {
       "name": "Cherry",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/cherry.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/cherry.json"
       }
     },
     {
       "name": "White Sugar",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/white_sugar.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/white_sugar.json"
       }
     }
   ]

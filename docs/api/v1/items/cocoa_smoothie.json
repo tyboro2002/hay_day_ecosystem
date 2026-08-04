@@ -5,8 +5,8 @@
   "unlock_level": 100,
   "time_to_make_minutes": 40,
   "_links": {
-    "self": "/api/v1/items/cocoa_smoothie.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/cocoa_smoothie.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/cocoa_smoothie.png",
     "html_details": "/details/details_cocoa_smoothie.html"
   },
@@ -15,21 +15,21 @@
       "name": "Cacao",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/cacao.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/cacao.json"
       }
     },
     {
       "name": "Banana",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/banana.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/banana.json"
       }
     },
     {
       "name": "Milk",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/milk.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/milk.json"
       }
     }
   ]

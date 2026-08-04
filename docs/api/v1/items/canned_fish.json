@@ -5,8 +5,8 @@
   "unlock_level": 95,
   "time_to_make_minutes": 220,
   "_links": {
-    "self": "/api/v1/items/canned_fish.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/canned_fish.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/canned_fish.png",
     "html_details": "/details/details_canned_fish.html"
   },
@@ -15,21 +15,21 @@
       "name": "Fish Fillet",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/fish_fillet.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/fish_fillet.json"
       }
     },
     {
       "name": "Chili Pepper",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/chili_pepper.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/chili_pepper.json"
       }
     },
     {
       "name": "Olive Oil",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/olive_oil.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/olive_oil.json"
       }
     }
   ]

@@ -5,8 +5,8 @@
   "unlock_level": 83,
   "time_to_make_minutes": 180,
   "_links": {
-    "self": "/api/v1/items/peach_ice_cream.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/peach_ice_cream.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/peach_ice_cream.png",
     "html_details": "/details/details_peach_ice_cream.html"
   },
@@ -15,21 +15,21 @@
       "name": "Cream",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/cream.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/cream.json"
       }
     },
     {
       "name": "Honey",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/honey.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/honey.json"
       }
     },
     {
       "name": "Peach",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/peach.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/peach.json"
       }
     }
   ]

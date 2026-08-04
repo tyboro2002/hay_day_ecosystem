@@ -5,8 +5,8 @@
   "unlock_level": 54,
   "time_to_make_minutes": 40,
   "_links": {
-    "self": "/api/v1/items/bean_dip.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/bean_dip.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/bean_dip.png",
     "html_details": "/details/details_bean_dip.html"
   },
@@ -15,21 +15,21 @@
       "name": "Black Bean",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/black_bean.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/black_bean.json"
       }
     },
     {
       "name": "Tomato",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/tomato.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/tomato.json"
       }
     },
     {
       "name": "Chili Pepper",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/chili_pepper.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/chili_pepper.json"
       }
     }
   ]

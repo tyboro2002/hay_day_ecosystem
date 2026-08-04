@@ -5,8 +5,8 @@
   "unlock_level": 80,
   "time_to_make_minutes": 20,
   "_links": {
-    "self": "/api/v1/items/stuffed_peppers.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/stuffed_peppers.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/stuffed_peppers.png",
     "html_details": "/details/details_stuffed_peppers.html"
   },
@@ -15,28 +15,28 @@
       "name": "Bell Pepper",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/bell_pepper.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/bell_pepper.json"
       }
     },
     {
       "name": "Bacon",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/bacon.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/bacon.json"
       }
     },
     {
       "name": "Rice",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/rice.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/rice.json"
       }
     },
     {
       "name": "Cheese",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/cheese.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/cheese.json"
       }
     }
   ]

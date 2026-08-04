@@ -5,8 +5,8 @@
   "unlock_level": 29,
   "time_to_make_minutes": 120,
   "_links": {
-    "self": "/api/v1/items/vanilla_ice_cream.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/vanilla_ice_cream.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/vanilla_ice_cream.png",
     "html_details": "/details/details_vanilla_ice_cream.html"
   },
@@ -15,21 +15,21 @@
       "name": "Milk",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/milk.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/milk.json"
       }
     },
     {
       "name": "Cream",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/cream.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/cream.json"
       }
     },
     {
       "name": "White Sugar",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/white_sugar.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/white_sugar.json"
       }
     }
   ]

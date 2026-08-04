@@ -5,8 +5,8 @@
   "unlock_level": 100,
   "time_to_make_minutes": 35,
   "_links": {
-    "self": "/api/v1/items/tropical_fondue.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/tropical_fondue.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/tropical_fondue.png",
     "html_details": "/details/details_tropical_fondue.html"
   },
@@ -15,28 +15,28 @@
       "name": "White Sugar",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/white_sugar.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/white_sugar.json"
       }
     },
     {
       "name": "Cream",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/cream.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/cream.json"
       }
     },
     {
       "name": "Pineapple",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/pineapple.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/pineapple.json"
       }
     },
     {
       "name": "Mango",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/mango.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/mango.json"
       }
     }
   ]

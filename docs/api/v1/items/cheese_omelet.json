@@ -5,8 +5,8 @@
   "unlock_level": 79,
   "time_to_make_minutes": 90,
   "_links": {
-    "self": "/api/v1/items/cheese_omelet.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/cheese_omelet.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/cheese_omelet.png",
     "html_details": "/details/details_cheese_omelet.html"
   },
@@ -15,28 +15,28 @@
       "name": "Egg",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/egg.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/egg.json"
       }
     },
     {
       "name": "Cheese",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/cheese.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/cheese.json"
       }
     },
     {
       "name": "Tomato",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/tomato.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/tomato.json"
       }
     },
     {
       "name": "Onion",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/onion.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/onion.json"
       }
     }
   ]

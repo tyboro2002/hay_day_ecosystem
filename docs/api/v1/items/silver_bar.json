@@ -5,8 +5,8 @@
   "unlock_level": 24,
   "time_to_make_minutes": 480,
   "_links": {
-    "self": "/api/v1/items/silver_bar.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/silver_bar.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/silver_bar.png",
     "html_details": "/details/details_silver_bar.html"
   },
@@ -15,7 +15,7 @@
       "name": "Silver Ore",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/silver_ore.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/silver_ore.json"
       }
     }
   ]

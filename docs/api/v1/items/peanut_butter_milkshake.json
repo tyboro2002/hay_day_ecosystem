@@ -5,8 +5,8 @@
   "unlock_level": 68,
   "time_to_make_minutes": 100,
   "_links": {
-    "self": "/api/v1/items/peanut_butter_milkshake.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/peanut_butter_milkshake.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/peanut_butter_milkshake.png",
     "html_details": "/details/details_peanut_butter_milkshake.html"
   },
@@ -15,28 +15,28 @@
       "name": "Peanuts",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/peanuts.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/peanuts.json"
       }
     },
     {
       "name": "Milk",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/milk.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/milk.json"
       }
     },
     {
       "name": "Cream",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/cream.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/cream.json"
       }
     },
     {
       "name": "Cacao",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/cacao.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/cacao.json"
       }
     }
   ]

@@ -5,8 +5,8 @@
   "unlock_level": 106,
   "time_to_make_minutes": 15,
   "_links": {
-    "self": "/api/v1/items/veggie_bouquet.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/veggie_bouquet.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/veggie_bouquet.png",
     "html_details": "/details/details_veggie_bouquet.html"
   },
@@ -15,28 +15,28 @@
       "name": "Broccoli",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/broccoli.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/broccoli.json"
       }
     },
     {
       "name": "Cotton Fabric",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/cotton_fabric.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/cotton_fabric.json"
       }
     },
     {
       "name": "Tomato",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/tomato.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/tomato.json"
       }
     },
     {
       "name": "Mushroom",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/mushroom.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/mushroom.json"
       }
     }
   ]

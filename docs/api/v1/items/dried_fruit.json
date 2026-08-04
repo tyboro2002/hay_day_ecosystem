@@ -5,8 +5,8 @@
   "unlock_level": 102,
   "time_to_make_minutes": 180,
   "_links": {
-    "self": "/api/v1/items/dried_fruit.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/dried_fruit.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/dried_fruit.png",
     "html_details": "/details/details_dried_fruit.html"
   },
@@ -15,28 +15,28 @@
       "name": "Grapes",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/grapes.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/grapes.json"
       }
     },
     {
       "name": "Raspberry",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/raspberry.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/raspberry.json"
       }
     },
     {
       "name": "Strawberry",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/strawberry.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/strawberry.json"
       }
     },
     {
       "name": "Orange",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/orange.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/orange.json"
       }
     }
   ]

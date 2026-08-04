@@ -5,8 +5,8 @@
   "unlock_level": 10,
   "time_to_make_minutes": 60,
   "_links": {
-    "self": "/api/v1/items/cookie.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/cookie.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/cookie.png",
     "html_details": "/details/details_cookie.html"
   },
@@ -15,21 +15,21 @@
       "name": "Wheat",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/wheat.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/wheat.json"
       }
     },
     {
       "name": "Egg",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/egg.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/egg.json"
       }
     },
     {
       "name": "Brown Sugar",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/brown_sugar.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/brown_sugar.json"
       }
     }
   ]

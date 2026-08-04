@@ -5,8 +5,8 @@
   "unlock_level": 95,
   "time_to_make_minutes": 90,
   "_links": {
-    "self": "/api/v1/items/chocolate_roll.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/chocolate_roll.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/chocolate_roll.png",
     "html_details": "/details/details_chocolate_roll.html"
   },
@@ -15,28 +15,28 @@
       "name": "Cacao",
       "quantity": 5,
       "_links": {
-        "detail": "/api/v1/items/cacao.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/cacao.json"
       }
     },
     {
       "name": "Cream",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/cream.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/cream.json"
       }
     },
     {
       "name": "Wheat",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/wheat.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/wheat.json"
       }
     },
     {
       "name": "Mint",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/mint.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/mint.json"
       }
     }
   ]

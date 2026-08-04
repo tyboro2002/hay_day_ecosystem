@@ -5,8 +5,8 @@
   "unlock_level": 76,
   "time_to_make_minutes": 45,
   "_links": {
-    "self": "/api/v1/items/tofu_dog.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/tofu_dog.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/tofu_dog.png",
     "html_details": "/details/details_tofu_dog.html"
   },
@@ -15,21 +15,21 @@
       "name": "Lettuce",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/lettuce.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/lettuce.json"
       }
     },
     {
       "name": "Soybean",
       "quantity": 6,
       "_links": {
-        "detail": "/api/v1/items/soybean.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/soybean.json"
       }
     },
     {
       "name": "Tomato",
       "quantity": 4,
       "_links": {
-        "detail": "/api/v1/items/tomato.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/tomato.json"
       }
     }
   ]

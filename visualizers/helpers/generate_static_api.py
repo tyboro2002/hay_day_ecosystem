@@ -2,7 +2,7 @@ import os
 import json
 from game_data import ITEMS, INFRASTRUCTURE
 
-base_path = "/api/v1/"
+base_path = "/hay_day_ecosystem/api/v1/"
 assets_path = "/assets/"
 details_path = "/details/"
 infrastructure_path = "/infrastructure/"

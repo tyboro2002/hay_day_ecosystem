@@ -5,8 +5,8 @@
   "unlock_level": 99,
   "time_to_make_minutes": 45,
   "_links": {
-    "self": "/api/v1/items/eggplant_parmesan.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/eggplant_parmesan.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/eggplant_parmesan.png",
     "html_details": "/details/details_eggplant_parmesan.html"
   },
@@ -15,21 +15,21 @@
       "name": "Eggplant",
       "quantity": 4,
       "_links": {
-        "detail": "/api/v1/items/eggplant.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/eggplant.json"
       }
     },
     {
       "name": "Cheese",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/cheese.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/cheese.json"
       }
     },
     {
       "name": "Tomato Sauce",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/tomato_sauce.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/tomato_sauce.json"
       }
     }
   ]

@@ -5,8 +5,8 @@
   "unlock_level": 88,
   "time_to_make_minutes": 20,
   "_links": {
-    "self": "/api/v1/items/iced_banana_latte.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/iced_banana_latte.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/iced_banana_latte.png",
     "html_details": "/details/details_iced_banana_latte.html"
   },
@@ -15,21 +15,21 @@
       "name": "Banana",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/banana.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/banana.json"
       }
     },
     {
       "name": "Coffee Bean",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/coffee_bean.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/coffee_bean.json"
       }
     },
     {
       "name": "Milk",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/milk.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/milk.json"
       }
     }
   ]

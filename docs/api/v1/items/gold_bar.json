@@ -5,8 +5,8 @@
   "unlock_level": 25,
   "time_to_make_minutes": 720,
   "_links": {
-    "self": "/api/v1/items/gold_bar.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/gold_bar.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/gold_bar.png",
     "html_details": "/details/details_gold_bar.html"
   },
@@ -15,7 +15,7 @@
       "name": "Gold Ore",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/gold_ore.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/gold_ore.json"
       }
     }
   ]

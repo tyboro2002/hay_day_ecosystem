@@ -5,8 +5,8 @@
   "unlock_level": 25,
   "time_to_make_minutes": 135,
   "_links": {
-    "self": "/api/v1/items/violet_dress.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/violet_dress.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/violet_dress.png",
     "html_details": "/details/details_violet_dress.html"
   },
@@ -15,21 +15,21 @@
       "name": "Indigo",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/indigo.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/indigo.json"
       }
     },
     {
       "name": "Cotton Fabric",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/cotton_fabric.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/cotton_fabric.json"
       }
     },
     {
       "name": "Raspberry",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/raspberry.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/raspberry.json"
       }
     }
   ]

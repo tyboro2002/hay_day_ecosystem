@@ -5,8 +5,8 @@
   "unlock_level": 62,
   "time_to_make_minutes": 105,
   "_links": {
-    "self": "/api/v1/items/blt_salad.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/blt_salad.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/blt_salad.png",
     "html_details": "/details/details_blt_salad.html"
   },
@@ -15,28 +15,28 @@
       "name": "Bacon",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/bacon.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/bacon.json"
       }
     },
     {
       "name": "Lettuce",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/lettuce.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/lettuce.json"
       }
     },
     {
       "name": "Roasted Tomatoes",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/roasted_tomatoes.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/roasted_tomatoes.json"
       }
     },
     {
       "name": "Mayonnaise",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/mayonnaise.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/mayonnaise.json"
       }
     }
   ]

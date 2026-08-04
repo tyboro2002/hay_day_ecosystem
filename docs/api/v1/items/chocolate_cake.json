@@ -5,8 +5,8 @@
   "unlock_level": 36,
   "time_to_make_minutes": 120,
   "_links": {
-    "self": "/api/v1/items/chocolate_cake.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/chocolate_cake.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/chocolate_cake.png",
     "html_details": "/details/details_chocolate_cake.html"
   },
@@ -15,21 +15,21 @@
       "name": "Brown Sugar",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/brown_sugar.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/brown_sugar.json"
       }
     },
     {
       "name": "Butter",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/butter.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/butter.json"
       }
     },
     {
       "name": "Cacao",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/cacao.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/cacao.json"
       }
     }
   ]

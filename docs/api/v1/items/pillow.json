@@ -5,8 +5,8 @@
   "unlock_level": 51,
   "time_to_make_minutes": 180,
   "_links": {
-    "self": "/api/v1/items/pillow.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/pillow.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/pillow.png",
     "html_details": "/details/details_pillow.html"
   },
@@ -15,14 +15,14 @@
       "name": "Cotton Fabric",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/cotton_fabric.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/cotton_fabric.json"
       }
     },
     {
       "name": "Duck Feather",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/duck_feather.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/duck_feather.json"
       }
     }
   ]

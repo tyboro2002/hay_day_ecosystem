@@ -5,8 +5,8 @@
   "unlock_level": 106,
   "time_to_make_minutes": 90,
   "_links": {
-    "self": "/api/v1/items/chickpea_stew.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/chickpea_stew.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/chickpea_stew.png",
     "html_details": "/details/details_chickpea_stew.html"
   },
@@ -15,21 +15,21 @@
       "name": "Coconut",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/coconut.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/coconut.json"
       }
     },
     {
       "name": "Tomato",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/tomato.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/tomato.json"
       }
     },
     {
       "name": "Chickpea",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/chickpea.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/chickpea.json"
       }
     }
   ]

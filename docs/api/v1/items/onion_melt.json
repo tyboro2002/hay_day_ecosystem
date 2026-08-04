@@ -5,8 +5,8 @@
   "unlock_level": 84,
   "time_to_make_minutes": 90,
   "_links": {
-    "self": "/api/v1/items/onion_melt.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/onion_melt.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/onion_melt.png",
     "html_details": "/details/details_onion_melt.html"
   },
@@ -15,21 +15,21 @@
       "name": "Corn Bread",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/corn_bread.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/corn_bread.json"
       }
     },
     {
       "name": "Onion",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/onion.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/onion.json"
       }
     },
     {
       "name": "Cheese",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/cheese.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/cheese.json"
       }
     }
   ]

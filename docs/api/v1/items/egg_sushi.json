@@ -5,8 +5,8 @@
   "unlock_level": 63,
   "time_to_make_minutes": 120,
   "_links": {
-    "self": "/api/v1/items/egg_sushi.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/egg_sushi.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/egg_sushi.png",
     "html_details": "/details/details_egg_sushi.html"
   },
@@ -15,28 +15,28 @@
       "name": "Brown Sugar",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/brown_sugar.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/brown_sugar.json"
       }
     },
     {
       "name": "Egg",
       "quantity": 4,
       "_links": {
-        "detail": "/api/v1/items/egg.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/egg.json"
       }
     },
     {
       "name": "Rice",
       "quantity": 15,
       "_links": {
-        "detail": "/api/v1/items/rice.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/rice.json"
       }
     },
     {
       "name": "Soy Sauce",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/soy_sauce.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/soy_sauce.json"
       }
     }
   ]

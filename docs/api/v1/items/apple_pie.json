@@ -5,8 +5,8 @@
   "unlock_level": 28,
   "time_to_make_minutes": 150,
   "_links": {
-    "self": "/api/v1/items/apple_pie.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/apple_pie.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/apple_pie.png",
     "html_details": "/details/details_apple_pie.html"
   },
@@ -15,28 +15,28 @@
       "name": "Wheat",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/wheat.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/wheat.json"
       }
     },
     {
       "name": "Egg",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/egg.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/egg.json"
       }
     },
     {
       "name": "Syrup",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/syrup.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/syrup.json"
       }
     },
     {
       "name": "Apple",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/apple.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/apple.json"
       }
     }
   ]

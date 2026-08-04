@@ -5,8 +5,8 @@
   "unlock_level": 35,
   "time_to_make_minutes": 180,
   "_links": {
-    "self": "/api/v1/items/strawberry_cake.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/strawberry_cake.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/strawberry_cake.png",
     "html_details": "/details/details_strawberry_cake.html"
   },
@@ -15,28 +15,28 @@
       "name": "Cream",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/cream.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/cream.json"
       }
     },
     {
       "name": "Strawberry",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/strawberry.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/strawberry.json"
       }
     },
     {
       "name": "Wheat",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/wheat.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/wheat.json"
       }
     },
     {
       "name": "White Sugar",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/white_sugar.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/white_sugar.json"
       }
     }
   ]

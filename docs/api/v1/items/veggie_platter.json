@@ -5,8 +5,8 @@
   "unlock_level": 74,
   "time_to_make_minutes": 120,
   "_links": {
-    "self": "/api/v1/items/veggie_platter.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/veggie_platter.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/veggie_platter.png",
     "html_details": "/details/details_veggie_platter.html"
   },
@@ -15,28 +15,28 @@
       "name": "Bell Pepper",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/bell_pepper.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/bell_pepper.json"
       }
     },
     {
       "name": "Carrot",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/carrot.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/carrot.json"
       }
     },
     {
       "name": "Tomato",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/tomato.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/tomato.json"
       }
     },
     {
       "name": "Cream",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/cream.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/cream.json"
       }
     }
   ]

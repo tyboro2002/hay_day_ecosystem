@@ -5,8 +5,8 @@
   "unlock_level": 53,
   "time_to_make_minutes": 180,
   "_links": {
-    "self": "/api/v1/items/fish_soup.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/fish_soup.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/fish_soup.png",
     "html_details": "/details/details_fish_soup.html"
   },
@@ -15,28 +15,28 @@
       "name": "Carrot",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/carrot.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/carrot.json"
       }
     },
     {
       "name": "Fish Fillet",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/fish_fillet.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/fish_fillet.json"
       }
     },
     {
       "name": "Milk",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/milk.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/milk.json"
       }
     },
     {
       "name": "Potato",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/potato.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/potato.json"
       }
     }
   ]

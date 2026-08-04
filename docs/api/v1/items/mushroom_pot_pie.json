@@ -5,8 +5,8 @@
   "unlock_level": 97,
   "time_to_make_minutes": 60,
   "_links": {
-    "self": "/api/v1/items/mushroom_pot_pie.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/mushroom_pot_pie.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/mushroom_pot_pie.png",
     "html_details": "/details/details_mushroom_pot_pie.html"
   },
@@ -15,28 +15,28 @@
       "name": "Mushroom",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/mushroom.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/mushroom.json"
       }
     },
     {
       "name": "Cabbage",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/cabbage.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/cabbage.json"
       }
     },
     {
       "name": "Wheat",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/wheat.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/wheat.json"
       }
     },
     {
       "name": "Egg",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/egg.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/egg.json"
       }
     }
   ]

@@ -5,8 +5,8 @@
   "unlock_level": 37,
   "time_to_make_minutes": 480,
   "_links": {
-    "self": "/api/v1/items/blackberry_jam.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/blackberry_jam.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/blackberry_jam.png",
     "html_details": "/details/details_blackberry_jam.html"
   },
@@ -15,7 +15,7 @@
       "name": "Blackberry",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/blackberry.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/blackberry.json"
       }
     }
   ]

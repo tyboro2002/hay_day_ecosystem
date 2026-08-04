@@ -5,8 +5,8 @@
   "unlock_level": 109,
   "time_to_make_minutes": 60,
   "_links": {
-    "self": "/api/v1/items/tropical_yogurt.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/tropical_yogurt.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/tropical_yogurt.png",
     "html_details": "/details/details_tropical_yogurt.html"
   },
@@ -15,28 +15,28 @@
       "name": "Plain Yogurt",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/plain_yogurt.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/plain_yogurt.json"
       }
     },
     {
       "name": "Raspberry",
       "quantity": 4,
       "_links": {
-        "detail": "/api/v1/items/raspberry.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/raspberry.json"
       }
     },
     {
       "name": "Passion Fruit",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/passion_fruit.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/passion_fruit.json"
       }
     },
     {
       "name": "Mango",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/mango.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/mango.json"
       }
     }
   ]

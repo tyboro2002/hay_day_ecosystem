@@ -5,8 +5,8 @@
   "unlock_level": 98,
   "time_to_make_minutes": 60,
   "_links": {
-    "self": "/api/v1/items/flower_pendant.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/flower_pendant.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/flower_pendant.png",
     "html_details": "/details/details_flower_pendant.html"
   },
@@ -15,21 +15,21 @@
       "name": "Platinum Bar",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/platinum_bar.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/platinum_bar.json"
       }
     },
     {
       "name": "Gold Bar",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/gold_bar.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/gold_bar.json"
       }
     },
     {
       "name": "Peony",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/peony.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/peony.json"
       }
     }
   ]

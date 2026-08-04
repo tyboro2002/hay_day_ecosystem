@@ -5,8 +5,8 @@
   "unlock_level": 41,
   "time_to_make_minutes": 90,
   "_links": {
-    "self": "/api/v1/items/iron_bracelet.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/iron_bracelet.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/iron_bracelet.png",
     "html_details": "/details/details_iron_bracelet.html"
   },
@@ -15,21 +15,21 @@
       "name": "Iron Bar",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/iron_bar.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/iron_bar.json"
       }
     },
     {
       "name": "Refined coal",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/refined_coal.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/refined_coal.json"
       }
     },
     {
       "name": "Silver Bar",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/silver_bar.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/silver_bar.json"
       }
     }
   ]

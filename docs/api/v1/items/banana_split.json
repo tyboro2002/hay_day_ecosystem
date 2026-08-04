@@ -5,8 +5,8 @@
   "unlock_level": 96,
   "time_to_make_minutes": 210,
   "_links": {
-    "self": "/api/v1/items/banana_split.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/banana_split.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/banana_split.png",
     "html_details": "/details/details_banana_split.html"
   },
@@ -15,21 +15,21 @@
       "name": "Banana",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/banana.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/banana.json"
       }
     },
     {
       "name": "Cream",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/cream.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/cream.json"
       }
     },
     {
       "name": "Cherry",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/cherry.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/cherry.json"
       }
     }
   ]

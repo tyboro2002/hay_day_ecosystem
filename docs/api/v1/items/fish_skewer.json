@@ -5,8 +5,8 @@
   "unlock_level": 96,
   "time_to_make_minutes": 30,
   "_links": {
-    "self": "/api/v1/items/fish_skewer.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/fish_skewer.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/fish_skewer.png",
     "html_details": "/details/details_fish_skewer.html"
   },
@@ -15,28 +15,28 @@
       "name": "Fish Fillet",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/fish_fillet.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/fish_fillet.json"
       }
     },
     {
       "name": "Mushroom",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/mushroom.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/mushroom.json"
       }
     },
     {
       "name": "Garlic",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/garlic.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/garlic.json"
       }
     },
     {
       "name": "Sesame",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/sesame.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/sesame.json"
       }
     }
   ]

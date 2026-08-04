@@ -5,8 +5,8 @@
   "unlock_level": 80,
   "time_to_make_minutes": 75,
   "_links": {
-    "self": "/api/v1/items/onion_dog.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/onion_dog.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/onion_dog.png",
     "html_details": "/details/details_onion_dog.html"
   },
@@ -15,28 +15,28 @@
       "name": "Bacon",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/bacon.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/bacon.json"
       }
     },
     {
       "name": "Bread",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/bread.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/bread.json"
       }
     },
     {
       "name": "Chili Pepper",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/chili_pepper.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/chili_pepper.json"
       }
     },
     {
       "name": "Onion",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/onion.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/onion.json"
       }
     }
   ]

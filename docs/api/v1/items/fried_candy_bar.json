@@ -5,8 +5,8 @@
   "unlock_level": 100,
   "time_to_make_minutes": 15,
   "_links": {
-    "self": "/api/v1/items/fried_candy_bar.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/fried_candy_bar.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/fried_candy_bar.png",
     "html_details": "/details/details_fried_candy_bar.html"
   },
@@ -15,21 +15,21 @@
       "name": "Cacao",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/cacao.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/cacao.json"
       }
     },
     {
       "name": "Cookie",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/cookie.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/cookie.json"
       }
     },
     {
       "name": "Peanuts",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/peanuts.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/peanuts.json"
       }
     }
   ]

@@ -5,8 +5,8 @@
   "unlock_level": 19,
   "time_to_make_minutes": 45,
   "_links": {
-    "self": "/api/v1/items/cotton_shirt.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/cotton_shirt.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/cotton_shirt.png",
     "html_details": "/details/details_cotton_shirt.html"
   },
@@ -15,7 +15,7 @@
       "name": "Cotton Fabric",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/cotton_fabric.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/cotton_fabric.json"
       }
     }
   ]

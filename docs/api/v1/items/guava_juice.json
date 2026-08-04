@@ -5,8 +5,8 @@
   "unlock_level": 104,
   "time_to_make_minutes": 55,
   "_links": {
-    "self": "/api/v1/items/guava_juice.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/guava_juice.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/guava_juice.png",
     "html_details": "/details/details_guava_juice.html"
   },
@@ -15,7 +15,7 @@
       "name": "Guava",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/guava.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/guava.json"
       }
     }
   ]

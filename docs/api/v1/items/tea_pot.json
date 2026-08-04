@@ -5,8 +5,8 @@
   "unlock_level": 94,
   "time_to_make_minutes": 220,
   "_links": {
-    "self": "/api/v1/items/tea_pot.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/tea_pot.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/tea_pot.png",
     "html_details": "/details/details_tea_pot.html"
   },
@@ -15,21 +15,21 @@
       "name": "Clay",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/clay.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/clay.json"
       }
     },
     {
       "name": "Coffee Bean",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/coffee_bean.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/coffee_bean.json"
       }
     },
     {
       "name": "Gold Ore",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/gold_ore.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/gold_ore.json"
       }
     }
   ]

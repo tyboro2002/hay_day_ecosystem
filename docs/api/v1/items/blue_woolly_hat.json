@@ -5,8 +5,8 @@
   "unlock_level": 19,
   "time_to_make_minutes": 60,
   "_links": {
-    "self": "/api/v1/items/blue_woolly_hat.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/blue_woolly_hat.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/blue_woolly_hat.png",
     "html_details": "/details/details_blue_woolly_hat.html"
   },
@@ -15,14 +15,14 @@
       "name": "Wool",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/wool.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/wool.json"
       }
     },
     {
       "name": "Indigo",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/indigo.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/indigo.json"
       }
     }
   ]

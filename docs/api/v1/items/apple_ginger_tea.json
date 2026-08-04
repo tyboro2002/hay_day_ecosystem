@@ -5,8 +5,8 @@
   "unlock_level": 88,
   "time_to_make_minutes": 30,
   "_links": {
-    "self": "/api/v1/items/apple_ginger_tea.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/apple_ginger_tea.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/apple_ginger_tea.png",
     "html_details": "/details/details_apple_ginger_tea.html"
   },
@@ -15,21 +15,21 @@
       "name": "Tea Leaf",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/tea_leaf.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/tea_leaf.json"
       }
     },
     {
       "name": "Ginger",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/ginger.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/ginger.json"
       }
     },
     {
       "name": "Apple",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/apple.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/apple.json"
       }
     }
   ]

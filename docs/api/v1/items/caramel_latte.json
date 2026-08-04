@@ -5,8 +5,8 @@
   "unlock_level": 62,
   "time_to_make_minutes": 15,
   "_links": {
-    "self": "/api/v1/items/caramel_latte.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/caramel_latte.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/caramel_latte.png",
     "html_details": "/details/details_caramel_latte.html"
   },
@@ -15,21 +15,21 @@
       "name": "Coffee Bean",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/coffee_bean.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/coffee_bean.json"
       }
     },
     {
       "name": "Toffee",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/toffee.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/toffee.json"
       }
     },
     {
       "name": "Milk",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/milk.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/milk.json"
       }
     }
   ]

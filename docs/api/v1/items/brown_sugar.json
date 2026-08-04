@@ -5,8 +5,8 @@
   "unlock_level": 7,
   "time_to_make_minutes": 20,
   "_links": {
-    "self": "/api/v1/items/brown_sugar.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/brown_sugar.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/brown_sugar.png",
     "html_details": "/details/details_brown_sugar.html"
   },
@@ -15,7 +15,7 @@
       "name": "Sugarcane",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/sugarcane.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/sugarcane.json"
       }
     }
   ]

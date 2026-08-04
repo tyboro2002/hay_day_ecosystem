@@ -5,8 +5,8 @@
   "unlock_level": 25,
   "time_to_make_minutes": 120,
   "_links": {
-    "self": "/api/v1/items/chili_popcorn.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/chili_popcorn.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/chili_popcorn.png",
     "html_details": "/details/details_chili_popcorn.html"
   },
@@ -15,14 +15,14 @@
       "name": "Corn",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/corn.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/corn.json"
       }
     },
     {
       "name": "Chili Pepper",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/chili_pepper.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/chili_pepper.json"
       }
     }
   ]

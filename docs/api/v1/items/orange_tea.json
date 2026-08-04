@@ -5,8 +5,8 @@
   "unlock_level": 89,
   "time_to_make_minutes": 40,
   "_links": {
-    "self": "/api/v1/items/orange_tea.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/orange_tea.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/orange_tea.png",
     "html_details": "/details/details_orange_tea.html"
   },
@@ -15,14 +15,14 @@
       "name": "Tea Leaf",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/tea_leaf.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/tea_leaf.json"
       }
     },
     {
       "name": "Orange",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/orange.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/orange.json"
       }
     }
   ]

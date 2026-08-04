@@ -5,8 +5,8 @@
   "unlock_level": 52,
   "time_to_make_minutes": 90,
   "_links": {
-    "self": "/api/v1/items/toffee.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/toffee.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/toffee.png",
     "html_details": "/details/details_toffee.html"
   },
@@ -15,21 +15,21 @@
       "name": "Butter",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/butter.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/butter.json"
       }
     },
     {
       "name": "Wheat",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/wheat.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/wheat.json"
       }
     },
     {
       "name": "White Sugar",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/white_sugar.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/white_sugar.json"
       }
     }
   ]

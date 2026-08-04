@@ -5,8 +5,8 @@
   "unlock_level": 98,
   "time_to_make_minutes": 40,
   "_links": {
-    "self": "/api/v1/items/chili_poppers.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/chili_poppers.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/chili_poppers.png",
     "html_details": "/details/details_chili_poppers.html"
   },
@@ -15,28 +15,28 @@
       "name": "Chili Pepper",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/chili_pepper.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/chili_pepper.json"
       }
     },
     {
       "name": "Wheat",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/wheat.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/wheat.json"
       }
     },
     {
       "name": "Bacon",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/bacon.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/bacon.json"
       }
     },
     {
       "name": "Cheese",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/cheese.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/cheese.json"
       }
     }
   ]

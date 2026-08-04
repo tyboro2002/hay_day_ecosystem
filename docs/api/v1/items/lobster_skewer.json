@@ -5,8 +5,8 @@
   "unlock_level": 48,
   "time_to_make_minutes": 40,
   "_links": {
-    "self": "/api/v1/items/lobster_skewer.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/lobster_skewer.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/lobster_skewer.png",
     "html_details": "/details/details_lobster_skewer.html"
   },
@@ -15,21 +15,21 @@
       "name": "Chili Pepper",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/chili_pepper.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/chili_pepper.json"
       }
     },
     {
       "name": "Honey",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/honey.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/honey.json"
       }
     },
     {
       "name": "Lobster Tail",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/lobster_tail.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/lobster_tail.json"
       }
     }
   ]

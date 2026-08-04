@@ -5,8 +5,8 @@
   "unlock_level": 71,
   "time_to_make_minutes": 25,
   "_links": {
-    "self": "/api/v1/items/peanut_butter_and_jelly_sandwich.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/peanut_butter_and_jelly_sandwich.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/peanut_butter_and_jelly_sandwich.png",
     "html_details": "/details/details_peanut_butter_and_jelly_sandwich.html"
   },
@@ -15,21 +15,21 @@
       "name": "Bread",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/bread.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/bread.json"
       }
     },
     {
       "name": "Raspberry Jam",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/raspberry_jam.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/raspberry_jam.json"
       }
     },
     {
       "name": "Peanuts",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/peanuts.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/peanuts.json"
       }
     }
   ]

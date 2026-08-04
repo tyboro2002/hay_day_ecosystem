@@ -5,8 +5,8 @@
   "unlock_level": 86,
   "time_to_make_minutes": 30,
   "_links": {
-    "self": "/api/v1/items/bacon_fondue.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/bacon_fondue.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/bacon_fondue.png",
     "html_details": "/details/details_bacon_fondue.html"
   },
@@ -15,28 +15,28 @@
       "name": "Bacon",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/bacon.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/bacon.json"
       }
     },
     {
       "name": "Broccoli",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/broccoli.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/broccoli.json"
       }
     },
     {
       "name": "Bell Pepper",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/bell_pepper.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/bell_pepper.json"
       }
     },
     {
       "name": "Olive Oil",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/olive_oil.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/olive_oil.json"
       }
     }
   ]

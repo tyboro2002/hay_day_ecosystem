@@ -5,8 +5,8 @@
   "unlock_level": 32,
   "time_to_make_minutes": 40,
   "_links": {
-    "self": "/api/v1/items/goat_feed.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/goat_feed.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/goat_feed.png",
     "html_details": "/details/details_goat_feed.html"
   },
@@ -15,21 +15,21 @@
       "name": "Carrot",
       "quantity": 0.6666666666666666,
       "_links": {
-        "detail": "/api/v1/items/carrot.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/carrot.json"
       }
     },
     {
       "name": "Corn",
       "quantity": 0.3333333333333333,
       "_links": {
-        "detail": "/api/v1/items/corn.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/corn.json"
       }
     },
     {
       "name": "Wheat",
       "quantity": 0.3333333333333333,
       "_links": {
-        "detail": "/api/v1/items/wheat.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/wheat.json"
       }
     }
   ]

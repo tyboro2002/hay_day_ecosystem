@@ -5,8 +5,8 @@
   "unlock_level": 85,
   "time_to_make_minutes": 390,
   "_links": {
-    "self": "/api/v1/items/grape_jam.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/grape_jam.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/grape_jam.png",
     "html_details": "/details/details_grape_jam.html"
   },
@@ -15,7 +15,7 @@
       "name": "Grapes",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/grapes.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/grapes.json"
       }
     }
   ]

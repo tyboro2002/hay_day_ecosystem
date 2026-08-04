@@ -5,8 +5,8 @@
   "unlock_level": 104,
   "time_to_make_minutes": 170,
   "_links": {
-    "self": "/api/v1/items/chili_fudge.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/chili_fudge.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/chili_fudge.png",
     "html_details": "/details/details_chili_fudge.html"
   },
@@ -15,28 +15,28 @@
       "name": "Butter",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/butter.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/butter.json"
       }
     },
     {
       "name": "Cacao",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/cacao.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/cacao.json"
       }
     },
     {
       "name": "White Sugar",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/white_sugar.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/white_sugar.json"
       }
     },
     {
       "name": "Chili Pepper",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/chili_pepper.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/chili_pepper.json"
       }
     }
   ]

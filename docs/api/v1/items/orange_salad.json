@@ -5,8 +5,8 @@
   "unlock_level": 117,
   "time_to_make_minutes": 45,
   "_links": {
-    "self": "/api/v1/items/orange_salad.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/orange_salad.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/orange_salad.png",
     "html_details": "/details/details_orange_salad.html"
   },
@@ -15,28 +15,28 @@
       "name": "Cheese",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/cheese.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/cheese.json"
       }
     },
     {
       "name": "Lettuce",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/lettuce.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/lettuce.json"
       }
     },
     {
       "name": "Pomegranate",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/pomegranate.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/pomegranate.json"
       }
     },
     {
       "name": "Orange",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/orange.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/orange.json"
       }
     }
   ]

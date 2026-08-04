@@ -5,8 +5,8 @@
   "unlock_level": 73,
   "time_to_make_minutes": 120,
   "_links": {
-    "self": "/api/v1/items/noodle_soup.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/noodle_soup.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/noodle_soup.png",
     "html_details": "/details/details_noodle_soup.html"
   },
@@ -15,28 +15,28 @@
       "name": "Carrot",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/carrot.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/carrot.json"
       }
     },
     {
       "name": "Chili Pepper",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/chili_pepper.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/chili_pepper.json"
       }
     },
     {
       "name": "Egg",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/egg.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/egg.json"
       }
     },
     {
       "name": "Rice Noodles",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/rice_noodles.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/rice_noodles.json"
       }
     }
   ]

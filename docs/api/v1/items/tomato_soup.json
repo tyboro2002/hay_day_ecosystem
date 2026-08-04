@@ -5,8 +5,8 @@
   "unlock_level": 47,
   "time_to_make_minutes": 90,
   "_links": {
-    "self": "/api/v1/items/tomato_soup.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/tomato_soup.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/tomato_soup.png",
     "html_details": "/details/details_tomato_soup.html"
   },
@@ -15,28 +15,28 @@
       "name": "Chili Pepper",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/chili_pepper.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/chili_pepper.json"
       }
     },
     {
       "name": "Goat Cheese",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/goat_cheese.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/goat_cheese.json"
       }
     },
     {
       "name": "Tomato Juice",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/tomato_juice.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/tomato_juice.json"
       }
     },
     {
       "name": "Tomato",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/tomato.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/tomato.json"
       }
     }
   ]

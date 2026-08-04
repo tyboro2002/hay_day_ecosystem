@@ -5,8 +5,8 @@
   "unlock_level": 54,
   "time_to_make_minutes": 15,
   "_links": {
-    "self": "/api/v1/items/fancy_cake.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/fancy_cake.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/fancy_cake.png",
     "html_details": "/details/details_fancy_cake.html"
   },
@@ -15,28 +15,28 @@
       "name": "Cream Cake",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/cream_cake.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/cream_cake.json"
       }
     },
     {
       "name": "Lily",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/lily.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/lily.json"
       }
     },
     {
       "name": "Raspberry",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/raspberry.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/raspberry.json"
       }
     },
     {
       "name": "Gold Ore",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/gold_ore.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/gold_ore.json"
       }
     }
   ]

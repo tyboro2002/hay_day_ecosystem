@@ -5,8 +5,8 @@
   "unlock_level": 39,
   "time_to_make_minutes": 180,
   "_links": {
-    "self": "/api/v1/items/necklace.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/necklace.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/necklace.png",
     "html_details": "/details/details_necklace.html"
   },
@@ -15,21 +15,21 @@
       "name": "Gold Bar",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/gold_bar.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/gold_bar.json"
       }
     },
     {
       "name": "Platinum Bar",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/platinum_bar.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/platinum_bar.json"
       }
     },
     {
       "name": "Silver Bar",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/silver_bar.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/silver_bar.json"
       }
     }
   ]

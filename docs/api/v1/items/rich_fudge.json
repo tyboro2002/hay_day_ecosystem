@@ -5,8 +5,8 @@
   "unlock_level": 99,
   "time_to_make_minutes": 120,
   "_links": {
-    "self": "/api/v1/items/rich_fudge.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/rich_fudge.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/rich_fudge.png",
     "html_details": "/details/details_rich_fudge.html"
   },
@@ -15,21 +15,21 @@
       "name": "Butter",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/butter.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/butter.json"
       }
     },
     {
       "name": "Cacao",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/cacao.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/cacao.json"
       }
     },
     {
       "name": "White Sugar",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/white_sugar.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/white_sugar.json"
       }
     }
   ]

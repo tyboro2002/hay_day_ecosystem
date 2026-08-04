@@ -5,8 +5,8 @@
   "unlock_level": 99,
   "time_to_make_minutes": 200,
   "_links": {
-    "self": "/api/v1/items/clay_mug.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/clay_mug.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/clay_mug.png",
     "html_details": "/details/details_clay_mug.html"
   },
@@ -15,21 +15,21 @@
       "name": "Clay",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/clay.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/clay.json"
       }
     },
     {
       "name": "Indigo",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/indigo.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/indigo.json"
       }
     },
     {
       "name": "Peony",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/peony.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/peony.json"
       }
     }
   ]

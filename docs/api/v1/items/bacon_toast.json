@@ -5,8 +5,8 @@
   "unlock_level": 65,
   "time_to_make_minutes": 100,
   "_links": {
-    "self": "/api/v1/items/bacon_toast.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/bacon_toast.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/bacon_toast.png",
     "html_details": "/details/details_bacon_toast.html"
   },
@@ -15,28 +15,28 @@
       "name": "Bacon",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/bacon.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/bacon.json"
       }
     },
     {
       "name": "Bread",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/bread.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/bread.json"
       }
     },
     {
       "name": "Lettuce",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/lettuce.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/lettuce.json"
       }
     },
     {
       "name": "Mayonnaise",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/mayonnaise.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/mayonnaise.json"
       }
     }
   ]

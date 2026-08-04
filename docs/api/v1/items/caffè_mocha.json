@@ -5,8 +5,8 @@
   "unlock_level": 45,
   "time_to_make_minutes": 15,
   "_links": {
-    "self": "/api/v1/items/caff\u00e8_mocha.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/caff\u00e8_mocha.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/caff\u00e8_mocha.png",
     "html_details": "/details/details_caff\u00e8_mocha.html"
   },
@@ -15,21 +15,21 @@
       "name": "Coffee Bean",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/coffee_bean.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/coffee_bean.json"
       }
     },
     {
       "name": "Cream",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/cream.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/cream.json"
       }
     },
     {
       "name": "Cacao",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/cacao.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/cacao.json"
       }
     }
   ]

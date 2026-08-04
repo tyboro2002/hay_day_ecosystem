@@ -5,8 +5,8 @@
   "unlock_level": 87,
   "time_to_make_minutes": 75,
   "_links": {
-    "self": "/api/v1/items/nachos.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/nachos.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/nachos.png",
     "html_details": "/details/details_nachos.html"
   },
@@ -15,21 +15,21 @@
       "name": "Corn",
       "quantity": 4,
       "_links": {
-        "detail": "/api/v1/items/corn.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/corn.json"
       }
     },
     {
       "name": "Cheese",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/cheese.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/cheese.json"
       }
     },
     {
       "name": "Salsa",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/salsa.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/salsa.json"
       }
     }
   ]

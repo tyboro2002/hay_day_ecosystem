@@ -5,8 +5,8 @@
   "unlock_level": 91,
   "time_to_make_minutes": 30,
   "_links": {
-    "self": "/api/v1/items/banana_bread.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/banana_bread.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/banana_bread.png",
     "html_details": "/details/details_banana_bread.html"
   },
@@ -15,28 +15,28 @@
       "name": "Banana",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/banana.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/banana.json"
       }
     },
     {
       "name": "Grapes",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/grapes.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/grapes.json"
       }
     },
     {
       "name": "Wheat",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/wheat.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/wheat.json"
       }
     },
     {
       "name": "Egg",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/egg.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/egg.json"
       }
     }
   ]

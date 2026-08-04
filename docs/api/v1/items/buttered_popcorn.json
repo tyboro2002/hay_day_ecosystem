@@ -5,8 +5,8 @@
   "unlock_level": 16,
   "time_to_make_minutes": 60,
   "_links": {
-    "self": "/api/v1/items/buttered_popcorn.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/buttered_popcorn.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/buttered_popcorn.png",
     "html_details": "/details/details_buttered_popcorn.html"
   },
@@ -15,14 +15,14 @@
       "name": "Corn",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/corn.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/corn.json"
       }
     },
     {
       "name": "Butter",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/butter.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/butter.json"
       }
     }
   ]

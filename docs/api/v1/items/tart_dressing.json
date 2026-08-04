@@ -5,8 +5,8 @@
   "unlock_level": 100,
   "time_to_make_minutes": 30,
   "_links": {
-    "self": "/api/v1/items/tart_dressing.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/tart_dressing.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/tart_dressing.png",
     "html_details": "/details/details_tart_dressing.html"
   },
@@ -15,21 +15,21 @@
       "name": "Passion Fruit",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/passion_fruit.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/passion_fruit.json"
       }
     },
     {
       "name": "Chili Pepper",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/chili_pepper.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/chili_pepper.json"
       }
     },
     {
       "name": "Honey",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/honey.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/honey.json"
       }
     }
   ]

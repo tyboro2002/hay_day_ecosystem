@@ -5,8 +5,8 @@
   "unlock_level": 71,
   "time_to_make_minutes": 120,
   "_links": {
-    "self": "/api/v1/items/orange_juice.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/orange_juice.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/orange_juice.png",
     "html_details": "/details/details_orange_juice.html"
   },
@@ -15,7 +15,7 @@
       "name": "Orange",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/orange.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/orange.json"
       }
     }
   ]

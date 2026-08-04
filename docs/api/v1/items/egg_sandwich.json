@@ -5,8 +5,8 @@
   "unlock_level": 66,
   "time_to_make_minutes": 80,
   "_links": {
-    "self": "/api/v1/items/egg_sandwich.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/egg_sandwich.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/egg_sandwich.png",
     "html_details": "/details/details_egg_sandwich.html"
   },
@@ -15,28 +15,28 @@
       "name": "Bread",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/bread.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/bread.json"
       }
     },
     {
       "name": "Egg",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/egg.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/egg.json"
       }
     },
     {
       "name": "Lettuce",
       "quantity": 3,
       "_links": {
-        "detail": "/api/v1/items/lettuce.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/lettuce.json"
       }
     },
     {
       "name": "Mayonnaise",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/mayonnaise.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/mayonnaise.json"
       }
     }
   ]

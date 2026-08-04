@@ -5,8 +5,8 @@
   "unlock_level": 91,
   "time_to_make_minutes": 20,
   "_links": {
-    "self": "/api/v1/items/cheese_fondue.json",
-    "collection": "/api/v1/items/index.json",
+    "self": "/hay_day_ecosystem/api/v1/items/cheese_fondue.json",
+    "collection": "/hay_day_ecosystem/api/v1/items/index.json",
     "image": "/assets/items/cheese_fondue.png",
     "html_details": "/details/details_cheese_fondue.html"
   },
@@ -15,28 +15,28 @@
       "name": "Potato Bread",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/potato_bread.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/potato_bread.json"
       }
     },
     {
       "name": "Cheese",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/cheese.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/cheese.json"
       }
     },
     {
       "name": "Mushroom",
       "quantity": 2,
       "_links": {
-        "detail": "/api/v1/items/mushroom.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/mushroom.json"
       }
     },
     {
       "name": "Tomato",
       "quantity": 1,
       "_links": {
-        "detail": "/api/v1/items/tomato.json"
+        "detail": "/hay_day_ecosystem/api/v1/items/tomato.json"
       }
     }
   ]
