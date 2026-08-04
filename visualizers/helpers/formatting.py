@@ -29,13 +29,14 @@ def format_duration(minutes):
     return " ".join(parts)
 
 
-def get_base64_asset(name, subfolder):
+def get_base64_asset(name, subfolder, base_path=""):
     """
     Returns a relative web path for HTML <img> tags instead of base64 strings.
     Kept with the same name for backward compatibility across other visualizer scripts.
     """
     filename = f"{name.lower().replace(' ', '_')}.png"
-    return f"/assets/{subfolder}/{filename}"
+    prefix = f"{base_path.rstrip('/')}/" if base_path else ""
+    return f"{prefix}assets/{subfolder}/{filename}"
 
 
 def get_mastery_image_filename(star_number, info, machine_name):
@@ -65,9 +66,9 @@ def get_mastery_image_filename(star_number, info, machine_name):
 def format_mastery_bonus_text(info):
     """Formats raw mastery YAML data into human-readable text + inline asset icons."""
     # 1. Fetch web asset paths from the mastery directory
-    coin_asset = get_base64_asset("coins", "mastery")
-    xp_asset = get_base64_asset("xp", "mastery")
-    time_asset = get_base64_asset("time", "mastery")
+    coin_asset = get_base64_asset("coins", "mastery", base_path="../")
+    xp_asset = get_base64_asset("xp", "mastery", base_path="../")
+    time_asset = get_base64_asset("time", "mastery", base_path="../")
 
     # Helper inline HTML image generator with clean alignment styling
     def make_icon(src, alt):
