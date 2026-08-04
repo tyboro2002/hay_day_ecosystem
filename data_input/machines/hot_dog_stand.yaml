@@ -1,0 +1,40 @@
+Hot Dog:
+  unlock_level: 75
+  time_to_make: 30
+  sell_price: 370.0  # TODO: check price
+  xp: 44
+  ingredients:
+    Bacon: 2
+    Bread: 1
+    Tomato Sauce: 1
+
+Tofu Dog:
+  unlock_level: 76
+  time_to_make: 45
+  sell_price: 367.0  # TODO: check price
+  xp: 44
+  ingredients:
+    Lettuce: 3
+    Soybean: 6
+    Tomato: 4
+
+Corn Dog:
+  unlock_level: 78
+  time_to_make: 60 # 1h
+  sell_price: 529.0  # TODO: check price
+  xp: 63
+  ingredients:
+    Bacon: 4
+    Corn: 4
+    Olive Oil: 1
+
+Onion Dog:
+  unlock_level: 80
+  time_to_make: 75 # 1h15m
+  sell_price: 306.0  # TODO: check price
+  xp: 36
+  ingredients:
+    Bacon: 2
+    Bread: 1
+    Chili Pepper: 1
+    Onion: 3

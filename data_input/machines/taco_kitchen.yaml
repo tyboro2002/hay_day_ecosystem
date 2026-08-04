@@ -1,0 +1,49 @@
+Taco:
+  unlock_level: 77
+  time_to_make: 45
+  sell_price: 331.0  # TODO: check price
+  xp: 47
+  ingredients:
+    Corn Bread: 1
+    Bacon: 1
+    Salsa: 1
+
+Spicy Bean Taco:
+  unlock_level: 77
+  time_to_make: 120 # 2h
+  sell_price: 453.0  # TODO: check price
+  xp: 54
+  ingredients:
+    Taco: 1
+    Black Bean: 2
+
+Fish Taco:
+  unlock_level: 79
+  time_to_make: 90 # 1h30m
+  sell_price: 392.0  # TODO: check price
+  xp: 47
+  ingredients:
+    Chili Pepper: 2
+    Corn Bread: 1
+    Fish Fillet: 1
+    Lemon: 1
+
+Quesadilla:
+  unlock_level: 82
+  time_to_make: 60 # 1h
+  sell_price: 241.0  # TODO: check price
+  xp: 29
+  ingredients:
+    Chili Pepper: 2
+    Cheese: 1
+    Wheat: 4
+
+Nachos:
+  unlock_level: 87
+  time_to_make: 75 # 1h15m
+  sell_price: 432.0  # TODO: check price
+  xp: 52
+  ingredients:
+    Corn: 4
+    Cheese: 1
+    Salsa: 1

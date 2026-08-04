@@ -1,0 +1,94 @@
+# --- SMOOTHIE MIXER PRODUCTION ---
+
+Berry Smoothie:
+  unlock_level: 64
+  time_to_make: 105 # 1h15
+  sell_price: 547.0  # TODO: check price
+  xp: 65
+  ingredients:
+    Blackberry: 3
+    Strawberry: 3
+    Raspberry: 3
+
+Green Smoothie:
+  unlock_level: 66
+  time_to_make: 45
+  sell_price: 320.0  # TODO: check price
+  xp: 38
+  ingredients:
+    Lettuce: 5
+    Lemon: 1
+    Apple: 1
+
+Yogurt Smoothie:
+  unlock_level: 70
+  time_to_make: 60
+  sell_price: 349.0  # TODO: check price
+  xp: 42
+  ingredients:
+    Cream: 1
+    Raspberry: 2
+    Cherry: 1
+    White Sugar: 1
+
+Cucumber Smoothie:
+  unlock_level: 70
+  time_to_make: 40
+  sell_price: 266.0  # TODO: check price
+  xp: 32
+  ingredients:
+    Cucumber: 3
+    Honey: 1
+    Pineapple: 3
+
+Mixed Smoothie:
+  unlock_level: 88
+  time_to_make: 30
+  sell_price: 504.0  # TODO: check price
+  xp: 60
+  ingredients:
+    Lemon: 1
+    Orange: 2
+    Peach: 2
+
+Black Sesame Smoothie:
+  unlock_level: 93
+  time_to_make: 45
+  sell_price: 313.0  # TODO: check price
+  xp: 37
+  ingredients:
+    Sesame: 3
+    Banana: 1
+    Goat Milk: 2
+
+Cocoa Smoothie:
+  unlock_level: 100
+  time_to_make: 40
+  sell_price: 511.0  # TODO: check price
+  xp: 61
+  ingredients:
+    Cacao: 3
+    Banana: 2
+    Milk: 1
+
+Plum Smoothie:
+  unlock_level: 104
+  time_to_make: 40
+  sell_price: 475.0  # TODO: check price
+  xp: 57
+  ingredients:
+    Cacao: 1
+    Banana: 1
+    Passion Fruit: 2
+    Mango: 2
+
+Tropical Smoothie:
+  unlock_level: 102
+  time_to_make: 35
+  sell_price: 522.0  # TODO: check price
+  xp: 62
+  ingredients:
+    Plum: 3
+    Grapes: 2
+    Mint: 1
+    Honey: 1

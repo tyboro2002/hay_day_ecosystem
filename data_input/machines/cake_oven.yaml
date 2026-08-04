@@ -101,3 +101,58 @@ Fancy Cake:
     Lily: 3
     Raspberry: 3
     Gold Ore: 1
+
+Pineapple Cake:
+  unlock_level: 65
+  time_to_make: 75 # 1h15
+  sell_price: 259.0  # TODO: check price
+  xp: 31
+  ingredients:
+    Pineapple: 3
+    Wheat: 4
+    Egg: 2
+    Cherry: 2
+
+Lemon Cake:
+  unlock_level: 68
+  time_to_make: 150 # 2h30
+  sell_price: 896.0  # TODO: check price
+  xp: 107
+  ingredients:
+    Lemon Curd: 2
+    Egg: 2
+    Cream: 1
+    Wheat: 3
+
+Fruit Cake:
+  unlock_level: 89
+  time_to_make: 180 # 3h
+  sell_price: 450.0  # TODO: check price
+  xp: 54
+  ingredients:
+    Grapes: 2
+    Orange: 2
+    Cherry: 2
+    Wheat: 3
+
+Chocolate Roll:
+  unlock_level: 95
+  time_to_make: 90 # 1h30m
+  sell_price: 604.0  # TODO: check price
+  xp: 72
+  ingredients:
+    Cacao: 5
+    Cream: 1
+    Wheat: 3
+    Mint: 3
+
+Pomegranate Cake:
+  unlock_level: 108
+  time_to_make: 160 # 2h40m
+  sell_price: 316.0  # TODO: check price
+  xp: 38
+  ingredients:
+    Pomegranate: 1
+    Wheat: 6
+    Egg: 2
+    Cream: 2

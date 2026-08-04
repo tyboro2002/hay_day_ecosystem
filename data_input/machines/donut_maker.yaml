@@ -1,0 +1,58 @@
+Plain Donut:
+  unlock_level: 76
+  time_to_make: 15
+  sell_price: 129.0  # TODO: check price
+  xp: 15
+  ingredients:
+    Milk: 1
+    White Sugar: 1
+    Egg: 1
+    Wheat: 3
+
+Sprinkled Donut:
+  unlock_level: 79
+  time_to_make: 20
+  sell_price: 313.0  # TODO: check price
+  xp: 37
+  ingredients:
+    Plain Donut: 1
+    Cacao: 2
+
+Crunchy Donut:
+  unlock_level: 82
+  time_to_make: 30
+  sell_price: 594.0  # TODO: check price
+  xp: 71
+  ingredients:
+    Plain Donut: 1
+    Cacao: 1
+    Peanuts: 1
+
+Cream Donut:
+  unlock_level: 86
+  time_to_make: 25
+  sell_price: 230.0  # TODO: check price
+  xp: 27
+  ingredients:
+    Plain Donut: 1
+    Cream: 1
+    Brown Sugar: 1
+
+Bacon Donut:
+  unlock_level: 88
+  time_to_make: 30
+  sell_price: 388.0  # TODO: check price
+  xp: 46
+  ingredients:
+    Plain Donut: 1
+    Bacon: 3
+    Syrup: 1
+
+Filled Donut:
+  unlock_level: 93
+  time_to_make: 35
+  sell_price: 403.0  # TODO: check price
+  xp: 48
+  ingredients:
+    Plain Donut: 1
+    Raspberry Jam: 1

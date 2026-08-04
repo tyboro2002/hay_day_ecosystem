@@ -7,3 +7,67 @@ Rustic Bouquet:
     Wheat: 5
     Indigo: 3
     Cotton: 3
+
+Bright Bouquet:
+  unlock_level: 65
+  time_to_make: 20
+  sell_price: 338.0  # TODO: check price
+  xp: 40
+  ingredients:
+    Sunflower: 5
+    Iron Ore: 5
+    Indigo: 3
+    Cotton: 1
+
+Gracious Bouquet:
+  unlock_level: 73
+  time_to_make: 40
+  sell_price: 500.0  # TODO: check price
+  xp: 60
+  ingredients:
+    Cotton Fabric: 1
+    Lily: 5
+    Gold Ore: 1
+    Diamond: 1
+
+Candy Bouquet:
+  unlock_level: 90
+  time_to_make: 20
+  sell_price: 554.0  # TODO: check price
+  xp: 66
+  ingredients:
+    Peony: 3
+    Caramel Apple: 1
+    Toffee: 1
+
+Birthday Bouquet:
+  unlock_level: 92
+  time_to_make: 20
+  sell_price: 349.0  # TODO: check price
+  xp: 42
+  ingredients:
+    Cherry Juice: 1
+    Peony: 3
+    Lily: 1
+    Indigo: 1
+
+Soft Bouquet:
+  unlock_level: 93
+  time_to_make: 30
+  sell_price: 298.0  # TODO: check price
+  xp: 36
+  ingredients:
+    Peony: 4
+    Cotton: 1
+    Cotton Fabric: 1
+
+Veggie Bouquet:
+  unlock_level: 106
+  time_to_make: 15
+  sell_price: 352.0  # TODO: check price
+  xp: 42
+  ingredients:
+    Broccoli: 3
+    Cotton Fabric: 1
+    Tomato: 3
+    Mushroom: 3

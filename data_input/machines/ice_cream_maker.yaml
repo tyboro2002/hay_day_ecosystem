@@ -50,3 +50,83 @@ Sesame Ice Cream:
     Cream: 1
     Sesame: 3
     Brown Sugar: 1
+
+Peanut Butter Milkshake:
+  unlock_level: 68
+  time_to_make: 100 # 1h40
+  sell_price: 619.0  # TODO: check price
+  xp: 86
+  ingredients:
+    Peanuts: 1
+    Milk: 1
+    Cream: 1
+    Cacao: 3
+
+Orange Sorbet:
+  unlock_level: 78
+  time_to_make: 210 # 3h30
+  sell_price: 399.0  # TODO: check price
+  xp: 48
+  ingredients:
+    Honey: 1
+    Orange: 2
+
+Affogato:
+  unlock_level: 78
+  time_to_make: 20
+  sell_price: 435.0  # TODO: check price
+  xp: 56
+  ingredients:
+    Vanilla Ice Cream: 1
+    Espresso: 1
+
+Peach Ice Cream:
+  unlock_level: 83
+  time_to_make: 180 #3h
+  sell_price: 450.0  # TODO: check price
+  xp: 54
+  ingredients:
+    Cream: 1
+    Honey: 1
+    Peach: 2
+
+Mint Ice Cream:
+  unlock_level: 85
+  time_to_make: 135 # 2h15
+  sell_price: 288.0  # TODO: check price
+  xp: 34
+  ingredients:
+    Cream: 1
+    White Sugar: 1
+    Mint: 2
+    Cacao: 1
+
+Banana Split:
+  unlock_level: 96
+  time_to_make: 210 # 3h30
+  sell_price: 403.0  # TODO: check price
+  xp: 48
+  ingredients:
+    Banana: 1
+    Cream: 1
+    Cherry: 3
+
+Coconut Ice Cream:
+  unlock_level: 102
+  time_to_make: 15
+  sell_price: 320.0  # TODO: check price
+  xp: 38
+  ingredients:
+    Coconut: 2
+    Syrup: 1
+
+Fruit Sorbet:
+  unlock_level: 106
+  time_to_make: 60 # 1h
+  sell_price: 518.0  # TODO: check price
+  xp: 62
+  ingredients:
+    Guava: 1
+    Passion Fruit: 1
+    Mango: 2
+    White Sugar: 3

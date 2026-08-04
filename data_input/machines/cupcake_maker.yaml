@@ -1,0 +1,41 @@
+Plain Cupcake:
+  unlock_level: 109
+  time_to_make: 40
+  sell_price: 280.0  # TODO: check price
+  xp: 34
+  ingredients:
+    Milk: 2
+    White Sugar: 3
+    Egg: 1
+    Wheat: 5
+
+Guava Cupcake:
+  unlock_level: 109
+  time_to_make: 70 # 1h10m
+  sell_price: 583.0  # TODO: check price
+  xp: 70
+  ingredients:
+    Plain Cupcake: 1
+    Guava: 2
+    Cream: 1
+
+Tropical Cupcake:
+  unlock_level: 112
+  time_to_make: 90 # 1h30m
+  sell_price: 572.0  # TODO: check price
+  xp: 68
+  ingredients:
+    Plain Cupcake: 1
+    Coconut: 2
+    Pineapple: 3
+
+Cookie Cupcake:
+  unlock_level: 114
+  time_to_make: 120 # 2h
+  sell_price: 712.0  # TODO: check price
+  xp: 85
+  ingredients:
+    Plain Cupcake: 1
+    Cream: 2
+    Cookie: 2
+    Cacao: 1

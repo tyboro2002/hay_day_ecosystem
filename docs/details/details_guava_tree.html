@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guava Tree - Plantable Structure</title>
+    <style>
+        
+    body { background-color: #222222; color: #ffffff; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 40px 20px; display: flex; justify-content: center; align-items: center; min-height: 100vh; box-sizing: border-box; }
+    .card { background-color: #2d2d2d; border-radius: 16px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); width: 100%; max-width: 500px; padding: 40px 30px; text-align: center; border: 1px solid #444444; }
+    .item-image { width: 110px; height: 110px; margin-bottom: 15px; object-fit: contain; filter: drop-shadow(0px 6px 8px rgba(0,0,0,0.6)); }
+    h1 { margin: 5px 0 10px 0; font-size: 2rem; color: #f1a80a; font-weight: 700; letter-spacing: 0.5px; }
+    .price { font-size: 1.1rem; color: #b0b0b0; font-weight: 500; background: #3a3a3a; display: inline-block; padding: 6px 16px; border-radius: 20px; border: 1px solid #555555; }
+    .section-title { text-align: left; font-size: 0.95rem; color: #f1a80a; border-bottom: 2px solid #444444; padding-bottom: 6px; margin-top: 25px; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1.2px; font-weight: 600; }
+    .grid { display: flex; flex-wrap: wrap; gap: 15px; justify-content: flex-start; margin-bottom: 30px; }
+    .grid-item { background-color: #353535; border: 1px solid #484848; border-radius: 12px; width: 90px; padding: 15px 5px; display: flex; flex-direction: column; align-items: center; position: relative; text-decoration: none; color: inherit; transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); box-sizing: border-box; }
+    .grid-item:hover { transform: translateY(-5px) scale(1.03); background-color: #404040; border-color: #f1a80a; box-shadow: 0 5px 15px rgba(241, 168, 10, 0.2); }
+    .grid-item img { width: 48px; height: 48px; object-fit: contain; margin-bottom: 8px; filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.4)); }
+    .grid-item .name { font-size: 0.72rem; text-align: center; font-weight: 600; line-height: 1.2; word-break: break-word; padding: 0 4px; }
+    .grid-item .qty-badge { position: absolute; top: -8px; right: -8px; background-color: #f1a80a; color: #222222; font-size: 0.7rem; font-weight: 800; padding: 2px 6px; border-radius: 8px; box-shadow: 0 3px 6px rgba(0,0,0,0.4); border: 1.5px solid #2d2d2d; }
+    .no-items { color: #888888; font-style: italic; text-align: center; width: 100%; padding: 25px 10px; background-color: #353535; border-radius: 8px; border: 1px dashed #484848; margin-bottom: 5px; box-sizing: border-box; font-size: 0.9rem; }
+    .back-btn { display: inline-block; background-color: #f1a80a; color: #222222; text-decoration: none; padding: 12px 35px; border-radius: 30px; font-weight: bold; transition: all 0.2s ease; box-shadow: 0 4px 15px rgba(241, 168, 10, 0.3); font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1px; margin-top: 15px; }
+    .back-btn:hover { background-color: #ffc233; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(241, 168, 10, 0.5); }
+
+    /* Shared summary flex rows */
+    .summary-box { display: flex; flex-direction: column; background-color: #1e1e1e; border-radius: 12px; padding: 15px; margin-bottom: 30px; border: 1px solid #3a3a3a; gap: 8px; text-align: left; }
+    .summary-row { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #2d2d2d; padding-bottom: 6px; }
+    .summary-row:last-child { border-bottom: none; padding-bottom: 0; }
+    .sum-label { font-size: 0.75rem; color: #888888; text-transform: uppercase; letter-spacing: 0.8px; }
+    .sum-val { font-size: 0.95rem; font-weight: 700; color: #ffffff; }
+
+    /* Floating Disclaimer Footer Styles */
+    .sc-disclaimer-footer {
+        position: fixed !important;
+        bottom: 20px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        z-index: 999999 !important;
+        background-color: rgba(33, 33, 33, 0.95) !important;
+        border: 1px solid #444444 !important;
+        border-radius: 30px !important;
+        padding: 10px 24px !important;
+        color: #b0b0b0 !important;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+        font-size: 0.72rem !important;
+        text-align: center !important;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6) !important;
+        max-width: 90% !important;
+        width: max-content !important;
+        pointer-events: auto !important;
+        backdrop-filter: blur(8px) !important;
+        -webkit-backdrop-filter: blur(8px) !important;
+    }
+    .sc-disclaimer-footer a {
+        color: #f1a80a !important;
+        text-decoration: none !important;
+        font-weight: 600 !important;
+    }
+    .sc-disclaimer-footer a:hover {
+        text-decoration: underline !important;
+    }
+    
+    /* Level Slider Control */
+    .level-control { background: #1e1e1e; border: 1px solid #3a3a3a; border-radius: 12px; padding: 14px 18px; margin-bottom: 25px; text-align: left; }
+    .level-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+    .level-title { font-size: 0.75rem; color: #888888; text-transform: uppercase; letter-spacing: 0.8px; font-weight: bold; }
+    .level-value { font-size: 1.1rem; font-weight: 800; color: #f1a80a; }
+    .level-slider { -webkit-appearance: none; appearance: none; width: 100%; height: 6px; background: #444; outline: none; border-radius: 3px; cursor: pointer; }
+    .level-slider::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 18px; height: 18px; border-radius: 50%; background: #f1a80a; cursor: pointer; box-shadow: 0 0 8px rgba(241, 168, 10, 0.5); }
+    
+    /* Machine Count Banner */
+    .machine-count-status { font-size: 0.85rem; font-weight: bold; color: #2ecc71; margin-top: 8px; border-top: 1px solid #2d2d2d; padding-top: 6px; }
+    .machine-count-status.zero { color: #e74c3c; }
+
+    /* Locked Grid Items */
+    .grid-item.locked { filter: grayscale(100%) opacity(0.35); pointer-events: none; border-color: #333333 !important; }
+    .grid-item .lock-badge { display: none; position: absolute; top: 4px; left: 4px; background: rgba(0,0,0,0.85); color: #e74c3c; font-size: 0.65rem; font-weight: 800; padding: 2px 5px; border-radius: 4px; border: 1px solid #e74c3c; z-index: 2; }
+    .grid-item.locked .lock-badge { display: block; }
+
+    /* Main Machine Lock Visuals */
+    .machine-img-wrapper {
+        position: relative;
+        display: inline-block;
+    }
+    .machine-img-wrapper.locked .item-image {
+        filter: grayscale(100%) opacity(0.35) drop-shadow(0px 0px 0px transparent);
+    }
+    .machine-img-wrapper .main-lock-badge {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(0, 0, 0, 0.85);
+        color: #e74c3c;
+        padding: 8px 14px;
+        border-radius: 20px;
+        border: 1.5px solid #e74c3c;
+        font-weight: 800;
+        font-size: 0.9rem;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        white-space: nowrap;
+        pointer-events: none;
+    }
+    .machine-img-wrapper.locked .main-lock-badge {
+        display: block;
+    }
+
+        .header-tag { font-size: 0.75rem; font-weight: bold; color: #2ecc71; text-transform: uppercase; letter-spacing: 1.5px; border: 1.5px solid #2ecc71; padding: 4px 12px; border-radius: 15px; display: inline-block; margin-bottom: 12px; }
+
+        /* Locking & Main Image Wrapper */
+        .item-img-wrapper {
+            position: relative;
+            display: inline-block;
+            margin: 0 auto 15px auto;
+        }
+        .item-img-wrapper .item-image {
+            transition: filter 0.3s ease, opacity 0.3s ease;
+        }
+        .item-img-wrapper .main-lock-badge {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(192, 57, 43, 0.9);
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 0.85rem;
+            padding: 6px 14px;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            pointer-events: none;
+            white-space: nowrap;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            z-index: 2;
+        }
+
+        .item-img-wrapper.locked .item-image {
+            filter: grayscale(100%) opacity(0.35);
+        }
+        .item-img-wrapper.locked .main-lock-badge {
+            display: block;
+        }
+
+        /* Grid Items & Badges */
+        .grid-item {
+            position: relative;
+            transition: filter 0.3s ease, opacity 0.3s ease;
+        }
+        .grid-item.locked {
+            filter: grayscale(100%) opacity(0.4);
+            pointer-events: none;
+        }
+        .grid-item .lock-badge {
+            display: none;
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            background: rgba(0, 0, 0, 0.75);
+            color: #ff6b6b;
+            font-size: 0.65rem;
+            font-weight: bold;
+            padding: 2px 6px;
+            border-radius: 4px;
+            border: 1px solid rgba(255, 107, 107, 0.4);
+            z-index: 2;
+        }
+        .grid-item.locked .lock-badge {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    
+<div class="sc-disclaimer-footer">
+    <div style="margin-bottom: 6px; font-weight: bold;">
+        <a href="../general_profitability.html">Profit Rankings</a> | 
+        <a href="../overnight_strategies.html">Overnight Strategy</a> |
+        <a href="../daily_dirt_newspaper_countdown.html">Dirt Countdown</a>
+    </div>
+    <hr style="border: 0; border-top: 1px solid #444; margin: 6px 0;">
+    This material is unofficial and is not endorsed by Supercell. For more information see <a href="https://www.supercell.com/fan-content-policy" target="_blank">Supercell's Fan Content Policy</a>.
+</div>
+
+    <div class="card">
+        
+        <div class="item-img-wrapper" id="mainMachineWrapper" data-unlock-level="104">
+            <span class="main-lock-badge">Requires Lvl 104</span>
+            <img class="item-image" src="data:image/webp;base64,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" alt="Guava Tree">
+        </div>
+        
+        <h1>Guava Tree</h1>
+
+        
+    
+    <script type="text/javascript">
+        window.HayDayLevelFilterPersistence = window.HayDayLevelFilterPersistence || (function() {
+            const storageKey = "hayday_shared_level_filter_v1";
+
+            function readWindowNameValue() {
+                const prefix = storageKey + '=';
+                const parts = String(window.name || '').split('').filter(Boolean);
+                const match = parts.find(part => part.startsWith(prefix));
+                return match ? match.slice(prefix.length) : null;
+            }
+
+            function writeWindowNameValue(level) {
+                const prefix = storageKey + '=';
+                const parts = String(window.name || '').split('').filter(part => !part.startsWith(prefix));
+                parts.push(prefix + String(level));
+                window.name = parts.join('');
+            }
+
+            function readStoredLevel(defaultLevel, maxLevel) {
+                try {
+                    const raw = localStorage.getItem(storageKey);
+                    const fallbackRaw = raw !== null ? raw : readWindowNameValue();
+                    if (fallbackRaw === null) return defaultLevel;
+
+                    const parsed = parseInt(fallbackRaw, 10);
+                    if (Number.isNaN(parsed)) return defaultLevel;
+                    return typeof maxLevel === 'number' ? Math.min(Math.max(parsed, 1), maxLevel) : Math.max(parsed, 1);
+                } catch (error) {
+                    const fallbackRaw = readWindowNameValue();
+                    if (fallbackRaw === null) return defaultLevel;
+
+                    const parsed = parseInt(fallbackRaw, 10);
+                    if (Number.isNaN(parsed)) return defaultLevel;
+                    return typeof maxLevel === 'number' ? Math.min(Math.max(parsed, 1), maxLevel) : Math.max(parsed, 1);
+                }
+            }
+
+            function writeStoredLevel(level) {
+                try {
+                    localStorage.setItem(storageKey, String(level));
+                } catch (error) {
+                    writeWindowNameValue(level);
+                    console.warn('Could not persist level filter:', error);
+                    return;
+                }
+
+                writeWindowNameValue(level);
+            }
+
+            return { readStoredLevel, writeStoredLevel };
+        })();
+    </script>
+    
+    <div class="level-control">
+        <div class="level-header">
+            <span class="level-title">Level Filter</span>
+            <span class="level-value" id="levelDisplay">Level 51</span>
+        </div>
+        <input type="range" min="1" max="62" value="51" class="level-slider" id="levelSlider">
+        <div class="machine-count-status" id="machineCountDisplay" style="display: none;"></div>
+    </div>
+
+    <script type="text/javascript">
+        (function() {
+            const slider = document.getElementById('levelSlider');
+            const display = document.getElementById('levelDisplay');
+            const countDisplay = document.getElementById('machineCountDisplay');
+            const unlockSchedule = [[104, 1]];
+            const machineUnlockLevel = 104;
+            const defaultLevel = 51;
+            const maxLevel = 62;
+
+            function updateLevel(currentLevel) {
+                display.textContent = 'Level ' + currentLevel;
+
+                // 1. Toggle Grayed Out State on Main Image Header
+                const machWrapper = document.getElementById('mainMachineWrapper');
+                if (machWrapper) {
+                    const mainReqLvl = parseInt(machWrapper.getAttribute('data-unlock-level') || machineUnlockLevel, 10);
+                    if (currentLevel < mainReqLvl) {
+                        machWrapper.classList.add('locked');
+                    } else {
+                        machWrapper.classList.remove('locked');
+                    }
+                }
+
+                // 2. Calculate unlocked count if schedule is present
+                if (unlockSchedule.length > 0 && countDisplay && countDisplay.style.display !== 'none') {
+                    let totalUnlocked = 0;
+                    for (let i = 0; i < unlockSchedule.length; i++) {
+                        const [lvl, count] = unlockSchedule[i];
+                        if (currentLevel >= lvl) {
+                            totalUnlocked += count;
+                        }
+                    }
+
+                    if (totalUnlocked === 0) {
+                        countDisplay.className = 'machine-count-status zero';
+                        countDisplay.textContent = 'Locked (Requires Level ' + machineUnlockLevel + ')';
+                    } else {
+                        countDisplay.className = 'machine-count-status';
+                        countDisplay.textContent = totalUnlocked + ' Unlocked at Level ' + currentLevel;
+                    }
+                }
+
+                // 3. Lock / Unlock child elements, habitat links, feed links, & product cards
+                const unlockables = document.querySelectorAll('[data-unlock-level]');
+                unlockables.forEach(el => {
+                    const reqLevel = parseInt(el.getAttribute('data-unlock-level'), 10);
+                    if (currentLevel < reqLevel) {
+                        el.classList.add('locked');
+                    } else {
+                        el.classList.remove('locked');
+                    }
+                });
+            }
+
+            const initialLevel = window.HayDayLevelFilterPersistence
+                ? window.HayDayLevelFilterPersistence.readStoredLevel(defaultLevel, maxLevel)
+                : defaultLevel;
+
+            slider.value = String(initialLevel);
+            slider.addEventListener('input', (e) => {
+                const nextLevel = parseInt(e.target.value, 10);
+                updateLevel(nextLevel);
+                if (window.HayDayLevelFilterPersistence) {
+                    window.HayDayLevelFilterPersistence.writeStoredLevel(nextLevel);
+                }
+            });
+            updateLevel(initialLevel);
+        })();
+    </script>
+    
+
+        <div class="section-title" style="margin-top: 20px;">Produces</div>
+        <div class="grid">
+            
+            <a class="grid-item" href="details_guava.html" data-unlock-level="104">
+                <span class="lock-badge">🔒 Lvl 104</span>
+                <div class="qty-badge" style="background-color: #3498db; color: white; font-size: 0.6rem;">1d 10h</div>
+                <img src="data:image/webp;base64,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" alt="Guava">
+                <div class="name">Guava</div>
+            </a>
+            
+        </div>
+
+        
+
+        <a class="back-btn" href="../index.html">Back to Map</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+Plain Waffles:
+  unlock_level: 114
+  time_to_make: 25
+  sell_price: 198.0  # TODO: check price
+  xp: 24
+  ingredients:
+    White Sugar: 2
+    Egg: 3
+    Wheat: 5
+
+Berry Waffles:
+  unlock_level: 114
+  time_to_make: 35
+  sell_price: 604.0  # TODO: check price
+  xp: 72
+  ingredients:
+    Plain Waffles: 1
+    Syrup: 1
+    Raspberry: 3
+    Blackberry: 2
+
+Chocolate Waffles:
+  unlock_level: 117
+  time_to_make: 40
+  sell_price: 637.0  # TODO: check price
+  xp: 76
+  ingredients:
+    Plain Waffles: 1
+    Cacao: 2
+    Strawberry: 3
+    Banana: 1
+
+
+Blueberry Waffles:
+  unlock_level: 118
+  time_to_make: 42
+  sell_price: 669.0  # TODO: check price
+  xp: 80
+  ingredients:
+    Plain Waffles: 1
+    Cacao: 2
+    Milk: 1
+    Blueberry: 3
+
+Breakfast Waffles:
+  unlock_level: 119
+  time_to_make: 45
+  sell_price: 424.0  # TODO: check price
+  xp: 51
+  ingredients:
+    Plain Waffles: 1
+    Bacon: 2
+    Egg: 1
+    Asparagus: 2

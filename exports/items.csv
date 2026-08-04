@@ -20,6 +20,25 @@ Lily,Crop,21.0,90,None,None
 Rice,Crop,18.0,45,None,None
 Lettuce,Crop,32.0,210,None,None
 Garlic,Crop,14.0,30,None,None
+Sunflower,Crop,21.0,90,None,None
+Cabbage,Crop,18.0,45,None,None
+Onion,Crop,39.0,300,None,None
+Cucumber,Crop,14.0,35,None,None
+Beetroot,Crop,14.0,40,None,None
+Bell Pepper,Crop,36.0,270,None,None
+Ginger,Crop,28.0,150,None,None
+Tea Leaf,Crop,43.0,390,None,None
+Peony,Crop,36.0,240,None,None
+Broccoli,Crop,21.0,90,None,None
+Grapes,Crop,32.0,180,None,None
+Mint,Crop,32.0,180,None,None
+Passion Fruit,Crop,18.0,60,None,None
+Mushroom,Crop,10.0,20,None,None
+Eggplant,Crop,14.0,40,None,None
+Watermelon,Crop,39.0,300,None,None
+Clay,Crop,18.0,110,None,None
+Chickpea,Crop,18.0,60,None,None
+Oats,Crop,7.0,7,None,None
 Apple,PlantableItem,39.6,960,None,None
 Raspberry,PlantableItem,46.8,1080,None,None
 Cherry,PlantableItem,68.4,1620,None,None
@@ -28,6 +47,15 @@ Blueberry,PlantableItem,82.8,2160,None,None
 Cacao,PlantableItem,86.4,2160,None,None
 Coffee Bean,PlantableItem,64.8,1500,None,None
 Olive,PlantableItem,82.0,1440,None,None
+Lemon,PlantableItem,66.0,1740,None,None
+Orange,PlantableItem,97.0,1860,None,None
+Peach,PlantableItem,100.0,1800,None,None
+Banana,PlantableItem,104.0,1620,None,None
+Plum,PlantableItem,82.0,1500,None,None
+Mango,PlantableItem,100.0,1920,None,None
+Coconut,PlantableItem,108.0,2160,None,None
+Guava,PlantableItem,111.0,2040,None,None
+Pomegranate,PlantableItem,111.0,1620,None,None
 Egg,AnimalItem,18.0,20,Chicken Coop,None
 Milk,AnimalItem,32.4,60,Cow Pasture,None
 Bacon,AnimalItem,50.4,240,Pig Pen,None
@@ -55,6 +83,10 @@ Blueberry muffin,MachinedItem,230.4,45,Bakery,"Wheat x1, Egg x2, Blueberry x2"
 Spicy pizza,MachinedItem,226.8,15,Bakery,"Wheat x2, Tomato x1, Cheese x1, Chili Pepper x1"
 Potato Bread,MachinedItem,284.4,45,Bakery,"Potato x2, White Sugar x1, Egg x3, Butter x1"
 Frutti Di Mare Pizza,MachinedItem,403.2,15,Bakery,"Wheat x2, Cheese x1, Fish Fillet x1, Lobster Tail x1"
+Gingerbread Cookie,MachinedItem,273.0,30,Bakery,"Wheat x5, Butter x1, Syrup x1, Ginger x2"
+Banana Bread,MachinedItem,424.0,30,Bakery,"Banana x3, Grapes x2, Wheat x3, Egg x1"
+Macaroon,MachinedItem,421.0,30,Bakery,"Cacao x1, Coconut x2, White Sugar x2"
+Pineapple Coconut Bars,MachinedItem,284.0,40,Bakery,"Coconut x1, White Sugar x2, Oats x3, Pineapple x2"
 Cream,MachinedItem,50.4,20,Dairy,Milk x1
 Butter,MachinedItem,82.8,30,Dairy,Milk x2
 Cheese,MachinedItem,122.4,60,Dairy,Milk x3
@@ -67,6 +99,7 @@ Buttered Popcorn,MachinedItem,126.0,60,Popcorn Pot,"Corn x2, Butter x1"
 Chili Popcorn,MachinedItem,122.4,120,Popcorn Pot,"Corn x2, Chili Pepper x1"
 Honey Popcorn,MachinedItem,360.0,90,Popcorn Pot,"Corn x2, Honey x2"
 Chocolate Popcorn,MachinedItem,248.4,150,Popcorn Pot,"Corn x2, Cacao x2"
+Snack Mix,MachinedItem,309.0,45,Popcorn Pot,"Corn x2, Sesame x1, Peanuts x1"
 Pancake,MachinedItem,108.0,30,BBQ Grill,"Egg x3, Brown Sugar x1"
 Bacon And Eggs,MachinedItem,201.6,60,BBQ Grill,"Egg x4, Bacon x2"
 Hamburger,MachinedItem,180.0,120,BBQ Grill,"Bread x2, Bacon x2"
@@ -77,6 +110,13 @@ Baked Potato,MachinedItem,298.8,35,BBQ Grill,"Cheese x1, Chili Pepper x1, Cream 
 Fish And Chips,MachinedItem,244.8,90,BBQ Grill,"Fish Fillet x2, Potato x3"
 Lobster Skewer,MachinedItem,417.6,40,BBQ Grill,"Chili Pepper x1, Honey x1, Lobster Tail x1"
 Garlic Bread,MachinedItem,198.0,15,BBQ Grill,"Bread x2, Butter x1, Garlic x4"
+Grilled Asparagus,MachinedItem,486.0,75,BBQ Grill,"Asparagus x5, Bacon x3, Lemon x1"
+Grilled Onion,MachinedItem,190.0,60,BBQ Grill,"Butter x1, Onion x2"
+Winter Veggies,MachinedItem,198.0,25,BBQ Grill,"Beetroot x2, Carrot x2, Potato x2, Pumpkin x2"
+Stuffed Peppers,MachinedItem,352.0,20,BBQ Grill,"Bell Pepper x3, Bacon x1, Rice x3, Cheese x1"
+Grilled Eggplant,MachinedItem,324.0,40,BBQ Grill,"Eggplant x3, Salsa x1"
+Banana Pancakes,MachinedItem,352.0,60,BBQ Grill,"Banana x1, Blackberry x2, Wheat x3, Cream x1"
+Fish Skewer,MachinedItem,176.0,30,BBQ Grill,"Fish Fillet x1, Mushroom x3, Garlic x1, Sesame x2"
 Carrot Pie,MachinedItem,82.8,60,Pie Oven,"Wheat x2, Egg x1, Carrot x3"
 Pumpkin Pie,MachinedItem,158.4,120,Pie Oven,"Wheat x2, Egg x1, Pumpkin x3"
 Bacon Pie,MachinedItem,219.6,180,Pie Oven,"Wheat x2, Egg x1, Bacon x3"
@@ -86,11 +126,18 @@ Feta Pie,MachinedItem,223.2,90,Pie Oven,"Goat Cheese x1, Egg x1, Wheat x2"
 Casserole,MachinedItem,367.2,120,Pie Oven,"Bacon x2, Cheese x1, Egg x2, Potato x2"
 Shepherd's Pie,MachinedItem,280.8,100,Pie Oven,"Potato x2, Carrot x2, Bacon x2, Pumpkin x2"
 Asparagus Quiche,MachinedItem,302.4,120,Pie Oven,"Asparagus x2, Egg x2, Wheat x4, Cheese x1"
+Chocolate Pie,MachinedItem,514.0,75,Pie Oven,"Wheat x3, Cacao x2, Egg x1, Peanuts x1"
+Lemon Pie,MachinedItem,446.0,135,Pie Oven,"Lemon Curd x1, Wheat x2, Egg x1"
+Peach Tart,MachinedItem,435.0,150,Pie Oven,"Cream x1, Egg x2, Peach x3, Wheat x2"
+Passion Fruit Pie,MachinedItem,111.0,50,Pie Oven,"Passion Fruit x3, Wheat x2, Egg x1"
+Mushroom Pot Pie,MachinedItem,162.0,60,Pie Oven,"Mushroom x3, Cabbage x3, Wheat x3, Egg x2"
+Eggplant Parmesan,MachinedItem,442.0,45,Pie Oven,"Eggplant x4, Cheese x1, Tomato Sauce x1"
 Sweater,MachinedItem,151.2,120,Loom,Wool x2
 Cotton Fabric,MachinedItem,108.0,30,Loom,Cotton x3
 Blue Woolly Hat,MachinedItem,111.6,60,Loom,"Wool x1, Indigo x1"
 Blue Sweater,MachinedItem,208.8,180,Loom,"Wool x2, Indigo x2"
 Red Scarf,MachinedItem,288.0,150,Loom,"Wool x2, Strawberry x2"
+Flower Shawl,MachinedItem,295.0,90,Loom,"Wool x2, Sunflower x3, Blackberry x1"
 Cotton Shirt,MachinedItem,241.2,45,Sewing Machine,Cotton Fabric x2
 Wooly Chaps,MachinedItem,309.6,90,Sewing Machine,"Wool x3, Cotton Fabric x1"
 Violet Dress,MachinedItem,327.6,135,Sewing Machine,"Indigo x1, Cotton Fabric x2, Raspberry x1"
@@ -107,6 +154,11 @@ Chocolate Cake,MachinedItem,320.4,120,Cake Oven,"Brown Sugar x1, Butter x1, Caca
 Potato Feta Cake,MachinedItem,309.6,120,Cake Oven,"Egg x4, Goat Cheese x1, Potato x1"
 Honey Apple Cake,MachinedItem,482.4,200,Cake Oven,"Honey x2, Apple x2, Egg x2, Wheat x2"
 Fancy Cake,MachinedItem,450.0,15,Cake Oven,"Cream Cake x1, Lily x3, Raspberry x3, Gold Ore x1"
+Pineapple Cake,MachinedItem,259.0,75,Cake Oven,"Pineapple x3, Wheat x4, Egg x2, Cherry x2"
+Lemon Cake,MachinedItem,896.0,150,Cake Oven,"Lemon Curd x2, Egg x2, Cream x1, Wheat x3"
+Fruit Cake,MachinedItem,450.0,180,Cake Oven,"Grapes x2, Orange x2, Cherry x2, Wheat x3"
+Chocolate Roll,MachinedItem,604.0,90,Cake Oven,"Cacao x5, Cream x1, Wheat x3, Mint x3"
+Pomegranate Cake,MachinedItem,316.0,160,Cake Oven,"Pomegranate x1, Wheat x6, Egg x2, Cream x2"
 Silver Bar,MachinedItem,147.6,480,Smelter,Silver Ore x3
 Gold Bar,MachinedItem,180.0,720,Smelter,Gold Ore x3
 Platinum Bar,MachinedItem,205.2,960,Smelter,Platinum Ore x3
@@ -118,11 +170,25 @@ Cherry Juice,MachinedItem,216.0,150,Juice Press,Cherry x2
 Tomato Juice,MachinedItem,162.0,90,Juice Press,Tomato x3
 Berry Juice,MachinedItem,205.2,180,Juice Press,"Blackberry x1, Raspberry x1"
 Pineapple Juice,MachinedItem,68.0,180,Juice Press,Pineapple x3
+Orange Juice,MachinedItem,234.0,120,Juice Press,Orange x2
+Grape Juice,MachinedItem,104.0,150,Juice Press,Grapes x2
+Passion Fruit Juice,MachinedItem,64.0,45,Juice Press,Passion Fruit x2
+Watermelon Juice,MachinedItem,108.0,60,Juice Press,Watermelon x2
+Mango Juice,MachinedItem,230.0,50,Juice Press,Mango x2
+Guava Juice,MachinedItem,252.0,55,Juice Press,Guava x2
 Vanilla Ice Cream,MachinedItem,172.8,120,Ice Cream Maker,"Milk x1, Cream x1, White Sugar x1"
 Cherry Popsicle,MachinedItem,352.8,180,Ice Cream Maker,"Cherry Juice x1, Syrup x1"
 Strawberry Ice Cream,MachinedItem,331.2,240,Ice Cream Maker,"Milk x1, Cream x1, White Sugar x1, Strawberry x3"
 Chocolate Ice Cream,MachinedItem,342.0,150,Ice Cream Maker,"Milk x1, Cream x1, White Sugar x1, Cacao x2"
 Sesame Ice Cream,MachinedItem,176.4,120,Ice Cream Maker,"Cream x1, Sesame x3, Brown Sugar x1"
+Peanut Butter Milkshake,MachinedItem,619.0,100,Ice Cream Maker,"Peanuts x1, Milk x1, Cream x1, Cacao x3"
+Orange Sorbet,MachinedItem,399.0,210,Ice Cream Maker,"Honey x1, Orange x2"
+Affogato,MachinedItem,435.0,20,Ice Cream Maker,"Vanilla Ice Cream x1, Espresso x1"
+Peach Ice Cream,MachinedItem,450.0,180,Ice Cream Maker,"Cream x1, Honey x1, Peach x2"
+Mint Ice Cream,MachinedItem,288.0,135,Ice Cream Maker,"Cream x1, White Sugar x1, Mint x2, Cacao x1"
+Banana Split,MachinedItem,403.0,210,Ice Cream Maker,"Banana x1, Cream x1, Cherry x3"
+Coconut Ice Cream,MachinedItem,320.0,15,Ice Cream Maker,"Coconut x2, Syrup x1"
+Fruit Sorbet,MachinedItem,518.0,60,Ice Cream Maker,"Guava x1, Passion Fruit x1, Mango x2, White Sugar x3"
 Lamb doner wrap,MachinedItem,172.8,20,Doner Kebab Stand,"Grilled Lamb Skewer x1, Tomato x1, Bread x1"
 Spicy bean doner,MachinedItem,471.6,30,Doner Kebab Stand,"Black Bean x3, Chili Pepper x3, Cheese x2, Corn Bread x1"
 Tower Doner Supreme,MachinedItem,356.0,40,Doner Kebab Stand,"Lamb Chop x3, Corn Bread x1, Goat Cheese x1, Lettuce x3"
@@ -131,10 +197,17 @@ Raspberry Jam,MachinedItem,252.0,420,Jam Maker,Raspberry x3
 Blackberry Jam,MachinedItem,388.8,480,Jam Maker,Blackberry x3
 Cherry Jam,MachinedItem,334.8,420,Jam Maker,Cherry x3
 Strawberry Jam,MachinedItem,270.0,450,Jam Maker,Strawberry x3
+Blueberry Chutney,MachinedItem,579.0,240,Jam Maker,"Brown Sugar x1, Lemon x1, Onion x1, Blueberry x3"
+Marmalade,MachinedItem,457.0,510,Jam Maker,Orange x3
+Peach Jam,MachinedItem,464.0,480,Jam Maker,Peach x3
+Grape Jam,MachinedItem,162.0,390,Jam Maker,Grapes x3
+Plum Jam,MachinedItem,385.0,300,Jam Maker,Plum x3
+Passion Fruit Jam,MachinedItem,118.0,320,Jam Maker,Passion Fruit x3
 Bracelet,MachinedItem,514.8,120,Jeweler,"Gold Bar x1, Silver Bar x2"
 Necklace,MachinedItem,727.2,180,Jeweler,"Gold Bar x1, Platinum Bar x1, Silver Bar x2"
 Diamond Ring,MachinedItem,824.4,240,Jeweler,"Diamond x1, Platinum Bar x2, Gold Bar x2"
 Iron Bracelet,MachinedItem,658.8,90,Jeweler,"Iron Bar x2, Refined coal x2, Silver Bar x1"
+Flower Pendant,MachinedItem,698.0,60,Jeweler,"Platinum Bar x1, Gold Bar x2, Peony x3"
 Honey,MachinedItem,154.8,20,Honey Extractor,Honeycomb x2
 Beeswax,MachinedItem,234.0,45,Honey Extractor,Honeycomb x3
 Espresso,MachinedItem,248.4,5,Coffee Kiosk,"Coffee Bean x3, White Sugar x1"
@@ -143,6 +216,7 @@ Caffè Mocha,MachinedItem,291.6,15,Coffee Kiosk,"Coffee Bean x1, Cream x1, Cacao
 Raspberry Mocha,MachinedItem,259.2,30,Coffee Kiosk,"Coffee Bean x1, Cream x1, Cacao x1, Raspberry x1"
 Hot Chocolate,MachinedItem,316.8,25,Coffee Kiosk,"Cacao x2, White Sugar x1, Milk x1, Cream x1"
 Caramel Latte,MachinedItem,345.0,15,Coffee Kiosk,"Coffee Bean x2, Toffee x1, Milk x1"
+Iced Banana Latte,MachinedItem,277.0,20,Coffee Kiosk,"Banana x1, Coffee Bean x2, Milk x1"
 Lobster Tail,MachinedItem,201.6,360,Lobster Pool,None
 Lobster Soup,MachinedItem,612.0,150,Soup Kitchen,"Chili Pepper x2, Lobster Tail x1, Cream x1, Tomato x1"
 Lamb Soup,MachinedItem,180.0,120,Soup Kitchen,"Grilled Lamb Skewer x1, Potato x1, Carrot x2"
@@ -150,25 +224,185 @@ Tomato Soup,MachinedItem,478.8,90,Soup Kitchen,"Chili Pepper x1, Goat Cheese x1,
 Pumpkin Soup,MachinedItem,392.4,120,Soup Kitchen,"Butter x1, Carrot x2, Honey x1, Pumpkin x3"
 Asparagus Soup,MachinedItem,255.0,60,Soup Kitchen,"Asparagus x3, Cream x2"
 Fish Soup,MachinedItem,298.0,180,Soup Kitchen,"Carrot x1, Fish Fillet x2, Milk x1, Potato x3"
+Cabbage Soup,MachinedItem,270.0,90,Soup Kitchen,"Cabbage x3, Bacon x2, Potato x2, Carrot x2"
+Onion Soup,MachinedItem,327.0,150,Soup Kitchen,"Bread x2, Cheese x1, Onion x3"
+Noodle Soup,MachinedItem,432.0,120,Soup Kitchen,"Carrot x2, Chili Pepper x1, Egg x2, Rice Noodles x3"
+Potato Soup,MachinedItem,255.0,150,Soup Kitchen,"Potato x3, Onion x2, Milk x1"
+Bell Pepper Soup,MachinedItem,439.0,60,Soup Kitchen,"Bread x1, Olive Oil x1, Chili Pepper x1, Bell Pepper x2"
+Broccoli Soup,MachinedItem,237.0,90,Soup Kitchen,"Broccoli x3, Onion x1, Potato x3"
+Mushroom Soup,MachinedItem,176.0,80,Soup Kitchen,"Mushroom x3, Onion x2, Milk x1"
 Strawberry Candle,MachinedItem,370.8,120,Candle Maker,"Beeswax x1, Strawberry x2"
 Raspberry Candle,MachinedItem,360.0,105,Candle Maker,"Beeswax x1, Raspberry x2"
+Lemon Candle,MachinedItem,457.0,135,Candle Maker,"Beeswax x1, Lemon x2"
+Colorful Candles,MachinedItem,324.0,110,Candle Maker,"Beeswax x1, Raspberry x1, Carrot x1"
+Floral Candle,MachinedItem,442.0,120,Candle Maker,"Beeswax x1, Peony x2, Sunflower x2, Indigo x2"
 Rustic Bouquet,MachinedItem,208.8,45,Flower Shop,"Wheat x5, Indigo x3, Cotton x3"
+Bright Bouquet,MachinedItem,338.0,20,Flower Shop,"Sunflower x5, Iron Ore x5, Indigo x3, Cotton x1"
+Gracious Bouquet,MachinedItem,500.0,40,Flower Shop,"Cotton Fabric x1, Lily x5, Gold Ore x1, Diamond x1"
+Candy Bouquet,MachinedItem,554.0,20,Flower Shop,"Peony x3, Caramel Apple x1, Toffee x1"
+Birthday Bouquet,MachinedItem,349.0,20,Flower Shop,"Cherry Juice x1, Peony x3, Lily x1, Indigo x1"
+Soft Bouquet,MachinedItem,298.0,30,Flower Shop,"Peony x4, Cotton x1, Cotton Fabric x1"
+Veggie Bouquet,MachinedItem,352.0,15,Flower Shop,"Broccoli x3, Cotton Fabric x1, Tomato x3, Mushroom x3"
 Duck Feather,MachinedItem,140.4,180,Duck Salon,None
 Caramel Apple,MachinedItem,255.0,120,Candy Machine,"Apple x1, Syrup x2"
 Toffee,MachinedItem,176.0,90,Candy Machine,"Butter x1, Wheat x1, White Sugar x1"
 Chocolate,MachinedItem,460.0,1200,Candy Machine,"Cacao x3, Cream x1, White Sugar x1"
 Lollipop,MachinedItem,342.0,720,Candy Machine,"Cherry x1, Syrup x1, Strawberry x2"
 Jelly Beans,MachinedItem,684.0,1440,Candy Machine,"Blackberry Jam x1, Raspberry Jam x1, White Sugar x1"
+Honey Peanuts,MachinedItem,468.0,40,Candy Machine,"Honey x1, Peanuts x1"
+Cotton Candy,MachinedItem,226.0,30,Candy Machine,"White Sugar x3, Strawberry x1"
+Sesame Brittle,MachinedItem,270.0,60,Candy Machine,"Sesame x3, Garlic x1, Honey x1"
 Soy Sauce,MachinedItem,154.0,180,Sauce Maker,"Soybean x9, Wheat x1"
 Bean Dip,MachinedItem,453.0,40,Sauce Maker,"Black Bean x3, Tomato x1, Chili Pepper x1"
 Olive Oil,MachinedItem,277.0,45,Sauce Maker,Olive x3
 Mayonnaise,MachinedItem,367.0,15,Sauce Maker,"Egg x4, Olive Oil x1"
+Lemon Curd,MachinedItem,378.0,25,Sauce Maker,"Lemon x2, Butter x1, Egg x2, White Sugar x1"
+Olive Dip,MachinedItem,468.0,45,Sauce Maker,"Olive x3, Bread x2, Fish Fillet x1, Lemon x1"
+Tomato Sauce,MachinedItem,230.0,30,Sauce Maker,"Brown Sugar x1, Lemon x1, Tomato x2"
+Salsa,MachinedItem,252.0,20,Sauce Maker,"Chili Pepper x1, Tomato x2, Onion x2"
+Hummus,MachinedItem,277.0,30,Sauce Maker,"Chickpea x3, Lemon x2, Garlic x1"
+Tart Dressing,MachinedItem,288.0,30,Sauce Maker,"Passion Fruit x2, Chili Pepper x2, Honey x1"
 Sushi Roll,MachinedItem,489.0,60,Sushi Bar,"Fish Fillet x1, Rice x15, Soy Sauce x1"
 Lobster Sushi,MachinedItem,637.0,60,Sushi Bar,"Lobster Tail x1, Rice x15, Soy Sauce x1"
+Egg Sushi,MachinedItem,550.0,120,Sushi Bar,"Brown Sugar x1, Egg x4, Rice x15, Soy Sauce x1"
+Big Sushi Roll,MachinedItem,648.0,90,Sushi Bar,"Fish Fillet x1, Rice x20, Egg x3, Lettuce x5"
+Rice Ball,MachinedItem,464.0,45,Sushi Bar,"Sesame x1, Rice x20, Plum x1"
 Feta Salad,MachinedItem,745.0,120,Salad Bar,"Goat Cheese x2, Lettuce x3, Olive x2, Roasted Tomatoes x1"
 Bean Salad,MachinedItem,169.0,60,Salad Bar,"Black Bean x2, Lettuce x2, Tomato x1, Corn x1"
 BLT Salad,MachinedItem,723.0,105,Salad Bar,"Bacon x2, Lettuce x3, Roasted Tomatoes x1, Mayonnaise x1"
+Seafood Salad,MachinedItem,763.0,120,Salad Bar,"Fish Fillet x1, Lettuce x3, Lobster Tail x1, Mayonnaise x1"
+Pasta Salad,MachinedItem,759.0,150,Salad Bar,"Fresh Pasta x4, Lemon x2, Olive Oil x1, Tomato x2"
+Veggie Platter,MachinedItem,266.0,120,Salad Bar,"Bell Pepper x1, Carrot x2, Tomato x2, Cream x1"
+Coleslaw,MachinedItem,468.0,75,Salad Bar,"Cabbage x3, Carrot x2, Mayonnaise x1"
+Beetroot Salad,MachinedItem,234.0,45,Salad Bar,"Beetroot x3, Goat Cheese x1"
+Summer Rolls,MachinedItem,319.0,60,Salad Bar,"Rice Noodles x2, Carrot x2, Lettuce x1, Chili Pepper x1"
+Fruit Salad,MachinedItem,597.0,120,Salad Bar,"Blackberry x2, Honey x1, Orange x1, Strawberry x3"
+Summer Salad,MachinedItem,554.0,180,Salad Bar,"Goat Cheese x1, Onion x3, Peach x1, Tomato x3"
+Mushroom Salad,MachinedItem,216.0,60,Salad Bar,"Mushroom x3, Lettuce x1, Potato x2, Bacon x1"
+Orange Salad,MachinedItem,558.0,45,Salad Bar,"Cheese x1, Lettuce x3, Pomegranate x1, Orange x2"
 Veggie Bagel,MachinedItem,532.0,40,Sandwich Bar,"Bread x2, Lettuce x3, Olive Oil x1, Tomato x2"
+Bacon Toast,MachinedItem,648.0,100,Sandwich Bar,"Bacon x2, Bread x2, Lettuce x3, Mayonnaise x1"
+Egg Sandwich,MachinedItem,583.0,80,Sandwich Bar,"Bread x2, Egg x2, Lettuce x3, Mayonnaise x1"
+Honey Toast,MachinedItem,255.0,60,Sandwich Bar,"Bread x1, Egg x1, Milk x1, Honey x1"
+Peanut Butter and Jelly Sandwich,MachinedItem,601.0,25,Sandwich Bar,"Bread x2, Raspberry Jam x1, Peanuts x1"
+Cucumber Sandwich,MachinedItem,464.0,35,Sandwich Bar,"Cucumber x2, Bread x2, Mayonnaise x1"
+Onion Melt,MachinedItem,417.0,90,Sandwich Bar,"Corn Bread x2, Onion x3, Cheese x1"
+Goat Cheese Toast,MachinedItem,302.0,50,Sandwich Bar,"Grapes x3, Goat Cheese x1, Bread x1"
+Hummus Wrap,MachinedItem,374.0,30,Sandwich Bar,"Hummus x1, Bread x2, Lettuce x1"
+Berry Smoothie,MachinedItem,547.0,105,Smoothie Mixer,"Blackberry x3, Strawberry x3, Raspberry x3"
+Green Smoothie,MachinedItem,320.0,45,Smoothie Mixer,"Lettuce x5, Lemon x1, Apple x1"
+Yogurt Smoothie,MachinedItem,349.0,60,Smoothie Mixer,"Cream x1, Raspberry x2, Cherry x1, White Sugar x1"
+Cucumber Smoothie,MachinedItem,266.0,40,Smoothie Mixer,"Cucumber x3, Honey x1, Pineapple x3"
+Mixed Smoothie,MachinedItem,504.0,30,Smoothie Mixer,"Lemon x1, Orange x2, Peach x2"
+Black Sesame Smoothie,MachinedItem,313.0,45,Smoothie Mixer,"Sesame x3, Banana x1, Goat Milk x2"
+Cocoa Smoothie,MachinedItem,511.0,40,Smoothie Mixer,"Cacao x3, Banana x2, Milk x1"
+Plum Smoothie,MachinedItem,475.0,40,Smoothie Mixer,"Cacao x1, Banana x1, Passion Fruit x2, Mango x2"
+Tropical Smoothie,MachinedItem,522.0,35,Smoothie Mixer,"Plum x3, Grapes x2, Mint x1, Honey x1"
+Fresh Pasta,MachinedItem,43.0,15,Pasta Maker,"Egg x1, Wheat x2"
+Rice Noodles,MachinedItem,100.0,20,Pasta Maker,Rice x5
+Lemon Essential Oil,MachinedItem,288.0,10,Essential Oils Lab,Lemon x3
+Chamomile Essential Oil,MachinedItem,72.0,10,Essential Oils Lab,Chamomile x5
+Ginger Essential Oil,MachinedItem,162.0,20,Essential Oils Lab,Ginger x5
+Mint Essential Oil,MachinedItem,172.0,15,Essential Oils Lab,Mint x5
+Fried Rice,MachinedItem,205.0,60,Wok Kitchen,"Rice x5, Egg x5"
+Lamb Stir Fry,MachinedItem,270.0,120,Wok Kitchen,"Rice x3, Grilled Lamb Skewer x1, Chili Pepper x2, Sesame x1"
+Spicy Fish,MachinedItem,543.0,90,Wok Kitchen,"Fish Fillet x1, Chili Pepper x3, Garlic x5, Olive Oil x1"
+Peanut Noodles,MachinedItem,597.0,45,Wok Kitchen,"Ginger x1, Rice Noodles x1, Soy Sauce x1, Peanuts x1"
+Tofu Stir Fry,MachinedItem,306.0,75,Wok Kitchen,"Soybean x3, Onion x3, Broccoli x3, Sesame x3"
+Cloche Hat,MachinedItem,468.0,120,Hat Maker,"Strawberry x2, Wool x6"
+Top Hat,MachinedItem,619.0,210,Hat Maker,"Cotton Fabric x3, Refined coal x1, Duck Feather x1"
+Sun Hat,MachinedItem,558.0,150,Hat Maker,"Wool x3, Indigo x1, Duck Feather x2, Raspberry x1"
+Flower Crown,MachinedItem,331.0,120,Hat Maker,"Peony x5, Cotton x4"
+Gnocchi,MachinedItem,475.0,80,Pasta Kitchen,"Potato x4, Tomato x3, Wheat x2, Butter x2"
+Veggie Lasagna,MachinedItem,532.0,100,Pasta Kitchen,"Carrot x1, Cheese x1, Tomato Sauce x1, Fresh Pasta x3"
+Lobster Pasta,MachinedItem,637.0,120,Pasta Kitchen,"Lobster Tail x1, Cream x2, Fresh Pasta x3, Tomato x4"
+Pasta Carbonara,MachinedItem,410.0,150,Pasta Kitchen,"Fresh Pasta x3, Bacon x2, Egg x1, Cheese x1"
+Broccoli Pasta,MachinedItem,345.0,60,Pasta Kitchen,"Broccoli x3, Cheese x1, Fresh Pasta x3"
+Spicy Pasta,MachinedItem,576.0,90,Pasta Kitchen,"Fresh Pasta x3, Tomato Sauce x1, Chili Pepper x3, Onion x2"
+Mushroom Pasta,MachinedItem,280.0,75,Pasta Kitchen,"Mushroom x5, Fresh Pasta x3, Goat Milk x1"
+Hot Dog,MachinedItem,370.0,30,Hot Dog Stand,"Bacon x2, Bread x1, Tomato Sauce x1"
+Tofu Dog,MachinedItem,367.0,45,Hot Dog Stand,"Lettuce x3, Soybean x6, Tomato x4"
+Corn Dog,MachinedItem,529.0,60,Hot Dog Stand,"Bacon x4, Corn x4, Olive Oil x1"
+Onion Dog,MachinedItem,306.0,75,Hot Dog Stand,"Bacon x2, Bread x1, Chili Pepper x1, Onion x3"
+Plain Donut,MachinedItem,129.0,15,Donut Maker,"Milk x1, White Sugar x1, Egg x1, Wheat x3"
+Sprinkled Donut,MachinedItem,313.0,20,Donut Maker,"Plain Donut x1, Cacao x2"
+Crunchy Donut,MachinedItem,594.0,30,Donut Maker,"Plain Donut x1, Cacao x1, Peanuts x1"
+Cream Donut,MachinedItem,230.0,25,Donut Maker,"Plain Donut x1, Cream x1, Brown Sugar x1"
+Bacon Donut,MachinedItem,388.0,30,Donut Maker,"Plain Donut x1, Bacon x3, Syrup x1"
+Filled Donut,MachinedItem,403.0,35,Donut Maker,"Plain Donut x1, Raspberry Jam x1"
+Taco,MachinedItem,331.0,45,Taco Kitchen,"Corn Bread x1, Bacon x1, Salsa x1"
+Spicy Bean Taco,MachinedItem,453.0,120,Taco Kitchen,"Taco x1, Black Bean x2"
+Fish Taco,MachinedItem,392.0,90,Taco Kitchen,"Chili Pepper x2, Corn Bread x1, Fish Fillet x1, Lemon x1"
+Quesadilla,MachinedItem,241.0,60,Taco Kitchen,"Chili Pepper x2, Cheese x1, Wheat x4"
+Nachos,MachinedItem,432.0,75,Taco Kitchen,"Corn x4, Cheese x1, Salsa x1"
+Colourful Omelet,MachinedItem,136.0,60,Omelet Station,"Egg x2, Carrot x2, Bell Pepper x1, Cabbage x1"
+Spring Omelet,MachinedItem,230.0,40,Omelet Station,"Egg x2, Butter x1, Asparagus x2"
+Cheese Omelet,MachinedItem,464.0,90,Omelet Station,"Egg x3, Cheese x2, Tomato x2, Onion x1"
+Rice Omelet,MachinedItem,572.0,120,Omelet Station,"Egg x3, Rice x1, Tomato Sauce x2"
+Potato Omelet,MachinedItem,270.0,75,Omelet Station,"Egg x3, Potato x1, Bacon x3"
+Green Tea,MachinedItem,241.0,30,Tea Stand,Tea Leaf x5
+Milk Tea,MachinedItem,190.0,45,Tea Stand,"Tea Leaf x3, Milk x1"
+Honey Tea,MachinedItem,313.0,40,Tea Stand,"Tea Leaf x3, Honey x1"
+Lemon Tea,MachinedItem,241.0,20,Tea Stand,"Tea Leaf x3, Lemon x1"
+Apple Ginger Tea,MachinedItem,169.0,30,Tea Stand,"Tea Leaf x1, Ginger x1, Apple x2"
+Orange Tea,MachinedItem,255.0,40,Tea Stand,"Tea Leaf x3, Orange x1"
+Iced Tea,MachinedItem,252.0,30,Tea Stand,"Tea Leaf x3, Peach x1"
+Mint Tea,MachinedItem,255.0,35,Tea Stand,"Tea Leaf x3, Watermelon x1, Mint x2"
+Chamomile Tea,MachinedItem,144.0,20,Tea Stand,"Chamomile x5, Honeycomb x1"
+Pomegranate Tea,MachinedItem,313.0,34,Tea Stand,"Tea Leaf x4, Pomegranate x1"
+Chocolate Fondue,MachinedItem,626.0,25,Fondue Pot,"Chocolate x1, Strawberry x3"
+Bacon Fondue,MachinedItem,507.0,30,Fondue Pot,"Bacon x3, Broccoli x1, Bell Pepper x1, Olive Oil x1"
+Cheese Fondue,MachinedItem,493.0,20,Fondue Pot,"Potato Bread x1, Cheese x1, Mushroom x2, Tomato x1"
+Tropical Fondue,MachinedItem,417.0,35,Fondue Pot,"White Sugar x1, Cream x2, Pineapple x3, Mango x2"
+Honey Soap,MachinedItem,327.0,60,Bath Kiosk,"Goat Milk x1, Cacao x2, Honey x1"
+Lemon Lotion,MachinedItem,403.0,75,Bath Kiosk,"Olive Oil x1, Lemon x1"
+Exfoliating Soap,MachinedItem,363.0,60,Bath Kiosk,"Cacao x2, Coffee Bean x2, Raspberry x1"
+Honey Face Mask,MachinedItem,320.0,90,Bath Kiosk,"Egg x2, Honey x1, Lemon x1"
+Rich Soap,MachinedItem,266.0,70,Bath Kiosk,"Oats x2, Pomegranate x1, Coconut x1"
+Bacon Fries,MachinedItem,302.0,25,Deep Fryer,"Chili Pepper x1, Bacon x2, Potato x4, Garlic x1"
+Hand Pies,MachinedItem,295.0,20,Deep Fryer,"Apple Jam x1, Egg x2, Wheat x5"
+Chili Poppers,MachinedItem,406.0,40,Deep Fryer,"Chili Pepper x3, Wheat x1, Bacon x3, Cheese x1"
+Falafel,MachinedItem,226.0,55,Deep Fryer,"Chickpea x3, Onion x2, Garlic x2, Chili Pepper x1"
+Fried Candy Bar,MachinedItem,658.0,15,Deep Fryer,"Cacao x3, Cookie x1, Peanuts x1"
+Samosa,MachinedItem,223.0,75,Deep Fryer,"Chickpea x2, Wheat x4, Potato x3, Chili Pepper x1"
+Pickles,MachinedItem,270.0,240,Preservation Station,"Cucumber x3, Onion x2, Lemon x1"
+Canned Fish,MachinedItem,471.0,220,Preservation Station,"Fish Fillet x2, Chili Pepper x1, Olive Oil x1"
+Kimchi,MachinedItem,219.0,300,Preservation Station,"Cabbage x5, Ginger x1, Chili Pepper x1, Garlic x1"
+Dried Fruit,MachinedItem,266.0,180,Preservation Station,"Grapes x1, Raspberry x1, Strawberry x1, Orange x1"
+Guava Compote,MachinedItem,421.0,260,Preservation Station,"Guava x2, Lemon x1, White Sugar x1"
+Tea Pot,MachinedItem,219.0,220,Pottery Studio,"Clay x3, Coffee Bean x1, Gold Ore x1"
+Potted Plant,MachinedItem,151.0,220,Pottery Studio,"Clay x3, Sunflower x1"
+Clay Mug,MachinedItem,212.0,200,Pottery Studio,"Clay x3, Indigo x1, Peony x1"
+Rich Fudge,MachinedItem,644.0,120,Fudge Shop,"Butter x3, Cacao x3, White Sugar x2"
+Mint Fudge,MachinedItem,552.0,150,Fudge Shop,"Butter x2, Cacao x2, White Sugar x1, Mint x3"
+Chili Fudge,MachinedItem,540.0,170,Fudge Shop,"Butter x2, Cacao x2, White Sugar x1, Chili Pepper x3"
+Lemon Fudge,MachinedItem,590.0,110,Fudge Shop,"Butter x2, Milk x3, White Sugar x2, Lemon x2"
+Peanut Fudge,MachinedItem,1141.0,90,Fudge Shop,"Butter x2, Cacao x2, White Sugar x1, Peanuts x2"
+Plain Yogurt,MachinedItem,234.0,120,Yogurt Maker,"Milk x3, Cream x2"
+Strawberry Yogurt,MachinedItem,529.0,40,Yogurt Maker,"Plain Yogurt x1, Strawberry Jam x1"
+Tropical Yogurt,MachinedItem,457.0,60,Yogurt Maker,"Plain Yogurt x1, Raspberry x4, Passion Fruit x1, Mango x2"
+Breakfast Bowl,MachinedItem,604.0,50,Yogurt Maker,"Plain Yogurt x1, Oats x4, Honey x1, Raspberry x2"
+Chickpea Stew,MachinedItem,284.0,90,Stew Pot,"Coconut x1, Tomato x2, Chickpea x3"
+Chili Stew,MachinedItem,370.0,120,Stew Pot,"Chili Pepper x3, Bacon x2, Onion x2, Cream x1"
+Winter Stew,MachinedItem,295.0,140,Stew Pot,"Bacon x1, Potato x3, Onion x2, Mushroom x2"
+Plain Cupcake,MachinedItem,280.0,40,Cupcake Maker,"Milk x2, White Sugar x3, Egg x1, Wheat x5"
+Guava Cupcake,MachinedItem,583.0,70,Cupcake Maker,"Plain Cupcake x1, Guava x2, Cream x1"
+Tropical Cupcake,MachinedItem,572.0,90,Cupcake Maker,"Plain Cupcake x1, Coconut x2, Pineapple x3"
+Cookie Cupcake,MachinedItem,712.0,120,Cupcake Maker,"Plain Cupcake x1, Cream x2, Cookie x2, Cacao x1"
+Fresh Diffuser,MachinedItem,349.0,20,Perfumerie,"Ginger Essential Oil x1, Mint Essential Oil x1"
+Zesty Perfume,MachinedItem,388.0,15,Perfumerie,"Lemon Essential Oil x1, Ginger x3"
+Calming Diffuser,MachinedItem,169.0,25,Perfumerie,"Chamomile Essential Oil x1, Indigo x3"
+Plain Waffles,MachinedItem,198.0,25,Waffle Maker,"White Sugar x2, Egg x3, Wheat x5"
+Berry Waffles,MachinedItem,604.0,35,Waffle Maker,"Plain Waffles x1, Syrup x1, Raspberry x3, Blackberry x2"
+Chocolate Waffles,MachinedItem,637.0,40,Waffle Maker,"Plain Waffles x1, Cacao x2, Strawberry x3, Banana x1"
+Blueberry Waffles,MachinedItem,669.0,42,Waffle Maker,"Plain Waffles x1, Cacao x2, Milk x1, Blueberry x3"
+Breakfast Waffles,MachinedItem,424.0,45,Waffle Maker,"Plain Waffles x1, Bacon x2, Egg x1, Asparagus x2"
+Apple Porridge,MachinedItem,522.0,20,Porridge Bar,"Apple x1, Apple Jam x2, Oats x4"
+Sweet Porridge,MachinedItem,460.0,45,Porridge Bar,"Peach x1, Honey x2, Oats x3"
+Fresh Porridge,MachinedItem,435.0,35,Porridge Bar,"Pomegranate x1, Mint x2, Oats x3, Coconut x2"
+Vanilla Milkshake,MachinedItem,673.0,45,Milkshake Bar,"Vanilla Ice Cream x1, Cookie x2, Toffee x1, Syrup x1"
+Mocha Milkshake,MachinedItem,856.0,30,Milkshake Bar,"Chocolate Ice Cream x1, Espresso x2"
+Fruity Milkshake,MachinedItem,759.0,35,Milkshake Bar,"Peach Ice Cream x1, Orange x2, Lemon x1"
 Axe,SpecialItem,36.0,0,None,None
 Saw,SpecialItem,54.0,0,None,None
 Dynamite,SpecialItem,25.2,0,None,None

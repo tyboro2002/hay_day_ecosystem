@@ -19,3 +19,35 @@ Lobster Sushi:
     Lobster Tail: 1
     Rice: 15
     Soy Sauce: 1
+
+Egg Sushi:
+  unlock_level: 63
+  time_to_make: 120 # 2h
+  sell_price: 550.0  # TODO: check price
+  xp: 66
+  ingredients:
+    Brown Sugar: 1
+    Egg: 4
+    Rice: 15
+    Soy Sauce: 1
+
+Big Sushi Roll:
+  unlock_level: 76
+  time_to_make: 90 # 1h30m
+  sell_price: 648.0  # TODO: check price
+  xp: 77
+  ingredients:
+    Fish Fillet: 1
+    Rice: 20
+    Egg: 3
+    Lettuce: 5
+
+Rice Ball:
+  unlock_level: 110
+  time_to_make: 45 # 1h30m
+  sell_price: 464.0  # TODO: check price
+  xp: 55
+  ingredients:
+    Sesame: 1
+    Rice: 20
+    Plum: 1

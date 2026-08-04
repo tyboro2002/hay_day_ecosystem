@@ -48,3 +48,31 @@ Jelly Beans:
     Blackberry Jam: 1
     Raspberry Jam: 1
     White Sugar: 1
+
+Honey Peanuts:
+  unlock_level: 63
+  time_to_make: 40
+  sell_price: 468.0 # TODO: check price
+  xp: 64
+  ingredients:
+    Honey: 1
+    Peanuts: 1
+
+Cotton Candy:
+  unlock_level: 75
+  time_to_make: 30
+  sell_price: 226.0  # TODO: check price
+  xp: 27
+  ingredients:
+    White Sugar: 3
+    Strawberry: 1
+
+Sesame Brittle:
+  unlock_level: 78
+  time_to_make: 60
+  sell_price: 270.0  # TODO: check price
+  xp: 32
+  ingredients:
+    Sesame: 3
+    Garlic: 1
+    Honey: 1

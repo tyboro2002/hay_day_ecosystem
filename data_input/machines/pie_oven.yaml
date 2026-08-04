@@ -93,3 +93,66 @@ Asparagus Quiche:
     Egg: 2
     Wheat: 4
     Cheese: 1
+
+Chocolate Pie:
+  unlock_level: 65
+  time_to_make: 75 # 1h15
+  sell_price: 514.0  # TODO: check price
+  xp: 70
+  ingredients:
+    Wheat: 3
+    Cacao: 2
+    Egg: 1
+    Peanuts: 1
+
+Lemon Pie:
+  unlock_level: 67
+  time_to_make: 135 # 2h15
+  sell_price: 446.0  # TODO: check price
+  xp: 53
+  ingredients:
+    Lemon Curd: 1
+    Wheat: 2
+    Egg: 1
+
+Peach Tart:
+  unlock_level: 76
+  time_to_make: 150 # 2h30
+  sell_price: 435.0  # TODO: check price
+  xp: 52
+  ingredients:
+    Cream: 1
+    Egg: 2
+    Peach: 3
+    Wheat: 2
+
+Passion Fruit Pie:
+  unlock_level: 92
+  time_to_make: 50
+  sell_price: 111.0  # TODO: check price
+  xp: 13
+  ingredients:
+    Passion Fruit: 3
+    Wheat: 2
+    Egg: 1
+
+Mushroom Pot Pie:
+  unlock_level: 97
+  time_to_make: 60 # 1h
+  sell_price: 162.0  # TODO: check price
+  xp: 19
+  ingredients:
+    Mushroom: 3
+    Cabbage: 3
+    Wheat: 3
+    Egg: 2
+
+Eggplant Parmesan:
+  unlock_level: 99
+  time_to_make: 45
+  sell_price: 442.0  # TODO: check price
+  xp: 53
+  ingredients:
+    Eggplant: 4
+    Cheese: 1
+    Tomato Sauce: 1

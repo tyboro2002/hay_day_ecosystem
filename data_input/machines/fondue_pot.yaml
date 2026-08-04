@@ -1,0 +1,41 @@
+Chocolate Fondue:
+  unlock_level: 81
+  time_to_make: 25
+  sell_price: 626.0  # TODO: check price
+  xp: 74
+  ingredients:
+    Chocolate: 1
+    Strawberry: 3
+
+Bacon Fondue:
+  unlock_level: 86
+  time_to_make: 30
+  sell_price: 507.0  # TODO: check price
+  xp: 60
+  ingredients:
+    Bacon: 3
+    Broccoli: 1
+    Bell Pepper: 1
+    Olive Oil: 1
+
+Cheese Fondue:
+  unlock_level: 91
+  time_to_make: 20
+  sell_price: 493.0  # TODO: check price
+  xp: 59
+  ingredients:
+    Potato Bread: 1
+    Cheese: 1
+    Mushroom: 2
+    Tomato: 1
+
+Tropical Fondue:
+  unlock_level: 100
+  time_to_make: 35
+  sell_price: 417.0  # TODO: check price
+  xp: 50
+  ingredients:
+    White Sugar: 1
+    Cream: 2
+    Pineapple: 3
+    Mango: 2

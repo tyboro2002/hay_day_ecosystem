@@ -35,3 +35,65 @@ Mayonnaise:
   ingredients:
     Egg: 4
     Olive Oil: 1
+
+Lemon Curd:
+  unlock_level: 66
+  time_to_make: 25
+  sell_price: 378.0  # TODO: check price
+  xp: 45
+  ingredients:
+    Lemon: 2
+    Butter: 1
+    Egg: 2
+    White Sugar: 1
+
+Olive Dip:
+  unlock_level: 66
+  time_to_make: 45
+  sell_price: 468.0  # TODO: check price
+  xp: 56
+  ingredients:
+    Olive: 3
+    Bread: 2
+    Fish Fillet: 1
+    Lemon: 1
+
+Tomato Sauce:
+  unlock_level: 69
+  time_to_make: 30
+  sell_price: 230.0  # TODO: check price
+  xp: 27
+  ingredients:
+    Brown Sugar: 1
+    Lemon: 1
+    Tomato: 2
+
+Salsa:
+  unlock_level: 77
+  time_to_make: 20
+  sell_price: 252.0  # TODO: check price
+  xp: 30
+  ingredients:
+    Chili Pepper: 1
+    Tomato: 2
+    Onion: 2
+
+Hummus:
+  unlock_level: 95
+  time_to_make: 30
+  sell_price: 277.0  # TODO: check price
+  xp: 33
+  ingredients:
+    Chickpea: 3
+    Lemon: 2
+    Garlic: 1
+
+Tart Dressing:
+  unlock_level: 100
+  time_to_make: 30
+  sell_price: 288.0  # TODO: check price
+  xp: 34
+  ingredients:
+    Passion Fruit: 2
+    Chili Pepper: 2
+    Honey: 1

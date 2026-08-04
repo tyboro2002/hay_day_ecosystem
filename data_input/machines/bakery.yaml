@@ -99,3 +99,46 @@ Frutti Di Mare Pizza:
     Cheese: 1
     Fish Fillet: 1
     Lobster Tail: 1
+
+Gingerbread Cookie:
+  unlock_level: 86
+  time_to_make: 30
+  sell_price: 273.0  # TODO: check price
+  xp: 33
+  ingredients:
+    Wheat: 5
+    Butter: 1
+    Syrup: 1
+    Ginger: 2
+
+Banana Bread:
+  unlock_level: 91
+  time_to_make: 30
+  sell_price: 424.0  # TODO: check price
+  xp: 50
+  ingredients:
+    Banana: 3
+    Grapes: 2
+    Wheat: 3
+    Egg: 1
+
+Macaroon:
+  unlock_level: 101
+  time_to_make: 30
+  sell_price: 421.0  # TODO: check price
+  xp: 30
+  ingredients:
+    Cacao: 1
+    Coconut: 2
+    White Sugar: 2
+
+Pineapple Coconut Bars:
+  unlock_level: 120
+  time_to_make: 40
+  sell_price: 284.0  # TODO: check price
+  xp: 34
+  ingredients:
+    Coconut: 1
+    White Sugar: 2
+    Oats: 3
+    Pineapple: 2

@@ -10,3 +10,86 @@ Veggie Bagel:
     Lettuce: 3
     Olive Oil: 1
     Tomato: 2
+
+Bacon Toast:
+  unlock_level: 65
+  time_to_make: 100 # 1h30m
+  sell_price: 648.0  # TODO: check price
+  xp: 77
+  ingredients:
+    Bacon: 2
+    Bread: 2
+    Lettuce: 3
+    Mayonnaise: 1
+
+Egg Sandwich:
+  unlock_level: 66
+  time_to_make: 80 # 1h20m
+  sell_price: 583.0  # TODO: check price
+  xp: 69
+  ingredients:
+    Bread: 2
+    Egg: 2
+    Lettuce: 3
+    Mayonnaise: 1
+
+Honey Toast:
+  unlock_level: 69
+  time_to_make: 60 # 1h
+  sell_price: 255.0  # TODO: check price
+  xp: 31
+  ingredients:
+    Bread: 1
+    Egg: 1
+    Milk: 1
+    Honey: 1
+
+Peanut Butter and Jelly Sandwich:
+  unlock_level: 71
+  time_to_make: 25
+  sell_price: 601.0  # TODO: check price
+  xp: 80
+  ingredients:
+    Bread: 2
+    Raspberry Jam: 1
+    Peanuts: 1
+
+Cucumber Sandwich:
+  unlock_level: 79
+  time_to_make: 35
+  sell_price: 464.0  # TODO: check price
+  xp: 55
+  ingredients:
+    Cucumber: 2
+    Bread: 2
+    Mayonnaise: 1
+
+Onion Melt:
+  unlock_level: 84
+  time_to_make: 90 # 1h30m
+  sell_price: 417.0  # TODO: check price
+  xp: 50
+  ingredients:
+    Corn Bread: 2
+    Onion: 3
+    Cheese: 1
+
+Goat Cheese Toast:
+  unlock_level: 92
+  time_to_make: 50
+  sell_price: 302.0  # TODO: check price
+  xp: 36
+  ingredients:
+    Grapes: 3
+    Goat Cheese: 1
+    Bread: 1
+
+Hummus Wrap:
+  unlock_level: 109
+  time_to_make: 30
+  sell_price: 374.0  # TODO: check price
+  xp: 45
+  ingredients:
+    Hummus: 1
+    Bread: 2
+    Lettuce: 1

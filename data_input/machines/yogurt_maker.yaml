@@ -1,0 +1,39 @@
+Plain Yogurt:
+  unlock_level: 103
+  time_to_make: 120 # 2h
+  sell_price: 234.0  # TODO: check price
+  xp: 28
+  ingredients:
+    Milk: 3
+    Cream: 2
+
+Strawberry Yogurt:
+  unlock_level: 105
+  time_to_make: 40
+  sell_price: 529.0  # TODO: check price
+  xp: 63
+  ingredients:
+    Plain Yogurt: 1
+    Strawberry Jam: 1
+
+Tropical Yogurt:
+  unlock_level: 109
+  time_to_make: 60 # 1h
+  sell_price: 457.0  # TODO: check price
+  xp: 54
+  ingredients:
+    Plain Yogurt: 1
+    Raspberry: 4
+    Passion Fruit: 1
+    Mango: 2
+
+Breakfast Bowl:
+  unlock_level: 119
+  time_to_make: 50
+  sell_price: 604.0  # TODO: check price
+  xp: 72
+  ingredients:
+    Plain Yogurt: 1
+    Oats: 4
+    Honey: 1
+    Raspberry: 2

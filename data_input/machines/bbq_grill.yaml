@@ -92,3 +92,75 @@ Garlic Bread:
     Bread: 2
     Butter: 1
     Garlic: 4
+
+Grilled Asparagus:
+  unlock_level: 67
+  time_to_make: 75 # 1h15
+  sell_price: 486.0 # TODO: check price
+  xp: 58
+  ingredients:
+    Asparagus: 5
+    Bacon: 3
+    Lemon: 1
+
+Grilled Onion:
+  unlock_level: 68
+  time_to_make: 60 # 1h
+  sell_price: 190.0 # TODO: check price
+  xp: 23
+  ingredients:
+    Butter: 1
+    Onion: 2
+
+Winter Veggies:
+  unlock_level: 72
+  time_to_make: 25
+  sell_price: 198.0 # TODO: check price
+  xp: 24
+  ingredients:
+    Beetroot: 2
+    Carrot: 2
+    Potato: 2
+    Pumpkin: 2
+
+Stuffed Peppers:
+  unlock_level: 80
+  time_to_make: 20
+  sell_price: 352.0 # TODO: check price
+  xp: 42
+  ingredients:
+    Bell Pepper: 3
+    Bacon: 1
+    Rice: 3
+    Cheese: 1
+
+Grilled Eggplant:
+  unlock_level: 90
+  time_to_make: 40
+  sell_price: 324.0 # TODO: check price
+  xp: 39
+  ingredients:
+    Eggplant: 3
+    Salsa: 1
+
+Banana Pancakes:
+  unlock_level: 94
+  time_to_make: 60 # 1h
+  sell_price: 352.0 # TODO: check price
+  xp: 42
+  ingredients:
+    Banana: 1
+    Blackberry: 2
+    Wheat: 3
+    Cream: 1
+
+Fish Skewer:
+  unlock_level: 96
+  time_to_make: 30
+  sell_price: 176.0 # TODO: check price
+  xp: 21
+  ingredients:
+    Fish Fillet: 1
+    Mushroom: 3
+    Garlic: 1
+    Sesame: 2
