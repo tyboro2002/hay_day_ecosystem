@@ -247,18 +247,18 @@ def render_level_filter_persistence_script(storage_key=LEVEL_FILTER_STORAGE_KEY)
     </script>
     """
 
-def generate_unlock_schedule_component(full_schedule, name, asset_folder="machines"):
+def generate_unlock_schedule_component(full_schedule, name, asset_folder="machines", base_path=""):
     """
     Generates the HTML for an unlock schedule section given a schedule list.
     full_schedule format: [(level, count, [costs]), ...] or [(level, count), ...]
     """
-    img_base64 = get_base64_asset(name, asset_folder)
+    img_base64 = get_base64_asset(name, asset_folder, base_path=base_path)
     inline_img = (
         f'<img src="{img_base64}" alt="{name}" style="width: 30px; height: 30px; object-fit: contain; vertical-align: middle; margin: 0 6px;">'
         if img_base64 else f" {name}"
     )
 
-    coin_asset = get_base64_asset("coin", "items")
+    coin_asset = get_base64_asset("coin", "items", base_path="")
     coin_img = f'<img src="{coin_asset}" alt="Coins" style="width: 16px; height: 16px; object-fit: contain; vertical-align: middle; margin-left: 3px;">' if coin_asset else " Coins"
 
     schedule_rows = ""

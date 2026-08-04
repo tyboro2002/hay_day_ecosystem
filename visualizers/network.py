@@ -544,7 +544,7 @@ def generate_detail_page_machine(name, prods, mach_obj):
     full_schedule = mach_obj.full_unlock_schedule if mach_obj else [(1, 1)]
     machine_unlock_lvl = mach_obj.unlock_level if mach_obj else 1
 
-    img_base64 = get_base64_asset(name, "machines")
+    img_base64 = get_base64_asset(name, "machines", base_path="../")
     if img_base64:
         img_tag = f"""
         <div class="machine-img-wrapper" id="mainMachineWrapper" data-unlock-level="{machine_unlock_lvl}">
@@ -558,7 +558,7 @@ def generate_detail_page_machine(name, prods, mach_obj):
     produces_html = ""
     if prods:
         for prod_item in prods:
-            prod_img = get_base64_asset(prod_item.name, "items")
+            prod_img = get_base64_asset(prod_item.name, "items", base_path="../")
             prod_url = f"details_{prod_item.name.lower().replace(' ', '_')}.html"
             time_lbl = ""
             raw_time = getattr(prod_item, 'time_to_make', None)
@@ -581,7 +581,7 @@ def generate_detail_page_machine(name, prods, mach_obj):
         produces_html = '<div class="no-items">💤 Nothing directly produced here.</div>'
 
     # Extracted function used here
-    unlock_schedule_html = generate_unlock_schedule_component(full_schedule, name, asset_folder="machines")
+    unlock_schedule_html = generate_unlock_schedule_component(full_schedule, name, asset_folder="machines", base_path="../")
 
     has_mastery = False
     if mach_obj:
@@ -600,7 +600,7 @@ def generate_detail_page_machine(name, prods, mach_obj):
 
             bonus_desc = formatting.format_mastery_bonus_text(info)
             asset_key = formatting.get_mastery_image_filename(star, info, name)
-            mastery_img_b64 = get_base64_asset(asset_key, "mastery")
+            mastery_img_b64 = get_base64_asset(asset_key, "mastery", base_path="../")
 
             if mastery_img_b64:
                 img_element = f'<img src="{mastery_img_b64}" alt="{asset_key}" style="max-width: 100%; max-height: 80px; object-fit: contain;">'
