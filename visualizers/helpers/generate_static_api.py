@@ -9,6 +9,9 @@ infrastructure_path = "/infrastructure/"
 
 # Relative base path strategy to ensure compatibility across local & GitHub Pages
 def build_static_api(output_dir="docs"):
+    build_v1(output_dir=output_dir)
+
+def build_v1(output_dir="docs"):
     api_dir = os.path.join(output_dir, "api", "v1")
     os.makedirs(api_dir, exist_ok=True)
 
