@@ -348,7 +348,7 @@
             <label for="graphLevelRange" style="font-weight: bold; color: #e67e22; white-space: nowrap; font-size: 0.9rem;">
                 Filter Level:
             </label>
-            <input type="range" id="graphLevelRange" min="1" max="70" value="52" oninput="filterGraphByLevel(this.value)" style="
+            <input type="range" id="graphLevelRange" min="1" max="126" value="52" oninput="filterGraphByLevel(this.value)" style="
                 width: 150px;
                 accent-color: #e67e22;
                 cursor: pointer;
@@ -426,7 +426,7 @@
                 let slider = document.getElementById("graphLevelRange");
                 if (slider) {
                     const initialLevel = window.HayDayLevelFilterPersistence
-                        ? window.HayDayLevelFilterPersistence.readStoredLevel(parseInt(slider.value || "52", 10), parseInt(slider.max || "70", 10))
+                        ? window.HayDayLevelFilterPersistence.readStoredLevel(parseInt(slider.value || "52", 10), parseInt(slider.max || "126", 10))
                         : parseInt(slider.value || "52", 10);
                     slider.value = String(initialLevel);
                     filterGraphByLevel(slider.value);
