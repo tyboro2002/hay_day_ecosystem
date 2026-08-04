@@ -1,0 +1,36 @@
+{
+  "id": "bacon_donut",
+  "name": "Bacon Donut",
+  "sell_price": 388.0,
+  "unlock_level": 88,
+  "time_to_make_minutes": 30,
+  "_links": {
+    "self": "/api/v1/items/bacon_donut.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/bacon_donut.png",
+    "html_details": "/details/details_bacon_donut.html"
+  },
+  "ingredients": [
+    {
+      "name": "Plain Donut",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/plain_donut.json"
+      }
+    },
+    {
+      "name": "Bacon",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/bacon.json"
+      }
+    },
+    {
+      "name": "Syrup",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/syrup.json"
+      }
+    }
+  ]
+}

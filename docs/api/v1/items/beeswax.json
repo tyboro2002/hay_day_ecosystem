@@ -1,0 +1,22 @@
+{
+  "id": "beeswax",
+  "name": "Beeswax",
+  "sell_price": 234.0,
+  "unlock_level": 48,
+  "time_to_make_minutes": 45,
+  "_links": {
+    "self": "/api/v1/items/beeswax.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/beeswax.png",
+    "html_details": "/details/details_beeswax.html"
+  },
+  "ingredients": [
+    {
+      "name": "Honeycomb",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/honeycomb.json"
+      }
+    }
+  ]
+}

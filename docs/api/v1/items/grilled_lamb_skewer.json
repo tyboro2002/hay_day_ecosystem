@@ -1,0 +1,22 @@
+{
+  "id": "grilled_lamb_skewer",
+  "name": "Grilled Lamb Skewer",
+  "sell_price": 90.0,
+  "unlock_level": 25,
+  "time_to_make_minutes": 20,
+  "_links": {
+    "self": "/api/v1/items/grilled_lamb_skewer.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/grilled_lamb_skewer.png",
+    "html_details": "/details/details_grilled_lamb_skewer.html"
+  },
+  "ingredients": [
+    {
+      "name": "Lamb Chop",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/lamb_chop.json"
+      }
+    }
+  ]
+}

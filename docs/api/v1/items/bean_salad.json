@@ -1,0 +1,43 @@
+{
+  "id": "bean_salad",
+  "name": "Bean Salad",
+  "sell_price": 169.0,
+  "unlock_level": 58,
+  "time_to_make_minutes": 60,
+  "_links": {
+    "self": "/api/v1/items/bean_salad.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/bean_salad.png",
+    "html_details": "/details/details_bean_salad.html"
+  },
+  "ingredients": [
+    {
+      "name": "Black Bean",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/black_bean.json"
+      }
+    },
+    {
+      "name": "Lettuce",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/lettuce.json"
+      }
+    },
+    {
+      "name": "Tomato",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/tomato.json"
+      }
+    },
+    {
+      "name": "Corn",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/corn.json"
+      }
+    }
+  ]
+}

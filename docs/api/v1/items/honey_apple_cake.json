@@ -1,0 +1,43 @@
+{
+  "id": "honey_apple_cake",
+  "name": "Honey Apple Cake",
+  "sell_price": 482.4,
+  "unlock_level": 42,
+  "time_to_make_minutes": 200,
+  "_links": {
+    "self": "/api/v1/items/honey_apple_cake.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/honey_apple_cake.png",
+    "html_details": "/details/details_honey_apple_cake.html"
+  },
+  "ingredients": [
+    {
+      "name": "Honey",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/honey.json"
+      }
+    },
+    {
+      "name": "Apple",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/apple.json"
+      }
+    },
+    {
+      "name": "Egg",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/egg.json"
+      }
+    },
+    {
+      "name": "Wheat",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/wheat.json"
+      }
+    }
+  ]
+}

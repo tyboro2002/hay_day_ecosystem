@@ -1,0 +1,22 @@
+{
+  "id": "syrup",
+  "name": "Syrup",
+  "sell_price": 90.0,
+  "unlock_level": 18,
+  "time_to_make_minutes": 90,
+  "_links": {
+    "self": "/api/v1/items/syrup.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/syrup.png",
+    "html_details": "/details/details_syrup.html"
+  },
+  "ingredients": [
+    {
+      "name": "Sugarcane",
+      "quantity": 4,
+      "_links": {
+        "detail": "/api/v1/items/sugarcane.json"
+      }
+    }
+  ]
+}

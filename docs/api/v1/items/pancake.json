@@ -1,0 +1,29 @@
+{
+  "id": "pancake",
+  "name": "Pancake",
+  "sell_price": 108.0,
+  "unlock_level": 9,
+  "time_to_make_minutes": 30,
+  "_links": {
+    "self": "/api/v1/items/pancake.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/pancake.png",
+    "html_details": "/details/details_pancake.html"
+  },
+  "ingredients": [
+    {
+      "name": "Egg",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/egg.json"
+      }
+    },
+    {
+      "name": "Brown Sugar",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/brown_sugar.json"
+      }
+    }
+  ]
+}

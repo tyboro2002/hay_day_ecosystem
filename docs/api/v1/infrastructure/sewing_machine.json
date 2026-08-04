@@ -1,0 +1,11 @@
+{
+  "id": "sewing_machine",
+  "name": "Sewing Machine",
+  "category": "machines",
+  "unlock_level": 19,
+  "_links": {
+    "self": "/api/v1/infrastructure/sewing_machine.json",
+    "collection": "/api/v1/infrastructure/index.json",
+    "image": "/assets/machines/sewing_machine.png"
+  }
+}

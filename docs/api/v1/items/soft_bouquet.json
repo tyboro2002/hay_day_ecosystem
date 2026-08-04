@@ -1,0 +1,36 @@
+{
+  "id": "soft_bouquet",
+  "name": "Soft Bouquet",
+  "sell_price": 298.0,
+  "unlock_level": 93,
+  "time_to_make_minutes": 30,
+  "_links": {
+    "self": "/api/v1/items/soft_bouquet.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/soft_bouquet.png",
+    "html_details": "/details/details_soft_bouquet.html"
+  },
+  "ingredients": [
+    {
+      "name": "Peony",
+      "quantity": 4,
+      "_links": {
+        "detail": "/api/v1/items/peony.json"
+      }
+    },
+    {
+      "name": "Cotton",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/cotton.json"
+      }
+    },
+    {
+      "name": "Cotton Fabric",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/cotton_fabric.json"
+      }
+    }
+  ]
+}

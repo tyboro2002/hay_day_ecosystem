@@ -1,0 +1,36 @@
+{
+  "id": "toffee",
+  "name": "Toffee",
+  "sell_price": 176.0,
+  "unlock_level": 52,
+  "time_to_make_minutes": 90,
+  "_links": {
+    "self": "/api/v1/items/toffee.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/toffee.png",
+    "html_details": "/details/details_toffee.html"
+  },
+  "ingredients": [
+    {
+      "name": "Butter",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/butter.json"
+      }
+    },
+    {
+      "name": "Wheat",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/wheat.json"
+      }
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/white_sugar.json"
+      }
+    }
+  ]
+}

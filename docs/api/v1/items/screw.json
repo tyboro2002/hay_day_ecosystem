@@ -1,0 +1,13 @@
+{
+  "id": "screw",
+  "name": "Screw",
+  "sell_price": 270.0,
+  "unlock_level": 1,
+  "time_to_make_minutes": 0,
+  "_links": {
+    "self": "/api/v1/items/screw.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/screw.png",
+    "html_details": "/details/details_screw.html"
+  }
+}

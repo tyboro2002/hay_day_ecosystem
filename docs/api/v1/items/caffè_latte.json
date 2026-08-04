@@ -1,0 +1,36 @@
+{
+  "id": "caff\u00e8_latte",
+  "name": "Caff\u00e8 Latte",
+  "sell_price": 219.6,
+  "unlock_level": 43,
+  "time_to_make_minutes": 10,
+  "_links": {
+    "self": "/api/v1/items/caff\u00e8_latte.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/caff\u00e8_latte.png",
+    "html_details": "/details/details_caff\u00e8_latte.html"
+  },
+  "ingredients": [
+    {
+      "name": "Coffee Bean",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/coffee_bean.json"
+      }
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/white_sugar.json"
+      }
+    },
+    {
+      "name": "Milk",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/milk.json"
+      }
+    }
+  ]
+}

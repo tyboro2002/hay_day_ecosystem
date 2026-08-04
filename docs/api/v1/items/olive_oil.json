@@ -1,0 +1,22 @@
+{
+  "id": "olive_oil",
+  "name": "Olive Oil",
+  "sell_price": 277.0,
+  "unlock_level": 60,
+  "time_to_make_minutes": 45,
+  "_links": {
+    "self": "/api/v1/items/olive_oil.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/olive_oil.png",
+    "html_details": "/details/details_olive_oil.html"
+  },
+  "ingredients": [
+    {
+      "name": "Olive",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/olive.json"
+      }
+    }
+  ]
+}

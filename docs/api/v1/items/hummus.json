@@ -1,0 +1,36 @@
+{
+  "id": "hummus",
+  "name": "Hummus",
+  "sell_price": 277.0,
+  "unlock_level": 95,
+  "time_to_make_minutes": 30,
+  "_links": {
+    "self": "/api/v1/items/hummus.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/hummus.png",
+    "html_details": "/details/details_hummus.html"
+  },
+  "ingredients": [
+    {
+      "name": "Chickpea",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/chickpea.json"
+      }
+    },
+    {
+      "name": "Lemon",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/lemon.json"
+      }
+    },
+    {
+      "name": "Garlic",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/garlic.json"
+      }
+    }
+  ]
+}

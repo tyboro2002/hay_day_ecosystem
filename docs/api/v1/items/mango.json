@@ -1,0 +1,13 @@
+{
+  "id": "mango",
+  "name": "Mango",
+  "sell_price": 100.0,
+  "unlock_level": 97,
+  "time_to_make_minutes": 1920,
+  "_links": {
+    "self": "/api/v1/items/mango.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/mango.png",
+    "html_details": "/details/details_mango.html"
+  }
+}

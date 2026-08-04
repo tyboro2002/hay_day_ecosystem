@@ -1,0 +1,13 @@
+{
+  "id": "egg",
+  "name": "Egg",
+  "sell_price": 18.0,
+  "unlock_level": 2,
+  "time_to_make_minutes": 20,
+  "_links": {
+    "self": "/api/v1/items/egg.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/egg.png",
+    "html_details": "/details/details_egg.html"
+  }
+}

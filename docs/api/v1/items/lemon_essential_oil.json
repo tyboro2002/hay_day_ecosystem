@@ -1,0 +1,22 @@
+{
+  "id": "lemon_essential_oil",
+  "name": "Lemon Essential Oil",
+  "sell_price": 288.0,
+  "unlock_level": 68,
+  "time_to_make_minutes": 10,
+  "_links": {
+    "self": "/api/v1/items/lemon_essential_oil.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/lemon_essential_oil.png",
+    "html_details": "/details/details_lemon_essential_oil.html"
+  },
+  "ingredients": [
+    {
+      "name": "Lemon",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/lemon.json"
+      }
+    }
+  ]
+}

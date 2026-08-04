@@ -1,0 +1,22 @@
+{
+  "id": "peach_jam",
+  "name": "Peach Jam",
+  "sell_price": 464.0,
+  "unlock_level": 79,
+  "time_to_make_minutes": 480,
+  "_links": {
+    "self": "/api/v1/items/peach_jam.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/peach_jam.png",
+    "html_details": "/details/details_peach_jam.html"
+  },
+  "ingredients": [
+    {
+      "name": "Peach",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/peach.json"
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "orange_juice",
+  "name": "Orange Juice",
+  "sell_price": 234.0,
+  "unlock_level": 71,
+  "time_to_make_minutes": 120,
+  "_links": {
+    "self": "/api/v1/items/orange_juice.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/orange_juice.png",
+    "html_details": "/details/details_orange_juice.html"
+  },
+  "ingredients": [
+    {
+      "name": "Orange",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/orange.json"
+      }
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "message": "Welcome to the Hay Day Static REST API",
+  "_links": {
+    "self": "/api/v1/index.json",
+    "items": "/api/v1/items/index.json",
+    "infrastructure": "/api/v1/infrastructure/index.json"
+  }
+}

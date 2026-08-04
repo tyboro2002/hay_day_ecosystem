@@ -1,0 +1,29 @@
+{
+  "id": "calming_diffuser",
+  "name": "Calming Diffuser",
+  "sell_price": 169.0,
+  "unlock_level": 116,
+  "time_to_make_minutes": 25,
+  "_links": {
+    "self": "/api/v1/items/calming_diffuser.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/calming_diffuser.png",
+    "html_details": "/details/details_calming_diffuser.html"
+  },
+  "ingredients": [
+    {
+      "name": "Chamomile Essential Oil",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/chamomile_essential_oil.json"
+      }
+    },
+    {
+      "name": "Indigo",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/indigo.json"
+      }
+    }
+  ]
+}

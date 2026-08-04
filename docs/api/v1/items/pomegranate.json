@@ -1,0 +1,13 @@
+{
+  "id": "pomegranate",
+  "name": "Pomegranate",
+  "sell_price": 111.0,
+  "unlock_level": 107,
+  "time_to_make_minutes": 1620,
+  "_links": {
+    "self": "/api/v1/items/pomegranate.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/pomegranate.png",
+    "html_details": "/details/details_pomegranate.html"
+  }
+}

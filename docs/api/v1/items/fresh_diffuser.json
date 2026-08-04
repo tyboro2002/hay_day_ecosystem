@@ -1,0 +1,29 @@
+{
+  "id": "fresh_diffuser",
+  "name": "Fresh Diffuser",
+  "sell_price": 349.0,
+  "unlock_level": 110,
+  "time_to_make_minutes": 20,
+  "_links": {
+    "self": "/api/v1/items/fresh_diffuser.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/fresh_diffuser.png",
+    "html_details": "/details/details_fresh_diffuser.html"
+  },
+  "ingredients": [
+    {
+      "name": "Ginger Essential Oil",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/ginger_essential_oil.json"
+      }
+    },
+    {
+      "name": "Mint Essential Oil",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/mint_essential_oil.json"
+      }
+    }
+  ]
+}

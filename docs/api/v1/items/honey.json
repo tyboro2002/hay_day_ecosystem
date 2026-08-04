@@ -1,0 +1,22 @@
+{
+  "id": "honey",
+  "name": "Honey",
+  "sell_price": 154.8,
+  "unlock_level": 39,
+  "time_to_make_minutes": 20,
+  "_links": {
+    "self": "/api/v1/items/honey.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/honey.png",
+    "html_details": "/details/details_honey.html"
+  },
+  "ingredients": [
+    {
+      "name": "Honeycomb",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/honeycomb.json"
+      }
+    }
+  ]
+}

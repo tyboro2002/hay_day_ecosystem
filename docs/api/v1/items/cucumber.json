@@ -1,0 +1,13 @@
+{
+  "id": "cucumber",
+  "name": "Cucumber",
+  "sell_price": 14.0,
+  "unlock_level": 70,
+  "time_to_make_minutes": 35,
+  "_links": {
+    "self": "/api/v1/items/cucumber.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/cucumber.png",
+    "html_details": "/details/details_cucumber.html"
+  }
+}

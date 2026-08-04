@@ -1,0 +1,11 @@
+{
+  "id": "cake_oven",
+  "name": "Cake Oven",
+  "category": "machines",
+  "unlock_level": 21,
+  "_links": {
+    "self": "/api/v1/infrastructure/cake_oven.json",
+    "collection": "/api/v1/infrastructure/index.json",
+    "image": "/assets/machines/cake_oven.png"
+  }
+}

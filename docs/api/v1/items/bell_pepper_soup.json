@@ -1,0 +1,43 @@
+{
+  "id": "bell_pepper_soup",
+  "name": "Bell Pepper Soup",
+  "sell_price": 439.0,
+  "unlock_level": 81,
+  "time_to_make_minutes": 60,
+  "_links": {
+    "self": "/api/v1/items/bell_pepper_soup.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/bell_pepper_soup.png",
+    "html_details": "/details/details_bell_pepper_soup.html"
+  },
+  "ingredients": [
+    {
+      "name": "Bread",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/bread.json"
+      }
+    },
+    {
+      "name": "Olive Oil",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/olive_oil.json"
+      }
+    },
+    {
+      "name": "Chili Pepper",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/chili_pepper.json"
+      }
+    },
+    {
+      "name": "Bell Pepper",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/bell_pepper.json"
+      }
+    }
+  ]
+}

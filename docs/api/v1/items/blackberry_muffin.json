@@ -1,0 +1,36 @@
+{
+  "id": "blackberry_muffin",
+  "name": "Blackberry Muffin",
+  "sell_price": 226.8,
+  "unlock_level": 26,
+  "time_to_make_minutes": 45,
+  "_links": {
+    "self": "/api/v1/items/blackberry_muffin.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/blackberry_muffin.png",
+    "html_details": "/details/details_blackberry_muffin.html"
+  },
+  "ingredients": [
+    {
+      "name": "Wheat",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/wheat.json"
+      }
+    },
+    {
+      "name": "Egg",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/egg.json"
+      }
+    },
+    {
+      "name": "Blackberry",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/blackberry.json"
+      }
+    }
+  ]
+}

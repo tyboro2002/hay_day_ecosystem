@@ -1,0 +1,22 @@
+{
+  "id": "cream",
+  "name": "Cream",
+  "sell_price": 50.4,
+  "unlock_level": 6,
+  "time_to_make_minutes": 20,
+  "_links": {
+    "self": "/api/v1/items/cream.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/cream.png",
+    "html_details": "/details/details_cream.html"
+  },
+  "ingredients": [
+    {
+      "name": "Milk",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/milk.json"
+      }
+    }
+  ]
+}

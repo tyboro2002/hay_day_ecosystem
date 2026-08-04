@@ -1,0 +1,36 @@
+{
+  "id": "guava_compote",
+  "name": "Guava Compote",
+  "sell_price": 421.0,
+  "unlock_level": 104,
+  "time_to_make_minutes": 260,
+  "_links": {
+    "self": "/api/v1/items/guava_compote.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/guava_compote.png",
+    "html_details": "/details/details_guava_compote.html"
+  },
+  "ingredients": [
+    {
+      "name": "Guava",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/guava.json"
+      }
+    },
+    {
+      "name": "Lemon",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/lemon.json"
+      }
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/white_sugar.json"
+      }
+    }
+  ]
+}

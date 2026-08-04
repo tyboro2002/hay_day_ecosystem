@@ -1,0 +1,36 @@
+{
+  "id": "cucumber_smoothie",
+  "name": "Cucumber Smoothie",
+  "sell_price": 266.0,
+  "unlock_level": 70,
+  "time_to_make_minutes": 40,
+  "_links": {
+    "self": "/api/v1/items/cucumber_smoothie.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/cucumber_smoothie.png",
+    "html_details": "/details/details_cucumber_smoothie.html"
+  },
+  "ingredients": [
+    {
+      "name": "Cucumber",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/cucumber.json"
+      }
+    },
+    {
+      "name": "Honey",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/honey.json"
+      }
+    },
+    {
+      "name": "Pineapple",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/pineapple.json"
+      }
+    }
+  ]
+}

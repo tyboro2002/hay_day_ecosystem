@@ -1,0 +1,13 @@
+{
+  "id": "peach",
+  "name": "Peach",
+  "sell_price": 100.0,
+  "unlock_level": 76,
+  "time_to_make_minutes": 1800,
+  "_links": {
+    "self": "/api/v1/items/peach.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/peach.png",
+    "html_details": "/details/details_peach.html"
+  }
+}

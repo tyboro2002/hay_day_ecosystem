@@ -1,0 +1,29 @@
+{
+  "id": "cheesecake",
+  "name": "Cheesecake",
+  "sell_price": 284.4,
+  "unlock_level": 24,
+  "time_to_make_minutes": 240,
+  "_links": {
+    "self": "/api/v1/items/cheesecake.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/cheesecake.png",
+    "html_details": "/details/details_cheesecake.html"
+  },
+  "ingredients": [
+    {
+      "name": "Cookie",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/cookie.json"
+      }
+    },
+    {
+      "name": "Cheese",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/cheese.json"
+      }
+    }
+  ]
+}

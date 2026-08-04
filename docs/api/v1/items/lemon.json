@@ -1,0 +1,13 @@
+{
+  "id": "lemon",
+  "name": "Lemon",
+  "sell_price": 66.0,
+  "unlock_level": 66,
+  "time_to_make_minutes": 1740,
+  "_links": {
+    "self": "/api/v1/items/lemon.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/lemon.png",
+    "html_details": "/details/details_lemon.html"
+  }
+}

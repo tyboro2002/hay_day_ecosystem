@@ -1,0 +1,11 @@
+{
+  "id": "dairy",
+  "name": "Dairy",
+  "category": "machines",
+  "unlock_level": 6,
+  "_links": {
+    "self": "/api/v1/infrastructure/dairy.json",
+    "collection": "/api/v1/infrastructure/index.json",
+    "image": "/assets/machines/dairy.png"
+  }
+}

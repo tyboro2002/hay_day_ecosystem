@@ -1,0 +1,36 @@
+{
+  "id": "broccoli_soup",
+  "name": "Broccoli Soup",
+  "sell_price": 237.0,
+  "unlock_level": 87,
+  "time_to_make_minutes": 90,
+  "_links": {
+    "self": "/api/v1/items/broccoli_soup.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/broccoli_soup.png",
+    "html_details": "/details/details_broccoli_soup.html"
+  },
+  "ingredients": [
+    {
+      "name": "Broccoli",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/broccoli.json"
+      }
+    },
+    {
+      "name": "Onion",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/onion.json"
+      }
+    },
+    {
+      "name": "Potato",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/potato.json"
+      }
+    }
+  ]
+}

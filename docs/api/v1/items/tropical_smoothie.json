@@ -1,0 +1,43 @@
+{
+  "id": "tropical_smoothie",
+  "name": "Tropical Smoothie",
+  "sell_price": 522.0,
+  "unlock_level": 102,
+  "time_to_make_minutes": 35,
+  "_links": {
+    "self": "/api/v1/items/tropical_smoothie.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/tropical_smoothie.png",
+    "html_details": "/details/details_tropical_smoothie.html"
+  },
+  "ingredients": [
+    {
+      "name": "Plum",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/plum.json"
+      }
+    },
+    {
+      "name": "Grapes",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/grapes.json"
+      }
+    },
+    {
+      "name": "Mint",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/mint.json"
+      }
+    },
+    {
+      "name": "Honey",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/honey.json"
+      }
+    }
+  ]
+}

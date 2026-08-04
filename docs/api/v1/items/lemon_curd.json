@@ -1,0 +1,43 @@
+{
+  "id": "lemon_curd",
+  "name": "Lemon Curd",
+  "sell_price": 378.0,
+  "unlock_level": 66,
+  "time_to_make_minutes": 25,
+  "_links": {
+    "self": "/api/v1/items/lemon_curd.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/lemon_curd.png",
+    "html_details": "/details/details_lemon_curd.html"
+  },
+  "ingredients": [
+    {
+      "name": "Lemon",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/lemon.json"
+      }
+    },
+    {
+      "name": "Butter",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/butter.json"
+      }
+    },
+    {
+      "name": "Egg",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/egg.json"
+      }
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/white_sugar.json"
+      }
+    }
+  ]
+}

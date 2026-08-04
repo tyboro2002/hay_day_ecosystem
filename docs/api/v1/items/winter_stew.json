@@ -1,0 +1,43 @@
+{
+  "id": "winter_stew",
+  "name": "Winter Stew",
+  "sell_price": 295.0,
+  "unlock_level": 112,
+  "time_to_make_minutes": 140,
+  "_links": {
+    "self": "/api/v1/items/winter_stew.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/winter_stew.png",
+    "html_details": "/details/details_winter_stew.html"
+  },
+  "ingredients": [
+    {
+      "name": "Bacon",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/bacon.json"
+      }
+    },
+    {
+      "name": "Potato",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/potato.json"
+      }
+    },
+    {
+      "name": "Onion",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/onion.json"
+      }
+    },
+    {
+      "name": "Mushroom",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/mushroom.json"
+      }
+    }
+  ]
+}

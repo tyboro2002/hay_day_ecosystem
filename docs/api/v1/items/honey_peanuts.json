@@ -1,0 +1,29 @@
+{
+  "id": "honey_peanuts",
+  "name": "Honey Peanuts",
+  "sell_price": 468.0,
+  "unlock_level": 63,
+  "time_to_make_minutes": 40,
+  "_links": {
+    "self": "/api/v1/items/honey_peanuts.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/honey_peanuts.png",
+    "html_details": "/details/details_honey_peanuts.html"
+  },
+  "ingredients": [
+    {
+      "name": "Honey",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/honey.json"
+      }
+    },
+    {
+      "name": "Peanuts",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/peanuts.json"
+      }
+    }
+  ]
+}

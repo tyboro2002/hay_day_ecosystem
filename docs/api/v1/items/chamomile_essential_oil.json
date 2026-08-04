@@ -1,0 +1,22 @@
+{
+  "id": "chamomile_essential_oil",
+  "name": "Chamomile Essential Oil",
+  "sell_price": 72.0,
+  "unlock_level": 74,
+  "time_to_make_minutes": 10,
+  "_links": {
+    "self": "/api/v1/items/chamomile_essential_oil.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/chamomile_essential_oil.png",
+    "html_details": "/details/details_chamomile_essential_oil.html"
+  },
+  "ingredients": [
+    {
+      "name": "Chamomile",
+      "quantity": 5,
+      "_links": {
+        "detail": "/api/v1/items/chamomile.json"
+      }
+    }
+  ]
+}

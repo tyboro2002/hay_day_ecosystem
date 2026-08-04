@@ -1,0 +1,13 @@
+{
+  "id": "chili_pepper",
+  "name": "Chili Pepper",
+  "sell_price": 36.0,
+  "unlock_level": 25,
+  "time_to_make_minutes": 240,
+  "_links": {
+    "self": "/api/v1/items/chili_pepper.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/chili_pepper.png",
+    "html_details": "/details/details_chili_pepper.html"
+  }
+}

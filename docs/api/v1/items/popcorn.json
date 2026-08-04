@@ -1,0 +1,22 @@
+{
+  "id": "popcorn",
+  "name": "Popcorn",
+  "sell_price": 32.4,
+  "unlock_level": 8,
+  "time_to_make_minutes": 30,
+  "_links": {
+    "self": "/api/v1/items/popcorn.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/popcorn.png",
+    "html_details": "/details/details_popcorn.html"
+  },
+  "ingredients": [
+    {
+      "name": "Corn",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/corn.json"
+      }
+    }
+  ]
+}

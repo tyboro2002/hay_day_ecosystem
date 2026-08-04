@@ -1,0 +1,43 @@
+{
+  "id": "peanut_butter_milkshake",
+  "name": "Peanut Butter Milkshake",
+  "sell_price": 619.0,
+  "unlock_level": 68,
+  "time_to_make_minutes": 100,
+  "_links": {
+    "self": "/api/v1/items/peanut_butter_milkshake.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/peanut_butter_milkshake.png",
+    "html_details": "/details/details_peanut_butter_milkshake.html"
+  },
+  "ingredients": [
+    {
+      "name": "Peanuts",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/peanuts.json"
+      }
+    },
+    {
+      "name": "Milk",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/milk.json"
+      }
+    },
+    {
+      "name": "Cream",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/cream.json"
+      }
+    },
+    {
+      "name": "Cacao",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/cacao.json"
+      }
+    }
+  ]
+}

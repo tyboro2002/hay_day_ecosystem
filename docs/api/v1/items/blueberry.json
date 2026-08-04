@@ -1,0 +1,13 @@
+{
+  "id": "blueberry",
+  "name": "Blueberry",
+  "sell_price": 82.8,
+  "unlock_level": 30,
+  "time_to_make_minutes": 2160,
+  "_links": {
+    "self": "/api/v1/items/blueberry.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/blueberry.png",
+    "html_details": "/details/details_blueberry.html"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "coconut_ice_cream",
+  "name": "Coconut Ice Cream",
+  "sell_price": 320.0,
+  "unlock_level": 102,
+  "time_to_make_minutes": 15,
+  "_links": {
+    "self": "/api/v1/items/coconut_ice_cream.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/coconut_ice_cream.png",
+    "html_details": "/details/details_coconut_ice_cream.html"
+  },
+  "ingredients": [
+    {
+      "name": "Coconut",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/coconut.json"
+      }
+    },
+    {
+      "name": "Syrup",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/syrup.json"
+      }
+    }
+  ]
+}

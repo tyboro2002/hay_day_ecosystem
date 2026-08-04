@@ -1,0 +1,29 @@
+{
+  "id": "bacon_and_eggs",
+  "name": "Bacon And Eggs",
+  "sell_price": 201.6,
+  "unlock_level": 11,
+  "time_to_make_minutes": 60,
+  "_links": {
+    "self": "/api/v1/items/bacon_and_eggs.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/bacon_and_eggs.png",
+    "html_details": "/details/details_bacon_and_eggs.html"
+  },
+  "ingredients": [
+    {
+      "name": "Egg",
+      "quantity": 4,
+      "_links": {
+        "detail": "/api/v1/items/egg.json"
+      }
+    },
+    {
+      "name": "Bacon",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/bacon.json"
+      }
+    }
+  ]
+}

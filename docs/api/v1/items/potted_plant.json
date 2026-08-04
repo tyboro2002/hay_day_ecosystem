@@ -1,0 +1,29 @@
+{
+  "id": "potted_plant",
+  "name": "Potted Plant",
+  "sell_price": 151.0,
+  "unlock_level": 96,
+  "time_to_make_minutes": 220,
+  "_links": {
+    "self": "/api/v1/items/potted_plant.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/potted_plant.png",
+    "html_details": "/details/details_potted_plant.html"
+  },
+  "ingredients": [
+    {
+      "name": "Clay",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/clay.json"
+      }
+    },
+    {
+      "name": "Sunflower",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/sunflower.json"
+      }
+    }
+  ]
+}

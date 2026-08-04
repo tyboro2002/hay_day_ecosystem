@@ -1,0 +1,29 @@
+{
+  "id": "asparagus_soup",
+  "name": "Asparagus Soup",
+  "sell_price": 255.0,
+  "unlock_level": 51,
+  "time_to_make_minutes": 60,
+  "_links": {
+    "self": "/api/v1/items/asparagus_soup.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/asparagus_soup.png",
+    "html_details": "/details/details_asparagus_soup.html"
+  },
+  "ingredients": [
+    {
+      "name": "Asparagus",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/asparagus.json"
+      }
+    },
+    {
+      "name": "Cream",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/cream.json"
+      }
+    }
+  ]
+}

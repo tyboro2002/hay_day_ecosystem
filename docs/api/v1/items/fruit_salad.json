@@ -1,0 +1,43 @@
+{
+  "id": "fruit_salad",
+  "name": "Fruit Salad",
+  "sell_price": 597.0,
+  "unlock_level": 82,
+  "time_to_make_minutes": 120,
+  "_links": {
+    "self": "/api/v1/items/fruit_salad.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/fruit_salad.png",
+    "html_details": "/details/details_fruit_salad.html"
+  },
+  "ingredients": [
+    {
+      "name": "Blackberry",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/blackberry.json"
+      }
+    },
+    {
+      "name": "Honey",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/honey.json"
+      }
+    },
+    {
+      "name": "Orange",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/orange.json"
+      }
+    },
+    {
+      "name": "Strawberry",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/strawberry.json"
+      }
+    }
+  ]
+}

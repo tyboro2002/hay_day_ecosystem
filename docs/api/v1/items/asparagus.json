@@ -1,0 +1,13 @@
+{
+  "id": "asparagus",
+  "name": "Asparagus",
+  "sell_price": 43.2,
+  "unlock_level": 49,
+  "time_to_make_minutes": 360,
+  "_links": {
+    "self": "/api/v1/items/asparagus.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/asparagus.png",
+    "html_details": "/details/details_asparagus.html"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "raspberry_candle",
+  "name": "Raspberry Candle",
+  "sell_price": 360.0,
+  "unlock_level": 52,
+  "time_to_make_minutes": 105,
+  "_links": {
+    "self": "/api/v1/items/raspberry_candle.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/raspberry_candle.png",
+    "html_details": "/details/details_raspberry_candle.html"
+  },
+  "ingredients": [
+    {
+      "name": "Beeswax",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/beeswax.json"
+      }
+    },
+    {
+      "name": "Raspberry",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/raspberry.json"
+      }
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "id": "fish_burger",
+  "name": "Fish Burger",
+  "sell_price": 226.8,
+  "unlock_level": 27,
+  "time_to_make_minutes": 120,
+  "_links": {
+    "self": "/api/v1/items/fish_burger.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/fish_burger.png",
+    "html_details": "/details/details_fish_burger.html"
+  },
+  "ingredients": [
+    {
+      "name": "Bread",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/bread.json"
+      }
+    },
+    {
+      "name": "Fish Fillet",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/fish_fillet.json"
+      }
+    },
+    {
+      "name": "Chili Pepper",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/chili_pepper.json"
+      }
+    }
+  ]
+}

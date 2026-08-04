@@ -1,0 +1,43 @@
+{
+  "id": "blueberry_chutney",
+  "name": "Blueberry Chutney",
+  "sell_price": 579.0,
+  "unlock_level": 70,
+  "time_to_make_minutes": 240,
+  "_links": {
+    "self": "/api/v1/items/blueberry_chutney.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/blueberry_chutney.png",
+    "html_details": "/details/details_blueberry_chutney.html"
+  },
+  "ingredients": [
+    {
+      "name": "Brown Sugar",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/brown_sugar.json"
+      }
+    },
+    {
+      "name": "Lemon",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/lemon.json"
+      }
+    },
+    {
+      "name": "Onion",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/onion.json"
+      }
+    },
+    {
+      "name": "Blueberry",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/blueberry.json"
+      }
+    }
+  ]
+}

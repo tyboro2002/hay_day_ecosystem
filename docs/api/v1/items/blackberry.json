@@ -1,0 +1,13 @@
+{
+  "id": "blackberry",
+  "name": "Blackberry",
+  "sell_price": 82.8,
+  "unlock_level": 26,
+  "time_to_make_minutes": 2040,
+  "_links": {
+    "self": "/api/v1/items/blackberry.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/blackberry.png",
+    "html_details": "/details/details_blackberry.html"
+  }
+}

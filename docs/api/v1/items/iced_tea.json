@@ -1,0 +1,29 @@
+{
+  "id": "iced_tea",
+  "name": "Iced Tea",
+  "sell_price": 252.0,
+  "unlock_level": 92,
+  "time_to_make_minutes": 30,
+  "_links": {
+    "self": "/api/v1/items/iced_tea.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/iced_tea.png",
+    "html_details": "/details/details_iced_tea.html"
+  },
+  "ingredients": [
+    {
+      "name": "Tea Leaf",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/tea_leaf.json"
+      }
+    },
+    {
+      "name": "Peach",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/peach.json"
+      }
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "red_scarf",
+  "name": "Red Scarf",
+  "sell_price": 288.0,
+  "unlock_level": 48,
+  "time_to_make_minutes": 150,
+  "_links": {
+    "self": "/api/v1/items/red_scarf.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/red_scarf.png",
+    "html_details": "/details/details_red_scarf.html"
+  },
+  "ingredients": [
+    {
+      "name": "Wool",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/wool.json"
+      }
+    },
+    {
+      "name": "Strawberry",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/strawberry.json"
+      }
+    }
+  ]
+}

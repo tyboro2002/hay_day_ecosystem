@@ -1,0 +1,36 @@
+{
+  "id": "macaroon",
+  "name": "Macaroon",
+  "sell_price": 421.0,
+  "unlock_level": 101,
+  "time_to_make_minutes": 30,
+  "_links": {
+    "self": "/api/v1/items/macaroon.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/macaroon.png",
+    "html_details": "/details/details_macaroon.html"
+  },
+  "ingredients": [
+    {
+      "name": "Cacao",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/cacao.json"
+      }
+    },
+    {
+      "name": "Coconut",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/coconut.json"
+      }
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/white_sugar.json"
+      }
+    }
+  ]
+}

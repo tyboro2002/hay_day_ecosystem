@@ -1,0 +1,11 @@
+{
+  "id": "duck_salon",
+  "name": "Duck Salon",
+  "category": "machines",
+  "unlock_level": 50,
+  "_links": {
+    "self": "/api/v1/infrastructure/duck_salon.json",
+    "collection": "/api/v1/infrastructure/index.json",
+    "image": "/assets/machines/duck_salon.png"
+  }
+}

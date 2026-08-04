@@ -1,0 +1,22 @@
+{
+  "id": "green_tea",
+  "name": "Green Tea",
+  "sell_price": 241.0,
+  "unlock_level": 80,
+  "time_to_make_minutes": 30,
+  "_links": {
+    "self": "/api/v1/items/green_tea.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/green_tea.png",
+    "html_details": "/details/details_green_tea.html"
+  },
+  "ingredients": [
+    {
+      "name": "Tea Leaf",
+      "quantity": 5,
+      "_links": {
+        "detail": "/api/v1/items/tea_leaf.json"
+      }
+    }
+  ]
+}

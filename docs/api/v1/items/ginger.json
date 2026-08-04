@@ -1,0 +1,13 @@
+{
+  "id": "ginger",
+  "name": "Ginger",
+  "sell_price": 28.0,
+  "unlock_level": 78,
+  "time_to_make_minutes": 150,
+  "_links": {
+    "self": "/api/v1/items/ginger.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/ginger.png",
+    "html_details": "/details/details_ginger.html"
+  }
+}

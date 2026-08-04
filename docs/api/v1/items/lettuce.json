@@ -1,0 +1,13 @@
+{
+  "id": "lettuce",
+  "name": "Lettuce",
+  "sell_price": 32.0,
+  "unlock_level": 58,
+  "time_to_make_minutes": 210,
+  "_links": {
+    "self": "/api/v1/items/lettuce.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/lettuce.png",
+    "html_details": "/details/details_lettuce.html"
+  }
+}

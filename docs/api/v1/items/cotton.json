@@ -1,0 +1,13 @@
+{
+  "id": "cotton",
+  "name": "Cotton",
+  "sell_price": 28.8,
+  "unlock_level": 18,
+  "time_to_make_minutes": 150,
+  "_links": {
+    "self": "/api/v1/items/cotton.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/cotton.png",
+    "html_details": "/details/details_cotton.html"
+  }
+}

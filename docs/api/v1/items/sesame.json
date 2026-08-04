@@ -1,0 +1,13 @@
+{
+  "id": "sesame",
+  "name": "Sesame",
+  "sell_price": 18.0,
+  "unlock_level": 50,
+  "time_to_make_minutes": 60,
+  "_links": {
+    "self": "/api/v1/items/sesame.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/sesame.png",
+    "html_details": "/details/details_sesame.html"
+  }
+}

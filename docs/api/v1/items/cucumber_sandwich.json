@@ -1,0 +1,36 @@
+{
+  "id": "cucumber_sandwich",
+  "name": "Cucumber Sandwich",
+  "sell_price": 464.0,
+  "unlock_level": 79,
+  "time_to_make_minutes": 35,
+  "_links": {
+    "self": "/api/v1/items/cucumber_sandwich.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/cucumber_sandwich.png",
+    "html_details": "/details/details_cucumber_sandwich.html"
+  },
+  "ingredients": [
+    {
+      "name": "Cucumber",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/cucumber.json"
+      }
+    },
+    {
+      "name": "Bread",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/bread.json"
+      }
+    },
+    {
+      "name": "Mayonnaise",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/mayonnaise.json"
+      }
+    }
+  ]
+}

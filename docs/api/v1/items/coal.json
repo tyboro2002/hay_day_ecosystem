@@ -1,0 +1,13 @@
+{
+  "id": "coal",
+  "name": "Coal",
+  "sell_price": 10.8,
+  "unlock_level": 33,
+  "time_to_make_minutes": 0,
+  "_links": {
+    "self": "/api/v1/items/coal.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/coal.png",
+    "html_details": "/details/details_coal.html"
+  }
+}

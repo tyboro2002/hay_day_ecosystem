@@ -1,0 +1,43 @@
+{
+  "id": "fancy_cake",
+  "name": "Fancy Cake",
+  "sell_price": 450.0,
+  "unlock_level": 54,
+  "time_to_make_minutes": 15,
+  "_links": {
+    "self": "/api/v1/items/fancy_cake.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/fancy_cake.png",
+    "html_details": "/details/details_fancy_cake.html"
+  },
+  "ingredients": [
+    {
+      "name": "Cream Cake",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/cream_cake.json"
+      }
+    },
+    {
+      "name": "Lily",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/lily.json"
+      }
+    },
+    {
+      "name": "Raspberry",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/raspberry.json"
+      }
+    },
+    {
+      "name": "Gold Ore",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/gold_ore.json"
+      }
+    }
+  ]
+}

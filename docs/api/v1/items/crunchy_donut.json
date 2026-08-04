@@ -1,0 +1,36 @@
+{
+  "id": "crunchy_donut",
+  "name": "Crunchy Donut",
+  "sell_price": 594.0,
+  "unlock_level": 82,
+  "time_to_make_minutes": 30,
+  "_links": {
+    "self": "/api/v1/items/crunchy_donut.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/crunchy_donut.png",
+    "html_details": "/details/details_crunchy_donut.html"
+  },
+  "ingredients": [
+    {
+      "name": "Plain Donut",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/plain_donut.json"
+      }
+    },
+    {
+      "name": "Cacao",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/cacao.json"
+      }
+    },
+    {
+      "name": "Peanuts",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/peanuts.json"
+      }
+    }
+  ]
+}

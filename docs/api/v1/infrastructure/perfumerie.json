@@ -1,0 +1,11 @@
+{
+  "id": "perfumerie",
+  "name": "Perfumerie",
+  "category": "machines",
+  "unlock_level": 110,
+  "_links": {
+    "self": "/api/v1/infrastructure/perfumerie.json",
+    "collection": "/api/v1/infrastructure/index.json",
+    "image": "/assets/machines/perfumerie.png"
+  }
+}

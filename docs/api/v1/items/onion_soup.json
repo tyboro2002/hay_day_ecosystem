@@ -1,0 +1,36 @@
+{
+  "id": "onion_soup",
+  "name": "Onion Soup",
+  "sell_price": 327.0,
+  "unlock_level": 72,
+  "time_to_make_minutes": 150,
+  "_links": {
+    "self": "/api/v1/items/onion_soup.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/onion_soup.png",
+    "html_details": "/details/details_onion_soup.html"
+  },
+  "ingredients": [
+    {
+      "name": "Bread",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/bread.json"
+      }
+    },
+    {
+      "name": "Cheese",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/cheese.json"
+      }
+    },
+    {
+      "name": "Onion",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/onion.json"
+      }
+    }
+  ]
+}

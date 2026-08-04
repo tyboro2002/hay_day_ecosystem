@@ -1,0 +1,13 @@
+{
+  "id": "diamond",
+  "name": "Diamond",
+  "sell_price": null,
+  "unlock_level": 1,
+  "time_to_make_minutes": 0,
+  "_links": {
+    "self": "/api/v1/items/diamond.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/diamond.png",
+    "html_details": "/details/details_diamond.html"
+  }
+}

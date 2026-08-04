@@ -1,0 +1,11 @@
+{
+  "id": "bakery",
+  "name": "Bakery",
+  "category": "machines",
+  "unlock_level": 4,
+  "_links": {
+    "self": "/api/v1/infrastructure/bakery.json",
+    "collection": "/api/v1/infrastructure/index.json",
+    "image": "/assets/machines/bakery.png"
+  }
+}

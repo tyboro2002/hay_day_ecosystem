@@ -1,0 +1,36 @@
+{
+  "id": "diamond_ring",
+  "name": "Diamond Ring",
+  "sell_price": 824.4,
+  "unlock_level": 40,
+  "time_to_make_minutes": 240,
+  "_links": {
+    "self": "/api/v1/items/diamond_ring.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/diamond_ring.png",
+    "html_details": "/details/details_diamond_ring.html"
+  },
+  "ingredients": [
+    {
+      "name": "Diamond",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/diamond.json"
+      }
+    },
+    {
+      "name": "Platinum Bar",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/platinum_bar.json"
+      }
+    },
+    {
+      "name": "Gold Bar",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/gold_bar.json"
+      }
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "chocolate_fondue",
+  "name": "Chocolate Fondue",
+  "sell_price": 626.0,
+  "unlock_level": 81,
+  "time_to_make_minutes": 25,
+  "_links": {
+    "self": "/api/v1/items/chocolate_fondue.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/chocolate_fondue.png",
+    "html_details": "/details/details_chocolate_fondue.html"
+  },
+  "ingredients": [
+    {
+      "name": "Chocolate",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/chocolate.json"
+      }
+    },
+    {
+      "name": "Strawberry",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/strawberry.json"
+      }
+    }
+  ]
+}

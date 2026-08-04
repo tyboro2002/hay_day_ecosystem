@@ -1,0 +1,43 @@
+{
+  "id": "vanilla_milkshake",
+  "name": "Vanilla Milkshake",
+  "sell_price": 673.0,
+  "unlock_level": 124,
+  "time_to_make_minutes": 45,
+  "_links": {
+    "self": "/api/v1/items/vanilla_milkshake.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/vanilla_milkshake.png",
+    "html_details": "/details/details_vanilla_milkshake.html"
+  },
+  "ingredients": [
+    {
+      "name": "Vanilla Ice Cream",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/vanilla_ice_cream.json"
+      }
+    },
+    {
+      "name": "Cookie",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/cookie.json"
+      }
+    },
+    {
+      "name": "Toffee",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/toffee.json"
+      }
+    },
+    {
+      "name": "Syrup",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/syrup.json"
+      }
+    }
+  ]
+}

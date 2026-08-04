@@ -1,0 +1,43 @@
+{
+  "id": "cabbage_soup",
+  "name": "Cabbage Soup",
+  "sell_price": 270.0,
+  "unlock_level": 65,
+  "time_to_make_minutes": 90,
+  "_links": {
+    "self": "/api/v1/items/cabbage_soup.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/cabbage_soup.png",
+    "html_details": "/details/details_cabbage_soup.html"
+  },
+  "ingredients": [
+    {
+      "name": "Cabbage",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/cabbage.json"
+      }
+    },
+    {
+      "name": "Bacon",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/bacon.json"
+      }
+    },
+    {
+      "name": "Potato",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/potato.json"
+      }
+    },
+    {
+      "name": "Carrot",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/carrot.json"
+      }
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "id": "broccoli_pasta",
+  "name": "Broccoli Pasta",
+  "sell_price": 345.0,
+  "unlock_level": 83,
+  "time_to_make_minutes": 60,
+  "_links": {
+    "self": "/api/v1/items/broccoli_pasta.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/broccoli_pasta.png",
+    "html_details": "/details/details_broccoli_pasta.html"
+  },
+  "ingredients": [
+    {
+      "name": "Broccoli",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/broccoli.json"
+      }
+    },
+    {
+      "name": "Cheese",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/cheese.json"
+      }
+    },
+    {
+      "name": "Fresh Pasta",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/fresh_pasta.json"
+      }
+    }
+  ]
+}

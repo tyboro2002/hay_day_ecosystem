@@ -1,0 +1,13 @@
+{
+  "id": "wool",
+  "name": "Wool",
+  "sell_price": 54.0,
+  "unlock_level": 16,
+  "time_to_make_minutes": 360,
+  "_links": {
+    "self": "/api/v1/items/wool.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/wool.png",
+    "html_details": "/details/details_wool.html"
+  }
+}

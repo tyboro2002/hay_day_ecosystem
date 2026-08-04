@@ -1,0 +1,36 @@
+{
+  "id": "sesame_ice_cream",
+  "name": "Sesame Ice Cream",
+  "sell_price": 176.4,
+  "unlock_level": 50,
+  "time_to_make_minutes": 120,
+  "_links": {
+    "self": "/api/v1/items/sesame_ice_cream.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/sesame_ice_cream.png",
+    "html_details": "/details/details_sesame_ice_cream.html"
+  },
+  "ingredients": [
+    {
+      "name": "Cream",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/cream.json"
+      }
+    },
+    {
+      "name": "Sesame",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/sesame.json"
+      }
+    },
+    {
+      "name": "Brown Sugar",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/brown_sugar.json"
+      }
+    }
+  ]
+}

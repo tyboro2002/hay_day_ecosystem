@@ -1,0 +1,36 @@
+{
+  "id": "rich_soap",
+  "name": "Rich Soap",
+  "sell_price": 266.0,
+  "unlock_level": 121,
+  "time_to_make_minutes": 70,
+  "_links": {
+    "self": "/api/v1/items/rich_soap.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/rich_soap.png",
+    "html_details": "/details/details_rich_soap.html"
+  },
+  "ingredients": [
+    {
+      "name": "Oats",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/oats.json"
+      }
+    },
+    {
+      "name": "Pomegranate",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/pomegranate.json"
+      }
+    },
+    {
+      "name": "Coconut",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/coconut.json"
+      }
+    }
+  ]
+}

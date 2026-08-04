@@ -1,0 +1,43 @@
+{
+  "id": "fruit_sorbet",
+  "name": "Fruit Sorbet",
+  "sell_price": 518.0,
+  "unlock_level": 106,
+  "time_to_make_minutes": 60,
+  "_links": {
+    "self": "/api/v1/items/fruit_sorbet.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/fruit_sorbet.png",
+    "html_details": "/details/details_fruit_sorbet.html"
+  },
+  "ingredients": [
+    {
+      "name": "Guava",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/guava.json"
+      }
+    },
+    {
+      "name": "Passion Fruit",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/passion_fruit.json"
+      }
+    },
+    {
+      "name": "Mango",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/mango.json"
+      }
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/white_sugar.json"
+      }
+    }
+  ]
+}

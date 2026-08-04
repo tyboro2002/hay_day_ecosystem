@@ -1,0 +1,36 @@
+{
+  "id": "potato_omelet",
+  "name": "Potato Omelet",
+  "sell_price": 270.0,
+  "unlock_level": 87,
+  "time_to_make_minutes": 75,
+  "_links": {
+    "self": "/api/v1/items/potato_omelet.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/potato_omelet.png",
+    "html_details": "/details/details_potato_omelet.html"
+  },
+  "ingredients": [
+    {
+      "name": "Egg",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/egg.json"
+      }
+    },
+    {
+      "name": "Potato",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/potato.json"
+      }
+    },
+    {
+      "name": "Bacon",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/bacon.json"
+      }
+    }
+  ]
+}

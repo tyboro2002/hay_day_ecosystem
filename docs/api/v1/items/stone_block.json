@@ -1,0 +1,13 @@
+{
+  "id": "stone_block",
+  "name": "Stone Block",
+  "sell_price": 342.0,
+  "unlock_level": 34,
+  "time_to_make_minutes": 0,
+  "_links": {
+    "self": "/api/v1/items/stone_block.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/stone_block.png",
+    "html_details": "/details/details_stone_block.html"
+  }
+}

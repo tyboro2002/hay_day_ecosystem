@@ -1,0 +1,43 @@
+{
+  "id": "tofu_stir_fry",
+  "name": "Tofu Stir Fry",
+  "sell_price": 306.0,
+  "unlock_level": 89,
+  "time_to_make_minutes": 75,
+  "_links": {
+    "self": "/api/v1/items/tofu_stir_fry.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/tofu_stir_fry.png",
+    "html_details": "/details/details_tofu_stir_fry.html"
+  },
+  "ingredients": [
+    {
+      "name": "Soybean",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/soybean.json"
+      }
+    },
+    {
+      "name": "Onion",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/onion.json"
+      }
+    },
+    {
+      "name": "Broccoli",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/broccoli.json"
+      }
+    },
+    {
+      "name": "Sesame",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/sesame.json"
+      }
+    }
+  ]
+}

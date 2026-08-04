@@ -1,0 +1,36 @@
+{
+  "id": "sesame_brittle",
+  "name": "Sesame Brittle",
+  "sell_price": 270.0,
+  "unlock_level": 78,
+  "time_to_make_minutes": 60,
+  "_links": {
+    "self": "/api/v1/items/sesame_brittle.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/sesame_brittle.png",
+    "html_details": "/details/details_sesame_brittle.html"
+  },
+  "ingredients": [
+    {
+      "name": "Sesame",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/sesame.json"
+      }
+    },
+    {
+      "name": "Garlic",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/garlic.json"
+      }
+    },
+    {
+      "name": "Honey",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/honey.json"
+      }
+    }
+  ]
+}

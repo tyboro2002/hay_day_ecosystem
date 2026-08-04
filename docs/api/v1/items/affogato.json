@@ -1,0 +1,29 @@
+{
+  "id": "affogato",
+  "name": "Affogato",
+  "sell_price": 435.0,
+  "unlock_level": 78,
+  "time_to_make_minutes": 20,
+  "_links": {
+    "self": "/api/v1/items/affogato.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/affogato.png",
+    "html_details": "/details/details_affogato.html"
+  },
+  "ingredients": [
+    {
+      "name": "Vanilla Ice Cream",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/vanilla_ice_cream.json"
+      }
+    },
+    {
+      "name": "Espresso",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/espresso.json"
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "wheat_bundle",
+  "name": "Wheat Bundle",
+  "sell_price": 50.4,
+  "unlock_level": 34,
+  "time_to_make_minutes": 90,
+  "_links": {
+    "self": "/api/v1/items/wheat_bundle.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/wheat_bundle.png",
+    "html_details": "/details/details_wheat_bundle.html"
+  },
+  "ingredients": [
+    {
+      "name": "Wheat",
+      "quantity": 25.0,
+      "_links": {
+        "detail": "/api/v1/items/wheat.json"
+      }
+    }
+  ]
+}

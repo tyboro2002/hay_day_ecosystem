@@ -1,0 +1,13 @@
+{
+  "id": "soybean",
+  "name": "Soybean",
+  "sell_price": 10.8,
+  "unlock_level": 5,
+  "time_to_make_minutes": 20,
+  "_links": {
+    "self": "/api/v1/items/soybean.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/soybean.png",
+    "html_details": "/details/details_soybean.html"
+  }
+}

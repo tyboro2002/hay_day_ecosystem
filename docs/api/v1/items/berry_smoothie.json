@@ -1,0 +1,36 @@
+{
+  "id": "berry_smoothie",
+  "name": "Berry Smoothie",
+  "sell_price": 547.0,
+  "unlock_level": 64,
+  "time_to_make_minutes": 105,
+  "_links": {
+    "self": "/api/v1/items/berry_smoothie.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/berry_smoothie.png",
+    "html_details": "/details/details_berry_smoothie.html"
+  },
+  "ingredients": [
+    {
+      "name": "Blackberry",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/blackberry.json"
+      }
+    },
+    {
+      "name": "Strawberry",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/strawberry.json"
+      }
+    },
+    {
+      "name": "Raspberry",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/raspberry.json"
+      }
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "id": "guava_cupcake",
+  "name": "Guava Cupcake",
+  "sell_price": 583.0,
+  "unlock_level": 109,
+  "time_to_make_minutes": 70,
+  "_links": {
+    "self": "/api/v1/items/guava_cupcake.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/guava_cupcake.png",
+    "html_details": "/details/details_guava_cupcake.html"
+  },
+  "ingredients": [
+    {
+      "name": "Plain Cupcake",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/plain_cupcake.json"
+      }
+    },
+    {
+      "name": "Guava",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/guava.json"
+      }
+    },
+    {
+      "name": "Cream",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/cream.json"
+      }
+    }
+  ]
+}

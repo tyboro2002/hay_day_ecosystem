@@ -1,0 +1,36 @@
+{
+  "id": "flower_shawl",
+  "name": "Flower Shawl",
+  "sell_price": 295.0,
+  "unlock_level": 71,
+  "time_to_make_minutes": 90,
+  "_links": {
+    "self": "/api/v1/items/flower_shawl.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/flower_shawl.png",
+    "html_details": "/details/details_flower_shawl.html"
+  },
+  "ingredients": [
+    {
+      "name": "Wool",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/wool.json"
+      }
+    },
+    {
+      "name": "Sunflower",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/sunflower.json"
+      }
+    },
+    {
+      "name": "Blackberry",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/blackberry.json"
+      }
+    }
+  ]
+}

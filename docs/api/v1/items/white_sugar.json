@@ -1,0 +1,22 @@
+{
+  "id": "white_sugar",
+  "name": "White Sugar",
+  "sell_price": 50.4,
+  "unlock_level": 13,
+  "time_to_make_minutes": 40,
+  "_links": {
+    "self": "/api/v1/items/white_sugar.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/white_sugar.png",
+    "html_details": "/details/details_white_sugar.html"
+  },
+  "ingredients": [
+    {
+      "name": "Sugarcane",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/sugarcane.json"
+      }
+    }
+  ]
+}

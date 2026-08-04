@@ -1,0 +1,29 @@
+{
+  "id": "cow_feed",
+  "name": "Cow Feed",
+  "sell_price": 14.4,
+  "unlock_level": 6,
+  "time_to_make_minutes": 10,
+  "_links": {
+    "self": "/api/v1/items/cow_feed.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/cow_feed.png",
+    "html_details": "/details/details_cow_feed.html"
+  },
+  "ingredients": [
+    {
+      "name": "Corn",
+      "quantity": 0.3333333333333333,
+      "_links": {
+        "detail": "/api/v1/items/corn.json"
+      }
+    },
+    {
+      "name": "Soybean",
+      "quantity": 0.6666666666666666,
+      "_links": {
+        "detail": "/api/v1/items/soybean.json"
+      }
+    }
+  ]
+}

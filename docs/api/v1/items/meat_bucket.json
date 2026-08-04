@@ -1,0 +1,29 @@
+{
+  "id": "meat_bucket",
+  "name": "Meat Bucket",
+  "sell_price": 72.0,
+  "unlock_level": 34,
+  "time_to_make_minutes": 45,
+  "_links": {
+    "self": "/api/v1/items/meat_bucket.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/meat_bucket.png",
+    "html_details": "/details/details_meat_bucket.html"
+  },
+  "ingredients": [
+    {
+      "name": "Fish Fillet",
+      "quantity": 1.0,
+      "_links": {
+        "detail": "/api/v1/items/fish_fillet.json"
+      }
+    },
+    {
+      "name": "Carrot",
+      "quantity": 1.6666666666666667,
+      "_links": {
+        "detail": "/api/v1/items/carrot.json"
+      }
+    }
+  ]
+}

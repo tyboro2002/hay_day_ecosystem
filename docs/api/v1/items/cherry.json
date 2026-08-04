@@ -1,0 +1,13 @@
+{
+  "id": "cherry",
+  "name": "Cherry",
+  "sell_price": 68.4,
+  "unlock_level": 22,
+  "time_to_make_minutes": 1620,
+  "_links": {
+    "self": "/api/v1/items/cherry.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/cherry.png",
+    "html_details": "/details/details_cherry.html"
+  }
+}

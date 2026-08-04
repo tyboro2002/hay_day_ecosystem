@@ -1,0 +1,29 @@
+{
+  "id": "cherry_popsicle",
+  "name": "Cherry Popsicle",
+  "sell_price": 352.8,
+  "unlock_level": 33,
+  "time_to_make_minutes": 180,
+  "_links": {
+    "self": "/api/v1/items/cherry_popsicle.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/cherry_popsicle.png",
+    "html_details": "/details/details_cherry_popsicle.html"
+  },
+  "ingredients": [
+    {
+      "name": "Cherry Juice",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/cherry_juice.json"
+      }
+    },
+    {
+      "name": "Syrup",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/syrup.json"
+      }
+    }
+  ]
+}

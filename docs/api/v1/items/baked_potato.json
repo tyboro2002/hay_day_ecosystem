@@ -1,0 +1,43 @@
+{
+  "id": "baked_potato",
+  "name": "Baked Potato",
+  "sell_price": 298.8,
+  "unlock_level": 35,
+  "time_to_make_minutes": 35,
+  "_links": {
+    "self": "/api/v1/items/baked_potato.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/baked_potato.png",
+    "html_details": "/details/details_baked_potato.html"
+  },
+  "ingredients": [
+    {
+      "name": "Cheese",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/cheese.json"
+      }
+    },
+    {
+      "name": "Chili Pepper",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/chili_pepper.json"
+      }
+    },
+    {
+      "name": "Cream",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/cream.json"
+      }
+    },
+    {
+      "name": "Potato",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/potato.json"
+      }
+    }
+  ]
+}

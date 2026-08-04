@@ -1,0 +1,13 @@
+{
+  "id": "map_piece",
+  "name": "Map Piece",
+  "sell_price": 450.0,
+  "unlock_level": 34,
+  "time_to_make_minutes": 0,
+  "_links": {
+    "self": "/api/v1/items/map_piece.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/map_piece.png",
+    "html_details": "/details/details_map_piece.html"
+  }
+}

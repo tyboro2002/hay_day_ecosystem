@@ -1,0 +1,13 @@
+{
+  "id": "hammer",
+  "name": "Hammer",
+  "sell_price": 342.0,
+  "unlock_level": 34,
+  "time_to_make_minutes": 0,
+  "_links": {
+    "self": "/api/v1/items/hammer.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/hammer.png",
+    "html_details": "/details/details_hammer.html"
+  }
+}

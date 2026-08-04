@@ -1,0 +1,29 @@
+{
+  "id": "cotton_candy",
+  "name": "Cotton Candy",
+  "sell_price": 226.0,
+  "unlock_level": 75,
+  "time_to_make_minutes": 30,
+  "_links": {
+    "self": "/api/v1/items/cotton_candy.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/cotton_candy.png",
+    "html_details": "/details/details_cotton_candy.html"
+  },
+  "ingredients": [
+    {
+      "name": "White Sugar",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/white_sugar.json"
+      }
+    },
+    {
+      "name": "Strawberry",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/strawberry.json"
+      }
+    }
+  ]
+}

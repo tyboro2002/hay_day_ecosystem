@@ -1,0 +1,43 @@
+{
+  "id": "banana_pancakes",
+  "name": "Banana Pancakes",
+  "sell_price": 352.0,
+  "unlock_level": 94,
+  "time_to_make_minutes": 60,
+  "_links": {
+    "self": "/api/v1/items/banana_pancakes.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/banana_pancakes.png",
+    "html_details": "/details/details_banana_pancakes.html"
+  },
+  "ingredients": [
+    {
+      "name": "Banana",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/banana.json"
+      }
+    },
+    {
+      "name": "Blackberry",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/blackberry.json"
+      }
+    },
+    {
+      "name": "Wheat",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/wheat.json"
+      }
+    },
+    {
+      "name": "Cream",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/cream.json"
+      }
+    }
+  ]
+}

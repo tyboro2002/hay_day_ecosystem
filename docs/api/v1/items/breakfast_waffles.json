@@ -1,0 +1,43 @@
+{
+  "id": "breakfast_waffles",
+  "name": "Breakfast Waffles",
+  "sell_price": 424.0,
+  "unlock_level": 119,
+  "time_to_make_minutes": 45,
+  "_links": {
+    "self": "/api/v1/items/breakfast_waffles.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/breakfast_waffles.png",
+    "html_details": "/details/details_breakfast_waffles.html"
+  },
+  "ingredients": [
+    {
+      "name": "Plain Waffles",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/plain_waffles.json"
+      }
+    },
+    {
+      "name": "Bacon",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/bacon.json"
+      }
+    },
+    {
+      "name": "Egg",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/egg.json"
+      }
+    },
+    {
+      "name": "Asparagus",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/asparagus.json"
+      }
+    }
+  ]
+}

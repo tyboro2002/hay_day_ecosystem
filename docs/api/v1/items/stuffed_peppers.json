@@ -1,0 +1,43 @@
+{
+  "id": "stuffed_peppers",
+  "name": "Stuffed Peppers",
+  "sell_price": 352.0,
+  "unlock_level": 80,
+  "time_to_make_minutes": 20,
+  "_links": {
+    "self": "/api/v1/items/stuffed_peppers.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/stuffed_peppers.png",
+    "html_details": "/details/details_stuffed_peppers.html"
+  },
+  "ingredients": [
+    {
+      "name": "Bell Pepper",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/bell_pepper.json"
+      }
+    },
+    {
+      "name": "Bacon",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/bacon.json"
+      }
+    },
+    {
+      "name": "Rice",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/rice.json"
+      }
+    },
+    {
+      "name": "Cheese",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/cheese.json"
+      }
+    }
+  ]
+}

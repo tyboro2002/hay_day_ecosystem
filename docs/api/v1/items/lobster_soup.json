@@ -1,0 +1,43 @@
+{
+  "id": "lobster_soup",
+  "name": "Lobster Soup",
+  "sell_price": 612.0,
+  "unlock_level": 46,
+  "time_to_make_minutes": 150,
+  "_links": {
+    "self": "/api/v1/items/lobster_soup.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/lobster_soup.png",
+    "html_details": "/details/details_lobster_soup.html"
+  },
+  "ingredients": [
+    {
+      "name": "Chili Pepper",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/chili_pepper.json"
+      }
+    },
+    {
+      "name": "Lobster Tail",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/lobster_tail.json"
+      }
+    },
+    {
+      "name": "Cream",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/cream.json"
+      }
+    },
+    {
+      "name": "Tomato",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/tomato.json"
+      }
+    }
+  ]
+}

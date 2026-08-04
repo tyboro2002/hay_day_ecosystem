@@ -1,0 +1,29 @@
+{
+  "id": "chili_popcorn",
+  "name": "Chili Popcorn",
+  "sell_price": 122.4,
+  "unlock_level": 25,
+  "time_to_make_minutes": 120,
+  "_links": {
+    "self": "/api/v1/items/chili_popcorn.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/chili_popcorn.png",
+    "html_details": "/details/details_chili_popcorn.html"
+  },
+  "ingredients": [
+    {
+      "name": "Corn",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/corn.json"
+      }
+    },
+    {
+      "name": "Chili Pepper",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/chili_pepper.json"
+      }
+    }
+  ]
+}

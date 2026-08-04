@@ -1,0 +1,43 @@
+{
+  "id": "shepherd's_pie",
+  "name": "Shepherd's Pie",
+  "sell_price": 280.8,
+  "unlock_level": 39,
+  "time_to_make_minutes": 100,
+  "_links": {
+    "self": "/api/v1/items/shepherd's_pie.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/shepherd's_pie.png",
+    "html_details": "/details/details_shepherd's_pie.html"
+  },
+  "ingredients": [
+    {
+      "name": "Potato",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/potato.json"
+      }
+    },
+    {
+      "name": "Carrot",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/carrot.json"
+      }
+    },
+    {
+      "name": "Bacon",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/bacon.json"
+      }
+    },
+    {
+      "name": "Pumpkin",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/pumpkin.json"
+      }
+    }
+  ]
+}

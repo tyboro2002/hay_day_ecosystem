@@ -1,0 +1,29 @@
+{
+  "id": "beetroot_salad",
+  "name": "Beetroot Salad",
+  "sell_price": 234.0,
+  "unlock_level": 76,
+  "time_to_make_minutes": 45,
+  "_links": {
+    "self": "/api/v1/items/beetroot_salad.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/beetroot_salad.png",
+    "html_details": "/details/details_beetroot_salad.html"
+  },
+  "ingredients": [
+    {
+      "name": "Beetroot",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/beetroot.json"
+      }
+    },
+    {
+      "name": "Goat Cheese",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/goat_cheese.json"
+      }
+    }
+  ]
+}

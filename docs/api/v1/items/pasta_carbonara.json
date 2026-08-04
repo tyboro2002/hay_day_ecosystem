@@ -1,0 +1,43 @@
+{
+  "id": "pasta_carbonara",
+  "name": "Pasta Carbonara",
+  "sell_price": 410.0,
+  "unlock_level": 83,
+  "time_to_make_minutes": 150,
+  "_links": {
+    "self": "/api/v1/items/pasta_carbonara.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/pasta_carbonara.png",
+    "html_details": "/details/details_pasta_carbonara.html"
+  },
+  "ingredients": [
+    {
+      "name": "Fresh Pasta",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/fresh_pasta.json"
+      }
+    },
+    {
+      "name": "Bacon",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/bacon.json"
+      }
+    },
+    {
+      "name": "Egg",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/egg.json"
+      }
+    },
+    {
+      "name": "Cheese",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/cheese.json"
+      }
+    }
+  ]
+}

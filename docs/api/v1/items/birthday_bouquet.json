@@ -1,0 +1,43 @@
+{
+  "id": "birthday_bouquet",
+  "name": "Birthday Bouquet",
+  "sell_price": 349.0,
+  "unlock_level": 92,
+  "time_to_make_minutes": 20,
+  "_links": {
+    "self": "/api/v1/items/birthday_bouquet.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/birthday_bouquet.png",
+    "html_details": "/details/details_birthday_bouquet.html"
+  },
+  "ingredients": [
+    {
+      "name": "Cherry Juice",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/cherry_juice.json"
+      }
+    },
+    {
+      "name": "Peony",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/peony.json"
+      }
+    },
+    {
+      "name": "Lily",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/lily.json"
+      }
+    },
+    {
+      "name": "Indigo",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/indigo.json"
+      }
+    }
+  ]
+}

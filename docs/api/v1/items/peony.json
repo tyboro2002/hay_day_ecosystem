@@ -1,0 +1,13 @@
+{
+  "id": "peony",
+  "name": "Peony",
+  "sell_price": 36.0,
+  "unlock_level": 82,
+  "time_to_make_minutes": 240,
+  "_links": {
+    "self": "/api/v1/items/peony.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/peony.png",
+    "html_details": "/details/details_peony.html"
+  }
+}

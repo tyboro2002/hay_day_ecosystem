@@ -1,0 +1,36 @@
+{
+  "id": "fried_candy_bar",
+  "name": "Fried Candy Bar",
+  "sell_price": 658.0,
+  "unlock_level": 100,
+  "time_to_make_minutes": 15,
+  "_links": {
+    "self": "/api/v1/items/fried_candy_bar.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/fried_candy_bar.png",
+    "html_details": "/details/details_fried_candy_bar.html"
+  },
+  "ingredients": [
+    {
+      "name": "Cacao",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/cacao.json"
+      }
+    },
+    {
+      "name": "Cookie",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/cookie.json"
+      }
+    },
+    {
+      "name": "Peanuts",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/peanuts.json"
+      }
+    }
+  ]
+}

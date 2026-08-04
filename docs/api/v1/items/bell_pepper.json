@@ -1,0 +1,13 @@
+{
+  "id": "bell_pepper",
+  "name": "Bell Pepper",
+  "sell_price": 36.0,
+  "unlock_level": 74,
+  "time_to_make_minutes": 270,
+  "_links": {
+    "self": "/api/v1/items/bell_pepper.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/bell_pepper.png",
+    "html_details": "/details/details_bell_pepper.html"
+  }
+}

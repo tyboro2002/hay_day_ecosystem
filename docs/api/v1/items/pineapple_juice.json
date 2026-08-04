@@ -1,0 +1,22 @@
+{
+  "id": "pineapple_juice",
+  "name": "Pineapple Juice",
+  "sell_price": 68.0,
+  "unlock_level": 52,
+  "time_to_make_minutes": 180,
+  "_links": {
+    "self": "/api/v1/items/pineapple_juice.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/pineapple_juice.png",
+    "html_details": "/details/details_pineapple_juice.html"
+  },
+  "ingredients": [
+    {
+      "name": "Pineapple",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/pineapple.json"
+      }
+    }
+  ]
+}

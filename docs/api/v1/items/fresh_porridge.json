@@ -1,0 +1,43 @@
+{
+  "id": "fresh_porridge",
+  "name": "Fresh Porridge",
+  "sell_price": 435.0,
+  "unlock_level": 122,
+  "time_to_make_minutes": 35,
+  "_links": {
+    "self": "/api/v1/items/fresh_porridge.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/fresh_porridge.png",
+    "html_details": "/details/details_fresh_porridge.html"
+  },
+  "ingredients": [
+    {
+      "name": "Pomegranate",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/pomegranate.json"
+      }
+    },
+    {
+      "name": "Mint",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/mint.json"
+      }
+    },
+    {
+      "name": "Oats",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/oats.json"
+      }
+    },
+    {
+      "name": "Coconut",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/coconut.json"
+      }
+    }
+  ]
+}

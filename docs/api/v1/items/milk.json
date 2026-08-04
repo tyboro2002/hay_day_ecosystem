@@ -1,0 +1,13 @@
+{
+  "id": "milk",
+  "name": "Milk",
+  "sell_price": 32.4,
+  "unlock_level": 6,
+  "time_to_make_minutes": 60,
+  "_links": {
+    "self": "/api/v1/items/milk.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/milk.png",
+    "html_details": "/details/details_milk.html"
+  }
+}

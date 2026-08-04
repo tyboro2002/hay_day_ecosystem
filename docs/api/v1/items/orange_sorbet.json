@@ -1,0 +1,29 @@
+{
+  "id": "orange_sorbet",
+  "name": "Orange Sorbet",
+  "sell_price": 399.0,
+  "unlock_level": 78,
+  "time_to_make_minutes": 210,
+  "_links": {
+    "self": "/api/v1/items/orange_sorbet.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/orange_sorbet.png",
+    "html_details": "/details/details_orange_sorbet.html"
+  },
+  "ingredients": [
+    {
+      "name": "Honey",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/honey.json"
+      }
+    },
+    {
+      "name": "Orange",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/orange.json"
+      }
+    }
+  ]
+}

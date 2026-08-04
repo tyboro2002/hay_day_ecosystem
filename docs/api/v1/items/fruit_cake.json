@@ -1,0 +1,43 @@
+{
+  "id": "fruit_cake",
+  "name": "Fruit Cake",
+  "sell_price": 450.0,
+  "unlock_level": 89,
+  "time_to_make_minutes": 180,
+  "_links": {
+    "self": "/api/v1/items/fruit_cake.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/fruit_cake.png",
+    "html_details": "/details/details_fruit_cake.html"
+  },
+  "ingredients": [
+    {
+      "name": "Grapes",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/grapes.json"
+      }
+    },
+    {
+      "name": "Orange",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/orange.json"
+      }
+    },
+    {
+      "name": "Cherry",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/cherry.json"
+      }
+    },
+    {
+      "name": "Wheat",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/wheat.json"
+      }
+    }
+  ]
+}

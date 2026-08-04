@@ -1,0 +1,43 @@
+{
+  "id": "fish_taco",
+  "name": "Fish Taco",
+  "sell_price": 392.0,
+  "unlock_level": 79,
+  "time_to_make_minutes": 90,
+  "_links": {
+    "self": "/api/v1/items/fish_taco.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/fish_taco.png",
+    "html_details": "/details/details_fish_taco.html"
+  },
+  "ingredients": [
+    {
+      "name": "Chili Pepper",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/chili_pepper.json"
+      }
+    },
+    {
+      "name": "Corn Bread",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/corn_bread.json"
+      }
+    },
+    {
+      "name": "Fish Fillet",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/fish_fillet.json"
+      }
+    },
+    {
+      "name": "Lemon",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/lemon.json"
+      }
+    }
+  ]
+}

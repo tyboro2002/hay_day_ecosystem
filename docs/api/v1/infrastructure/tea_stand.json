@@ -1,0 +1,11 @@
+{
+  "id": "tea_stand",
+  "name": "Tea Stand",
+  "category": "machines",
+  "unlock_level": 80,
+  "_links": {
+    "self": "/api/v1/infrastructure/tea_stand.json",
+    "collection": "/api/v1/infrastructure/index.json",
+    "image": "/assets/machines/tea_stand.png"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "berry_juice",
+  "name": "Berry Juice",
+  "sell_price": 205.2,
+  "unlock_level": 31,
+  "time_to_make_minutes": 180,
+  "_links": {
+    "self": "/api/v1/items/berry_juice.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/berry_juice.png",
+    "html_details": "/details/details_berry_juice.html"
+  },
+  "ingredients": [
+    {
+      "name": "Blackberry",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/blackberry.json"
+      }
+    },
+    {
+      "name": "Raspberry",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/raspberry.json"
+      }
+    }
+  ]
+}

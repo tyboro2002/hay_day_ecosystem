@@ -1,0 +1,13 @@
+{
+  "id": "onion",
+  "name": "Onion",
+  "sell_price": 39.0,
+  "unlock_level": 68,
+  "time_to_make_minutes": 300,
+  "_links": {
+    "self": "/api/v1/items/onion.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/onion.png",
+    "html_details": "/details/details_onion.html"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "id": "passion_fruit_jam",
+  "name": "Passion Fruit Jam",
+  "sell_price": 118.0,
+  "unlock_level": 96,
+  "time_to_make_minutes": 320,
+  "_links": {
+    "self": "/api/v1/items/passion_fruit_jam.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/passion_fruit_jam.png",
+    "html_details": "/details/details_passion_fruit_jam.html"
+  },
+  "ingredients": [
+    {
+      "name": "Passion Fruit",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/passion_fruit.json"
+      }
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "id": "gracious_bouquet",
+  "name": "Gracious Bouquet",
+  "sell_price": 500.0,
+  "unlock_level": 73,
+  "time_to_make_minutes": 40,
+  "_links": {
+    "self": "/api/v1/items/gracious_bouquet.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/gracious_bouquet.png",
+    "html_details": "/details/details_gracious_bouquet.html"
+  },
+  "ingredients": [
+    {
+      "name": "Cotton Fabric",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/cotton_fabric.json"
+      }
+    },
+    {
+      "name": "Lily",
+      "quantity": 5,
+      "_links": {
+        "detail": "/api/v1/items/lily.json"
+      }
+    },
+    {
+      "name": "Gold Ore",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/gold_ore.json"
+      }
+    },
+    {
+      "name": "Diamond",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/diamond.json"
+      }
+    }
+  ]
+}

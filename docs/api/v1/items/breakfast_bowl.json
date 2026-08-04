@@ -1,0 +1,43 @@
+{
+  "id": "breakfast_bowl",
+  "name": "Breakfast Bowl",
+  "sell_price": 604.0,
+  "unlock_level": 119,
+  "time_to_make_minutes": 50,
+  "_links": {
+    "self": "/api/v1/items/breakfast_bowl.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/breakfast_bowl.png",
+    "html_details": "/details/details_breakfast_bowl.html"
+  },
+  "ingredients": [
+    {
+      "name": "Plain Yogurt",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/plain_yogurt.json"
+      }
+    },
+    {
+      "name": "Oats",
+      "quantity": 4,
+      "_links": {
+        "detail": "/api/v1/items/oats.json"
+      }
+    },
+    {
+      "name": "Honey",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/honey.json"
+      }
+    },
+    {
+      "name": "Raspberry",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/raspberry.json"
+      }
+    }
+  ]
+}

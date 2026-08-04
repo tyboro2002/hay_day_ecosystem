@@ -1,0 +1,43 @@
+{
+  "id": "colourful_omelet",
+  "name": "Colourful Omelet",
+  "sell_price": 136.0,
+  "unlock_level": 77,
+  "time_to_make_minutes": 60,
+  "_links": {
+    "self": "/api/v1/items/colourful_omelet.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/colourful_omelet.png",
+    "html_details": "/details/details_colourful_omelet.html"
+  },
+  "ingredients": [
+    {
+      "name": "Egg",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/egg.json"
+      }
+    },
+    {
+      "name": "Carrot",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/carrot.json"
+      }
+    },
+    {
+      "name": "Bell Pepper",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/bell_pepper.json"
+      }
+    },
+    {
+      "name": "Cabbage",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/cabbage.json"
+      }
+    }
+  ]
+}

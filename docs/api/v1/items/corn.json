@@ -1,0 +1,13 @@
+{
+  "id": "corn",
+  "name": "Corn",
+  "sell_price": 7.2,
+  "unlock_level": 2,
+  "time_to_make_minutes": 5,
+  "_links": {
+    "self": "/api/v1/items/corn.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/corn.png",
+    "html_details": "/details/details_corn.html"
+  }
+}

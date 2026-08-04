@@ -1,0 +1,36 @@
+{
+  "id": "peach_ice_cream",
+  "name": "Peach Ice Cream",
+  "sell_price": 450.0,
+  "unlock_level": 83,
+  "time_to_make_minutes": 180,
+  "_links": {
+    "self": "/api/v1/items/peach_ice_cream.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/peach_ice_cream.png",
+    "html_details": "/details/details_peach_ice_cream.html"
+  },
+  "ingredients": [
+    {
+      "name": "Cream",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/cream.json"
+      }
+    },
+    {
+      "name": "Honey",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/honey.json"
+      }
+    },
+    {
+      "name": "Peach",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/peach.json"
+      }
+    }
+  ]
+}

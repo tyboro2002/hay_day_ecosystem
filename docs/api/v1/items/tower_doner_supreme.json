@@ -1,0 +1,43 @@
+{
+  "id": "tower_doner_supreme",
+  "name": "Tower Doner Supreme",
+  "sell_price": 356.0,
+  "unlock_level": 58,
+  "time_to_make_minutes": 40,
+  "_links": {
+    "self": "/api/v1/items/tower_doner_supreme.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/tower_doner_supreme.png",
+    "html_details": "/details/details_tower_doner_supreme.html"
+  },
+  "ingredients": [
+    {
+      "name": "Lamb Chop",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/lamb_chop.json"
+      }
+    },
+    {
+      "name": "Corn Bread",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/corn_bread.json"
+      }
+    },
+    {
+      "name": "Goat Cheese",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/goat_cheese.json"
+      }
+    },
+    {
+      "name": "Lettuce",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/lettuce.json"
+      }
+    }
+  ]
+}

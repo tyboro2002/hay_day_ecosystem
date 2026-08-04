@@ -1,0 +1,29 @@
+{
+  "id": "strawberry_candle",
+  "name": "Strawberry Candle",
+  "sell_price": 370.8,
+  "unlock_level": 48,
+  "time_to_make_minutes": 120,
+  "_links": {
+    "self": "/api/v1/items/strawberry_candle.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/strawberry_candle.png",
+    "html_details": "/details/details_strawberry_candle.html"
+  },
+  "ingredients": [
+    {
+      "name": "Beeswax",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/beeswax.json"
+      }
+    },
+    {
+      "name": "Strawberry",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/strawberry.json"
+      }
+    }
+  ]
+}

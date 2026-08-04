@@ -1,0 +1,22 @@
+{
+  "id": "apple_juice",
+  "name": "Apple Juice",
+  "sell_price": 129.6,
+  "unlock_level": 28,
+  "time_to_make_minutes": 120,
+  "_links": {
+    "self": "/api/v1/items/apple_juice.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/apple_juice.png",
+    "html_details": "/details/details_apple_juice.html"
+  },
+  "ingredients": [
+    {
+      "name": "Apple",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/apple.json"
+      }
+    }
+  ]
+}

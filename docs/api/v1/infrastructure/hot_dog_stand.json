@@ -1,0 +1,11 @@
+{
+  "id": "hot_dog_stand",
+  "name": "Hot Dog Stand",
+  "category": "machines",
+  "unlock_level": 75,
+  "_links": {
+    "self": "/api/v1/infrastructure/hot_dog_stand.json",
+    "collection": "/api/v1/infrastructure/index.json",
+    "image": "/assets/machines/hot_dog_stand.png"
+  }
+}

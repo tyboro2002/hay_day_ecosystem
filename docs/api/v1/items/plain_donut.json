@@ -1,0 +1,43 @@
+{
+  "id": "plain_donut",
+  "name": "Plain Donut",
+  "sell_price": 129.0,
+  "unlock_level": 76,
+  "time_to_make_minutes": 15,
+  "_links": {
+    "self": "/api/v1/items/plain_donut.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/plain_donut.png",
+    "html_details": "/details/details_plain_donut.html"
+  },
+  "ingredients": [
+    {
+      "name": "Milk",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/milk.json"
+      }
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/white_sugar.json"
+      }
+    },
+    {
+      "name": "Egg",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/egg.json"
+      }
+    },
+    {
+      "name": "Wheat",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/wheat.json"
+      }
+    }
+  ]
+}

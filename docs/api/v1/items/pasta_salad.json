@@ -1,0 +1,43 @@
+{
+  "id": "pasta_salad",
+  "name": "Pasta Salad",
+  "sell_price": 759.0,
+  "unlock_level": 67,
+  "time_to_make_minutes": 150,
+  "_links": {
+    "self": "/api/v1/items/pasta_salad.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/pasta_salad.png",
+    "html_details": "/details/details_pasta_salad.html"
+  },
+  "ingredients": [
+    {
+      "name": "Fresh Pasta",
+      "quantity": 4,
+      "_links": {
+        "detail": "/api/v1/items/fresh_pasta.json"
+      }
+    },
+    {
+      "name": "Lemon",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/lemon.json"
+      }
+    },
+    {
+      "name": "Olive Oil",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/olive_oil.json"
+      }
+    },
+    {
+      "name": "Tomato",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/tomato.json"
+      }
+    }
+  ]
+}

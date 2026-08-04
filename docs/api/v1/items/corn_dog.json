@@ -1,0 +1,36 @@
+{
+  "id": "corn_dog",
+  "name": "Corn Dog",
+  "sell_price": 529.0,
+  "unlock_level": 78,
+  "time_to_make_minutes": 60,
+  "_links": {
+    "self": "/api/v1/items/corn_dog.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/corn_dog.png",
+    "html_details": "/details/details_corn_dog.html"
+  },
+  "ingredients": [
+    {
+      "name": "Bacon",
+      "quantity": 4,
+      "_links": {
+        "detail": "/api/v1/items/bacon.json"
+      }
+    },
+    {
+      "name": "Corn",
+      "quantity": 4,
+      "_links": {
+        "detail": "/api/v1/items/corn.json"
+      }
+    },
+    {
+      "name": "Olive Oil",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/olive_oil.json"
+      }
+    }
+  ]
+}

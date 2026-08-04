@@ -1,0 +1,43 @@
+{
+  "id": "spicy_pasta",
+  "name": "Spicy Pasta",
+  "sell_price": 576.0,
+  "unlock_level": 87,
+  "time_to_make_minutes": 90,
+  "_links": {
+    "self": "/api/v1/items/spicy_pasta.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/spicy_pasta.png",
+    "html_details": "/details/details_spicy_pasta.html"
+  },
+  "ingredients": [
+    {
+      "name": "Fresh Pasta",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/fresh_pasta.json"
+      }
+    },
+    {
+      "name": "Tomato Sauce",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/tomato_sauce.json"
+      }
+    },
+    {
+      "name": "Chili Pepper",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/chili_pepper.json"
+      }
+    },
+    {
+      "name": "Onion",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/onion.json"
+      }
+    }
+  ]
+}

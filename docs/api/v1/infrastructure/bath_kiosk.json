@@ -1,0 +1,11 @@
+{
+  "id": "bath_kiosk",
+  "name": "Bath Kiosk",
+  "category": "machines",
+  "unlock_level": 84,
+  "_links": {
+    "self": "/api/v1/infrastructure/bath_kiosk.json",
+    "collection": "/api/v1/infrastructure/index.json",
+    "image": "/assets/machines/bath_kiosk.png"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "bracelet",
+  "name": "Bracelet",
+  "sell_price": 514.8,
+  "unlock_level": 38,
+  "time_to_make_minutes": 120,
+  "_links": {
+    "self": "/api/v1/items/bracelet.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/bracelet.png",
+    "html_details": "/details/details_bracelet.html"
+  },
+  "ingredients": [
+    {
+      "name": "Gold Bar",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/gold_bar.json"
+      }
+    },
+    {
+      "name": "Silver Bar",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/silver_bar.json"
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "cherry_juice",
+  "name": "Cherry Juice",
+  "sell_price": 216.0,
+  "unlock_level": 30,
+  "time_to_make_minutes": 150,
+  "_links": {
+    "self": "/api/v1/items/cherry_juice.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/cherry_juice.png",
+    "html_details": "/details/details_cherry_juice.html"
+  },
+  "ingredients": [
+    {
+      "name": "Cherry",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/cherry.json"
+      }
+    }
+  ]
+}

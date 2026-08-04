@@ -1,0 +1,36 @@
+{
+  "id": "eggplant_parmesan",
+  "name": "Eggplant Parmesan",
+  "sell_price": 442.0,
+  "unlock_level": 99,
+  "time_to_make_minutes": 45,
+  "_links": {
+    "self": "/api/v1/items/eggplant_parmesan.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/eggplant_parmesan.png",
+    "html_details": "/details/details_eggplant_parmesan.html"
+  },
+  "ingredients": [
+    {
+      "name": "Eggplant",
+      "quantity": 4,
+      "_links": {
+        "detail": "/api/v1/items/eggplant.json"
+      }
+    },
+    {
+      "name": "Cheese",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/cheese.json"
+      }
+    },
+    {
+      "name": "Tomato Sauce",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/tomato_sauce.json"
+      }
+    }
+  ]
+}

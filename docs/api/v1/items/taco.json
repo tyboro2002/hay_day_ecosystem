@@ -1,0 +1,36 @@
+{
+  "id": "taco",
+  "name": "Taco",
+  "sell_price": 331.0,
+  "unlock_level": 77,
+  "time_to_make_minutes": 45,
+  "_links": {
+    "self": "/api/v1/items/taco.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/taco.png",
+    "html_details": "/details/details_taco.html"
+  },
+  "ingredients": [
+    {
+      "name": "Corn Bread",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/corn_bread.json"
+      }
+    },
+    {
+      "name": "Bacon",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/bacon.json"
+      }
+    },
+    {
+      "name": "Salsa",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/salsa.json"
+      }
+    }
+  ]
+}

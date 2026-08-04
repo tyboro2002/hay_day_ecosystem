@@ -1,0 +1,43 @@
+{
+  "id": "banana_bread",
+  "name": "Banana Bread",
+  "sell_price": 424.0,
+  "unlock_level": 91,
+  "time_to_make_minutes": 30,
+  "_links": {
+    "self": "/api/v1/items/banana_bread.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/banana_bread.png",
+    "html_details": "/details/details_banana_bread.html"
+  },
+  "ingredients": [
+    {
+      "name": "Banana",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/banana.json"
+      }
+    },
+    {
+      "name": "Grapes",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/grapes.json"
+      }
+    },
+    {
+      "name": "Wheat",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/wheat.json"
+      }
+    },
+    {
+      "name": "Egg",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/egg.json"
+      }
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "id": "veggie_bouquet",
+  "name": "Veggie Bouquet",
+  "sell_price": 352.0,
+  "unlock_level": 106,
+  "time_to_make_minutes": 15,
+  "_links": {
+    "self": "/api/v1/items/veggie_bouquet.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/veggie_bouquet.png",
+    "html_details": "/details/details_veggie_bouquet.html"
+  },
+  "ingredients": [
+    {
+      "name": "Broccoli",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/broccoli.json"
+      }
+    },
+    {
+      "name": "Cotton Fabric",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/cotton_fabric.json"
+      }
+    },
+    {
+      "name": "Tomato",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/tomato.json"
+      }
+    },
+    {
+      "name": "Mushroom",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/mushroom.json"
+      }
+    }
+  ]
+}

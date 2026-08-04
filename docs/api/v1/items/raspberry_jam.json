@@ -1,0 +1,22 @@
+{
+  "id": "raspberry_jam",
+  "name": "Raspberry Jam",
+  "sell_price": 252.0,
+  "unlock_level": 36,
+  "time_to_make_minutes": 420,
+  "_links": {
+    "self": "/api/v1/items/raspberry_jam.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/raspberry_jam.png",
+    "html_details": "/details/details_raspberry_jam.html"
+  },
+  "ingredients": [
+    {
+      "name": "Raspberry",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/raspberry.json"
+      }
+    }
+  ]
+}

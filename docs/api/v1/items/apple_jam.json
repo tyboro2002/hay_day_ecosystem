@@ -1,0 +1,22 @@
+{
+  "id": "apple_jam",
+  "name": "Apple Jam",
+  "sell_price": 219.6,
+  "unlock_level": 35,
+  "time_to_make_minutes": 360,
+  "_links": {
+    "self": "/api/v1/items/apple_jam.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/apple_jam.png",
+    "html_details": "/details/details_apple_jam.html"
+  },
+  "ingredients": [
+    {
+      "name": "Apple",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/apple.json"
+      }
+    }
+  ]
+}

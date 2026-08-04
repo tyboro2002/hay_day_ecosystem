@@ -1,0 +1,36 @@
+{
+  "id": "plain_waffles",
+  "name": "Plain Waffles",
+  "sell_price": 198.0,
+  "unlock_level": 114,
+  "time_to_make_minutes": 25,
+  "_links": {
+    "self": "/api/v1/items/plain_waffles.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/plain_waffles.png",
+    "html_details": "/details/details_plain_waffles.html"
+  },
+  "ingredients": [
+    {
+      "name": "White Sugar",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/white_sugar.json"
+      }
+    },
+    {
+      "name": "Egg",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/egg.json"
+      }
+    },
+    {
+      "name": "Wheat",
+      "quantity": 5,
+      "_links": {
+        "detail": "/api/v1/items/wheat.json"
+      }
+    }
+  ]
+}

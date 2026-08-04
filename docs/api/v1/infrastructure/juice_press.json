@@ -1,0 +1,11 @@
+{
+  "id": "juice_press",
+  "name": "Juice Press",
+  "category": "machines",
+  "unlock_level": 26,
+  "_links": {
+    "self": "/api/v1/infrastructure/juice_press.json",
+    "collection": "/api/v1/infrastructure/index.json",
+    "image": "/assets/machines/juice_press.png"
+  }
+}

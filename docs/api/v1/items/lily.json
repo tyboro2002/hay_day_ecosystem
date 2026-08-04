@@ -1,0 +1,13 @@
+{
+  "id": "lily",
+  "name": "Lily",
+  "sell_price": 21.0,
+  "unlock_level": 53,
+  "time_to_make_minutes": 90,
+  "_links": {
+    "self": "/api/v1/items/lily.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/lily.png",
+    "html_details": "/details/details_lily.html"
+  }
+}

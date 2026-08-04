@@ -1,0 +1,43 @@
+{
+  "id": "pineapple_cake",
+  "name": "Pineapple Cake",
+  "sell_price": 259.0,
+  "unlock_level": 65,
+  "time_to_make_minutes": 75,
+  "_links": {
+    "self": "/api/v1/items/pineapple_cake.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/pineapple_cake.png",
+    "html_details": "/details/details_pineapple_cake.html"
+  },
+  "ingredients": [
+    {
+      "name": "Pineapple",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/pineapple.json"
+      }
+    },
+    {
+      "name": "Wheat",
+      "quantity": 4,
+      "_links": {
+        "detail": "/api/v1/items/wheat.json"
+      }
+    },
+    {
+      "name": "Egg",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/egg.json"
+      }
+    },
+    {
+      "name": "Cherry",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/cherry.json"
+      }
+    }
+  ]
+}

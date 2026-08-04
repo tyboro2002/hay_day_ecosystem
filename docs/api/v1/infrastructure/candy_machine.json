@@ -1,0 +1,11 @@
+{
+  "id": "candy_machine",
+  "name": "Candy Machine",
+  "category": "machines",
+  "unlock_level": 51,
+  "_links": {
+    "self": "/api/v1/infrastructure/candy_machine.json",
+    "collection": "/api/v1/infrastructure/index.json",
+    "image": "/assets/machines/candy_machine.png"
+  }
+}

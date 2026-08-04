@@ -1,0 +1,29 @@
+{
+  "id": "chicken_feed",
+  "name": "Chicken Feed",
+  "sell_price": 7.2,
+  "unlock_level": 2,
+  "time_to_make_minutes": 5,
+  "_links": {
+    "self": "/api/v1/items/chicken_feed.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/chicken_feed.png",
+    "html_details": "/details/details_chicken_feed.html"
+  },
+  "ingredients": [
+    {
+      "name": "Wheat",
+      "quantity": 0.6666666666666666,
+      "_links": {
+        "detail": "/api/v1/items/wheat.json"
+      }
+    },
+    {
+      "name": "Corn",
+      "quantity": 0.3333333333333333,
+      "_links": {
+        "detail": "/api/v1/items/corn.json"
+      }
+    }
+  ]
+}

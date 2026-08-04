@@ -1,0 +1,29 @@
+{
+  "id": "wooly_chaps",
+  "name": "Wooly Chaps",
+  "sell_price": 309.6,
+  "unlock_level": 21,
+  "time_to_make_minutes": 90,
+  "_links": {
+    "self": "/api/v1/items/wooly_chaps.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/wooly_chaps.png",
+    "html_details": "/details/details_wooly_chaps.html"
+  },
+  "ingredients": [
+    {
+      "name": "Wool",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/wool.json"
+      }
+    },
+    {
+      "name": "Cotton Fabric",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/cotton_fabric.json"
+      }
+    }
+  ]
+}

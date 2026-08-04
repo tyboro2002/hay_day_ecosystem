@@ -1,0 +1,36 @@
+{
+  "id": "hummus_wrap",
+  "name": "Hummus Wrap",
+  "sell_price": 374.0,
+  "unlock_level": 109,
+  "time_to_make_minutes": 30,
+  "_links": {
+    "self": "/api/v1/items/hummus_wrap.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/hummus_wrap.png",
+    "html_details": "/details/details_hummus_wrap.html"
+  },
+  "ingredients": [
+    {
+      "name": "Hummus",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/hummus.json"
+      }
+    },
+    {
+      "name": "Bread",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/bread.json"
+      }
+    },
+    {
+      "name": "Lettuce",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/lettuce.json"
+      }
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "grilled_eggplant",
+  "name": "Grilled Eggplant",
+  "sell_price": 324.0,
+  "unlock_level": 90,
+  "time_to_make_minutes": 40,
+  "_links": {
+    "self": "/api/v1/items/grilled_eggplant.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/grilled_eggplant.png",
+    "html_details": "/details/details_grilled_eggplant.html"
+  },
+  "ingredients": [
+    {
+      "name": "Eggplant",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/eggplant.json"
+      }
+    },
+    {
+      "name": "Salsa",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/salsa.json"
+      }
+    }
+  ]
+}

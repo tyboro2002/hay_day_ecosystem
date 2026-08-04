@@ -1,0 +1,36 @@
+{
+  "id": "peanut_butter_and_jelly_sandwich",
+  "name": "Peanut Butter and Jelly Sandwich",
+  "sell_price": 601.0,
+  "unlock_level": 71,
+  "time_to_make_minutes": 25,
+  "_links": {
+    "self": "/api/v1/items/peanut_butter_and_jelly_sandwich.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/peanut_butter_and_jelly_sandwich.png",
+    "html_details": "/details/details_peanut_butter_and_jelly_sandwich.html"
+  },
+  "ingredients": [
+    {
+      "name": "Bread",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/bread.json"
+      }
+    },
+    {
+      "name": "Raspberry Jam",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/raspberry_jam.json"
+      }
+    },
+    {
+      "name": "Peanuts",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/peanuts.json"
+      }
+    }
+  ]
+}

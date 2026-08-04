@@ -1,0 +1,11 @@
+{
+  "id": "sushi_bar",
+  "name": "Sushi Bar",
+  "category": "machines",
+  "unlock_level": 56,
+  "_links": {
+    "self": "/api/v1/infrastructure/sushi_bar.json",
+    "collection": "/api/v1/infrastructure/index.json",
+    "image": "/assets/machines/sushi_bar.png"
+  }
+}

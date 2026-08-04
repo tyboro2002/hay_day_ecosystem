@@ -1,0 +1,43 @@
+{
+  "id": "chocolate_pie",
+  "name": "Chocolate Pie",
+  "sell_price": 514.0,
+  "unlock_level": 65,
+  "time_to_make_minutes": 75,
+  "_links": {
+    "self": "/api/v1/items/chocolate_pie.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/chocolate_pie.png",
+    "html_details": "/details/details_chocolate_pie.html"
+  },
+  "ingredients": [
+    {
+      "name": "Wheat",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/wheat.json"
+      }
+    },
+    {
+      "name": "Cacao",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/cacao.json"
+      }
+    },
+    {
+      "name": "Egg",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/egg.json"
+      }
+    },
+    {
+      "name": "Peanuts",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/peanuts.json"
+      }
+    }
+  ]
+}

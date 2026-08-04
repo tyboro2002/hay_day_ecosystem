@@ -1,0 +1,43 @@
+{
+  "id": "hot_chocolate",
+  "name": "Hot Chocolate",
+  "sell_price": 316.8,
+  "unlock_level": 47,
+  "time_to_make_minutes": 25,
+  "_links": {
+    "self": "/api/v1/items/hot_chocolate.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/hot_chocolate.png",
+    "html_details": "/details/details_hot_chocolate.html"
+  },
+  "ingredients": [
+    {
+      "name": "Cacao",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/cacao.json"
+      }
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/white_sugar.json"
+      }
+    },
+    {
+      "name": "Milk",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/milk.json"
+      }
+    },
+    {
+      "name": "Cream",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/cream.json"
+      }
+    }
+  ]
+}

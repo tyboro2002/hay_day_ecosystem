@@ -1,0 +1,36 @@
+{
+  "id": "quesadilla",
+  "name": "Quesadilla",
+  "sell_price": 241.0,
+  "unlock_level": 82,
+  "time_to_make_minutes": 60,
+  "_links": {
+    "self": "/api/v1/items/quesadilla.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/quesadilla.png",
+    "html_details": "/details/details_quesadilla.html"
+  },
+  "ingredients": [
+    {
+      "name": "Chili Pepper",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/chili_pepper.json"
+      }
+    },
+    {
+      "name": "Cheese",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/cheese.json"
+      }
+    },
+    {
+      "name": "Wheat",
+      "quantity": 4,
+      "_links": {
+        "detail": "/api/v1/items/wheat.json"
+      }
+    }
+  ]
+}

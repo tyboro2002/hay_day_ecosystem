@@ -1,0 +1,43 @@
+{
+  "id": "raspberry_mocha",
+  "name": "Raspberry Mocha",
+  "sell_price": 259.2,
+  "unlock_level": 46,
+  "time_to_make_minutes": 30,
+  "_links": {
+    "self": "/api/v1/items/raspberry_mocha.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/raspberry_mocha.png",
+    "html_details": "/details/details_raspberry_mocha.html"
+  },
+  "ingredients": [
+    {
+      "name": "Coffee Bean",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/coffee_bean.json"
+      }
+    },
+    {
+      "name": "Cream",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/cream.json"
+      }
+    },
+    {
+      "name": "Cacao",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/cacao.json"
+      }
+    },
+    {
+      "name": "Raspberry",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/raspberry.json"
+      }
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "id": "sweet_porridge",
+  "name": "Sweet Porridge",
+  "sell_price": 460.0,
+  "unlock_level": 120,
+  "time_to_make_minutes": 45,
+  "_links": {
+    "self": "/api/v1/items/sweet_porridge.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/sweet_porridge.png",
+    "html_details": "/details/details_sweet_porridge.html"
+  },
+  "ingredients": [
+    {
+      "name": "Peach",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/peach.json"
+      }
+    },
+    {
+      "name": "Honey",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/honey.json"
+      }
+    },
+    {
+      "name": "Oats",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/oats.json"
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "mango_juice",
+  "name": "Mango Juice",
+  "sell_price": 230.0,
+  "unlock_level": 97,
+  "time_to_make_minutes": 50,
+  "_links": {
+    "self": "/api/v1/items/mango_juice.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/mango_juice.png",
+    "html_details": "/details/details_mango_juice.html"
+  },
+  "ingredients": [
+    {
+      "name": "Mango",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/mango.json"
+      }
+    }
+  ]
+}

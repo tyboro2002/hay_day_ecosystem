@@ -1,0 +1,13 @@
+{
+  "id": "tomato",
+  "name": "Tomato",
+  "sell_price": 43.2,
+  "unlock_level": 30,
+  "time_to_make_minutes": 360,
+  "_links": {
+    "self": "/api/v1/items/tomato.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/tomato.png",
+    "html_details": "/details/details_tomato.html"
+  }
+}

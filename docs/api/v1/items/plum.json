@@ -1,0 +1,13 @@
+{
+  "id": "plum",
+  "name": "Plum",
+  "sell_price": 82.0,
+  "unlock_level": 94,
+  "time_to_make_minutes": 1500,
+  "_links": {
+    "self": "/api/v1/items/plum.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/plum.png",
+    "html_details": "/details/details_plum.html"
+  }
+}

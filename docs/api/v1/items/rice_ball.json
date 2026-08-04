@@ -1,0 +1,36 @@
+{
+  "id": "rice_ball",
+  "name": "Rice Ball",
+  "sell_price": 464.0,
+  "unlock_level": 110,
+  "time_to_make_minutes": 45,
+  "_links": {
+    "self": "/api/v1/items/rice_ball.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/rice_ball.png",
+    "html_details": "/details/details_rice_ball.html"
+  },
+  "ingredients": [
+    {
+      "name": "Sesame",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/sesame.json"
+      }
+    },
+    {
+      "name": "Rice",
+      "quantity": 20,
+      "_links": {
+        "detail": "/api/v1/items/rice.json"
+      }
+    },
+    {
+      "name": "Plum",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/plum.json"
+      }
+    }
+  ]
+}

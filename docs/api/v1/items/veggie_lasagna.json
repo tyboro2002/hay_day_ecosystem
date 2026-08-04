@@ -1,0 +1,43 @@
+{
+  "id": "veggie_lasagna",
+  "name": "Veggie Lasagna",
+  "sell_price": 532.0,
+  "unlock_level": 74,
+  "time_to_make_minutes": 100,
+  "_links": {
+    "self": "/api/v1/items/veggie_lasagna.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/veggie_lasagna.png",
+    "html_details": "/details/details_veggie_lasagna.html"
+  },
+  "ingredients": [
+    {
+      "name": "Carrot",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/carrot.json"
+      }
+    },
+    {
+      "name": "Cheese",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/cheese.json"
+      }
+    },
+    {
+      "name": "Tomato Sauce",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/tomato_sauce.json"
+      }
+    },
+    {
+      "name": "Fresh Pasta",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/fresh_pasta.json"
+      }
+    }
+  ]
+}

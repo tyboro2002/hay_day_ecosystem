@@ -1,0 +1,13 @@
+{
+  "id": "peanuts",
+  "name": "Peanuts",
+  "sell_price": 234.0,
+  "unlock_level": 62,
+  "time_to_make_minutes": 300,
+  "_links": {
+    "self": "/api/v1/items/peanuts.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/peanuts.png",
+    "html_details": "/details/details_peanuts.html"
+  }
+}

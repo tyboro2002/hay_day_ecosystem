@@ -1,0 +1,29 @@
+{
+  "id": "mayonnaise",
+  "name": "Mayonnaise",
+  "sell_price": 367.0,
+  "unlock_level": 62,
+  "time_to_make_minutes": 15,
+  "_links": {
+    "self": "/api/v1/items/mayonnaise.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/mayonnaise.png",
+    "html_details": "/details/details_mayonnaise.html"
+  },
+  "ingredients": [
+    {
+      "name": "Egg",
+      "quantity": 4,
+      "_links": {
+        "detail": "/api/v1/items/egg.json"
+      }
+    },
+    {
+      "name": "Olive Oil",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/olive_oil.json"
+      }
+    }
+  ]
+}

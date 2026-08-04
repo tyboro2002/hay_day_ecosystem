@@ -1,0 +1,43 @@
+{
+  "id": "veggie_platter",
+  "name": "Veggie Platter",
+  "sell_price": 266.0,
+  "unlock_level": 74,
+  "time_to_make_minutes": 120,
+  "_links": {
+    "self": "/api/v1/items/veggie_platter.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/veggie_platter.png",
+    "html_details": "/details/details_veggie_platter.html"
+  },
+  "ingredients": [
+    {
+      "name": "Bell Pepper",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/bell_pepper.json"
+      }
+    },
+    {
+      "name": "Carrot",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/carrot.json"
+      }
+    },
+    {
+      "name": "Tomato",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/tomato.json"
+      }
+    },
+    {
+      "name": "Cream",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/cream.json"
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "strawberry_jam",
+  "name": "Strawberry Jam",
+  "sell_price": 270.0,
+  "unlock_level": 50,
+  "time_to_make_minutes": 450,
+  "_links": {
+    "self": "/api/v1/items/strawberry_jam.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/strawberry_jam.png",
+    "html_details": "/details/details_strawberry_jam.html"
+  },
+  "ingredients": [
+    {
+      "name": "Strawberry",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/strawberry.json"
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "passion_fruit",
+  "name": "Passion Fruit",
+  "sell_price": 18.0,
+  "unlock_level": 88,
+  "time_to_make_minutes": 60,
+  "_links": {
+    "self": "/api/v1/items/passion_fruit.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/passion_fruit.png",
+    "html_details": "/details/details_passion_fruit.html"
+  }
+}

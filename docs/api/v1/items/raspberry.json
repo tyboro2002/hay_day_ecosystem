@@ -1,0 +1,13 @@
+{
+  "id": "raspberry",
+  "name": "Raspberry",
+  "sell_price": 46.8,
+  "unlock_level": 19,
+  "time_to_make_minutes": 1080,
+  "_links": {
+    "self": "/api/v1/items/raspberry.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/raspberry.png",
+    "html_details": "/details/details_raspberry.html"
+  }
+}

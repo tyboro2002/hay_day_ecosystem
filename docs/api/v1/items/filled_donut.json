@@ -1,0 +1,29 @@
+{
+  "id": "filled_donut",
+  "name": "Filled Donut",
+  "sell_price": 403.0,
+  "unlock_level": 93,
+  "time_to_make_minutes": 35,
+  "_links": {
+    "self": "/api/v1/items/filled_donut.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/filled_donut.png",
+    "html_details": "/details/details_filled_donut.html"
+  },
+  "ingredients": [
+    {
+      "name": "Plain Donut",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/plain_donut.json"
+      }
+    },
+    {
+      "name": "Raspberry Jam",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/raspberry_jam.json"
+      }
+    }
+  ]
+}

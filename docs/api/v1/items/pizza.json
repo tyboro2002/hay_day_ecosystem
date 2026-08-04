@@ -1,0 +1,36 @@
+{
+  "id": "pizza",
+  "name": "Pizza",
+  "sell_price": 190.8,
+  "unlock_level": 33,
+  "time_to_make_minutes": 15,
+  "_links": {
+    "self": "/api/v1/items/pizza.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/pizza.png",
+    "html_details": "/details/details_pizza.html"
+  },
+  "ingredients": [
+    {
+      "name": "Wheat",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/wheat.json"
+      }
+    },
+    {
+      "name": "Tomato",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/tomato.json"
+      }
+    },
+    {
+      "name": "Cheese",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/cheese.json"
+      }
+    }
+  ]
+}

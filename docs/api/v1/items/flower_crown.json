@@ -1,0 +1,29 @@
+{
+  "id": "flower_crown",
+  "name": "Flower Crown",
+  "sell_price": 331.0,
+  "unlock_level": 86,
+  "time_to_make_minutes": 120,
+  "_links": {
+    "self": "/api/v1/items/flower_crown.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/flower_crown.png",
+    "html_details": "/details/details_flower_crown.html"
+  },
+  "ingredients": [
+    {
+      "name": "Peony",
+      "quantity": 5,
+      "_links": {
+        "detail": "/api/v1/items/peony.json"
+      }
+    },
+    {
+      "name": "Cotton",
+      "quantity": 4,
+      "_links": {
+        "detail": "/api/v1/items/cotton.json"
+      }
+    }
+  ]
+}

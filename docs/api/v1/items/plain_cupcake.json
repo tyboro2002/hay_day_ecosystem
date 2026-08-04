@@ -1,0 +1,43 @@
+{
+  "id": "plain_cupcake",
+  "name": "Plain Cupcake",
+  "sell_price": 280.0,
+  "unlock_level": 109,
+  "time_to_make_minutes": 40,
+  "_links": {
+    "self": "/api/v1/items/plain_cupcake.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/plain_cupcake.png",
+    "html_details": "/details/details_plain_cupcake.html"
+  },
+  "ingredients": [
+    {
+      "name": "Milk",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/milk.json"
+      }
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/white_sugar.json"
+      }
+    },
+    {
+      "name": "Egg",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/egg.json"
+      }
+    },
+    {
+      "name": "Wheat",
+      "quantity": 5,
+      "_links": {
+        "detail": "/api/v1/items/wheat.json"
+      }
+    }
+  ]
+}

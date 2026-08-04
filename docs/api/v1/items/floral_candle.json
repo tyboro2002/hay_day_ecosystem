@@ -1,0 +1,43 @@
+{
+  "id": "floral_candle",
+  "name": "Floral Candle",
+  "sell_price": 442.0,
+  "unlock_level": 95,
+  "time_to_make_minutes": 120,
+  "_links": {
+    "self": "/api/v1/items/floral_candle.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/floral_candle.png",
+    "html_details": "/details/details_floral_candle.html"
+  },
+  "ingredients": [
+    {
+      "name": "Beeswax",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/beeswax.json"
+      }
+    },
+    {
+      "name": "Peony",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/peony.json"
+      }
+    },
+    {
+      "name": "Sunflower",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/sunflower.json"
+      }
+    },
+    {
+      "name": "Indigo",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/indigo.json"
+      }
+    }
+  ]
+}

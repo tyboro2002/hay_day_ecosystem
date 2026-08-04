@@ -1,0 +1,22 @@
+{
+  "id": "iron_bar",
+  "name": "Iron Bar",
+  "sell_price": 129.6,
+  "unlock_level": 34,
+  "time_to_make_minutes": 420,
+  "_links": {
+    "self": "/api/v1/items/iron_bar.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/iron_bar.png",
+    "html_details": "/details/details_iron_bar.html"
+  },
+  "ingredients": [
+    {
+      "name": "Iron Ore",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/iron_ore.json"
+      }
+    }
+  ]
+}

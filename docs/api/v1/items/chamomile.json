@@ -1,0 +1,13 @@
+{
+  "id": "chamomile",
+  "name": "Chamomile",
+  "sell_price": 10.8,
+  "unlock_level": 45,
+  "time_to_make_minutes": 20,
+  "_links": {
+    "self": "/api/v1/items/chamomile.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/chamomile.png",
+    "html_details": "/details/details_chamomile.html"
+  }
+}

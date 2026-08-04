@@ -1,0 +1,13 @@
+{
+  "id": "wheat",
+  "name": "Wheat",
+  "sell_price": 3.6,
+  "unlock_level": 1,
+  "time_to_make_minutes": 2,
+  "_links": {
+    "self": "/api/v1/items/wheat.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/wheat.png",
+    "html_details": "/details/details_wheat.html"
+  }
+}

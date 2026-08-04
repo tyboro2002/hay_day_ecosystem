@@ -1,0 +1,29 @@
+{
+  "id": "fried_rice",
+  "name": "Fried Rice",
+  "sell_price": 205.0,
+  "unlock_level": 69,
+  "time_to_make_minutes": 60,
+  "_links": {
+    "self": "/api/v1/items/fried_rice.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/fried_rice.png",
+    "html_details": "/details/details_fried_rice.html"
+  },
+  "ingredients": [
+    {
+      "name": "Rice",
+      "quantity": 5,
+      "_links": {
+        "detail": "/api/v1/items/rice.json"
+      }
+    },
+    {
+      "name": "Egg",
+      "quantity": 5,
+      "_links": {
+        "detail": "/api/v1/items/egg.json"
+      }
+    }
+  ]
+}

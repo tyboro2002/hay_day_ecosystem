@@ -1,0 +1,43 @@
+{
+  "id": "lamb_stir_fry",
+  "name": "Lamb Stir Fry",
+  "sell_price": 270.0,
+  "unlock_level": 69,
+  "time_to_make_minutes": 120,
+  "_links": {
+    "self": "/api/v1/items/lamb_stir_fry.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/lamb_stir_fry.png",
+    "html_details": "/details/details_lamb_stir_fry.html"
+  },
+  "ingredients": [
+    {
+      "name": "Rice",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/rice.json"
+      }
+    },
+    {
+      "name": "Grilled Lamb Skewer",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/grilled_lamb_skewer.json"
+      }
+    },
+    {
+      "name": "Chili Pepper",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/chili_pepper.json"
+      }
+    },
+    {
+      "name": "Sesame",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/sesame.json"
+      }
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "lemon_tea",
+  "name": "Lemon Tea",
+  "sell_price": 241.0,
+  "unlock_level": 86,
+  "time_to_make_minutes": 20,
+  "_links": {
+    "self": "/api/v1/items/lemon_tea.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/lemon_tea.png",
+    "html_details": "/details/details_lemon_tea.html"
+  },
+  "ingredients": [
+    {
+      "name": "Tea Leaf",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/tea_leaf.json"
+      }
+    },
+    {
+      "name": "Lemon",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/lemon.json"
+      }
+    }
+  ]
+}

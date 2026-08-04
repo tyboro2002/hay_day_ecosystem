@@ -1,0 +1,13 @@
+{
+  "id": "cabbage",
+  "name": "Cabbage",
+  "sell_price": 18.0,
+  "unlock_level": 65,
+  "time_to_make_minutes": 45,
+  "_links": {
+    "self": "/api/v1/items/cabbage.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/cabbage.png",
+    "html_details": "/details/details_cabbage.html"
+  }
+}

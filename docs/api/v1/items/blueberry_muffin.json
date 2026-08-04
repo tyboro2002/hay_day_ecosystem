@@ -1,0 +1,36 @@
+{
+  "id": "blueberry_muffin",
+  "name": "Blueberry muffin",
+  "sell_price": 230.4,
+  "unlock_level": 33,
+  "time_to_make_minutes": 45,
+  "_links": {
+    "self": "/api/v1/items/blueberry_muffin.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/blueberry_muffin.png",
+    "html_details": "/details/details_blueberry_muffin.html"
+  },
+  "ingredients": [
+    {
+      "name": "Wheat",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/wheat.json"
+      }
+    },
+    {
+      "name": "Egg",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/egg.json"
+      }
+    },
+    {
+      "name": "Blueberry",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/blueberry.json"
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "black_bean",
+  "name": "Black Bean",
+  "sell_price": 7.2,
+  "unlock_level": 25,
+  "time_to_make_minutes": 10,
+  "_links": {
+    "self": "/api/v1/items/black_bean.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/black_bean.png",
+    "html_details": "/details/details_black_bean.html"
+  }
+}

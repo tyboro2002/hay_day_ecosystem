@@ -1,0 +1,13 @@
+{
+  "id": "rice",
+  "name": "Rice",
+  "sell_price": 18.0,
+  "unlock_level": 56,
+  "time_to_make_minutes": 45,
+  "_links": {
+    "self": "/api/v1/items/rice.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/rice.png",
+    "html_details": "/details/details_rice.html"
+  }
+}

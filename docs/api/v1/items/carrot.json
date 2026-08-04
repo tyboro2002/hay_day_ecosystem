@@ -1,0 +1,13 @@
+{
+  "id": "carrot",
+  "name": "Carrot",
+  "sell_price": 7.2,
+  "unlock_level": 9,
+  "time_to_make_minutes": 10,
+  "_links": {
+    "self": "/api/v1/items/carrot.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/carrot.png",
+    "html_details": "/details/details_carrot.html"
+  }
+}

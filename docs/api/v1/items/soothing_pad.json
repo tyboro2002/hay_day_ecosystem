@@ -1,0 +1,36 @@
+{
+  "id": "soothing_pad",
+  "name": "Soothing Pad",
+  "sell_price": 324.0,
+  "unlock_level": 45,
+  "time_to_make_minutes": 60,
+  "_links": {
+    "self": "/api/v1/items/soothing_pad.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/soothing_pad.png",
+    "html_details": "/details/details_soothing_pad.html"
+  },
+  "ingredients": [
+    {
+      "name": "Cotton Fabric",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/cotton_fabric.json"
+      }
+    },
+    {
+      "name": "Wheat",
+      "quantity": 5,
+      "_links": {
+        "detail": "/api/v1/items/wheat.json"
+      }
+    },
+    {
+      "name": "Chamomile",
+      "quantity": 5,
+      "_links": {
+        "detail": "/api/v1/items/chamomile.json"
+      }
+    }
+  ]
+}

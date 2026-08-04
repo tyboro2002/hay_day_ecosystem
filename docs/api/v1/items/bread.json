@@ -1,0 +1,22 @@
+{
+  "id": "bread",
+  "name": "Bread",
+  "sell_price": 21.6,
+  "unlock_level": 4,
+  "time_to_make_minutes": 5,
+  "_links": {
+    "self": "/api/v1/items/bread.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/bread.png",
+    "html_details": "/details/details_bread.html"
+  },
+  "ingredients": [
+    {
+      "name": "Wheat",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/wheat.json"
+      }
+    }
+  ]
+}

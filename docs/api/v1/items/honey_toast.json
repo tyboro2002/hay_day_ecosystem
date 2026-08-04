@@ -1,0 +1,43 @@
+{
+  "id": "honey_toast",
+  "name": "Honey Toast",
+  "sell_price": 255.0,
+  "unlock_level": 69,
+  "time_to_make_minutes": 60,
+  "_links": {
+    "self": "/api/v1/items/honey_toast.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/honey_toast.png",
+    "html_details": "/details/details_honey_toast.html"
+  },
+  "ingredients": [
+    {
+      "name": "Bread",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/bread.json"
+      }
+    },
+    {
+      "name": "Egg",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/egg.json"
+      }
+    },
+    {
+      "name": "Milk",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/milk.json"
+      }
+    },
+    {
+      "name": "Honey",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/honey.json"
+      }
+    }
+  ]
+}

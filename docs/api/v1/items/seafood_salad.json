@@ -1,0 +1,43 @@
+{
+  "id": "seafood_salad",
+  "name": "Seafood Salad",
+  "sell_price": 763.0,
+  "unlock_level": 64,
+  "time_to_make_minutes": 120,
+  "_links": {
+    "self": "/api/v1/items/seafood_salad.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/seafood_salad.png",
+    "html_details": "/details/details_seafood_salad.html"
+  },
+  "ingredients": [
+    {
+      "name": "Fish Fillet",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/fish_fillet.json"
+      }
+    },
+    {
+      "name": "Lettuce",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/lettuce.json"
+      }
+    },
+    {
+      "name": "Lobster Tail",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/lobster_tail.json"
+      }
+    },
+    {
+      "name": "Mayonnaise",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/mayonnaise.json"
+      }
+    }
+  ]
+}

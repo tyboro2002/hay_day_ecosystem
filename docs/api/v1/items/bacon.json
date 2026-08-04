@@ -1,0 +1,13 @@
+{
+  "id": "bacon",
+  "name": "Bacon",
+  "sell_price": 50.4,
+  "unlock_level": 10,
+  "time_to_make_minutes": 240,
+  "_links": {
+    "self": "/api/v1/items/bacon.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/bacon.png",
+    "html_details": "/details/details_bacon.html"
+  }
+}

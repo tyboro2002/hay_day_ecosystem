@@ -1,0 +1,22 @@
+{
+  "id": "sweater",
+  "name": "Sweater",
+  "sell_price": 151.2,
+  "unlock_level": 17,
+  "time_to_make_minutes": 120,
+  "_links": {
+    "self": "/api/v1/items/sweater.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/sweater.png",
+    "html_details": "/details/details_sweater.html"
+  },
+  "ingredients": [
+    {
+      "name": "Wool",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/wool.json"
+      }
+    }
+  ]
+}

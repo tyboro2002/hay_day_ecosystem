@@ -1,0 +1,36 @@
+{
+  "id": "sushi_roll",
+  "name": "Sushi Roll",
+  "sell_price": 489.0,
+  "unlock_level": 56,
+  "time_to_make_minutes": 60,
+  "_links": {
+    "self": "/api/v1/items/sushi_roll.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/sushi_roll.png",
+    "html_details": "/details/details_sushi_roll.html"
+  },
+  "ingredients": [
+    {
+      "name": "Fish Fillet",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/fish_fillet.json"
+      }
+    },
+    {
+      "name": "Rice",
+      "quantity": 15,
+      "_links": {
+        "detail": "/api/v1/items/rice.json"
+      }
+    },
+    {
+      "name": "Soy Sauce",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/soy_sauce.json"
+      }
+    }
+  ]
+}

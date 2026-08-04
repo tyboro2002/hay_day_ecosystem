@@ -1,0 +1,36 @@
+{
+  "id": "candy_bouquet",
+  "name": "Candy Bouquet",
+  "sell_price": 554.0,
+  "unlock_level": 90,
+  "time_to_make_minutes": 20,
+  "_links": {
+    "self": "/api/v1/items/candy_bouquet.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/candy_bouquet.png",
+    "html_details": "/details/details_candy_bouquet.html"
+  },
+  "ingredients": [
+    {
+      "name": "Peony",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/peony.json"
+      }
+    },
+    {
+      "name": "Caramel Apple",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/caramel_apple.json"
+      }
+    },
+    {
+      "name": "Toffee",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/toffee.json"
+      }
+    }
+  ]
+}

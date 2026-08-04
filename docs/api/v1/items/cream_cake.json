@@ -1,0 +1,36 @@
+{
+  "id": "cream_cake",
+  "name": "Cream Cake",
+  "sell_price": 219.6,
+  "unlock_level": 23,
+  "time_to_make_minutes": 180,
+  "_links": {
+    "self": "/api/v1/items/cream_cake.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/cream_cake.png",
+    "html_details": "/details/details_cream_cake.html"
+  },
+  "ingredients": [
+    {
+      "name": "Wheat",
+      "quantity": 5,
+      "_links": {
+        "detail": "/api/v1/items/wheat.json"
+      }
+    },
+    {
+      "name": "Cream",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/cream.json"
+      }
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/white_sugar.json"
+      }
+    }
+  ]
+}

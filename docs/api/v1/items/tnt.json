@@ -1,0 +1,13 @@
+{
+  "id": "tnt",
+  "name": "TNT",
+  "sell_price": 72.0,
+  "unlock_level": 5,
+  "time_to_make_minutes": 0,
+  "_links": {
+    "self": "/api/v1/items/tnt.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/tnt.png",
+    "html_details": "/details/details_tnt.html"
+  }
+}

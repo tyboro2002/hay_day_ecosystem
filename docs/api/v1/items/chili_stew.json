@@ -1,0 +1,43 @@
+{
+  "id": "chili_stew",
+  "name": "Chili Stew",
+  "sell_price": 370.0,
+  "unlock_level": 109,
+  "time_to_make_minutes": 120,
+  "_links": {
+    "self": "/api/v1/items/chili_stew.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/chili_stew.png",
+    "html_details": "/details/details_chili_stew.html"
+  },
+  "ingredients": [
+    {
+      "name": "Chili Pepper",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/chili_pepper.json"
+      }
+    },
+    {
+      "name": "Bacon",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/bacon.json"
+      }
+    },
+    {
+      "name": "Onion",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/onion.json"
+      }
+    },
+    {
+      "name": "Cream",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/cream.json"
+      }
+    }
+  ]
+}

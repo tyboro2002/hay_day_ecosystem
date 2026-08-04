@@ -1,0 +1,29 @@
+{
+  "id": "pillow",
+  "name": "Pillow",
+  "sell_price": 676.0,
+  "unlock_level": 51,
+  "time_to_make_minutes": 180,
+  "_links": {
+    "self": "/api/v1/items/pillow.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/pillow.png",
+    "html_details": "/details/details_pillow.html"
+  },
+  "ingredients": [
+    {
+      "name": "Cotton Fabric",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/cotton_fabric.json"
+      }
+    },
+    {
+      "name": "Duck Feather",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/duck_feather.json"
+      }
+    }
+  ]
+}

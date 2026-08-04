@@ -1,0 +1,36 @@
+{
+  "id": "lemon_pie",
+  "name": "Lemon Pie",
+  "sell_price": 446.0,
+  "unlock_level": 67,
+  "time_to_make_minutes": 135,
+  "_links": {
+    "self": "/api/v1/items/lemon_pie.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/lemon_pie.png",
+    "html_details": "/details/details_lemon_pie.html"
+  },
+  "ingredients": [
+    {
+      "name": "Lemon Curd",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/lemon_curd.json"
+      }
+    },
+    {
+      "name": "Wheat",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/wheat.json"
+      }
+    },
+    {
+      "name": "Egg",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/egg.json"
+      }
+    }
+  ]
+}

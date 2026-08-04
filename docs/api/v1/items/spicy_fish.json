@@ -1,0 +1,43 @@
+{
+  "id": "spicy_fish",
+  "name": "Spicy Fish",
+  "sell_price": 543.0,
+  "unlock_level": 79,
+  "time_to_make_minutes": 90,
+  "_links": {
+    "self": "/api/v1/items/spicy_fish.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/spicy_fish.png",
+    "html_details": "/details/details_spicy_fish.html"
+  },
+  "ingredients": [
+    {
+      "name": "Fish Fillet",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/fish_fillet.json"
+      }
+    },
+    {
+      "name": "Chili Pepper",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/chili_pepper.json"
+      }
+    },
+    {
+      "name": "Garlic",
+      "quantity": 5,
+      "_links": {
+        "detail": "/api/v1/items/garlic.json"
+      }
+    },
+    {
+      "name": "Olive Oil",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/olive_oil.json"
+      }
+    }
+  ]
+}

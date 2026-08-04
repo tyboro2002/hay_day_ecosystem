@@ -1,0 +1,11 @@
+{
+  "id": "smelter",
+  "name": "Smelter",
+  "category": "machines",
+  "unlock_level": 24,
+  "_links": {
+    "self": "/api/v1/infrastructure/smelter.json",
+    "collection": "/api/v1/infrastructure/index.json",
+    "image": "/assets/machines/smelter.png"
+  }
+}

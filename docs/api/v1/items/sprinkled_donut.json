@@ -1,0 +1,29 @@
+{
+  "id": "sprinkled_donut",
+  "name": "Sprinkled Donut",
+  "sell_price": 313.0,
+  "unlock_level": 79,
+  "time_to_make_minutes": 20,
+  "_links": {
+    "self": "/api/v1/items/sprinkled_donut.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/sprinkled_donut.png",
+    "html_details": "/details/details_sprinkled_donut.html"
+  },
+  "ingredients": [
+    {
+      "name": "Plain Donut",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/plain_donut.json"
+      }
+    },
+    {
+      "name": "Cacao",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/cacao.json"
+      }
+    }
+  ]
+}

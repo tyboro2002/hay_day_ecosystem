@@ -1,0 +1,13 @@
+{
+  "id": "watermelon",
+  "name": "Watermelon",
+  "sell_price": 39.0,
+  "unlock_level": 92,
+  "time_to_make_minutes": 300,
+  "_links": {
+    "self": "/api/v1/items/watermelon.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/watermelon.png",
+    "html_details": "/details/details_watermelon.html"
+  }
+}

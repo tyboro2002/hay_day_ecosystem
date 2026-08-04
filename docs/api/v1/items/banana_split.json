@@ -1,0 +1,36 @@
+{
+  "id": "banana_split",
+  "name": "Banana Split",
+  "sell_price": 403.0,
+  "unlock_level": 96,
+  "time_to_make_minutes": 210,
+  "_links": {
+    "self": "/api/v1/items/banana_split.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/banana_split.png",
+    "html_details": "/details/details_banana_split.html"
+  },
+  "ingredients": [
+    {
+      "name": "Banana",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/banana.json"
+      }
+    },
+    {
+      "name": "Cream",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/cream.json"
+      }
+    },
+    {
+      "name": "Cherry",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/cherry.json"
+      }
+    }
+  ]
+}

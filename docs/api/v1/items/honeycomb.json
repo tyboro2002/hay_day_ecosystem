@@ -1,0 +1,13 @@
+{
+  "id": "honeycomb",
+  "name": "Honeycomb",
+  "sell_price": 68.4,
+  "unlock_level": 39,
+  "time_to_make_minutes": 35,
+  "_links": {
+    "self": "/api/v1/items/honeycomb.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/honeycomb.png",
+    "html_details": "/details/details_honeycomb.html"
+  }
+}

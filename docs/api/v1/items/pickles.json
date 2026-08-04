@@ -1,0 +1,36 @@
+{
+  "id": "pickles",
+  "name": "Pickles",
+  "sell_price": 270.0,
+  "unlock_level": 91,
+  "time_to_make_minutes": 240,
+  "_links": {
+    "self": "/api/v1/items/pickles.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/pickles.png",
+    "html_details": "/details/details_pickles.html"
+  },
+  "ingredients": [
+    {
+      "name": "Cucumber",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/cucumber.json"
+      }
+    },
+    {
+      "name": "Onion",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/onion.json"
+      }
+    },
+    {
+      "name": "Lemon",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/lemon.json"
+      }
+    }
+  ]
+}

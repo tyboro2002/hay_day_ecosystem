@@ -1,0 +1,22 @@
+{
+  "id": "passion_fruit_juice",
+  "name": "Passion Fruit Juice",
+  "sell_price": 64.0,
+  "unlock_level": 88,
+  "time_to_make_minutes": 45,
+  "_links": {
+    "self": "/api/v1/items/passion_fruit_juice.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/passion_fruit_juice.png",
+    "html_details": "/details/details_passion_fruit_juice.html"
+  },
+  "ingredients": [
+    {
+      "name": "Passion Fruit",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/passion_fruit.json"
+      }
+    }
+  ]
+}

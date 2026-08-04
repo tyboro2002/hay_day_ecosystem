@@ -1,0 +1,36 @@
+{
+  "id": "top_hat",
+  "name": "Top Hat",
+  "sell_price": 619.0,
+  "unlock_level": 72,
+  "time_to_make_minutes": 210,
+  "_links": {
+    "self": "/api/v1/items/top_hat.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/top_hat.png",
+    "html_details": "/details/details_top_hat.html"
+  },
+  "ingredients": [
+    {
+      "name": "Cotton Fabric",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/cotton_fabric.json"
+      }
+    },
+    {
+      "name": "Refined coal",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/refined_coal.json"
+      }
+    },
+    {
+      "name": "Duck Feather",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/duck_feather.json"
+      }
+    }
+  ]
+}

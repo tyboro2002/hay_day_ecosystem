@@ -1,0 +1,13 @@
+{
+  "id": "dynamite",
+  "name": "Dynamite",
+  "sell_price": 25.2,
+  "unlock_level": 5,
+  "time_to_make_minutes": 0,
+  "_links": {
+    "self": "/api/v1/items/dynamite.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/dynamite.png",
+    "html_details": "/details/details_dynamite.html"
+  }
+}

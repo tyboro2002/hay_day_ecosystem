@@ -1,0 +1,43 @@
+{
+  "id": "peanut_noodles",
+  "name": "Peanut Noodles",
+  "sell_price": 597.0,
+  "unlock_level": 86,
+  "time_to_make_minutes": 45,
+  "_links": {
+    "self": "/api/v1/items/peanut_noodles.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/peanut_noodles.png",
+    "html_details": "/details/details_peanut_noodles.html"
+  },
+  "ingredients": [
+    {
+      "name": "Ginger",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/ginger.json"
+      }
+    },
+    {
+      "name": "Rice Noodles",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/rice_noodles.json"
+      }
+    },
+    {
+      "name": "Soy Sauce",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/soy_sauce.json"
+      }
+    },
+    {
+      "name": "Peanuts",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/peanuts.json"
+      }
+    }
+  ]
+}

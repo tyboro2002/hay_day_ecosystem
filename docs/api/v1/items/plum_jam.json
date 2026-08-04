@@ -1,0 +1,22 @@
+{
+  "id": "plum_jam",
+  "name": "Plum Jam",
+  "sell_price": 385.0,
+  "unlock_level": 94,
+  "time_to_make_minutes": 300,
+  "_links": {
+    "self": "/api/v1/items/plum_jam.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/plum_jam.png",
+    "html_details": "/details/details_plum_jam.html"
+  },
+  "ingredients": [
+    {
+      "name": "Plum",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/plum.json"
+      }
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "cloche_hat",
+  "name": "Cloche Hat",
+  "sell_price": 468.0,
+  "unlock_level": 70,
+  "time_to_make_minutes": 120,
+  "_links": {
+    "self": "/api/v1/items/cloche_hat.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/cloche_hat.png",
+    "html_details": "/details/details_cloche_hat.html"
+  },
+  "ingredients": [
+    {
+      "name": "Strawberry",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/strawberry.json"
+      }
+    },
+    {
+      "name": "Wool",
+      "quantity": 6,
+      "_links": {
+        "detail": "/api/v1/items/wool.json"
+      }
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "id": "spicy_bean_doner",
+  "name": "Spicy bean doner",
+  "sell_price": 471.6,
+  "unlock_level": 32,
+  "time_to_make_minutes": 30,
+  "_links": {
+    "self": "/api/v1/items/spicy_bean_doner.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/spicy_bean_doner.png",
+    "html_details": "/details/details_spicy_bean_doner.html"
+  },
+  "ingredients": [
+    {
+      "name": "Black Bean",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/black_bean.json"
+      }
+    },
+    {
+      "name": "Chili Pepper",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/chili_pepper.json"
+      }
+    },
+    {
+      "name": "Cheese",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/cheese.json"
+      }
+    },
+    {
+      "name": "Corn Bread",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/corn_bread.json"
+      }
+    }
+  ]
+}

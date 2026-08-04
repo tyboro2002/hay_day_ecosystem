@@ -1,0 +1,43 @@
+{
+  "id": "chocolate_roll",
+  "name": "Chocolate Roll",
+  "sell_price": 604.0,
+  "unlock_level": 95,
+  "time_to_make_minutes": 90,
+  "_links": {
+    "self": "/api/v1/items/chocolate_roll.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/chocolate_roll.png",
+    "html_details": "/details/details_chocolate_roll.html"
+  },
+  "ingredients": [
+    {
+      "name": "Cacao",
+      "quantity": 5,
+      "_links": {
+        "detail": "/api/v1/items/cacao.json"
+      }
+    },
+    {
+      "name": "Cream",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/cream.json"
+      }
+    },
+    {
+      "name": "Wheat",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/wheat.json"
+      }
+    },
+    {
+      "name": "Mint",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/mint.json"
+      }
+    }
+  ]
+}

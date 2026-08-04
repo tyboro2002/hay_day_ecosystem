@@ -1,0 +1,22 @@
+{
+  "id": "rice_noodles",
+  "name": "Rice Noodles",
+  "sell_price": 100.0,
+  "unlock_level": 73,
+  "time_to_make_minutes": 20,
+  "_links": {
+    "self": "/api/v1/items/rice_noodles.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/rice_noodles.png",
+    "html_details": "/details/details_rice_noodles.html"
+  },
+  "ingredients": [
+    {
+      "name": "Rice",
+      "quantity": 5,
+      "_links": {
+        "detail": "/api/v1/items/rice.json"
+      }
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "pig_feed",
+  "name": "Pig Feed",
+  "sell_price": 14.4,
+  "unlock_level": 10,
+  "time_to_make_minutes": 20,
+  "_links": {
+    "self": "/api/v1/items/pig_feed.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/pig_feed.png",
+    "html_details": "/details/details_pig_feed.html"
+  },
+  "ingredients": [
+    {
+      "name": "Carrot",
+      "quantity": 0.6666666666666666,
+      "_links": {
+        "detail": "/api/v1/items/carrot.json"
+      }
+    },
+    {
+      "name": "Soybean",
+      "quantity": 0.3333333333333333,
+      "_links": {
+        "detail": "/api/v1/items/soybean.json"
+      }
+    }
+  ]
+}

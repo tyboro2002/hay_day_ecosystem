@@ -1,0 +1,43 @@
+{
+  "id": "berry_waffles",
+  "name": "Berry Waffles",
+  "sell_price": 604.0,
+  "unlock_level": 114,
+  "time_to_make_minutes": 35,
+  "_links": {
+    "self": "/api/v1/items/berry_waffles.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/berry_waffles.png",
+    "html_details": "/details/details_berry_waffles.html"
+  },
+  "ingredients": [
+    {
+      "name": "Plain Waffles",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/plain_waffles.json"
+      }
+    },
+    {
+      "name": "Syrup",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/syrup.json"
+      }
+    },
+    {
+      "name": "Raspberry",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/raspberry.json"
+      }
+    },
+    {
+      "name": "Blackberry",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/blackberry.json"
+      }
+    }
+  ]
+}

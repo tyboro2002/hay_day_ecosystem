@@ -1,0 +1,43 @@
+{
+  "id": "strawberry_ice_cream",
+  "name": "Strawberry Ice Cream",
+  "sell_price": 331.2,
+  "unlock_level": 34,
+  "time_to_make_minutes": 240,
+  "_links": {
+    "self": "/api/v1/items/strawberry_ice_cream.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/strawberry_ice_cream.png",
+    "html_details": "/details/details_strawberry_ice_cream.html"
+  },
+  "ingredients": [
+    {
+      "name": "Milk",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/milk.json"
+      }
+    },
+    {
+      "name": "Cream",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/cream.json"
+      }
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/white_sugar.json"
+      }
+    },
+    {
+      "name": "Strawberry",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/strawberry.json"
+      }
+    }
+  ]
+}

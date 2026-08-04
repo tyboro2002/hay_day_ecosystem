@@ -1,0 +1,43 @@
+{
+  "id": "egg_sushi",
+  "name": "Egg Sushi",
+  "sell_price": 550.0,
+  "unlock_level": 63,
+  "time_to_make_minutes": 120,
+  "_links": {
+    "self": "/api/v1/items/egg_sushi.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/egg_sushi.png",
+    "html_details": "/details/details_egg_sushi.html"
+  },
+  "ingredients": [
+    {
+      "name": "Brown Sugar",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/brown_sugar.json"
+      }
+    },
+    {
+      "name": "Egg",
+      "quantity": 4,
+      "_links": {
+        "detail": "/api/v1/items/egg.json"
+      }
+    },
+    {
+      "name": "Rice",
+      "quantity": 15,
+      "_links": {
+        "detail": "/api/v1/items/rice.json"
+      }
+    },
+    {
+      "name": "Soy Sauce",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/soy_sauce.json"
+      }
+    }
+  ]
+}

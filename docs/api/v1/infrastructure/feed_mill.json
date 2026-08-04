@@ -1,0 +1,11 @@
+{
+  "id": "feed_mill",
+  "name": "Feed Mill",
+  "category": "machines",
+  "unlock_level": 2,
+  "_links": {
+    "self": "/api/v1/infrastructure/feed_mill.json",
+    "collection": "/api/v1/infrastructure/index.json",
+    "image": "/assets/machines/feed_mill.png"
+  }
+}

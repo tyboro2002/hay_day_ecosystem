@@ -1,0 +1,29 @@
+{
+  "id": "caramel_apple",
+  "name": "Caramel Apple",
+  "sell_price": 255.0,
+  "unlock_level": 51,
+  "time_to_make_minutes": 120,
+  "_links": {
+    "self": "/api/v1/items/caramel_apple.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/caramel_apple.png",
+    "html_details": "/details/details_caramel_apple.html"
+  },
+  "ingredients": [
+    {
+      "name": "Apple",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/apple.json"
+      }
+    },
+    {
+      "name": "Syrup",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/syrup.json"
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "banana",
+  "name": "Banana",
+  "sell_price": 104.0,
+  "unlock_level": 88,
+  "time_to_make_minutes": 1620,
+  "_links": {
+    "self": "/api/v1/items/banana.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/banana.png",
+    "html_details": "/details/details_banana.html"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "id": "cherry_jam",
+  "name": "Cherry Jam",
+  "sell_price": 334.8,
+  "unlock_level": 38,
+  "time_to_make_minutes": 420,
+  "_links": {
+    "self": "/api/v1/items/cherry_jam.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/cherry_jam.png",
+    "html_details": "/details/details_cherry_jam.html"
+  },
+  "ingredients": [
+    {
+      "name": "Cherry",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/cherry.json"
+      }
+    }
+  ]
+}

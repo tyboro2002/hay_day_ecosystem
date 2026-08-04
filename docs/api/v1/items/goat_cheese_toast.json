@@ -1,0 +1,36 @@
+{
+  "id": "goat_cheese_toast",
+  "name": "Goat Cheese Toast",
+  "sell_price": 302.0,
+  "unlock_level": 92,
+  "time_to_make_minutes": 50,
+  "_links": {
+    "self": "/api/v1/items/goat_cheese_toast.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/goat_cheese_toast.png",
+    "html_details": "/details/details_goat_cheese_toast.html"
+  },
+  "ingredients": [
+    {
+      "name": "Grapes",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/grapes.json"
+      }
+    },
+    {
+      "name": "Goat Cheese",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/goat_cheese.json"
+      }
+    },
+    {
+      "name": "Bread",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/bread.json"
+      }
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "id": "big_sushi_roll",
+  "name": "Big Sushi Roll",
+  "sell_price": 648.0,
+  "unlock_level": 76,
+  "time_to_make_minutes": 90,
+  "_links": {
+    "self": "/api/v1/items/big_sushi_roll.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/big_sushi_roll.png",
+    "html_details": "/details/details_big_sushi_roll.html"
+  },
+  "ingredients": [
+    {
+      "name": "Fish Fillet",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/fish_fillet.json"
+      }
+    },
+    {
+      "name": "Rice",
+      "quantity": 20,
+      "_links": {
+        "detail": "/api/v1/items/rice.json"
+      }
+    },
+    {
+      "name": "Egg",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/egg.json"
+      }
+    },
+    {
+      "name": "Lettuce",
+      "quantity": 5,
+      "_links": {
+        "detail": "/api/v1/items/lettuce.json"
+      }
+    }
+  ]
+}

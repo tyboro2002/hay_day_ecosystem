@@ -1,0 +1,22 @@
+{
+  "id": "marmalade",
+  "name": "Marmalade",
+  "sell_price": 457.0,
+  "unlock_level": 74,
+  "time_to_make_minutes": 510,
+  "_links": {
+    "self": "/api/v1/items/marmalade.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/marmalade.png",
+    "html_details": "/details/details_marmalade.html"
+  },
+  "ingredients": [
+    {
+      "name": "Orange",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/orange.json"
+      }
+    }
+  ]
+}

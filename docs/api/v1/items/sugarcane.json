@@ -1,0 +1,13 @@
+{
+  "id": "sugarcane",
+  "name": "Sugarcane",
+  "sell_price": 14.4,
+  "unlock_level": 7,
+  "time_to_make_minutes": 30,
+  "_links": {
+    "self": "/api/v1/items/sugarcane.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/sugarcane.png",
+    "html_details": "/details/details_sugarcane.html"
+  }
+}

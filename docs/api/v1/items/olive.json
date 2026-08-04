@@ -1,0 +1,13 @@
+{
+  "id": "olive",
+  "name": "Olive",
+  "sell_price": 82.0,
+  "unlock_level": 57,
+  "time_to_make_minutes": 1440,
+  "_links": {
+    "self": "/api/v1/items/olive.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/olive.png",
+    "html_details": "/details/details_olive.html"
+  }
+}

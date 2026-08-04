@@ -1,0 +1,43 @@
+{
+  "id": "feta_salad",
+  "name": "Feta Salad",
+  "sell_price": 745.0,
+  "unlock_level": 58,
+  "time_to_make_minutes": 120,
+  "_links": {
+    "self": "/api/v1/items/feta_salad.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/feta_salad.png",
+    "html_details": "/details/details_feta_salad.html"
+  },
+  "ingredients": [
+    {
+      "name": "Goat Cheese",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/goat_cheese.json"
+      }
+    },
+    {
+      "name": "Lettuce",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/lettuce.json"
+      }
+    },
+    {
+      "name": "Olive",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/olive.json"
+      }
+    },
+    {
+      "name": "Roasted Tomatoes",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/roasted_tomatoes.json"
+      }
+    }
+  ]
+}

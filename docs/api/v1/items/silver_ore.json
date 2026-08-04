@@ -1,0 +1,13 @@
+{
+  "id": "silver_ore",
+  "name": "Silver Ore",
+  "sell_price": 18.0,
+  "unlock_level": 24,
+  "time_to_make_minutes": 0,
+  "_links": {
+    "self": "/api/v1/items/silver_ore.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/silver_ore.png",
+    "html_details": "/details/details_silver_ore.html"
+  }
+}

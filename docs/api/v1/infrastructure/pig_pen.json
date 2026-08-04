@@ -1,0 +1,11 @@
+{
+  "id": "pig_pen",
+  "name": "Pig Pen",
+  "category": "pens",
+  "unlock_level": 10,
+  "_links": {
+    "self": "/api/v1/infrastructure/pig_pen.json",
+    "collection": "/api/v1/infrastructure/index.json",
+    "image": "/assets/pens/pig_pen.png"
+  }
+}

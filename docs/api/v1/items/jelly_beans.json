@@ -1,0 +1,36 @@
+{
+  "id": "jelly_beans",
+  "name": "Jelly Beans",
+  "sell_price": 684.0,
+  "unlock_level": 60,
+  "time_to_make_minutes": 1440,
+  "_links": {
+    "self": "/api/v1/items/jelly_beans.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/jelly_beans.png",
+    "html_details": "/details/details_jelly_beans.html"
+  },
+  "ingredients": [
+    {
+      "name": "Blackberry Jam",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/blackberry_jam.json"
+      }
+    },
+    {
+      "name": "Raspberry Jam",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/raspberry_jam.json"
+      }
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/white_sugar.json"
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "mint_essential_oil",
+  "name": "Mint Essential Oil",
+  "sell_price": 172.0,
+  "unlock_level": 85,
+  "time_to_make_minutes": 15,
+  "_links": {
+    "self": "/api/v1/items/mint_essential_oil.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/mint_essential_oil.png",
+    "html_details": "/details/details_mint_essential_oil.html"
+  },
+  "ingredients": [
+    {
+      "name": "Mint",
+      "quantity": 5,
+      "_links": {
+        "detail": "/api/v1/items/mint.json"
+      }
+    }
+  ]
+}

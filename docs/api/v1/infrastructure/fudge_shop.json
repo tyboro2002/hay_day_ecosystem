@@ -1,0 +1,11 @@
+{
+  "id": "fudge_shop",
+  "name": "Fudge Shop",
+  "category": "machines",
+  "unlock_level": 99,
+  "_links": {
+    "self": "/api/v1/infrastructure/fudge_shop.json",
+    "collection": "/api/v1/infrastructure/index.json",
+    "image": "/assets/machines/fudge_shop.png"
+  }
+}

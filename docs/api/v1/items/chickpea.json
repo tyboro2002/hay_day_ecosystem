@@ -1,0 +1,13 @@
+{
+  "id": "chickpea",
+  "name": "Chickpea",
+  "sell_price": 18.0,
+  "unlock_level": 95,
+  "time_to_make_minutes": 60,
+  "_links": {
+    "self": "/api/v1/items/chickpea.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/chickpea.png",
+    "html_details": "/details/details_chickpea.html"
+  }
+}

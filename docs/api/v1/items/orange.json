@@ -1,0 +1,13 @@
+{
+  "id": "orange",
+  "name": "Orange",
+  "sell_price": 97.0,
+  "unlock_level": 71,
+  "time_to_make_minutes": 1860,
+  "_links": {
+    "self": "/api/v1/items/orange.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/orange.png",
+    "html_details": "/details/details_orange.html"
+  }
+}

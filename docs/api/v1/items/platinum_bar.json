@@ -1,0 +1,22 @@
+{
+  "id": "platinum_bar",
+  "name": "Platinum Bar",
+  "sell_price": 205.2,
+  "unlock_level": 25,
+  "time_to_make_minutes": 960,
+  "_links": {
+    "self": "/api/v1/items/platinum_bar.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/platinum_bar.png",
+    "html_details": "/details/details_platinum_bar.html"
+  },
+  "ingredients": [
+    {
+      "name": "Platinum Ore",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/platinum_ore.json"
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "gold_bar",
+  "name": "Gold Bar",
+  "sell_price": 180.0,
+  "unlock_level": 25,
+  "time_to_make_minutes": 720,
+  "_links": {
+    "self": "/api/v1/items/gold_bar.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/gold_bar.png",
+    "html_details": "/details/details_gold_bar.html"
+  },
+  "ingredients": [
+    {
+      "name": "Gold Ore",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/gold_ore.json"
+      }
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "espresso",
+  "name": "Espresso",
+  "sell_price": 248.4,
+  "unlock_level": 42,
+  "time_to_make_minutes": 5,
+  "_links": {
+    "self": "/api/v1/items/espresso.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/espresso.png",
+    "html_details": "/details/details_espresso.html"
+  },
+  "ingredients": [
+    {
+      "name": "Coffee Bean",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/coffee_bean.json"
+      }
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/white_sugar.json"
+      }
+    }
+  ]
+}

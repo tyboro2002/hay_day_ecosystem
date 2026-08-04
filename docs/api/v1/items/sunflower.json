@@ -1,0 +1,13 @@
+{
+  "id": "sunflower",
+  "name": "Sunflower",
+  "sell_price": 21.0,
+  "unlock_level": 63,
+  "time_to_make_minutes": 90,
+  "_links": {
+    "self": "/api/v1/items/sunflower.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/sunflower.png",
+    "html_details": "/details/details_sunflower.html"
+  }
+}

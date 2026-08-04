@@ -1,0 +1,43 @@
+{
+  "id": "mushroom_salad",
+  "name": "Mushroom Salad",
+  "sell_price": 216.0,
+  "unlock_level": 89,
+  "time_to_make_minutes": 60,
+  "_links": {
+    "self": "/api/v1/items/mushroom_salad.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/mushroom_salad.png",
+    "html_details": "/details/details_mushroom_salad.html"
+  },
+  "ingredients": [
+    {
+      "name": "Mushroom",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/mushroom.json"
+      }
+    },
+    {
+      "name": "Lettuce",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/lettuce.json"
+      }
+    },
+    {
+      "name": "Potato",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/potato.json"
+      }
+    },
+    {
+      "name": "Bacon",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/bacon.json"
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "guava",
+  "name": "Guava",
+  "sell_price": 111.0,
+  "unlock_level": 104,
+  "time_to_make_minutes": 2040,
+  "_links": {
+    "self": "/api/v1/items/guava.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/guava.png",
+    "html_details": "/details/details_guava.html"
+  }
+}

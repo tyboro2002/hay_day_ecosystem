@@ -1,0 +1,13 @@
+{
+  "id": "tea_leaf",
+  "name": "Tea Leaf",
+  "sell_price": 43.0,
+  "unlock_level": 80,
+  "time_to_make_minutes": 390,
+  "_links": {
+    "self": "/api/v1/items/tea_leaf.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/tea_leaf.png",
+    "html_details": "/details/details_tea_leaf.html"
+  }
+}

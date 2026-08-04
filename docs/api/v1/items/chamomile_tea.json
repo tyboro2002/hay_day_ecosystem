@@ -1,0 +1,29 @@
+{
+  "id": "chamomile_tea",
+  "name": "Chamomile Tea",
+  "sell_price": 144.0,
+  "unlock_level": 100,
+  "time_to_make_minutes": 20,
+  "_links": {
+    "self": "/api/v1/items/chamomile_tea.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/chamomile_tea.png",
+    "html_details": "/details/details_chamomile_tea.html"
+  },
+  "ingredients": [
+    {
+      "name": "Chamomile",
+      "quantity": 5,
+      "_links": {
+        "detail": "/api/v1/items/chamomile.json"
+      }
+    },
+    {
+      "name": "Honeycomb",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/honeycomb.json"
+      }
+    }
+  ]
+}

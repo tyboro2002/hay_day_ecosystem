@@ -1,0 +1,22 @@
+{
+  "id": "carrot_juice",
+  "name": "Carrot Juice",
+  "sell_price": 46.8,
+  "unlock_level": 26,
+  "time_to_make_minutes": 30,
+  "_links": {
+    "self": "/api/v1/items/carrot_juice.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/carrot_juice.png",
+    "html_details": "/details/details_carrot_juice.html"
+  },
+  "ingredients": [
+    {
+      "name": "Carrot",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/carrot.json"
+      }
+    }
+  ]
+}

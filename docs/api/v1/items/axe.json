@@ -1,0 +1,13 @@
+{
+  "id": "axe",
+  "name": "Axe",
+  "sell_price": 36.0,
+  "unlock_level": 5,
+  "time_to_make_minutes": 0,
+  "_links": {
+    "self": "/api/v1/items/axe.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/axe.png",
+    "html_details": "/details/details_axe.html"
+  }
+}

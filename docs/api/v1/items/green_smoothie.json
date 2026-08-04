@@ -1,0 +1,36 @@
+{
+  "id": "green_smoothie",
+  "name": "Green Smoothie",
+  "sell_price": 320.0,
+  "unlock_level": 66,
+  "time_to_make_minutes": 45,
+  "_links": {
+    "self": "/api/v1/items/green_smoothie.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/green_smoothie.png",
+    "html_details": "/details/details_green_smoothie.html"
+  },
+  "ingredients": [
+    {
+      "name": "Lettuce",
+      "quantity": 5,
+      "_links": {
+        "detail": "/api/v1/items/lettuce.json"
+      }
+    },
+    {
+      "name": "Lemon",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/lemon.json"
+      }
+    },
+    {
+      "name": "Apple",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/apple.json"
+      }
+    }
+  ]
+}

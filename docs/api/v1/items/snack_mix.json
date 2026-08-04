@@ -1,0 +1,36 @@
+{
+  "id": "snack_mix",
+  "name": "Snack Mix",
+  "sell_price": 309.0,
+  "unlock_level": 64,
+  "time_to_make_minutes": 45,
+  "_links": {
+    "self": "/api/v1/items/snack_mix.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/snack_mix.png",
+    "html_details": "/details/details_snack_mix.html"
+  },
+  "ingredients": [
+    {
+      "name": "Corn",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/corn.json"
+      }
+    },
+    {
+      "name": "Sesame",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/sesame.json"
+      }
+    },
+    {
+      "name": "Peanuts",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/peanuts.json"
+      }
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "id": "potato_bread",
+  "name": "Potato Bread",
+  "sell_price": 284.4,
+  "unlock_level": 39,
+  "time_to_make_minutes": 45,
+  "_links": {
+    "self": "/api/v1/items/potato_bread.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/potato_bread.png",
+    "html_details": "/details/details_potato_bread.html"
+  },
+  "ingredients": [
+    {
+      "name": "Potato",
+      "quantity": 2,
+      "_links": {
+        "detail": "/api/v1/items/potato.json"
+      }
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/white_sugar.json"
+      }
+    },
+    {
+      "name": "Egg",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/egg.json"
+      }
+    },
+    {
+      "name": "Butter",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/butter.json"
+      }
+    }
+  ]
+}

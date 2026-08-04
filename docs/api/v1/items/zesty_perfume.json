@@ -1,0 +1,29 @@
+{
+  "id": "zesty_perfume",
+  "name": "Zesty Perfume",
+  "sell_price": 388.0,
+  "unlock_level": 113,
+  "time_to_make_minutes": 15,
+  "_links": {
+    "self": "/api/v1/items/zesty_perfume.json",
+    "collection": "/api/v1/items/index.json",
+    "image": "/assets/items/zesty_perfume.png",
+    "html_details": "/details/details_zesty_perfume.html"
+  },
+  "ingredients": [
+    {
+      "name": "Lemon Essential Oil",
+      "quantity": 1,
+      "_links": {
+        "detail": "/api/v1/items/lemon_essential_oil.json"
+      }
+    },
+    {
+      "name": "Ginger",
+      "quantity": 3,
+      "_links": {
+        "detail": "/api/v1/items/ginger.json"
+      }
+    }
+  ]
+}
