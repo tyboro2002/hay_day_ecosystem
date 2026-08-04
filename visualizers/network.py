@@ -509,7 +509,7 @@ def generate_detail_page_item(name, item_obj, filename):
 
     if used_in_list:
         for recipe_name, recipe_obj, qty in used_in_list:
-            recipe_img = get_base64_asset(recipe_name, "items")
+            recipe_img = get_base64_asset(recipe_name, "items", base_path="../")
             recipe_url = f"details_{recipe_name.lower().replace(' ', '_')}.html"
             recipe_unlock_lvl = getattr(recipe_obj, 'unlock_level', 1)
             qty_str = f"x{qty:.1f}" if isinstance(qty, float) else f"x{qty}"
@@ -525,7 +525,7 @@ def generate_detail_page_item(name, item_obj, filename):
     else:
         used_in_html = '<div class="no-items">📦 Final Product (Not used in other recipes)</div>'
 
-    price_breakdown_html = templates.render_price_breakdown_component(name, sell_price)
+    price_breakdown_html = templates.render_price_breakdown_component(name, sell_price, base_path="../")
 
     html_content = templates.render_item_page(
         name=name, img_tag=img_tag, price_display=price_display,

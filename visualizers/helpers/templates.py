@@ -1081,7 +1081,7 @@ def render_animal_page(name, img_tag, food_html, produces_html, lives_in_html, b
 """
 
 
-def render_price_breakdown_component(name, unit_price, max_qty=10):
+def render_price_breakdown_component(name, unit_price, max_qty=10, base_path=""):
     """
     Returns an HTML snippet containing a bulk price breakdown list (1 to max_qty).
     Displays the item icon, quantity, and total floored price formatted to .1f.
@@ -1090,11 +1090,11 @@ def render_price_breakdown_component(name, unit_price, max_qty=10):
         return '<div class="no-items" style="margin-top: 25px;">⚠️ Bulk pricing unavailable (Unsellable)</div>'
 
     # Fetch item thumbnail image asset
-    item_b64 = get_base64_asset(name, "items")
+    item_b64 = get_base64_asset(name, "items", base_path=base_path)
     item_img = f'<img src="{item_b64}" alt="{name}" style="width: 22px; height: 22px; object-fit: contain; vertical-align: middle; margin-right: 6px;">' if item_b64 else ""
 
     # Fetch coin icon asset
-    coin_b64 = get_base64_asset("coin", "items")
+    coin_b64 = get_base64_asset("coin", "items", base_path=base_path)
     coin_img = f'<img src="{coin_b64}" style="width: 14px; height: 14px; object-fit: contain; vertical-align: middle; margin-left: 3px;">' if coin_b64 else " Coins"
 
     rows_html = ""
