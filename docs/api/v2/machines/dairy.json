@@ -1,0 +1,79 @@
+{
+  "id": "dairy",
+  "name": "Dairy",
+  "min_allowed_slots": 2,
+  "max_allowed_slots": 9,
+  "unlock_schedule": [
+    {
+      "level": 6,
+      "extra_unlocks": 1
+    }
+  ],
+  "costs": [
+    50
+  ],
+  "mastery": {
+    "star_1": {
+      "hours_required": 40,
+      "coin_bonus": 0.1,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.0
+    },
+    "star_2": {
+      "hours_required": 120,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.1,
+      "speed_bonus": 0.0
+    },
+    "star_3": {
+      "hours_required": 360,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.15
+    }
+  },
+  "produces": [
+    {
+      "id": "cream",
+      "name": "Cream",
+      "unlock_level": 6,
+      "time_to_make_minutes": 20,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/cream.json"
+      }
+    },
+    {
+      "id": "butter",
+      "name": "Butter",
+      "unlock_level": 9,
+      "time_to_make_minutes": 30,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/butter.json"
+      }
+    },
+    {
+      "id": "cheese",
+      "name": "Cheese",
+      "unlock_level": 12,
+      "time_to_make_minutes": 60,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/cheese.json"
+      }
+    },
+    {
+      "id": "goat_cheese",
+      "name": "Goat Cheese",
+      "unlock_level": 33,
+      "time_to_make_minutes": 90,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/goat_cheese.json"
+      }
+    }
+  ],
+  "links": {
+    "self": "/hay_day_ecosystem/api/v2/machines/dairy.json",
+    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
+    "image": "/hay_day_ecosystem/assets/machines/dairy.png",
+    "html_details": "/hay_day_ecosystem/details/details_dairy.html"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "id": "pottery_studio",
+  "name": "Pottery Studio",
+  "min_allowed_slots": 2,
+  "max_allowed_slots": 9,
+  "unlock_schedule": [
+    {
+      "level": 94,
+      "extra_unlocks": 1
+    }
+  ],
+  "costs": [
+    400000
+  ],
+  "mastery": {
+    "star_1": {
+      "hours_required": 140,
+      "coin_bonus": 0.1,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.0
+    },
+    "star_2": {
+      "hours_required": 410,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.05,
+      "speed_bonus": 0.0
+    },
+    "star_3": {
+      "hours_required": 1630,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.15
+    }
+  },
+  "produces": [
+    {
+      "id": "tea_pot",
+      "name": "Tea Pot",
+      "unlock_level": 94,
+      "time_to_make_minutes": 220,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/tea_pot.json"
+      }
+    },
+    {
+      "id": "potted_plant",
+      "name": "Potted Plant",
+      "unlock_level": 96,
+      "time_to_make_minutes": 220,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/potted_plant.json"
+      }
+    },
+    {
+      "id": "clay_mug",
+      "name": "Clay Mug",
+      "unlock_level": 99,
+      "time_to_make_minutes": 200,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/clay_mug.json"
+      }
+    }
+  ],
+  "links": {
+    "self": "/hay_day_ecosystem/api/v2/machines/pottery_studio.json",
+    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
+    "image": "/hay_day_ecosystem/assets/machines/pottery_studio.png",
+    "html_details": "/hay_day_ecosystem/details/details_pottery_studio.html"
+  }
+}

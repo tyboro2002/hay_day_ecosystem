@@ -1,0 +1,160 @@
+{
+  "id": "salad_bar",
+  "name": "Salad Bar",
+  "min_allowed_slots": 2,
+  "max_allowed_slots": 9,
+  "unlock_schedule": [
+    {
+      "level": 58,
+      "extra_unlocks": 1
+    }
+  ],
+  "costs": [
+    165000
+  ],
+  "mastery": {
+    "star_1": {
+      "hours_required": 72,
+      "coin_bonus": 0.1,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.0
+    },
+    "star_2": {
+      "hours_required": 288,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.05,
+      "speed_bonus": 0.0
+    },
+    "star_3": {
+      "hours_required": 1152,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.15
+    }
+  },
+  "produces": [
+    {
+      "id": "feta_salad",
+      "name": "Feta Salad",
+      "unlock_level": 58,
+      "time_to_make_minutes": 120,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/feta_salad.json"
+      }
+    },
+    {
+      "id": "bean_salad",
+      "name": "Bean Salad",
+      "unlock_level": 58,
+      "time_to_make_minutes": 60,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/bean_salad.json"
+      }
+    },
+    {
+      "id": "blt_salad",
+      "name": "BLT Salad",
+      "unlock_level": 62,
+      "time_to_make_minutes": 105,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/blt_salad.json"
+      }
+    },
+    {
+      "id": "seafood_salad",
+      "name": "Seafood Salad",
+      "unlock_level": 64,
+      "time_to_make_minutes": 120,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/seafood_salad.json"
+      }
+    },
+    {
+      "id": "pasta_salad",
+      "name": "Pasta Salad",
+      "unlock_level": 67,
+      "time_to_make_minutes": 150,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/pasta_salad.json"
+      }
+    },
+    {
+      "id": "veggie_platter",
+      "name": "Veggie Platter",
+      "unlock_level": 74,
+      "time_to_make_minutes": 120,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/veggie_platter.json"
+      }
+    },
+    {
+      "id": "coleslaw",
+      "name": "Coleslaw",
+      "unlock_level": 75,
+      "time_to_make_minutes": 75,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/coleslaw.json"
+      }
+    },
+    {
+      "id": "beetroot_salad",
+      "name": "Beetroot Salad",
+      "unlock_level": 76,
+      "time_to_make_minutes": 45,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/beetroot_salad.json"
+      }
+    },
+    {
+      "id": "summer_rolls",
+      "name": "Summer Rolls",
+      "unlock_level": 78,
+      "time_to_make_minutes": 60,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/summer_rolls.json"
+      }
+    },
+    {
+      "id": "fruit_salad",
+      "name": "Fruit Salad",
+      "unlock_level": 82,
+      "time_to_make_minutes": 120,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/fruit_salad.json"
+      }
+    },
+    {
+      "id": "summer_salad",
+      "name": "Summer Salad",
+      "unlock_level": 84,
+      "time_to_make_minutes": 180,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/summer_salad.json"
+      }
+    },
+    {
+      "id": "mushroom_salad",
+      "name": "Mushroom Salad",
+      "unlock_level": 89,
+      "time_to_make_minutes": 60,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/mushroom_salad.json"
+      }
+    },
+    {
+      "id": "orange_salad",
+      "name": "Orange Salad",
+      "unlock_level": 117,
+      "time_to_make_minutes": 45,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/orange_salad.json"
+      }
+    }
+  ],
+  "links": {
+    "self": "/hay_day_ecosystem/api/v2/machines/salad_bar.json",
+    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
+    "image": "/hay_day_ecosystem/assets/machines/salad_bar.png",
+    "html_details": "/hay_day_ecosystem/details/details_salad_bar.html"
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "id": "popcorn_pot",
+  "name": "Popcorn Pot",
+  "min_allowed_slots": 2,
+  "max_allowed_slots": 9,
+  "unlock_schedule": [
+    {
+      "level": 8,
+      "extra_unlocks": 1
+    }
+  ],
+  "costs": [
+    650
+  ],
+  "mastery": {
+    "star_1": {
+      "hours_required": 50,
+      "coin_bonus": 0.1,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.0
+    },
+    "star_2": {
+      "hours_required": 150,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.1,
+      "speed_bonus": 0.0
+    },
+    "star_3": {
+      "hours_required": 450,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.15
+    }
+  },
+  "produces": [
+    {
+      "id": "popcorn",
+      "name": "Popcorn",
+      "unlock_level": 8,
+      "time_to_make_minutes": 30,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/popcorn.json"
+      }
+    },
+    {
+      "id": "buttered_popcorn",
+      "name": "Buttered Popcorn",
+      "unlock_level": 16,
+      "time_to_make_minutes": 60,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/buttered_popcorn.json"
+      }
+    },
+    {
+      "id": "chili_popcorn",
+      "name": "Chili Popcorn",
+      "unlock_level": 25,
+      "time_to_make_minutes": 120,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/chili_popcorn.json"
+      }
+    },
+    {
+      "id": "honey_popcorn",
+      "name": "Honey Popcorn",
+      "unlock_level": 40,
+      "time_to_make_minutes": 90,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/honey_popcorn.json"
+      }
+    },
+    {
+      "id": "chocolate_popcorn",
+      "name": "Chocolate Popcorn",
+      "unlock_level": 44,
+      "time_to_make_minutes": 150,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/chocolate_popcorn.json"
+      }
+    },
+    {
+      "id": "snack_mix",
+      "name": "Snack Mix",
+      "unlock_level": 64,
+      "time_to_make_minutes": 45,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/snack_mix.json"
+      }
+    }
+  ],
+  "links": {
+    "self": "/hay_day_ecosystem/api/v2/machines/popcorn_pot.json",
+    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
+    "image": "/hay_day_ecosystem/assets/machines/popcorn_pot.png",
+    "html_details": "/hay_day_ecosystem/details/details_popcorn_pot.html"
+  }
+}

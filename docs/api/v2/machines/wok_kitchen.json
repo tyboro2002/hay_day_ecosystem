@@ -1,0 +1,88 @@
+{
+  "id": "wok_kitchen",
+  "name": "Wok Kitchen",
+  "min_allowed_slots": 2,
+  "max_allowed_slots": 9,
+  "unlock_schedule": [
+    {
+      "level": 69,
+      "extra_unlocks": 1
+    }
+  ],
+  "costs": [
+    350000
+  ],
+  "mastery": {
+    "star_1": {
+      "hours_required": 140,
+      "coin_bonus": 0.1,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.0
+    },
+    "star_2": {
+      "hours_required": 420,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.05,
+      "speed_bonus": 0.0
+    },
+    "star_3": {
+      "hours_required": 1670,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.15
+    }
+  },
+  "produces": [
+    {
+      "id": "fried_rice",
+      "name": "Fried Rice",
+      "unlock_level": 69,
+      "time_to_make_minutes": 60,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/fried_rice.json"
+      }
+    },
+    {
+      "id": "lamb_stir_fry",
+      "name": "Lamb Stir Fry",
+      "unlock_level": 69,
+      "time_to_make_minutes": 120,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/lamb_stir_fry.json"
+      }
+    },
+    {
+      "id": "spicy_fish",
+      "name": "Spicy Fish",
+      "unlock_level": 79,
+      "time_to_make_minutes": 90,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/spicy_fish.json"
+      }
+    },
+    {
+      "id": "peanut_noodles",
+      "name": "Peanut Noodles",
+      "unlock_level": 86,
+      "time_to_make_minutes": 45,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/peanut_noodles.json"
+      }
+    },
+    {
+      "id": "tofu_stir_fry",
+      "name": "Tofu Stir Fry",
+      "unlock_level": 89,
+      "time_to_make_minutes": 75,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/tofu_stir_fry.json"
+      }
+    }
+  ],
+  "links": {
+    "self": "/hay_day_ecosystem/api/v2/machines/wok_kitchen.json",
+    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
+    "image": "/hay_day_ecosystem/assets/machines/wok_kitchen.png",
+    "html_details": "/hay_day_ecosystem/details/details_wok_kitchen.html"
+  }
+}

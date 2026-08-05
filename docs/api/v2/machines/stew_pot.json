@@ -1,0 +1,70 @@
+{
+  "id": "stew_pot",
+  "name": "Stew Pot",
+  "min_allowed_slots": 2,
+  "max_allowed_slots": 9,
+  "unlock_schedule": [
+    {
+      "level": 106,
+      "extra_unlocks": 1
+    }
+  ],
+  "costs": [
+    1150000
+  ],
+  "mastery": {
+    "star_1": {
+      "hours_required": 140,
+      "coin_bonus": 0.1,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.0
+    },
+    "star_2": {
+      "hours_required": 410,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.05,
+      "speed_bonus": 0.0
+    },
+    "star_3": {
+      "hours_required": 1630,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.15
+    }
+  },
+  "produces": [
+    {
+      "id": "chickpea_stew",
+      "name": "Chickpea Stew",
+      "unlock_level": 106,
+      "time_to_make_minutes": 90,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/chickpea_stew.json"
+      }
+    },
+    {
+      "id": "chili_stew",
+      "name": "Chili Stew",
+      "unlock_level": 109,
+      "time_to_make_minutes": 120,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/chili_stew.json"
+      }
+    },
+    {
+      "id": "winter_stew",
+      "name": "Winter Stew",
+      "unlock_level": 112,
+      "time_to_make_minutes": 140,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/winter_stew.json"
+      }
+    }
+  ],
+  "links": {
+    "self": "/hay_day_ecosystem/api/v2/machines/stew_pot.json",
+    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
+    "image": "/hay_day_ecosystem/assets/machines/stew_pot.png",
+    "html_details": "/hay_day_ecosystem/details/details_stew_pot.html"
+  }
+}

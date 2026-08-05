@@ -1,0 +1,133 @@
+{
+  "id": "tea_stand",
+  "name": "Tea Stand",
+  "min_allowed_slots": 2,
+  "max_allowed_slots": 9,
+  "unlock_schedule": [
+    {
+      "level": 80,
+      "extra_unlocks": 1
+    }
+  ],
+  "costs": [
+    750000
+  ],
+  "mastery": {
+    "star_1": {
+      "hours_required": 72,
+      "coin_bonus": 0.1,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.0
+    },
+    "star_2": {
+      "hours_required": 288,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.05,
+      "speed_bonus": 0.0
+    },
+    "star_3": {
+      "hours_required": 1152,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.15
+    }
+  },
+  "produces": [
+    {
+      "id": "green_tea",
+      "name": "Green Tea",
+      "unlock_level": 80,
+      "time_to_make_minutes": 30,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/green_tea.json"
+      }
+    },
+    {
+      "id": "milk_tea",
+      "name": "Milk Tea",
+      "unlock_level": 81,
+      "time_to_make_minutes": 45,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/milk_tea.json"
+      }
+    },
+    {
+      "id": "honey_tea",
+      "name": "Honey Tea",
+      "unlock_level": 83,
+      "time_to_make_minutes": 40,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/honey_tea.json"
+      }
+    },
+    {
+      "id": "lemon_tea",
+      "name": "Lemon Tea",
+      "unlock_level": 86,
+      "time_to_make_minutes": 20,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/lemon_tea.json"
+      }
+    },
+    {
+      "id": "apple_ginger_tea",
+      "name": "Apple Ginger Tea",
+      "unlock_level": 88,
+      "time_to_make_minutes": 30,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/apple_ginger_tea.json"
+      }
+    },
+    {
+      "id": "orange_tea",
+      "name": "Orange Tea",
+      "unlock_level": 89,
+      "time_to_make_minutes": 40,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/orange_tea.json"
+      }
+    },
+    {
+      "id": "iced_tea",
+      "name": "Iced Tea",
+      "unlock_level": 92,
+      "time_to_make_minutes": 30,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/iced_tea.json"
+      }
+    },
+    {
+      "id": "mint_tea",
+      "name": "Mint Tea",
+      "unlock_level": 97,
+      "time_to_make_minutes": 35,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/mint_tea.json"
+      }
+    },
+    {
+      "id": "chamomile_tea",
+      "name": "Chamomile Tea",
+      "unlock_level": 100,
+      "time_to_make_minutes": 20,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/chamomile_tea.json"
+      }
+    },
+    {
+      "id": "pomegranate_tea",
+      "name": "Pomegranate Tea",
+      "unlock_level": 107,
+      "time_to_make_minutes": 34,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/pomegranate_tea.json"
+      }
+    }
+  ],
+  "links": {
+    "self": "/hay_day_ecosystem/api/v2/machines/tea_stand.json",
+    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
+    "image": "/hay_day_ecosystem/assets/machines/tea_stand.png",
+    "html_details": "/hay_day_ecosystem/details/details_tea_stand.html"
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "id": "taco_kitchen",
+  "name": "Taco Kitchen",
+  "min_allowed_slots": 2,
+  "max_allowed_slots": 9,
+  "unlock_schedule": [
+    {
+      "level": 77,
+      "extra_unlocks": 1
+    }
+  ],
+  "costs": [
+    700000
+  ],
+  "mastery": {
+    "star_1": {
+      "hours_required": 72,
+      "coin_bonus": 0.1,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.0
+    },
+    "star_2": {
+      "hours_required": 288,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.05,
+      "speed_bonus": 0.0
+    },
+    "star_3": {
+      "hours_required": 1152,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.15
+    }
+  },
+  "produces": [
+    {
+      "id": "taco",
+      "name": "Taco",
+      "unlock_level": 77,
+      "time_to_make_minutes": 45,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/taco.json"
+      }
+    },
+    {
+      "id": "spicy_bean_taco",
+      "name": "Spicy Bean Taco",
+      "unlock_level": 77,
+      "time_to_make_minutes": 120,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/spicy_bean_taco.json"
+      }
+    },
+    {
+      "id": "fish_taco",
+      "name": "Fish Taco",
+      "unlock_level": 79,
+      "time_to_make_minutes": 90,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/fish_taco.json"
+      }
+    },
+    {
+      "id": "quesadilla",
+      "name": "Quesadilla",
+      "unlock_level": 82,
+      "time_to_make_minutes": 60,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/quesadilla.json"
+      }
+    },
+    {
+      "id": "nachos",
+      "name": "Nachos",
+      "unlock_level": 87,
+      "time_to_make_minutes": 75,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/nachos.json"
+      }
+    }
+  ],
+  "links": {
+    "self": "/hay_day_ecosystem/api/v2/machines/taco_kitchen.json",
+    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
+    "image": "/hay_day_ecosystem/assets/machines/taco_kitchen.png",
+    "html_details": "/hay_day_ecosystem/details/details_taco_kitchen.html"
+  }
+}

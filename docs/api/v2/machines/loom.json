@@ -1,0 +1,97 @@
+{
+  "id": "loom",
+  "name": "Loom",
+  "min_allowed_slots": 2,
+  "max_allowed_slots": 9,
+  "unlock_schedule": [
+    {
+      "level": 17,
+      "extra_unlocks": 1
+    }
+  ],
+  "costs": [
+    3200
+  ],
+  "mastery": {
+    "star_1": {
+      "hours_required": 36,
+      "coin_bonus": 0.1,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.0
+    },
+    "star_2": {
+      "hours_required": 180,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.1,
+      "speed_bonus": 0.0
+    },
+    "star_3": {
+      "hours_required": 900,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.15
+    }
+  },
+  "produces": [
+    {
+      "id": "sweater",
+      "name": "Sweater",
+      "unlock_level": 17,
+      "time_to_make_minutes": 120,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/sweater.json"
+      }
+    },
+    {
+      "id": "cotton_fabric",
+      "name": "Cotton Fabric",
+      "unlock_level": 18,
+      "time_to_make_minutes": 30,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/cotton_fabric.json"
+      }
+    },
+    {
+      "id": "blue_woolly_hat",
+      "name": "Blue Woolly Hat",
+      "unlock_level": 19,
+      "time_to_make_minutes": 60,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/blue_woolly_hat.json"
+      }
+    },
+    {
+      "id": "blue_sweater",
+      "name": "Blue Sweater",
+      "unlock_level": 20,
+      "time_to_make_minutes": 180,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/blue_sweater.json"
+      }
+    },
+    {
+      "id": "red_scarf",
+      "name": "Red Scarf",
+      "unlock_level": 48,
+      "time_to_make_minutes": 150,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/red_scarf.json"
+      }
+    },
+    {
+      "id": "flower_shawl",
+      "name": "Flower Shawl",
+      "unlock_level": 71,
+      "time_to_make_minutes": 90,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/flower_shawl.json"
+      }
+    }
+  ],
+  "links": {
+    "self": "/hay_day_ecosystem/api/v2/machines/loom.json",
+    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
+    "image": "/hay_day_ecosystem/assets/machines/loom.png",
+    "html_details": "/hay_day_ecosystem/details/details_loom.html"
+  }
+}

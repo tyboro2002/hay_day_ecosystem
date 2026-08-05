@@ -1,0 +1,79 @@
+{
+  "id": "cupcake_maker",
+  "name": "Cupcake Maker",
+  "min_allowed_slots": 2,
+  "max_allowed_slots": 9,
+  "unlock_schedule": [
+    {
+      "level": 109,
+      "extra_unlocks": 1
+    }
+  ],
+  "costs": [
+    1200000
+  ],
+  "mastery": {
+    "star_1": {
+      "hours_required": 140,
+      "coin_bonus": 0.1,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.0
+    },
+    "star_2": {
+      "hours_required": 410,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.05,
+      "speed_bonus": 0.0
+    },
+    "star_3": {
+      "hours_required": 1630,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.15
+    }
+  },
+  "produces": [
+    {
+      "id": "plain_cupcake",
+      "name": "Plain Cupcake",
+      "unlock_level": 109,
+      "time_to_make_minutes": 40,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/plain_cupcake.json"
+      }
+    },
+    {
+      "id": "guava_cupcake",
+      "name": "Guava Cupcake",
+      "unlock_level": 109,
+      "time_to_make_minutes": 70,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/guava_cupcake.json"
+      }
+    },
+    {
+      "id": "tropical_cupcake",
+      "name": "Tropical Cupcake",
+      "unlock_level": 112,
+      "time_to_make_minutes": 90,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/tropical_cupcake.json"
+      }
+    },
+    {
+      "id": "cookie_cupcake",
+      "name": "Cookie Cupcake",
+      "unlock_level": 114,
+      "time_to_make_minutes": 120,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/cookie_cupcake.json"
+      }
+    }
+  ],
+  "links": {
+    "self": "/hay_day_ecosystem/api/v2/machines/cupcake_maker.json",
+    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
+    "image": "/hay_day_ecosystem/assets/machines/cupcake_maker.png",
+    "html_details": "/hay_day_ecosystem/details/details_cupcake_maker.html"
+  }
+}

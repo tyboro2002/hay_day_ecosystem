@@ -1,0 +1,79 @@
+{
+  "id": "essential_oils_lab",
+  "name": "Essential Oils Lab",
+  "min_allowed_slots": 2,
+  "max_allowed_slots": 9,
+  "unlock_schedule": [
+    {
+      "level": 68,
+      "extra_unlocks": 1
+    }
+  ],
+  "costs": [
+    85000
+  ],
+  "mastery": {
+    "star_1": {
+      "hours_required": 70,
+      "coin_bonus": 0.1,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.0
+    },
+    "star_2": {
+      "hours_required": 200,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.05,
+      "speed_bonus": 0.0
+    },
+    "star_3": {
+      "hours_required": 810,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.15
+    }
+  },
+  "produces": [
+    {
+      "id": "lemon_essential_oil",
+      "name": "Lemon Essential Oil",
+      "unlock_level": 68,
+      "time_to_make_minutes": 10,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/lemon_essential_oil.json"
+      }
+    },
+    {
+      "id": "chamomile_essential_oil",
+      "name": "Chamomile Essential Oil",
+      "unlock_level": 74,
+      "time_to_make_minutes": 10,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/chamomile_essential_oil.json"
+      }
+    },
+    {
+      "id": "ginger_essential_oil",
+      "name": "Ginger Essential Oil",
+      "unlock_level": 80,
+      "time_to_make_minutes": 20,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/ginger_essential_oil.json"
+      }
+    },
+    {
+      "id": "mint_essential_oil",
+      "name": "Mint Essential Oil",
+      "unlock_level": 85,
+      "time_to_make_minutes": 15,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/mint_essential_oil.json"
+      }
+    }
+  ],
+  "links": {
+    "self": "/hay_day_ecosystem/api/v2/machines/essential_oils_lab.json",
+    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
+    "image": "/hay_day_ecosystem/assets/machines/essential_oils_lab.png",
+    "html_details": "/hay_day_ecosystem/details/details_essential_oils_lab.html"
+  }
+}

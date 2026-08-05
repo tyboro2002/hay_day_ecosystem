@@ -1,0 +1,120 @@
+{
+  "id": "feed_mill",
+  "name": "Feed Mill",
+  "min_allowed_slots": 3,
+  "max_allowed_slots": 9,
+  "unlock_schedule": [
+    {
+      "level": 2,
+      "extra_unlocks": 1
+    },
+    {
+      "level": 12,
+      "extra_unlocks": 1
+    }
+  ],
+  "costs": [
+    5,
+    3200
+  ],
+  "mastery": {
+    "star_1": {
+      "hours_required": 120,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.05
+    },
+    "star_2": {
+      "hours_required": 840,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.1
+    },
+    "star_3": {
+      "hours_required": 5880,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.15
+    }
+  },
+  "produces": [
+    {
+      "id": "chicken_feed",
+      "name": "Chicken Feed",
+      "unlock_level": 2,
+      "time_to_make_minutes": 5,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/chicken_feed.json"
+      }
+    },
+    {
+      "id": "cow_feed",
+      "name": "Cow Feed",
+      "unlock_level": 6,
+      "time_to_make_minutes": 10,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/cow_feed.json"
+      }
+    },
+    {
+      "id": "pig_feed",
+      "name": "Pig Feed",
+      "unlock_level": 10,
+      "time_to_make_minutes": 20,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/pig_feed.json"
+      }
+    },
+    {
+      "id": "sheep_feed",
+      "name": "Sheep Feed",
+      "unlock_level": 16,
+      "time_to_make_minutes": 30,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/sheep_feed.json"
+      }
+    },
+    {
+      "id": "lamb_feed",
+      "name": "Lamb Feed",
+      "unlock_level": 25,
+      "time_to_make_minutes": 10,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/lamb_feed.json"
+      }
+    },
+    {
+      "id": "goat_feed",
+      "name": "Goat Feed",
+      "unlock_level": 32,
+      "time_to_make_minutes": 40,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/goat_feed.json"
+      }
+    },
+    {
+      "id": "wheat_bundle",
+      "name": "Wheat Bundle",
+      "unlock_level": 34,
+      "time_to_make_minutes": 90,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/wheat_bundle.json"
+      }
+    },
+    {
+      "id": "meat_bucket",
+      "name": "Meat Bucket",
+      "unlock_level": 34,
+      "time_to_make_minutes": 45,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/meat_bucket.json"
+      }
+    }
+  ],
+  "links": {
+    "self": "/hay_day_ecosystem/api/v2/machines/feed_mill.json",
+    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
+    "image": "/hay_day_ecosystem/assets/machines/feed_mill.png",
+    "html_details": "/hay_day_ecosystem/details/details_feed_mill.html"
+  }
+}

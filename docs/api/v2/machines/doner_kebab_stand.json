@@ -1,0 +1,70 @@
+{
+  "id": "doner_kebab_stand",
+  "name": "Doner Kebab Stand",
+  "min_allowed_slots": 2,
+  "max_allowed_slots": 9,
+  "unlock_schedule": [
+    {
+      "level": 32,
+      "extra_unlocks": 1
+    }
+  ],
+  "costs": [
+    22000
+  ],
+  "mastery": {
+    "star_1": {
+      "hours_required": 90,
+      "coin_bonus": 0.1,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.0
+    },
+    "star_2": {
+      "hours_required": 280,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.05,
+      "speed_bonus": 0.0
+    },
+    "star_3": {
+      "hours_required": 1110,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.15
+    }
+  },
+  "produces": [
+    {
+      "id": "lamb_doner_wrap",
+      "name": "Lamb doner wrap",
+      "unlock_level": 32,
+      "time_to_make_minutes": 20,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/lamb_doner_wrap.json"
+      }
+    },
+    {
+      "id": "spicy_bean_doner",
+      "name": "Spicy bean doner",
+      "unlock_level": 32,
+      "time_to_make_minutes": 30,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/spicy_bean_doner.json"
+      }
+    },
+    {
+      "id": "tower_doner_supreme",
+      "name": "Tower Doner Supreme",
+      "unlock_level": 58,
+      "time_to_make_minutes": 40,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/tower_doner_supreme.json"
+      }
+    }
+  ],
+  "links": {
+    "self": "/hay_day_ecosystem/api/v2/machines/doner_kebab_stand.json",
+    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
+    "image": "/hay_day_ecosystem/assets/machines/doner_kebab_stand.png",
+    "html_details": "/hay_day_ecosystem/details/details_doner_kebab_stand.html"
+  }
+}

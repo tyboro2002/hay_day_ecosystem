@@ -1,0 +1,124 @@
+{
+  "id": "smoothie_mixer",
+  "name": "Smoothie Mixer",
+  "min_allowed_slots": 2,
+  "max_allowed_slots": 9,
+  "unlock_schedule": [
+    {
+      "level": 64,
+      "extra_unlocks": 1
+    }
+  ],
+  "costs": [
+    220000
+  ],
+  "mastery": {
+    "star_1": {
+      "hours_required": 72,
+      "coin_bonus": 0.1,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.0
+    },
+    "star_2": {
+      "hours_required": 288,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.05,
+      "speed_bonus": 0.0
+    },
+    "star_3": {
+      "hours_required": 1152,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.15
+    }
+  },
+  "produces": [
+    {
+      "id": "berry_smoothie",
+      "name": "Berry Smoothie",
+      "unlock_level": 64,
+      "time_to_make_minutes": 105,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/berry_smoothie.json"
+      }
+    },
+    {
+      "id": "green_smoothie",
+      "name": "Green Smoothie",
+      "unlock_level": 66,
+      "time_to_make_minutes": 45,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/green_smoothie.json"
+      }
+    },
+    {
+      "id": "yogurt_smoothie",
+      "name": "Yogurt Smoothie",
+      "unlock_level": 70,
+      "time_to_make_minutes": 60,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/yogurt_smoothie.json"
+      }
+    },
+    {
+      "id": "cucumber_smoothie",
+      "name": "Cucumber Smoothie",
+      "unlock_level": 70,
+      "time_to_make_minutes": 40,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/cucumber_smoothie.json"
+      }
+    },
+    {
+      "id": "mixed_smoothie",
+      "name": "Mixed Smoothie",
+      "unlock_level": 88,
+      "time_to_make_minutes": 30,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/mixed_smoothie.json"
+      }
+    },
+    {
+      "id": "black_sesame_smoothie",
+      "name": "Black Sesame Smoothie",
+      "unlock_level": 93,
+      "time_to_make_minutes": 45,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/black_sesame_smoothie.json"
+      }
+    },
+    {
+      "id": "cocoa_smoothie",
+      "name": "Cocoa Smoothie",
+      "unlock_level": 100,
+      "time_to_make_minutes": 40,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/cocoa_smoothie.json"
+      }
+    },
+    {
+      "id": "plum_smoothie",
+      "name": "Plum Smoothie",
+      "unlock_level": 104,
+      "time_to_make_minutes": 40,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/plum_smoothie.json"
+      }
+    },
+    {
+      "id": "tropical_smoothie",
+      "name": "Tropical Smoothie",
+      "unlock_level": 102,
+      "time_to_make_minutes": 35,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/tropical_smoothie.json"
+      }
+    }
+  ],
+  "links": {
+    "self": "/hay_day_ecosystem/api/v2/machines/smoothie_mixer.json",
+    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
+    "image": "/hay_day_ecosystem/assets/machines/smoothie_mixer.png",
+    "html_details": "/hay_day_ecosystem/details/details_smoothie_mixer.html"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "id": "hat_maker",
+  "name": "Hat Maker",
+  "min_allowed_slots": 2,
+  "max_allowed_slots": 9,
+  "unlock_schedule": [
+    {
+      "level": 70,
+      "extra_unlocks": 1
+    }
+  ],
+  "costs": [
+    260000
+  ],
+  "mastery": {
+    "star_1": {
+      "hours_required": 72,
+      "coin_bonus": 0.1,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.0
+    },
+    "star_2": {
+      "hours_required": 288,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.05,
+      "speed_bonus": 0.0
+    },
+    "star_3": {
+      "hours_required": 1152,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.15
+    }
+  },
+  "produces": [
+    {
+      "id": "cloche_hat",
+      "name": "Cloche Hat",
+      "unlock_level": 70,
+      "time_to_make_minutes": 120,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/cloche_hat.json"
+      }
+    },
+    {
+      "id": "top_hat",
+      "name": "Top Hat",
+      "unlock_level": 72,
+      "time_to_make_minutes": 210,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/top_hat.json"
+      }
+    },
+    {
+      "id": "sun_hat",
+      "name": "Sun Hat",
+      "unlock_level": 74,
+      "time_to_make_minutes": 150,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/sun_hat.json"
+      }
+    },
+    {
+      "id": "flower_crown",
+      "name": "Flower Crown",
+      "unlock_level": 86,
+      "time_to_make_minutes": 120,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/flower_crown.json"
+      }
+    }
+  ],
+  "links": {
+    "self": "/hay_day_ecosystem/api/v2/machines/hat_maker.json",
+    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
+    "image": "/hay_day_ecosystem/assets/machines/hat_maker.png",
+    "html_details": "/hay_day_ecosystem/details/details_hat_maker.html"
+  }
+}

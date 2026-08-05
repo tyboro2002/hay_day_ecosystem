@@ -1,0 +1,70 @@
+{
+  "id": "milkshake_bar",
+  "name": "Milkshake Bar",
+  "min_allowed_slots": 2,
+  "max_allowed_slots": 9,
+  "unlock_schedule": [
+    {
+      "level": 124,
+      "extra_unlocks": 1
+    }
+  ],
+  "costs": [
+    1350000
+  ],
+  "mastery": {
+    "star_1": {
+      "hours_required": 140,
+      "coin_bonus": 0.1,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.0
+    },
+    "star_2": {
+      "hours_required": 410,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.05,
+      "speed_bonus": 0.0
+    },
+    "star_3": {
+      "hours_required": 1630,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.15
+    }
+  },
+  "produces": [
+    {
+      "id": "vanilla_milkshake",
+      "name": "Vanilla Milkshake",
+      "unlock_level": 124,
+      "time_to_make_minutes": 45,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/vanilla_milkshake.json"
+      }
+    },
+    {
+      "id": "mocha_milkshake",
+      "name": "Mocha Milkshake",
+      "unlock_level": 125,
+      "time_to_make_minutes": 30,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/mocha_milkshake.json"
+      }
+    },
+    {
+      "id": "fruity_milkshake",
+      "name": "Fruity Milkshake",
+      "unlock_level": 126,
+      "time_to_make_minutes": 35,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/fruity_milkshake.json"
+      }
+    }
+  ],
+  "links": {
+    "self": "/hay_day_ecosystem/api/v2/machines/milkshake_bar.json",
+    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
+    "image": "/hay_day_ecosystem/assets/machines/milkshake_bar.png",
+    "html_details": "/hay_day_ecosystem/details/details_milkshake_bar.html"
+  }
+}

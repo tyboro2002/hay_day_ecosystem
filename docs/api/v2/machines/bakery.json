@@ -1,0 +1,169 @@
+{
+  "id": "bakery",
+  "name": "Bakery",
+  "min_allowed_slots": 2,
+  "max_allowed_slots": 9,
+  "unlock_schedule": [
+    {
+      "level": 4,
+      "extra_unlocks": 1
+    }
+  ],
+  "costs": [
+    20
+  ],
+  "mastery": {
+    "star_1": {
+      "hours_required": 35,
+      "coin_bonus": 0.1,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.0
+    },
+    "star_2": {
+      "hours_required": 140,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.1,
+      "speed_bonus": 0.0
+    },
+    "star_3": {
+      "hours_required": 560,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.15
+    }
+  },
+  "produces": [
+    {
+      "id": "bread",
+      "name": "Bread",
+      "unlock_level": 4,
+      "time_to_make_minutes": 5,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/bread.json"
+      }
+    },
+    {
+      "id": "corn_bread",
+      "name": "Corn Bread",
+      "unlock_level": 7,
+      "time_to_make_minutes": 30,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/corn_bread.json"
+      }
+    },
+    {
+      "id": "cookie",
+      "name": "Cookie",
+      "unlock_level": 10,
+      "time_to_make_minutes": 60,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/cookie.json"
+      }
+    },
+    {
+      "id": "raspberry_muffin",
+      "name": "Raspberry Muffin",
+      "unlock_level": 19,
+      "time_to_make_minutes": 45,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/raspberry_muffin.json"
+      }
+    },
+    {
+      "id": "blackberry_muffin",
+      "name": "Blackberry Muffin",
+      "unlock_level": 26,
+      "time_to_make_minutes": 45,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/blackberry_muffin.json"
+      }
+    },
+    {
+      "id": "pizza",
+      "name": "Pizza",
+      "unlock_level": 33,
+      "time_to_make_minutes": 15,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/pizza.json"
+      }
+    },
+    {
+      "id": "blueberry_muffin",
+      "name": "Blueberry muffin",
+      "unlock_level": 33,
+      "time_to_make_minutes": 45,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/blueberry_muffin.json"
+      }
+    },
+    {
+      "id": "spicy_pizza",
+      "name": "Spicy pizza",
+      "unlock_level": 37,
+      "time_to_make_minutes": 15,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/spicy_pizza.json"
+      }
+    },
+    {
+      "id": "potato_bread",
+      "name": "Potato Bread",
+      "unlock_level": 39,
+      "time_to_make_minutes": 45,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/potato_bread.json"
+      }
+    },
+    {
+      "id": "frutti_di_mare_pizza",
+      "name": "Frutti Di Mare Pizza",
+      "unlock_level": 45,
+      "time_to_make_minutes": 15,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/frutti_di_mare_pizza.json"
+      }
+    },
+    {
+      "id": "gingerbread_cookie",
+      "name": "Gingerbread Cookie",
+      "unlock_level": 86,
+      "time_to_make_minutes": 30,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/gingerbread_cookie.json"
+      }
+    },
+    {
+      "id": "banana_bread",
+      "name": "Banana Bread",
+      "unlock_level": 91,
+      "time_to_make_minutes": 30,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/banana_bread.json"
+      }
+    },
+    {
+      "id": "macaroon",
+      "name": "Macaroon",
+      "unlock_level": 101,
+      "time_to_make_minutes": 30,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/macaroon.json"
+      }
+    },
+    {
+      "id": "pineapple_coconut_bars",
+      "name": "Pineapple Coconut Bars",
+      "unlock_level": 120,
+      "time_to_make_minutes": 40,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/pineapple_coconut_bars.json"
+      }
+    }
+  ],
+  "links": {
+    "self": "/hay_day_ecosystem/api/v2/machines/bakery.json",
+    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
+    "image": "/hay_day_ecosystem/assets/machines/bakery.png",
+    "html_details": "/hay_day_ecosystem/details/details_bakery.html"
+  }
+}

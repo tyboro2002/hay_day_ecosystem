@@ -1,0 +1,92 @@
+{
+  "id": "smelter",
+  "name": "Smelter",
+  "min_allowed_slots": 1,
+  "max_allowed_slots": 9,
+  "unlock_schedule": [
+    {
+      "level": 24,
+      "extra_unlocks": 5
+    }
+  ],
+  "costs": [
+    12500,
+    22000,
+    31500,
+    41000,
+    50500
+  ],
+  "mastery": {
+    "star_1": {
+      "hours_required": 390,
+      "coin_bonus": 0.1,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.0
+    },
+    "star_2": {
+      "hours_required": 1540,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.1,
+      "speed_bonus": 0.0
+    },
+    "star_3": {
+      "hours_required": 6180,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.15
+    }
+  },
+  "produces": [
+    {
+      "id": "silver_bar",
+      "name": "Silver Bar",
+      "unlock_level": 24,
+      "time_to_make_minutes": 480,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/silver_bar.json"
+      }
+    },
+    {
+      "id": "gold_bar",
+      "name": "Gold Bar",
+      "unlock_level": 25,
+      "time_to_make_minutes": 720,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/gold_bar.json"
+      }
+    },
+    {
+      "id": "platinum_bar",
+      "name": "Platinum Bar",
+      "unlock_level": 25,
+      "time_to_make_minutes": 960,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/platinum_bar.json"
+      }
+    },
+    {
+      "id": "refined_coal",
+      "name": "Refined coal",
+      "unlock_level": 33,
+      "time_to_make_minutes": 360,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/refined_coal.json"
+      }
+    },
+    {
+      "id": "iron_bar",
+      "name": "Iron Bar",
+      "unlock_level": 34,
+      "time_to_make_minutes": 420,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/iron_bar.json"
+      }
+    }
+  ],
+  "links": {
+    "self": "/hay_day_ecosystem/api/v2/machines/smelter.json",
+    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
+    "image": "/hay_day_ecosystem/assets/machines/smelter.png",
+    "html_details": "/hay_day_ecosystem/details/details_smelter.html"
+  }
+}

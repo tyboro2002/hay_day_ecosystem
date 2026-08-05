@@ -1,0 +1,106 @@
+{
+  "id": "coffee_kiosk",
+  "name": "Coffee Kiosk",
+  "min_allowed_slots": 2,
+  "max_allowed_slots": 9,
+  "unlock_schedule": [
+    {
+      "level": 42,
+      "extra_unlocks": 1
+    }
+  ],
+  "costs": [
+    75000
+  ],
+  "mastery": {
+    "star_1": {
+      "hours_required": 70,
+      "coin_bonus": 0.1,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.0
+    },
+    "star_2": {
+      "hours_required": 240,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.05,
+      "speed_bonus": 0.0
+    },
+    "star_3": {
+      "hours_required": 960,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.15
+    }
+  },
+  "produces": [
+    {
+      "id": "espresso",
+      "name": "Espresso",
+      "unlock_level": 42,
+      "time_to_make_minutes": 5,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/espresso.json"
+      }
+    },
+    {
+      "id": "caff\u00e8_latte",
+      "name": "Caff\u00e8 Latte",
+      "unlock_level": 43,
+      "time_to_make_minutes": 10,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/caff\u00e8_latte.json"
+      }
+    },
+    {
+      "id": "caff\u00e8_mocha",
+      "name": "Caff\u00e8 Mocha",
+      "unlock_level": 45,
+      "time_to_make_minutes": 15,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/caff\u00e8_mocha.json"
+      }
+    },
+    {
+      "id": "raspberry_mocha",
+      "name": "Raspberry Mocha",
+      "unlock_level": 46,
+      "time_to_make_minutes": 30,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/raspberry_mocha.json"
+      }
+    },
+    {
+      "id": "hot_chocolate",
+      "name": "Hot Chocolate",
+      "unlock_level": 47,
+      "time_to_make_minutes": 25,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/hot_chocolate.json"
+      }
+    },
+    {
+      "id": "caramel_latte",
+      "name": "Caramel Latte",
+      "unlock_level": 62,
+      "time_to_make_minutes": 15,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/caramel_latte.json"
+      }
+    },
+    {
+      "id": "iced_banana_latte",
+      "name": "Iced Banana Latte",
+      "unlock_level": 88,
+      "time_to_make_minutes": 20,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/iced_banana_latte.json"
+      }
+    }
+  ],
+  "links": {
+    "self": "/hay_day_ecosystem/api/v2/machines/coffee_kiosk.json",
+    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
+    "image": "/hay_day_ecosystem/assets/machines/coffee_kiosk.png",
+    "html_details": "/hay_day_ecosystem/details/details_coffee_kiosk.html"
+  }
+}

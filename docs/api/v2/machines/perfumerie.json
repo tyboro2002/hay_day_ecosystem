@@ -1,0 +1,70 @@
+{
+  "id": "perfumerie",
+  "name": "Perfumerie",
+  "min_allowed_slots": 2,
+  "max_allowed_slots": 9,
+  "unlock_schedule": [
+    {
+      "level": 110,
+      "extra_unlocks": 1
+    }
+  ],
+  "costs": [
+    1000000
+  ],
+  "mastery": {
+    "star_1": {
+      "hours_required": 80,
+      "coin_bonus": 0.1,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.0
+    },
+    "star_2": {
+      "hours_required": 230,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.05,
+      "speed_bonus": 0.0
+    },
+    "star_3": {
+      "hours_required": 920,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.15
+    }
+  },
+  "produces": [
+    {
+      "id": "fresh_diffuser",
+      "name": "Fresh Diffuser",
+      "unlock_level": 110,
+      "time_to_make_minutes": 20,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/fresh_diffuser.json"
+      }
+    },
+    {
+      "id": "zesty_perfume",
+      "name": "Zesty Perfume",
+      "unlock_level": 113,
+      "time_to_make_minutes": 15,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/zesty_perfume.json"
+      }
+    },
+    {
+      "id": "calming_diffuser",
+      "name": "Calming Diffuser",
+      "unlock_level": 116,
+      "time_to_make_minutes": 25,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/calming_diffuser.json"
+      }
+    }
+  ],
+  "links": {
+    "self": "/hay_day_ecosystem/api/v2/machines/perfumerie.json",
+    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
+    "image": "/hay_day_ecosystem/assets/machines/perfumerie.png",
+    "html_details": "/hay_day_ecosystem/details/details_perfumerie.html"
+  }
+}

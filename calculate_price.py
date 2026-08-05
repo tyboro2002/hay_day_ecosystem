@@ -71,13 +71,13 @@ item_measurements = {
     "Lobster Soup": {1: 612, 2: 1224, 3: 1836, 4: 2448, 5: 3060, 6: 3672, 7: 4284, 8: 4896},
     "Caramel Apple": {1: 255},
     "Pillow": {1: 676, 2: 1353},
-    "Asparagus Soup": {1: 255},
-
-
+    "Asparagus Soup": {1: 255, 10: 2556},
     "Toffee": {},
-    "Raspberry Candle": {},
-    "Pineapple": {},
+    "Raspberry Candle": {1: 360, 2: 720, 3: 1080, 4: 1440, 5: 1800},
+    "Pineapple": {10: 144},
     "Pineapple Juice": {},
+
+
     "Fish Soup": {},
     "Lily": {},
     "Soy Sauce": {},

@@ -1,0 +1,70 @@
+{
+  "id": "porridge_bar",
+  "name": "Porridge Bar",
+  "min_allowed_slots": 2,
+  "max_allowed_slots": 9,
+  "unlock_schedule": [
+    {
+      "level": 119,
+      "extra_unlocks": 1
+    }
+  ],
+  "costs": [
+    1300000
+  ],
+  "mastery": {
+    "star_1": {
+      "hours_required": 140,
+      "coin_bonus": 0.1,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.0
+    },
+    "star_2": {
+      "hours_required": 410,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.05,
+      "speed_bonus": 0.0
+    },
+    "star_3": {
+      "hours_required": 1630,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.15
+    }
+  },
+  "produces": [
+    {
+      "id": "apple_porridge",
+      "name": "Apple Porridge",
+      "unlock_level": 119,
+      "time_to_make_minutes": 20,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/apple_porridge.json"
+      }
+    },
+    {
+      "id": "sweet_porridge",
+      "name": "Sweet Porridge",
+      "unlock_level": 120,
+      "time_to_make_minutes": 45,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/sweet_porridge.json"
+      }
+    },
+    {
+      "id": "fresh_porridge",
+      "name": "Fresh Porridge",
+      "unlock_level": 122,
+      "time_to_make_minutes": 35,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/fresh_porridge.json"
+      }
+    }
+  ],
+  "links": {
+    "self": "/hay_day_ecosystem/api/v2/machines/porridge_bar.json",
+    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
+    "image": "/hay_day_ecosystem/assets/machines/porridge_bar.png",
+    "html_details": "/hay_day_ecosystem/details/details_porridge_bar.html"
+  }
+}

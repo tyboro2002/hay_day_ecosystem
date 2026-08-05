@@ -1,0 +1,88 @@
+{
+  "id": "preservation_station",
+  "name": "Preservation Station",
+  "min_allowed_slots": 2,
+  "max_allowed_slots": 9,
+  "unlock_schedule": [
+    {
+      "level": 91,
+      "extra_unlocks": 1
+    }
+  ],
+  "costs": [
+    950000
+  ],
+  "mastery": {
+    "star_1": {
+      "hours_required": 140,
+      "coin_bonus": 0.1,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.0
+    },
+    "star_2": {
+      "hours_required": 410,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.05,
+      "speed_bonus": 0.0
+    },
+    "star_3": {
+      "hours_required": 1630,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.15
+    }
+  },
+  "produces": [
+    {
+      "id": "pickles",
+      "name": "Pickles",
+      "unlock_level": 91,
+      "time_to_make_minutes": 240,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/pickles.json"
+      }
+    },
+    {
+      "id": "canned_fish",
+      "name": "Canned Fish",
+      "unlock_level": 95,
+      "time_to_make_minutes": 220,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/canned_fish.json"
+      }
+    },
+    {
+      "id": "kimchi",
+      "name": "Kimchi",
+      "unlock_level": 98,
+      "time_to_make_minutes": 300,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/kimchi.json"
+      }
+    },
+    {
+      "id": "dried_fruit",
+      "name": "Dried Fruit",
+      "unlock_level": 102,
+      "time_to_make_minutes": 180,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/dried_fruit.json"
+      }
+    },
+    {
+      "id": "guava_compote",
+      "name": "Guava Compote",
+      "unlock_level": 104,
+      "time_to_make_minutes": 260,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/guava_compote.json"
+      }
+    }
+  ],
+  "links": {
+    "self": "/hay_day_ecosystem/api/v2/machines/preservation_station.json",
+    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
+    "image": "/hay_day_ecosystem/assets/machines/preservation_station.png",
+    "html_details": "/hay_day_ecosystem/details/details_preservation_station.html"
+  }
+}

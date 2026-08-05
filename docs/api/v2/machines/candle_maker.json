@@ -1,0 +1,88 @@
+{
+  "id": "candle_maker",
+  "name": "Candle Maker",
+  "min_allowed_slots": 2,
+  "max_allowed_slots": 9,
+  "unlock_schedule": [
+    {
+      "level": 48,
+      "extra_unlocks": 1
+    }
+  ],
+  "costs": [
+    118000
+  ],
+  "mastery": {
+    "star_1": {
+      "hours_required": 72,
+      "coin_bonus": 0.1,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.0
+    },
+    "star_2": {
+      "hours_required": 288,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.05,
+      "speed_bonus": 0.0
+    },
+    "star_3": {
+      "hours_required": 1152,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.15
+    }
+  },
+  "produces": [
+    {
+      "id": "strawberry_candle",
+      "name": "Strawberry Candle",
+      "unlock_level": 48,
+      "time_to_make_minutes": 120,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/strawberry_candle.json"
+      }
+    },
+    {
+      "id": "raspberry_candle",
+      "name": "Raspberry Candle",
+      "unlock_level": 52,
+      "time_to_make_minutes": 105,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/raspberry_candle.json"
+      }
+    },
+    {
+      "id": "lemon_candle",
+      "name": "Lemon Candle",
+      "unlock_level": 72,
+      "time_to_make_minutes": 135,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/lemon_candle.json"
+      }
+    },
+    {
+      "id": "colorful_candles",
+      "name": "Colorful Candles",
+      "unlock_level": 84,
+      "time_to_make_minutes": 110,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/colorful_candles.json"
+      }
+    },
+    {
+      "id": "floral_candle",
+      "name": "Floral Candle",
+      "unlock_level": 95,
+      "time_to_make_minutes": 120,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/floral_candle.json"
+      }
+    }
+  ],
+  "links": {
+    "self": "/hay_day_ecosystem/api/v2/machines/candle_maker.json",
+    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
+    "image": "/hay_day_ecosystem/assets/machines/candle_maker.png",
+    "html_details": "/hay_day_ecosystem/details/details_candle_maker.html"
+  }
+}

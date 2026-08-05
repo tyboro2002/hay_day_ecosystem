@@ -1,0 +1,151 @@
+{
+  "id": "juice_press",
+  "name": "Juice Press",
+  "min_allowed_slots": 2,
+  "max_allowed_slots": 9,
+  "unlock_schedule": [
+    {
+      "level": 26,
+      "extra_unlocks": 1
+    }
+  ],
+  "costs": [
+    31000
+  ],
+  "mastery": {
+    "star_1": {
+      "hours_required": 50,
+      "coin_bonus": 0.1,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.0
+    },
+    "star_2": {
+      "hours_required": 250,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.1,
+      "speed_bonus": 0.0
+    },
+    "star_3": {
+      "hours_required": 1250,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.15
+    }
+  },
+  "produces": [
+    {
+      "id": "carrot_juice",
+      "name": "Carrot Juice",
+      "unlock_level": 26,
+      "time_to_make_minutes": 30,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/carrot_juice.json"
+      }
+    },
+    {
+      "id": "apple_juice",
+      "name": "Apple Juice",
+      "unlock_level": 28,
+      "time_to_make_minutes": 120,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/apple_juice.json"
+      }
+    },
+    {
+      "id": "cherry_juice",
+      "name": "Cherry Juice",
+      "unlock_level": 30,
+      "time_to_make_minutes": 150,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/cherry_juice.json"
+      }
+    },
+    {
+      "id": "tomato_juice",
+      "name": "Tomato Juice",
+      "unlock_level": 31,
+      "time_to_make_minutes": 90,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/tomato_juice.json"
+      }
+    },
+    {
+      "id": "berry_juice",
+      "name": "Berry Juice",
+      "unlock_level": 31,
+      "time_to_make_minutes": 180,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/berry_juice.json"
+      }
+    },
+    {
+      "id": "pineapple_juice",
+      "name": "Pineapple Juice",
+      "unlock_level": 52,
+      "time_to_make_minutes": 180,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/pineapple_juice.json"
+      }
+    },
+    {
+      "id": "orange_juice",
+      "name": "Orange Juice",
+      "unlock_level": 71,
+      "time_to_make_minutes": 120,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/orange_juice.json"
+      }
+    },
+    {
+      "id": "grape_juice",
+      "name": "Grape Juice",
+      "unlock_level": 84,
+      "time_to_make_minutes": 150,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/grape_juice.json"
+      }
+    },
+    {
+      "id": "passion_fruit_juice",
+      "name": "Passion Fruit Juice",
+      "unlock_level": 88,
+      "time_to_make_minutes": 45,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/passion_fruit_juice.json"
+      }
+    },
+    {
+      "id": "watermelon_juice",
+      "name": "Watermelon Juice",
+      "unlock_level": 92,
+      "time_to_make_minutes": 60,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/watermelon_juice.json"
+      }
+    },
+    {
+      "id": "mango_juice",
+      "name": "Mango Juice",
+      "unlock_level": 97,
+      "time_to_make_minutes": 50,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/mango_juice.json"
+      }
+    },
+    {
+      "id": "guava_juice",
+      "name": "Guava Juice",
+      "unlock_level": 104,
+      "time_to_make_minutes": 55,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/guava_juice.json"
+      }
+    }
+  ],
+  "links": {
+    "self": "/hay_day_ecosystem/api/v2/machines/juice_press.json",
+    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
+    "image": "/hay_day_ecosystem/assets/machines/juice_press.png",
+    "html_details": "/hay_day_ecosystem/details/details_juice_press.html"
+  }
+}

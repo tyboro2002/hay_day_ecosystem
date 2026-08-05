@@ -1,0 +1,88 @@
+{
+  "id": "sushi_bar",
+  "name": "Sushi Bar",
+  "min_allowed_slots": 2,
+  "max_allowed_slots": 9,
+  "unlock_schedule": [
+    {
+      "level": 56,
+      "extra_unlocks": 1
+    }
+  ],
+  "costs": [
+    150000
+  ],
+  "mastery": {
+    "star_1": {
+      "hours_required": 72,
+      "coin_bonus": 0.1,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.0
+    },
+    "star_2": {
+      "hours_required": 288,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.05,
+      "speed_bonus": 0.0
+    },
+    "star_3": {
+      "hours_required": 1152,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.15
+    }
+  },
+  "produces": [
+    {
+      "id": "sushi_roll",
+      "name": "Sushi Roll",
+      "unlock_level": 56,
+      "time_to_make_minutes": 60,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/sushi_roll.json"
+      }
+    },
+    {
+      "id": "lobster_sushi",
+      "name": "Lobster Sushi",
+      "unlock_level": 59,
+      "time_to_make_minutes": 60,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/lobster_sushi.json"
+      }
+    },
+    {
+      "id": "egg_sushi",
+      "name": "Egg Sushi",
+      "unlock_level": 63,
+      "time_to_make_minutes": 120,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/egg_sushi.json"
+      }
+    },
+    {
+      "id": "big_sushi_roll",
+      "name": "Big Sushi Roll",
+      "unlock_level": 76,
+      "time_to_make_minutes": 90,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/big_sushi_roll.json"
+      }
+    },
+    {
+      "id": "rice_ball",
+      "name": "Rice Ball",
+      "unlock_level": 110,
+      "time_to_make_minutes": 45,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/rice_ball.json"
+      }
+    }
+  ],
+  "links": {
+    "self": "/hay_day_ecosystem/api/v2/machines/sushi_bar.json",
+    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
+    "image": "/hay_day_ecosystem/assets/machines/sushi_bar.png",
+    "html_details": "/hay_day_ecosystem/details/details_sushi_bar.html"
+  }
+}

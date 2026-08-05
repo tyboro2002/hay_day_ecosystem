@@ -1,0 +1,160 @@
+{
+  "id": "soup_kitchen",
+  "name": "Soup Kitchen",
+  "min_allowed_slots": 2,
+  "max_allowed_slots": 9,
+  "unlock_schedule": [
+    {
+      "level": 46,
+      "extra_unlocks": 1
+    }
+  ],
+  "costs": [
+    115000
+  ],
+  "mastery": {
+    "star_1": {
+      "hours_required": 72,
+      "coin_bonus": 0.1,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.0
+    },
+    "star_2": {
+      "hours_required": 288,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.05,
+      "speed_bonus": 0.0
+    },
+    "star_3": {
+      "hours_required": 1152,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.15
+    }
+  },
+  "produces": [
+    {
+      "id": "lobster_soup",
+      "name": "Lobster Soup",
+      "unlock_level": 46,
+      "time_to_make_minutes": 150,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/lobster_soup.json"
+      }
+    },
+    {
+      "id": "lamb_soup",
+      "name": "Lamb Soup",
+      "unlock_level": 46,
+      "time_to_make_minutes": 120,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/lamb_soup.json"
+      }
+    },
+    {
+      "id": "tomato_soup",
+      "name": "Tomato Soup",
+      "unlock_level": 47,
+      "time_to_make_minutes": 90,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/tomato_soup.json"
+      }
+    },
+    {
+      "id": "pumpkin_soup",
+      "name": "Pumpkin Soup",
+      "unlock_level": 49,
+      "time_to_make_minutes": 120,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/pumpkin_soup.json"
+      }
+    },
+    {
+      "id": "asparagus_soup",
+      "name": "Asparagus Soup",
+      "unlock_level": 51,
+      "time_to_make_minutes": 60,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/asparagus_soup.json"
+      }
+    },
+    {
+      "id": "fish_soup",
+      "name": "Fish Soup",
+      "unlock_level": 53,
+      "time_to_make_minutes": 180,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/fish_soup.json"
+      }
+    },
+    {
+      "id": "cabbage_soup",
+      "name": "Cabbage Soup",
+      "unlock_level": 65,
+      "time_to_make_minutes": 90,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/cabbage_soup.json"
+      }
+    },
+    {
+      "id": "onion_soup",
+      "name": "Onion Soup",
+      "unlock_level": 72,
+      "time_to_make_minutes": 150,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/onion_soup.json"
+      }
+    },
+    {
+      "id": "noodle_soup",
+      "name": "Noodle Soup",
+      "unlock_level": 73,
+      "time_to_make_minutes": 120,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/noodle_soup.json"
+      }
+    },
+    {
+      "id": "potato_soup",
+      "name": "Potato Soup",
+      "unlock_level": 78,
+      "time_to_make_minutes": 150,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/potato_soup.json"
+      }
+    },
+    {
+      "id": "bell_pepper_soup",
+      "name": "Bell Pepper Soup",
+      "unlock_level": 81,
+      "time_to_make_minutes": 60,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/bell_pepper_soup.json"
+      }
+    },
+    {
+      "id": "broccoli_soup",
+      "name": "Broccoli Soup",
+      "unlock_level": 87,
+      "time_to_make_minutes": 90,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/broccoli_soup.json"
+      }
+    },
+    {
+      "id": "mushroom_soup",
+      "name": "Mushroom Soup",
+      "unlock_level": 104,
+      "time_to_make_minutes": 80,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/mushroom_soup.json"
+      }
+    }
+  ],
+  "links": {
+    "self": "/hay_day_ecosystem/api/v2/machines/soup_kitchen.json",
+    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
+    "image": "/hay_day_ecosystem/assets/machines/soup_kitchen.png",
+    "html_details": "/hay_day_ecosystem/details/details_soup_kitchen.html"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "id": "pasta_maker",
+  "name": "Pasta Maker",
+  "min_allowed_slots": 2,
+  "max_allowed_slots": 9,
+  "unlock_schedule": [
+    {
+      "level": 67,
+      "extra_unlocks": 1
+    }
+  ],
+  "costs": [
+    400000
+  ],
+  "mastery": {
+    "star_1": {
+      "hours_required": 72,
+      "coin_bonus": 0.1,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.0
+    },
+    "star_2": {
+      "hours_required": 288,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.05,
+      "speed_bonus": 0.0
+    },
+    "star_3": {
+      "hours_required": 1152,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.15
+    }
+  },
+  "produces": [
+    {
+      "id": "fresh_pasta",
+      "name": "Fresh Pasta",
+      "unlock_level": 67,
+      "time_to_make_minutes": 15,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/fresh_pasta.json"
+      }
+    },
+    {
+      "id": "rice_noodles",
+      "name": "Rice Noodles",
+      "unlock_level": 73,
+      "time_to_make_minutes": 20,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/rice_noodles.json"
+      }
+    }
+  ],
+  "links": {
+    "self": "/hay_day_ecosystem/api/v2/machines/pasta_maker.json",
+    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
+    "image": "/hay_day_ecosystem/assets/machines/pasta_maker.png",
+    "html_details": "/hay_day_ecosystem/details/details_pasta_maker.html"
+  }
+}

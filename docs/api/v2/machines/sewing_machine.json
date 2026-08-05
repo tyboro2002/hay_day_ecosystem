@@ -1,0 +1,97 @@
+{
+  "id": "sewing_machine",
+  "name": "Sewing Machine",
+  "min_allowed_slots": 2,
+  "max_allowed_slots": 9,
+  "unlock_schedule": [
+    {
+      "level": 19,
+      "extra_unlocks": 1
+    }
+  ],
+  "costs": [
+    4500
+  ],
+  "mastery": {
+    "star_1": {
+      "hours_required": 72,
+      "coin_bonus": 0.1,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.0
+    },
+    "star_2": {
+      "hours_required": 288,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.05,
+      "speed_bonus": 0.0
+    },
+    "star_3": {
+      "hours_required": 1152,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.15
+    }
+  },
+  "produces": [
+    {
+      "id": "cotton_shirt",
+      "name": "Cotton Shirt",
+      "unlock_level": 19,
+      "time_to_make_minutes": 45,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/cotton_shirt.json"
+      }
+    },
+    {
+      "id": "wooly_chaps",
+      "name": "Wooly Chaps",
+      "unlock_level": 21,
+      "time_to_make_minutes": 90,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/wooly_chaps.json"
+      }
+    },
+    {
+      "id": "violet_dress",
+      "name": "Violet Dress",
+      "unlock_level": 25,
+      "time_to_make_minutes": 135,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/violet_dress.json"
+      }
+    },
+    {
+      "id": "soothing_pad",
+      "name": "Soothing Pad",
+      "unlock_level": 45,
+      "time_to_make_minutes": 60,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/soothing_pad.json"
+      }
+    },
+    {
+      "id": "pillow",
+      "name": "Pillow",
+      "unlock_level": 51,
+      "time_to_make_minutes": 180,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/pillow.json"
+      }
+    },
+    {
+      "id": "blanket",
+      "name": "Blanket",
+      "unlock_level": 59,
+      "time_to_make_minutes": 210,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/blanket.json"
+      }
+    }
+  ],
+  "links": {
+    "self": "/hay_day_ecosystem/api/v2/machines/sewing_machine.json",
+    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
+    "image": "/hay_day_ecosystem/assets/machines/sewing_machine.png",
+    "html_details": "/hay_day_ecosystem/details/details_sewing_machine.html"
+  }
+}

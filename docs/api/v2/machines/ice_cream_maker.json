@@ -1,0 +1,160 @@
+{
+  "id": "ice_cream_maker",
+  "name": "Ice Cream Maker",
+  "min_allowed_slots": 2,
+  "max_allowed_slots": 9,
+  "unlock_schedule": [
+    {
+      "level": 29,
+      "extra_unlocks": 1
+    }
+  ],
+  "costs": [
+    38000
+  ],
+  "mastery": {
+    "star_1": {
+      "hours_required": 60,
+      "coin_bonus": 0.1,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.0
+    },
+    "star_2": {
+      "hours_required": 240,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.05,
+      "speed_bonus": 0.0
+    },
+    "star_3": {
+      "hours_required": 360,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.15
+    }
+  },
+  "produces": [
+    {
+      "id": "vanilla_ice_cream",
+      "name": "Vanilla Ice Cream",
+      "unlock_level": 29,
+      "time_to_make_minutes": 120,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/vanilla_ice_cream.json"
+      }
+    },
+    {
+      "id": "cherry_popsicle",
+      "name": "Cherry Popsicle",
+      "unlock_level": 33,
+      "time_to_make_minutes": 180,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/cherry_popsicle.json"
+      }
+    },
+    {
+      "id": "strawberry_ice_cream",
+      "name": "Strawberry Ice Cream",
+      "unlock_level": 34,
+      "time_to_make_minutes": 240,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/strawberry_ice_cream.json"
+      }
+    },
+    {
+      "id": "chocolate_ice_cream",
+      "name": "Chocolate Ice Cream",
+      "unlock_level": 39,
+      "time_to_make_minutes": 150,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/chocolate_ice_cream.json"
+      }
+    },
+    {
+      "id": "sesame_ice_cream",
+      "name": "Sesame Ice Cream",
+      "unlock_level": 50,
+      "time_to_make_minutes": 120,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/sesame_ice_cream.json"
+      }
+    },
+    {
+      "id": "peanut_butter_milkshake",
+      "name": "Peanut Butter Milkshake",
+      "unlock_level": 68,
+      "time_to_make_minutes": 100,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/peanut_butter_milkshake.json"
+      }
+    },
+    {
+      "id": "orange_sorbet",
+      "name": "Orange Sorbet",
+      "unlock_level": 78,
+      "time_to_make_minutes": 210,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/orange_sorbet.json"
+      }
+    },
+    {
+      "id": "affogato",
+      "name": "Affogato",
+      "unlock_level": 78,
+      "time_to_make_minutes": 20,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/affogato.json"
+      }
+    },
+    {
+      "id": "peach_ice_cream",
+      "name": "Peach Ice Cream",
+      "unlock_level": 83,
+      "time_to_make_minutes": 180,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/peach_ice_cream.json"
+      }
+    },
+    {
+      "id": "mint_ice_cream",
+      "name": "Mint Ice Cream",
+      "unlock_level": 85,
+      "time_to_make_minutes": 135,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/mint_ice_cream.json"
+      }
+    },
+    {
+      "id": "banana_split",
+      "name": "Banana Split",
+      "unlock_level": 96,
+      "time_to_make_minutes": 210,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/banana_split.json"
+      }
+    },
+    {
+      "id": "coconut_ice_cream",
+      "name": "Coconut Ice Cream",
+      "unlock_level": 102,
+      "time_to_make_minutes": 15,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/coconut_ice_cream.json"
+      }
+    },
+    {
+      "id": "fruit_sorbet",
+      "name": "Fruit Sorbet",
+      "unlock_level": 106,
+      "time_to_make_minutes": 60,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/fruit_sorbet.json"
+      }
+    }
+  ],
+  "links": {
+    "self": "/hay_day_ecosystem/api/v2/machines/ice_cream_maker.json",
+    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
+    "image": "/hay_day_ecosystem/assets/machines/ice_cream_maker.png",
+    "html_details": "/hay_day_ecosystem/details/details_ice_cream_maker.html"
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "id": "jam_maker",
+  "name": "Jam Maker",
+  "min_allowed_slots": 2,
+  "max_allowed_slots": 9,
+  "unlock_schedule": [
+    {
+      "level": 35,
+      "extra_unlocks": 1
+    }
+  ],
+  "costs": [
+    59000
+  ],
+  "mastery": {
+    "star_1": {
+      "hours_required": 90,
+      "coin_bonus": 0.1,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.0
+    },
+    "star_2": {
+      "hours_required": 360,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.1,
+      "speed_bonus": 0.0
+    },
+    "star_3": {
+      "hours_required": 1440,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.15
+    }
+  },
+  "produces": [
+    {
+      "id": "apple_jam",
+      "name": "Apple Jam",
+      "unlock_level": 35,
+      "time_to_make_minutes": 360,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/apple_jam.json"
+      }
+    },
+    {
+      "id": "raspberry_jam",
+      "name": "Raspberry Jam",
+      "unlock_level": 36,
+      "time_to_make_minutes": 420,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/raspberry_jam.json"
+      }
+    },
+    {
+      "id": "blackberry_jam",
+      "name": "Blackberry Jam",
+      "unlock_level": 37,
+      "time_to_make_minutes": 480,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/blackberry_jam.json"
+      }
+    },
+    {
+      "id": "cherry_jam",
+      "name": "Cherry Jam",
+      "unlock_level": 38,
+      "time_to_make_minutes": 420,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/cherry_jam.json"
+      }
+    },
+    {
+      "id": "strawberry_jam",
+      "name": "Strawberry Jam",
+      "unlock_level": 50,
+      "time_to_make_minutes": 450,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/strawberry_jam.json"
+      }
+    },
+    {
+      "id": "blueberry_chutney",
+      "name": "Blueberry Chutney",
+      "unlock_level": 70,
+      "time_to_make_minutes": 240,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/blueberry_chutney.json"
+      }
+    },
+    {
+      "id": "marmalade",
+      "name": "Marmalade",
+      "unlock_level": 74,
+      "time_to_make_minutes": 510,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/marmalade.json"
+      }
+    },
+    {
+      "id": "peach_jam",
+      "name": "Peach Jam",
+      "unlock_level": 79,
+      "time_to_make_minutes": 480,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/peach_jam.json"
+      }
+    },
+    {
+      "id": "grape_jam",
+      "name": "Grape Jam",
+      "unlock_level": 85,
+      "time_to_make_minutes": 390,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/grape_jam.json"
+      }
+    },
+    {
+      "id": "plum_jam",
+      "name": "Plum Jam",
+      "unlock_level": 94,
+      "time_to_make_minutes": 300,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/plum_jam.json"
+      }
+    },
+    {
+      "id": "passion_fruit_jam",
+      "name": "Passion Fruit Jam",
+      "unlock_level": 96,
+      "time_to_make_minutes": 320,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/passion_fruit_jam.json"
+      }
+    }
+  ],
+  "links": {
+    "self": "/hay_day_ecosystem/api/v2/machines/jam_maker.json",
+    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
+    "image": "/hay_day_ecosystem/assets/machines/jam_maker.png",
+    "html_details": "/hay_day_ecosystem/details/details_jam_maker.html"
+  }
+}

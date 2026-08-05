@@ -1,0 +1,124 @@
+{
+  "id": "sandwich_bar",
+  "name": "Sandwich Bar",
+  "min_allowed_slots": 2,
+  "max_allowed_slots": 9,
+  "unlock_schedule": [
+    {
+      "level": 61,
+      "extra_unlocks": 1
+    }
+  ],
+  "costs": [
+    180000
+  ],
+  "mastery": {
+    "star_1": {
+      "hours_required": 72,
+      "coin_bonus": 0.1,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.0
+    },
+    "star_2": {
+      "hours_required": 288,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.05,
+      "speed_bonus": 0.0
+    },
+    "star_3": {
+      "hours_required": 1152,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.15
+    }
+  },
+  "produces": [
+    {
+      "id": "veggie_bagel",
+      "name": "Veggie Bagel",
+      "unlock_level": 61,
+      "time_to_make_minutes": 40,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/veggie_bagel.json"
+      }
+    },
+    {
+      "id": "bacon_toast",
+      "name": "Bacon Toast",
+      "unlock_level": 65,
+      "time_to_make_minutes": 100,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/bacon_toast.json"
+      }
+    },
+    {
+      "id": "egg_sandwich",
+      "name": "Egg Sandwich",
+      "unlock_level": 66,
+      "time_to_make_minutes": 80,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/egg_sandwich.json"
+      }
+    },
+    {
+      "id": "honey_toast",
+      "name": "Honey Toast",
+      "unlock_level": 69,
+      "time_to_make_minutes": 60,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/honey_toast.json"
+      }
+    },
+    {
+      "id": "peanut_butter_and_jelly_sandwich",
+      "name": "Peanut Butter and Jelly Sandwich",
+      "unlock_level": 71,
+      "time_to_make_minutes": 25,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/peanut_butter_and_jelly_sandwich.json"
+      }
+    },
+    {
+      "id": "cucumber_sandwich",
+      "name": "Cucumber Sandwich",
+      "unlock_level": 79,
+      "time_to_make_minutes": 35,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/cucumber_sandwich.json"
+      }
+    },
+    {
+      "id": "onion_melt",
+      "name": "Onion Melt",
+      "unlock_level": 84,
+      "time_to_make_minutes": 90,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/onion_melt.json"
+      }
+    },
+    {
+      "id": "goat_cheese_toast",
+      "name": "Goat Cheese Toast",
+      "unlock_level": 92,
+      "time_to_make_minutes": 50,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/goat_cheese_toast.json"
+      }
+    },
+    {
+      "id": "hummus_wrap",
+      "name": "Hummus Wrap",
+      "unlock_level": 109,
+      "time_to_make_minutes": 30,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/hummus_wrap.json"
+      }
+    }
+  ],
+  "links": {
+    "self": "/hay_day_ecosystem/api/v2/machines/sandwich_bar.json",
+    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
+    "image": "/hay_day_ecosystem/assets/machines/sandwich_bar.png",
+    "html_details": "/hay_day_ecosystem/details/details_sandwich_bar.html"
+  }
+}

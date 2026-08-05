@@ -1,0 +1,79 @@
+{
+  "id": "fondue_pot",
+  "name": "Fondue Pot",
+  "min_allowed_slots": 2,
+  "max_allowed_slots": 9,
+  "unlock_schedule": [
+    {
+      "level": 81,
+      "extra_unlocks": 1
+    }
+  ],
+  "costs": [
+    800000
+  ],
+  "mastery": {
+    "star_1": {
+      "hours_required": 90,
+      "coin_bonus": 0.1,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.0
+    },
+    "star_2": {
+      "hours_required": 250,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.05,
+      "speed_bonus": 0.0
+    },
+    "star_3": {
+      "hours_required": 1020,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.15
+    }
+  },
+  "produces": [
+    {
+      "id": "chocolate_fondue",
+      "name": "Chocolate Fondue",
+      "unlock_level": 81,
+      "time_to_make_minutes": 25,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/chocolate_fondue.json"
+      }
+    },
+    {
+      "id": "bacon_fondue",
+      "name": "Bacon Fondue",
+      "unlock_level": 86,
+      "time_to_make_minutes": 30,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/bacon_fondue.json"
+      }
+    },
+    {
+      "id": "cheese_fondue",
+      "name": "Cheese Fondue",
+      "unlock_level": 91,
+      "time_to_make_minutes": 20,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/cheese_fondue.json"
+      }
+    },
+    {
+      "id": "tropical_fondue",
+      "name": "Tropical Fondue",
+      "unlock_level": 100,
+      "time_to_make_minutes": 35,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/tropical_fondue.json"
+      }
+    }
+  ],
+  "links": {
+    "self": "/hay_day_ecosystem/api/v2/machines/fondue_pot.json",
+    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
+    "image": "/hay_day_ecosystem/assets/machines/fondue_pot.png",
+    "html_details": "/hay_day_ecosystem/details/details_fondue_pot.html"
+  }
+}

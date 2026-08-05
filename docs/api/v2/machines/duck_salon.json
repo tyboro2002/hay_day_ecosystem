@@ -1,0 +1,38 @@
+{
+  "id": "duck_salon",
+  "name": "Duck Salon",
+  "min_allowed_slots": 1,
+  "max_allowed_slots": 1,
+  "unlock_schedule": [
+    {
+      "level": 50,
+      "extra_unlocks": 6
+    }
+  ],
+  "costs": [
+    90000,
+    51000,
+    59000,
+    72000,
+    90000,
+    115000
+  ],
+  "mastery": null,
+  "produces": [
+    {
+      "id": "duck_feather",
+      "name": "Duck Feather",
+      "unlock_level": 50,
+      "time_to_make_minutes": 180,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/duck_feather.json"
+      }
+    }
+  ],
+  "links": {
+    "self": "/hay_day_ecosystem/api/v2/machines/duck_salon.json",
+    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
+    "image": "/hay_day_ecosystem/assets/machines/duck_salon.png",
+    "html_details": "/hay_day_ecosystem/details/details_duck_salon.html"
+  }
+}

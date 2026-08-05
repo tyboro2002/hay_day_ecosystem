@@ -1,0 +1,178 @@
+{
+  "id": "cake_oven",
+  "name": "Cake Oven",
+  "min_allowed_slots": 2,
+  "max_allowed_slots": 9,
+  "unlock_schedule": [
+    {
+      "level": 21,
+      "extra_unlocks": 1
+    }
+  ],
+  "costs": [
+    12100
+  ],
+  "mastery": {
+    "star_1": {
+      "hours_required": 65,
+      "coin_bonus": 0.1,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.0
+    },
+    "star_2": {
+      "hours_required": 260,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.1,
+      "speed_bonus": 0.0
+    },
+    "star_3": {
+      "hours_required": 1040,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.15
+    }
+  },
+  "produces": [
+    {
+      "id": "carrot_cake",
+      "name": "Carrot Cake",
+      "unlock_level": 21,
+      "time_to_make_minutes": 90,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/carrot_cake.json"
+      }
+    },
+    {
+      "id": "cream_cake",
+      "name": "Cream Cake",
+      "unlock_level": 23,
+      "time_to_make_minutes": 180,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/cream_cake.json"
+      }
+    },
+    {
+      "id": "red_berry_cake",
+      "name": "Red Berry Cake",
+      "unlock_level": 23,
+      "time_to_make_minutes": 60,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/red_berry_cake.json"
+      }
+    },
+    {
+      "id": "cheesecake",
+      "name": "Cheesecake",
+      "unlock_level": 24,
+      "time_to_make_minutes": 240,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/cheesecake.json"
+      }
+    },
+    {
+      "id": "blueberry_cheesecake",
+      "name": "Blueberry Cheesecake",
+      "unlock_level": 31,
+      "time_to_make_minutes": 240,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/blueberry_cheesecake.json"
+      }
+    },
+    {
+      "id": "strawberry_cake",
+      "name": "Strawberry Cake",
+      "unlock_level": 35,
+      "time_to_make_minutes": 180,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/strawberry_cake.json"
+      }
+    },
+    {
+      "id": "chocolate_cake",
+      "name": "Chocolate Cake",
+      "unlock_level": 36,
+      "time_to_make_minutes": 120,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/chocolate_cake.json"
+      }
+    },
+    {
+      "id": "potato_feta_cake",
+      "name": "Potato Feta Cake",
+      "unlock_level": 38,
+      "time_to_make_minutes": 120,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/potato_feta_cake.json"
+      }
+    },
+    {
+      "id": "honey_apple_cake",
+      "name": "Honey Apple Cake",
+      "unlock_level": 42,
+      "time_to_make_minutes": 200,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/honey_apple_cake.json"
+      }
+    },
+    {
+      "id": "fancy_cake",
+      "name": "Fancy Cake",
+      "unlock_level": 54,
+      "time_to_make_minutes": 15,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/fancy_cake.json"
+      }
+    },
+    {
+      "id": "pineapple_cake",
+      "name": "Pineapple Cake",
+      "unlock_level": 65,
+      "time_to_make_minutes": 75,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/pineapple_cake.json"
+      }
+    },
+    {
+      "id": "lemon_cake",
+      "name": "Lemon Cake",
+      "unlock_level": 68,
+      "time_to_make_minutes": 150,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/lemon_cake.json"
+      }
+    },
+    {
+      "id": "fruit_cake",
+      "name": "Fruit Cake",
+      "unlock_level": 89,
+      "time_to_make_minutes": 180,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/fruit_cake.json"
+      }
+    },
+    {
+      "id": "chocolate_roll",
+      "name": "Chocolate Roll",
+      "unlock_level": 95,
+      "time_to_make_minutes": 90,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/chocolate_roll.json"
+      }
+    },
+    {
+      "id": "pomegranate_cake",
+      "name": "Pomegranate Cake",
+      "unlock_level": 108,
+      "time_to_make_minutes": 160,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/pomegranate_cake.json"
+      }
+    }
+  ],
+  "links": {
+    "self": "/hay_day_ecosystem/api/v2/machines/cake_oven.json",
+    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
+    "image": "/hay_day_ecosystem/assets/machines/cake_oven.png",
+    "html_details": "/hay_day_ecosystem/details/details_cake_oven.html"
+  }
+}

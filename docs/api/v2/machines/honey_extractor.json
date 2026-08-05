@@ -1,0 +1,61 @@
+{
+  "id": "honey_extractor",
+  "name": "Honey Extractor",
+  "min_allowed_slots": 2,
+  "max_allowed_slots": 9,
+  "unlock_schedule": [
+    {
+      "level": 39,
+      "extra_unlocks": 1
+    }
+  ],
+  "costs": [
+    35000
+  ],
+  "mastery": {
+    "star_1": {
+      "hours_required": 50,
+      "coin_bonus": 0.1,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.0
+    },
+    "star_2": {
+      "hours_required": 150,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.05,
+      "speed_bonus": 0.0
+    },
+    "star_3": {
+      "hours_required": 4500,
+      "coin_bonus": 0.0,
+      "xp_bonus": 0.0,
+      "speed_bonus": 0.15
+    }
+  },
+  "produces": [
+    {
+      "id": "honey",
+      "name": "Honey",
+      "unlock_level": 39,
+      "time_to_make_minutes": 20,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/honey.json"
+      }
+    },
+    {
+      "id": "beeswax",
+      "name": "Beeswax",
+      "unlock_level": 48,
+      "time_to_make_minutes": 45,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/beeswax.json"
+      }
+    }
+  ],
+  "links": {
+    "self": "/hay_day_ecosystem/api/v2/machines/honey_extractor.json",
+    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
+    "image": "/hay_day_ecosystem/assets/machines/honey_extractor.png",
+    "html_details": "/hay_day_ecosystem/details/details_honey_extractor.html"
+  }
+}

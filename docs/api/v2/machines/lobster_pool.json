@@ -1,0 +1,38 @@
+{
+  "id": "lobster_pool",
+  "name": "Lobster Pool",
+  "min_allowed_slots": 1,
+  "max_allowed_slots": 1,
+  "unlock_schedule": [
+    {
+      "level": 44,
+      "extra_unlocks": 6
+    }
+  ],
+  "costs": [
+    80000,
+    45000,
+    52500,
+    63800,
+    79800,
+    102000
+  ],
+  "mastery": null,
+  "produces": [
+    {
+      "id": "lobster_tail",
+      "name": "Lobster Tail",
+      "unlock_level": 44,
+      "time_to_make_minutes": 360,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/items/lobster_tail.json"
+      }
+    }
+  ],
+  "links": {
+    "self": "/hay_day_ecosystem/api/v2/machines/lobster_pool.json",
+    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
+    "image": "/hay_day_ecosystem/assets/machines/lobster_pool.png",
+    "html_details": "/hay_day_ecosystem/details/details_lobster_pool.html"
+  }
+}
