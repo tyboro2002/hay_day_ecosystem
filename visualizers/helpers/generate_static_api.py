@@ -3,13 +3,15 @@ import json
 from collections import defaultdict
 
 from game_data import ITEMS, INFRASTRUCTURE
+from game_data.machined_items_data import MACHINED_ITEMS
 
-prepart = ""
-# prepart = "/hay_day_ecosystem"
+# prepart = ""
+prepart = "/hay_day_ecosystem"
 
 base_path_v2 = f"{prepart}/api/v2"
 machines_dir_v2 = "machines"
-items_dir_v2 = "items"
+machined_items_dir_v2 = "machined_items"
+general_items_dir_v2 = "items"
 assets_path_v2 = f"{prepart}/assets"
 details_path_v2 = f"{prepart}/details"
 
@@ -162,18 +164,18 @@ def build_v2(output_dir="docs"):
 
     # 1. Pre-index all items by their producing machine once
     machine_products_map = defaultdict(list)
-    for item_name, item_obj in ITEMS.items():
-        producing_machine = getattr(item_obj, 'machine', None)
+    for machined_item_name, machined_item_obj in ITEMS.items():
+        producing_machine = getattr(machined_item_obj, 'machine', None)
         if producing_machine:
-            item_id = item_name.lower().replace(" ", "_").replace("-", "_")
+            machined_item_id = machined_item_name.lower().replace(" ", "_").replace("-", "_")
 
             item_data = {
-                "id": item_id,
-                "name": item_name,
-                "unlock_level": getattr(item_obj, 'unlock_level', 1),
-                "time_to_make_minutes": getattr(item_obj, 'time_to_make', None),
+                "id": machined_item_id,
+                "name": machined_item_name,
+                "unlock_level": getattr(machined_item_obj, 'unlock_level', 1),
+                "time_to_make_minutes": getattr(machined_item_obj, 'time_to_make', None),
                 "links": {
-                    "detail": f"{base_path_v2}/{items_dir_v2}/{item_id}.json"
+                    "detail": f"{base_path_v2}/{machined_items_dir_v2}/{machined_item_id}.json"
                 }
             }
 
@@ -186,6 +188,7 @@ def build_v2(output_dir="docs"):
         "_links": {
             "self": f"{base_path_v2}/index.json",
             "machines": f"{base_path_v2}/{machines_dir_v2}/index.json",
+            "machined_items": f"{base_path_v2}/{machined_items_dir_v2}/index.json",
         }
     }
     with open(os.path.join(api_dir, "index.json"), "w", encoding="utf-8") as f:
@@ -198,7 +201,6 @@ def build_v2(output_dir="docs"):
     machines_collection = []
 
     for machine_name, machine_obj in INFRASTRUCTURE["machines"].items():
-        print(machine_name, "//", machine_obj)
         machine_id = machine_name.lower().replace(" ", "_").replace("-", "_")
 
         # Build individual machine detail file
@@ -221,11 +223,11 @@ def build_v2(output_dir="docs"):
                 "html_details": f"{details_path_v2}/details_{machine_id}.html"
             }
         }
-    #
+
         # Save single item detail JSON
         with open(os.path.join(machines_dir, f"{machine_id}.json"), "w", encoding="utf-8") as f:
             json.dump(machine_detail, f, indent=2)
-    #
+
         # Append summary to collection index
         machines_collection.append({
             "id": machine_id,
@@ -244,8 +246,58 @@ def build_v2(output_dir="docs"):
             "parent": f"{base_path_v2}/index.json"
         }
     }
+
     with open(os.path.join(machines_dir, "index.json"), "w", encoding="utf-8") as f:
         json.dump(machines_index_payload, f, indent=2)
+
+
+
+    # 3. items Endpoints (/items/index.json & /items/<id>.json)
+    machined_items_dir = os.path.join(api_dir, machined_items_dir_v2)
+    os.makedirs(machined_items_dir, exist_ok=True)
+
+    machined_items_collection = []
+
+    for machined_item_name, machined_item_obj in MACHINED_ITEMS.items():
+        machined_item_id = machined_item_name.lower().replace(" ", "_").replace("-", "_")
+
+        # Build individual item detail file
+        machined_item_detail = {
+            "id": machined_item_id,
+            "name": machined_item_name,
+            "links": {
+                "self": f"{base_path_v2}/{machined_items_dir_v2}/{machined_item_id}.json",
+                "collection": f"{base_path_v2}/{machined_items_dir_v2}/index.json",
+                "image": f"{assets_path_v2}/{general_items_dir_v2}/{machined_item_id}.png",
+                "html_details": f"{details_path_v2}/details_{machined_item_id}.html"
+            }
+        }
+
+        # Save single item detail JSON
+        with open(os.path.join(machined_items_dir, f"{machined_item_id}.json"), "w", encoding="utf-8") as f:
+            json.dump(machined_item_detail, f, indent=2)
+
+        # Append summary to collection index
+        machined_items_collection.append({
+            "id": machined_item_id,
+            "name": machined_item_name,
+            "links": {
+                "detail": f"{base_path_v2}/{machined_items_dir_v2}/{machined_item_id}.json"
+            }
+        })
+
+    # Save items collection index
+    machined_items_index_payload = {
+        "count": len(machined_items_collection),
+        "items": machined_items_collection,
+        "links": {
+            "self": f"{base_path_v2}/{machined_items_dir_v2}/index.json",
+            "parent": f"{base_path_v2}/index.json"
+        }
+    }
+
+    with open(os.path.join(machined_items_dir, "index.json"), "w", encoding="utf-8") as f:
+        json.dump(machined_items_index_payload, f, indent=2)
 
 
 def format_mastery(machine_obj):
