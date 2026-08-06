@@ -6,6 +6,33 @@
   "time_to_make": 40,
   "sell_price": 14.4,
   "xp": 3,
+  "batch_size": 3,
+  "batch_ingredients": [
+    {
+      "id": "carrot",
+      "name": "Carrot",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/crops/carrot.json"
+      }
+    },
+    {
+      "id": "corn",
+      "name": "Corn",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/crops/corn.json"
+      }
+    },
+    {
+      "id": "wheat",
+      "name": "Wheat",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/crops/wheat.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/animal_feeds/goat_feed.json",
     "collection": "/hay_day_ecosystem/api/v2/animal_feeds/index.json",

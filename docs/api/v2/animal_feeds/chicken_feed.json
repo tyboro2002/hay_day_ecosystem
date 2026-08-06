@@ -6,6 +6,25 @@
   "time_to_make": 5,
   "sell_price": 7.2,
   "xp": 1,
+  "batch_size": 3,
+  "batch_ingredients": [
+    {
+      "id": "wheat",
+      "name": "Wheat",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/crops/wheat.json"
+      }
+    },
+    {
+      "id": "corn",
+      "name": "Corn",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/crops/corn.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/animal_feeds/chicken_feed.json",
     "collection": "/hay_day_ecosystem/api/v2/animal_feeds/index.json",

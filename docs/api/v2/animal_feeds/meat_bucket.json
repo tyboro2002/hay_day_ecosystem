@@ -6,6 +6,25 @@
   "time_to_make": 45,
   "sell_price": 72.0,
   "xp": 15,
+  "batch_size": 3,
+  "batch_ingredients": [
+    {
+      "id": "fish_fillet",
+      "name": "Fish Fillet",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/crops/fish_fillet.json"
+      }
+    },
+    {
+      "id": "carrot",
+      "name": "Carrot",
+      "quantity": 5,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/crops/carrot.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/animal_feeds/meat_bucket.json",
     "collection": "/hay_day_ecosystem/api/v2/animal_feeds/index.json",

@@ -6,6 +6,17 @@
   "time_to_make": 90,
   "sell_price": 50.4,
   "xp": 10,
+  "batch_size": 3,
+  "batch_ingredients": [
+    {
+      "id": "wheat",
+      "name": "Wheat",
+      "quantity": 75,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/crops/wheat.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/animal_feeds/wheat_bundle.json",
     "collection": "/hay_day_ecosystem/api/v2/animal_feeds/index.json",

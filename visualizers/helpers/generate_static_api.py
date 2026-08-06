@@ -285,6 +285,24 @@ def build_v2(output_dir="docs"):
         else:
             feeds_animal_link = None
 
+        # Reconstruct full batch ingredients and build JSON-safe structures
+        formatted_batch_ingredients = []
+        if hasattr(feed_obj, 'ingredients') and feed_obj.ingredients:
+            for ing_obj, single_qty in feed_obj.ingredients.items():
+                ing_id = ing_obj.name.lower().replace(" ", "_").replace("-", "_")
+
+                # Multiply single unit quantity by 3 to get batch amount
+                batch_qty = int(round(single_qty * 3))
+
+                formatted_batch_ingredients.append({
+                    "id": ing_id,
+                    "name": ing_obj.name,
+                    "quantity": batch_qty,
+                    "links": {
+                        "detail": f"{base_path_v2}/{crops_dir_v2}/{ing_id}.json"
+                    }
+                })
+
         return {
             "id": feed_id,
             "name": feed_name,
@@ -293,6 +311,8 @@ def build_v2(output_dir="docs"):
             "time_to_make": feed_obj.time_to_make,
             "sell_price": feed_obj.sell_price,
             "xp": feed_obj.xp,
+            "batch_size": 3,
+            "batch_ingredients": formatted_batch_ingredients,
             "links": {
                 "self": f"{base_path_v2}/{animal_feeds_dir_v2}/{feed_id}.json",
                 "collection": f"{base_path_v2}/{animal_feeds_dir_v2}/index.json",
