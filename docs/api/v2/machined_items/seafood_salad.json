@@ -11,7 +11,7 @@
       "name": "Fish Fillet",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/animal_items/fish_fillet.json"
+        "detail": "/hay_day_ecosystem/api/v2/animal_items/fish_fillet.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Lettuce",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/crops/lettuce.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/lettuce.json"
       }
     },
     {
@@ -27,7 +27,7 @@
       "name": "Lobster Tail",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/lobster_tail.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/lobster_tail.json"
       }
     },
     {
@@ -35,14 +35,14 @@
       "name": "Mayonnaise",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/mayonnaise.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/mayonnaise.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/seafood_salad.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/seafood_salad.png",
-    "html_details": "/details/details_seafood_salad.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/seafood_salad.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/seafood_salad.png",
+    "html_details": "/hay_day_ecosystem/details/details_seafood_salad.html"
   }
 }

@@ -11,7 +11,7 @@
       "name": "Bread",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/machined_items/bread.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/bread.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Egg",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/animal_items/egg.json"
+        "detail": "/hay_day_ecosystem/api/v2/animal_items/egg.json"
       }
     },
     {
@@ -27,7 +27,7 @@
       "name": "Lettuce",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/crops/lettuce.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/lettuce.json"
       }
     },
     {
@@ -35,14 +35,14 @@
       "name": "Mayonnaise",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/mayonnaise.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/mayonnaise.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/egg_sandwich.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/egg_sandwich.png",
-    "html_details": "/details/details_egg_sandwich.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/egg_sandwich.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/egg_sandwich.png",
+    "html_details": "/hay_day_ecosystem/details/details_egg_sandwich.html"
   }
 }

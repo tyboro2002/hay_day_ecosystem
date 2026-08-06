@@ -11,14 +11,14 @@
       "name": "Rice",
       "quantity": 5,
       "links": {
-        "detail": "/api/v2/crops/rice.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/rice.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/rice_noodles.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/rice_noodles.png",
-    "html_details": "/details/details_rice_noodles.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/rice_noodles.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/rice_noodles.png",
+    "html_details": "/hay_day_ecosystem/details/details_rice_noodles.html"
   }
 }

@@ -39,7 +39,7 @@
       "unlock_level": 42,
       "time_to_make_minutes": 5,
       "links": {
-        "detail": "/api/v2/machined_items/espresso.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/espresso.json"
       }
     },
     {
@@ -48,7 +48,7 @@
       "unlock_level": 43,
       "time_to_make_minutes": 10,
       "links": {
-        "detail": "/api/v2/machined_items/caff\u00e8_latte.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/caff\u00e8_latte.json"
       }
     },
     {
@@ -57,7 +57,7 @@
       "unlock_level": 45,
       "time_to_make_minutes": 15,
       "links": {
-        "detail": "/api/v2/machined_items/caff\u00e8_mocha.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/caff\u00e8_mocha.json"
       }
     },
     {
@@ -66,7 +66,7 @@
       "unlock_level": 46,
       "time_to_make_minutes": 30,
       "links": {
-        "detail": "/api/v2/machined_items/raspberry_mocha.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/raspberry_mocha.json"
       }
     },
     {
@@ -75,7 +75,7 @@
       "unlock_level": 47,
       "time_to_make_minutes": 25,
       "links": {
-        "detail": "/api/v2/machined_items/hot_chocolate.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/hot_chocolate.json"
       }
     },
     {
@@ -84,7 +84,7 @@
       "unlock_level": 62,
       "time_to_make_minutes": 15,
       "links": {
-        "detail": "/api/v2/machined_items/caramel_latte.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/caramel_latte.json"
       }
     },
     {
@@ -93,14 +93,14 @@
       "unlock_level": 88,
       "time_to_make_minutes": 20,
       "links": {
-        "detail": "/api/v2/machined_items/iced_banana_latte.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/iced_banana_latte.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machines/coffee_kiosk.json",
-    "collection": "/api/v2/machines/index.json",
-    "image": "/assets/machines/coffee_kiosk.png",
-    "html_details": "/details/details_coffee_kiosk.html"
+    "self": "/hay_day_ecosystem/api/v2/machines/coffee_kiosk.json",
+    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
+    "image": "/hay_day_ecosystem/assets/machines/coffee_kiosk.png",
+    "html_details": "/hay_day_ecosystem/details/details_coffee_kiosk.html"
   }
 }

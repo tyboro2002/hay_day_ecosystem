@@ -11,7 +11,7 @@
       "name": "Plum",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/plants/plum.json"
+        "detail": "/hay_day_ecosystem/api/v2/plants/plum.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Grapes",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/crops/grapes.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/grapes.json"
       }
     },
     {
@@ -27,7 +27,7 @@
       "name": "Mint",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/crops/mint.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/mint.json"
       }
     },
     {
@@ -35,14 +35,14 @@
       "name": "Honey",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/honey.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/honey.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/tropical_smoothie.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/tropical_smoothie.png",
-    "html_details": "/details/details_tropical_smoothie.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/tropical_smoothie.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/tropical_smoothie.png",
+    "html_details": "/hay_day_ecosystem/details/details_tropical_smoothie.html"
   }
 }

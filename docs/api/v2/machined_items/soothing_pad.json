@@ -11,7 +11,7 @@
       "name": "Cotton Fabric",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/machined_items/cotton_fabric.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cotton_fabric.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Wheat",
       "quantity": 5,
       "links": {
-        "detail": "/api/v2/crops/wheat.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/wheat.json"
       }
     },
     {
@@ -27,14 +27,14 @@
       "name": "Chamomile",
       "quantity": 5,
       "links": {
-        "detail": "/api/v2/crops/chamomile.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/chamomile.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/soothing_pad.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/soothing_pad.png",
-    "html_details": "/details/details_soothing_pad.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/soothing_pad.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/soothing_pad.png",
+    "html_details": "/hay_day_ecosystem/details/details_soothing_pad.html"
   }
 }

@@ -11,7 +11,7 @@
       "name": "Gold Bar",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/gold_bar.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/gold_bar.json"
       }
     },
     {
@@ -19,14 +19,14 @@
       "name": "Silver Bar",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/machined_items/silver_bar.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/silver_bar.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/bracelet.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/bracelet.png",
-    "html_details": "/details/details_bracelet.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/bracelet.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/bracelet.png",
+    "html_details": "/hay_day_ecosystem/details/details_bracelet.html"
   }
 }

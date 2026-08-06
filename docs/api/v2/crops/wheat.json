@@ -1,10 +1,15 @@
 {
   "id": "wheat",
   "name": "Wheat",
+  "unlock_level": 1,
+  "time_to_make": 2,
+  "sell_price": 3.6,
+  "xp": 1,
+  "yield_multiplier": 2,
   "links": {
-    "self": "/api/v2/crops/wheat.json",
-    "collection": "/api/v2/crops/index.json",
-    "image": "/assets/items/wheat.png",
-    "html_details": "/details/details_wheat.html"
+    "self": "/hay_day_ecosystem/api/v2/crops/wheat.json",
+    "collection": "/hay_day_ecosystem/api/v2/crops/index.json",
+    "image": "/hay_day_ecosystem/assets/items/wheat.png",
+    "html_details": "/hay_day_ecosystem/details/details_wheat.html"
   }
 }

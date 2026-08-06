@@ -11,7 +11,7 @@
       "name": "Cacao",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/plants/cacao.json"
+        "detail": "/hay_day_ecosystem/api/v2/plants/cacao.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Coffee Bean",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/plants/coffee_bean.json"
+        "detail": "/hay_day_ecosystem/api/v2/plants/coffee_bean.json"
       }
     },
     {
@@ -27,14 +27,14 @@
       "name": "Raspberry",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/plants/raspberry.json"
+        "detail": "/hay_day_ecosystem/api/v2/plants/raspberry.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/exfoliating_soap.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/exfoliating_soap.png",
-    "html_details": "/details/details_exfoliating_soap.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/exfoliating_soap.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/exfoliating_soap.png",
+    "html_details": "/hay_day_ecosystem/details/details_exfoliating_soap.html"
   }
 }

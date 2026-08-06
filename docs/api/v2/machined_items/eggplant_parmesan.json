@@ -11,7 +11,7 @@
       "name": "Eggplant",
       "quantity": 4,
       "links": {
-        "detail": "/api/v2/crops/eggplant.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/eggplant.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Cheese",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/cheese.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cheese.json"
       }
     },
     {
@@ -27,14 +27,14 @@
       "name": "Tomato Sauce",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/tomato_sauce.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/tomato_sauce.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/eggplant_parmesan.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/eggplant_parmesan.png",
-    "html_details": "/details/details_eggplant_parmesan.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/eggplant_parmesan.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/eggplant_parmesan.png",
+    "html_details": "/hay_day_ecosystem/details/details_eggplant_parmesan.html"
   }
 }

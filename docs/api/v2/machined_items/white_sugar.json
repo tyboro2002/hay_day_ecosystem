@@ -11,14 +11,14 @@
       "name": "Sugarcane",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/crops/sugarcane.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/sugarcane.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/white_sugar.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/white_sugar.png",
-    "html_details": "/details/details_white_sugar.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/white_sugar.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/white_sugar.png",
+    "html_details": "/hay_day_ecosystem/details/details_white_sugar.html"
   }
 }

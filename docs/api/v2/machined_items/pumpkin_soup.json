@@ -11,7 +11,7 @@
       "name": "Butter",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/butter.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/butter.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Carrot",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/crops/carrot.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/carrot.json"
       }
     },
     {
@@ -27,7 +27,7 @@
       "name": "Honey",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/honey.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/honey.json"
       }
     },
     {
@@ -35,14 +35,14 @@
       "name": "Pumpkin",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/crops/pumpkin.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/pumpkin.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/pumpkin_soup.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/pumpkin_soup.png",
-    "html_details": "/details/details_pumpkin_soup.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/pumpkin_soup.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/pumpkin_soup.png",
+    "html_details": "/hay_day_ecosystem/details/details_pumpkin_soup.html"
   }
 }

@@ -11,7 +11,7 @@
       "name": "Apple Jam",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/apple_jam.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/apple_jam.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Egg",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/animal_items/egg.json"
+        "detail": "/hay_day_ecosystem/api/v2/animal_items/egg.json"
       }
     },
     {
@@ -27,14 +27,14 @@
       "name": "Wheat",
       "quantity": 5,
       "links": {
-        "detail": "/api/v2/crops/wheat.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/wheat.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/hand_pies.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/hand_pies.png",
-    "html_details": "/details/details_hand_pies.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/hand_pies.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/hand_pies.png",
+    "html_details": "/hay_day_ecosystem/details/details_hand_pies.html"
   }
 }

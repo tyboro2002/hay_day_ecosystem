@@ -11,7 +11,7 @@
       "name": "Pomegranate",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/plants/pomegranate.json"
+        "detail": "/hay_day_ecosystem/api/v2/plants/pomegranate.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Mint",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/crops/mint.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/mint.json"
       }
     },
     {
@@ -27,7 +27,7 @@
       "name": "Oats",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/crops/oats.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/oats.json"
       }
     },
     {
@@ -35,14 +35,14 @@
       "name": "Coconut",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/plants/coconut.json"
+        "detail": "/hay_day_ecosystem/api/v2/plants/coconut.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/fresh_porridge.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/fresh_porridge.png",
-    "html_details": "/details/details_fresh_porridge.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/fresh_porridge.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/fresh_porridge.png",
+    "html_details": "/hay_day_ecosystem/details/details_fresh_porridge.html"
   }
 }

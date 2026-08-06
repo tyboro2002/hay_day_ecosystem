@@ -11,7 +11,7 @@
       "name": "Corn",
       "quantity": 4,
       "links": {
-        "detail": "/api/v2/crops/corn.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/corn.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Cheese",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/cheese.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cheese.json"
       }
     },
     {
@@ -27,14 +27,14 @@
       "name": "Salsa",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/salsa.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/salsa.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/nachos.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/nachos.png",
-    "html_details": "/details/details_nachos.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/nachos.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/nachos.png",
+    "html_details": "/hay_day_ecosystem/details/details_nachos.html"
   }
 }

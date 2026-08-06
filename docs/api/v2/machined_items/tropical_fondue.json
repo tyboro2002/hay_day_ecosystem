@@ -11,7 +11,7 @@
       "name": "White Sugar",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/white_sugar.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/white_sugar.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Cream",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/machined_items/cream.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cream.json"
       }
     },
     {
@@ -27,7 +27,7 @@
       "name": "Pineapple",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/crops/pineapple.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/pineapple.json"
       }
     },
     {
@@ -35,14 +35,14 @@
       "name": "Mango",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/plants/mango.json"
+        "detail": "/hay_day_ecosystem/api/v2/plants/mango.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/tropical_fondue.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/tropical_fondue.png",
-    "html_details": "/details/details_tropical_fondue.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/tropical_fondue.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/tropical_fondue.png",
+    "html_details": "/hay_day_ecosystem/details/details_tropical_fondue.html"
   }
 }

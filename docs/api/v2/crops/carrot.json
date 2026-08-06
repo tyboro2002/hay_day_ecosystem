@@ -1,10 +1,15 @@
 {
   "id": "carrot",
   "name": "Carrot",
+  "unlock_level": 9,
+  "time_to_make": 10,
+  "sell_price": 7.2,
+  "xp": 2,
+  "yield_multiplier": 2,
   "links": {
-    "self": "/api/v2/crops/carrot.json",
-    "collection": "/api/v2/crops/index.json",
-    "image": "/assets/items/carrot.png",
-    "html_details": "/details/details_carrot.html"
+    "self": "/hay_day_ecosystem/api/v2/crops/carrot.json",
+    "collection": "/hay_day_ecosystem/api/v2/crops/index.json",
+    "image": "/hay_day_ecosystem/assets/items/carrot.png",
+    "html_details": "/hay_day_ecosystem/details/details_carrot.html"
   }
 }

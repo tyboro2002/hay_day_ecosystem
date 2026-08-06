@@ -1,10 +1,15 @@
 {
   "id": "eggplant",
   "name": "Eggplant",
+  "unlock_level": 90,
+  "time_to_make": 40,
+  "sell_price": 14.0,
+  "xp": 3,
+  "yield_multiplier": 2,
   "links": {
-    "self": "/api/v2/crops/eggplant.json",
-    "collection": "/api/v2/crops/index.json",
-    "image": "/assets/items/eggplant.png",
-    "html_details": "/details/details_eggplant.html"
+    "self": "/hay_day_ecosystem/api/v2/crops/eggplant.json",
+    "collection": "/hay_day_ecosystem/api/v2/crops/index.json",
+    "image": "/hay_day_ecosystem/assets/items/eggplant.png",
+    "html_details": "/hay_day_ecosystem/details/details_eggplant.html"
   }
 }

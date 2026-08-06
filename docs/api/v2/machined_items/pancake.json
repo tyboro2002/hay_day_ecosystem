@@ -11,7 +11,7 @@
       "name": "Egg",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/animal_items/egg.json"
+        "detail": "/hay_day_ecosystem/api/v2/animal_items/egg.json"
       }
     },
     {
@@ -19,14 +19,14 @@
       "name": "Brown Sugar",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/brown_sugar.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/brown_sugar.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/pancake.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/pancake.png",
-    "html_details": "/details/details_pancake.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/pancake.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/pancake.png",
+    "html_details": "/hay_day_ecosystem/details/details_pancake.html"
   }
 }

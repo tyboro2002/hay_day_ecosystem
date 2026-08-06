@@ -11,7 +11,7 @@
       "name": "Indigo",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/crops/indigo.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/indigo.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Cotton Fabric",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/machined_items/cotton_fabric.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cotton_fabric.json"
       }
     },
     {
@@ -27,14 +27,14 @@
       "name": "Raspberry",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/plants/raspberry.json"
+        "detail": "/hay_day_ecosystem/api/v2/plants/raspberry.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/violet_dress.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/violet_dress.png",
-    "html_details": "/details/details_violet_dress.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/violet_dress.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/violet_dress.png",
+    "html_details": "/hay_day_ecosystem/details/details_violet_dress.html"
   }
 }

@@ -11,7 +11,7 @@
       "name": "Bell Pepper",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/crops/bell_pepper.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/bell_pepper.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Bacon",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/animal_items/bacon.json"
+        "detail": "/hay_day_ecosystem/api/v2/animal_items/bacon.json"
       }
     },
     {
@@ -27,7 +27,7 @@
       "name": "Rice",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/crops/rice.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/rice.json"
       }
     },
     {
@@ -35,14 +35,14 @@
       "name": "Cheese",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/cheese.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cheese.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/stuffed_peppers.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/stuffed_peppers.png",
-    "html_details": "/details/details_stuffed_peppers.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/stuffed_peppers.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/stuffed_peppers.png",
+    "html_details": "/hay_day_ecosystem/details/details_stuffed_peppers.html"
   }
 }

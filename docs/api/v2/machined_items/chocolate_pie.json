@@ -11,7 +11,7 @@
       "name": "Wheat",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/crops/wheat.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/wheat.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Cacao",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/plants/cacao.json"
+        "detail": "/hay_day_ecosystem/api/v2/plants/cacao.json"
       }
     },
     {
@@ -27,7 +27,7 @@
       "name": "Egg",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/animal_items/egg.json"
+        "detail": "/hay_day_ecosystem/api/v2/animal_items/egg.json"
       }
     },
     {
@@ -35,14 +35,14 @@
       "name": "Peanuts",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/animal_items/peanuts.json"
+        "detail": "/hay_day_ecosystem/api/v2/animal_items/peanuts.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/chocolate_pie.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/chocolate_pie.png",
-    "html_details": "/details/details_chocolate_pie.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/chocolate_pie.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/chocolate_pie.png",
+    "html_details": "/hay_day_ecosystem/details/details_chocolate_pie.html"
   }
 }

@@ -1,10 +1,15 @@
 {
   "id": "watermelon",
   "name": "Watermelon",
+  "unlock_level": 92,
+  "time_to_make": 300,
+  "sell_price": 39.0,
+  "xp": 8,
+  "yield_multiplier": 2,
   "links": {
-    "self": "/api/v2/crops/watermelon.json",
-    "collection": "/api/v2/crops/index.json",
-    "image": "/assets/items/watermelon.png",
-    "html_details": "/details/details_watermelon.html"
+    "self": "/hay_day_ecosystem/api/v2/crops/watermelon.json",
+    "collection": "/hay_day_ecosystem/api/v2/crops/index.json",
+    "image": "/hay_day_ecosystem/assets/items/watermelon.png",
+    "html_details": "/hay_day_ecosystem/details/details_watermelon.html"
   }
 }

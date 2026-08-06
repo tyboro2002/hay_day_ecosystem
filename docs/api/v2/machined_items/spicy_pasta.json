@@ -11,7 +11,7 @@
       "name": "Fresh Pasta",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/machined_items/fresh_pasta.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/fresh_pasta.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Tomato Sauce",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/tomato_sauce.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/tomato_sauce.json"
       }
     },
     {
@@ -27,7 +27,7 @@
       "name": "Chili Pepper",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/crops/chili_pepper.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/chili_pepper.json"
       }
     },
     {
@@ -35,14 +35,14 @@
       "name": "Onion",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/crops/onion.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/onion.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/spicy_pasta.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/spicy_pasta.png",
-    "html_details": "/details/details_spicy_pasta.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/spicy_pasta.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/spicy_pasta.png",
+    "html_details": "/hay_day_ecosystem/details/details_spicy_pasta.html"
   }
 }

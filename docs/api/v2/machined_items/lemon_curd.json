@@ -11,7 +11,7 @@
       "name": "Lemon",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/plants/lemon.json"
+        "detail": "/hay_day_ecosystem/api/v2/plants/lemon.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Butter",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/butter.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/butter.json"
       }
     },
     {
@@ -27,7 +27,7 @@
       "name": "Egg",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/animal_items/egg.json"
+        "detail": "/hay_day_ecosystem/api/v2/animal_items/egg.json"
       }
     },
     {
@@ -35,14 +35,14 @@
       "name": "White Sugar",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/white_sugar.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/white_sugar.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/lemon_curd.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/lemon_curd.png",
-    "html_details": "/details/details_lemon_curd.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/lemon_curd.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/lemon_curd.png",
+    "html_details": "/hay_day_ecosystem/details/details_lemon_curd.html"
   }
 }

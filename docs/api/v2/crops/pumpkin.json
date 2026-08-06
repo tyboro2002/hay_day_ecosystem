@@ -1,10 +1,15 @@
 {
   "id": "pumpkin",
   "name": "Pumpkin",
+  "unlock_level": 15,
+  "time_to_make": 180,
+  "sell_price": 32.4,
+  "xp": 6,
+  "yield_multiplier": 2,
   "links": {
-    "self": "/api/v2/crops/pumpkin.json",
-    "collection": "/api/v2/crops/index.json",
-    "image": "/assets/items/pumpkin.png",
-    "html_details": "/details/details_pumpkin.html"
+    "self": "/hay_day_ecosystem/api/v2/crops/pumpkin.json",
+    "collection": "/hay_day_ecosystem/api/v2/crops/index.json",
+    "image": "/hay_day_ecosystem/assets/items/pumpkin.png",
+    "html_details": "/hay_day_ecosystem/details/details_pumpkin.html"
   }
 }

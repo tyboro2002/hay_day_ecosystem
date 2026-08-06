@@ -1,10 +1,15 @@
 {
   "id": "mushroom",
   "name": "Mushroom",
+  "unlock_level": 89,
+  "time_to_make": 20,
+  "sell_price": 10.0,
+  "xp": 2,
+  "yield_multiplier": 2,
   "links": {
-    "self": "/api/v2/crops/mushroom.json",
-    "collection": "/api/v2/crops/index.json",
-    "image": "/assets/items/mushroom.png",
-    "html_details": "/details/details_mushroom.html"
+    "self": "/hay_day_ecosystem/api/v2/crops/mushroom.json",
+    "collection": "/hay_day_ecosystem/api/v2/crops/index.json",
+    "image": "/hay_day_ecosystem/assets/items/mushroom.png",
+    "html_details": "/hay_day_ecosystem/details/details_mushroom.html"
   }
 }

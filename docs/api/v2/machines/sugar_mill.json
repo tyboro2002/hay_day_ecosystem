@@ -44,7 +44,7 @@
       "unlock_level": 7,
       "time_to_make_minutes": 20,
       "links": {
-        "detail": "/api/v2/machined_items/brown_sugar.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/brown_sugar.json"
       }
     },
     {
@@ -53,7 +53,7 @@
       "unlock_level": 13,
       "time_to_make_minutes": 40,
       "links": {
-        "detail": "/api/v2/machined_items/white_sugar.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/white_sugar.json"
       }
     },
     {
@@ -62,14 +62,14 @@
       "unlock_level": 18,
       "time_to_make_minutes": 90,
       "links": {
-        "detail": "/api/v2/machined_items/syrup.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/syrup.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machines/sugar_mill.json",
-    "collection": "/api/v2/machines/index.json",
-    "image": "/assets/machines/sugar_mill.png",
-    "html_details": "/details/details_sugar_mill.html"
+    "self": "/hay_day_ecosystem/api/v2/machines/sugar_mill.json",
+    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
+    "image": "/hay_day_ecosystem/assets/machines/sugar_mill.png",
+    "html_details": "/hay_day_ecosystem/details/details_sugar_mill.html"
   }
 }

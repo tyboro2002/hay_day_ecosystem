@@ -11,7 +11,7 @@
       "name": "Ginger",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/crops/ginger.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/ginger.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Rice Noodles",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/rice_noodles.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/rice_noodles.json"
       }
     },
     {
@@ -27,7 +27,7 @@
       "name": "Soy Sauce",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/soy_sauce.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/soy_sauce.json"
       }
     },
     {
@@ -35,14 +35,14 @@
       "name": "Peanuts",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/animal_items/peanuts.json"
+        "detail": "/hay_day_ecosystem/api/v2/animal_items/peanuts.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/peanut_noodles.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/peanut_noodles.png",
-    "html_details": "/details/details_peanut_noodles.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/peanut_noodles.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/peanut_noodles.png",
+    "html_details": "/hay_day_ecosystem/details/details_peanut_noodles.html"
   }
 }

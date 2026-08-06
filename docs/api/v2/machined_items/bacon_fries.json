@@ -11,7 +11,7 @@
       "name": "Chili Pepper",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/crops/chili_pepper.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/chili_pepper.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Bacon",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/animal_items/bacon.json"
+        "detail": "/hay_day_ecosystem/api/v2/animal_items/bacon.json"
       }
     },
     {
@@ -27,7 +27,7 @@
       "name": "Potato",
       "quantity": 4,
       "links": {
-        "detail": "/api/v2/crops/potato.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/potato.json"
       }
     },
     {
@@ -35,14 +35,14 @@
       "name": "Garlic",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/crops/garlic.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/garlic.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/bacon_fries.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/bacon_fries.png",
-    "html_details": "/details/details_bacon_fries.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/bacon_fries.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/bacon_fries.png",
+    "html_details": "/hay_day_ecosystem/details/details_bacon_fries.html"
   }
 }

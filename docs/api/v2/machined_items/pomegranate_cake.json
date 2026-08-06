@@ -11,7 +11,7 @@
       "name": "Pomegranate",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/plants/pomegranate.json"
+        "detail": "/hay_day_ecosystem/api/v2/plants/pomegranate.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Wheat",
       "quantity": 6,
       "links": {
-        "detail": "/api/v2/crops/wheat.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/wheat.json"
       }
     },
     {
@@ -27,7 +27,7 @@
       "name": "Egg",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/animal_items/egg.json"
+        "detail": "/hay_day_ecosystem/api/v2/animal_items/egg.json"
       }
     },
     {
@@ -35,14 +35,14 @@
       "name": "Cream",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/machined_items/cream.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cream.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/pomegranate_cake.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/pomegranate_cake.png",
-    "html_details": "/details/details_pomegranate_cake.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/pomegranate_cake.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/pomegranate_cake.png",
+    "html_details": "/hay_day_ecosystem/details/details_pomegranate_cake.html"
   }
 }

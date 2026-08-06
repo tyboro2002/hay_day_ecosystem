@@ -11,7 +11,7 @@
       "name": "Cabbage",
       "quantity": 5,
       "links": {
-        "detail": "/api/v2/crops/cabbage.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/cabbage.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Ginger",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/crops/ginger.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/ginger.json"
       }
     },
     {
@@ -27,7 +27,7 @@
       "name": "Chili Pepper",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/crops/chili_pepper.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/chili_pepper.json"
       }
     },
     {
@@ -35,14 +35,14 @@
       "name": "Garlic",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/crops/garlic.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/garlic.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/kimchi.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/kimchi.png",
-    "html_details": "/details/details_kimchi.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/kimchi.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/kimchi.png",
+    "html_details": "/hay_day_ecosystem/details/details_kimchi.html"
   }
 }

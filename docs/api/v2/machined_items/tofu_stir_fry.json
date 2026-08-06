@@ -11,7 +11,7 @@
       "name": "Soybean",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/crops/soybean.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/soybean.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Onion",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/crops/onion.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/onion.json"
       }
     },
     {
@@ -27,7 +27,7 @@
       "name": "Broccoli",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/crops/broccoli.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/broccoli.json"
       }
     },
     {
@@ -35,14 +35,14 @@
       "name": "Sesame",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/crops/sesame.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/sesame.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/tofu_stir_fry.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/tofu_stir_fry.png",
-    "html_details": "/details/details_tofu_stir_fry.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/tofu_stir_fry.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/tofu_stir_fry.png",
+    "html_details": "/hay_day_ecosystem/details/details_tofu_stir_fry.html"
   }
 }

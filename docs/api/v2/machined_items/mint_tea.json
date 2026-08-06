@@ -11,7 +11,7 @@
       "name": "Tea Leaf",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/crops/tea_leaf.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/tea_leaf.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Watermelon",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/crops/watermelon.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/watermelon.json"
       }
     },
     {
@@ -27,14 +27,14 @@
       "name": "Mint",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/crops/mint.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/mint.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/mint_tea.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/mint_tea.png",
-    "html_details": "/details/details_mint_tea.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/mint_tea.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/mint_tea.png",
+    "html_details": "/hay_day_ecosystem/details/details_mint_tea.html"
   }
 }

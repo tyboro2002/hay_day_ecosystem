@@ -11,7 +11,7 @@
       "name": "Lemon Essential Oil",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/lemon_essential_oil.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/lemon_essential_oil.json"
       }
     },
     {
@@ -19,14 +19,14 @@
       "name": "Ginger",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/crops/ginger.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/ginger.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/zesty_perfume.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/zesty_perfume.png",
-    "html_details": "/details/details_zesty_perfume.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/zesty_perfume.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/zesty_perfume.png",
+    "html_details": "/hay_day_ecosystem/details/details_zesty_perfume.html"
   }
 }

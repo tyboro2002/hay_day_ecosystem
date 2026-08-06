@@ -39,7 +39,7 @@
       "unlock_level": 67,
       "time_to_make_minutes": 15,
       "links": {
-        "detail": "/api/v2/machined_items/fresh_pasta.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/fresh_pasta.json"
       }
     },
     {
@@ -48,14 +48,14 @@
       "unlock_level": 73,
       "time_to_make_minutes": 20,
       "links": {
-        "detail": "/api/v2/machined_items/rice_noodles.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/rice_noodles.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machines/pasta_maker.json",
-    "collection": "/api/v2/machines/index.json",
-    "image": "/assets/machines/pasta_maker.png",
-    "html_details": "/details/details_pasta_maker.html"
+    "self": "/hay_day_ecosystem/api/v2/machines/pasta_maker.json",
+    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
+    "image": "/hay_day_ecosystem/assets/machines/pasta_maker.png",
+    "html_details": "/hay_day_ecosystem/details/details_pasta_maker.html"
   }
 }

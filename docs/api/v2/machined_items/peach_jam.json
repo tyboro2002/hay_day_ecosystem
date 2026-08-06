@@ -11,14 +11,14 @@
       "name": "Peach",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/plants/peach.json"
+        "detail": "/hay_day_ecosystem/api/v2/plants/peach.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/peach_jam.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/peach_jam.png",
-    "html_details": "/details/details_peach_jam.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/peach_jam.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/peach_jam.png",
+    "html_details": "/hay_day_ecosystem/details/details_peach_jam.html"
   }
 }

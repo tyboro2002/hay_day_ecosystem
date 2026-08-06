@@ -11,14 +11,14 @@
       "name": "Orange",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/plants/orange.json"
+        "detail": "/hay_day_ecosystem/api/v2/plants/orange.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/orange_juice.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/orange_juice.png",
-    "html_details": "/details/details_orange_juice.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/orange_juice.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/orange_juice.png",
+    "html_details": "/hay_day_ecosystem/details/details_orange_juice.html"
   }
 }

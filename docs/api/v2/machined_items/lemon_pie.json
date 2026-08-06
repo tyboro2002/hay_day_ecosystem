@@ -11,7 +11,7 @@
       "name": "Lemon Curd",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/lemon_curd.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/lemon_curd.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Wheat",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/crops/wheat.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/wheat.json"
       }
     },
     {
@@ -27,14 +27,14 @@
       "name": "Egg",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/animal_items/egg.json"
+        "detail": "/hay_day_ecosystem/api/v2/animal_items/egg.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/lemon_pie.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/lemon_pie.png",
-    "html_details": "/details/details_lemon_pie.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/lemon_pie.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/lemon_pie.png",
+    "html_details": "/hay_day_ecosystem/details/details_lemon_pie.html"
   }
 }

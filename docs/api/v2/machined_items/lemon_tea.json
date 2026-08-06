@@ -11,7 +11,7 @@
       "name": "Tea Leaf",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/crops/tea_leaf.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/tea_leaf.json"
       }
     },
     {
@@ -19,14 +19,14 @@
       "name": "Lemon",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/plants/lemon.json"
+        "detail": "/hay_day_ecosystem/api/v2/plants/lemon.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/lemon_tea.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/lemon_tea.png",
-    "html_details": "/details/details_lemon_tea.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/lemon_tea.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/lemon_tea.png",
+    "html_details": "/hay_day_ecosystem/details/details_lemon_tea.html"
   }
 }

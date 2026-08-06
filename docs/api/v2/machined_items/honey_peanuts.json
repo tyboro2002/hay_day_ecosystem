@@ -11,7 +11,7 @@
       "name": "Honey",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/honey.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/honey.json"
       }
     },
     {
@@ -19,14 +19,14 @@
       "name": "Peanuts",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/animal_items/peanuts.json"
+        "detail": "/hay_day_ecosystem/api/v2/animal_items/peanuts.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/honey_peanuts.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/honey_peanuts.png",
-    "html_details": "/details/details_honey_peanuts.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/honey_peanuts.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/honey_peanuts.png",
+    "html_details": "/hay_day_ecosystem/details/details_honey_peanuts.html"
   }
 }

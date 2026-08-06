@@ -11,7 +11,7 @@
       "name": "Cherry Juice",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/cherry_juice.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cherry_juice.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Peony",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/crops/peony.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/peony.json"
       }
     },
     {
@@ -27,7 +27,7 @@
       "name": "Lily",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/crops/lily.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/lily.json"
       }
     },
     {
@@ -35,14 +35,14 @@
       "name": "Indigo",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/crops/indigo.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/indigo.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/birthday_bouquet.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/birthday_bouquet.png",
-    "html_details": "/details/details_birthday_bouquet.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/birthday_bouquet.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/birthday_bouquet.png",
+    "html_details": "/hay_day_ecosystem/details/details_birthday_bouquet.html"
   }
 }

@@ -1,10 +1,15 @@
 {
   "id": "potato",
   "name": "Potato",
+  "unlock_level": 35,
+  "time_to_make": 220,
+  "sell_price": 36.0,
+  "xp": 7,
+  "yield_multiplier": 2,
   "links": {
-    "self": "/api/v2/crops/potato.json",
-    "collection": "/api/v2/crops/index.json",
-    "image": "/assets/items/potato.png",
-    "html_details": "/details/details_potato.html"
+    "self": "/hay_day_ecosystem/api/v2/crops/potato.json",
+    "collection": "/hay_day_ecosystem/api/v2/crops/index.json",
+    "image": "/hay_day_ecosystem/assets/items/potato.png",
+    "html_details": "/hay_day_ecosystem/details/details_potato.html"
   }
 }

@@ -7,8 +7,8 @@ from game_data.machined_items_data import MACHINED_ITEMS
 from game_data.plants_data import PLANTS
 from game_data.special_items_data import SPECIAL_ITEMS
 
-prepart = ""
-# prepart = "/hay_day_ecosystem"
+# prepart = ""
+prepart = "/hay_day_ecosystem"
 base_path_v2 = f"{prepart}/api/v2"
 assets_path_v2 = f"{prepart}/assets"
 details_path_v2 = f"{prepart}/details"
@@ -147,6 +147,11 @@ def process_crop(crop_id, crop_name, crop_obj):
     return {
         "id": crop_id,
         "name": crop_name,
+        "unlock_level": getattr(crop_obj, 'unlock_level', None),
+        "time_to_make": getattr(crop_obj, 'time_to_make', None),
+        "sell_price": getattr(crop_obj, 'sell_price', None),
+        "xp": getattr(crop_obj, 'xp', None),
+        "yield_multiplier": getattr(crop_obj, 'yield_multiplier', None),
         "links": {
             "self": f"{base_path_v2}/{crops_dir_v2}/{crop_id}.json",
             "collection": f"{base_path_v2}/{crops_dir_v2}/index.json",

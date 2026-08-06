@@ -11,7 +11,7 @@
       "name": "Strawberry",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/crops/strawberry.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/strawberry.json"
       }
     },
     {
@@ -19,14 +19,14 @@
       "name": "Wool",
       "quantity": 6,
       "links": {
-        "detail": "/api/v2/animal_items/wool.json"
+        "detail": "/hay_day_ecosystem/api/v2/animal_items/wool.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/cloche_hat.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/cloche_hat.png",
-    "html_details": "/details/details_cloche_hat.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/cloche_hat.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/cloche_hat.png",
+    "html_details": "/hay_day_ecosystem/details/details_cloche_hat.html"
   }
 }
