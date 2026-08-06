@@ -1,6 +1,11 @@
 {
   "id": "goat_feed",
   "name": "Goat Feed",
+  "feeds_animal": "/hay_day_ecosystem/api/v2/animals/goat.json",
+  "unlock_level": 32,
+  "time_to_make": 40,
+  "sell_price": 14.4,
+  "xp": 3,
   "links": {
     "self": "/hay_day_ecosystem/api/v2/animal_feeds/goat_feed.json",
     "collection": "/hay_day_ecosystem/api/v2/animal_feeds/index.json",

@@ -1,6 +1,11 @@
 {
   "id": "sheep_feed",
   "name": "Sheep Feed",
+  "feeds_animal": "/hay_day_ecosystem/api/v2/animals/sheep.json",
+  "unlock_level": 16,
+  "time_to_make": 30,
+  "sell_price": 14.4,
+  "xp": 3,
   "links": {
     "self": "/hay_day_ecosystem/api/v2/animal_feeds/sheep_feed.json",
     "collection": "/hay_day_ecosystem/api/v2/animal_feeds/index.json",
