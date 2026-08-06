@@ -277,14 +277,12 @@ class HayDayItem:
     def __repr__(self):
         return self.name
 
-
 class Crop(HayDayItem):
     """Crops grown in fields. They don't need ingredients or specific machines."""
     def __init__(self, name, time_to_make, sell_price, xp, planted_on, unlock_level=1, yield_multiplier=2):
         super().__init__(name, time_to_make, sell_price, xp, unlock_level=unlock_level)
         self.yield_multiplier = yield_multiplier
         self.planted_on = planted_on
-
 
 class AnimalItem(HayDayItem):
     """Items collected from animals (Eggs, Milk, Wool, etc.). Links to a Pen."""
@@ -304,7 +302,6 @@ class AnimalItem(HayDayItem):
         pen_unlocked = self.pen.is_unlocked(player_level) if self.pen else True
         return (player_level >= self.unlock_level) and pen_unlocked
 
-
 class MachinedItem(HayDayItem):
     """Products made in a machine (Bread, Sugar, Feed, etc.). Links to a Machine."""
     def __init__(self, name, time_to_make, sell_price, xp, machine, unlock_level=1, ingredients=None):
@@ -314,7 +311,6 @@ class MachinedItem(HayDayItem):
         # Auto-register product to the production machine
         if self.machine:
             self.machine.products.append(self)
-
 
 class SpecialItem(HayDayItem):
     """Items like axes, dynamite, or expansion materials that aren't produced."""
