@@ -21,6 +21,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Ensure .nojekyll exists
+        run: touch docs/.nojekyll
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
@@ -32,6 +35,7 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -39,3 +43,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          timeout: 60000  # Tells the action to stop waiting after 60s if the API freezes
