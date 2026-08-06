@@ -25,7 +25,7 @@ jobs:
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: docs
 
   deploy:
     needs: build
@@ -38,4 +38,4 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v5
         with:
-          timeout: 3800000
+          timeout: 1800000
