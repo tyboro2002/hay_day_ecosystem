@@ -11,7 +11,7 @@
       "name": "Black Bean",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/black_bean.json"
+        "detail": "/api/v2/crops/black_bean.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Lettuce",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/lettuce.json"
+        "detail": "/api/v2/crops/lettuce.json"
       }
     },
     {
@@ -27,7 +27,7 @@
       "name": "Tomato",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/tomato.json"
+        "detail": "/api/v2/crops/tomato.json"
       }
     },
     {
@@ -35,14 +35,14 @@
       "name": "Corn",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/corn.json"
+        "detail": "/api/v2/crops/corn.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/bean_salad.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/bean_salad.png",
-    "html_details": "/hay_day_ecosystem/details/details_bean_salad.html"
+    "self": "/api/v2/machined_items/bean_salad.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/bean_salad.png",
+    "html_details": "/details/details_bean_salad.html"
   }
 }

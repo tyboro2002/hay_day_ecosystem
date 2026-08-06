@@ -11,7 +11,7 @@
       "name": "Corn",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/corn.json"
+        "detail": "/api/v2/crops/corn.json"
       }
     },
     {
@@ -19,14 +19,14 @@
       "name": "Cacao",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/cacao.json"
+        "detail": "/api/v2/plants/cacao.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/chocolate_popcorn.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/chocolate_popcorn.png",
-    "html_details": "/hay_day_ecosystem/details/details_chocolate_popcorn.html"
+    "self": "/api/v2/machined_items/chocolate_popcorn.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/chocolate_popcorn.png",
+    "html_details": "/details/details_chocolate_popcorn.html"
   }
 }

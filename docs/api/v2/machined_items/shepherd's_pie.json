@@ -11,7 +11,7 @@
       "name": "Potato",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/potato.json"
+        "detail": "/api/v2/crops/potato.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Carrot",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/carrot.json"
+        "detail": "/api/v2/crops/carrot.json"
       }
     },
     {
@@ -27,7 +27,7 @@
       "name": "Bacon",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/bacon.json"
+        "detail": "/api/v2/animal_items/bacon.json"
       }
     },
     {
@@ -35,14 +35,14 @@
       "name": "Pumpkin",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/pumpkin.json"
+        "detail": "/api/v2/crops/pumpkin.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/shepherd's_pie.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/shepherd's_pie.png",
-    "html_details": "/hay_day_ecosystem/details/details_shepherd's_pie.html"
+    "self": "/api/v2/machined_items/shepherd's_pie.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/shepherd's_pie.png",
+    "html_details": "/details/details_shepherd's_pie.html"
   }
 }

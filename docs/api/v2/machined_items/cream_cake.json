@@ -11,7 +11,7 @@
       "name": "Wheat",
       "quantity": 5,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/wheat.json"
+        "detail": "/api/v2/crops/wheat.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Cream",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/cream.json"
+        "detail": "/api/v2/machined_items/cream.json"
       }
     },
     {
@@ -27,14 +27,14 @@
       "name": "White Sugar",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/white_sugar.json"
+        "detail": "/api/v2/machined_items/white_sugar.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/cream_cake.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/cream_cake.png",
-    "html_details": "/hay_day_ecosystem/details/details_cream_cake.html"
+    "self": "/api/v2/machined_items/cream_cake.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/cream_cake.png",
+    "html_details": "/details/details_cream_cake.html"
   }
 }

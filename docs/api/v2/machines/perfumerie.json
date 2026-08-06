@@ -39,7 +39,7 @@
       "unlock_level": 110,
       "time_to_make_minutes": 20,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/fresh_diffuser.json"
+        "detail": "/api/v2/machined_items/fresh_diffuser.json"
       }
     },
     {
@@ -48,7 +48,7 @@
       "unlock_level": 113,
       "time_to_make_minutes": 15,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/zesty_perfume.json"
+        "detail": "/api/v2/machined_items/zesty_perfume.json"
       }
     },
     {
@@ -57,14 +57,14 @@
       "unlock_level": 116,
       "time_to_make_minutes": 25,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/calming_diffuser.json"
+        "detail": "/api/v2/machined_items/calming_diffuser.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machines/perfumerie.json",
-    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
-    "image": "/hay_day_ecosystem/assets/machines/perfumerie.png",
-    "html_details": "/hay_day_ecosystem/details/details_perfumerie.html"
+    "self": "/api/v2/machines/perfumerie.json",
+    "collection": "/api/v2/machines/index.json",
+    "image": "/assets/machines/perfumerie.png",
+    "html_details": "/details/details_perfumerie.html"
   }
 }

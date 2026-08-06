@@ -11,7 +11,7 @@
       "name": "Bacon",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/bacon.json"
+        "detail": "/api/v2/animal_items/bacon.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Broccoli",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/broccoli.json"
+        "detail": "/api/v2/crops/broccoli.json"
       }
     },
     {
@@ -27,7 +27,7 @@
       "name": "Bell Pepper",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/bell_pepper.json"
+        "detail": "/api/v2/crops/bell_pepper.json"
       }
     },
     {
@@ -35,14 +35,14 @@
       "name": "Olive Oil",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/olive_oil.json"
+        "detail": "/api/v2/machined_items/olive_oil.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/bacon_fondue.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/bacon_fondue.png",
-    "html_details": "/hay_day_ecosystem/details/details_bacon_fondue.html"
+    "self": "/api/v2/machined_items/bacon_fondue.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/bacon_fondue.png",
+    "html_details": "/details/details_bacon_fondue.html"
   }
 }

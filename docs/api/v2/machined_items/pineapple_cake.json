@@ -11,7 +11,7 @@
       "name": "Pineapple",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/pineapple.json"
+        "detail": "/api/v2/crops/pineapple.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Wheat",
       "quantity": 4,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/wheat.json"
+        "detail": "/api/v2/crops/wheat.json"
       }
     },
     {
@@ -27,7 +27,7 @@
       "name": "Egg",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/egg.json"
+        "detail": "/api/v2/animal_items/egg.json"
       }
     },
     {
@@ -35,14 +35,14 @@
       "name": "Cherry",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/cherry.json"
+        "detail": "/api/v2/plants/cherry.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/pineapple_cake.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/pineapple_cake.png",
-    "html_details": "/hay_day_ecosystem/details/details_pineapple_cake.html"
+    "self": "/api/v2/machined_items/pineapple_cake.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/pineapple_cake.png",
+    "html_details": "/details/details_pineapple_cake.html"
   }
 }

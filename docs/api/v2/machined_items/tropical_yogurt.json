@@ -11,7 +11,7 @@
       "name": "Plain Yogurt",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/plain_yogurt.json"
+        "detail": "/api/v2/machined_items/plain_yogurt.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Raspberry",
       "quantity": 4,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/raspberry.json"
+        "detail": "/api/v2/plants/raspberry.json"
       }
     },
     {
@@ -27,7 +27,7 @@
       "name": "Passion Fruit",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/passion_fruit.json"
+        "detail": "/api/v2/crops/passion_fruit.json"
       }
     },
     {
@@ -35,14 +35,14 @@
       "name": "Mango",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/mango.json"
+        "detail": "/api/v2/plants/mango.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/tropical_yogurt.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/tropical_yogurt.png",
-    "html_details": "/hay_day_ecosystem/details/details_tropical_yogurt.html"
+    "self": "/api/v2/machined_items/tropical_yogurt.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/tropical_yogurt.png",
+    "html_details": "/details/details_tropical_yogurt.html"
   }
 }

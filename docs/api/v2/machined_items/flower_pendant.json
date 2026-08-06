@@ -11,7 +11,7 @@
       "name": "Platinum Bar",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/platinum_bar.json"
+        "detail": "/api/v2/machined_items/platinum_bar.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Gold Bar",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/gold_bar.json"
+        "detail": "/api/v2/machined_items/gold_bar.json"
       }
     },
     {
@@ -27,14 +27,14 @@
       "name": "Peony",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/peony.json"
+        "detail": "/api/v2/crops/peony.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/flower_pendant.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/flower_pendant.png",
-    "html_details": "/hay_day_ecosystem/details/details_flower_pendant.html"
+    "self": "/api/v2/machined_items/flower_pendant.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/flower_pendant.png",
+    "html_details": "/details/details_flower_pendant.html"
   }
 }

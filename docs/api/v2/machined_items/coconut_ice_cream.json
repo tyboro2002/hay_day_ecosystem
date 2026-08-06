@@ -11,7 +11,7 @@
       "name": "Coconut",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/coconut.json"
+        "detail": "/api/v2/plants/coconut.json"
       }
     },
     {
@@ -19,14 +19,14 @@
       "name": "Syrup",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/syrup.json"
+        "detail": "/api/v2/machined_items/syrup.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/coconut_ice_cream.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/coconut_ice_cream.png",
-    "html_details": "/hay_day_ecosystem/details/details_coconut_ice_cream.html"
+    "self": "/api/v2/machined_items/coconut_ice_cream.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/coconut_ice_cream.png",
+    "html_details": "/details/details_coconut_ice_cream.html"
   }
 }

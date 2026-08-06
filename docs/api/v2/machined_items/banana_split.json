@@ -11,7 +11,7 @@
       "name": "Banana",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/banana.json"
+        "detail": "/api/v2/plants/banana.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Cream",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/cream.json"
+        "detail": "/api/v2/machined_items/cream.json"
       }
     },
     {
@@ -27,14 +27,14 @@
       "name": "Cherry",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/cherry.json"
+        "detail": "/api/v2/plants/cherry.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/banana_split.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/banana_split.png",
-    "html_details": "/hay_day_ecosystem/details/details_banana_split.html"
+    "self": "/api/v2/machined_items/banana_split.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/banana_split.png",
+    "html_details": "/details/details_banana_split.html"
   }
 }

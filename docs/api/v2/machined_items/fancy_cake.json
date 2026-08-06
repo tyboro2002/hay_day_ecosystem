@@ -11,7 +11,7 @@
       "name": "Cream Cake",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/cream_cake.json"
+        "detail": "/api/v2/machined_items/cream_cake.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Lily",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/lily.json"
+        "detail": "/api/v2/crops/lily.json"
       }
     },
     {
@@ -27,7 +27,7 @@
       "name": "Raspberry",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/raspberry.json"
+        "detail": "/api/v2/plants/raspberry.json"
       }
     },
     {
@@ -35,14 +35,14 @@
       "name": "Gold Ore",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/gold_ore.json"
+        "detail": "/api/v2/special_items/gold_ore.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/fancy_cake.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/fancy_cake.png",
-    "html_details": "/hay_day_ecosystem/details/details_fancy_cake.html"
+    "self": "/api/v2/machined_items/fancy_cake.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/fancy_cake.png",
+    "html_details": "/details/details_fancy_cake.html"
   }
 }

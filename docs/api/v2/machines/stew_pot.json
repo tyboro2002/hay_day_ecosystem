@@ -39,7 +39,7 @@
       "unlock_level": 106,
       "time_to_make_minutes": 90,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/chickpea_stew.json"
+        "detail": "/api/v2/machined_items/chickpea_stew.json"
       }
     },
     {
@@ -48,7 +48,7 @@
       "unlock_level": 109,
       "time_to_make_minutes": 120,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/chili_stew.json"
+        "detail": "/api/v2/machined_items/chili_stew.json"
       }
     },
     {
@@ -57,14 +57,14 @@
       "unlock_level": 112,
       "time_to_make_minutes": 140,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/winter_stew.json"
+        "detail": "/api/v2/machined_items/winter_stew.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machines/stew_pot.json",
-    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
-    "image": "/hay_day_ecosystem/assets/machines/stew_pot.png",
-    "html_details": "/hay_day_ecosystem/details/details_stew_pot.html"
+    "self": "/api/v2/machines/stew_pot.json",
+    "collection": "/api/v2/machines/index.json",
+    "image": "/assets/machines/stew_pot.png",
+    "html_details": "/details/details_stew_pot.html"
   }
 }

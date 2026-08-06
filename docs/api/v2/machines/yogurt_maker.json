@@ -39,7 +39,7 @@
       "unlock_level": 103,
       "time_to_make_minutes": 120,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/plain_yogurt.json"
+        "detail": "/api/v2/machined_items/plain_yogurt.json"
       }
     },
     {
@@ -48,7 +48,7 @@
       "unlock_level": 105,
       "time_to_make_minutes": 40,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/strawberry_yogurt.json"
+        "detail": "/api/v2/machined_items/strawberry_yogurt.json"
       }
     },
     {
@@ -57,7 +57,7 @@
       "unlock_level": 109,
       "time_to_make_minutes": 60,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/tropical_yogurt.json"
+        "detail": "/api/v2/machined_items/tropical_yogurt.json"
       }
     },
     {
@@ -66,14 +66,14 @@
       "unlock_level": 119,
       "time_to_make_minutes": 50,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/breakfast_bowl.json"
+        "detail": "/api/v2/machined_items/breakfast_bowl.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machines/yogurt_maker.json",
-    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
-    "image": "/hay_day_ecosystem/assets/machines/yogurt_maker.png",
-    "html_details": "/hay_day_ecosystem/details/details_yogurt_maker.html"
+    "self": "/api/v2/machines/yogurt_maker.json",
+    "collection": "/api/v2/machines/index.json",
+    "image": "/assets/machines/yogurt_maker.png",
+    "html_details": "/details/details_yogurt_maker.html"
   }
 }

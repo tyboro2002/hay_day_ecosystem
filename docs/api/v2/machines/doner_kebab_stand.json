@@ -39,7 +39,7 @@
       "unlock_level": 32,
       "time_to_make_minutes": 20,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/lamb_doner_wrap.json"
+        "detail": "/api/v2/machined_items/lamb_doner_wrap.json"
       }
     },
     {
@@ -48,7 +48,7 @@
       "unlock_level": 32,
       "time_to_make_minutes": 30,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/spicy_bean_doner.json"
+        "detail": "/api/v2/machined_items/spicy_bean_doner.json"
       }
     },
     {
@@ -57,14 +57,14 @@
       "unlock_level": 58,
       "time_to_make_minutes": 40,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/tower_doner_supreme.json"
+        "detail": "/api/v2/machined_items/tower_doner_supreme.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machines/doner_kebab_stand.json",
-    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
-    "image": "/hay_day_ecosystem/assets/machines/doner_kebab_stand.png",
-    "html_details": "/hay_day_ecosystem/details/details_doner_kebab_stand.html"
+    "self": "/api/v2/machines/doner_kebab_stand.json",
+    "collection": "/api/v2/machines/index.json",
+    "image": "/assets/machines/doner_kebab_stand.png",
+    "html_details": "/details/details_doner_kebab_stand.html"
   }
 }

@@ -11,7 +11,7 @@
       "name": "Chickpea",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/chickpea.json"
+        "detail": "/api/v2/crops/chickpea.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Onion",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/onion.json"
+        "detail": "/api/v2/crops/onion.json"
       }
     },
     {
@@ -27,7 +27,7 @@
       "name": "Garlic",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/garlic.json"
+        "detail": "/api/v2/crops/garlic.json"
       }
     },
     {
@@ -35,14 +35,14 @@
       "name": "Chili Pepper",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/chili_pepper.json"
+        "detail": "/api/v2/crops/chili_pepper.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/falafel.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/falafel.png",
-    "html_details": "/hay_day_ecosystem/details/details_falafel.html"
+    "self": "/api/v2/machined_items/falafel.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/falafel.png",
+    "html_details": "/details/details_falafel.html"
   }
 }

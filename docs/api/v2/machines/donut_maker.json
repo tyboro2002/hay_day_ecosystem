@@ -39,7 +39,7 @@
       "unlock_level": 76,
       "time_to_make_minutes": 15,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/plain_donut.json"
+        "detail": "/api/v2/machined_items/plain_donut.json"
       }
     },
     {
@@ -48,7 +48,7 @@
       "unlock_level": 79,
       "time_to_make_minutes": 20,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/sprinkled_donut.json"
+        "detail": "/api/v2/machined_items/sprinkled_donut.json"
       }
     },
     {
@@ -57,7 +57,7 @@
       "unlock_level": 82,
       "time_to_make_minutes": 30,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/crunchy_donut.json"
+        "detail": "/api/v2/machined_items/crunchy_donut.json"
       }
     },
     {
@@ -66,7 +66,7 @@
       "unlock_level": 86,
       "time_to_make_minutes": 25,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/cream_donut.json"
+        "detail": "/api/v2/machined_items/cream_donut.json"
       }
     },
     {
@@ -75,7 +75,7 @@
       "unlock_level": 88,
       "time_to_make_minutes": 30,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/bacon_donut.json"
+        "detail": "/api/v2/machined_items/bacon_donut.json"
       }
     },
     {
@@ -84,14 +84,14 @@
       "unlock_level": 93,
       "time_to_make_minutes": 35,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/filled_donut.json"
+        "detail": "/api/v2/machined_items/filled_donut.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machines/donut_maker.json",
-    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
-    "image": "/hay_day_ecosystem/assets/machines/donut_maker.png",
-    "html_details": "/hay_day_ecosystem/details/details_donut_maker.html"
+    "self": "/api/v2/machines/donut_maker.json",
+    "collection": "/api/v2/machines/index.json",
+    "image": "/assets/machines/donut_maker.png",
+    "html_details": "/details/details_donut_maker.html"
   }
 }

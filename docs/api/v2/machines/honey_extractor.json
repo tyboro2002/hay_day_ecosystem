@@ -39,7 +39,7 @@
       "unlock_level": 39,
       "time_to_make_minutes": 20,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/honey.json"
+        "detail": "/api/v2/machined_items/honey.json"
       }
     },
     {
@@ -48,14 +48,14 @@
       "unlock_level": 48,
       "time_to_make_minutes": 45,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/beeswax.json"
+        "detail": "/api/v2/machined_items/beeswax.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machines/honey_extractor.json",
-    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
-    "image": "/hay_day_ecosystem/assets/machines/honey_extractor.png",
-    "html_details": "/hay_day_ecosystem/details/details_honey_extractor.html"
+    "self": "/api/v2/machines/honey_extractor.json",
+    "collection": "/api/v2/machines/index.json",
+    "image": "/assets/machines/honey_extractor.png",
+    "html_details": "/details/details_honey_extractor.html"
   }
 }

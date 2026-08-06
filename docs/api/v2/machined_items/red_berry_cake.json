@@ -11,7 +11,7 @@
       "name": "Milk",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/milk.json"
+        "detail": "/api/v2/animal_items/milk.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Egg",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/egg.json"
+        "detail": "/api/v2/animal_items/egg.json"
       }
     },
     {
@@ -27,7 +27,7 @@
       "name": "Raspberry",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/raspberry.json"
+        "detail": "/api/v2/plants/raspberry.json"
       }
     },
     {
@@ -35,14 +35,14 @@
       "name": "Cherry",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/cherry.json"
+        "detail": "/api/v2/plants/cherry.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/red_berry_cake.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/red_berry_cake.png",
-    "html_details": "/hay_day_ecosystem/details/details_red_berry_cake.html"
+    "self": "/api/v2/machined_items/red_berry_cake.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/red_berry_cake.png",
+    "html_details": "/details/details_red_berry_cake.html"
   }
 }

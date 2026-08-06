@@ -11,7 +11,7 @@
       "name": "Broccoli",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/broccoli.json"
+        "detail": "/api/v2/crops/broccoli.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Onion",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/onion.json"
+        "detail": "/api/v2/crops/onion.json"
       }
     },
     {
@@ -27,14 +27,14 @@
       "name": "Potato",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/potato.json"
+        "detail": "/api/v2/crops/potato.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/broccoli_soup.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/broccoli_soup.png",
-    "html_details": "/hay_day_ecosystem/details/details_broccoli_soup.html"
+    "self": "/api/v2/machined_items/broccoli_soup.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/broccoli_soup.png",
+    "html_details": "/details/details_broccoli_soup.html"
   }
 }

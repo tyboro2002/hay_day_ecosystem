@@ -11,7 +11,7 @@
       "name": "Corn",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/corn.json"
+        "detail": "/api/v2/crops/corn.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Sesame",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/sesame.json"
+        "detail": "/api/v2/crops/sesame.json"
       }
     },
     {
@@ -27,14 +27,14 @@
       "name": "Peanuts",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/peanuts.json"
+        "detail": "/api/v2/animal_items/peanuts.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/snack_mix.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/snack_mix.png",
-    "html_details": "/hay_day_ecosystem/details/details_snack_mix.html"
+    "self": "/api/v2/machined_items/snack_mix.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/snack_mix.png",
+    "html_details": "/details/details_snack_mix.html"
   }
 }

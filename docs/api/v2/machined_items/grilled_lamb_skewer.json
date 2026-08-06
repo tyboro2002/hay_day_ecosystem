@@ -11,14 +11,14 @@
       "name": "Lamb Chop",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/lamb_chop.json"
+        "detail": "/api/v2/animal_items/lamb_chop.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/grilled_lamb_skewer.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/grilled_lamb_skewer.png",
-    "html_details": "/hay_day_ecosystem/details/details_grilled_lamb_skewer.html"
+    "self": "/api/v2/machined_items/grilled_lamb_skewer.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/grilled_lamb_skewer.png",
+    "html_details": "/details/details_grilled_lamb_skewer.html"
   }
 }

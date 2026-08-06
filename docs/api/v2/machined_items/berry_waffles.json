@@ -11,7 +11,7 @@
       "name": "Plain Waffles",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/plain_waffles.json"
+        "detail": "/api/v2/machined_items/plain_waffles.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Syrup",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/syrup.json"
+        "detail": "/api/v2/machined_items/syrup.json"
       }
     },
     {
@@ -27,7 +27,7 @@
       "name": "Raspberry",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/raspberry.json"
+        "detail": "/api/v2/plants/raspberry.json"
       }
     },
     {
@@ -35,14 +35,14 @@
       "name": "Blackberry",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/blackberry.json"
+        "detail": "/api/v2/plants/blackberry.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/berry_waffles.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/berry_waffles.png",
-    "html_details": "/hay_day_ecosystem/details/details_berry_waffles.html"
+    "self": "/api/v2/machined_items/berry_waffles.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/berry_waffles.png",
+    "html_details": "/details/details_berry_waffles.html"
   }
 }

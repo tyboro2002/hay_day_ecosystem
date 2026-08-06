@@ -39,7 +39,7 @@
       "unlock_level": 81,
       "time_to_make_minutes": 25,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/chocolate_fondue.json"
+        "detail": "/api/v2/machined_items/chocolate_fondue.json"
       }
     },
     {
@@ -48,7 +48,7 @@
       "unlock_level": 86,
       "time_to_make_minutes": 30,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/bacon_fondue.json"
+        "detail": "/api/v2/machined_items/bacon_fondue.json"
       }
     },
     {
@@ -57,7 +57,7 @@
       "unlock_level": 91,
       "time_to_make_minutes": 20,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/cheese_fondue.json"
+        "detail": "/api/v2/machined_items/cheese_fondue.json"
       }
     },
     {
@@ -66,14 +66,14 @@
       "unlock_level": 100,
       "time_to_make_minutes": 35,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/tropical_fondue.json"
+        "detail": "/api/v2/machined_items/tropical_fondue.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machines/fondue_pot.json",
-    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
-    "image": "/hay_day_ecosystem/assets/machines/fondue_pot.png",
-    "html_details": "/hay_day_ecosystem/details/details_fondue_pot.html"
+    "self": "/api/v2/machines/fondue_pot.json",
+    "collection": "/api/v2/machines/index.json",
+    "image": "/assets/machines/fondue_pot.png",
+    "html_details": "/details/details_fondue_pot.html"
   }
 }

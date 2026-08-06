@@ -11,7 +11,7 @@
       "name": "Lettuce",
       "quantity": 5,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/lettuce.json"
+        "detail": "/api/v2/crops/lettuce.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Lemon",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/lemon.json"
+        "detail": "/api/v2/plants/lemon.json"
       }
     },
     {
@@ -27,14 +27,14 @@
       "name": "Apple",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/apple.json"
+        "detail": "/api/v2/plants/apple.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/green_smoothie.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/green_smoothie.png",
-    "html_details": "/hay_day_ecosystem/details/details_green_smoothie.html"
+    "self": "/api/v2/machined_items/green_smoothie.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/green_smoothie.png",
+    "html_details": "/details/details_green_smoothie.html"
   }
 }

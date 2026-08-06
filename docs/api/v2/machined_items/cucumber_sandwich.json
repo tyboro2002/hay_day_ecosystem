@@ -11,7 +11,7 @@
       "name": "Cucumber",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/cucumber.json"
+        "detail": "/api/v2/crops/cucumber.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Bread",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/bread.json"
+        "detail": "/api/v2/machined_items/bread.json"
       }
     },
     {
@@ -27,14 +27,14 @@
       "name": "Mayonnaise",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/mayonnaise.json"
+        "detail": "/api/v2/machined_items/mayonnaise.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/cucumber_sandwich.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/cucumber_sandwich.png",
-    "html_details": "/hay_day_ecosystem/details/details_cucumber_sandwich.html"
+    "self": "/api/v2/machined_items/cucumber_sandwich.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/cucumber_sandwich.png",
+    "html_details": "/details/details_cucumber_sandwich.html"
   }
 }

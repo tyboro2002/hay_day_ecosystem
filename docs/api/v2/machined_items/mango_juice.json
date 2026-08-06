@@ -11,14 +11,14 @@
       "name": "Mango",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/mango.json"
+        "detail": "/api/v2/plants/mango.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/mango_juice.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/mango_juice.png",
-    "html_details": "/hay_day_ecosystem/details/details_mango_juice.html"
+    "self": "/api/v2/machined_items/mango_juice.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/mango_juice.png",
+    "html_details": "/details/details_mango_juice.html"
   }
 }

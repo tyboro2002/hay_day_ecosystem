@@ -11,7 +11,7 @@
       "name": "Corn Bread",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/corn_bread.json"
+        "detail": "/api/v2/machined_items/corn_bread.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Onion",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/onion.json"
+        "detail": "/api/v2/crops/onion.json"
       }
     },
     {
@@ -27,14 +27,14 @@
       "name": "Cheese",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/cheese.json"
+        "detail": "/api/v2/machined_items/cheese.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/onion_melt.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/onion_melt.png",
-    "html_details": "/hay_day_ecosystem/details/details_onion_melt.html"
+    "self": "/api/v2/machined_items/onion_melt.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/onion_melt.png",
+    "html_details": "/details/details_onion_melt.html"
   }
 }

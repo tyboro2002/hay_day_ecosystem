@@ -11,7 +11,7 @@
       "name": "Cacao",
       "quantity": 5,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/cacao.json"
+        "detail": "/api/v2/plants/cacao.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Cream",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/cream.json"
+        "detail": "/api/v2/machined_items/cream.json"
       }
     },
     {
@@ -27,7 +27,7 @@
       "name": "Wheat",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/wheat.json"
+        "detail": "/api/v2/crops/wheat.json"
       }
     },
     {
@@ -35,14 +35,14 @@
       "name": "Mint",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/mint.json"
+        "detail": "/api/v2/crops/mint.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/chocolate_roll.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/chocolate_roll.png",
-    "html_details": "/hay_day_ecosystem/details/details_chocolate_roll.html"
+    "self": "/api/v2/machined_items/chocolate_roll.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/chocolate_roll.png",
+    "html_details": "/details/details_chocolate_roll.html"
   }
 }

@@ -11,7 +11,7 @@
       "name": "Plain Waffles",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/plain_waffles.json"
+        "detail": "/api/v2/machined_items/plain_waffles.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Cacao",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/cacao.json"
+        "detail": "/api/v2/plants/cacao.json"
       }
     },
     {
@@ -27,7 +27,7 @@
       "name": "Strawberry",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/strawberry.json"
+        "detail": "/api/v2/crops/strawberry.json"
       }
     },
     {
@@ -35,14 +35,14 @@
       "name": "Banana",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/banana.json"
+        "detail": "/api/v2/plants/banana.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/chocolate_waffles.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/chocolate_waffles.png",
-    "html_details": "/hay_day_ecosystem/details/details_chocolate_waffles.html"
+    "self": "/api/v2/machined_items/chocolate_waffles.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/chocolate_waffles.png",
+    "html_details": "/details/details_chocolate_waffles.html"
   }
 }

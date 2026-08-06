@@ -11,7 +11,7 @@
       "name": "Lettuce",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/lettuce.json"
+        "detail": "/api/v2/crops/lettuce.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Soybean",
       "quantity": 6,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/soybean.json"
+        "detail": "/api/v2/crops/soybean.json"
       }
     },
     {
@@ -27,14 +27,14 @@
       "name": "Tomato",
       "quantity": 4,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/tomato.json"
+        "detail": "/api/v2/crops/tomato.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/tofu_dog.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/tofu_dog.png",
-    "html_details": "/hay_day_ecosystem/details/details_tofu_dog.html"
+    "self": "/api/v2/machined_items/tofu_dog.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/tofu_dog.png",
+    "html_details": "/details/details_tofu_dog.html"
   }
 }

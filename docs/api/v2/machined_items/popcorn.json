@@ -11,14 +11,14 @@
       "name": "Corn",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/corn.json"
+        "detail": "/api/v2/crops/corn.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/popcorn.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/popcorn.png",
-    "html_details": "/hay_day_ecosystem/details/details_popcorn.html"
+    "self": "/api/v2/machined_items/popcorn.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/popcorn.png",
+    "html_details": "/details/details_popcorn.html"
   }
 }

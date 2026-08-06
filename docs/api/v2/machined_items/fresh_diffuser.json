@@ -11,7 +11,7 @@
       "name": "Ginger Essential Oil",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/ginger_essential_oil.json"
+        "detail": "/api/v2/machined_items/ginger_essential_oil.json"
       }
     },
     {
@@ -19,14 +19,14 @@
       "name": "Mint Essential Oil",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/mint_essential_oil.json"
+        "detail": "/api/v2/machined_items/mint_essential_oil.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/fresh_diffuser.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/fresh_diffuser.png",
-    "html_details": "/hay_day_ecosystem/details/details_fresh_diffuser.html"
+    "self": "/api/v2/machined_items/fresh_diffuser.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/fresh_diffuser.png",
+    "html_details": "/details/details_fresh_diffuser.html"
   }
 }

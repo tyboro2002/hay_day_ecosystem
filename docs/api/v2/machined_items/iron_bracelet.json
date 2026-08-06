@@ -11,7 +11,7 @@
       "name": "Iron Bar",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/iron_bar.json"
+        "detail": "/api/v2/machined_items/iron_bar.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Refined coal",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/refined_coal.json"
+        "detail": "/api/v2/machined_items/refined_coal.json"
       }
     },
     {
@@ -27,14 +27,14 @@
       "name": "Silver Bar",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/silver_bar.json"
+        "detail": "/api/v2/machined_items/silver_bar.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/iron_bracelet.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/iron_bracelet.png",
-    "html_details": "/hay_day_ecosystem/details/details_iron_bracelet.html"
+    "self": "/api/v2/machined_items/iron_bracelet.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/iron_bracelet.png",
+    "html_details": "/details/details_iron_bracelet.html"
   }
 }

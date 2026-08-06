@@ -11,7 +11,7 @@
       "name": "Blackberry",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/blackberry.json"
+        "detail": "/api/v2/plants/blackberry.json"
       }
     },
     {
@@ -19,14 +19,14 @@
       "name": "Raspberry",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/raspberry.json"
+        "detail": "/api/v2/plants/raspberry.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/berry_juice.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/berry_juice.png",
-    "html_details": "/hay_day_ecosystem/details/details_berry_juice.html"
+    "self": "/api/v2/machined_items/berry_juice.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/berry_juice.png",
+    "html_details": "/details/details_berry_juice.html"
   }
 }

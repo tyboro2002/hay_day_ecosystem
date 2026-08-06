@@ -39,7 +39,7 @@
       "unlock_level": 124,
       "time_to_make_minutes": 45,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/vanilla_milkshake.json"
+        "detail": "/api/v2/machined_items/vanilla_milkshake.json"
       }
     },
     {
@@ -48,7 +48,7 @@
       "unlock_level": 125,
       "time_to_make_minutes": 30,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/mocha_milkshake.json"
+        "detail": "/api/v2/machined_items/mocha_milkshake.json"
       }
     },
     {
@@ -57,14 +57,14 @@
       "unlock_level": 126,
       "time_to_make_minutes": 35,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/fruity_milkshake.json"
+        "detail": "/api/v2/machined_items/fruity_milkshake.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machines/milkshake_bar.json",
-    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
-    "image": "/hay_day_ecosystem/assets/machines/milkshake_bar.png",
-    "html_details": "/hay_day_ecosystem/details/details_milkshake_bar.html"
+    "self": "/api/v2/machines/milkshake_bar.json",
+    "collection": "/api/v2/machines/index.json",
+    "image": "/assets/machines/milkshake_bar.png",
+    "html_details": "/details/details_milkshake_bar.html"
   }
 }

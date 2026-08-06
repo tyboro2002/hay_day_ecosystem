@@ -11,7 +11,7 @@
       "name": "Plain Waffles",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/plain_waffles.json"
+        "detail": "/api/v2/machined_items/plain_waffles.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Bacon",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/bacon.json"
+        "detail": "/api/v2/animal_items/bacon.json"
       }
     },
     {
@@ -27,7 +27,7 @@
       "name": "Egg",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/egg.json"
+        "detail": "/api/v2/animal_items/egg.json"
       }
     },
     {
@@ -35,14 +35,14 @@
       "name": "Asparagus",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/asparagus.json"
+        "detail": "/api/v2/crops/asparagus.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/breakfast_waffles.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/breakfast_waffles.png",
-    "html_details": "/hay_day_ecosystem/details/details_breakfast_waffles.html"
+    "self": "/api/v2/machined_items/breakfast_waffles.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/breakfast_waffles.png",
+    "html_details": "/details/details_breakfast_waffles.html"
   }
 }

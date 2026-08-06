@@ -11,7 +11,7 @@
       "name": "Fresh Pasta",
       "quantity": 4,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/fresh_pasta.json"
+        "detail": "/api/v2/machined_items/fresh_pasta.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Lemon",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/lemon.json"
+        "detail": "/api/v2/plants/lemon.json"
       }
     },
     {
@@ -27,7 +27,7 @@
       "name": "Olive Oil",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/olive_oil.json"
+        "detail": "/api/v2/machined_items/olive_oil.json"
       }
     },
     {
@@ -35,14 +35,14 @@
       "name": "Tomato",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/tomato.json"
+        "detail": "/api/v2/crops/tomato.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/pasta_salad.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/pasta_salad.png",
-    "html_details": "/hay_day_ecosystem/details/details_pasta_salad.html"
+    "self": "/api/v2/machined_items/pasta_salad.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/pasta_salad.png",
+    "html_details": "/details/details_pasta_salad.html"
   }
 }

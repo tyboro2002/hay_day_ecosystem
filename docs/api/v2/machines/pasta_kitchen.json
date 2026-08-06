@@ -39,7 +39,7 @@
       "unlock_level": 72,
       "time_to_make_minutes": 80,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/gnocchi.json"
+        "detail": "/api/v2/machined_items/gnocchi.json"
       }
     },
     {
@@ -48,7 +48,7 @@
       "unlock_level": 74,
       "time_to_make_minutes": 100,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/veggie_lasagna.json"
+        "detail": "/api/v2/machined_items/veggie_lasagna.json"
       }
     },
     {
@@ -57,7 +57,7 @@
       "unlock_level": 79,
       "time_to_make_minutes": 120,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/lobster_pasta.json"
+        "detail": "/api/v2/machined_items/lobster_pasta.json"
       }
     },
     {
@@ -66,7 +66,7 @@
       "unlock_level": 83,
       "time_to_make_minutes": 150,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/pasta_carbonara.json"
+        "detail": "/api/v2/machined_items/pasta_carbonara.json"
       }
     },
     {
@@ -75,7 +75,7 @@
       "unlock_level": 83,
       "time_to_make_minutes": 60,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/broccoli_pasta.json"
+        "detail": "/api/v2/machined_items/broccoli_pasta.json"
       }
     },
     {
@@ -84,7 +84,7 @@
       "unlock_level": 87,
       "time_to_make_minutes": 90,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/spicy_pasta.json"
+        "detail": "/api/v2/machined_items/spicy_pasta.json"
       }
     },
     {
@@ -93,14 +93,14 @@
       "unlock_level": 101,
       "time_to_make_minutes": 75,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/mushroom_pasta.json"
+        "detail": "/api/v2/machined_items/mushroom_pasta.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machines/pasta_kitchen.json",
-    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
-    "image": "/hay_day_ecosystem/assets/machines/pasta_kitchen.png",
-    "html_details": "/hay_day_ecosystem/details/details_pasta_kitchen.html"
+    "self": "/api/v2/machines/pasta_kitchen.json",
+    "collection": "/api/v2/machines/index.json",
+    "image": "/assets/machines/pasta_kitchen.png",
+    "html_details": "/details/details_pasta_kitchen.html"
   }
 }

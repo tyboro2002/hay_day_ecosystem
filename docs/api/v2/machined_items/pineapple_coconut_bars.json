@@ -11,7 +11,7 @@
       "name": "Coconut",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/coconut.json"
+        "detail": "/api/v2/plants/coconut.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "White Sugar",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/white_sugar.json"
+        "detail": "/api/v2/machined_items/white_sugar.json"
       }
     },
     {
@@ -27,7 +27,7 @@
       "name": "Oats",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/oats.json"
+        "detail": "/api/v2/crops/oats.json"
       }
     },
     {
@@ -35,14 +35,14 @@
       "name": "Pineapple",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/pineapple.json"
+        "detail": "/api/v2/crops/pineapple.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/pineapple_coconut_bars.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/pineapple_coconut_bars.png",
-    "html_details": "/hay_day_ecosystem/details/details_pineapple_coconut_bars.html"
+    "self": "/api/v2/machined_items/pineapple_coconut_bars.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/pineapple_coconut_bars.png",
+    "html_details": "/details/details_pineapple_coconut_bars.html"
   }
 }

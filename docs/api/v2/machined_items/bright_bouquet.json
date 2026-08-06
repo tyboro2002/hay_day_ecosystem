@@ -11,7 +11,7 @@
       "name": "Sunflower",
       "quantity": 5,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/sunflower.json"
+        "detail": "/api/v2/crops/sunflower.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Iron Ore",
       "quantity": 5,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/iron_ore.json"
+        "detail": "/api/v2/special_items/iron_ore.json"
       }
     },
     {
@@ -27,7 +27,7 @@
       "name": "Indigo",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/indigo.json"
+        "detail": "/api/v2/crops/indigo.json"
       }
     },
     {
@@ -35,14 +35,14 @@
       "name": "Cotton",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/cotton.json"
+        "detail": "/api/v2/crops/cotton.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/bright_bouquet.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/bright_bouquet.png",
-    "html_details": "/hay_day_ecosystem/details/details_bright_bouquet.html"
+    "self": "/api/v2/machined_items/bright_bouquet.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/bright_bouquet.png",
+    "html_details": "/details/details_bright_bouquet.html"
   }
 }

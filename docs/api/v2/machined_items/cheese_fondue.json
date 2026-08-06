@@ -11,7 +11,7 @@
       "name": "Potato Bread",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/potato_bread.json"
+        "detail": "/api/v2/machined_items/potato_bread.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Cheese",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/cheese.json"
+        "detail": "/api/v2/machined_items/cheese.json"
       }
     },
     {
@@ -27,7 +27,7 @@
       "name": "Mushroom",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/mushroom.json"
+        "detail": "/api/v2/crops/mushroom.json"
       }
     },
     {
@@ -35,14 +35,14 @@
       "name": "Tomato",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/tomato.json"
+        "detail": "/api/v2/crops/tomato.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/cheese_fondue.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/cheese_fondue.png",
-    "html_details": "/hay_day_ecosystem/details/details_cheese_fondue.html"
+    "self": "/api/v2/machined_items/cheese_fondue.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/cheese_fondue.png",
+    "html_details": "/details/details_cheese_fondue.html"
   }
 }

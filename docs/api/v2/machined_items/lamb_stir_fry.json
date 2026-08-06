@@ -11,7 +11,7 @@
       "name": "Rice",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/rice.json"
+        "detail": "/api/v2/crops/rice.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Grilled Lamb Skewer",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/grilled_lamb_skewer.json"
+        "detail": "/api/v2/machined_items/grilled_lamb_skewer.json"
       }
     },
     {
@@ -27,7 +27,7 @@
       "name": "Chili Pepper",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/chili_pepper.json"
+        "detail": "/api/v2/crops/chili_pepper.json"
       }
     },
     {
@@ -35,14 +35,14 @@
       "name": "Sesame",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/sesame.json"
+        "detail": "/api/v2/crops/sesame.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/lamb_stir_fry.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/lamb_stir_fry.png",
-    "html_details": "/hay_day_ecosystem/details/details_lamb_stir_fry.html"
+    "self": "/api/v2/machined_items/lamb_stir_fry.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/lamb_stir_fry.png",
+    "html_details": "/details/details_lamb_stir_fry.html"
   }
 }

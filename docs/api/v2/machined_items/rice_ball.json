@@ -11,7 +11,7 @@
       "name": "Sesame",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/sesame.json"
+        "detail": "/api/v2/crops/sesame.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Rice",
       "quantity": 20,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/rice.json"
+        "detail": "/api/v2/crops/rice.json"
       }
     },
     {
@@ -27,14 +27,14 @@
       "name": "Plum",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/plum.json"
+        "detail": "/api/v2/plants/plum.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/rice_ball.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/rice_ball.png",
-    "html_details": "/hay_day_ecosystem/details/details_rice_ball.html"
+    "self": "/api/v2/machined_items/rice_ball.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/rice_ball.png",
+    "html_details": "/details/details_rice_ball.html"
   }
 }

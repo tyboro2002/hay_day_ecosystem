@@ -11,7 +11,7 @@
       "name": "Cotton Fabric",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/cotton_fabric.json"
+        "detail": "/api/v2/machined_items/cotton_fabric.json"
       }
     },
     {
@@ -19,14 +19,14 @@
       "name": "Duck Feather",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/duck_feather.json"
+        "detail": "/api/v2/machined_items/duck_feather.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/pillow.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/pillow.png",
-    "html_details": "/hay_day_ecosystem/details/details_pillow.html"
+    "self": "/api/v2/machined_items/pillow.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/pillow.png",
+    "html_details": "/details/details_pillow.html"
   }
 }

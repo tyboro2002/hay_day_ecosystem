@@ -11,14 +11,14 @@
       "name": "Passion Fruit",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/passion_fruit.json"
+        "detail": "/api/v2/crops/passion_fruit.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/passion_fruit_jam.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/passion_fruit_jam.png",
-    "html_details": "/hay_day_ecosystem/details/details_passion_fruit_jam.html"
+    "self": "/api/v2/machined_items/passion_fruit_jam.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/passion_fruit_jam.png",
+    "html_details": "/details/details_passion_fruit_jam.html"
   }
 }

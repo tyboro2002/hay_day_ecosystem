@@ -11,7 +11,7 @@
       "name": "Olive",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/olive.json"
+        "detail": "/api/v2/plants/olive.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Bread",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/bread.json"
+        "detail": "/api/v2/machined_items/bread.json"
       }
     },
     {
@@ -27,7 +27,7 @@
       "name": "Fish Fillet",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/fish_fillet.json"
+        "detail": "/api/v2/animal_items/fish_fillet.json"
       }
     },
     {
@@ -35,14 +35,14 @@
       "name": "Lemon",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/lemon.json"
+        "detail": "/api/v2/plants/lemon.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/olive_dip.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/olive_dip.png",
-    "html_details": "/hay_day_ecosystem/details/details_olive_dip.html"
+    "self": "/api/v2/machined_items/olive_dip.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/olive_dip.png",
+    "html_details": "/details/details_olive_dip.html"
   }
 }

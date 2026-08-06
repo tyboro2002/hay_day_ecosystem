@@ -11,7 +11,7 @@
       "name": "Beeswax",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/beeswax.json"
+        "detail": "/api/v2/machined_items/beeswax.json"
       }
     },
     {
@@ -19,14 +19,14 @@
       "name": "Raspberry",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/raspberry.json"
+        "detail": "/api/v2/plants/raspberry.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/raspberry_candle.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/raspberry_candle.png",
-    "html_details": "/hay_day_ecosystem/details/details_raspberry_candle.html"
+    "self": "/api/v2/machined_items/raspberry_candle.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/raspberry_candle.png",
+    "html_details": "/details/details_raspberry_candle.html"
   }
 }

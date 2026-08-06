@@ -11,7 +11,7 @@
       "name": "Blackberry",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/blackberry.json"
+        "detail": "/api/v2/plants/blackberry.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Honey",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/honey.json"
+        "detail": "/api/v2/machined_items/honey.json"
       }
     },
     {
@@ -27,7 +27,7 @@
       "name": "Orange",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/orange.json"
+        "detail": "/api/v2/plants/orange.json"
       }
     },
     {
@@ -35,14 +35,14 @@
       "name": "Strawberry",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/strawberry.json"
+        "detail": "/api/v2/crops/strawberry.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/fruit_salad.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/fruit_salad.png",
-    "html_details": "/hay_day_ecosystem/details/details_fruit_salad.html"
+    "self": "/api/v2/machined_items/fruit_salad.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/fruit_salad.png",
+    "html_details": "/details/details_fruit_salad.html"
   }
 }

@@ -11,14 +11,14 @@
       "name": "Cherry",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/cherry.json"
+        "detail": "/api/v2/plants/cherry.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/cherry_jam.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/cherry_jam.png",
-    "html_details": "/hay_day_ecosystem/details/details_cherry_jam.html"
+    "self": "/api/v2/machined_items/cherry_jam.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/cherry_jam.png",
+    "html_details": "/details/details_cherry_jam.html"
   }
 }

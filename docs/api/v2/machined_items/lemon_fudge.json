@@ -11,7 +11,7 @@
       "name": "Butter",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/butter.json"
+        "detail": "/api/v2/machined_items/butter.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Milk",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/milk.json"
+        "detail": "/api/v2/animal_items/milk.json"
       }
     },
     {
@@ -27,7 +27,7 @@
       "name": "White Sugar",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/white_sugar.json"
+        "detail": "/api/v2/machined_items/white_sugar.json"
       }
     },
     {
@@ -35,14 +35,14 @@
       "name": "Lemon",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/lemon.json"
+        "detail": "/api/v2/plants/lemon.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/lemon_fudge.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/lemon_fudge.png",
-    "html_details": "/hay_day_ecosystem/details/details_lemon_fudge.html"
+    "self": "/api/v2/machined_items/lemon_fudge.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/lemon_fudge.png",
+    "html_details": "/details/details_lemon_fudge.html"
   }
 }

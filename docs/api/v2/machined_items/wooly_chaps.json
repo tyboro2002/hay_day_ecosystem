@@ -11,7 +11,7 @@
       "name": "Wool",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/wool.json"
+        "detail": "/api/v2/animal_items/wool.json"
       }
     },
     {
@@ -19,14 +19,14 @@
       "name": "Cotton Fabric",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/cotton_fabric.json"
+        "detail": "/api/v2/machined_items/cotton_fabric.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/wooly_chaps.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/wooly_chaps.png",
-    "html_details": "/hay_day_ecosystem/details/details_wooly_chaps.html"
+    "self": "/api/v2/machined_items/wooly_chaps.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/wooly_chaps.png",
+    "html_details": "/details/details_wooly_chaps.html"
   }
 }

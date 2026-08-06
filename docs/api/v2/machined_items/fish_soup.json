@@ -11,7 +11,7 @@
       "name": "Carrot",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/carrot.json"
+        "detail": "/api/v2/crops/carrot.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Fish Fillet",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/fish_fillet.json"
+        "detail": "/api/v2/animal_items/fish_fillet.json"
       }
     },
     {
@@ -27,7 +27,7 @@
       "name": "Milk",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/milk.json"
+        "detail": "/api/v2/animal_items/milk.json"
       }
     },
     {
@@ -35,14 +35,14 @@
       "name": "Potato",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/potato.json"
+        "detail": "/api/v2/crops/potato.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/fish_soup.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/fish_soup.png",
-    "html_details": "/hay_day_ecosystem/details/details_fish_soup.html"
+    "self": "/api/v2/machined_items/fish_soup.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/fish_soup.png",
+    "html_details": "/details/details_fish_soup.html"
   }
 }

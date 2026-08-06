@@ -11,7 +11,7 @@
       "name": "Mushroom",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/mushroom.json"
+        "detail": "/api/v2/crops/mushroom.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Lettuce",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/lettuce.json"
+        "detail": "/api/v2/crops/lettuce.json"
       }
     },
     {
@@ -27,7 +27,7 @@
       "name": "Potato",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/potato.json"
+        "detail": "/api/v2/crops/potato.json"
       }
     },
     {
@@ -35,14 +35,14 @@
       "name": "Bacon",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/bacon.json"
+        "detail": "/api/v2/animal_items/bacon.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/mushroom_salad.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/mushroom_salad.png",
-    "html_details": "/hay_day_ecosystem/details/details_mushroom_salad.html"
+    "self": "/api/v2/machined_items/mushroom_salad.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/mushroom_salad.png",
+    "html_details": "/details/details_mushroom_salad.html"
   }
 }

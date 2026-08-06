@@ -11,7 +11,7 @@
       "name": "Peach",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/peach.json"
+        "detail": "/api/v2/plants/peach.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Honey",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/honey.json"
+        "detail": "/api/v2/machined_items/honey.json"
       }
     },
     {
@@ -27,14 +27,14 @@
       "name": "Oats",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/oats.json"
+        "detail": "/api/v2/crops/oats.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/sweet_porridge.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/sweet_porridge.png",
-    "html_details": "/hay_day_ecosystem/details/details_sweet_porridge.html"
+    "self": "/api/v2/machined_items/sweet_porridge.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/sweet_porridge.png",
+    "html_details": "/details/details_sweet_porridge.html"
   }
 }

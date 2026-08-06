@@ -11,7 +11,7 @@
       "name": "Black Bean",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/black_bean.json"
+        "detail": "/api/v2/crops/black_bean.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Chili Pepper",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/chili_pepper.json"
+        "detail": "/api/v2/crops/chili_pepper.json"
       }
     },
     {
@@ -27,7 +27,7 @@
       "name": "Cheese",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/cheese.json"
+        "detail": "/api/v2/machined_items/cheese.json"
       }
     },
     {
@@ -35,14 +35,14 @@
       "name": "Corn Bread",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/corn_bread.json"
+        "detail": "/api/v2/machined_items/corn_bread.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/spicy_bean_doner.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/spicy_bean_doner.png",
-    "html_details": "/hay_day_ecosystem/details/details_spicy_bean_doner.html"
+    "self": "/api/v2/machined_items/spicy_bean_doner.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/spicy_bean_doner.png",
+    "html_details": "/details/details_spicy_bean_doner.html"
   }
 }

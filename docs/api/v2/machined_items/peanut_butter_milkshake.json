@@ -11,7 +11,7 @@
       "name": "Peanuts",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/peanuts.json"
+        "detail": "/api/v2/animal_items/peanuts.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Milk",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/milk.json"
+        "detail": "/api/v2/animal_items/milk.json"
       }
     },
     {
@@ -27,7 +27,7 @@
       "name": "Cream",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/cream.json"
+        "detail": "/api/v2/machined_items/cream.json"
       }
     },
     {
@@ -35,14 +35,14 @@
       "name": "Cacao",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/cacao.json"
+        "detail": "/api/v2/plants/cacao.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/peanut_butter_milkshake.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/peanut_butter_milkshake.png",
-    "html_details": "/hay_day_ecosystem/details/details_peanut_butter_milkshake.html"
+    "self": "/api/v2/machined_items/peanut_butter_milkshake.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/peanut_butter_milkshake.png",
+    "html_details": "/details/details_peanut_butter_milkshake.html"
   }
 }

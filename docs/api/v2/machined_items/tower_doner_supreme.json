@@ -11,7 +11,7 @@
       "name": "Lamb Chop",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/lamb_chop.json"
+        "detail": "/api/v2/animal_items/lamb_chop.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Corn Bread",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/corn_bread.json"
+        "detail": "/api/v2/machined_items/corn_bread.json"
       }
     },
     {
@@ -27,7 +27,7 @@
       "name": "Goat Cheese",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/goat_cheese.json"
+        "detail": "/api/v2/machined_items/goat_cheese.json"
       }
     },
     {
@@ -35,14 +35,14 @@
       "name": "Lettuce",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/lettuce.json"
+        "detail": "/api/v2/crops/lettuce.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/tower_doner_supreme.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/tower_doner_supreme.png",
-    "html_details": "/hay_day_ecosystem/details/details_tower_doner_supreme.html"
+    "self": "/api/v2/machined_items/tower_doner_supreme.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/tower_doner_supreme.png",
+    "html_details": "/details/details_tower_doner_supreme.html"
   }
 }

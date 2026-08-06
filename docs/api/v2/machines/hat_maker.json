@@ -39,7 +39,7 @@
       "unlock_level": 70,
       "time_to_make_minutes": 120,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/cloche_hat.json"
+        "detail": "/api/v2/machined_items/cloche_hat.json"
       }
     },
     {
@@ -48,7 +48,7 @@
       "unlock_level": 72,
       "time_to_make_minutes": 210,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/top_hat.json"
+        "detail": "/api/v2/machined_items/top_hat.json"
       }
     },
     {
@@ -57,7 +57,7 @@
       "unlock_level": 74,
       "time_to_make_minutes": 150,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/sun_hat.json"
+        "detail": "/api/v2/machined_items/sun_hat.json"
       }
     },
     {
@@ -66,14 +66,14 @@
       "unlock_level": 86,
       "time_to_make_minutes": 120,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/flower_crown.json"
+        "detail": "/api/v2/machined_items/flower_crown.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machines/hat_maker.json",
-    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
-    "image": "/hay_day_ecosystem/assets/machines/hat_maker.png",
-    "html_details": "/hay_day_ecosystem/details/details_hat_maker.html"
+    "self": "/api/v2/machines/hat_maker.json",
+    "collection": "/api/v2/machines/index.json",
+    "image": "/assets/machines/hat_maker.png",
+    "html_details": "/details/details_hat_maker.html"
   }
 }

@@ -11,7 +11,7 @@
       "name": "Bread",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/bread.json"
+        "detail": "/api/v2/machined_items/bread.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Fish Fillet",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/fish_fillet.json"
+        "detail": "/api/v2/animal_items/fish_fillet.json"
       }
     },
     {
@@ -27,14 +27,14 @@
       "name": "Chili Pepper",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/chili_pepper.json"
+        "detail": "/api/v2/crops/chili_pepper.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/fish_burger.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/fish_burger.png",
-    "html_details": "/hay_day_ecosystem/details/details_fish_burger.html"
+    "self": "/api/v2/machined_items/fish_burger.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/fish_burger.png",
+    "html_details": "/details/details_fish_burger.html"
   }
 }

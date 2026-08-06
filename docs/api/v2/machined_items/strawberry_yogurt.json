@@ -11,7 +11,7 @@
       "name": "Plain Yogurt",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/plain_yogurt.json"
+        "detail": "/api/v2/machined_items/plain_yogurt.json"
       }
     },
     {
@@ -19,14 +19,14 @@
       "name": "Strawberry Jam",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/strawberry_jam.json"
+        "detail": "/api/v2/machined_items/strawberry_jam.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/strawberry_yogurt.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/strawberry_yogurt.png",
-    "html_details": "/hay_day_ecosystem/details/details_strawberry_yogurt.html"
+    "self": "/api/v2/machined_items/strawberry_yogurt.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/strawberry_yogurt.png",
+    "html_details": "/details/details_strawberry_yogurt.html"
   }
 }

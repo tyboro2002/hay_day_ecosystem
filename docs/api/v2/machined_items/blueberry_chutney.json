@@ -11,7 +11,7 @@
       "name": "Brown Sugar",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/brown_sugar.json"
+        "detail": "/api/v2/machined_items/brown_sugar.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Lemon",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/lemon.json"
+        "detail": "/api/v2/plants/lemon.json"
       }
     },
     {
@@ -27,7 +27,7 @@
       "name": "Onion",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/onion.json"
+        "detail": "/api/v2/crops/onion.json"
       }
     },
     {
@@ -35,14 +35,14 @@
       "name": "Blueberry",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/blueberry.json"
+        "detail": "/api/v2/plants/blueberry.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/blueberry_chutney.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/blueberry_chutney.png",
-    "html_details": "/hay_day_ecosystem/details/details_blueberry_chutney.html"
+    "self": "/api/v2/machined_items/blueberry_chutney.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/blueberry_chutney.png",
+    "html_details": "/details/details_blueberry_chutney.html"
   }
 }

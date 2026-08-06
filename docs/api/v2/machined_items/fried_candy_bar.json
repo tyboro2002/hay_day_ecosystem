@@ -11,7 +11,7 @@
       "name": "Cacao",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/cacao.json"
+        "detail": "/api/v2/plants/cacao.json"
       }
     },
     {
@@ -19,7 +19,7 @@
       "name": "Cookie",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/cookie.json"
+        "detail": "/api/v2/machined_items/cookie.json"
       }
     },
     {
@@ -27,14 +27,14 @@
       "name": "Peanuts",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/peanuts.json"
+        "detail": "/api/v2/animal_items/peanuts.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/fried_candy_bar.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/fried_candy_bar.png",
-    "html_details": "/hay_day_ecosystem/details/details_fried_candy_bar.html"
+    "self": "/api/v2/machined_items/fried_candy_bar.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/fried_candy_bar.png",
+    "html_details": "/details/details_fried_candy_bar.html"
   }
 }
