@@ -1,0 +1,65 @@
+{
+  "count": 8,
+  "items": [
+    {
+      "id": "chicken_feed",
+      "name": "Chicken Feed",
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/animal_feeds/chicken_feed.json"
+      }
+    },
+    {
+      "id": "cow_feed",
+      "name": "Cow Feed",
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/animal_feeds/cow_feed.json"
+      }
+    },
+    {
+      "id": "pig_feed",
+      "name": "Pig Feed",
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/animal_feeds/pig_feed.json"
+      }
+    },
+    {
+      "id": "sheep_feed",
+      "name": "Sheep Feed",
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/animal_feeds/sheep_feed.json"
+      }
+    },
+    {
+      "id": "lamb_feed",
+      "name": "Lamb Feed",
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/animal_feeds/lamb_feed.json"
+      }
+    },
+    {
+      "id": "goat_feed",
+      "name": "Goat Feed",
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/animal_feeds/goat_feed.json"
+      }
+    },
+    {
+      "id": "wheat_bundle",
+      "name": "Wheat Bundle",
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/animal_feeds/wheat_bundle.json"
+      }
+    },
+    {
+      "id": "meat_bucket",
+      "name": "Meat Bucket",
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/animal_feeds/meat_bucket.json"
+      }
+    }
+  ],
+  "links": {
+    "self": "/hay_day_ecosystem/api/v2/animal_feeds/index.json",
+    "parent": "/hay_day_ecosystem/api/v2/index.json"
+  }
+}

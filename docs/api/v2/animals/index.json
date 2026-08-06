@@ -1,0 +1,65 @@
+{
+  "count": 8,
+  "items": [
+    {
+      "id": "chicken",
+      "name": "Chicken",
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/animals/chicken.json"
+      }
+    },
+    {
+      "id": "cow",
+      "name": "Cow",
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/animals/cow.json"
+      }
+    },
+    {
+      "id": "pig",
+      "name": "Pig",
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/animals/pig.json"
+      }
+    },
+    {
+      "id": "sheep",
+      "name": "Sheep",
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/animals/sheep.json"
+      }
+    },
+    {
+      "id": "lamb",
+      "name": "Lamb",
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/animals/lamb.json"
+      }
+    },
+    {
+      "id": "goat",
+      "name": "Goat",
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/animals/goat.json"
+      }
+    },
+    {
+      "id": "bee",
+      "name": "Bee",
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/animals/bee.json"
+      }
+    },
+    {
+      "id": "squirrel",
+      "name": "Squirrel",
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/animals/squirrel.json"
+      }
+    }
+  ],
+  "links": {
+    "self": "/hay_day_ecosystem/api/v2/animals/index.json",
+    "parent": "/hay_day_ecosystem/api/v2/index.json"
+  }
+}

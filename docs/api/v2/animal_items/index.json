@@ -1,0 +1,72 @@
+{
+  "count": 9,
+  "items": [
+    {
+      "id": "egg",
+      "name": "Egg",
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/animal_items/egg.json"
+      }
+    },
+    {
+      "id": "milk",
+      "name": "Milk",
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/animal_items/milk.json"
+      }
+    },
+    {
+      "id": "bacon",
+      "name": "Bacon",
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/animal_items/bacon.json"
+      }
+    },
+    {
+      "id": "wool",
+      "name": "Wool",
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/animal_items/wool.json"
+      }
+    },
+    {
+      "id": "lamb_chop",
+      "name": "Lamb Chop",
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/animal_items/lamb_chop.json"
+      }
+    },
+    {
+      "id": "fish_fillet",
+      "name": "Fish Fillet",
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/animal_items/fish_fillet.json"
+      }
+    },
+    {
+      "id": "goat_milk",
+      "name": "Goat Milk",
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/animal_items/goat_milk.json"
+      }
+    },
+    {
+      "id": "honeycomb",
+      "name": "Honeycomb",
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/animal_items/honeycomb.json"
+      }
+    },
+    {
+      "id": "peanuts",
+      "name": "Peanuts",
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/animal_items/peanuts.json"
+      }
+    }
+  ],
+  "links": {
+    "self": "/hay_day_ecosystem/api/v2/animal_items/index.json",
+    "parent": "/hay_day_ecosystem/api/v2/index.json"
+  }
+}

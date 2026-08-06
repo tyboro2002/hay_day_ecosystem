@@ -23,3 +23,4 @@ for viewing the page use
     python -m http.server 8000
 and go to
     http://localhost:8000/overnight_strategies.html
+    http://localhost:8000/api/v2/index.json
