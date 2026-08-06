@@ -2,6 +2,10 @@
   "id": "pig_feed",
   "name": "Pig Feed",
   "feeds_animal": "/hay_day_ecosystem/api/v2/animals/pig.json",
+  "unlock_level": 10,
+  "time_to_make": 20,
+  "sell_price": 14.4,
+  "xp": 2,
   "links": {
     "self": "/hay_day_ecosystem/api/v2/animal_feeds/pig_feed.json",
     "collection": "/hay_day_ecosystem/api/v2/animal_feeds/index.json",
