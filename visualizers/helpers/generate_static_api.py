@@ -272,27 +272,27 @@ def build_v2(output_dir="docs"):
         }
 
     def process_animal_feed(feed_id, feed_name, feed_obj):
-        # if " Feed" in feed_name:
-        #     animal_name = feed_name.replace(" Feed", "")
-        #     animal_id = animal_name.lower().replace(" ", "_").replace("-", "_")
-        #     feeds_animal_link = f"{base_path_v2}/{livestock_dir_v2}/{animal_id}.json"
-        # # elif feed_name == "Wheat Bundle":
-        # #     # Special case: Sanctuary / Farm Animals if applicable
-        # #     feeds_animal_link = f"{base_path_v2}/{livestock_dir_v2}/sanctuary_animals.json"
-        # # elif feed_name == "Meat Bucket":
-        # #     # Special case: Carnivores / Sanctuary Animals
-        # #     feeds_animal_link = f"{base_path_v2}/{livestock_dir_v2}/sanctuary_carnivores.json"
-        # else:
-        #     feeds_animal_link = None
+        if " Feed" in feed_name:
+            animal_name = feed_name.replace(" Feed", "")
+            animal_id = animal_name.lower().replace(" ", "_").replace("-", "_")
+            feeds_animal_link = f"{base_path_v2}/{livestock_dir_v2}/{animal_id}.json"
+        # elif feed_name == "Wheat Bundle":
+        #     # Special case: Sanctuary / Farm Animals if applicable
+        #     feeds_animal_link = f"{base_path_v2}/{livestock_dir_v2}/sanctuary_animals.json"
+        # elif feed_name == "Meat Bucket":
+        #     # Special case: Carnivores / Sanctuary Animals
+        #     feeds_animal_link = f"{base_path_v2}/{livestock_dir_v2}/sanctuary_carnivores.json"
+        else:
+            feeds_animal_link = None
 
         return {
             "id": feed_id,
             "name": feed_name,
-            # "feeds_animal": feeds_animal_link,
-            # "unlock_level": feed_obj.unlock_level,
-            # "time_to_make": feed_obj.time_to_make,
-            # "sell_price": feed_obj.sell_price,
-            # "xp": feed_obj.xp,
+            "feeds_animal": feeds_animal_link,
+            "unlock_level": feed_obj.unlock_level,
+            "time_to_make": feed_obj.time_to_make,
+            "sell_price": feed_obj.sell_price,
+            "xp": feed_obj.xp,
             "links": {
                 "self": f"{base_path_v2}/{animal_feeds_dir_v2}/{feed_id}.json",
                 "collection": f"{base_path_v2}/{animal_feeds_dir_v2}/index.json",

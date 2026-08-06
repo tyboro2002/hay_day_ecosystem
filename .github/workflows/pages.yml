@@ -36,3 +36,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          timeout: 60000 # Stop polling after 60 seconds (site is already live)
