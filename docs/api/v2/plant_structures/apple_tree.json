@@ -1,6 +1,10 @@
 {
   "id": "apple_tree",
   "name": "Apple Tree",
+  "coin_cost": 160,
+  "unlock_level": 15,
+  "max_harvests": 4,
+  "produces": "/hay_day_ecosystem/api/v2/plants/apple.json",
   "links": {
     "self": "/hay_day_ecosystem/api/v2/plant_structures/apple_tree.json",
     "collection": "/hay_day_ecosystem/api/v2/plant_structures/index.json",

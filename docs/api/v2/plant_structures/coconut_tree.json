@@ -1,6 +1,10 @@
 {
   "id": "coconut_tree",
   "name": "Coconut Tree",
+  "coin_cost": 810,
+  "unlock_level": 101,
+  "max_harvests": 4,
+  "produces": "/hay_day_ecosystem/api/v2/plants/coconut.json",
   "links": {
     "self": "/hay_day_ecosystem/api/v2/plant_structures/coconut_tree.json",
     "collection": "/hay_day_ecosystem/api/v2/plant_structures/index.json",

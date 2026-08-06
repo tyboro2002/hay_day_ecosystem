@@ -1,6 +1,11 @@
 {
   "id": "peach",
   "name": "Peach",
+  "harvested_from": "/hay_day_ecosystem/api/v2/plant_structures/peach_tree.json",
+  "unlock_level": 76,
+  "time_to_make": 1800,
+  "sell_price": 100.0,
+  "xp": 20,
   "links": {
     "self": "/hay_day_ecosystem/api/v2/plants/peach.json",
     "collection": "/hay_day_ecosystem/api/v2/plants/index.json",

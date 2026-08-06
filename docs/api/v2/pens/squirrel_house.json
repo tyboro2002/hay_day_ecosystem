@@ -1,6 +1,24 @@
 {
   "id": "squirrel_house",
   "name": "Squirrel House",
+  "houses_animal": "/hay_day_ecosystem/api/v2/animals/squirrel.json",
+  "produces": [
+    {
+      "id": "peanuts",
+      "name": "Peanuts",
+      "link": "/hay_day_ecosystem/api/v2/animal_items/peanuts.json"
+    }
+  ],
+  "max_capacity_per_pen": 4,
+  "unlock_schedule": [
+    {
+      "level": 62,
+      "extra_unlocks": 1
+    }
+  ],
+  "costs": [
+    45000
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/pens/squirrel_house.json",
     "collection": "/hay_day_ecosystem/api/v2/pens/index.json",

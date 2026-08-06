@@ -1,6 +1,30 @@
 {
   "id": "lamb_pasture",
   "name": "Lamb Pasture",
+  "houses_animal": "/hay_day_ecosystem/api/v2/animals/lamb.json",
+  "produces": [
+    {
+      "id": "lamb_chop",
+      "name": "Lamb Chop",
+      "link": "/hay_day_ecosystem/api/v2/animal_items/lamb_chop.json"
+    }
+  ],
+  "max_capacity_per_pen": 5,
+  "unlock_schedule": [
+    {
+      "level": 25,
+      "extra_unlocks": 1
+    },
+    {
+      "level": 30,
+      "extra_unlocks": 1
+    }
+  ],
+  "costs": [
+    500,
+    500,
+    500
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/pens/lamb_pasture.json",
     "collection": "/hay_day_ecosystem/api/v2/pens/index.json",

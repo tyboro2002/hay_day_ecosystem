@@ -1,6 +1,10 @@
 {
   "id": "banana_tree",
   "name": "Banana Tree",
+  "coin_cost": 800,
+  "unlock_level": 88,
+  "max_harvests": 4,
+  "produces": "/hay_day_ecosystem/api/v2/plants/banana.json",
   "links": {
     "self": "/hay_day_ecosystem/api/v2/plant_structures/banana_tree.json",
     "collection": "/hay_day_ecosystem/api/v2/plant_structures/index.json",

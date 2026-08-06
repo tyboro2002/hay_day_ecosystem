@@ -1,6 +1,10 @@
 {
   "id": "orange_tree",
   "name": "Orange Tree",
+  "coin_cost": 720,
+  "unlock_level": 71,
+  "max_harvests": 4,
+  "produces": "/hay_day_ecosystem/api/v2/plants/orange.json",
   "links": {
     "self": "/hay_day_ecosystem/api/v2/plant_structures/orange_tree.json",
     "collection": "/hay_day_ecosystem/api/v2/plant_structures/index.json",

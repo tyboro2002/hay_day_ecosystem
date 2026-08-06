@@ -1,6 +1,10 @@
 {
   "id": "cow",
   "name": "Cow",
+  "unlock_level": 6,
+  "housed_in": "/hay_day_ecosystem/api/v2/pens/cow_pasture.json",
+  "produces": "/hay_day_ecosystem/api/v2/animal_items/milk.json",
+  "required_food": "/hay_day_ecosystem/api/v2/animal_feeds/cow_feed.json",
   "links": {
     "self": "/hay_day_ecosystem/api/v2/animals/cow.json",
     "collection": "/hay_day_ecosystem/api/v2/animals/index.json",

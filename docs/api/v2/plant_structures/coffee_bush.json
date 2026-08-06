@@ -1,6 +1,10 @@
 {
   "id": "coffee_bush",
   "name": "Coffee Bush",
+  "coin_cost": 375,
+  "unlock_level": 42,
+  "max_harvests": 4,
+  "produces": "/hay_day_ecosystem/api/v2/plants/coffee_bean.json",
   "links": {
     "self": "/hay_day_ecosystem/api/v2/plant_structures/coffee_bush.json",
     "collection": "/hay_day_ecosystem/api/v2/plant_structures/index.json",

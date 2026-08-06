@@ -1,6 +1,10 @@
 {
   "id": "plum_tree",
   "name": "Plum Tree",
+  "coin_cost": 600,
+  "unlock_level": 94,
+  "max_harvests": 4,
+  "produces": "/hay_day_ecosystem/api/v2/plants/plum.json",
   "links": {
     "self": "/hay_day_ecosystem/api/v2/plant_structures/plum_tree.json",
     "collection": "/hay_day_ecosystem/api/v2/plant_structures/index.json",

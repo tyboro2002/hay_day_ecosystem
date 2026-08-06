@@ -1,6 +1,10 @@
 {
   "id": "blueberry_bush",
   "name": "Blueberry Bush",
+  "coin_cost": 550,
+  "unlock_level": 30,
+  "max_harvests": 4,
+  "produces": "/hay_day_ecosystem/api/v2/plants/blueberry.json",
   "links": {
     "self": "/hay_day_ecosystem/api/v2/plant_structures/blueberry_bush.json",
     "collection": "/hay_day_ecosystem/api/v2/plant_structures/index.json",

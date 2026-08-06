@@ -1,6 +1,11 @@
 {
   "id": "coconut",
   "name": "Coconut",
+  "harvested_from": "/hay_day_ecosystem/api/v2/plant_structures/coconut_tree.json",
+  "unlock_level": 101,
+  "time_to_make": 2160,
+  "sell_price": 108.0,
+  "xp": 21,
   "links": {
     "self": "/hay_day_ecosystem/api/v2/plants/coconut.json",
     "collection": "/hay_day_ecosystem/api/v2/plants/index.json",

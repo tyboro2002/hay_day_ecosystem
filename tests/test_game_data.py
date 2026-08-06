@@ -83,7 +83,7 @@ def test_livestock_registry_contains_known_animals():
     assert "Chicken" in LIVESTOCK
     assert "Cow" in LIVESTOCK
     assert "Bee" in LIVESTOCK
-    assert len(LIVESTOCK) == 7
+    assert len(LIVESTOCK) == 8
 
 
 def test_livestock_objects_link_to_their_pen_and_products():

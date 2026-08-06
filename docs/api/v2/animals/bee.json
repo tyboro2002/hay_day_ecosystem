@@ -1,6 +1,10 @@
 {
   "id": "bee",
   "name": "Bee",
+  "unlock_level": 39,
+  "housed_in": "/hay_day_ecosystem/api/v2/pens/beehive_tree.json",
+  "produces": "/hay_day_ecosystem/api/v2/animal_items/honeycomb.json",
+  "required_food": null,
   "links": {
     "self": "/hay_day_ecosystem/api/v2/animals/bee.json",
     "collection": "/hay_day_ecosystem/api/v2/animals/index.json",

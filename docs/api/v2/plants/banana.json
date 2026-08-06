@@ -1,6 +1,11 @@
 {
   "id": "banana",
   "name": "Banana",
+  "harvested_from": "/hay_day_ecosystem/api/v2/plant_structures/banana_tree.json",
+  "unlock_level": 88,
+  "time_to_make": 1620,
+  "sell_price": 104.0,
+  "xp": 20,
   "links": {
     "self": "/hay_day_ecosystem/api/v2/plants/banana.json",
     "collection": "/hay_day_ecosystem/api/v2/plants/index.json",

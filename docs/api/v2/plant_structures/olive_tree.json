@@ -1,6 +1,10 @@
 {
   "id": "olive_tree",
   "name": "Olive Tree",
+  "coin_cost": 620,
+  "unlock_level": 57,
+  "max_harvests": 4,
+  "produces": "/hay_day_ecosystem/api/v2/plants/olive.json",
   "links": {
     "self": "/hay_day_ecosystem/api/v2/plant_structures/olive_tree.json",
     "collection": "/hay_day_ecosystem/api/v2/plant_structures/index.json",

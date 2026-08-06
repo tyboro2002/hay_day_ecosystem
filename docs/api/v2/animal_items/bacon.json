@@ -1,6 +1,12 @@
 {
   "id": "bacon",
   "name": "Bacon",
+  "collected_from": "/hay_day_ecosystem/api/v2/pens/pig_pen.json",
+  "produced_by_animal": "/hay_day_ecosystem/api/v2/animals/pig.json",
+  "unlock_level": 10,
+  "time_to_make": 240,
+  "sell_price": 50.4,
+  "xp": 5,
   "links": {
     "self": "/hay_day_ecosystem/api/v2/animal_items/bacon.json",
     "collection": "/hay_day_ecosystem/api/v2/animal_items/index.json",

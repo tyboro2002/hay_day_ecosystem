@@ -1,6 +1,34 @@
 {
   "id": "goat_yard",
   "name": "Goat Yard",
+  "houses_animal": "/hay_day_ecosystem/api/v2/animals/goat.json",
+  "produces": [
+    {
+      "id": "goat_milk",
+      "name": "Goat Milk",
+      "link": "/hay_day_ecosystem/api/v2/animal_items/goat_milk.json"
+    }
+  ],
+  "max_capacity_per_pen": 4,
+  "unlock_schedule": [
+    {
+      "level": 32,
+      "extra_unlocks": 1
+    },
+    {
+      "level": 37,
+      "extra_unlocks": 1
+    },
+    {
+      "level": 50,
+      "extra_unlocks": 1
+    }
+  ],
+  "costs": [
+    1000,
+    1000,
+    1000
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/pens/goat_yard.json",
     "collection": "/hay_day_ecosystem/api/v2/pens/index.json",

@@ -1,6 +1,12 @@
 {
   "id": "goat_milk",
   "name": "Goat Milk",
+  "collected_from": "/hay_day_ecosystem/api/v2/pens/goat_yard.json",
+  "produced_by_animal": "/hay_day_ecosystem/api/v2/animals/goat.json",
+  "unlock_level": 32,
+  "time_to_make": 480,
+  "sell_price": 64.8,
+  "xp": 6,
   "links": {
     "self": "/hay_day_ecosystem/api/v2/animal_items/goat_milk.json",
     "collection": "/hay_day_ecosystem/api/v2/animal_items/index.json",

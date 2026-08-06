@@ -1,6 +1,34 @@
 {
   "id": "pig_pen",
   "name": "Pig Pen",
+  "houses_animal": "/hay_day_ecosystem/api/v2/animals/pig.json",
+  "produces": [
+    {
+      "id": "bacon",
+      "name": "Bacon",
+      "link": "/hay_day_ecosystem/api/v2/animal_items/bacon.json"
+    }
+  ],
+  "max_capacity_per_pen": 5,
+  "unlock_schedule": [
+    {
+      "level": 10,
+      "extra_unlocks": 1
+    },
+    {
+      "level": 18,
+      "extra_unlocks": 1
+    },
+    {
+      "level": 32,
+      "extra_unlocks": 1
+    }
+  ],
+  "costs": [
+    150,
+    150,
+    150
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/pens/pig_pen.json",
     "collection": "/hay_day_ecosystem/api/v2/pens/index.json",

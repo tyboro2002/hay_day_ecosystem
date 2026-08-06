@@ -1,6 +1,10 @@
 {
   "id": "lamb",
   "name": "Lamb",
+  "unlock_level": 25,
+  "housed_in": "/hay_day_ecosystem/api/v2/pens/lamb_pasture.json",
+  "produces": "/hay_day_ecosystem/api/v2/animal_items/lamb_chop.json",
+  "required_food": "/hay_day_ecosystem/api/v2/animal_feeds/lamb_feed.json",
   "links": {
     "self": "/hay_day_ecosystem/api/v2/animals/lamb.json",
     "collection": "/hay_day_ecosystem/api/v2/animals/index.json",

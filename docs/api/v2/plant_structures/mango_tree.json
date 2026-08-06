@@ -1,6 +1,10 @@
 {
   "id": "mango_tree",
   "name": "Mango Tree",
+  "coin_cost": 770,
+  "unlock_level": 97,
+  "max_harvests": 4,
+  "produces": "/hay_day_ecosystem/api/v2/plants/mango.json",
   "links": {
     "self": "/hay_day_ecosystem/api/v2/plant_structures/mango_tree.json",
     "collection": "/hay_day_ecosystem/api/v2/plant_structures/index.json",

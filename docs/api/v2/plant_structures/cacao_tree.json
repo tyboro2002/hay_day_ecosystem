@@ -1,6 +1,10 @@
 {
   "id": "cacao_tree",
   "name": "Cacao Tree",
+  "coin_cost": 550,
+  "unlock_level": 36,
+  "max_harvests": 4,
+  "produces": "/hay_day_ecosystem/api/v2/plants/cacao.json",
   "links": {
     "self": "/hay_day_ecosystem/api/v2/plant_structures/cacao_tree.json",
     "collection": "/hay_day_ecosystem/api/v2/plant_structures/index.json",

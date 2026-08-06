@@ -1,6 +1,34 @@
 {
   "id": "chicken_coop",
   "name": "Chicken Coop",
+  "houses_animal": "/hay_day_ecosystem/api/v2/animals/chicken.json",
+  "produces": [
+    {
+      "id": "egg",
+      "name": "Egg",
+      "link": "/hay_day_ecosystem/api/v2/animal_items/egg.json"
+    }
+  ],
+  "max_capacity_per_pen": 6,
+  "unlock_schedule": [
+    {
+      "level": 1,
+      "extra_unlocks": 1
+    },
+    {
+      "level": 12,
+      "extra_unlocks": 1
+    },
+    {
+      "level": 23,
+      "extra_unlocks": 1
+    }
+  ],
+  "costs": [
+    5,
+    5,
+    5
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/pens/chicken_coop.json",
     "collection": "/hay_day_ecosystem/api/v2/pens/index.json",

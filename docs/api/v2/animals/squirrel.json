@@ -1,6 +1,10 @@
 {
   "id": "squirrel",
   "name": "Squirrel",
+  "unlock_level": 62,
+  "housed_in": "/hay_day_ecosystem/api/v2/pens/squirrel_house.json",
+  "produces": "/hay_day_ecosystem/api/v2/animal_items/peanuts.json",
+  "required_food": null,
   "links": {
     "self": "/hay_day_ecosystem/api/v2/animals/squirrel.json",
     "collection": "/hay_day_ecosystem/api/v2/animals/index.json",

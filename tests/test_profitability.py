@@ -42,7 +42,7 @@ def test_calculate_direct_ingredient_cost_for_known_items():
 def test_analyze_value_added_returns_expected_report_shape():
     reports = analyze_value_added(silent=True)
 
-    assert len(reports) == 136
+    assert len(reports) == 398
     assert reports[0]["name"] in ITEMS
     assert all("name" in report for report in reports)
     assert all("value_added" in report for report in reports)
