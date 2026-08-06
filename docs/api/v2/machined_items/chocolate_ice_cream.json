@@ -1,6 +1,44 @@
 {
   "id": "chocolate_ice_cream",
   "name": "Chocolate Ice Cream",
+  "unlock_level": 39,
+  "time_to_make": 150,
+  "sell_price": 342.0,
+  "xp": 41,
+  "ingredients": [
+    {
+      "id": "milk",
+      "name": "Milk",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/milk.json"
+      }
+    },
+    {
+      "id": "cream",
+      "name": "Cream",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cream.json"
+      }
+    },
+    {
+      "id": "white_sugar",
+      "name": "White Sugar",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/white_sugar.json"
+      }
+    },
+    {
+      "id": "cacao",
+      "name": "Cacao",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cacao.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/chocolate_ice_cream.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

@@ -1,6 +1,44 @@
 {
   "id": "peanut_noodles",
   "name": "Peanut Noodles",
+  "unlock_level": 86,
+  "time_to_make": 45,
+  "sell_price": 597.0,
+  "xp": 80,
+  "ingredients": [
+    {
+      "id": "ginger",
+      "name": "Ginger",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/ginger.json"
+      }
+    },
+    {
+      "id": "rice_noodles",
+      "name": "Rice Noodles",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/rice_noodles.json"
+      }
+    },
+    {
+      "id": "soy_sauce",
+      "name": "Soy Sauce",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/soy_sauce.json"
+      }
+    },
+    {
+      "id": "peanuts",
+      "name": "Peanuts",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/peanuts.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/peanut_noodles.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

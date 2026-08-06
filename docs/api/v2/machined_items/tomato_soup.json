@@ -1,6 +1,44 @@
 {
   "id": "tomato_soup",
   "name": "Tomato Soup",
+  "unlock_level": 47,
+  "time_to_make": 90,
+  "sell_price": 478.8,
+  "xp": 57,
+  "ingredients": [
+    {
+      "id": "chili_pepper",
+      "name": "Chili Pepper",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/chili_pepper.json"
+      }
+    },
+    {
+      "id": "goat_cheese",
+      "name": "Goat Cheese",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/goat_cheese.json"
+      }
+    },
+    {
+      "id": "tomato_juice",
+      "name": "Tomato Juice",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/tomato_juice.json"
+      }
+    },
+    {
+      "id": "tomato",
+      "name": "Tomato",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/tomato.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/tomato_soup.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

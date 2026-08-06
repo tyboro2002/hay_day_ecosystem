@@ -1,6 +1,44 @@
 {
   "id": "spicy_fish",
   "name": "Spicy Fish",
+  "unlock_level": 79,
+  "time_to_make": 90,
+  "sell_price": 543.0,
+  "xp": 65,
+  "ingredients": [
+    {
+      "id": "fish_fillet",
+      "name": "Fish Fillet",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/fish_fillet.json"
+      }
+    },
+    {
+      "id": "chili_pepper",
+      "name": "Chili Pepper",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/chili_pepper.json"
+      }
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic",
+      "quantity": 5,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/garlic.json"
+      }
+    },
+    {
+      "id": "olive_oil",
+      "name": "Olive Oil",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/olive_oil.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/spicy_fish.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

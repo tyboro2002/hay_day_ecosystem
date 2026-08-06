@@ -1,6 +1,44 @@
 {
   "id": "baked_potato",
   "name": "Baked Potato",
+  "unlock_level": 35,
+  "time_to_make": 35,
+  "sell_price": 298.8,
+  "xp": 36,
+  "ingredients": [
+    {
+      "id": "cheese",
+      "name": "Cheese",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cheese.json"
+      }
+    },
+    {
+      "id": "chili_pepper",
+      "name": "Chili Pepper",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/chili_pepper.json"
+      }
+    },
+    {
+      "id": "cream",
+      "name": "Cream",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cream.json"
+      }
+    },
+    {
+      "id": "potato",
+      "name": "Potato",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/potato.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/baked_potato.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

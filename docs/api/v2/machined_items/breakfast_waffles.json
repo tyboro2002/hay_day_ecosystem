@@ -1,6 +1,44 @@
 {
   "id": "breakfast_waffles",
   "name": "Breakfast Waffles",
+  "unlock_level": 119,
+  "time_to_make": 45,
+  "sell_price": 424.0,
+  "xp": 51,
+  "ingredients": [
+    {
+      "id": "plain_waffles",
+      "name": "Plain Waffles",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/plain_waffles.json"
+      }
+    },
+    {
+      "id": "bacon",
+      "name": "Bacon",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/bacon.json"
+      }
+    },
+    {
+      "id": "egg",
+      "name": "Egg",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/egg.json"
+      }
+    },
+    {
+      "id": "asparagus",
+      "name": "Asparagus",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/asparagus.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/breakfast_waffles.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

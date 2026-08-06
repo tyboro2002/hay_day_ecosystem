@@ -1,6 +1,44 @@
 {
   "id": "mushroom_pot_pie",
   "name": "Mushroom Pot Pie",
+  "unlock_level": 97,
+  "time_to_make": 60,
+  "sell_price": 162.0,
+  "xp": 19,
+  "ingredients": [
+    {
+      "id": "mushroom",
+      "name": "Mushroom",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/mushroom.json"
+      }
+    },
+    {
+      "id": "cabbage",
+      "name": "Cabbage",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cabbage.json"
+      }
+    },
+    {
+      "id": "wheat",
+      "name": "Wheat",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/wheat.json"
+      }
+    },
+    {
+      "id": "egg",
+      "name": "Egg",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/egg.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/mushroom_pot_pie.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

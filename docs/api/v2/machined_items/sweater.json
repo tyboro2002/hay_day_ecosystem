@@ -1,6 +1,20 @@
 {
   "id": "sweater",
   "name": "Sweater",
+  "unlock_level": 17,
+  "time_to_make": 120,
+  "sell_price": 151.2,
+  "xp": 18,
+  "ingredients": [
+    {
+      "id": "wool",
+      "name": "Wool",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/wool.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/sweater.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

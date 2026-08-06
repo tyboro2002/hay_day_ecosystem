@@ -1,6 +1,44 @@
 {
   "id": "kimchi",
   "name": "Kimchi",
+  "unlock_level": 98,
+  "time_to_make": 300,
+  "sell_price": 219.0,
+  "xp": 26,
+  "ingredients": [
+    {
+      "id": "cabbage",
+      "name": "Cabbage",
+      "quantity": 5,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cabbage.json"
+      }
+    },
+    {
+      "id": "ginger",
+      "name": "Ginger",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/ginger.json"
+      }
+    },
+    {
+      "id": "chili_pepper",
+      "name": "Chili Pepper",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/chili_pepper.json"
+      }
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/garlic.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/kimchi.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

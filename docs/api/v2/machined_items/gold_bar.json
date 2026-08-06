@@ -1,6 +1,20 @@
 {
   "id": "gold_bar",
   "name": "Gold Bar",
+  "unlock_level": 25,
+  "time_to_make": 720,
+  "sell_price": 180.0,
+  "xp": 21,
+  "ingredients": [
+    {
+      "id": "gold_ore",
+      "name": "Gold Ore",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/gold_ore.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/gold_bar.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

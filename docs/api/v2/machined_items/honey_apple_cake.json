@@ -1,6 +1,44 @@
 {
   "id": "honey_apple_cake",
   "name": "Honey Apple Cake",
+  "unlock_level": 42,
+  "time_to_make": 200,
+  "sell_price": 482.4,
+  "xp": 57,
+  "ingredients": [
+    {
+      "id": "honey",
+      "name": "Honey",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/honey.json"
+      }
+    },
+    {
+      "id": "apple",
+      "name": "Apple",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/apple.json"
+      }
+    },
+    {
+      "id": "egg",
+      "name": "Egg",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/egg.json"
+      }
+    },
+    {
+      "id": "wheat",
+      "name": "Wheat",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/wheat.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/honey_apple_cake.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

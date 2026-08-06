@@ -1,6 +1,28 @@
 {
   "id": "mayonnaise",
   "name": "Mayonnaise",
+  "unlock_level": 62,
+  "time_to_make": 15,
+  "sell_price": 367.0,
+  "xp": 44,
+  "ingredients": [
+    {
+      "id": "egg",
+      "name": "Egg",
+      "quantity": 4,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/egg.json"
+      }
+    },
+    {
+      "id": "olive_oil",
+      "name": "Olive Oil",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/olive_oil.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/mayonnaise.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

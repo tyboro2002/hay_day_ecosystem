@@ -1,6 +1,36 @@
 {
   "id": "cucumber_smoothie",
   "name": "Cucumber Smoothie",
+  "unlock_level": 70,
+  "time_to_make": 40,
+  "sell_price": 266.0,
+  "xp": 32,
+  "ingredients": [
+    {
+      "id": "cucumber",
+      "name": "Cucumber",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cucumber.json"
+      }
+    },
+    {
+      "id": "honey",
+      "name": "Honey",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/honey.json"
+      }
+    },
+    {
+      "id": "pineapple",
+      "name": "Pineapple",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/pineapple.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/cucumber_smoothie.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

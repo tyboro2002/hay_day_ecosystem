@@ -1,6 +1,44 @@
 {
   "id": "stuffed_peppers",
   "name": "Stuffed Peppers",
+  "unlock_level": 80,
+  "time_to_make": 20,
+  "sell_price": 352.0,
+  "xp": 42,
+  "ingredients": [
+    {
+      "id": "bell_pepper",
+      "name": "Bell Pepper",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/bell_pepper.json"
+      }
+    },
+    {
+      "id": "bacon",
+      "name": "Bacon",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/bacon.json"
+      }
+    },
+    {
+      "id": "rice",
+      "name": "Rice",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/rice.json"
+      }
+    },
+    {
+      "id": "cheese",
+      "name": "Cheese",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cheese.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/stuffed_peppers.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

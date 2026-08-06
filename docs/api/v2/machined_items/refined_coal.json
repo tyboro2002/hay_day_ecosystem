@@ -1,6 +1,20 @@
 {
   "id": "refined_coal",
   "name": "Refined coal",
+  "unlock_level": 33,
+  "time_to_make": 360,
+  "sell_price": 108.0,
+  "xp": 13,
+  "ingredients": [
+    {
+      "id": "coal",
+      "name": "Coal",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/coal.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/refined_coal.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

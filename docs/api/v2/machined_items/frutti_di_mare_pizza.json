@@ -1,6 +1,44 @@
 {
   "id": "frutti_di_mare_pizza",
   "name": "Frutti Di Mare Pizza",
+  "unlock_level": 45,
+  "time_to_make": 15,
+  "sell_price": 403.2,
+  "xp": 48,
+  "ingredients": [
+    {
+      "id": "wheat",
+      "name": "Wheat",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/wheat.json"
+      }
+    },
+    {
+      "id": "cheese",
+      "name": "Cheese",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cheese.json"
+      }
+    },
+    {
+      "id": "fish_fillet",
+      "name": "Fish Fillet",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/fish_fillet.json"
+      }
+    },
+    {
+      "id": "lobster_tail",
+      "name": "Lobster Tail",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/lobster_tail.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/frutti_di_mare_pizza.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

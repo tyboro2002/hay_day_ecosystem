@@ -1,6 +1,20 @@
 {
   "id": "cotton_fabric",
   "name": "Cotton Fabric",
+  "unlock_level": 18,
+  "time_to_make": 30,
+  "sell_price": 108.0,
+  "xp": 13,
+  "ingredients": [
+    {
+      "id": "cotton",
+      "name": "Cotton",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cotton.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/cotton_fabric.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

@@ -1,6 +1,28 @@
 {
   "id": "lemon_tea",
   "name": "Lemon Tea",
+  "unlock_level": 86,
+  "time_to_make": 20,
+  "sell_price": 241.0,
+  "xp": 29,
+  "ingredients": [
+    {
+      "id": "tea_leaf",
+      "name": "Tea Leaf",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/tea_leaf.json"
+      }
+    },
+    {
+      "id": "lemon",
+      "name": "Lemon",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/lemon.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/lemon_tea.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

@@ -1,6 +1,28 @@
 {
   "id": "fresh_diffuser",
   "name": "Fresh Diffuser",
+  "unlock_level": 110,
+  "time_to_make": 20,
+  "sell_price": 349.0,
+  "xp": 42,
+  "ingredients": [
+    {
+      "id": "ginger_essential_oil",
+      "name": "Ginger Essential Oil",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/ginger_essential_oil.json"
+      }
+    },
+    {
+      "id": "mint_essential_oil",
+      "name": "Mint Essential Oil",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/mint_essential_oil.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/fresh_diffuser.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

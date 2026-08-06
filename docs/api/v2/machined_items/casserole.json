@@ -1,6 +1,44 @@
 {
   "id": "casserole",
   "name": "Casserole",
+  "unlock_level": 36,
+  "time_to_make": 120,
+  "sell_price": 367.2,
+  "xp": 44,
+  "ingredients": [
+    {
+      "id": "bacon",
+      "name": "Bacon",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/bacon.json"
+      }
+    },
+    {
+      "id": "cheese",
+      "name": "Cheese",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cheese.json"
+      }
+    },
+    {
+      "id": "egg",
+      "name": "Egg",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/egg.json"
+      }
+    },
+    {
+      "id": "potato",
+      "name": "Potato",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/potato.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/casserole.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

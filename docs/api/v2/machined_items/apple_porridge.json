@@ -1,6 +1,36 @@
 {
   "id": "apple_porridge",
   "name": "Apple Porridge",
+  "unlock_level": 119,
+  "time_to_make": 20,
+  "sell_price": 522.0,
+  "xp": 62,
+  "ingredients": [
+    {
+      "id": "apple",
+      "name": "Apple",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/apple.json"
+      }
+    },
+    {
+      "id": "apple_jam",
+      "name": "Apple Jam",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/apple_jam.json"
+      }
+    },
+    {
+      "id": "oats",
+      "name": "Oats",
+      "quantity": 4,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/oats.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/apple_porridge.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

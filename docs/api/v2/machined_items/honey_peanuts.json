@@ -1,6 +1,28 @@
 {
   "id": "honey_peanuts",
   "name": "Honey Peanuts",
+  "unlock_level": 63,
+  "time_to_make": 40,
+  "sell_price": 468.0,
+  "xp": 64,
+  "ingredients": [
+    {
+      "id": "honey",
+      "name": "Honey",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/honey.json"
+      }
+    },
+    {
+      "id": "peanuts",
+      "name": "Peanuts",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/peanuts.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/honey_peanuts.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

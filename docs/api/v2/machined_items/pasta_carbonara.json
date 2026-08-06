@@ -1,6 +1,44 @@
 {
   "id": "pasta_carbonara",
   "name": "Pasta Carbonara",
+  "unlock_level": 83,
+  "time_to_make": 150,
+  "sell_price": 410.0,
+  "xp": 49,
+  "ingredients": [
+    {
+      "id": "fresh_pasta",
+      "name": "Fresh Pasta",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/fresh_pasta.json"
+      }
+    },
+    {
+      "id": "bacon",
+      "name": "Bacon",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/bacon.json"
+      }
+    },
+    {
+      "id": "egg",
+      "name": "Egg",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/egg.json"
+      }
+    },
+    {
+      "id": "cheese",
+      "name": "Cheese",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cheese.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/pasta_carbonara.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

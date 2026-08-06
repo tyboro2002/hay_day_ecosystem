@@ -1,6 +1,36 @@
 {
   "id": "honey_soap",
   "name": "Honey Soap",
+  "unlock_level": 84,
+  "time_to_make": 60,
+  "sell_price": 327.0,
+  "xp": 39,
+  "ingredients": [
+    {
+      "id": "goat_milk",
+      "name": "Goat Milk",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/goat_milk.json"
+      }
+    },
+    {
+      "id": "cacao",
+      "name": "Cacao",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cacao.json"
+      }
+    },
+    {
+      "id": "honey",
+      "name": "Honey",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/honey.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/honey_soap.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

@@ -1,6 +1,44 @@
 {
   "id": "tower_doner_supreme",
   "name": "Tower Doner Supreme",
+  "unlock_level": 58,
+  "time_to_make": 40,
+  "sell_price": 356.0,
+  "xp": 42,
+  "ingredients": [
+    {
+      "id": "lamb_chop",
+      "name": "Lamb Chop",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/lamb_chop.json"
+      }
+    },
+    {
+      "id": "corn_bread",
+      "name": "Corn Bread",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/corn_bread.json"
+      }
+    },
+    {
+      "id": "goat_cheese",
+      "name": "Goat Cheese",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/goat_cheese.json"
+      }
+    },
+    {
+      "id": "lettuce",
+      "name": "Lettuce",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/lettuce.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/tower_doner_supreme.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

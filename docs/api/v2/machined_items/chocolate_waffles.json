@@ -1,6 +1,44 @@
 {
   "id": "chocolate_waffles",
   "name": "Chocolate Waffles",
+  "unlock_level": 117,
+  "time_to_make": 40,
+  "sell_price": 637.0,
+  "xp": 76,
+  "ingredients": [
+    {
+      "id": "plain_waffles",
+      "name": "Plain Waffles",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/plain_waffles.json"
+      }
+    },
+    {
+      "id": "cacao",
+      "name": "Cacao",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cacao.json"
+      }
+    },
+    {
+      "id": "strawberry",
+      "name": "Strawberry",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/strawberry.json"
+      }
+    },
+    {
+      "id": "banana",
+      "name": "Banana",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/banana.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/chocolate_waffles.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

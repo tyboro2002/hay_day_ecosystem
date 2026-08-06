@@ -1,6 +1,44 @@
 {
   "id": "banana_pancakes",
   "name": "Banana Pancakes",
+  "unlock_level": 94,
+  "time_to_make": 60,
+  "sell_price": 352.0,
+  "xp": 42,
+  "ingredients": [
+    {
+      "id": "banana",
+      "name": "Banana",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/banana.json"
+      }
+    },
+    {
+      "id": "blackberry",
+      "name": "Blackberry",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/blackberry.json"
+      }
+    },
+    {
+      "id": "wheat",
+      "name": "Wheat",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/wheat.json"
+      }
+    },
+    {
+      "id": "cream",
+      "name": "Cream",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cream.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/banana_pancakes.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

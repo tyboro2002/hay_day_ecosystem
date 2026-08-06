@@ -1,6 +1,36 @@
 {
   "id": "pizza",
   "name": "Pizza",
+  "unlock_level": 33,
+  "time_to_make": 15,
+  "sell_price": 190.8,
+  "xp": 23,
+  "ingredients": [
+    {
+      "id": "wheat",
+      "name": "Wheat",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/wheat.json"
+      }
+    },
+    {
+      "id": "tomato",
+      "name": "Tomato",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/tomato.json"
+      }
+    },
+    {
+      "id": "cheese",
+      "name": "Cheese",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cheese.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/pizza.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

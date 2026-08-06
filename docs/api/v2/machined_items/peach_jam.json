@@ -1,6 +1,20 @@
 {
   "id": "peach_jam",
   "name": "Peach Jam",
+  "unlock_level": 79,
+  "time_to_make": 480,
+  "sell_price": 464.0,
+  "xp": 55,
+  "ingredients": [
+    {
+      "id": "peach",
+      "name": "Peach",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/peach.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/peach_jam.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

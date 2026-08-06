@@ -1,6 +1,44 @@
 {
   "id": "lemon_fudge",
   "name": "Lemon Fudge",
+  "unlock_level": 108,
+  "time_to_make": 110,
+  "sell_price": 590.0,
+  "xp": 70,
+  "ingredients": [
+    {
+      "id": "butter",
+      "name": "Butter",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/butter.json"
+      }
+    },
+    {
+      "id": "milk",
+      "name": "Milk",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/milk.json"
+      }
+    },
+    {
+      "id": "white_sugar",
+      "name": "White Sugar",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/white_sugar.json"
+      }
+    },
+    {
+      "id": "lemon",
+      "name": "Lemon",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/lemon.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/lemon_fudge.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

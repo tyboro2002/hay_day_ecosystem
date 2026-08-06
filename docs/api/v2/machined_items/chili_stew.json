@@ -1,6 +1,44 @@
 {
   "id": "chili_stew",
   "name": "Chili Stew",
+  "unlock_level": 109,
+  "time_to_make": 120,
+  "sell_price": 370.0,
+  "xp": 44,
+  "ingredients": [
+    {
+      "id": "chili_pepper",
+      "name": "Chili Pepper",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/chili_pepper.json"
+      }
+    },
+    {
+      "id": "bacon",
+      "name": "Bacon",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/bacon.json"
+      }
+    },
+    {
+      "id": "onion",
+      "name": "Onion",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/onion.json"
+      }
+    },
+    {
+      "id": "cream",
+      "name": "Cream",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cream.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/chili_stew.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

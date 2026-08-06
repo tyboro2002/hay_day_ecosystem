@@ -1,6 +1,36 @@
 {
   "id": "raspberry_muffin",
   "name": "Raspberry Muffin",
+  "unlock_level": 19,
+  "time_to_make": 45,
+  "sell_price": 140.4,
+  "xp": 17,
+  "ingredients": [
+    {
+      "id": "wheat",
+      "name": "Wheat",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/wheat.json"
+      }
+    },
+    {
+      "id": "egg",
+      "name": "Egg",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/egg.json"
+      }
+    },
+    {
+      "id": "raspberry",
+      "name": "Raspberry",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/raspberry.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/raspberry_muffin.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

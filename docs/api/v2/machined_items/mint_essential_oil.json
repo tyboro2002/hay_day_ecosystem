@@ -1,6 +1,20 @@
 {
   "id": "mint_essential_oil",
   "name": "Mint Essential Oil",
+  "unlock_level": 85,
+  "time_to_make": 15,
+  "sell_price": 172.0,
+  "xp": 20,
+  "ingredients": [
+    {
+      "id": "mint",
+      "name": "Mint",
+      "quantity": 5,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/mint.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/mint_essential_oil.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

@@ -1,6 +1,36 @@
 {
   "id": "coleslaw",
   "name": "Coleslaw",
+  "unlock_level": 75,
+  "time_to_make": 75,
+  "sell_price": 468.0,
+  "xp": 56,
+  "ingredients": [
+    {
+      "id": "cabbage",
+      "name": "Cabbage",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cabbage.json"
+      }
+    },
+    {
+      "id": "carrot",
+      "name": "Carrot",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/carrot.json"
+      }
+    },
+    {
+      "id": "mayonnaise",
+      "name": "Mayonnaise",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/mayonnaise.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/coleslaw.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

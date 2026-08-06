@@ -1,6 +1,28 @@
 {
   "id": "orange_tea",
   "name": "Orange Tea",
+  "unlock_level": 89,
+  "time_to_make": 40,
+  "sell_price": 255.0,
+  "xp": 30,
+  "ingredients": [
+    {
+      "id": "tea_leaf",
+      "name": "Tea Leaf",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/tea_leaf.json"
+      }
+    },
+    {
+      "id": "orange",
+      "name": "Orange",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/orange.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/orange_tea.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

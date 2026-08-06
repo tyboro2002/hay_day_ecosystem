@@ -1,6 +1,28 @@
 {
   "id": "grilled_eggplant",
   "name": "Grilled Eggplant",
+  "unlock_level": 90,
+  "time_to_make": 40,
+  "sell_price": 324.0,
+  "xp": 39,
+  "ingredients": [
+    {
+      "id": "eggplant",
+      "name": "Eggplant",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/eggplant.json"
+      }
+    },
+    {
+      "id": "salsa",
+      "name": "Salsa",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/salsa.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/grilled_eggplant.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

@@ -1,6 +1,44 @@
 {
   "id": "summer_salad",
   "name": "Summer Salad",
+  "unlock_level": 84,
+  "time_to_make": 180,
+  "sell_price": 554.0,
+  "xp": 66,
+  "ingredients": [
+    {
+      "id": "goat_cheese",
+      "name": "Goat Cheese",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/goat_cheese.json"
+      }
+    },
+    {
+      "id": "onion",
+      "name": "Onion",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/onion.json"
+      }
+    },
+    {
+      "id": "peach",
+      "name": "Peach",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/peach.json"
+      }
+    },
+    {
+      "id": "tomato",
+      "name": "Tomato",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/tomato.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/summer_salad.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

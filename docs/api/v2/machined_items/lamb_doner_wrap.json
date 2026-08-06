@@ -1,6 +1,36 @@
 {
   "id": "lamb_doner_wrap",
   "name": "Lamb doner wrap",
+  "unlock_level": 32,
+  "time_to_make": 20,
+  "sell_price": 172.8,
+  "xp": 20,
+  "ingredients": [
+    {
+      "id": "grilled_lamb_skewer",
+      "name": "Grilled Lamb Skewer",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/grilled_lamb_skewer.json"
+      }
+    },
+    {
+      "id": "tomato",
+      "name": "Tomato",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/tomato.json"
+      }
+    },
+    {
+      "id": "bread",
+      "name": "Bread",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/bread.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/lamb_doner_wrap.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

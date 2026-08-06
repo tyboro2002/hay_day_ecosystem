@@ -1,6 +1,36 @@
 {
   "id": "lobster_skewer",
   "name": "Lobster Skewer",
+  "unlock_level": 48,
+  "time_to_make": 40,
+  "sell_price": 417.6,
+  "xp": 50,
+  "ingredients": [
+    {
+      "id": "chili_pepper",
+      "name": "Chili Pepper",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/chili_pepper.json"
+      }
+    },
+    {
+      "id": "honey",
+      "name": "Honey",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/honey.json"
+      }
+    },
+    {
+      "id": "lobster_tail",
+      "name": "Lobster Tail",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/lobster_tail.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/lobster_skewer.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

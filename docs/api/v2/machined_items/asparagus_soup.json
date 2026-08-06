@@ -1,6 +1,28 @@
 {
   "id": "asparagus_soup",
   "name": "Asparagus Soup",
+  "unlock_level": 51,
+  "time_to_make": 60,
+  "sell_price": 255.0,
+  "xp": 30,
+  "ingredients": [
+    {
+      "id": "asparagus",
+      "name": "Asparagus",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/asparagus.json"
+      }
+    },
+    {
+      "id": "cream",
+      "name": "Cream",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cream.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/asparagus_soup.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

@@ -1,6 +1,28 @@
 {
   "id": "pillow",
   "name": "Pillow",
+  "unlock_level": 51,
+  "time_to_make": 180,
+  "sell_price": 676.0,
+  "xp": 81,
+  "ingredients": [
+    {
+      "id": "cotton_fabric",
+      "name": "Cotton Fabric",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cotton_fabric.json"
+      }
+    },
+    {
+      "id": "duck_feather",
+      "name": "Duck Feather",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/duck_feather.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/pillow.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

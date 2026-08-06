@@ -1,6 +1,44 @@
 {
   "id": "noodle_soup",
   "name": "Noodle Soup",
+  "unlock_level": 73,
+  "time_to_make": 120,
+  "sell_price": 432.0,
+  "xp": 52,
+  "ingredients": [
+    {
+      "id": "carrot",
+      "name": "Carrot",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/carrot.json"
+      }
+    },
+    {
+      "id": "chili_pepper",
+      "name": "Chili Pepper",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/chili_pepper.json"
+      }
+    },
+    {
+      "id": "egg",
+      "name": "Egg",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/egg.json"
+      }
+    },
+    {
+      "id": "rice_noodles",
+      "name": "Rice Noodles",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/rice_noodles.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/noodle_soup.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

@@ -1,6 +1,20 @@
 {
   "id": "syrup",
   "name": "Syrup",
+  "unlock_level": 18,
+  "time_to_make": 90,
+  "sell_price": 90.0,
+  "xp": 11,
+  "ingredients": [
+    {
+      "id": "sugarcane",
+      "name": "Sugarcane",
+      "quantity": 4,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/sugarcane.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/syrup.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

@@ -1,6 +1,20 @@
 {
   "id": "cherry_jam",
   "name": "Cherry Jam",
+  "unlock_level": 38,
+  "time_to_make": 420,
+  "sell_price": 334.8,
+  "xp": 40,
+  "ingredients": [
+    {
+      "id": "cherry",
+      "name": "Cherry",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cherry.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/cherry_jam.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

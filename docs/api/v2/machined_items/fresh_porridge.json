@@ -1,6 +1,44 @@
 {
   "id": "fresh_porridge",
   "name": "Fresh Porridge",
+  "unlock_level": 122,
+  "time_to_make": 35,
+  "sell_price": 435.0,
+  "xp": 52,
+  "ingredients": [
+    {
+      "id": "pomegranate",
+      "name": "Pomegranate",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/pomegranate.json"
+      }
+    },
+    {
+      "id": "mint",
+      "name": "Mint",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/mint.json"
+      }
+    },
+    {
+      "id": "oats",
+      "name": "Oats",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/oats.json"
+      }
+    },
+    {
+      "id": "coconut",
+      "name": "Coconut",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/coconut.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/fresh_porridge.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

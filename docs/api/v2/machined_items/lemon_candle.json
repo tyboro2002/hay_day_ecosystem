@@ -1,6 +1,28 @@
 {
   "id": "lemon_candle",
   "name": "Lemon Candle",
+  "unlock_level": 72,
+  "time_to_make": 135,
+  "sell_price": 457.0,
+  "xp": 55,
+  "ingredients": [
+    {
+      "id": "beeswax",
+      "name": "Beeswax",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/beeswax.json"
+      }
+    },
+    {
+      "id": "lemon",
+      "name": "Lemon",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/lemon.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/lemon_candle.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

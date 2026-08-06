@@ -1,6 +1,28 @@
 {
   "id": "coconut_ice_cream",
   "name": "Coconut Ice Cream",
+  "unlock_level": 102,
+  "time_to_make": 15,
+  "sell_price": 320.0,
+  "xp": 38,
+  "ingredients": [
+    {
+      "id": "coconut",
+      "name": "Coconut",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/coconut.json"
+      }
+    },
+    {
+      "id": "syrup",
+      "name": "Syrup",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/syrup.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/coconut_ice_cream.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

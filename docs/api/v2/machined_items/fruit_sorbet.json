@@ -1,6 +1,44 @@
 {
   "id": "fruit_sorbet",
   "name": "Fruit Sorbet",
+  "unlock_level": 106,
+  "time_to_make": 60,
+  "sell_price": 518.0,
+  "xp": 62,
+  "ingredients": [
+    {
+      "id": "guava",
+      "name": "Guava",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/guava.json"
+      }
+    },
+    {
+      "id": "passion_fruit",
+      "name": "Passion Fruit",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/passion_fruit.json"
+      }
+    },
+    {
+      "id": "mango",
+      "name": "Mango",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/mango.json"
+      }
+    },
+    {
+      "id": "white_sugar",
+      "name": "White Sugar",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/white_sugar.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/fruit_sorbet.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

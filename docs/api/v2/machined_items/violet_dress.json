@@ -1,6 +1,36 @@
 {
   "id": "violet_dress",
   "name": "Violet Dress",
+  "unlock_level": 25,
+  "time_to_make": 135,
+  "sell_price": 327.6,
+  "xp": 39,
+  "ingredients": [
+    {
+      "id": "indigo",
+      "name": "Indigo",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/indigo.json"
+      }
+    },
+    {
+      "id": "cotton_fabric",
+      "name": "Cotton Fabric",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cotton_fabric.json"
+      }
+    },
+    {
+      "id": "raspberry",
+      "name": "Raspberry",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/raspberry.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/violet_dress.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

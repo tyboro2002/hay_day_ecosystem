@@ -1,6 +1,28 @@
 {
   "id": "wooly_chaps",
   "name": "Wooly Chaps",
+  "unlock_level": 21,
+  "time_to_make": 90,
+  "sell_price": 309.6,
+  "xp": 37,
+  "ingredients": [
+    {
+      "id": "wool",
+      "name": "Wool",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/wool.json"
+      }
+    },
+    {
+      "id": "cotton_fabric",
+      "name": "Cotton Fabric",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cotton_fabric.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/wooly_chaps.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

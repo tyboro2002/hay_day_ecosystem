@@ -1,6 +1,36 @@
 {
   "id": "macaroon",
   "name": "Macaroon",
+  "unlock_level": 101,
+  "time_to_make": 30,
+  "sell_price": 421.0,
+  "xp": 30,
+  "ingredients": [
+    {
+      "id": "cacao",
+      "name": "Cacao",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cacao.json"
+      }
+    },
+    {
+      "id": "coconut",
+      "name": "Coconut",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/coconut.json"
+      }
+    },
+    {
+      "id": "white_sugar",
+      "name": "White Sugar",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/white_sugar.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/macaroon.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

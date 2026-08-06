@@ -1,6 +1,44 @@
 {
   "id": "bacon_fries",
   "name": "Bacon Fries",
+  "unlock_level": 87,
+  "time_to_make": 25,
+  "sell_price": 302.0,
+  "xp": 36,
+  "ingredients": [
+    {
+      "id": "chili_pepper",
+      "name": "Chili Pepper",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/chili_pepper.json"
+      }
+    },
+    {
+      "id": "bacon",
+      "name": "Bacon",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/bacon.json"
+      }
+    },
+    {
+      "id": "potato",
+      "name": "Potato",
+      "quantity": 4,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/potato.json"
+      }
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/garlic.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/bacon_fries.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

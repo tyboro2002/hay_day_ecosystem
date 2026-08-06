@@ -1,6 +1,36 @@
 {
   "id": "apple_ginger_tea",
   "name": "Apple Ginger Tea",
+  "unlock_level": 88,
+  "time_to_make": 30,
+  "sell_price": 169.0,
+  "xp": 20,
+  "ingredients": [
+    {
+      "id": "tea_leaf",
+      "name": "Tea Leaf",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/tea_leaf.json"
+      }
+    },
+    {
+      "id": "ginger",
+      "name": "Ginger",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/ginger.json"
+      }
+    },
+    {
+      "id": "apple",
+      "name": "Apple",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/apple.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/apple_ginger_tea.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

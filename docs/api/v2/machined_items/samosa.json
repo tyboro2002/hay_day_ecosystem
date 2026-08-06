@@ -1,6 +1,44 @@
 {
   "id": "samosa",
   "name": "Samosa",
+  "unlock_level": 103,
+  "time_to_make": 75,
+  "sell_price": 223.0,
+  "xp": 27,
+  "ingredients": [
+    {
+      "id": "chickpea",
+      "name": "Chickpea",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/chickpea.json"
+      }
+    },
+    {
+      "id": "wheat",
+      "name": "Wheat",
+      "quantity": 4,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/wheat.json"
+      }
+    },
+    {
+      "id": "potato",
+      "name": "Potato",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/potato.json"
+      }
+    },
+    {
+      "id": "chili_pepper",
+      "name": "Chili Pepper",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/chili_pepper.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/samosa.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

@@ -1,6 +1,44 @@
 {
   "id": "spicy_pasta",
   "name": "Spicy Pasta",
+  "unlock_level": 87,
+  "time_to_make": 90,
+  "sell_price": 576.0,
+  "xp": 69,
+  "ingredients": [
+    {
+      "id": "fresh_pasta",
+      "name": "Fresh Pasta",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/fresh_pasta.json"
+      }
+    },
+    {
+      "id": "tomato_sauce",
+      "name": "Tomato Sauce",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/tomato_sauce.json"
+      }
+    },
+    {
+      "id": "chili_pepper",
+      "name": "Chili Pepper",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/chili_pepper.json"
+      }
+    },
+    {
+      "id": "onion",
+      "name": "Onion",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/onion.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/spicy_pasta.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

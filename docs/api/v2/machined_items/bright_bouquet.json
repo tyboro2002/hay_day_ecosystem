@@ -1,6 +1,44 @@
 {
   "id": "bright_bouquet",
   "name": "Bright Bouquet",
+  "unlock_level": 65,
+  "time_to_make": 20,
+  "sell_price": 338.0,
+  "xp": 40,
+  "ingredients": [
+    {
+      "id": "sunflower",
+      "name": "Sunflower",
+      "quantity": 5,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/sunflower.json"
+      }
+    },
+    {
+      "id": "iron_ore",
+      "name": "Iron Ore",
+      "quantity": 5,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/iron_ore.json"
+      }
+    },
+    {
+      "id": "indigo",
+      "name": "Indigo",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/indigo.json"
+      }
+    },
+    {
+      "id": "cotton",
+      "name": "Cotton",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cotton.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/bright_bouquet.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

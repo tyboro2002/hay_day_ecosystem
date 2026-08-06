@@ -1,6 +1,36 @@
 {
   "id": "top_hat",
   "name": "Top Hat",
+  "unlock_level": 72,
+  "time_to_make": 210,
+  "sell_price": 619.0,
+  "xp": 74,
+  "ingredients": [
+    {
+      "id": "cotton_fabric",
+      "name": "Cotton Fabric",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cotton_fabric.json"
+      }
+    },
+    {
+      "id": "refined_coal",
+      "name": "Refined coal",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/refined_coal.json"
+      }
+    },
+    {
+      "id": "duck_feather",
+      "name": "Duck Feather",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/duck_feather.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/top_hat.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

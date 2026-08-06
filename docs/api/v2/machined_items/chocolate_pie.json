@@ -1,6 +1,44 @@
 {
   "id": "chocolate_pie",
   "name": "Chocolate Pie",
+  "unlock_level": 65,
+  "time_to_make": 75,
+  "sell_price": 514.0,
+  "xp": 70,
+  "ingredients": [
+    {
+      "id": "wheat",
+      "name": "Wheat",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/wheat.json"
+      }
+    },
+    {
+      "id": "cacao",
+      "name": "Cacao",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cacao.json"
+      }
+    },
+    {
+      "id": "egg",
+      "name": "Egg",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/egg.json"
+      }
+    },
+    {
+      "id": "peanuts",
+      "name": "Peanuts",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/peanuts.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/chocolate_pie.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

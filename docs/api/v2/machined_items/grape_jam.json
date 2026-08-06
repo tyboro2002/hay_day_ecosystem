@@ -1,6 +1,20 @@
 {
   "id": "grape_jam",
   "name": "Grape Jam",
+  "unlock_level": 85,
+  "time_to_make": 390,
+  "sell_price": 162.0,
+  "xp": 19,
+  "ingredients": [
+    {
+      "id": "grapes",
+      "name": "Grapes",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/grapes.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/grape_jam.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

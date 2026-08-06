@@ -1,6 +1,44 @@
 {
   "id": "egg_sushi",
   "name": "Egg Sushi",
+  "unlock_level": 63,
+  "time_to_make": 120,
+  "sell_price": 550.0,
+  "xp": 66,
+  "ingredients": [
+    {
+      "id": "brown_sugar",
+      "name": "Brown Sugar",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/brown_sugar.json"
+      }
+    },
+    {
+      "id": "egg",
+      "name": "Egg",
+      "quantity": 4,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/egg.json"
+      }
+    },
+    {
+      "id": "rice",
+      "name": "Rice",
+      "quantity": 15,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/rice.json"
+      }
+    },
+    {
+      "id": "soy_sauce",
+      "name": "Soy Sauce",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/soy_sauce.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/egg_sushi.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

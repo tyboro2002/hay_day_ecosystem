@@ -1,6 +1,36 @@
 {
   "id": "canned_fish",
   "name": "Canned Fish",
+  "unlock_level": 95,
+  "time_to_make": 220,
+  "sell_price": 471.0,
+  "xp": 56,
+  "ingredients": [
+    {
+      "id": "fish_fillet",
+      "name": "Fish Fillet",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/fish_fillet.json"
+      }
+    },
+    {
+      "id": "chili_pepper",
+      "name": "Chili Pepper",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/chili_pepper.json"
+      }
+    },
+    {
+      "id": "olive_oil",
+      "name": "Olive Oil",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/olive_oil.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/canned_fish.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

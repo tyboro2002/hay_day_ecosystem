@@ -1,6 +1,44 @@
 {
   "id": "winter_stew",
   "name": "Winter Stew",
+  "unlock_level": 112,
+  "time_to_make": 140,
+  "sell_price": 295.0,
+  "xp": 35,
+  "ingredients": [
+    {
+      "id": "bacon",
+      "name": "Bacon",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/bacon.json"
+      }
+    },
+    {
+      "id": "potato",
+      "name": "Potato",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/potato.json"
+      }
+    },
+    {
+      "id": "onion",
+      "name": "Onion",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/onion.json"
+      }
+    },
+    {
+      "id": "mushroom",
+      "name": "Mushroom",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/mushroom.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/winter_stew.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

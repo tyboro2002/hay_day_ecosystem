@@ -1,6 +1,28 @@
 {
   "id": "zesty_perfume",
   "name": "Zesty Perfume",
+  "unlock_level": 113,
+  "time_to_make": 15,
+  "sell_price": 388.0,
+  "xp": 46,
+  "ingredients": [
+    {
+      "id": "lemon_essential_oil",
+      "name": "Lemon Essential Oil",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/lemon_essential_oil.json"
+      }
+    },
+    {
+      "id": "ginger",
+      "name": "Ginger",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/ginger.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/zesty_perfume.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

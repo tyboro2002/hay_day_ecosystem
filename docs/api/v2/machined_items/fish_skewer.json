@@ -1,6 +1,44 @@
 {
   "id": "fish_skewer",
   "name": "Fish Skewer",
+  "unlock_level": 96,
+  "time_to_make": 30,
+  "sell_price": 176.0,
+  "xp": 21,
+  "ingredients": [
+    {
+      "id": "fish_fillet",
+      "name": "Fish Fillet",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/fish_fillet.json"
+      }
+    },
+    {
+      "id": "mushroom",
+      "name": "Mushroom",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/mushroom.json"
+      }
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/garlic.json"
+      }
+    },
+    {
+      "id": "sesame",
+      "name": "Sesame",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/sesame.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/fish_skewer.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

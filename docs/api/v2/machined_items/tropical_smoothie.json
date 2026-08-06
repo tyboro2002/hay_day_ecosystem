@@ -1,6 +1,44 @@
 {
   "id": "tropical_smoothie",
   "name": "Tropical Smoothie",
+  "unlock_level": 102,
+  "time_to_make": 35,
+  "sell_price": 522.0,
+  "xp": 62,
+  "ingredients": [
+    {
+      "id": "plum",
+      "name": "Plum",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/plum.json"
+      }
+    },
+    {
+      "id": "grapes",
+      "name": "Grapes",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/grapes.json"
+      }
+    },
+    {
+      "id": "mint",
+      "name": "Mint",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/mint.json"
+      }
+    },
+    {
+      "id": "honey",
+      "name": "Honey",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/honey.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/tropical_smoothie.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

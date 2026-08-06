@@ -1,6 +1,44 @@
 {
   "id": "fish_soup",
   "name": "Fish Soup",
+  "unlock_level": 53,
+  "time_to_make": 180,
+  "sell_price": 298.0,
+  "xp": 35,
+  "ingredients": [
+    {
+      "id": "carrot",
+      "name": "Carrot",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/carrot.json"
+      }
+    },
+    {
+      "id": "fish_fillet",
+      "name": "Fish Fillet",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/fish_fillet.json"
+      }
+    },
+    {
+      "id": "milk",
+      "name": "Milk",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/milk.json"
+      }
+    },
+    {
+      "id": "potato",
+      "name": "Potato",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/potato.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/fish_soup.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

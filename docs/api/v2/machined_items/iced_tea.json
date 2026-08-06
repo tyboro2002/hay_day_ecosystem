@@ -1,6 +1,28 @@
 {
   "id": "iced_tea",
   "name": "Iced Tea",
+  "unlock_level": 92,
+  "time_to_make": 30,
+  "sell_price": 252.0,
+  "xp": 30,
+  "ingredients": [
+    {
+      "id": "tea_leaf",
+      "name": "Tea Leaf",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/tea_leaf.json"
+      }
+    },
+    {
+      "id": "peach",
+      "name": "Peach",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/peach.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/iced_tea.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

@@ -1,6 +1,20 @@
 {
   "id": "plum_jam",
   "name": "Plum Jam",
+  "unlock_level": 94,
+  "time_to_make": 300,
+  "sell_price": 385.0,
+  "xp": 46,
+  "ingredients": [
+    {
+      "id": "plum",
+      "name": "Plum",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/plum.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/plum_jam.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

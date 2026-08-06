@@ -1,6 +1,44 @@
 {
   "id": "blueberry_chutney",
   "name": "Blueberry Chutney",
+  "unlock_level": 70,
+  "time_to_make": 240,
+  "sell_price": 579.0,
+  "xp": 69,
+  "ingredients": [
+    {
+      "id": "brown_sugar",
+      "name": "Brown Sugar",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/brown_sugar.json"
+      }
+    },
+    {
+      "id": "lemon",
+      "name": "Lemon",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/lemon.json"
+      }
+    },
+    {
+      "id": "onion",
+      "name": "Onion",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/onion.json"
+      }
+    },
+    {
+      "id": "blueberry",
+      "name": "Blueberry",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/blueberry.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/blueberry_chutney.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

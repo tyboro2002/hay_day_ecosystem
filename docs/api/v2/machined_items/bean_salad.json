@@ -1,6 +1,44 @@
 {
   "id": "bean_salad",
   "name": "Bean Salad",
+  "unlock_level": 58,
+  "time_to_make": 60,
+  "sell_price": 169.0,
+  "xp": 20,
+  "ingredients": [
+    {
+      "id": "black_bean",
+      "name": "Black Bean",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/black_bean.json"
+      }
+    },
+    {
+      "id": "lettuce",
+      "name": "Lettuce",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/lettuce.json"
+      }
+    },
+    {
+      "id": "tomato",
+      "name": "Tomato",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/tomato.json"
+      }
+    },
+    {
+      "id": "corn",
+      "name": "Corn",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/corn.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/bean_salad.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

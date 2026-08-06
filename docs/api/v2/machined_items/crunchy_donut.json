@@ -1,6 +1,36 @@
 {
   "id": "crunchy_donut",
   "name": "Crunchy Donut",
+  "unlock_level": 82,
+  "time_to_make": 30,
+  "sell_price": 594.0,
+  "xp": 71,
+  "ingredients": [
+    {
+      "id": "plain_donut",
+      "name": "Plain Donut",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/plain_donut.json"
+      }
+    },
+    {
+      "id": "cacao",
+      "name": "Cacao",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cacao.json"
+      }
+    },
+    {
+      "id": "peanuts",
+      "name": "Peanuts",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/peanuts.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/crunchy_donut.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

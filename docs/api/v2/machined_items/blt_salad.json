@@ -1,6 +1,44 @@
 {
   "id": "blt_salad",
   "name": "BLT Salad",
+  "unlock_level": 62,
+  "time_to_make": 105,
+  "sell_price": 723.0,
+  "xp": 86,
+  "ingredients": [
+    {
+      "id": "bacon",
+      "name": "Bacon",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/bacon.json"
+      }
+    },
+    {
+      "id": "lettuce",
+      "name": "Lettuce",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/lettuce.json"
+      }
+    },
+    {
+      "id": "roasted_tomatoes",
+      "name": "Roasted Tomatoes",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/roasted_tomatoes.json"
+      }
+    },
+    {
+      "id": "mayonnaise",
+      "name": "Mayonnaise",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/mayonnaise.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/blt_salad.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

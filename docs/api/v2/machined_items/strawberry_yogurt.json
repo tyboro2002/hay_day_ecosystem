@@ -1,6 +1,28 @@
 {
   "id": "strawberry_yogurt",
   "name": "Strawberry Yogurt",
+  "unlock_level": 105,
+  "time_to_make": 40,
+  "sell_price": 529.0,
+  "xp": 63,
+  "ingredients": [
+    {
+      "id": "plain_yogurt",
+      "name": "Plain Yogurt",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/plain_yogurt.json"
+      }
+    },
+    {
+      "id": "strawberry_jam",
+      "name": "Strawberry Jam",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/strawberry_jam.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/strawberry_yogurt.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

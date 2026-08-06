@@ -1,6 +1,36 @@
 {
   "id": "flower_pendant",
   "name": "Flower Pendant",
+  "unlock_level": 98,
+  "time_to_make": 60,
+  "sell_price": 698.0,
+  "xp": 83,
+  "ingredients": [
+    {
+      "id": "platinum_bar",
+      "name": "Platinum Bar",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/platinum_bar.json"
+      }
+    },
+    {
+      "id": "gold_bar",
+      "name": "Gold Bar",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/gold_bar.json"
+      }
+    },
+    {
+      "id": "peony",
+      "name": "Peony",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/peony.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/flower_pendant.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

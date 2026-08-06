@@ -1,6 +1,28 @@
 {
   "id": "bracelet",
   "name": "Bracelet",
+  "unlock_level": 38,
+  "time_to_make": 120,
+  "sell_price": 514.8,
+  "xp": 61,
+  "ingredients": [
+    {
+      "id": "gold_bar",
+      "name": "Gold Bar",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/gold_bar.json"
+      }
+    },
+    {
+      "id": "silver_bar",
+      "name": "Silver Bar",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/silver_bar.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/bracelet.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

@@ -260,9 +260,29 @@ def build_v2(output_dir="docs"):
 
     # 4. Helper to format machined item detail payloads
     def process_machined_item(item_id, item_name, item_obj):
+        # Reconstruct full batch ingredients and build JSON-safe structures
+        formatted_ingredients = []
+        if hasattr(item_obj, 'ingredients') and item_obj.ingredients:
+            for ing_obj, single_qty in item_obj.ingredients.items():
+                ing_id = ing_obj.name.lower().replace(" ", "_").replace("-", "_")
+
+                formatted_ingredients.append({
+                    "id": ing_id,
+                    "name": ing_obj.name,
+                    "quantity": single_qty,
+                    "links": {
+                        "detail": f"{base_path_v2}/{machined_items_dir_v2}/{ing_id}.json" # TODO fix this to be the category the item is in maybe create a helper function for this
+                    }
+                })
+
         return {
             "id": item_id,
             "name": item_name,
+            "unlock_level": item_obj.unlock_level,
+            "time_to_make": item_obj.time_to_make,
+            "sell_price": item_obj.sell_price,
+            "xp": item_obj.xp,
+            "ingredients": formatted_ingredients,
             "links": {
                 "self": f"{base_path_v2}/{machined_items_dir_v2}/{item_id}.json",
                 "collection": f"{base_path_v2}/{machined_items_dir_v2}/index.json",
@@ -299,7 +319,7 @@ def build_v2(output_dir="docs"):
                     "name": ing_obj.name,
                     "quantity": batch_qty,
                     "links": {
-                        "detail": f"{base_path_v2}/{crops_dir_v2}/{ing_id}.json"
+                        "detail": f"{base_path_v2}/{crops_dir_v2}/{ing_id}.json" # TODO fix fish fillet to not be crops
                     }
                 })
 

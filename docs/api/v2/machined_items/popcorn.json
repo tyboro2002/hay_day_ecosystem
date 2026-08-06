@@ -1,6 +1,20 @@
 {
   "id": "popcorn",
   "name": "Popcorn",
+  "unlock_level": 8,
+  "time_to_make": 30,
+  "sell_price": 32.4,
+  "xp": 4,
+  "ingredients": [
+    {
+      "id": "corn",
+      "name": "Corn",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/corn.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/popcorn.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

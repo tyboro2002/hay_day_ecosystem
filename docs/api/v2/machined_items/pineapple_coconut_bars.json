@@ -1,6 +1,44 @@
 {
   "id": "pineapple_coconut_bars",
   "name": "Pineapple Coconut Bars",
+  "unlock_level": 120,
+  "time_to_make": 40,
+  "sell_price": 284.0,
+  "xp": 34,
+  "ingredients": [
+    {
+      "id": "coconut",
+      "name": "Coconut",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/coconut.json"
+      }
+    },
+    {
+      "id": "white_sugar",
+      "name": "White Sugar",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/white_sugar.json"
+      }
+    },
+    {
+      "id": "oats",
+      "name": "Oats",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/oats.json"
+      }
+    },
+    {
+      "id": "pineapple",
+      "name": "Pineapple",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/pineapple.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/pineapple_coconut_bars.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

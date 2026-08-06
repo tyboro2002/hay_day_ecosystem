@@ -1,6 +1,28 @@
 {
   "id": "hamburger",
   "name": "Hamburger",
+  "unlock_level": 18,
+  "time_to_make": 120,
+  "sell_price": 180.0,
+  "xp": 22,
+  "ingredients": [
+    {
+      "id": "bread",
+      "name": "Bread",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/bread.json"
+      }
+    },
+    {
+      "id": "bacon",
+      "name": "Bacon",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/bacon.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/hamburger.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

@@ -1,6 +1,36 @@
 {
   "id": "grilled_asparagus",
   "name": "Grilled Asparagus",
+  "unlock_level": 67,
+  "time_to_make": 75,
+  "sell_price": 486.0,
+  "xp": 58,
+  "ingredients": [
+    {
+      "id": "asparagus",
+      "name": "Asparagus",
+      "quantity": 5,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/asparagus.json"
+      }
+    },
+    {
+      "id": "bacon",
+      "name": "Bacon",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/bacon.json"
+      }
+    },
+    {
+      "id": "lemon",
+      "name": "Lemon",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/lemon.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/grilled_asparagus.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

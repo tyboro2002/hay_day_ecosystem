@@ -1,6 +1,44 @@
 {
   "id": "cheese_fondue",
   "name": "Cheese Fondue",
+  "unlock_level": 91,
+  "time_to_make": 20,
+  "sell_price": 493.0,
+  "xp": 59,
+  "ingredients": [
+    {
+      "id": "potato_bread",
+      "name": "Potato Bread",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/potato_bread.json"
+      }
+    },
+    {
+      "id": "cheese",
+      "name": "Cheese",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cheese.json"
+      }
+    },
+    {
+      "id": "mushroom",
+      "name": "Mushroom",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/mushroom.json"
+      }
+    },
+    {
+      "id": "tomato",
+      "name": "Tomato",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/tomato.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/cheese_fondue.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

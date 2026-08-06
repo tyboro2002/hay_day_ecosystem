@@ -1,6 +1,44 @@
 {
   "id": "banana_bread",
   "name": "Banana Bread",
+  "unlock_level": 91,
+  "time_to_make": 30,
+  "sell_price": 424.0,
+  "xp": 50,
+  "ingredients": [
+    {
+      "id": "banana",
+      "name": "Banana",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/banana.json"
+      }
+    },
+    {
+      "id": "grapes",
+      "name": "Grapes",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/grapes.json"
+      }
+    },
+    {
+      "id": "wheat",
+      "name": "Wheat",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/wheat.json"
+      }
+    },
+    {
+      "id": "egg",
+      "name": "Egg",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/egg.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/banana_bread.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

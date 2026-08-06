@@ -1,6 +1,36 @@
 {
   "id": "caff\u00e8_latte",
   "name": "Caff\u00e8 Latte",
+  "unlock_level": 43,
+  "time_to_make": 10,
+  "sell_price": 219.6,
+  "xp": 26,
+  "ingredients": [
+    {
+      "id": "coffee_bean",
+      "name": "Coffee Bean",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/coffee_bean.json"
+      }
+    },
+    {
+      "id": "white_sugar",
+      "name": "White Sugar",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/white_sugar.json"
+      }
+    },
+    {
+      "id": "milk",
+      "name": "Milk",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/milk.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/caff\u00e8_latte.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

@@ -1,6 +1,20 @@
 {
   "id": "cheese",
   "name": "Cheese",
+  "unlock_level": 12,
+  "time_to_make": 60,
+  "sell_price": 122.4,
+  "xp": 15,
+  "ingredients": [
+    {
+      "id": "milk",
+      "name": "Milk",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/milk.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/cheese.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

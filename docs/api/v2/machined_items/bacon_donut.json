@@ -1,6 +1,36 @@
 {
   "id": "bacon_donut",
   "name": "Bacon Donut",
+  "unlock_level": 88,
+  "time_to_make": 30,
+  "sell_price": 388.0,
+  "xp": 46,
+  "ingredients": [
+    {
+      "id": "plain_donut",
+      "name": "Plain Donut",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/plain_donut.json"
+      }
+    },
+    {
+      "id": "bacon",
+      "name": "Bacon",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/bacon.json"
+      }
+    },
+    {
+      "id": "syrup",
+      "name": "Syrup",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/syrup.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/bacon_donut.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

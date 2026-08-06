@@ -1,6 +1,44 @@
 {
   "id": "bacon_toast",
   "name": "Bacon Toast",
+  "unlock_level": 65,
+  "time_to_make": 100,
+  "sell_price": 648.0,
+  "xp": 77,
+  "ingredients": [
+    {
+      "id": "bacon",
+      "name": "Bacon",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/bacon.json"
+      }
+    },
+    {
+      "id": "bread",
+      "name": "Bread",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/bread.json"
+      }
+    },
+    {
+      "id": "lettuce",
+      "name": "Lettuce",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/lettuce.json"
+      }
+    },
+    {
+      "id": "mayonnaise",
+      "name": "Mayonnaise",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/mayonnaise.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/bacon_toast.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

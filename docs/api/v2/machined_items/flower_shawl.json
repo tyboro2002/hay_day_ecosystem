@@ -1,6 +1,36 @@
 {
   "id": "flower_shawl",
   "name": "Flower Shawl",
+  "unlock_level": 71,
+  "time_to_make": 90,
+  "sell_price": 295.0,
+  "xp": 35,
+  "ingredients": [
+    {
+      "id": "wool",
+      "name": "Wool",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/wool.json"
+      }
+    },
+    {
+      "id": "sunflower",
+      "name": "Sunflower",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/sunflower.json"
+      }
+    },
+    {
+      "id": "blackberry",
+      "name": "Blackberry",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/blackberry.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/flower_shawl.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

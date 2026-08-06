@@ -1,6 +1,44 @@
 {
   "id": "orange_salad",
   "name": "Orange Salad",
+  "unlock_level": 117,
+  "time_to_make": 45,
+  "sell_price": 558.0,
+  "xp": 66,
+  "ingredients": [
+    {
+      "id": "cheese",
+      "name": "Cheese",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cheese.json"
+      }
+    },
+    {
+      "id": "lettuce",
+      "name": "Lettuce",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/lettuce.json"
+      }
+    },
+    {
+      "id": "pomegranate",
+      "name": "Pomegranate",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/pomegranate.json"
+      }
+    },
+    {
+      "id": "orange",
+      "name": "Orange",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/orange.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/orange_salad.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

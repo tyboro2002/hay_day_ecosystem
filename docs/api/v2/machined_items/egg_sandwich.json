@@ -1,6 +1,44 @@
 {
   "id": "egg_sandwich",
   "name": "Egg Sandwich",
+  "unlock_level": 66,
+  "time_to_make": 80,
+  "sell_price": 583.0,
+  "xp": 69,
+  "ingredients": [
+    {
+      "id": "bread",
+      "name": "Bread",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/bread.json"
+      }
+    },
+    {
+      "id": "egg",
+      "name": "Egg",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/egg.json"
+      }
+    },
+    {
+      "id": "lettuce",
+      "name": "Lettuce",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/lettuce.json"
+      }
+    },
+    {
+      "id": "mayonnaise",
+      "name": "Mayonnaise",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/mayonnaise.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/egg_sandwich.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

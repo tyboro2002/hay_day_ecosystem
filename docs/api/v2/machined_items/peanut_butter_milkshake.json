@@ -1,6 +1,44 @@
 {
   "id": "peanut_butter_milkshake",
   "name": "Peanut Butter Milkshake",
+  "unlock_level": 68,
+  "time_to_make": 100,
+  "sell_price": 619.0,
+  "xp": 86,
+  "ingredients": [
+    {
+      "id": "peanuts",
+      "name": "Peanuts",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/peanuts.json"
+      }
+    },
+    {
+      "id": "milk",
+      "name": "Milk",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/milk.json"
+      }
+    },
+    {
+      "id": "cream",
+      "name": "Cream",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cream.json"
+      }
+    },
+    {
+      "id": "cacao",
+      "name": "Cacao",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cacao.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/peanut_butter_milkshake.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

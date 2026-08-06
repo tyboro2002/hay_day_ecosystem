@@ -1,6 +1,28 @@
 {
   "id": "blue_sweater",
   "name": "Blue Sweater",
+  "unlock_level": 20,
+  "time_to_make": 180,
+  "sell_price": 208.8,
+  "xp": 25,
+  "ingredients": [
+    {
+      "id": "wool",
+      "name": "Wool",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/wool.json"
+      }
+    },
+    {
+      "id": "indigo",
+      "name": "Indigo",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/indigo.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/blue_sweater.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

@@ -1,6 +1,28 @@
 {
   "id": "lemon_lotion",
   "name": "Lemon Lotion",
+  "unlock_level": 84,
+  "time_to_make": 75,
+  "sell_price": 403.0,
+  "xp": 48,
+  "ingredients": [
+    {
+      "id": "olive_oil",
+      "name": "Olive Oil",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/olive_oil.json"
+      }
+    },
+    {
+      "id": "lemon",
+      "name": "Lemon",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/lemon.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/lemon_lotion.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

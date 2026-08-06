@@ -1,6 +1,36 @@
 {
   "id": "guava_cupcake",
   "name": "Guava Cupcake",
+  "unlock_level": 109,
+  "time_to_make": 70,
+  "sell_price": 583.0,
+  "xp": 70,
+  "ingredients": [
+    {
+      "id": "plain_cupcake",
+      "name": "Plain Cupcake",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/plain_cupcake.json"
+      }
+    },
+    {
+      "id": "guava",
+      "name": "Guava",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/guava.json"
+      }
+    },
+    {
+      "id": "cream",
+      "name": "Cream",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cream.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/guava_cupcake.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

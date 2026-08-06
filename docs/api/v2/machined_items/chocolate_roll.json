@@ -1,6 +1,44 @@
 {
   "id": "chocolate_roll",
   "name": "Chocolate Roll",
+  "unlock_level": 95,
+  "time_to_make": 90,
+  "sell_price": 604.0,
+  "xp": 72,
+  "ingredients": [
+    {
+      "id": "cacao",
+      "name": "Cacao",
+      "quantity": 5,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cacao.json"
+      }
+    },
+    {
+      "id": "cream",
+      "name": "Cream",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cream.json"
+      }
+    },
+    {
+      "id": "wheat",
+      "name": "Wheat",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/wheat.json"
+      }
+    },
+    {
+      "id": "mint",
+      "name": "Mint",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/mint.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/chocolate_roll.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

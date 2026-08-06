@@ -1,6 +1,36 @@
 {
   "id": "quesadilla",
   "name": "Quesadilla",
+  "unlock_level": 82,
+  "time_to_make": 60,
+  "sell_price": 241.0,
+  "xp": 29,
+  "ingredients": [
+    {
+      "id": "chili_pepper",
+      "name": "Chili Pepper",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/chili_pepper.json"
+      }
+    },
+    {
+      "id": "cheese",
+      "name": "Cheese",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cheese.json"
+      }
+    },
+    {
+      "id": "wheat",
+      "name": "Wheat",
+      "quantity": 4,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/wheat.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/quesadilla.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

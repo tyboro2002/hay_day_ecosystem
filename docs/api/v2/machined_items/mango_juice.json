@@ -1,6 +1,20 @@
 {
   "id": "mango_juice",
   "name": "Mango Juice",
+  "unlock_level": 97,
+  "time_to_make": 50,
+  "sell_price": 230.0,
+  "xp": 27,
+  "ingredients": [
+    {
+      "id": "mango",
+      "name": "Mango",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/mango.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/mango_juice.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

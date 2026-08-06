@@ -1,6 +1,20 @@
 {
   "id": "ginger_essential_oil",
   "name": "Ginger Essential Oil",
+  "unlock_level": 80,
+  "time_to_make": 20,
+  "sell_price": 162.0,
+  "xp": 19,
+  "ingredients": [
+    {
+      "id": "ginger",
+      "name": "Ginger",
+      "quantity": 5,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/ginger.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/ginger_essential_oil.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

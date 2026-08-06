@@ -1,6 +1,36 @@
 {
   "id": "toffee",
   "name": "Toffee",
+  "unlock_level": 52,
+  "time_to_make": 90,
+  "sell_price": 176.0,
+  "xp": 21,
+  "ingredients": [
+    {
+      "id": "butter",
+      "name": "Butter",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/butter.json"
+      }
+    },
+    {
+      "id": "wheat",
+      "name": "Wheat",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/wheat.json"
+      }
+    },
+    {
+      "id": "white_sugar",
+      "name": "White Sugar",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/white_sugar.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/toffee.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

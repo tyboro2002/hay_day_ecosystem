@@ -1,6 +1,28 @@
 {
   "id": "fish_and_chips",
   "name": "Fish And Chips",
+  "unlock_level": 41,
+  "time_to_make": 90,
+  "sell_price": 244.8,
+  "xp": 26,
+  "ingredients": [
+    {
+      "id": "fish_fillet",
+      "name": "Fish Fillet",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/fish_fillet.json"
+      }
+    },
+    {
+      "id": "potato",
+      "name": "Potato",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/potato.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/fish_and_chips.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

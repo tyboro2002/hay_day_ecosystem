@@ -1,6 +1,44 @@
 {
   "id": "gracious_bouquet",
   "name": "Gracious Bouquet",
+  "unlock_level": 73,
+  "time_to_make": 40,
+  "sell_price": 500.0,
+  "xp": 60,
+  "ingredients": [
+    {
+      "id": "cotton_fabric",
+      "name": "Cotton Fabric",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cotton_fabric.json"
+      }
+    },
+    {
+      "id": "lily",
+      "name": "Lily",
+      "quantity": 5,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/lily.json"
+      }
+    },
+    {
+      "id": "gold_ore",
+      "name": "Gold Ore",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/gold_ore.json"
+      }
+    },
+    {
+      "id": "diamond",
+      "name": "Diamond",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/diamond.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/gracious_bouquet.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

@@ -1,6 +1,36 @@
 {
   "id": "garlic_bread",
   "name": "Garlic Bread",
+  "unlock_level": 60,
+  "time_to_make": 15,
+  "sell_price": 198.0,
+  "xp": 24,
+  "ingredients": [
+    {
+      "id": "bread",
+      "name": "Bread",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/bread.json"
+      }
+    },
+    {
+      "id": "butter",
+      "name": "Butter",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/butter.json"
+      }
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic",
+      "quantity": 4,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/garlic.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/garlic_bread.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

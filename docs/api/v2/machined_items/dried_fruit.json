@@ -1,6 +1,44 @@
 {
   "id": "dried_fruit",
   "name": "Dried Fruit",
+  "unlock_level": 102,
+  "time_to_make": 180,
+  "sell_price": 266.0,
+  "xp": 32,
+  "ingredients": [
+    {
+      "id": "grapes",
+      "name": "Grapes",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/grapes.json"
+      }
+    },
+    {
+      "id": "raspberry",
+      "name": "Raspberry",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/raspberry.json"
+      }
+    },
+    {
+      "id": "strawberry",
+      "name": "Strawberry",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/strawberry.json"
+      }
+    },
+    {
+      "id": "orange",
+      "name": "Orange",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/orange.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/dried_fruit.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

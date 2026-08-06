@@ -1,6 +1,44 @@
 {
   "id": "tropical_fondue",
   "name": "Tropical Fondue",
+  "unlock_level": 100,
+  "time_to_make": 35,
+  "sell_price": 417.0,
+  "xp": 50,
+  "ingredients": [
+    {
+      "id": "white_sugar",
+      "name": "White Sugar",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/white_sugar.json"
+      }
+    },
+    {
+      "id": "cream",
+      "name": "Cream",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cream.json"
+      }
+    },
+    {
+      "id": "pineapple",
+      "name": "Pineapple",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/pineapple.json"
+      }
+    },
+    {
+      "id": "mango",
+      "name": "Mango",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/mango.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/tropical_fondue.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

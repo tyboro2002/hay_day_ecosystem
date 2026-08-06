@@ -1,6 +1,36 @@
 {
   "id": "lamb_soup",
   "name": "Lamb Soup",
+  "unlock_level": 46,
+  "time_to_make": 120,
+  "sell_price": 180.0,
+  "xp": 21,
+  "ingredients": [
+    {
+      "id": "grilled_lamb_skewer",
+      "name": "Grilled Lamb Skewer",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/grilled_lamb_skewer.json"
+      }
+    },
+    {
+      "id": "potato",
+      "name": "Potato",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/potato.json"
+      }
+    },
+    {
+      "id": "carrot",
+      "name": "Carrot",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/carrot.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/lamb_soup.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

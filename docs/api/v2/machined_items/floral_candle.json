@@ -1,6 +1,44 @@
 {
   "id": "floral_candle",
   "name": "Floral Candle",
+  "unlock_level": 95,
+  "time_to_make": 120,
+  "sell_price": 442.0,
+  "xp": 53,
+  "ingredients": [
+    {
+      "id": "beeswax",
+      "name": "Beeswax",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/beeswax.json"
+      }
+    },
+    {
+      "id": "peony",
+      "name": "Peony",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/peony.json"
+      }
+    },
+    {
+      "id": "sunflower",
+      "name": "Sunflower",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/sunflower.json"
+      }
+    },
+    {
+      "id": "indigo",
+      "name": "Indigo",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/indigo.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/floral_candle.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

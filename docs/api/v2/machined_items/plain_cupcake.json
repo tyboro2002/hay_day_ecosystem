@@ -1,6 +1,44 @@
 {
   "id": "plain_cupcake",
   "name": "Plain Cupcake",
+  "unlock_level": 109,
+  "time_to_make": 40,
+  "sell_price": 280.0,
+  "xp": 34,
+  "ingredients": [
+    {
+      "id": "milk",
+      "name": "Milk",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/milk.json"
+      }
+    },
+    {
+      "id": "white_sugar",
+      "name": "White Sugar",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/white_sugar.json"
+      }
+    },
+    {
+      "id": "egg",
+      "name": "Egg",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/egg.json"
+      }
+    },
+    {
+      "id": "wheat",
+      "name": "Wheat",
+      "quantity": 5,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/wheat.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/plain_cupcake.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

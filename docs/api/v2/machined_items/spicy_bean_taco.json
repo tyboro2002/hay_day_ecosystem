@@ -1,6 +1,28 @@
 {
   "id": "spicy_bean_taco",
   "name": "Spicy Bean Taco",
+  "unlock_level": 77,
+  "time_to_make": 120,
+  "sell_price": 453.0,
+  "xp": 54,
+  "ingredients": [
+    {
+      "id": "taco",
+      "name": "Taco",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/taco.json"
+      }
+    },
+    {
+      "id": "black_bean",
+      "name": "Black Bean",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/black_bean.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/spicy_bean_taco.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

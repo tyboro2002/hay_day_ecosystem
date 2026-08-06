@@ -1,6 +1,44 @@
 {
   "id": "mint_ice_cream",
   "name": "Mint Ice Cream",
+  "unlock_level": 85,
+  "time_to_make": 135,
+  "sell_price": 288.0,
+  "xp": 34,
+  "ingredients": [
+    {
+      "id": "cream",
+      "name": "Cream",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cream.json"
+      }
+    },
+    {
+      "id": "white_sugar",
+      "name": "White Sugar",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/white_sugar.json"
+      }
+    },
+    {
+      "id": "mint",
+      "name": "Mint",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/mint.json"
+      }
+    },
+    {
+      "id": "cacao",
+      "name": "Cacao",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cacao.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/mint_ice_cream.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

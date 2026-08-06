@@ -1,6 +1,44 @@
 {
   "id": "olive_dip",
   "name": "Olive Dip",
+  "unlock_level": 66,
+  "time_to_make": 45,
+  "sell_price": 468.0,
+  "xp": 56,
+  "ingredients": [
+    {
+      "id": "olive",
+      "name": "Olive",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/olive.json"
+      }
+    },
+    {
+      "id": "bread",
+      "name": "Bread",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/bread.json"
+      }
+    },
+    {
+      "id": "fish_fillet",
+      "name": "Fish Fillet",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/fish_fillet.json"
+      }
+    },
+    {
+      "id": "lemon",
+      "name": "Lemon",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/lemon.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/olive_dip.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

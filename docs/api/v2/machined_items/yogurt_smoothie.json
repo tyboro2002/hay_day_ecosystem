@@ -1,6 +1,44 @@
 {
   "id": "yogurt_smoothie",
   "name": "Yogurt Smoothie",
+  "unlock_level": 70,
+  "time_to_make": 60,
+  "sell_price": 349.0,
+  "xp": 42,
+  "ingredients": [
+    {
+      "id": "cream",
+      "name": "Cream",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cream.json"
+      }
+    },
+    {
+      "id": "raspberry",
+      "name": "Raspberry",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/raspberry.json"
+      }
+    },
+    {
+      "id": "cherry",
+      "name": "Cherry",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cherry.json"
+      }
+    },
+    {
+      "id": "white_sugar",
+      "name": "White Sugar",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/white_sugar.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/yogurt_smoothie.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

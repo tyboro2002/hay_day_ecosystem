@@ -1,6 +1,44 @@
 {
   "id": "fruit_cake",
   "name": "Fruit Cake",
+  "unlock_level": 89,
+  "time_to_make": 180,
+  "sell_price": 450.0,
+  "xp": 54,
+  "ingredients": [
+    {
+      "id": "grapes",
+      "name": "Grapes",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/grapes.json"
+      }
+    },
+    {
+      "id": "orange",
+      "name": "Orange",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/orange.json"
+      }
+    },
+    {
+      "id": "cherry",
+      "name": "Cherry",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cherry.json"
+      }
+    },
+    {
+      "id": "wheat",
+      "name": "Wheat",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/wheat.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/fruit_cake.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

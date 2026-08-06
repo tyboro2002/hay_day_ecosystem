@@ -1,6 +1,20 @@
 {
   "id": "goat_cheese",
   "name": "Goat Cheese",
+  "unlock_level": 33,
+  "time_to_make": 90,
+  "sell_price": 162.0,
+  "xp": 19,
+  "ingredients": [
+    {
+      "id": "goat_milk",
+      "name": "Goat Milk",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/goat_milk.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/goat_cheese.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

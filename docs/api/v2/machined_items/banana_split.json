@@ -1,6 +1,36 @@
 {
   "id": "banana_split",
   "name": "Banana Split",
+  "unlock_level": 96,
+  "time_to_make": 210,
+  "sell_price": 403.0,
+  "xp": 48,
+  "ingredients": [
+    {
+      "id": "banana",
+      "name": "Banana",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/banana.json"
+      }
+    },
+    {
+      "id": "cream",
+      "name": "Cream",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cream.json"
+      }
+    },
+    {
+      "id": "cherry",
+      "name": "Cherry",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cherry.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/banana_split.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

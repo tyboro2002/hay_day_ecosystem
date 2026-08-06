@@ -1,6 +1,44 @@
 {
   "id": "cabbage_soup",
   "name": "Cabbage Soup",
+  "unlock_level": 65,
+  "time_to_make": 90,
+  "sell_price": 270.0,
+  "xp": 32,
+  "ingredients": [
+    {
+      "id": "cabbage",
+      "name": "Cabbage",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cabbage.json"
+      }
+    },
+    {
+      "id": "bacon",
+      "name": "Bacon",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/bacon.json"
+      }
+    },
+    {
+      "id": "potato",
+      "name": "Potato",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/potato.json"
+      }
+    },
+    {
+      "id": "carrot",
+      "name": "Carrot",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/carrot.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/cabbage_soup.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

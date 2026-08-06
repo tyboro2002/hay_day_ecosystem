@@ -1,6 +1,28 @@
 {
   "id": "red_scarf",
   "name": "Red Scarf",
+  "unlock_level": 48,
+  "time_to_make": 150,
+  "sell_price": 288.0,
+  "xp": 34,
+  "ingredients": [
+    {
+      "id": "wool",
+      "name": "Wool",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/wool.json"
+      }
+    },
+    {
+      "id": "strawberry",
+      "name": "Strawberry",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/strawberry.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/red_scarf.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

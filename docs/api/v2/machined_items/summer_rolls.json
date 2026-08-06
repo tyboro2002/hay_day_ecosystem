@@ -1,6 +1,44 @@
 {
   "id": "summer_rolls",
   "name": "Summer Rolls",
+  "unlock_level": 78,
+  "time_to_make": 60,
+  "sell_price": 319.0,
+  "xp": 38,
+  "ingredients": [
+    {
+      "id": "rice_noodles",
+      "name": "Rice Noodles",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/rice_noodles.json"
+      }
+    },
+    {
+      "id": "carrot",
+      "name": "Carrot",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/carrot.json"
+      }
+    },
+    {
+      "id": "lettuce",
+      "name": "Lettuce",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/lettuce.json"
+      }
+    },
+    {
+      "id": "chili_pepper",
+      "name": "Chili Pepper",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/chili_pepper.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/summer_rolls.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

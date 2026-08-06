@@ -1,6 +1,20 @@
 {
   "id": "raspberry_jam",
   "name": "Raspberry Jam",
+  "unlock_level": 36,
+  "time_to_make": 420,
+  "sell_price": 252.0,
+  "xp": 30,
+  "ingredients": [
+    {
+      "id": "raspberry",
+      "name": "Raspberry",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/raspberry.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/raspberry_jam.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

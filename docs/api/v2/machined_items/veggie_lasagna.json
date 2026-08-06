@@ -1,6 +1,44 @@
 {
   "id": "veggie_lasagna",
   "name": "Veggie Lasagna",
+  "unlock_level": 74,
+  "time_to_make": 100,
+  "sell_price": 532.0,
+  "xp": 63,
+  "ingredients": [
+    {
+      "id": "carrot",
+      "name": "Carrot",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/carrot.json"
+      }
+    },
+    {
+      "id": "cheese",
+      "name": "Cheese",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cheese.json"
+      }
+    },
+    {
+      "id": "tomato_sauce",
+      "name": "Tomato Sauce",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/tomato_sauce.json"
+      }
+    },
+    {
+      "id": "fresh_pasta",
+      "name": "Fresh Pasta",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/fresh_pasta.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/veggie_lasagna.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

@@ -1,6 +1,20 @@
 {
   "id": "butter",
   "name": "Butter",
+  "unlock_level": 9,
+  "time_to_make": 30,
+  "sell_price": 82.8,
+  "xp": 10,
+  "ingredients": [
+    {
+      "id": "milk",
+      "name": "Milk",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/milk.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/butter.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

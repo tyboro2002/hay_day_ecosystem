@@ -1,6 +1,44 @@
 {
   "id": "seafood_salad",
   "name": "Seafood Salad",
+  "unlock_level": 64,
+  "time_to_make": 120,
+  "sell_price": 763.0,
+  "xp": 91,
+  "ingredients": [
+    {
+      "id": "fish_fillet",
+      "name": "Fish Fillet",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/fish_fillet.json"
+      }
+    },
+    {
+      "id": "lettuce",
+      "name": "Lettuce",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/lettuce.json"
+      }
+    },
+    {
+      "id": "lobster_tail",
+      "name": "Lobster Tail",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/lobster_tail.json"
+      }
+    },
+    {
+      "id": "mayonnaise",
+      "name": "Mayonnaise",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/mayonnaise.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/seafood_salad.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

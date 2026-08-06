@@ -1,6 +1,44 @@
 {
   "id": "apple_pie",
   "name": "Apple Pie",
+  "unlock_level": 28,
+  "time_to_make": 150,
+  "sell_price": 270.0,
+  "xp": 32,
+  "ingredients": [
+    {
+      "id": "wheat",
+      "name": "Wheat",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/wheat.json"
+      }
+    },
+    {
+      "id": "egg",
+      "name": "Egg",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/egg.json"
+      }
+    },
+    {
+      "id": "syrup",
+      "name": "Syrup",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/syrup.json"
+      }
+    },
+    {
+      "id": "apple",
+      "name": "Apple",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/apple.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/apple_pie.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

@@ -1,6 +1,36 @@
 {
   "id": "potato_soup",
   "name": "Potato Soup",
+  "unlock_level": 78,
+  "time_to_make": 150,
+  "sell_price": 255.0,
+  "xp": 31,
+  "ingredients": [
+    {
+      "id": "potato",
+      "name": "Potato",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/potato.json"
+      }
+    },
+    {
+      "id": "onion",
+      "name": "Onion",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/onion.json"
+      }
+    },
+    {
+      "id": "milk",
+      "name": "Milk",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/milk.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/potato_soup.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

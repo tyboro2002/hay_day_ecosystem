@@ -1,6 +1,44 @@
 {
   "id": "honey_toast",
   "name": "Honey Toast",
+  "unlock_level": 69,
+  "time_to_make": 60,
+  "sell_price": 255.0,
+  "xp": 31,
+  "ingredients": [
+    {
+      "id": "bread",
+      "name": "Bread",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/bread.json"
+      }
+    },
+    {
+      "id": "egg",
+      "name": "Egg",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/egg.json"
+      }
+    },
+    {
+      "id": "milk",
+      "name": "Milk",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/milk.json"
+      }
+    },
+    {
+      "id": "honey",
+      "name": "Honey",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/honey.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/honey_toast.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

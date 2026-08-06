@@ -1,6 +1,36 @@
 {
   "id": "hummus_wrap",
   "name": "Hummus Wrap",
+  "unlock_level": 109,
+  "time_to_make": 30,
+  "sell_price": 374.0,
+  "xp": 45,
+  "ingredients": [
+    {
+      "id": "hummus",
+      "name": "Hummus",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/hummus.json"
+      }
+    },
+    {
+      "id": "bread",
+      "name": "Bread",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/bread.json"
+      }
+    },
+    {
+      "id": "lettuce",
+      "name": "Lettuce",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/lettuce.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/hummus_wrap.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

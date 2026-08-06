@@ -43,5 +43,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        with:
-          timeout: 60000  # Tells the action to stop waiting after 60s if the API freezes

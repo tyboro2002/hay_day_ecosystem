@@ -1,6 +1,28 @@
 {
   "id": "plain_yogurt",
   "name": "Plain Yogurt",
+  "unlock_level": 103,
+  "time_to_make": 120,
+  "sell_price": 234.0,
+  "xp": 28,
+  "ingredients": [
+    {
+      "id": "milk",
+      "name": "Milk",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/milk.json"
+      }
+    },
+    {
+      "id": "cream",
+      "name": "Cream",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cream.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/plain_yogurt.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

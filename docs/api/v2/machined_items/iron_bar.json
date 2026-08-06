@@ -1,6 +1,20 @@
 {
   "id": "iron_bar",
   "name": "Iron Bar",
+  "unlock_level": 34,
+  "time_to_make": 420,
+  "sell_price": 129.6,
+  "xp": 15,
+  "ingredients": [
+    {
+      "id": "iron_ore",
+      "name": "Iron Ore",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/iron_ore.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/iron_bar.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

@@ -1,6 +1,28 @@
 {
   "id": "cloche_hat",
   "name": "Cloche Hat",
+  "unlock_level": 70,
+  "time_to_make": 120,
+  "sell_price": 468.0,
+  "xp": 56,
+  "ingredients": [
+    {
+      "id": "strawberry",
+      "name": "Strawberry",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/strawberry.json"
+      }
+    },
+    {
+      "id": "wool",
+      "name": "Wool",
+      "quantity": 6,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/wool.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/cloche_hat.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

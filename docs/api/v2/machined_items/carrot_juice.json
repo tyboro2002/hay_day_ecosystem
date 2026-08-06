@@ -1,6 +1,20 @@
 {
   "id": "carrot_juice",
   "name": "Carrot Juice",
+  "unlock_level": 26,
+  "time_to_make": 30,
+  "sell_price": 46.8,
+  "xp": 6,
+  "ingredients": [
+    {
+      "id": "carrot",
+      "name": "Carrot",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/carrot.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/carrot_juice.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

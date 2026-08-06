@@ -1,6 +1,44 @@
 {
   "id": "asparagus_quiche",
   "name": "Asparagus Quiche",
+  "unlock_level": 49,
+  "time_to_make": 120,
+  "sell_price": 302.4,
+  "xp": 36,
+  "ingredients": [
+    {
+      "id": "asparagus",
+      "name": "Asparagus",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/asparagus.json"
+      }
+    },
+    {
+      "id": "egg",
+      "name": "Egg",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/egg.json"
+      }
+    },
+    {
+      "id": "wheat",
+      "name": "Wheat",
+      "quantity": 4,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/wheat.json"
+      }
+    },
+    {
+      "id": "cheese",
+      "name": "Cheese",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cheese.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/asparagus_quiche.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

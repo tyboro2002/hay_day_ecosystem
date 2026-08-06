@@ -1,6 +1,44 @@
 {
   "id": "cookie_cupcake",
   "name": "Cookie Cupcake",
+  "unlock_level": 114,
+  "time_to_make": 120,
+  "sell_price": 712.0,
+  "xp": 85,
+  "ingredients": [
+    {
+      "id": "plain_cupcake",
+      "name": "Plain Cupcake",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/plain_cupcake.json"
+      }
+    },
+    {
+      "id": "cream",
+      "name": "Cream",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cream.json"
+      }
+    },
+    {
+      "id": "cookie",
+      "name": "Cookie",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cookie.json"
+      }
+    },
+    {
+      "id": "cacao",
+      "name": "Cacao",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cacao.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/cookie_cupcake.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

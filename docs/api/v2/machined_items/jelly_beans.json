@@ -1,6 +1,36 @@
 {
   "id": "jelly_beans",
   "name": "Jelly Beans",
+  "unlock_level": 60,
+  "time_to_make": 1440,
+  "sell_price": 684.0,
+  "xp": 81,
+  "ingredients": [
+    {
+      "id": "blackberry_jam",
+      "name": "Blackberry Jam",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/blackberry_jam.json"
+      }
+    },
+    {
+      "id": "raspberry_jam",
+      "name": "Raspberry Jam",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/raspberry_jam.json"
+      }
+    },
+    {
+      "id": "white_sugar",
+      "name": "White Sugar",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/white_sugar.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/jelly_beans.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

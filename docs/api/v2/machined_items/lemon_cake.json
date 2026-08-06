@@ -1,6 +1,44 @@
 {
   "id": "lemon_cake",
   "name": "Lemon Cake",
+  "unlock_level": 68,
+  "time_to_make": 150,
+  "sell_price": 896.0,
+  "xp": 107,
+  "ingredients": [
+    {
+      "id": "lemon_curd",
+      "name": "Lemon Curd",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/lemon_curd.json"
+      }
+    },
+    {
+      "id": "egg",
+      "name": "Egg",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/egg.json"
+      }
+    },
+    {
+      "id": "cream",
+      "name": "Cream",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cream.json"
+      }
+    },
+    {
+      "id": "wheat",
+      "name": "Wheat",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/wheat.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/lemon_cake.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

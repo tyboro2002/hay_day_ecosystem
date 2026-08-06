@@ -1,6 +1,44 @@
 {
   "id": "breakfast_bowl",
   "name": "Breakfast Bowl",
+  "unlock_level": 119,
+  "time_to_make": 50,
+  "sell_price": 604.0,
+  "xp": 72,
+  "ingredients": [
+    {
+      "id": "plain_yogurt",
+      "name": "Plain Yogurt",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/plain_yogurt.json"
+      }
+    },
+    {
+      "id": "oats",
+      "name": "Oats",
+      "quantity": 4,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/oats.json"
+      }
+    },
+    {
+      "id": "honey",
+      "name": "Honey",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/honey.json"
+      }
+    },
+    {
+      "id": "raspberry",
+      "name": "Raspberry",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/raspberry.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/breakfast_bowl.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

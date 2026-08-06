@@ -1,6 +1,36 @@
 {
   "id": "black_sesame_smoothie",
   "name": "Black Sesame Smoothie",
+  "unlock_level": 93,
+  "time_to_make": 45,
+  "sell_price": 313.0,
+  "xp": 37,
+  "ingredients": [
+    {
+      "id": "sesame",
+      "name": "Sesame",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/sesame.json"
+      }
+    },
+    {
+      "id": "banana",
+      "name": "Banana",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/banana.json"
+      }
+    },
+    {
+      "id": "goat_milk",
+      "name": "Goat Milk",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/goat_milk.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/black_sesame_smoothie.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

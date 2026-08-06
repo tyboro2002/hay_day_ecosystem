@@ -1,6 +1,36 @@
 {
   "id": "candy_bouquet",
   "name": "Candy Bouquet",
+  "unlock_level": 90,
+  "time_to_make": 20,
+  "sell_price": 554.0,
+  "xp": 66,
+  "ingredients": [
+    {
+      "id": "peony",
+      "name": "Peony",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/peony.json"
+      }
+    },
+    {
+      "id": "caramel_apple",
+      "name": "Caramel Apple",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/caramel_apple.json"
+      }
+    },
+    {
+      "id": "toffee",
+      "name": "Toffee",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/toffee.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/candy_bouquet.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

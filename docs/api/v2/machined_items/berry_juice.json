@@ -1,6 +1,28 @@
 {
   "id": "berry_juice",
   "name": "Berry Juice",
+  "unlock_level": 31,
+  "time_to_make": 180,
+  "sell_price": 205.2,
+  "xp": 24,
+  "ingredients": [
+    {
+      "id": "blackberry",
+      "name": "Blackberry",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/blackberry.json"
+      }
+    },
+    {
+      "id": "raspberry",
+      "name": "Raspberry",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/raspberry.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/berry_juice.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

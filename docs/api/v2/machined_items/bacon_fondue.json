@@ -1,6 +1,44 @@
 {
   "id": "bacon_fondue",
   "name": "Bacon Fondue",
+  "unlock_level": 86,
+  "time_to_make": 30,
+  "sell_price": 507.0,
+  "xp": 60,
+  "ingredients": [
+    {
+      "id": "bacon",
+      "name": "Bacon",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/bacon.json"
+      }
+    },
+    {
+      "id": "broccoli",
+      "name": "Broccoli",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/broccoli.json"
+      }
+    },
+    {
+      "id": "bell_pepper",
+      "name": "Bell Pepper",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/bell_pepper.json"
+      }
+    },
+    {
+      "id": "olive_oil",
+      "name": "Olive Oil",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/olive_oil.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/bacon_fondue.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

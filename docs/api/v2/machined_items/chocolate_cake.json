@@ -1,6 +1,36 @@
 {
   "id": "chocolate_cake",
   "name": "Chocolate Cake",
+  "unlock_level": 36,
+  "time_to_make": 120,
+  "sell_price": 320.4,
+  "xp": 38,
+  "ingredients": [
+    {
+      "id": "brown_sugar",
+      "name": "Brown Sugar",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/brown_sugar.json"
+      }
+    },
+    {
+      "id": "butter",
+      "name": "Butter",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/butter.json"
+      }
+    },
+    {
+      "id": "cacao",
+      "name": "Cacao",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cacao.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/chocolate_cake.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

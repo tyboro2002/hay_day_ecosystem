@@ -1,6 +1,36 @@
 {
   "id": "tropical_cupcake",
   "name": "Tropical Cupcake",
+  "unlock_level": 112,
+  "time_to_make": 90,
+  "sell_price": 572.0,
+  "xp": 68,
+  "ingredients": [
+    {
+      "id": "plain_cupcake",
+      "name": "Plain Cupcake",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/plain_cupcake.json"
+      }
+    },
+    {
+      "id": "coconut",
+      "name": "Coconut",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/coconut.json"
+      }
+    },
+    {
+      "id": "pineapple",
+      "name": "Pineapple",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/pineapple.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/tropical_cupcake.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

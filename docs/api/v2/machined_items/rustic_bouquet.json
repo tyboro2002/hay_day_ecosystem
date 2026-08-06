@@ -1,6 +1,36 @@
 {
   "id": "rustic_bouquet",
   "name": "Rustic Bouquet",
+  "unlock_level": 49,
+  "time_to_make": 45,
+  "sell_price": 208.8,
+  "xp": 25,
+  "ingredients": [
+    {
+      "id": "wheat",
+      "name": "Wheat",
+      "quantity": 5,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/wheat.json"
+      }
+    },
+    {
+      "id": "indigo",
+      "name": "Indigo",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/indigo.json"
+      }
+    },
+    {
+      "id": "cotton",
+      "name": "Cotton",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cotton.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/rustic_bouquet.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

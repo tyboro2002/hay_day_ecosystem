@@ -1,6 +1,20 @@
 {
   "id": "strawberry_jam",
   "name": "Strawberry Jam",
+  "unlock_level": 50,
+  "time_to_make": 450,
+  "sell_price": 270.0,
+  "xp": 32,
+  "ingredients": [
+    {
+      "id": "strawberry",
+      "name": "Strawberry",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/strawberry.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/strawberry_jam.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

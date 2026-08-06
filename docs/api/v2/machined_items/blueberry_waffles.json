@@ -1,6 +1,44 @@
 {
   "id": "blueberry_waffles",
   "name": "Blueberry Waffles",
+  "unlock_level": 118,
+  "time_to_make": 42,
+  "sell_price": 669.0,
+  "xp": 80,
+  "ingredients": [
+    {
+      "id": "plain_waffles",
+      "name": "Plain Waffles",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/plain_waffles.json"
+      }
+    },
+    {
+      "id": "cacao",
+      "name": "Cacao",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cacao.json"
+      }
+    },
+    {
+      "id": "milk",
+      "name": "Milk",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/milk.json"
+      }
+    },
+    {
+      "id": "blueberry",
+      "name": "Blueberry",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/blueberry.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/blueberry_waffles.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

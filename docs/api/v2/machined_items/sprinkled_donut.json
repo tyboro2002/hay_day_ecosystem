@@ -1,6 +1,28 @@
 {
   "id": "sprinkled_donut",
   "name": "Sprinkled Donut",
+  "unlock_level": 79,
+  "time_to_make": 20,
+  "sell_price": 313.0,
+  "xp": 37,
+  "ingredients": [
+    {
+      "id": "plain_donut",
+      "name": "Plain Donut",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/plain_donut.json"
+      }
+    },
+    {
+      "id": "cacao",
+      "name": "Cacao",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cacao.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/sprinkled_donut.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

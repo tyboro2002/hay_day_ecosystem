@@ -1,6 +1,28 @@
 {
   "id": "espresso",
   "name": "Espresso",
+  "unlock_level": 42,
+  "time_to_make": 5,
+  "sell_price": 248.4,
+  "xp": 29,
+  "ingredients": [
+    {
+      "id": "coffee_bean",
+      "name": "Coffee Bean",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/coffee_bean.json"
+      }
+    },
+    {
+      "id": "white_sugar",
+      "name": "White Sugar",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/white_sugar.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/espresso.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

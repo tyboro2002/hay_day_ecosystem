@@ -1,6 +1,44 @@
 {
   "id": "lobster_pasta",
   "name": "Lobster Pasta",
+  "unlock_level": 79,
+  "time_to_make": 120,
+  "sell_price": 637.0,
+  "xp": 76,
+  "ingredients": [
+    {
+      "id": "lobster_tail",
+      "name": "Lobster Tail",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/lobster_tail.json"
+      }
+    },
+    {
+      "id": "cream",
+      "name": "Cream",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cream.json"
+      }
+    },
+    {
+      "id": "fresh_pasta",
+      "name": "Fresh Pasta",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/fresh_pasta.json"
+      }
+    },
+    {
+      "id": "tomato",
+      "name": "Tomato",
+      "quantity": 4,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/tomato.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/lobster_pasta.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

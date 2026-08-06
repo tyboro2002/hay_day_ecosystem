@@ -1,6 +1,20 @@
 {
   "id": "bread",
   "name": "Bread",
+  "unlock_level": 4,
+  "time_to_make": 5,
+  "sell_price": 21.6,
+  "xp": 3,
+  "ingredients": [
+    {
+      "id": "wheat",
+      "name": "Wheat",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/wheat.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/bread.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

@@ -1,6 +1,36 @@
 {
   "id": "lollipop",
   "name": "Lollipop",
+  "unlock_level": 57,
+  "time_to_make": 720,
+  "sell_price": 342.0,
+  "xp": 41,
+  "ingredients": [
+    {
+      "id": "cherry",
+      "name": "Cherry",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cherry.json"
+      }
+    },
+    {
+      "id": "syrup",
+      "name": "Syrup",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/syrup.json"
+      }
+    },
+    {
+      "id": "strawberry",
+      "name": "Strawberry",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/strawberry.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/lollipop.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

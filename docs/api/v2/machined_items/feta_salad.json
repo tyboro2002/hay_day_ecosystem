@@ -1,6 +1,44 @@
 {
   "id": "feta_salad",
   "name": "Feta Salad",
+  "unlock_level": 58,
+  "time_to_make": 120,
+  "sell_price": 745.0,
+  "xp": 89,
+  "ingredients": [
+    {
+      "id": "goat_cheese",
+      "name": "Goat Cheese",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/goat_cheese.json"
+      }
+    },
+    {
+      "id": "lettuce",
+      "name": "Lettuce",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/lettuce.json"
+      }
+    },
+    {
+      "id": "olive",
+      "name": "Olive",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/olive.json"
+      }
+    },
+    {
+      "id": "roasted_tomatoes",
+      "name": "Roasted Tomatoes",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/roasted_tomatoes.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/feta_salad.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

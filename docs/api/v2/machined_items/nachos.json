@@ -1,6 +1,36 @@
 {
   "id": "nachos",
   "name": "Nachos",
+  "unlock_level": 87,
+  "time_to_make": 75,
+  "sell_price": 432.0,
+  "xp": 52,
+  "ingredients": [
+    {
+      "id": "corn",
+      "name": "Corn",
+      "quantity": 4,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/corn.json"
+      }
+    },
+    {
+      "id": "cheese",
+      "name": "Cheese",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cheese.json"
+      }
+    },
+    {
+      "id": "salsa",
+      "name": "Salsa",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/salsa.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/nachos.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

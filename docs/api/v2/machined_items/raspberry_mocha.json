@@ -1,6 +1,44 @@
 {
   "id": "raspberry_mocha",
   "name": "Raspberry Mocha",
+  "unlock_level": 46,
+  "time_to_make": 30,
+  "sell_price": 259.2,
+  "xp": 31,
+  "ingredients": [
+    {
+      "id": "coffee_bean",
+      "name": "Coffee Bean",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/coffee_bean.json"
+      }
+    },
+    {
+      "id": "cream",
+      "name": "Cream",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cream.json"
+      }
+    },
+    {
+      "id": "cacao",
+      "name": "Cacao",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cacao.json"
+      }
+    },
+    {
+      "id": "raspberry",
+      "name": "Raspberry",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/raspberry.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/raspberry_mocha.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

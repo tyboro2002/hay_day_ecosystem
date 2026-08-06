@@ -1,6 +1,36 @@
 {
   "id": "caff\u00e8_mocha",
   "name": "Caff\u00e8 Mocha",
+  "unlock_level": 45,
+  "time_to_make": 15,
+  "sell_price": 291.6,
+  "xp": 35,
+  "ingredients": [
+    {
+      "id": "coffee_bean",
+      "name": "Coffee Bean",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/coffee_bean.json"
+      }
+    },
+    {
+      "id": "cream",
+      "name": "Cream",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cream.json"
+      }
+    },
+    {
+      "id": "cacao",
+      "name": "Cacao",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cacao.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/caff\u00e8_mocha.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

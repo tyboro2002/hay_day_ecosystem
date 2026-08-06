@@ -1,6 +1,44 @@
 {
   "id": "cheese_omelet",
   "name": "Cheese Omelet",
+  "unlock_level": 79,
+  "time_to_make": 90,
+  "sell_price": 464.0,
+  "xp": 55,
+  "ingredients": [
+    {
+      "id": "egg",
+      "name": "Egg",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/egg.json"
+      }
+    },
+    {
+      "id": "cheese",
+      "name": "Cheese",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cheese.json"
+      }
+    },
+    {
+      "id": "tomato",
+      "name": "Tomato",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/tomato.json"
+      }
+    },
+    {
+      "id": "onion",
+      "name": "Onion",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/onion.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/cheese_omelet.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

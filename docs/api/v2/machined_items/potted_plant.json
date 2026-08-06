@@ -1,6 +1,28 @@
 {
   "id": "potted_plant",
   "name": "Potted Plant",
+  "unlock_level": 96,
+  "time_to_make": 220,
+  "sell_price": 151.0,
+  "xp": 26,
+  "ingredients": [
+    {
+      "id": "clay",
+      "name": "Clay",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/clay.json"
+      }
+    },
+    {
+      "id": "sunflower",
+      "name": "Sunflower",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/sunflower.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/potted_plant.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

@@ -1,6 +1,36 @@
 {
   "id": "peach_ice_cream",
   "name": "Peach Ice Cream",
+  "unlock_level": 83,
+  "time_to_make": 180,
+  "sell_price": 450.0,
+  "xp": 54,
+  "ingredients": [
+    {
+      "id": "cream",
+      "name": "Cream",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cream.json"
+      }
+    },
+    {
+      "id": "honey",
+      "name": "Honey",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/honey.json"
+      }
+    },
+    {
+      "id": "peach",
+      "name": "Peach",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/peach.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/peach_ice_cream.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

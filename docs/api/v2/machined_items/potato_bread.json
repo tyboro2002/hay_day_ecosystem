@@ -1,6 +1,44 @@
 {
   "id": "potato_bread",
   "name": "Potato Bread",
+  "unlock_level": 39,
+  "time_to_make": 45,
+  "sell_price": 284.4,
+  "xp": 34,
+  "ingredients": [
+    {
+      "id": "potato",
+      "name": "Potato",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/potato.json"
+      }
+    },
+    {
+      "id": "white_sugar",
+      "name": "White Sugar",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/white_sugar.json"
+      }
+    },
+    {
+      "id": "egg",
+      "name": "Egg",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/egg.json"
+      }
+    },
+    {
+      "id": "butter",
+      "name": "Butter",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/butter.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/potato_bread.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

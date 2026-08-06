@@ -1,6 +1,36 @@
 {
   "id": "soft_bouquet",
   "name": "Soft Bouquet",
+  "unlock_level": 93,
+  "time_to_make": 30,
+  "sell_price": 298.0,
+  "xp": 36,
+  "ingredients": [
+    {
+      "id": "peony",
+      "name": "Peony",
+      "quantity": 4,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/peony.json"
+      }
+    },
+    {
+      "id": "cotton",
+      "name": "Cotton",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cotton.json"
+      }
+    },
+    {
+      "id": "cotton_fabric",
+      "name": "Cotton Fabric",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cotton_fabric.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/soft_bouquet.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

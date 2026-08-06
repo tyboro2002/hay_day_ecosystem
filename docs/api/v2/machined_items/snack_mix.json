@@ -1,6 +1,36 @@
 {
   "id": "snack_mix",
   "name": "Snack Mix",
+  "unlock_level": 64,
+  "time_to_make": 45,
+  "sell_price": 309.0,
+  "xp": 50,
+  "ingredients": [
+    {
+      "id": "corn",
+      "name": "Corn",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/corn.json"
+      }
+    },
+    {
+      "id": "sesame",
+      "name": "Sesame",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/sesame.json"
+      }
+    },
+    {
+      "id": "peanuts",
+      "name": "Peanuts",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/peanuts.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/snack_mix.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

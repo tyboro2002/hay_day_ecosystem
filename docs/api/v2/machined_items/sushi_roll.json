@@ -1,6 +1,36 @@
 {
   "id": "sushi_roll",
   "name": "Sushi Roll",
+  "unlock_level": 56,
+  "time_to_make": 60,
+  "sell_price": 489.0,
+  "xp": 58,
+  "ingredients": [
+    {
+      "id": "fish_fillet",
+      "name": "Fish Fillet",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/fish_fillet.json"
+      }
+    },
+    {
+      "id": "rice",
+      "name": "Rice",
+      "quantity": 15,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/rice.json"
+      }
+    },
+    {
+      "id": "soy_sauce",
+      "name": "Soy Sauce",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/soy_sauce.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/sushi_roll.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

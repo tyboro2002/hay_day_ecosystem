@@ -1,6 +1,44 @@
 {
   "id": "gnocchi",
   "name": "Gnocchi",
+  "unlock_level": 72,
+  "time_to_make": 80,
+  "sell_price": 475.0,
+  "xp": 57,
+  "ingredients": [
+    {
+      "id": "potato",
+      "name": "Potato",
+      "quantity": 4,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/potato.json"
+      }
+    },
+    {
+      "id": "tomato",
+      "name": "Tomato",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/tomato.json"
+      }
+    },
+    {
+      "id": "wheat",
+      "name": "Wheat",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/wheat.json"
+      }
+    },
+    {
+      "id": "butter",
+      "name": "Butter",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/butter.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/gnocchi.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

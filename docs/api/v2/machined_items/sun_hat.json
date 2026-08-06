@@ -1,6 +1,44 @@
 {
   "id": "sun_hat",
   "name": "Sun Hat",
+  "unlock_level": 74,
+  "time_to_make": 150,
+  "sell_price": 558.0,
+  "xp": 66,
+  "ingredients": [
+    {
+      "id": "wool",
+      "name": "Wool",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/wool.json"
+      }
+    },
+    {
+      "id": "indigo",
+      "name": "Indigo",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/indigo.json"
+      }
+    },
+    {
+      "id": "duck_feather",
+      "name": "Duck Feather",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/duck_feather.json"
+      }
+    },
+    {
+      "id": "raspberry",
+      "name": "Raspberry",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/raspberry.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/sun_hat.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

@@ -1,6 +1,36 @@
 {
   "id": "mushroom_soup",
   "name": "Mushroom Soup",
+  "unlock_level": 104,
+  "time_to_make": 80,
+  "sell_price": 176.0,
+  "xp": 21,
+  "ingredients": [
+    {
+      "id": "mushroom",
+      "name": "Mushroom",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/mushroom.json"
+      }
+    },
+    {
+      "id": "onion",
+      "name": "Onion",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/onion.json"
+      }
+    },
+    {
+      "id": "milk",
+      "name": "Milk",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/milk.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/mushroom_soup.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

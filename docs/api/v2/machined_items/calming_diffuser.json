@@ -1,6 +1,28 @@
 {
   "id": "calming_diffuser",
   "name": "Calming Diffuser",
+  "unlock_level": 116,
+  "time_to_make": 25,
+  "sell_price": 169.0,
+  "xp": 20,
+  "ingredients": [
+    {
+      "id": "chamomile_essential_oil",
+      "name": "Chamomile Essential Oil",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/chamomile_essential_oil.json"
+      }
+    },
+    {
+      "id": "indigo",
+      "name": "Indigo",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/indigo.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/calming_diffuser.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

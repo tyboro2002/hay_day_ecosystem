@@ -1,6 +1,36 @@
 {
   "id": "eggplant_parmesan",
   "name": "Eggplant Parmesan",
+  "unlock_level": 99,
+  "time_to_make": 45,
+  "sell_price": 442.0,
+  "xp": 53,
+  "ingredients": [
+    {
+      "id": "eggplant",
+      "name": "Eggplant",
+      "quantity": 4,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/eggplant.json"
+      }
+    },
+    {
+      "id": "cheese",
+      "name": "Cheese",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cheese.json"
+      }
+    },
+    {
+      "id": "tomato_sauce",
+      "name": "Tomato Sauce",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/tomato_sauce.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/eggplant_parmesan.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

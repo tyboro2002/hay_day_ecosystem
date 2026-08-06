@@ -1,6 +1,36 @@
 {
   "id": "exfoliating_soap",
   "name": "Exfoliating Soap",
+  "unlock_level": 93,
+  "time_to_make": 60,
+  "sell_price": 363.0,
+  "xp": 43,
+  "ingredients": [
+    {
+      "id": "cacao",
+      "name": "Cacao",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cacao.json"
+      }
+    },
+    {
+      "id": "coffee_bean",
+      "name": "Coffee Bean",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/coffee_bean.json"
+      }
+    },
+    {
+      "id": "raspberry",
+      "name": "Raspberry",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/raspberry.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/exfoliating_soap.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

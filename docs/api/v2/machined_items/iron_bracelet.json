@@ -1,6 +1,36 @@
 {
   "id": "iron_bracelet",
   "name": "Iron Bracelet",
+  "unlock_level": 41,
+  "time_to_make": 90,
+  "sell_price": 658.8,
+  "xp": 79,
+  "ingredients": [
+    {
+      "id": "iron_bar",
+      "name": "Iron Bar",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/iron_bar.json"
+      }
+    },
+    {
+      "id": "refined_coal",
+      "name": "Refined coal",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/refined_coal.json"
+      }
+    },
+    {
+      "id": "silver_bar",
+      "name": "Silver Bar",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/silver_bar.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/iron_bracelet.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

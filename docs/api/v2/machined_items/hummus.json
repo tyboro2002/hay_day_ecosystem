@@ -1,6 +1,36 @@
 {
   "id": "hummus",
   "name": "Hummus",
+  "unlock_level": 95,
+  "time_to_make": 30,
+  "sell_price": 277.0,
+  "xp": 33,
+  "ingredients": [
+    {
+      "id": "chickpea",
+      "name": "Chickpea",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/chickpea.json"
+      }
+    },
+    {
+      "id": "lemon",
+      "name": "Lemon",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/lemon.json"
+      }
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/garlic.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/hummus.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

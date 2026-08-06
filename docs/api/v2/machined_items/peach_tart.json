@@ -1,6 +1,44 @@
 {
   "id": "peach_tart",
   "name": "Peach Tart",
+  "unlock_level": 76,
+  "time_to_make": 150,
+  "sell_price": 435.0,
+  "xp": 52,
+  "ingredients": [
+    {
+      "id": "cream",
+      "name": "Cream",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cream.json"
+      }
+    },
+    {
+      "id": "egg",
+      "name": "Egg",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/egg.json"
+      }
+    },
+    {
+      "id": "peach",
+      "name": "Peach",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/peach.json"
+      }
+    },
+    {
+      "id": "wheat",
+      "name": "Wheat",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/wheat.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/peach_tart.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

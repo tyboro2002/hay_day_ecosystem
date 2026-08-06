@@ -1,6 +1,44 @@
 {
   "id": "colourful_omelet",
   "name": "Colourful Omelet",
+  "unlock_level": 77,
+  "time_to_make": 60,
+  "sell_price": 136.0,
+  "xp": 16,
+  "ingredients": [
+    {
+      "id": "egg",
+      "name": "Egg",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/egg.json"
+      }
+    },
+    {
+      "id": "carrot",
+      "name": "Carrot",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/carrot.json"
+      }
+    },
+    {
+      "id": "bell_pepper",
+      "name": "Bell Pepper",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/bell_pepper.json"
+      }
+    },
+    {
+      "id": "cabbage",
+      "name": "Cabbage",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cabbage.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/colourful_omelet.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

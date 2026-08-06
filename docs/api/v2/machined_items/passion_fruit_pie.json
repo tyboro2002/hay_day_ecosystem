@@ -1,6 +1,36 @@
 {
   "id": "passion_fruit_pie",
   "name": "Passion Fruit Pie",
+  "unlock_level": 92,
+  "time_to_make": 50,
+  "sell_price": 111.0,
+  "xp": 13,
+  "ingredients": [
+    {
+      "id": "passion_fruit",
+      "name": "Passion Fruit",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/passion_fruit.json"
+      }
+    },
+    {
+      "id": "wheat",
+      "name": "Wheat",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/wheat.json"
+      }
+    },
+    {
+      "id": "egg",
+      "name": "Egg",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/egg.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/passion_fruit_pie.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

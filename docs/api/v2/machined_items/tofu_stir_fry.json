@@ -1,6 +1,44 @@
 {
   "id": "tofu_stir_fry",
   "name": "Tofu Stir Fry",
+  "unlock_level": 89,
+  "time_to_make": 75,
+  "sell_price": 306.0,
+  "xp": 37,
+  "ingredients": [
+    {
+      "id": "soybean",
+      "name": "Soybean",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/soybean.json"
+      }
+    },
+    {
+      "id": "onion",
+      "name": "Onion",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/onion.json"
+      }
+    },
+    {
+      "id": "broccoli",
+      "name": "Broccoli",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/broccoli.json"
+      }
+    },
+    {
+      "id": "sesame",
+      "name": "Sesame",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/sesame.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/tofu_stir_fry.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

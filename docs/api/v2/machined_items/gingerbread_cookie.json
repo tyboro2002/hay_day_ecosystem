@@ -1,6 +1,44 @@
 {
   "id": "gingerbread_cookie",
   "name": "Gingerbread Cookie",
+  "unlock_level": 86,
+  "time_to_make": 30,
+  "sell_price": 273.0,
+  "xp": 33,
+  "ingredients": [
+    {
+      "id": "wheat",
+      "name": "Wheat",
+      "quantity": 5,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/wheat.json"
+      }
+    },
+    {
+      "id": "butter",
+      "name": "Butter",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/butter.json"
+      }
+    },
+    {
+      "id": "syrup",
+      "name": "Syrup",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/syrup.json"
+      }
+    },
+    {
+      "id": "ginger",
+      "name": "Ginger",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/ginger.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/gingerbread_cookie.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

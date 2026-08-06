@@ -1,6 +1,44 @@
 {
   "id": "big_sushi_roll",
   "name": "Big Sushi Roll",
+  "unlock_level": 76,
+  "time_to_make": 90,
+  "sell_price": 648.0,
+  "xp": 77,
+  "ingredients": [
+    {
+      "id": "fish_fillet",
+      "name": "Fish Fillet",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/fish_fillet.json"
+      }
+    },
+    {
+      "id": "rice",
+      "name": "Rice",
+      "quantity": 20,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/rice.json"
+      }
+    },
+    {
+      "id": "egg",
+      "name": "Egg",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/egg.json"
+      }
+    },
+    {
+      "id": "lettuce",
+      "name": "Lettuce",
+      "quantity": 5,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/lettuce.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/big_sushi_roll.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

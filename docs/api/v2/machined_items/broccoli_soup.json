@@ -1,6 +1,36 @@
 {
   "id": "broccoli_soup",
   "name": "Broccoli Soup",
+  "unlock_level": 87,
+  "time_to_make": 90,
+  "sell_price": 237.0,
+  "xp": 28,
+  "ingredients": [
+    {
+      "id": "broccoli",
+      "name": "Broccoli",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/broccoli.json"
+      }
+    },
+    {
+      "id": "onion",
+      "name": "Onion",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/onion.json"
+      }
+    },
+    {
+      "id": "potato",
+      "name": "Potato",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/potato.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/broccoli_soup.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

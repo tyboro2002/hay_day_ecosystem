@@ -1,6 +1,36 @@
 {
   "id": "sesame_brittle",
   "name": "Sesame Brittle",
+  "unlock_level": 78,
+  "time_to_make": 60,
+  "sell_price": 270.0,
+  "xp": 32,
+  "ingredients": [
+    {
+      "id": "sesame",
+      "name": "Sesame",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/sesame.json"
+      }
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/garlic.json"
+      }
+    },
+    {
+      "id": "honey",
+      "name": "Honey",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/honey.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/sesame_brittle.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

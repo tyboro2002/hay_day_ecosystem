@@ -1,6 +1,44 @@
 {
   "id": "lamb_stir_fry",
   "name": "Lamb Stir Fry",
+  "unlock_level": 69,
+  "time_to_make": 120,
+  "sell_price": 270.0,
+  "xp": 32,
+  "ingredients": [
+    {
+      "id": "rice",
+      "name": "Rice",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/rice.json"
+      }
+    },
+    {
+      "id": "grilled_lamb_skewer",
+      "name": "Grilled Lamb Skewer",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/grilled_lamb_skewer.json"
+      }
+    },
+    {
+      "id": "chili_pepper",
+      "name": "Chili Pepper",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/chili_pepper.json"
+      }
+    },
+    {
+      "id": "sesame",
+      "name": "Sesame",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/sesame.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/lamb_stir_fry.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

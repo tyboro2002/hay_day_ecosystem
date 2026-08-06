@@ -1,6 +1,20 @@
 {
   "id": "orange_juice",
   "name": "Orange Juice",
+  "unlock_level": 71,
+  "time_to_make": 120,
+  "sell_price": 234.0,
+  "xp": 28,
+  "ingredients": [
+    {
+      "id": "orange",
+      "name": "Orange",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/orange.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/orange_juice.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

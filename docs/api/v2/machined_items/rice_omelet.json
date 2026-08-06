@@ -1,6 +1,36 @@
 {
   "id": "rice_omelet",
   "name": "Rice Omelet",
+  "unlock_level": 83,
+  "time_to_make": 120,
+  "sell_price": 572.0,
+  "xp": 68,
+  "ingredients": [
+    {
+      "id": "egg",
+      "name": "Egg",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/egg.json"
+      }
+    },
+    {
+      "id": "rice",
+      "name": "Rice",
+      "quantity": 1,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/rice.json"
+      }
+    },
+    {
+      "id": "tomato_sauce",
+      "name": "Tomato Sauce",
+      "quantity": 2,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/tomato_sauce.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/rice_omelet.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

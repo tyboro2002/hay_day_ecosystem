@@ -1,6 +1,28 @@
 {
   "id": "flower_crown",
   "name": "Flower Crown",
+  "unlock_level": 86,
+  "time_to_make": 120,
+  "sell_price": 331.0,
+  "xp": 40,
+  "ingredients": [
+    {
+      "id": "peony",
+      "name": "Peony",
+      "quantity": 5,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/peony.json"
+      }
+    },
+    {
+      "id": "cotton",
+      "name": "Cotton",
+      "quantity": 4,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cotton.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/flower_crown.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",

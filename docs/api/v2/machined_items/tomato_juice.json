@@ -1,6 +1,20 @@
 {
   "id": "tomato_juice",
   "name": "Tomato Juice",
+  "unlock_level": 31,
+  "time_to_make": 90,
+  "sell_price": 162.0,
+  "xp": 19,
+  "ingredients": [
+    {
+      "id": "tomato",
+      "name": "Tomato",
+      "quantity": 3,
+      "links": {
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/tomato.json"
+      }
+    }
+  ],
   "links": {
     "self": "/hay_day_ecosystem/api/v2/machined_items/tomato_juice.json",
     "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
