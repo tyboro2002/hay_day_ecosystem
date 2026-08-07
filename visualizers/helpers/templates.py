@@ -5,12 +5,14 @@ import math
 from game_data.game_data import CURRENT_LEVEL, MAX_LEVEL
 from visualizers.helpers.formatting import get_base64_asset
 
+# <a href="{path_prefix}daily_dirt_newspaper_countdown.html">Dirt Countdown</a> |
+# disclaimer also update this in calculator.html
 DISCLAIMER_FOOTER = """
 <div class="sc-disclaimer-footer">
     <div style="margin-bottom: 6px; font-weight: bold;">
         <a href="{path_prefix}general_profitability.html">Profit Rankings</a> | 
         <a href="{path_prefix}overnight_strategies.html">Overnight Strategy</a> |
-        <a href="{path_prefix}daily_dirt_newspaper_countdown.html">Dirt Countdown</a>
+        <a href="{path_prefix}calculator.html">Calculator</a>
     </div>
     <hr style="border: 0; border-top: 1px solid #444; margin: 6px 0;">
     This material is unofficial and is not endorsed by Supercell. For more information see <a href="https://www.supercell.com/fan-content-policy" target="_blank">Supercell's Fan Content Policy</a>.

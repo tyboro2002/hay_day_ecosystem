@@ -37,7 +37,7 @@
         body {
             display: grid;
             place-items: center;
-            padding: 24px 24px 104px;
+            padding: 24px 24px 60px;
         }
 
         .wrap {
@@ -230,6 +230,31 @@
         }
 
         .total-banner .total-val { font-size: 1.8rem; font-weight: 800; color: var(--accent); }
+
+        /* Footer Styles */
+        .sc-disclaimer-footer {
+            margin-top: 20px;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--muted);
+            background: var(--panel);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--panel-border);
+            border-radius: 20px;
+            box-shadow: 0 12px 40px var(--shadow);
+        }
+
+        .sc-disclaimer-footer a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.15s ease;
+        }
+
+        .sc-disclaimer-footer a:hover {
+            color: var(--accent-2);
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -275,9 +300,36 @@
                 <span class="total-val" id="infra-total">0 Coins</span>
             </div>
         </section>
+
+        <!-- FOOTER CONTAINER -->
+        <footer id="footer-container"></footer>
     </main>
 
     <script>
+        // Configurable Path Prefix Variable
+        const PATH_PREFIX = "";
+
+        // Reusable Disclaimer Footer Template
+        const DISCLAIMER_FOOTER = (pathPrefix = "") => `
+            <div class="sc-disclaimer-footer">
+                <div style="margin-bottom: 6px; font-weight: bold;">
+                    <a href="${pathPrefix}general_profitability.html">Profit Rankings</a> |
+                    <a href="${pathPrefix}overnight_strategies.html">Overnight Strategy</a> |
+<!--                    <a href="${pathPrefix}daily_dirt_newspaper_countdown.html">Dirt Countdown</a> |-->
+                    <a href="${pathPrefix}calculator.html">Calculator</a>
+                </div>
+                <hr style="border: 0; border-top: 1px solid #444; margin: 6px 0;">
+                This material is unofficial and is not endorsed by Supercell. For more information see <a href="https://www.supercell.com/fan-content-policy" target="_blank">Supercell's Fan Content Policy</a>.
+            </div>
+        `;
+
+        function renderFooter() {
+            const footerEl = document.getElementById("footer-container");
+            if (footerEl) {
+                footerEl.innerHTML = DISCLAIMER_FOOTER(PATH_PREFIX);
+            }
+        }
+
         const HOST_BASE = "https://tyboro2002.github.io";
         const API_BASE = `${HOST_BASE}/hay_day_ecosystem/api/v2/`;
 
@@ -294,29 +346,23 @@
         }
 
         async function init() {
-            // Fetch items
+            renderFooter();
+
+            // Fetch item collection indices directly without extra detail requests
             for (const col of ITEM_COLLECTIONS) {
                 try {
                     const res = await fetch(`${API_BASE}${col}/index.json`);
                     const data = await res.json();
-                    for (const item of data.items) {
-                        const detailRes = await fetch(`${API_BASE}${col}/${item.id}.json`);
-                        const detail = await detailRes.json();
-                        loadedItems.push({ ...detail, collection: col });
-                    }
+                    loadedItems.push(...data.items.map(i => ({ ...i, collection: col })));
                 } catch (e) { console.error(e); }
             }
 
-            // Fetch infrastructure
+            // Fetch infrastructure collection indices directly without extra detail requests
             for (const col of INFRA_COLLECTIONS) {
                 try {
                     const res = await fetch(`${API_BASE}${col}/index.json`);
                     const data = await res.json();
-                    for (const item of data.items) {
-                        const detailRes = await fetch(`${API_BASE}${col}/${item.id}.json`);
-                        const detail = await detailRes.json();
-                        loadedInfra.push({ ...detail, collection: col });
-                    }
+                    loadedInfra.push(...data.items.map(i => ({ ...i, collection: col })));
                 } catch (e) { console.error(e); }
             }
 
