@@ -1,7 +1,7 @@
 {
   "id": "mint_tea",
   "name": "Mint Tea",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/tea_stand.json",
+  "produced_by": "/api/v2/machines/tea_stand.json",
   "unlock_level": 97,
   "time_to_make": 35,
   "sell_price": 255.0,
@@ -12,7 +12,7 @@
       "name": "Tea Leaf",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/tea_leaf.json"
+        "detail": "/api/v2/crops/tea_leaf.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Watermelon",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/watermelon.json"
+        "detail": "/api/v2/crops/watermelon.json"
       }
     },
     {
@@ -28,14 +28,14 @@
       "name": "Mint",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/mint.json"
+        "detail": "/api/v2/crops/mint.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/mint_tea.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/mint_tea.png",
-    "html_details": "/hay_day_ecosystem/details/details_mint_tea.html"
+    "self": "/api/v2/machined_items/mint_tea.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/mint_tea.png",
+    "html_details": "/details/details_mint_tea.html"
   }
 }

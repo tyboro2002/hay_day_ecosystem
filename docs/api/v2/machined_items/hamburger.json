@@ -1,7 +1,7 @@
 {
   "id": "hamburger",
   "name": "Hamburger",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/bbq_grill.json",
+  "produced_by": "/api/v2/machines/bbq_grill.json",
   "unlock_level": 18,
   "time_to_make": 120,
   "sell_price": 180.0,
@@ -12,7 +12,7 @@
       "name": "Bread",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/bread.json"
+        "detail": "/api/v2/machined_items/bread.json"
       }
     },
     {
@@ -20,14 +20,14 @@
       "name": "Bacon",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/animal_items/bacon.json"
+        "detail": "/api/v2/animal_items/bacon.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/hamburger.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/hamburger.png",
-    "html_details": "/hay_day_ecosystem/details/details_hamburger.html"
+    "self": "/api/v2/machined_items/hamburger.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/hamburger.png",
+    "html_details": "/details/details_hamburger.html"
   }
 }

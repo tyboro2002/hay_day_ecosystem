@@ -1,7 +1,7 @@
 {
   "id": "lemon_candle",
   "name": "Lemon Candle",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/candle_maker.json",
+  "produced_by": "/api/v2/machines/candle_maker.json",
   "unlock_level": 72,
   "time_to_make": 135,
   "sell_price": 457.0,
@@ -12,7 +12,7 @@
       "name": "Beeswax",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/beeswax.json"
+        "detail": "/api/v2/machined_items/beeswax.json"
       }
     },
     {
@@ -20,14 +20,14 @@
       "name": "Lemon",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/plants/lemon.json"
+        "detail": "/api/v2/plants/lemon.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/lemon_candle.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/lemon_candle.png",
-    "html_details": "/hay_day_ecosystem/details/details_lemon_candle.html"
+    "self": "/api/v2/machined_items/lemon_candle.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/lemon_candle.png",
+    "html_details": "/details/details_lemon_candle.html"
   }
 }

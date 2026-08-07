@@ -5,124 +5,158 @@
       "id": "apple",
       "name": "Apple",
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/plants/apple.json"
-      }
+        "detail": "/api/v2/plants/apple.json",
+        "image": "/assets/items/apple.png"
+      },
+      "sell_price": 39.6
     },
     {
       "id": "raspberry",
       "name": "Raspberry",
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/plants/raspberry.json"
-      }
+        "detail": "/api/v2/plants/raspberry.json",
+        "image": "/assets/items/raspberry.png"
+      },
+      "sell_price": 46.8
     },
     {
       "id": "cherry",
       "name": "Cherry",
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/plants/cherry.json"
-      }
+        "detail": "/api/v2/plants/cherry.json",
+        "image": "/assets/items/cherry.png"
+      },
+      "sell_price": 68.4
     },
     {
       "id": "blackberry",
       "name": "Blackberry",
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/plants/blackberry.json"
-      }
+        "detail": "/api/v2/plants/blackberry.json",
+        "image": "/assets/items/blackberry.png"
+      },
+      "sell_price": 82.8
     },
     {
       "id": "blueberry",
       "name": "Blueberry",
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/plants/blueberry.json"
-      }
+        "detail": "/api/v2/plants/blueberry.json",
+        "image": "/assets/items/blueberry.png"
+      },
+      "sell_price": 82.8
     },
     {
       "id": "cacao",
       "name": "Cacao",
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/plants/cacao.json"
-      }
+        "detail": "/api/v2/plants/cacao.json",
+        "image": "/assets/items/cacao.png"
+      },
+      "sell_price": 86.4
     },
     {
       "id": "coffee_bean",
       "name": "Coffee Bean",
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/plants/coffee_bean.json"
-      }
+        "detail": "/api/v2/plants/coffee_bean.json",
+        "image": "/assets/items/coffee_bean.png"
+      },
+      "sell_price": 64.8
     },
     {
       "id": "olive",
       "name": "Olive",
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/plants/olive.json"
-      }
+        "detail": "/api/v2/plants/olive.json",
+        "image": "/assets/items/olive.png"
+      },
+      "sell_price": 82.0
     },
     {
       "id": "lemon",
       "name": "Lemon",
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/plants/lemon.json"
-      }
+        "detail": "/api/v2/plants/lemon.json",
+        "image": "/assets/items/lemon.png"
+      },
+      "sell_price": 66.0
     },
     {
       "id": "orange",
       "name": "Orange",
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/plants/orange.json"
-      }
+        "detail": "/api/v2/plants/orange.json",
+        "image": "/assets/items/orange.png"
+      },
+      "sell_price": 97.0
     },
     {
       "id": "peach",
       "name": "Peach",
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/plants/peach.json"
-      }
+        "detail": "/api/v2/plants/peach.json",
+        "image": "/assets/items/peach.png"
+      },
+      "sell_price": 100.0
     },
     {
       "id": "banana",
       "name": "Banana",
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/plants/banana.json"
-      }
+        "detail": "/api/v2/plants/banana.json",
+        "image": "/assets/items/banana.png"
+      },
+      "sell_price": 104.0
     },
     {
       "id": "plum",
       "name": "Plum",
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/plants/plum.json"
-      }
+        "detail": "/api/v2/plants/plum.json",
+        "image": "/assets/items/plum.png"
+      },
+      "sell_price": 82.0
     },
     {
       "id": "mango",
       "name": "Mango",
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/plants/mango.json"
-      }
+        "detail": "/api/v2/plants/mango.json",
+        "image": "/assets/items/mango.png"
+      },
+      "sell_price": 100.0
     },
     {
       "id": "coconut",
       "name": "Coconut",
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/plants/coconut.json"
-      }
+        "detail": "/api/v2/plants/coconut.json",
+        "image": "/assets/items/coconut.png"
+      },
+      "sell_price": 108.0
     },
     {
       "id": "guava",
       "name": "Guava",
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/plants/guava.json"
-      }
+        "detail": "/api/v2/plants/guava.json",
+        "image": "/assets/items/guava.png"
+      },
+      "sell_price": 111.0
     },
     {
       "id": "pomegranate",
       "name": "Pomegranate",
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/plants/pomegranate.json"
-      }
+        "detail": "/api/v2/plants/pomegranate.json",
+        "image": "/assets/items/pomegranate.png"
+      },
+      "sell_price": 111.0
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/plants/index.json",
-    "parent": "/hay_day_ecosystem/api/v2/index.json"
+    "self": "/api/v2/plants/index.json",
+    "parent": "/api/v2/index.json"
   }
 }

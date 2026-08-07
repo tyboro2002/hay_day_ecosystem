@@ -40,7 +40,7 @@
       "unlock_level": 4,
       "time_to_make_minutes": 5,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/bread.json"
+        "detail": "/api/v2/machined_items/bread.json"
       }
     },
     {
@@ -49,7 +49,7 @@
       "unlock_level": 7,
       "time_to_make_minutes": 30,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/corn_bread.json"
+        "detail": "/api/v2/machined_items/corn_bread.json"
       }
     },
     {
@@ -58,7 +58,7 @@
       "unlock_level": 10,
       "time_to_make_minutes": 60,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/cookie.json"
+        "detail": "/api/v2/machined_items/cookie.json"
       }
     },
     {
@@ -67,7 +67,7 @@
       "unlock_level": 19,
       "time_to_make_minutes": 45,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/raspberry_muffin.json"
+        "detail": "/api/v2/machined_items/raspberry_muffin.json"
       }
     },
     {
@@ -76,7 +76,7 @@
       "unlock_level": 26,
       "time_to_make_minutes": 45,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/blackberry_muffin.json"
+        "detail": "/api/v2/machined_items/blackberry_muffin.json"
       }
     },
     {
@@ -85,7 +85,7 @@
       "unlock_level": 33,
       "time_to_make_minutes": 15,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/pizza.json"
+        "detail": "/api/v2/machined_items/pizza.json"
       }
     },
     {
@@ -94,7 +94,7 @@
       "unlock_level": 33,
       "time_to_make_minutes": 45,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/blueberry_muffin.json"
+        "detail": "/api/v2/machined_items/blueberry_muffin.json"
       }
     },
     {
@@ -103,7 +103,7 @@
       "unlock_level": 37,
       "time_to_make_minutes": 15,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/spicy_pizza.json"
+        "detail": "/api/v2/machined_items/spicy_pizza.json"
       }
     },
     {
@@ -112,7 +112,7 @@
       "unlock_level": 39,
       "time_to_make_minutes": 45,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/potato_bread.json"
+        "detail": "/api/v2/machined_items/potato_bread.json"
       }
     },
     {
@@ -121,7 +121,7 @@
       "unlock_level": 45,
       "time_to_make_minutes": 15,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/frutti_di_mare_pizza.json"
+        "detail": "/api/v2/machined_items/frutti_di_mare_pizza.json"
       }
     },
     {
@@ -130,7 +130,7 @@
       "unlock_level": 86,
       "time_to_make_minutes": 30,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/gingerbread_cookie.json"
+        "detail": "/api/v2/machined_items/gingerbread_cookie.json"
       }
     },
     {
@@ -139,7 +139,7 @@
       "unlock_level": 91,
       "time_to_make_minutes": 30,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/banana_bread.json"
+        "detail": "/api/v2/machined_items/banana_bread.json"
       }
     },
     {
@@ -148,7 +148,7 @@
       "unlock_level": 101,
       "time_to_make_minutes": 30,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/macaroon.json"
+        "detail": "/api/v2/machined_items/macaroon.json"
       }
     },
     {
@@ -157,14 +157,14 @@
       "unlock_level": 120,
       "time_to_make_minutes": 40,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/pineapple_coconut_bars.json"
+        "detail": "/api/v2/machined_items/pineapple_coconut_bars.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machines/bakery.json",
-    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
-    "image": "/hay_day_ecosystem/assets/machines/bakery.png",
-    "html_details": "/hay_day_ecosystem/details/details_bakery.html"
+    "self": "/api/v2/machines/bakery.json",
+    "collection": "/api/v2/machines/index.json",
+    "image": "/assets/machines/bakery.png",
+    "html_details": "/details/details_bakery.html"
   }
 }

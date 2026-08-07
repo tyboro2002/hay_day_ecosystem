@@ -1,7 +1,7 @@
 {
   "id": "white_sugar",
   "name": "White Sugar",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/sugar_mill.json",
+  "produced_by": "/api/v2/machines/sugar_mill.json",
   "unlock_level": 13,
   "time_to_make": 40,
   "sell_price": 50.4,
@@ -12,14 +12,14 @@
       "name": "Sugarcane",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/sugarcane.json"
+        "detail": "/api/v2/crops/sugarcane.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/white_sugar.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/white_sugar.png",
-    "html_details": "/hay_day_ecosystem/details/details_white_sugar.html"
+    "self": "/api/v2/machined_items/white_sugar.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/white_sugar.png",
+    "html_details": "/details/details_white_sugar.html"
   }
 }

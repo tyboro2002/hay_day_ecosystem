@@ -40,7 +40,7 @@
       "unlock_level": 114,
       "time_to_make_minutes": 25,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/plain_waffles.json"
+        "detail": "/api/v2/machined_items/plain_waffles.json"
       }
     },
     {
@@ -49,7 +49,7 @@
       "unlock_level": 114,
       "time_to_make_minutes": 35,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/berry_waffles.json"
+        "detail": "/api/v2/machined_items/berry_waffles.json"
       }
     },
     {
@@ -58,7 +58,7 @@
       "unlock_level": 117,
       "time_to_make_minutes": 40,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/chocolate_waffles.json"
+        "detail": "/api/v2/machined_items/chocolate_waffles.json"
       }
     },
     {
@@ -67,7 +67,7 @@
       "unlock_level": 118,
       "time_to_make_minutes": 42,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/blueberry_waffles.json"
+        "detail": "/api/v2/machined_items/blueberry_waffles.json"
       }
     },
     {
@@ -76,14 +76,14 @@
       "unlock_level": 119,
       "time_to_make_minutes": 45,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/breakfast_waffles.json"
+        "detail": "/api/v2/machined_items/breakfast_waffles.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machines/waffle_maker.json",
-    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
-    "image": "/hay_day_ecosystem/assets/machines/waffle_maker.png",
-    "html_details": "/hay_day_ecosystem/details/details_waffle_maker.html"
+    "self": "/api/v2/machines/waffle_maker.json",
+    "collection": "/api/v2/machines/index.json",
+    "image": "/assets/machines/waffle_maker.png",
+    "html_details": "/details/details_waffle_maker.html"
   }
 }

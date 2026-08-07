@@ -1,7 +1,7 @@
 {
   "id": "diamond_ring",
   "name": "Diamond Ring",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/jeweler.json",
+  "produced_by": "/api/v2/machines/jeweler.json",
   "unlock_level": 40,
   "time_to_make": 240,
   "sell_price": 824.4,
@@ -12,7 +12,7 @@
       "name": "Diamond",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/special_items/diamond.json"
+        "detail": "/api/v2/special_items/diamond.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Platinum Bar",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/platinum_bar.json"
+        "detail": "/api/v2/machined_items/platinum_bar.json"
       }
     },
     {
@@ -28,14 +28,14 @@
       "name": "Gold Bar",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/gold_bar.json"
+        "detail": "/api/v2/machined_items/gold_bar.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/diamond_ring.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/diamond_ring.png",
-    "html_details": "/hay_day_ecosystem/details/details_diamond_ring.html"
+    "self": "/api/v2/machined_items/diamond_ring.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/diamond_ring.png",
+    "html_details": "/details/details_diamond_ring.html"
   }
 }

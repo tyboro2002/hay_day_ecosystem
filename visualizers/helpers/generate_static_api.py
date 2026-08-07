@@ -131,13 +131,25 @@ def generate_collection(api_dir, collection_dir_name, items_dict, process_item_f
         with open(os.path.join(target_dir, f"{item_id}.json"), "w", encoding="utf-8") as f:
             json.dump(item_detail, f, indent=2)
 
-        collection_summary.append({
+        # Build light summary item for index.json
+        summary_item = {
             "id": item_id,
             "name": name,
             "links": {
-                "detail": f"{proc.base_path_v2}/{collection_dir_name}/{item_id}.json"
+                "detail": f"{proc.base_path_v2}/{collection_dir_name}/{item_id}.json",
+                "image": item_detail.get("links", {}).get("image")
             }
-        })
+        }
+
+        # Include pricing and cost arrays directly in index summary if they exist
+        if "sell_price" in item_detail:
+            summary_item["sell_price"] = item_detail["sell_price"]
+        if "coin_cost" in item_detail:
+            summary_item["coin_cost"] = item_detail["coin_cost"]
+        if "costs" in item_detail:
+            summary_item["costs"] = item_detail["costs"]
+
+        collection_summary.append(summary_item)
 
     index_payload = {
         "count": len(collection_summary),

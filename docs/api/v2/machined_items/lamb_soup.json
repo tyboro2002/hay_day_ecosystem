@@ -1,7 +1,7 @@
 {
   "id": "lamb_soup",
   "name": "Lamb Soup",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/soup_kitchen.json",
+  "produced_by": "/api/v2/machines/soup_kitchen.json",
   "unlock_level": 46,
   "time_to_make": 120,
   "sell_price": 180.0,
@@ -12,7 +12,7 @@
       "name": "Grilled Lamb Skewer",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/grilled_lamb_skewer.json"
+        "detail": "/api/v2/machined_items/grilled_lamb_skewer.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Potato",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/potato.json"
+        "detail": "/api/v2/crops/potato.json"
       }
     },
     {
@@ -28,14 +28,14 @@
       "name": "Carrot",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/carrot.json"
+        "detail": "/api/v2/crops/carrot.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/lamb_soup.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/lamb_soup.png",
-    "html_details": "/hay_day_ecosystem/details/details_lamb_soup.html"
+    "self": "/api/v2/machined_items/lamb_soup.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/lamb_soup.png",
+    "html_details": "/details/details_lamb_soup.html"
   }
 }

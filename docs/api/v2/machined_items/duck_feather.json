@@ -1,16 +1,16 @@
 {
   "id": "duck_feather",
   "name": "Duck Feather",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/duck_salon.json",
+  "produced_by": "/api/v2/machines/duck_salon.json",
   "unlock_level": 50,
   "time_to_make": 180,
   "sell_price": 140.4,
   "xp": 17,
   "ingredients": [],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/duck_feather.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/duck_feather.png",
-    "html_details": "/hay_day_ecosystem/details/details_duck_feather.html"
+    "self": "/api/v2/machined_items/duck_feather.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/duck_feather.png",
+    "html_details": "/details/details_duck_feather.html"
   }
 }

@@ -40,7 +40,7 @@
       "unlock_level": 69,
       "time_to_make_minutes": 60,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/fried_rice.json"
+        "detail": "/api/v2/machined_items/fried_rice.json"
       }
     },
     {
@@ -49,7 +49,7 @@
       "unlock_level": 69,
       "time_to_make_minutes": 120,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/lamb_stir_fry.json"
+        "detail": "/api/v2/machined_items/lamb_stir_fry.json"
       }
     },
     {
@@ -58,7 +58,7 @@
       "unlock_level": 79,
       "time_to_make_minutes": 90,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/spicy_fish.json"
+        "detail": "/api/v2/machined_items/spicy_fish.json"
       }
     },
     {
@@ -67,7 +67,7 @@
       "unlock_level": 86,
       "time_to_make_minutes": 45,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/peanut_noodles.json"
+        "detail": "/api/v2/machined_items/peanut_noodles.json"
       }
     },
     {
@@ -76,14 +76,14 @@
       "unlock_level": 89,
       "time_to_make_minutes": 75,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/tofu_stir_fry.json"
+        "detail": "/api/v2/machined_items/tofu_stir_fry.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machines/wok_kitchen.json",
-    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
-    "image": "/hay_day_ecosystem/assets/machines/wok_kitchen.png",
-    "html_details": "/hay_day_ecosystem/details/details_wok_kitchen.html"
+    "self": "/api/v2/machines/wok_kitchen.json",
+    "collection": "/api/v2/machines/index.json",
+    "image": "/assets/machines/wok_kitchen.png",
+    "html_details": "/details/details_wok_kitchen.html"
   }
 }

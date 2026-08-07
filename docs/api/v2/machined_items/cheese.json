@@ -1,7 +1,7 @@
 {
   "id": "cheese",
   "name": "Cheese",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/dairy.json",
+  "produced_by": "/api/v2/machines/dairy.json",
   "unlock_level": 12,
   "time_to_make": 60,
   "sell_price": 122.4,
@@ -12,14 +12,14 @@
       "name": "Milk",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/animal_items/milk.json"
+        "detail": "/api/v2/animal_items/milk.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/cheese.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/cheese.png",
-    "html_details": "/hay_day_ecosystem/details/details_cheese.html"
+    "self": "/api/v2/machined_items/cheese.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/cheese.png",
+    "html_details": "/details/details_cheese.html"
   }
 }

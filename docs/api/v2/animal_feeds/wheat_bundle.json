@@ -1,7 +1,7 @@
 {
   "id": "wheat_bundle",
   "name": "Wheat Bundle",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/feed_mill.json",
+  "produced_by": "/api/v2/machines/feed_mill.json",
   "feeds_animal": null,
   "unlock_level": 34,
   "time_to_make": 90,
@@ -14,14 +14,14 @@
       "name": "Wheat",
       "quantity": 75,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/wheat.json"
+        "detail": "/api/v2/crops/wheat.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/animal_feeds/wheat_bundle.json",
-    "collection": "/hay_day_ecosystem/api/v2/animal_feeds/index.json",
-    "image": "/hay_day_ecosystem/assets/items/wheat_bundle.png",
-    "html_details": "/hay_day_ecosystem/details/details_wheat_bundle.html"
+    "self": "/api/v2/animal_feeds/wheat_bundle.json",
+    "collection": "/api/v2/animal_feeds/index.json",
+    "image": "/assets/items/wheat_bundle.png",
+    "html_details": "/details/details_wheat_bundle.html"
   }
 }

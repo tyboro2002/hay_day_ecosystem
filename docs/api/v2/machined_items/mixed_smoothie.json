@@ -1,7 +1,7 @@
 {
   "id": "mixed_smoothie",
   "name": "Mixed Smoothie",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/smoothie_mixer.json",
+  "produced_by": "/api/v2/machines/smoothie_mixer.json",
   "unlock_level": 88,
   "time_to_make": 30,
   "sell_price": 504.0,
@@ -12,7 +12,7 @@
       "name": "Lemon",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/plants/lemon.json"
+        "detail": "/api/v2/plants/lemon.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Orange",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/plants/orange.json"
+        "detail": "/api/v2/plants/orange.json"
       }
     },
     {
@@ -28,14 +28,14 @@
       "name": "Peach",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/plants/peach.json"
+        "detail": "/api/v2/plants/peach.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/mixed_smoothie.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/mixed_smoothie.png",
-    "html_details": "/hay_day_ecosystem/details/details_mixed_smoothie.html"
+    "self": "/api/v2/machined_items/mixed_smoothie.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/mixed_smoothie.png",
+    "html_details": "/details/details_mixed_smoothie.html"
   }
 }

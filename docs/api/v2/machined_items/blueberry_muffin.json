@@ -1,7 +1,7 @@
 {
   "id": "blueberry_muffin",
   "name": "Blueberry muffin",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/bakery.json",
+  "produced_by": "/api/v2/machines/bakery.json",
   "unlock_level": 33,
   "time_to_make": 45,
   "sell_price": 230.4,
@@ -12,7 +12,7 @@
       "name": "Wheat",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/wheat.json"
+        "detail": "/api/v2/crops/wheat.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Egg",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/animal_items/egg.json"
+        "detail": "/api/v2/animal_items/egg.json"
       }
     },
     {
@@ -28,14 +28,14 @@
       "name": "Blueberry",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/plants/blueberry.json"
+        "detail": "/api/v2/plants/blueberry.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/blueberry_muffin.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/blueberry_muffin.png",
-    "html_details": "/hay_day_ecosystem/details/details_blueberry_muffin.html"
+    "self": "/api/v2/machined_items/blueberry_muffin.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/blueberry_muffin.png",
+    "html_details": "/details/details_blueberry_muffin.html"
   }
 }

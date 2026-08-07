@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hay Day Asset-Focused Calculator</title>
+    <style>
+        :root {
+            color-scheme: dark;
+            --bg-1: #0f172a;
+            --bg-2: #111827;
+            --panel: rgba(17, 24, 39, 0.78);
+            --panel-border: rgba(148, 163, 184, 0.18);
+            --text: #e5e7eb;
+            --muted: #94a3b8;
+            --accent: #f59e0b;
+            --accent-2: #fb7185;
+            --shadow: rgba(0, 0, 0, 0.35);
+        }
+
+        * { box-sizing: border-box; }
+
+        html, body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+            overflow-y: auto;
+            font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+            background:
+                radial-gradient(circle at top left, rgba(245, 158, 11, 0.16), transparent 30%),
+                radial-gradient(circle at bottom right, rgba(251, 113, 133, 0.13), transparent 28%),
+                linear-gradient(135deg, var(--bg-1), var(--bg-2));
+            color: var(--text);
+        }
+
+        body {
+            display: grid;
+            place-items: center;
+            padding: 24px 24px 104px;
+        }
+
+        .wrap {
+            width: min(960px, 100%);
+            padding: 10px;
+        }
+
+        .card {
+            position: relative;
+            background: var(--panel);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--panel-border);
+            border-radius: 30px;
+            padding: clamp(24px, 4vw, 44px);
+            box-shadow: 0 24px 80px var(--shadow);
+            overflow: hidden;
+            margin-bottom: 28px;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 16px;
+            border-radius: 999px;
+            background: rgba(15, 23, 42, 0.7);
+            border: 1px solid rgba(245, 158, 11, 0.18);
+            color: var(--muted);
+            font-size: 0.9rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        h1 { margin: 18px 0 10px; font-size: clamp(2rem, 4vw, 3.2rem); letter-spacing: -0.05em; }
+        h2 { margin: 0 0 8px; font-size: 1.6rem; color: #fff; }
+        .subtitle { margin: 0 0 24px; color: var(--muted); font-size: 0.95rem; }
+
+        /* Search Filter Controls */
+        .filter-input {
+            width: 100%;
+            background: rgba(15, 23, 42, 0.8);
+            color: var(--text);
+            border: 1px solid rgba(148, 163, 184, 0.25);
+            border-radius: 12px;
+            padding: 10px 16px;
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+            outline: none;
+            transition: border-color 0.15s ease;
+        }
+
+        .filter-input:focus {
+            border-color: var(--accent);
+        }
+
+        /* Asset Grid Picker */
+        .asset-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+            gap: 10px;
+            max-height: 240px;
+            overflow-y: auto;
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(148, 163, 184, 0.15);
+            border-radius: 18px;
+            padding: 12px;
+            margin-bottom: 16px;
+        }
+
+        .asset-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 8px 6px;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            text-align: center;
+        }
+
+        .asset-card:hover {
+            background: rgba(245, 158, 11, 0.15);
+            border-color: rgba(245, 158, 11, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .asset-card.active {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--accent);
+            box-shadow: 0 0 12px rgba(245, 158, 11, 0.3);
+        }
+
+        .asset-card img {
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+            margin-bottom: 6px;
+        }
+
+        .asset-card span {
+            font-size: 0.72rem;
+            color: var(--text);
+            line-height: 1.1;
+            word-break: break-word;
+        }
+
+        /* Form Controls */
+        .row-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px; }
+        .calc-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(15, 23, 42, 0.72);
+            border: 1px solid rgba(148, 163, 184, 0.16);
+            border-radius: 18px;
+            padding: 12px 16px;
+        }
+
+        .item-icon {
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+            border-radius: 8px;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 4px;
+        }
+
+        .item-label-group { display: flex; flex-direction: column; flex: 1; }
+        .item-label-group .item-title { font-weight: 600; color: #fff; font-size: 0.95rem; }
+        .item-label-group .item-sub { font-size: 0.75rem; color: var(--muted); }
+
+        .infra-controls {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .range-group {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        input[type="number"] {
+            background: rgba(15, 23, 42, 0.9);
+            color: var(--text);
+            border: 1px solid rgba(148, 163, 184, 0.25);
+            border-radius: 12px;
+            padding: 10px;
+            font-size: 0.95rem;
+            width: 75px;
+            text-align: center;
+            outline: none;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            color: #0f172a;
+            font-weight: 700;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 999px;
+            cursor: pointer;
+        }
+
+        .btn-remove {
+            background: rgba(251, 113, 133, 0.15);
+            color: var(--accent-2);
+            border: 1px solid rgba(251, 113, 133, 0.3);
+            border-radius: 12px;
+            width: 36px;
+            height: 36px;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .total-banner {
+            margin-top: 20px;
+            padding: 18px 22px;
+            border-radius: 18px;
+            background: rgba(15, 23, 42, 0.85);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .total-banner .total-val { font-size: 1.8rem; font-weight: 800; color: var(--accent); }
+    </style>
+</head>
+<body>
+    <main class="wrap">
+        <header style="margin-bottom: 24px;">
+            <div class="eyebrow">Asset-Focused API Calculator</div>
+            <h1>Interactive Cost Calculator</h1>
+            <p class="subtitle">Click assets below to add items or calculate infrastructure upgrade costs.</p>
+        </header>
+
+        <!-- MODULE 1: ITEMS CALCULATOR -->
+        <section class="card">
+            <h2>🛒 Item Basket Calculator</h2>
+            <p class="subtitle">Search and click items to add them to your basket:</p>
+
+            <input type="text" id="item-search" class="filter-input" placeholder="🔍 Search items (e.g. 'bac')..." oninput="renderItemPickerGrid()">
+
+            <!-- Visual Asset Picker for Items -->
+            <div class="asset-grid" id="item-picker-grid"></div>
+
+            <div class="row-list" id="item-rows"></div>
+
+            <div class="total-banner">
+                <span>Total Max Market Value:</span>
+                <span class="total-val" id="item-total">0 Coins</span>
+            </div>
+        </section>
+
+        <!-- MODULE 2: INFRASTRUCTURE CALCULATOR -->
+        <section class="card">
+            <h2>🏗️ Infrastructure Cost Planner</h2>
+            <p class="subtitle">Search and click building assets below to add instance cost planners:</p>
+
+            <input type="text" id="infra-search" class="filter-input" placeholder="🔍 Search buildings (e.g. 'mill')..." oninput="renderInfraPickerGrid()">
+
+            <!-- Visual Asset Picker for Infrastructure -->
+            <div class="asset-grid" id="infra-picker-grid"></div>
+
+            <div class="row-list" id="infra-rows"></div>
+
+            <div class="total-banner">
+                <span>Total Construction Cost:</span>
+                <span class="total-val" id="infra-total">0 Coins</span>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const HOST_BASE = "https://tyboro2002.github.io";
+        const API_BASE = `${HOST_BASE}/hay_day_ecosystem/api/v2/`;
+
+        const ITEM_COLLECTIONS = ["crops", "plants", "animal_items", "machined_items", "animal_feeds", "special_items"];
+        const INFRA_COLLECTIONS = ["machines", "pens", "plant_structures"];
+
+        let loadedItems = [];
+        let loadedInfra = [];
+
+        function getFullAssetUrl(path) {
+            if (!path) return "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'/>";
+            if (path.startsWith("http://") || path.startsWith("https://")) return path;
+            return `${HOST_BASE}${path.startsWith("/") ? "" : "/"}${path}`;
+        }
+
+        async function init() {
+            // Fetch items
+            for (const col of ITEM_COLLECTIONS) {
+                try {
+                    const res = await fetch(`${API_BASE}${col}/index.json`);
+                    const data = await res.json();
+                    for (const item of data.items) {
+                        const detailRes = await fetch(`${API_BASE}${col}/${item.id}.json`);
+                        const detail = await detailRes.json();
+                        loadedItems.push({ ...detail, collection: col });
+                    }
+                } catch (e) { console.error(e); }
+            }
+
+            // Fetch infrastructure
+            for (const col of INFRA_COLLECTIONS) {
+                try {
+                    const res = await fetch(`${API_BASE}${col}/index.json`);
+                    const data = await res.json();
+                    for (const item of data.items) {
+                        const detailRes = await fetch(`${API_BASE}${col}/${item.id}.json`);
+                        const detail = await detailRes.json();
+                        loadedInfra.push({ ...detail, collection: col });
+                    }
+                } catch (e) { console.error(e); }
+            }
+
+            renderItemPickerGrid();
+            renderInfraPickerGrid();
+        }
+
+        // Render Item Picker Grid with Filter
+        function renderItemPickerGrid() {
+            const query = document.getElementById("item-search").value.toLowerCase().trim();
+            const filtered = loadedItems.filter(item => item.name.toLowerCase().includes(query));
+            const grid = document.getElementById("item-picker-grid");
+
+            grid.innerHTML = filtered.map(item => `
+                <div class="asset-card" onclick="addSelectedBasketItem('${item.id}')">
+                    <img src="${getFullAssetUrl(item.links?.image)}" alt="${item.name}">
+                    <span>${item.name}</span>
+                </div>
+            `).join("");
+        }
+
+        // Render Infrastructure Picker Grid with Filter
+        function renderInfraPickerGrid() {
+            const query = document.getElementById("infra-search").value.toLowerCase().trim();
+            const filtered = loadedInfra.filter(item => item.name.toLowerCase().includes(query));
+            const grid = document.getElementById("infra-picker-grid");
+
+            grid.innerHTML = filtered.map(item => `
+                <div class="asset-card" onclick="addInfraRow('${item.id}')">
+                    <img src="${getFullAssetUrl(item.links?.image)}" alt="${item.name}">
+                    <span>${item.name}</span>
+                </div>
+            `).join("");
+        }
+
+        // Basket Row Logic
+        function addSelectedBasketItem(itemId) {
+            const item = loadedItems.find(i => i.id === itemId);
+            if (!item) return;
+
+            const container = document.getElementById("item-rows");
+            const row = document.createElement("div");
+            row.className = "calc-row";
+            row.dataset.price = item.sell_price || item.coin_cost || 0;
+
+            row.innerHTML = `
+                <img class="item-icon" src="${getFullAssetUrl(item.links?.image)}">
+                <div class="item-label-group">
+                    <span class="item-title">${item.name}</span>
+                    <span class="item-sub">${row.dataset.price} Coins / unit</span>
+                </div>
+                <input type="number" value="1" min="1" oninput="calculateItemsTotal()">
+                <button class="btn-remove" onclick="this.parentElement.remove(); calculateItemsTotal();">✕</button>
+            `;
+
+            container.appendChild(row);
+            calculateItemsTotal();
+        }
+
+        function calculateItemsTotal() {
+            let total = 0;
+            document.querySelectorAll("#item-rows .calc-row").forEach(row => {
+                const qty = parseFloat(row.querySelector("input").value) || 0;
+                const unitPrice = parseFloat(row.dataset.price) || 0;
+                total += qty * unitPrice;
+            });
+            document.getElementById("item-total").textContent = `${Math.round(total).toLocaleString()} Coins`;
+        }
+
+        // Multiple Infrastructure Row Logic
+        function addInfraRow(infraId) {
+            const item = loadedInfra.find(i => i.id === infraId);
+            if (!item) return;
+
+            const container = document.getElementById("infra-rows");
+            const row = document.createElement("div");
+            row.className = "calc-row";
+            row.dataset.infraId = item.id;
+
+            const costs = item.costs || [];
+            const isPlantable = item.collection === "plant_structures";
+            const maxAvailable = isPlantable ? Infinity : (costs.length > 0 ? costs.length : 1);
+            const unitPrice = item.coin_cost || (costs.length > 0 ? costs[0] : 0);
+
+            row.dataset.isPlantable = isPlantable;
+            row.dataset.unitPrice = unitPrice;
+
+            let controlsHtml = "";
+
+            if (isPlantable) {
+                // Unlimited count input for plantable structures
+                controlsHtml = `
+                    <div class="range-group">
+                        <label style="color: var(--muted); font-size: 0.8rem;">Count:</label>
+                        <input type="number" class="infra-count" value="1" min="1" oninput="calculateInfraTotal()">
+                    </div>
+                `;
+            } else if (maxAvailable === 1) {
+                // Single fixed instance (no range controls needed)
+                controlsHtml = `
+                    <div class="range-group">
+                        <span style="color: var(--muted); font-size: 0.85rem;">1 Instance (${unitPrice.toLocaleString()} Coins)</span>
+                    </div>
+                `;
+            } else {
+                // Tiered range input with max limit enforcement
+                controlsHtml = `
+                    <div class="infra-controls">
+                        <div class="range-group">
+                            <label style="color: var(--muted); font-size: 0.8rem;">From:</label>
+                            <input type="number" class="infra-from" value="1" min="1" max="${maxAvailable}" oninput="validateAndCalculateInfra(this, ${maxAvailable})">
+                        </div>
+                        <div class="range-group">
+                            <label style="color: var(--muted); font-size: 0.8rem;">To:</label>
+                            <input type="number" class="infra-to" value="1" min="1" max="${maxAvailable}" oninput="validateAndCalculateInfra(this, ${maxAvailable})">
+                        </div>
+                    </div>
+                `;
+            }
+
+            const subText = isPlantable
+                ? `Plantable Structure (${unitPrice.toLocaleString()} Coins/ea)`
+                : (maxAvailable === 1 ? 'Fixed Single Instance' : `Max Available: ${maxAvailable}`);
+
+            row.innerHTML = `
+                <img class="item-icon" src="${getFullAssetUrl(item.links?.image)}">
+                <div class="item-label-group">
+                    <span class="item-title">${item.name}</span>
+                    <span class="item-sub">${subText}</span>
+                </div>
+                ${controlsHtml}
+                <button class="btn-remove" onclick="this.parentElement.remove(); calculateInfraTotal();">✕</button>
+            `;
+
+            container.appendChild(row);
+            calculateInfraTotal();
+        }
+
+        function validateAndCalculateInfra(inputEl, maxAvailable) {
+            const row = inputEl.closest(".calc-row");
+            const fromInput = row.querySelector(".infra-from");
+            const toInput = row.querySelector(".infra-to");
+
+            if (!fromInput || !toInput) return;
+
+            let fromVal = parseInt(fromInput.value) || 1;
+            let toVal = parseInt(toInput.value) || 1;
+
+            if (fromVal > maxAvailable) fromInput.value = maxAvailable;
+            if (toVal > maxAvailable) toInput.value = maxAvailable;
+
+            fromVal = parseInt(fromInput.value) || 1;
+            toVal = parseInt(toInput.value) || 1;
+
+            if (fromVal > toVal) {
+                if (inputEl.classList.contains("infra-from")) {
+                    toInput.value = fromVal;
+                } else {
+                    fromInput.value = toVal;
+                }
+            }
+
+            calculateInfraTotal();
+        }
+
+        function calculateInfraTotal() {
+            let totalCost = 0;
+
+            document.querySelectorAll("#infra-rows .calc-row").forEach(row => {
+                const infraId = row.dataset.infraId;
+                const item = loadedInfra.find(i => i.id === infraId);
+                if (!item) return;
+
+                const isPlantable = row.dataset.isPlantable === "true";
+                const unitPrice = parseFloat(row.dataset.unitPrice) || 0;
+
+                if (isPlantable) {
+                    const count = parseInt(row.querySelector(".infra-count")?.value) || 0;
+                    totalCost += count * unitPrice;
+                } else {
+                    const fromInput = row.querySelector(".infra-from");
+                    const toInput = row.querySelector(".infra-to");
+
+                    if (!fromInput || !toInput) {
+                        // Single instance structure
+                        totalCost += unitPrice;
+                    } else {
+                        const fromVal = parseInt(fromInput.value) || 1;
+                        const toVal = parseInt(toInput.value) || 1;
+                        const costs = item.costs || [];
+
+                        for (let i = fromVal - 1; i < toVal; i++) {
+                            if (costs[i] !== undefined) {
+                                totalCost += costs[i];
+                            } else if (item.coin_cost) {
+                                totalCost += item.coin_cost;
+                            }
+                        }
+                    }
+                }
+            });
+
+            document.getElementById("infra-total").textContent = `${totalCost.toLocaleString()} Coins`;
+        }
+
+        window.onload = init;
+    </script>
+</body>
+</html>

@@ -1,7 +1,7 @@
 {
   "id": "popcorn",
   "name": "Popcorn",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/popcorn_pot.json",
+  "produced_by": "/api/v2/machines/popcorn_pot.json",
   "unlock_level": 8,
   "time_to_make": 30,
   "sell_price": 32.4,
@@ -12,14 +12,14 @@
       "name": "Corn",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/corn.json"
+        "detail": "/api/v2/crops/corn.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/popcorn.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/popcorn.png",
-    "html_details": "/hay_day_ecosystem/details/details_popcorn.html"
+    "self": "/api/v2/machined_items/popcorn.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/popcorn.png",
+    "html_details": "/details/details_popcorn.html"
   }
 }

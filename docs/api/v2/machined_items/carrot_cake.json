@@ -1,7 +1,7 @@
 {
   "id": "carrot_cake",
   "name": "Carrot Cake",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/cake_oven.json",
+  "produced_by": "/api/v2/machines/cake_oven.json",
   "unlock_level": 21,
   "time_to_make": 90,
   "sell_price": 165.6,
@@ -12,7 +12,7 @@
       "name": "Carrot",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/carrot.json"
+        "detail": "/api/v2/crops/carrot.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Butter",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/butter.json"
+        "detail": "/api/v2/machined_items/butter.json"
       }
     },
     {
@@ -28,14 +28,14 @@
       "name": "Brown Sugar",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/brown_sugar.json"
+        "detail": "/api/v2/machined_items/brown_sugar.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/carrot_cake.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/carrot_cake.png",
-    "html_details": "/hay_day_ecosystem/details/details_carrot_cake.html"
+    "self": "/api/v2/machined_items/carrot_cake.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/carrot_cake.png",
+    "html_details": "/details/details_carrot_cake.html"
   }
 }

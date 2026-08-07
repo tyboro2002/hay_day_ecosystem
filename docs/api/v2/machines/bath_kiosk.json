@@ -40,7 +40,7 @@
       "unlock_level": 84,
       "time_to_make_minutes": 60,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/honey_soap.json"
+        "detail": "/api/v2/machined_items/honey_soap.json"
       }
     },
     {
@@ -49,7 +49,7 @@
       "unlock_level": 84,
       "time_to_make_minutes": 75,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/lemon_lotion.json"
+        "detail": "/api/v2/machined_items/lemon_lotion.json"
       }
     },
     {
@@ -58,7 +58,7 @@
       "unlock_level": 93,
       "time_to_make_minutes": 60,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/exfoliating_soap.json"
+        "detail": "/api/v2/machined_items/exfoliating_soap.json"
       }
     },
     {
@@ -67,7 +67,7 @@
       "unlock_level": 99,
       "time_to_make_minutes": 90,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/honey_face_mask.json"
+        "detail": "/api/v2/machined_items/honey_face_mask.json"
       }
     },
     {
@@ -76,14 +76,14 @@
       "unlock_level": 121,
       "time_to_make_minutes": 70,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/rich_soap.json"
+        "detail": "/api/v2/machined_items/rich_soap.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machines/bath_kiosk.json",
-    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
-    "image": "/hay_day_ecosystem/assets/machines/bath_kiosk.png",
-    "html_details": "/hay_day_ecosystem/details/details_bath_kiosk.html"
+    "self": "/api/v2/machines/bath_kiosk.json",
+    "collection": "/api/v2/machines/index.json",
+    "image": "/assets/machines/bath_kiosk.png",
+    "html_details": "/details/details_bath_kiosk.html"
   }
 }

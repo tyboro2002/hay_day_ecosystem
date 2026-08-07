@@ -1,7 +1,7 @@
 {
   "id": "espresso",
   "name": "Espresso",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/coffee_kiosk.json",
+  "produced_by": "/api/v2/machines/coffee_kiosk.json",
   "unlock_level": 42,
   "time_to_make": 5,
   "sell_price": 248.4,
@@ -12,7 +12,7 @@
       "name": "Coffee Bean",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/plants/coffee_bean.json"
+        "detail": "/api/v2/plants/coffee_bean.json"
       }
     },
     {
@@ -20,14 +20,14 @@
       "name": "White Sugar",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/white_sugar.json"
+        "detail": "/api/v2/machined_items/white_sugar.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/espresso.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/espresso.png",
-    "html_details": "/hay_day_ecosystem/details/details_espresso.html"
+    "self": "/api/v2/machined_items/espresso.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/espresso.png",
+    "html_details": "/details/details_espresso.html"
   }
 }

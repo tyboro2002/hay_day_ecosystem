@@ -1,7 +1,7 @@
 {
   "id": "macaroon",
   "name": "Macaroon",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/bakery.json",
+  "produced_by": "/api/v2/machines/bakery.json",
   "unlock_level": 101,
   "time_to_make": 30,
   "sell_price": 421.0,
@@ -12,7 +12,7 @@
       "name": "Cacao",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/plants/cacao.json"
+        "detail": "/api/v2/plants/cacao.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Coconut",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/plants/coconut.json"
+        "detail": "/api/v2/plants/coconut.json"
       }
     },
     {
@@ -28,14 +28,14 @@
       "name": "White Sugar",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/white_sugar.json"
+        "detail": "/api/v2/machined_items/white_sugar.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/macaroon.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/macaroon.png",
-    "html_details": "/hay_day_ecosystem/details/details_macaroon.html"
+    "self": "/api/v2/machined_items/macaroon.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/macaroon.png",
+    "html_details": "/details/details_macaroon.html"
   }
 }

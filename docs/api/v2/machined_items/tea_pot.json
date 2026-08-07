@@ -1,7 +1,7 @@
 {
   "id": "tea_pot",
   "name": "Tea Pot",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/pottery_studio.json",
+  "produced_by": "/api/v2/machines/pottery_studio.json",
   "unlock_level": 94,
   "time_to_make": 220,
   "sell_price": 219.0,
@@ -12,7 +12,7 @@
       "name": "Clay",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/clay.json"
+        "detail": "/api/v2/crops/clay.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Coffee Bean",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/plants/coffee_bean.json"
+        "detail": "/api/v2/plants/coffee_bean.json"
       }
     },
     {
@@ -28,14 +28,14 @@
       "name": "Gold Ore",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/special_items/gold_ore.json"
+        "detail": "/api/v2/special_items/gold_ore.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/tea_pot.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/tea_pot.png",
-    "html_details": "/hay_day_ecosystem/details/details_tea_pot.html"
+    "self": "/api/v2/machined_items/tea_pot.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/tea_pot.png",
+    "html_details": "/details/details_tea_pot.html"
   }
 }

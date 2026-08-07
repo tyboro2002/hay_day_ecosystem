@@ -1,7 +1,7 @@
 {
   "id": "yogurt_smoothie",
   "name": "Yogurt Smoothie",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/smoothie_mixer.json",
+  "produced_by": "/api/v2/machines/smoothie_mixer.json",
   "unlock_level": 70,
   "time_to_make": 60,
   "sell_price": 349.0,
@@ -12,7 +12,7 @@
       "name": "Cream",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/cream.json"
+        "detail": "/api/v2/machined_items/cream.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Raspberry",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/plants/raspberry.json"
+        "detail": "/api/v2/plants/raspberry.json"
       }
     },
     {
@@ -28,7 +28,7 @@
       "name": "Cherry",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/plants/cherry.json"
+        "detail": "/api/v2/plants/cherry.json"
       }
     },
     {
@@ -36,14 +36,14 @@
       "name": "White Sugar",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/white_sugar.json"
+        "detail": "/api/v2/machined_items/white_sugar.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/yogurt_smoothie.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/yogurt_smoothie.png",
-    "html_details": "/hay_day_ecosystem/details/details_yogurt_smoothie.html"
+    "self": "/api/v2/machined_items/yogurt_smoothie.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/yogurt_smoothie.png",
+    "html_details": "/details/details_yogurt_smoothie.html"
   }
 }

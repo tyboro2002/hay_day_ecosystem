@@ -1,7 +1,7 @@
 {
   "id": "plum_smoothie",
   "name": "Plum Smoothie",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/smoothie_mixer.json",
+  "produced_by": "/api/v2/machines/smoothie_mixer.json",
   "unlock_level": 104,
   "time_to_make": 40,
   "sell_price": 475.0,
@@ -12,7 +12,7 @@
       "name": "Cacao",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/plants/cacao.json"
+        "detail": "/api/v2/plants/cacao.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Banana",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/plants/banana.json"
+        "detail": "/api/v2/plants/banana.json"
       }
     },
     {
@@ -28,7 +28,7 @@
       "name": "Passion Fruit",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/passion_fruit.json"
+        "detail": "/api/v2/crops/passion_fruit.json"
       }
     },
     {
@@ -36,14 +36,14 @@
       "name": "Mango",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/plants/mango.json"
+        "detail": "/api/v2/plants/mango.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/plum_smoothie.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/plum_smoothie.png",
-    "html_details": "/hay_day_ecosystem/details/details_plum_smoothie.html"
+    "self": "/api/v2/machined_items/plum_smoothie.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/plum_smoothie.png",
+    "html_details": "/details/details_plum_smoothie.html"
   }
 }

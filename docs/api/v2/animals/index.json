@@ -5,61 +5,69 @@
       "id": "chicken",
       "name": "Chicken",
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/animals/chicken.json"
+        "detail": "/api/v2/animals/chicken.json",
+        "image": "/assets/animals/chicken.png"
       }
     },
     {
       "id": "cow",
       "name": "Cow",
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/animals/cow.json"
+        "detail": "/api/v2/animals/cow.json",
+        "image": "/assets/animals/cow.png"
       }
     },
     {
       "id": "pig",
       "name": "Pig",
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/animals/pig.json"
+        "detail": "/api/v2/animals/pig.json",
+        "image": "/assets/animals/pig.png"
       }
     },
     {
       "id": "sheep",
       "name": "Sheep",
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/animals/sheep.json"
+        "detail": "/api/v2/animals/sheep.json",
+        "image": "/assets/animals/sheep.png"
       }
     },
     {
       "id": "lamb",
       "name": "Lamb",
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/animals/lamb.json"
+        "detail": "/api/v2/animals/lamb.json",
+        "image": "/assets/animals/lamb.png"
       }
     },
     {
       "id": "goat",
       "name": "Goat",
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/animals/goat.json"
+        "detail": "/api/v2/animals/goat.json",
+        "image": "/assets/animals/goat.png"
       }
     },
     {
       "id": "bee",
       "name": "Bee",
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/animals/bee.json"
+        "detail": "/api/v2/animals/bee.json",
+        "image": "/assets/animals/bee.png"
       }
     },
     {
       "id": "squirrel",
       "name": "Squirrel",
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/animals/squirrel.json"
+        "detail": "/api/v2/animals/squirrel.json",
+        "image": "/assets/animals/squirrel.png"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/animals/index.json",
-    "parent": "/hay_day_ecosystem/api/v2/index.json"
+    "self": "/api/v2/animals/index.json",
+    "parent": "/api/v2/index.json"
   }
 }

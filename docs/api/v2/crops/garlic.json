@@ -1,16 +1,16 @@
 {
   "id": "garlic",
   "name": "Garlic",
-  "planted_on": "/hay_day_ecosystem/api/v2/fields/fields.json",
+  "planted_on": "/api/v2/fields/fields.json",
   "unlock_level": 60,
   "time_to_make": 30,
   "sell_price": 14.0,
   "xp": 3,
   "yield_multiplier": 2,
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/crops/garlic.json",
-    "collection": "/hay_day_ecosystem/api/v2/crops/index.json",
-    "image": "/hay_day_ecosystem/assets/items/garlic.png",
-    "html_details": "/hay_day_ecosystem/details/details_garlic.html"
+    "self": "/api/v2/crops/garlic.json",
+    "collection": "/api/v2/crops/index.json",
+    "image": "/assets/items/garlic.png",
+    "html_details": "/details/details_garlic.html"
   }
 }

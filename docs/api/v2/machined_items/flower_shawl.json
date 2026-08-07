@@ -1,7 +1,7 @@
 {
   "id": "flower_shawl",
   "name": "Flower Shawl",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/loom.json",
+  "produced_by": "/api/v2/machines/loom.json",
   "unlock_level": 71,
   "time_to_make": 90,
   "sell_price": 295.0,
@@ -12,7 +12,7 @@
       "name": "Wool",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/animal_items/wool.json"
+        "detail": "/api/v2/animal_items/wool.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Sunflower",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/sunflower.json"
+        "detail": "/api/v2/crops/sunflower.json"
       }
     },
     {
@@ -28,14 +28,14 @@
       "name": "Blackberry",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/plants/blackberry.json"
+        "detail": "/api/v2/plants/blackberry.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/flower_shawl.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/flower_shawl.png",
-    "html_details": "/hay_day_ecosystem/details/details_flower_shawl.html"
+    "self": "/api/v2/machined_items/flower_shawl.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/flower_shawl.png",
+    "html_details": "/details/details_flower_shawl.html"
   }
 }

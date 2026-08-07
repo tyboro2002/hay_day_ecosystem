@@ -1,7 +1,7 @@
 {
   "id": "gingerbread_cookie",
   "name": "Gingerbread Cookie",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/bakery.json",
+  "produced_by": "/api/v2/machines/bakery.json",
   "unlock_level": 86,
   "time_to_make": 30,
   "sell_price": 273.0,
@@ -12,7 +12,7 @@
       "name": "Wheat",
       "quantity": 5,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/wheat.json"
+        "detail": "/api/v2/crops/wheat.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Butter",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/butter.json"
+        "detail": "/api/v2/machined_items/butter.json"
       }
     },
     {
@@ -28,7 +28,7 @@
       "name": "Syrup",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/syrup.json"
+        "detail": "/api/v2/machined_items/syrup.json"
       }
     },
     {
@@ -36,14 +36,14 @@
       "name": "Ginger",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/ginger.json"
+        "detail": "/api/v2/crops/ginger.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/gingerbread_cookie.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/gingerbread_cookie.png",
-    "html_details": "/hay_day_ecosystem/details/details_gingerbread_cookie.html"
+    "self": "/api/v2/machined_items/gingerbread_cookie.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/gingerbread_cookie.png",
+    "html_details": "/details/details_gingerbread_cookie.html"
   }
 }

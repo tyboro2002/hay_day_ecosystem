@@ -1,15 +1,15 @@
 {
   "id": "apple",
   "name": "Apple",
-  "harvested_from": "/hay_day_ecosystem/api/v2/plant_structures/apple_tree.json",
+  "harvested_from": "/api/v2/plant_structures/apple_tree.json",
   "unlock_level": 15,
   "time_to_make": 960,
   "sell_price": 39.6,
   "xp": 7,
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/plants/apple.json",
-    "collection": "/hay_day_ecosystem/api/v2/plants/index.json",
-    "image": "/hay_day_ecosystem/assets/items/apple.png",
-    "html_details": "/hay_day_ecosystem/details/details_apple.html"
+    "self": "/api/v2/plants/apple.json",
+    "collection": "/api/v2/plants/index.json",
+    "image": "/assets/items/apple.png",
+    "html_details": "/details/details_apple.html"
   }
 }

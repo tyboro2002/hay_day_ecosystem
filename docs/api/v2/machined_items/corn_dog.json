@@ -1,7 +1,7 @@
 {
   "id": "corn_dog",
   "name": "Corn Dog",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/hot_dog_stand.json",
+  "produced_by": "/api/v2/machines/hot_dog_stand.json",
   "unlock_level": 78,
   "time_to_make": 60,
   "sell_price": 529.0,
@@ -12,7 +12,7 @@
       "name": "Bacon",
       "quantity": 4,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/animal_items/bacon.json"
+        "detail": "/api/v2/animal_items/bacon.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Corn",
       "quantity": 4,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/corn.json"
+        "detail": "/api/v2/crops/corn.json"
       }
     },
     {
@@ -28,14 +28,14 @@
       "name": "Olive Oil",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/olive_oil.json"
+        "detail": "/api/v2/machined_items/olive_oil.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/corn_dog.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/corn_dog.png",
-    "html_details": "/hay_day_ecosystem/details/details_corn_dog.html"
+    "self": "/api/v2/machined_items/corn_dog.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/corn_dog.png",
+    "html_details": "/details/details_corn_dog.html"
   }
 }

@@ -1,7 +1,7 @@
 {
   "id": "iced_banana_latte",
   "name": "Iced Banana Latte",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/coffee_kiosk.json",
+  "produced_by": "/api/v2/machines/coffee_kiosk.json",
   "unlock_level": 88,
   "time_to_make": 20,
   "sell_price": 277.0,
@@ -12,7 +12,7 @@
       "name": "Banana",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/plants/banana.json"
+        "detail": "/api/v2/plants/banana.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Coffee Bean",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/plants/coffee_bean.json"
+        "detail": "/api/v2/plants/coffee_bean.json"
       }
     },
     {
@@ -28,14 +28,14 @@
       "name": "Milk",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/animal_items/milk.json"
+        "detail": "/api/v2/animal_items/milk.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/iced_banana_latte.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/iced_banana_latte.png",
-    "html_details": "/hay_day_ecosystem/details/details_iced_banana_latte.html"
+    "self": "/api/v2/machined_items/iced_banana_latte.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/iced_banana_latte.png",
+    "html_details": "/details/details_iced_banana_latte.html"
   }
 }

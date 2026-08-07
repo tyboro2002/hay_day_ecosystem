@@ -1,16 +1,16 @@
 {
   "id": "corn",
   "name": "Corn",
-  "planted_on": "/hay_day_ecosystem/api/v2/fields/fields.json",
+  "planted_on": "/api/v2/fields/fields.json",
   "unlock_level": 2,
   "time_to_make": 5,
   "sell_price": 7.2,
   "xp": 1,
   "yield_multiplier": 2,
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/crops/corn.json",
-    "collection": "/hay_day_ecosystem/api/v2/crops/index.json",
-    "image": "/hay_day_ecosystem/assets/items/corn.png",
-    "html_details": "/hay_day_ecosystem/details/details_corn.html"
+    "self": "/api/v2/crops/corn.json",
+    "collection": "/api/v2/crops/index.json",
+    "image": "/assets/items/corn.png",
+    "html_details": "/details/details_corn.html"
   }
 }

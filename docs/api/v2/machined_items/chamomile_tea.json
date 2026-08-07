@@ -1,7 +1,7 @@
 {
   "id": "chamomile_tea",
   "name": "Chamomile Tea",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/tea_stand.json",
+  "produced_by": "/api/v2/machines/tea_stand.json",
   "unlock_level": 100,
   "time_to_make": 20,
   "sell_price": 144.0,
@@ -12,7 +12,7 @@
       "name": "Chamomile",
       "quantity": 5,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/chamomile.json"
+        "detail": "/api/v2/crops/chamomile.json"
       }
     },
     {
@@ -20,14 +20,14 @@
       "name": "Honeycomb",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/animal_items/honeycomb.json"
+        "detail": "/api/v2/animal_items/honeycomb.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/chamomile_tea.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/chamomile_tea.png",
-    "html_details": "/hay_day_ecosystem/details/details_chamomile_tea.html"
+    "self": "/api/v2/machined_items/chamomile_tea.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/chamomile_tea.png",
+    "html_details": "/details/details_chamomile_tea.html"
   }
 }

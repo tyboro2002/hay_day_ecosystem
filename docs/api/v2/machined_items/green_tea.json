@@ -1,7 +1,7 @@
 {
   "id": "green_tea",
   "name": "Green Tea",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/tea_stand.json",
+  "produced_by": "/api/v2/machines/tea_stand.json",
   "unlock_level": 80,
   "time_to_make": 30,
   "sell_price": 241.0,
@@ -12,14 +12,14 @@
       "name": "Tea Leaf",
       "quantity": 5,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/tea_leaf.json"
+        "detail": "/api/v2/crops/tea_leaf.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/green_tea.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/green_tea.png",
-    "html_details": "/hay_day_ecosystem/details/details_green_tea.html"
+    "self": "/api/v2/machined_items/green_tea.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/green_tea.png",
+    "html_details": "/details/details_green_tea.html"
   }
 }

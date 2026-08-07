@@ -1,7 +1,7 @@
 {
   "id": "lemon_lotion",
   "name": "Lemon Lotion",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/bath_kiosk.json",
+  "produced_by": "/api/v2/machines/bath_kiosk.json",
   "unlock_level": 84,
   "time_to_make": 75,
   "sell_price": 403.0,
@@ -12,7 +12,7 @@
       "name": "Olive Oil",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/olive_oil.json"
+        "detail": "/api/v2/machined_items/olive_oil.json"
       }
     },
     {
@@ -20,14 +20,14 @@
       "name": "Lemon",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/plants/lemon.json"
+        "detail": "/api/v2/plants/lemon.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/lemon_lotion.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/lemon_lotion.png",
-    "html_details": "/hay_day_ecosystem/details/details_lemon_lotion.html"
+    "self": "/api/v2/machined_items/lemon_lotion.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/lemon_lotion.png",
+    "html_details": "/details/details_lemon_lotion.html"
   }
 }

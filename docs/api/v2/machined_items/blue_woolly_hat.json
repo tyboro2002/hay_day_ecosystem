@@ -1,7 +1,7 @@
 {
   "id": "blue_woolly_hat",
   "name": "Blue Woolly Hat",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/loom.json",
+  "produced_by": "/api/v2/machines/loom.json",
   "unlock_level": 19,
   "time_to_make": 60,
   "sell_price": 111.6,
@@ -12,7 +12,7 @@
       "name": "Wool",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/animal_items/wool.json"
+        "detail": "/api/v2/animal_items/wool.json"
       }
     },
     {
@@ -20,14 +20,14 @@
       "name": "Indigo",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/indigo.json"
+        "detail": "/api/v2/crops/indigo.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/blue_woolly_hat.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/blue_woolly_hat.png",
-    "html_details": "/hay_day_ecosystem/details/details_blue_woolly_hat.html"
+    "self": "/api/v2/machined_items/blue_woolly_hat.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/blue_woolly_hat.png",
+    "html_details": "/details/details_blue_woolly_hat.html"
   }
 }

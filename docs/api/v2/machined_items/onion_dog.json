@@ -1,7 +1,7 @@
 {
   "id": "onion_dog",
   "name": "Onion Dog",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/hot_dog_stand.json",
+  "produced_by": "/api/v2/machines/hot_dog_stand.json",
   "unlock_level": 80,
   "time_to_make": 75,
   "sell_price": 306.0,
@@ -12,7 +12,7 @@
       "name": "Bacon",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/animal_items/bacon.json"
+        "detail": "/api/v2/animal_items/bacon.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Bread",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/bread.json"
+        "detail": "/api/v2/machined_items/bread.json"
       }
     },
     {
@@ -28,7 +28,7 @@
       "name": "Chili Pepper",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/chili_pepper.json"
+        "detail": "/api/v2/crops/chili_pepper.json"
       }
     },
     {
@@ -36,14 +36,14 @@
       "name": "Onion",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/onion.json"
+        "detail": "/api/v2/crops/onion.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/onion_dog.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/onion_dog.png",
-    "html_details": "/hay_day_ecosystem/details/details_onion_dog.html"
+    "self": "/api/v2/machined_items/onion_dog.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/onion_dog.png",
+    "html_details": "/details/details_onion_dog.html"
   }
 }

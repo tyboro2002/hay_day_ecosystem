@@ -1,7 +1,7 @@
 {
   "id": "tomato_juice",
   "name": "Tomato Juice",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/juice_press.json",
+  "produced_by": "/api/v2/machines/juice_press.json",
   "unlock_level": 31,
   "time_to_make": 90,
   "sell_price": 162.0,
@@ -12,14 +12,14 @@
       "name": "Tomato",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/tomato.json"
+        "detail": "/api/v2/crops/tomato.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/tomato_juice.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/tomato_juice.png",
-    "html_details": "/hay_day_ecosystem/details/details_tomato_juice.html"
+    "self": "/api/v2/machined_items/tomato_juice.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/tomato_juice.png",
+    "html_details": "/details/details_tomato_juice.html"
   }
 }

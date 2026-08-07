@@ -1,7 +1,7 @@
 {
   "id": "peanut_noodles",
   "name": "Peanut Noodles",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/wok_kitchen.json",
+  "produced_by": "/api/v2/machines/wok_kitchen.json",
   "unlock_level": 86,
   "time_to_make": 45,
   "sell_price": 597.0,
@@ -12,7 +12,7 @@
       "name": "Ginger",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/ginger.json"
+        "detail": "/api/v2/crops/ginger.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Rice Noodles",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/rice_noodles.json"
+        "detail": "/api/v2/machined_items/rice_noodles.json"
       }
     },
     {
@@ -28,7 +28,7 @@
       "name": "Soy Sauce",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/soy_sauce.json"
+        "detail": "/api/v2/machined_items/soy_sauce.json"
       }
     },
     {
@@ -36,14 +36,14 @@
       "name": "Peanuts",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/animal_items/peanuts.json"
+        "detail": "/api/v2/animal_items/peanuts.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/peanut_noodles.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/peanut_noodles.png",
-    "html_details": "/hay_day_ecosystem/details/details_peanut_noodles.html"
+    "self": "/api/v2/machined_items/peanut_noodles.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/peanut_noodles.png",
+    "html_details": "/details/details_peanut_noodles.html"
   }
 }

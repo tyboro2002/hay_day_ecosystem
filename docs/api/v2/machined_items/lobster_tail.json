@@ -1,16 +1,16 @@
 {
   "id": "lobster_tail",
   "name": "Lobster Tail",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/lobster_pool.json",
+  "produced_by": "/api/v2/machines/lobster_pool.json",
   "unlock_level": 44,
   "time_to_make": 360,
   "sell_price": 201.6,
   "xp": 24,
   "ingredients": [],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/lobster_tail.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/lobster_tail.png",
-    "html_details": "/hay_day_ecosystem/details/details_lobster_tail.html"
+    "self": "/api/v2/machined_items/lobster_tail.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/lobster_tail.png",
+    "html_details": "/details/details_lobster_tail.html"
   }
 }

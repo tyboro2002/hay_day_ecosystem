@@ -1,7 +1,7 @@
 {
   "id": "mushroom_pot_pie",
   "name": "Mushroom Pot Pie",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/pie_oven.json",
+  "produced_by": "/api/v2/machines/pie_oven.json",
   "unlock_level": 97,
   "time_to_make": 60,
   "sell_price": 162.0,
@@ -12,7 +12,7 @@
       "name": "Mushroom",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/mushroom.json"
+        "detail": "/api/v2/crops/mushroom.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Cabbage",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/cabbage.json"
+        "detail": "/api/v2/crops/cabbage.json"
       }
     },
     {
@@ -28,7 +28,7 @@
       "name": "Wheat",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/wheat.json"
+        "detail": "/api/v2/crops/wheat.json"
       }
     },
     {
@@ -36,14 +36,14 @@
       "name": "Egg",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/animal_items/egg.json"
+        "detail": "/api/v2/animal_items/egg.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/mushroom_pot_pie.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/mushroom_pot_pie.png",
-    "html_details": "/hay_day_ecosystem/details/details_mushroom_pot_pie.html"
+    "self": "/api/v2/machined_items/mushroom_pot_pie.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/mushroom_pot_pie.png",
+    "html_details": "/details/details_mushroom_pot_pie.html"
   }
 }

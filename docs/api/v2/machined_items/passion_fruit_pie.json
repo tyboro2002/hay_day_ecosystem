@@ -1,7 +1,7 @@
 {
   "id": "passion_fruit_pie",
   "name": "Passion Fruit Pie",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/pie_oven.json",
+  "produced_by": "/api/v2/machines/pie_oven.json",
   "unlock_level": 92,
   "time_to_make": 50,
   "sell_price": 111.0,
@@ -12,7 +12,7 @@
       "name": "Passion Fruit",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/passion_fruit.json"
+        "detail": "/api/v2/crops/passion_fruit.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Wheat",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/wheat.json"
+        "detail": "/api/v2/crops/wheat.json"
       }
     },
     {
@@ -28,14 +28,14 @@
       "name": "Egg",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/animal_items/egg.json"
+        "detail": "/api/v2/animal_items/egg.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/passion_fruit_pie.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/passion_fruit_pie.png",
-    "html_details": "/hay_day_ecosystem/details/details_passion_fruit_pie.html"
+    "self": "/api/v2/machined_items/passion_fruit_pie.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/passion_fruit_pie.png",
+    "html_details": "/details/details_passion_fruit_pie.html"
   }
 }

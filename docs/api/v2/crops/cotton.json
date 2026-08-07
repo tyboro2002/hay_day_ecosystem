@@ -1,16 +1,16 @@
 {
   "id": "cotton",
   "name": "Cotton",
-  "planted_on": "/hay_day_ecosystem/api/v2/fields/fields.json",
+  "planted_on": "/api/v2/fields/fields.json",
   "unlock_level": 18,
   "time_to_make": 150,
   "sell_price": 28.8,
   "xp": 6,
   "yield_multiplier": 2,
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/crops/cotton.json",
-    "collection": "/hay_day_ecosystem/api/v2/crops/index.json",
-    "image": "/hay_day_ecosystem/assets/items/cotton.png",
-    "html_details": "/hay_day_ecosystem/details/details_cotton.html"
+    "self": "/api/v2/crops/cotton.json",
+    "collection": "/api/v2/crops/index.json",
+    "image": "/assets/items/cotton.png",
+    "html_details": "/details/details_cotton.html"
   }
 }

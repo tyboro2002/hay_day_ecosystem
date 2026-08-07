@@ -1,7 +1,7 @@
 {
   "id": "guava_compote",
   "name": "Guava Compote",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/preservation_station.json",
+  "produced_by": "/api/v2/machines/preservation_station.json",
   "unlock_level": 104,
   "time_to_make": 260,
   "sell_price": 421.0,
@@ -12,7 +12,7 @@
       "name": "Guava",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/plants/guava.json"
+        "detail": "/api/v2/plants/guava.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Lemon",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/plants/lemon.json"
+        "detail": "/api/v2/plants/lemon.json"
       }
     },
     {
@@ -28,14 +28,14 @@
       "name": "White Sugar",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/white_sugar.json"
+        "detail": "/api/v2/machined_items/white_sugar.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/guava_compote.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/guava_compote.png",
-    "html_details": "/hay_day_ecosystem/details/details_guava_compote.html"
+    "self": "/api/v2/machined_items/guava_compote.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/guava_compote.png",
+    "html_details": "/details/details_guava_compote.html"
   }
 }

@@ -5,68 +5,86 @@
       "id": "egg",
       "name": "Egg",
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/animal_items/egg.json"
-      }
+        "detail": "/api/v2/animal_items/egg.json",
+        "image": "/assets/items/egg.png"
+      },
+      "sell_price": 18.0
     },
     {
       "id": "milk",
       "name": "Milk",
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/animal_items/milk.json"
-      }
+        "detail": "/api/v2/animal_items/milk.json",
+        "image": "/assets/items/milk.png"
+      },
+      "sell_price": 32.4
     },
     {
       "id": "bacon",
       "name": "Bacon",
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/animal_items/bacon.json"
-      }
+        "detail": "/api/v2/animal_items/bacon.json",
+        "image": "/assets/items/bacon.png"
+      },
+      "sell_price": 50.4
     },
     {
       "id": "wool",
       "name": "Wool",
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/animal_items/wool.json"
-      }
+        "detail": "/api/v2/animal_items/wool.json",
+        "image": "/assets/items/wool.png"
+      },
+      "sell_price": 54.0
     },
     {
       "id": "lamb_chop",
       "name": "Lamb Chop",
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/animal_items/lamb_chop.json"
-      }
+        "detail": "/api/v2/animal_items/lamb_chop.json",
+        "image": "/assets/items/lamb_chop.png"
+      },
+      "sell_price": 36.0
     },
     {
       "id": "fish_fillet",
       "name": "Fish Fillet",
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/animal_items/fish_fillet.json"
-      }
+        "detail": "/api/v2/animal_items/fish_fillet.json",
+        "image": "/assets/items/fish_fillet.png"
+      },
+      "sell_price": 54.0
     },
     {
       "id": "goat_milk",
       "name": "Goat Milk",
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/animal_items/goat_milk.json"
-      }
+        "detail": "/api/v2/animal_items/goat_milk.json",
+        "image": "/assets/items/goat_milk.png"
+      },
+      "sell_price": 64.8
     },
     {
       "id": "honeycomb",
       "name": "Honeycomb",
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/animal_items/honeycomb.json"
-      }
+        "detail": "/api/v2/animal_items/honeycomb.json",
+        "image": "/assets/items/honeycomb.png"
+      },
+      "sell_price": 68.4
     },
     {
       "id": "peanuts",
       "name": "Peanuts",
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/animal_items/peanuts.json"
-      }
+        "detail": "/api/v2/animal_items/peanuts.json",
+        "image": "/assets/items/peanuts.png"
+      },
+      "sell_price": 234.0
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/animal_items/index.json",
-    "parent": "/hay_day_ecosystem/api/v2/index.json"
+    "self": "/api/v2/animal_items/index.json",
+    "parent": "/api/v2/index.json"
   }
 }

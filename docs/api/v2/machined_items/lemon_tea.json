@@ -1,7 +1,7 @@
 {
   "id": "lemon_tea",
   "name": "Lemon Tea",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/tea_stand.json",
+  "produced_by": "/api/v2/machines/tea_stand.json",
   "unlock_level": 86,
   "time_to_make": 20,
   "sell_price": 241.0,
@@ -12,7 +12,7 @@
       "name": "Tea Leaf",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/tea_leaf.json"
+        "detail": "/api/v2/crops/tea_leaf.json"
       }
     },
     {
@@ -20,14 +20,14 @@
       "name": "Lemon",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/plants/lemon.json"
+        "detail": "/api/v2/plants/lemon.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/lemon_tea.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/lemon_tea.png",
-    "html_details": "/hay_day_ecosystem/details/details_lemon_tea.html"
+    "self": "/api/v2/machined_items/lemon_tea.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/lemon_tea.png",
+    "html_details": "/details/details_lemon_tea.html"
   }
 }

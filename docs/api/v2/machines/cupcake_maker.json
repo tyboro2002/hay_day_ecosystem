@@ -40,7 +40,7 @@
       "unlock_level": 109,
       "time_to_make_minutes": 40,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/plain_cupcake.json"
+        "detail": "/api/v2/machined_items/plain_cupcake.json"
       }
     },
     {
@@ -49,7 +49,7 @@
       "unlock_level": 109,
       "time_to_make_minutes": 70,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/guava_cupcake.json"
+        "detail": "/api/v2/machined_items/guava_cupcake.json"
       }
     },
     {
@@ -58,7 +58,7 @@
       "unlock_level": 112,
       "time_to_make_minutes": 90,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/tropical_cupcake.json"
+        "detail": "/api/v2/machined_items/tropical_cupcake.json"
       }
     },
     {
@@ -67,14 +67,14 @@
       "unlock_level": 114,
       "time_to_make_minutes": 120,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/cookie_cupcake.json"
+        "detail": "/api/v2/machined_items/cookie_cupcake.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machines/cupcake_maker.json",
-    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
-    "image": "/hay_day_ecosystem/assets/machines/cupcake_maker.png",
-    "html_details": "/hay_day_ecosystem/details/details_cupcake_maker.html"
+    "self": "/api/v2/machines/cupcake_maker.json",
+    "collection": "/api/v2/machines/index.json",
+    "image": "/assets/machines/cupcake_maker.png",
+    "html_details": "/details/details_cupcake_maker.html"
   }
 }

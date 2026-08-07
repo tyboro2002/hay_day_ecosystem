@@ -1,12 +1,12 @@
 {
   "id": "beehive_tree",
   "name": "Beehive Tree",
-  "houses_animal": "/hay_day_ecosystem/api/v2/animals/bee.json",
+  "houses_animal": "/api/v2/animals/bee.json",
   "produces": [
     {
       "id": "honeycomb",
       "name": "Honeycomb",
-      "link": "/hay_day_ecosystem/api/v2/animal_items/honeycomb.json"
+      "link": "/api/v2/animal_items/honeycomb.json"
     }
   ],
   "max_capacity_per_pen": 4,
@@ -20,9 +20,9 @@
     4000
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/pens/beehive_tree.json",
-    "collection": "/hay_day_ecosystem/api/v2/pens/index.json",
-    "image": "/hay_day_ecosystem/assets/pens/beehive_tree.png",
-    "html_details": "/hay_day_ecosystem/details/details_beehive_tree.html"
+    "self": "/api/v2/pens/beehive_tree.json",
+    "collection": "/api/v2/pens/index.json",
+    "image": "/assets/pens/beehive_tree.png",
+    "html_details": "/details/details_beehive_tree.html"
   }
 }

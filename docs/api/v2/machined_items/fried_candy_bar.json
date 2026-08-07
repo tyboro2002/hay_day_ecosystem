@@ -1,7 +1,7 @@
 {
   "id": "fried_candy_bar",
   "name": "Fried Candy Bar",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/deep_fryer.json",
+  "produced_by": "/api/v2/machines/deep_fryer.json",
   "unlock_level": 100,
   "time_to_make": 15,
   "sell_price": 658.0,
@@ -12,7 +12,7 @@
       "name": "Cacao",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/plants/cacao.json"
+        "detail": "/api/v2/plants/cacao.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Cookie",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/cookie.json"
+        "detail": "/api/v2/machined_items/cookie.json"
       }
     },
     {
@@ -28,14 +28,14 @@
       "name": "Peanuts",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/animal_items/peanuts.json"
+        "detail": "/api/v2/animal_items/peanuts.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/fried_candy_bar.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/fried_candy_bar.png",
-    "html_details": "/hay_day_ecosystem/details/details_fried_candy_bar.html"
+    "self": "/api/v2/machined_items/fried_candy_bar.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/fried_candy_bar.png",
+    "html_details": "/details/details_fried_candy_bar.html"
   }
 }

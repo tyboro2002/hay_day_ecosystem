@@ -1,7 +1,7 @@
 {
   "id": "taco",
   "name": "Taco",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/taco_kitchen.json",
+  "produced_by": "/api/v2/machines/taco_kitchen.json",
   "unlock_level": 77,
   "time_to_make": 45,
   "sell_price": 331.0,
@@ -12,7 +12,7 @@
       "name": "Corn Bread",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/corn_bread.json"
+        "detail": "/api/v2/machined_items/corn_bread.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Bacon",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/animal_items/bacon.json"
+        "detail": "/api/v2/animal_items/bacon.json"
       }
     },
     {
@@ -28,14 +28,14 @@
       "name": "Salsa",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/salsa.json"
+        "detail": "/api/v2/machined_items/salsa.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/taco.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/taco.png",
-    "html_details": "/hay_day_ecosystem/details/details_taco.html"
+    "self": "/api/v2/machined_items/taco.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/taco.png",
+    "html_details": "/details/details_taco.html"
   }
 }

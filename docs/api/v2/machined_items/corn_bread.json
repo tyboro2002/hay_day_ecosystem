@@ -1,7 +1,7 @@
 {
   "id": "corn_bread",
   "name": "Corn Bread",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/bakery.json",
+  "produced_by": "/api/v2/machines/bakery.json",
   "unlock_level": 7,
   "time_to_make": 30,
   "sell_price": 72.0,
@@ -12,7 +12,7 @@
       "name": "Corn",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/corn.json"
+        "detail": "/api/v2/crops/corn.json"
       }
     },
     {
@@ -20,14 +20,14 @@
       "name": "Egg",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/animal_items/egg.json"
+        "detail": "/api/v2/animal_items/egg.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/corn_bread.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/corn_bread.png",
-    "html_details": "/hay_day_ecosystem/details/details_corn_bread.html"
+    "self": "/api/v2/machined_items/corn_bread.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/corn_bread.png",
+    "html_details": "/details/details_corn_bread.html"
   }
 }

@@ -1,7 +1,7 @@
 {
   "id": "chili_fudge",
   "name": "Chili Fudge",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/fudge_shop.json",
+  "produced_by": "/api/v2/machines/fudge_shop.json",
   "unlock_level": 104,
   "time_to_make": 170,
   "sell_price": 540.0,
@@ -12,7 +12,7 @@
       "name": "Butter",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/butter.json"
+        "detail": "/api/v2/machined_items/butter.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Cacao",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/plants/cacao.json"
+        "detail": "/api/v2/plants/cacao.json"
       }
     },
     {
@@ -28,7 +28,7 @@
       "name": "White Sugar",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/white_sugar.json"
+        "detail": "/api/v2/machined_items/white_sugar.json"
       }
     },
     {
@@ -36,14 +36,14 @@
       "name": "Chili Pepper",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/chili_pepper.json"
+        "detail": "/api/v2/crops/chili_pepper.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/chili_fudge.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/chili_fudge.png",
-    "html_details": "/hay_day_ecosystem/details/details_chili_fudge.html"
+    "self": "/api/v2/machined_items/chili_fudge.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/chili_fudge.png",
+    "html_details": "/details/details_chili_fudge.html"
   }
 }

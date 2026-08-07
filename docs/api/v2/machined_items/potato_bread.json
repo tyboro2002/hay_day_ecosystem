@@ -1,7 +1,7 @@
 {
   "id": "potato_bread",
   "name": "Potato Bread",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/bakery.json",
+  "produced_by": "/api/v2/machines/bakery.json",
   "unlock_level": 39,
   "time_to_make": 45,
   "sell_price": 284.4,
@@ -12,7 +12,7 @@
       "name": "Potato",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/potato.json"
+        "detail": "/api/v2/crops/potato.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "White Sugar",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/white_sugar.json"
+        "detail": "/api/v2/machined_items/white_sugar.json"
       }
     },
     {
@@ -28,7 +28,7 @@
       "name": "Egg",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/animal_items/egg.json"
+        "detail": "/api/v2/animal_items/egg.json"
       }
     },
     {
@@ -36,14 +36,14 @@
       "name": "Butter",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/butter.json"
+        "detail": "/api/v2/machined_items/butter.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/potato_bread.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/potato_bread.png",
-    "html_details": "/hay_day_ecosystem/details/details_potato_bread.html"
+    "self": "/api/v2/machined_items/potato_bread.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/potato_bread.png",
+    "html_details": "/details/details_potato_bread.html"
   }
 }

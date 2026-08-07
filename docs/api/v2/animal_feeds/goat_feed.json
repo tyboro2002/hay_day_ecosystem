@@ -1,8 +1,8 @@
 {
   "id": "goat_feed",
   "name": "Goat Feed",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/feed_mill.json",
-  "feeds_animal": "/hay_day_ecosystem/api/v2/animals/goat.json",
+  "produced_by": "/api/v2/machines/feed_mill.json",
+  "feeds_animal": "/api/v2/animals/goat.json",
   "unlock_level": 32,
   "time_to_make": 40,
   "sell_price": 14.4,
@@ -14,7 +14,7 @@
       "name": "Carrot",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/carrot.json"
+        "detail": "/api/v2/crops/carrot.json"
       }
     },
     {
@@ -22,7 +22,7 @@
       "name": "Corn",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/corn.json"
+        "detail": "/api/v2/crops/corn.json"
       }
     },
     {
@@ -30,14 +30,14 @@
       "name": "Wheat",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/wheat.json"
+        "detail": "/api/v2/crops/wheat.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/animal_feeds/goat_feed.json",
-    "collection": "/hay_day_ecosystem/api/v2/animal_feeds/index.json",
-    "image": "/hay_day_ecosystem/assets/items/goat_feed.png",
-    "html_details": "/hay_day_ecosystem/details/details_goat_feed.html"
+    "self": "/api/v2/animal_feeds/goat_feed.json",
+    "collection": "/api/v2/animal_feeds/index.json",
+    "image": "/assets/items/goat_feed.png",
+    "html_details": "/details/details_goat_feed.html"
   }
 }

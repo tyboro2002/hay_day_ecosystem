@@ -1,16 +1,16 @@
 {
   "id": "wool",
   "name": "Wool",
-  "collected_from": "/hay_day_ecosystem/api/v2/pens/sheep_pasture.json",
-  "produced_by_animal": "/hay_day_ecosystem/api/v2/animals/sheep.json",
+  "collected_from": "/api/v2/pens/sheep_pasture.json",
+  "produced_by_animal": "/api/v2/animals/sheep.json",
   "unlock_level": 16,
   "time_to_make": 360,
   "sell_price": 54.0,
   "xp": 5,
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/animal_items/wool.json",
-    "collection": "/hay_day_ecosystem/api/v2/animal_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/wool.png",
-    "html_details": "/hay_day_ecosystem/details/details_wool.html"
+    "self": "/api/v2/animal_items/wool.json",
+    "collection": "/api/v2/animal_items/index.json",
+    "image": "/assets/items/wool.png",
+    "html_details": "/details/details_wool.html"
   }
 }

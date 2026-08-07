@@ -1,7 +1,7 @@
 {
   "id": "blanket",
   "name": "Blanket",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/sewing_machine.json",
+  "produced_by": "/api/v2/machines/sewing_machine.json",
   "unlock_level": 59,
   "time_to_make": 210,
   "sell_price": 1098.0,
@@ -12,7 +12,7 @@
       "name": "Cotton Fabric",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/cotton_fabric.json"
+        "detail": "/api/v2/machined_items/cotton_fabric.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Duck Feather",
       "quantity": 5,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/duck_feather.json"
+        "detail": "/api/v2/machined_items/duck_feather.json"
       }
     },
     {
@@ -28,14 +28,14 @@
       "name": "Pumpkin",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/pumpkin.json"
+        "detail": "/api/v2/crops/pumpkin.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/blanket.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/blanket.png",
-    "html_details": "/hay_day_ecosystem/details/details_blanket.html"
+    "self": "/api/v2/machined_items/blanket.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/blanket.png",
+    "html_details": "/details/details_blanket.html"
   }
 }

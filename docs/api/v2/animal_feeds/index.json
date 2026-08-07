@@ -5,61 +5,77 @@
       "id": "chicken_feed",
       "name": "Chicken Feed",
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/animal_feeds/chicken_feed.json"
-      }
+        "detail": "/api/v2/animal_feeds/chicken_feed.json",
+        "image": "/assets/items/chicken_feed.png"
+      },
+      "sell_price": 7.2
     },
     {
       "id": "cow_feed",
       "name": "Cow Feed",
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/animal_feeds/cow_feed.json"
-      }
+        "detail": "/api/v2/animal_feeds/cow_feed.json",
+        "image": "/assets/items/cow_feed.png"
+      },
+      "sell_price": 14.4
     },
     {
       "id": "pig_feed",
       "name": "Pig Feed",
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/animal_feeds/pig_feed.json"
-      }
+        "detail": "/api/v2/animal_feeds/pig_feed.json",
+        "image": "/assets/items/pig_feed.png"
+      },
+      "sell_price": 14.4
     },
     {
       "id": "sheep_feed",
       "name": "Sheep Feed",
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/animal_feeds/sheep_feed.json"
-      }
+        "detail": "/api/v2/animal_feeds/sheep_feed.json",
+        "image": "/assets/items/sheep_feed.png"
+      },
+      "sell_price": 14.4
     },
     {
       "id": "lamb_feed",
       "name": "Lamb Feed",
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/animal_feeds/lamb_feed.json"
-      }
+        "detail": "/api/v2/animal_feeds/lamb_feed.json",
+        "image": "/assets/items/lamb_feed.png"
+      },
+      "sell_price": 18.0
     },
     {
       "id": "goat_feed",
       "name": "Goat Feed",
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/animal_feeds/goat_feed.json"
-      }
+        "detail": "/api/v2/animal_feeds/goat_feed.json",
+        "image": "/assets/items/goat_feed.png"
+      },
+      "sell_price": 14.4
     },
     {
       "id": "wheat_bundle",
       "name": "Wheat Bundle",
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/animal_feeds/wheat_bundle.json"
-      }
+        "detail": "/api/v2/animal_feeds/wheat_bundle.json",
+        "image": "/assets/items/wheat_bundle.png"
+      },
+      "sell_price": 50.4
     },
     {
       "id": "meat_bucket",
       "name": "Meat Bucket",
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/animal_feeds/meat_bucket.json"
-      }
+        "detail": "/api/v2/animal_feeds/meat_bucket.json",
+        "image": "/assets/items/meat_bucket.png"
+      },
+      "sell_price": 72.0
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/animal_feeds/index.json",
-    "parent": "/hay_day_ecosystem/api/v2/index.json"
+    "self": "/api/v2/animal_feeds/index.json",
+    "parent": "/api/v2/index.json"
   }
 }

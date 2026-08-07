@@ -1,7 +1,7 @@
 {
   "id": "blackberry_jam",
   "name": "Blackberry Jam",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/jam_maker.json",
+  "produced_by": "/api/v2/machines/jam_maker.json",
   "unlock_level": 37,
   "time_to_make": 480,
   "sell_price": 388.8,
@@ -12,14 +12,14 @@
       "name": "Blackberry",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/plants/blackberry.json"
+        "detail": "/api/v2/plants/blackberry.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/blackberry_jam.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/blackberry_jam.png",
-    "html_details": "/hay_day_ecosystem/details/details_blackberry_jam.html"
+    "self": "/api/v2/machined_items/blackberry_jam.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/blackberry_jam.png",
+    "html_details": "/details/details_blackberry_jam.html"
   }
 }

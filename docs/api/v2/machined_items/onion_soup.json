@@ -1,7 +1,7 @@
 {
   "id": "onion_soup",
   "name": "Onion Soup",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/soup_kitchen.json",
+  "produced_by": "/api/v2/machines/soup_kitchen.json",
   "unlock_level": 72,
   "time_to_make": 150,
   "sell_price": 327.0,
@@ -12,7 +12,7 @@
       "name": "Bread",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/bread.json"
+        "detail": "/api/v2/machined_items/bread.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Cheese",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/cheese.json"
+        "detail": "/api/v2/machined_items/cheese.json"
       }
     },
     {
@@ -28,14 +28,14 @@
       "name": "Onion",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/onion.json"
+        "detail": "/api/v2/crops/onion.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/onion_soup.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/onion_soup.png",
-    "html_details": "/hay_day_ecosystem/details/details_onion_soup.html"
+    "self": "/api/v2/machined_items/onion_soup.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/onion_soup.png",
+    "html_details": "/details/details_onion_soup.html"
   }
 }

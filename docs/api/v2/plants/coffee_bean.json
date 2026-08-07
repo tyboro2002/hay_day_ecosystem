@@ -1,15 +1,15 @@
 {
   "id": "coffee_bean",
   "name": "Coffee Bean",
-  "harvested_from": "/hay_day_ecosystem/api/v2/plant_structures/coffee_bush.json",
+  "harvested_from": "/api/v2/plant_structures/coffee_bush.json",
   "unlock_level": 42,
   "time_to_make": 1500,
   "sell_price": 64.8,
   "xp": 12,
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/plants/coffee_bean.json",
-    "collection": "/hay_day_ecosystem/api/v2/plants/index.json",
-    "image": "/hay_day_ecosystem/assets/items/coffee_bean.png",
-    "html_details": "/hay_day_ecosystem/details/details_coffee_bean.html"
+    "self": "/api/v2/plants/coffee_bean.json",
+    "collection": "/api/v2/plants/index.json",
+    "image": "/assets/items/coffee_bean.png",
+    "html_details": "/details/details_coffee_bean.html"
   }
 }

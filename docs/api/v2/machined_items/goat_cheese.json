@@ -1,7 +1,7 @@
 {
   "id": "goat_cheese",
   "name": "Goat Cheese",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/dairy.json",
+  "produced_by": "/api/v2/machines/dairy.json",
   "unlock_level": 33,
   "time_to_make": 90,
   "sell_price": 162.0,
@@ -12,14 +12,14 @@
       "name": "Goat Milk",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/animal_items/goat_milk.json"
+        "detail": "/api/v2/animal_items/goat_milk.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/goat_cheese.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/goat_cheese.png",
-    "html_details": "/hay_day_ecosystem/details/details_goat_cheese.html"
+    "self": "/api/v2/machined_items/goat_cheese.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/goat_cheese.png",
+    "html_details": "/details/details_goat_cheese.html"
   }
 }

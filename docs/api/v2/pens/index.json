@@ -5,61 +5,105 @@
       "id": "chicken_coop",
       "name": "Chicken Coop",
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/pens/chicken_coop.json"
-      }
+        "detail": "/api/v2/pens/chicken_coop.json",
+        "image": "/assets/pens/chicken_coop.png"
+      },
+      "costs": [
+        5,
+        5,
+        5
+      ]
     },
     {
       "id": "cow_pasture",
       "name": "Cow Pasture",
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/pens/cow_pasture.json"
-      }
+        "detail": "/api/v2/pens/cow_pasture.json",
+        "image": "/assets/pens/cow_pasture.png"
+      },
+      "costs": [
+        20,
+        20,
+        20
+      ]
     },
     {
       "id": "pig_pen",
       "name": "Pig Pen",
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/pens/pig_pen.json"
-      }
+        "detail": "/api/v2/pens/pig_pen.json",
+        "image": "/assets/pens/pig_pen.png"
+      },
+      "costs": [
+        150,
+        150,
+        150
+      ]
     },
     {
       "id": "sheep_pasture",
       "name": "Sheep Pasture",
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/pens/sheep_pasture.json"
-      }
+        "detail": "/api/v2/pens/sheep_pasture.json",
+        "image": "/assets/pens/sheep_pasture.png"
+      },
+      "costs": [
+        300,
+        300,
+        300
+      ]
     },
     {
       "id": "lamb_pasture",
       "name": "Lamb Pasture",
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/pens/lamb_pasture.json"
-      }
+        "detail": "/api/v2/pens/lamb_pasture.json",
+        "image": "/assets/pens/lamb_pasture.png"
+      },
+      "costs": [
+        500,
+        500,
+        500
+      ]
     },
     {
       "id": "goat_yard",
       "name": "Goat Yard",
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/pens/goat_yard.json"
-      }
+        "detail": "/api/v2/pens/goat_yard.json",
+        "image": "/assets/pens/goat_yard.png"
+      },
+      "costs": [
+        1000,
+        1000,
+        1000
+      ]
     },
     {
       "id": "beehive_tree",
       "name": "Beehive Tree",
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/pens/beehive_tree.json"
-      }
+        "detail": "/api/v2/pens/beehive_tree.json",
+        "image": "/assets/pens/beehive_tree.png"
+      },
+      "costs": [
+        4000
+      ]
     },
     {
       "id": "squirrel_house",
       "name": "Squirrel House",
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/pens/squirrel_house.json"
-      }
+        "detail": "/api/v2/pens/squirrel_house.json",
+        "image": "/assets/pens/squirrel_house.png"
+      },
+      "costs": [
+        45000
+      ]
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/pens/index.json",
-    "parent": "/hay_day_ecosystem/api/v2/index.json"
+    "self": "/api/v2/pens/index.json",
+    "parent": "/api/v2/index.json"
   }
 }

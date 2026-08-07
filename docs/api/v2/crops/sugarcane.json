@@ -1,16 +1,16 @@
 {
   "id": "sugarcane",
   "name": "Sugarcane",
-  "planted_on": "/hay_day_ecosystem/api/v2/fields/fields.json",
+  "planted_on": "/api/v2/fields/fields.json",
   "unlock_level": 7,
   "time_to_make": 30,
   "sell_price": 14.4,
   "xp": 3,
   "yield_multiplier": 2,
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/crops/sugarcane.json",
-    "collection": "/hay_day_ecosystem/api/v2/crops/index.json",
-    "image": "/hay_day_ecosystem/assets/items/sugarcane.png",
-    "html_details": "/hay_day_ecosystem/details/details_sugarcane.html"
+    "self": "/api/v2/crops/sugarcane.json",
+    "collection": "/api/v2/crops/index.json",
+    "image": "/assets/items/sugarcane.png",
+    "html_details": "/details/details_sugarcane.html"
   }
 }

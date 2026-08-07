@@ -1,7 +1,7 @@
 {
   "id": "fried_rice",
   "name": "Fried Rice",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/wok_kitchen.json",
+  "produced_by": "/api/v2/machines/wok_kitchen.json",
   "unlock_level": 69,
   "time_to_make": 60,
   "sell_price": 205.0,
@@ -12,7 +12,7 @@
       "name": "Rice",
       "quantity": 5,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/rice.json"
+        "detail": "/api/v2/crops/rice.json"
       }
     },
     {
@@ -20,14 +20,14 @@
       "name": "Egg",
       "quantity": 5,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/animal_items/egg.json"
+        "detail": "/api/v2/animal_items/egg.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/fried_rice.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/fried_rice.png",
-    "html_details": "/hay_day_ecosystem/details/details_fried_rice.html"
+    "self": "/api/v2/machined_items/fried_rice.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/fried_rice.png",
+    "html_details": "/details/details_fried_rice.html"
   }
 }

@@ -1,7 +1,7 @@
 {
   "id": "potted_plant",
   "name": "Potted Plant",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/pottery_studio.json",
+  "produced_by": "/api/v2/machines/pottery_studio.json",
   "unlock_level": 96,
   "time_to_make": 220,
   "sell_price": 151.0,
@@ -12,7 +12,7 @@
       "name": "Clay",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/clay.json"
+        "detail": "/api/v2/crops/clay.json"
       }
     },
     {
@@ -20,14 +20,14 @@
       "name": "Sunflower",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/sunflower.json"
+        "detail": "/api/v2/crops/sunflower.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/potted_plant.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/potted_plant.png",
-    "html_details": "/hay_day_ecosystem/details/details_potted_plant.html"
+    "self": "/api/v2/machined_items/potted_plant.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/potted_plant.png",
+    "html_details": "/details/details_potted_plant.html"
   }
 }

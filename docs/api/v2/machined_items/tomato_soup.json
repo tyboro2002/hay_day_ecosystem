@@ -1,7 +1,7 @@
 {
   "id": "tomato_soup",
   "name": "Tomato Soup",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/soup_kitchen.json",
+  "produced_by": "/api/v2/machines/soup_kitchen.json",
   "unlock_level": 47,
   "time_to_make": 90,
   "sell_price": 478.8,
@@ -12,7 +12,7 @@
       "name": "Chili Pepper",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/chili_pepper.json"
+        "detail": "/api/v2/crops/chili_pepper.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Goat Cheese",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/goat_cheese.json"
+        "detail": "/api/v2/machined_items/goat_cheese.json"
       }
     },
     {
@@ -28,7 +28,7 @@
       "name": "Tomato Juice",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/tomato_juice.json"
+        "detail": "/api/v2/machined_items/tomato_juice.json"
       }
     },
     {
@@ -36,14 +36,14 @@
       "name": "Tomato",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/tomato.json"
+        "detail": "/api/v2/crops/tomato.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/tomato_soup.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/tomato_soup.png",
-    "html_details": "/hay_day_ecosystem/details/details_tomato_soup.html"
+    "self": "/api/v2/machined_items/tomato_soup.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/tomato_soup.png",
+    "html_details": "/details/details_tomato_soup.html"
   }
 }

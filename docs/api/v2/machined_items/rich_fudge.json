@@ -1,7 +1,7 @@
 {
   "id": "rich_fudge",
   "name": "Rich Fudge",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/fudge_shop.json",
+  "produced_by": "/api/v2/machines/fudge_shop.json",
   "unlock_level": 99,
   "time_to_make": 120,
   "sell_price": 644.0,
@@ -12,7 +12,7 @@
       "name": "Butter",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/butter.json"
+        "detail": "/api/v2/machined_items/butter.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Cacao",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/plants/cacao.json"
+        "detail": "/api/v2/plants/cacao.json"
       }
     },
     {
@@ -28,14 +28,14 @@
       "name": "White Sugar",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/white_sugar.json"
+        "detail": "/api/v2/machined_items/white_sugar.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/rich_fudge.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/rich_fudge.png",
-    "html_details": "/hay_day_ecosystem/details/details_rich_fudge.html"
+    "self": "/api/v2/machined_items/rich_fudge.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/rich_fudge.png",
+    "html_details": "/details/details_rich_fudge.html"
   }
 }

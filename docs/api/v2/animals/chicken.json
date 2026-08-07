@@ -2,13 +2,13 @@
   "id": "chicken",
   "name": "Chicken",
   "unlock_level": 1,
-  "housed_in": "/hay_day_ecosystem/api/v2/pens/chicken_coop.json",
-  "produces": "/hay_day_ecosystem/api/v2/animal_items/egg.json",
-  "required_food": "/hay_day_ecosystem/api/v2/animal_feeds/chicken_feed.json",
+  "housed_in": "/api/v2/pens/chicken_coop.json",
+  "produces": "/api/v2/animal_items/egg.json",
+  "required_food": "/api/v2/animal_feeds/chicken_feed.json",
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/animals/chicken.json",
-    "collection": "/hay_day_ecosystem/api/v2/animals/index.json",
-    "image": "/hay_day_ecosystem/assets/animals/chicken.png",
-    "html_details": "/hay_day_ecosystem/details/details_chicken.html"
+    "self": "/api/v2/animals/chicken.json",
+    "collection": "/api/v2/animals/index.json",
+    "image": "/assets/animals/chicken.png",
+    "html_details": "/details/details_chicken.html"
   }
 }

@@ -40,7 +40,7 @@
       "unlock_level": 38,
       "time_to_make_minutes": 120,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/bracelet.json"
+        "detail": "/api/v2/machined_items/bracelet.json"
       }
     },
     {
@@ -49,7 +49,7 @@
       "unlock_level": 39,
       "time_to_make_minutes": 180,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/necklace.json"
+        "detail": "/api/v2/machined_items/necklace.json"
       }
     },
     {
@@ -58,7 +58,7 @@
       "unlock_level": 40,
       "time_to_make_minutes": 240,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/diamond_ring.json"
+        "detail": "/api/v2/machined_items/diamond_ring.json"
       }
     },
     {
@@ -67,7 +67,7 @@
       "unlock_level": 41,
       "time_to_make_minutes": 90,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/iron_bracelet.json"
+        "detail": "/api/v2/machined_items/iron_bracelet.json"
       }
     },
     {
@@ -76,14 +76,14 @@
       "unlock_level": 98,
       "time_to_make_minutes": 60,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/flower_pendant.json"
+        "detail": "/api/v2/machined_items/flower_pendant.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machines/jeweler.json",
-    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
-    "image": "/hay_day_ecosystem/assets/machines/jeweler.png",
-    "html_details": "/hay_day_ecosystem/details/details_jeweler.html"
+    "self": "/api/v2/machines/jeweler.json",
+    "collection": "/api/v2/machines/index.json",
+    "image": "/assets/machines/jeweler.png",
+    "html_details": "/details/details_jeweler.html"
   }
 }

@@ -1,7 +1,7 @@
 {
   "id": "banana_bread",
   "name": "Banana Bread",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/bakery.json",
+  "produced_by": "/api/v2/machines/bakery.json",
   "unlock_level": 91,
   "time_to_make": 30,
   "sell_price": 424.0,
@@ -12,7 +12,7 @@
       "name": "Banana",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/plants/banana.json"
+        "detail": "/api/v2/plants/banana.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Grapes",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/grapes.json"
+        "detail": "/api/v2/crops/grapes.json"
       }
     },
     {
@@ -28,7 +28,7 @@
       "name": "Wheat",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/wheat.json"
+        "detail": "/api/v2/crops/wheat.json"
       }
     },
     {
@@ -36,14 +36,14 @@
       "name": "Egg",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/animal_items/egg.json"
+        "detail": "/api/v2/animal_items/egg.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/banana_bread.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/banana_bread.png",
-    "html_details": "/hay_day_ecosystem/details/details_banana_bread.html"
+    "self": "/api/v2/machined_items/banana_bread.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/banana_bread.png",
+    "html_details": "/details/details_banana_bread.html"
   }
 }

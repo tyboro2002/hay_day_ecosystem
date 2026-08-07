@@ -1,7 +1,7 @@
 {
   "id": "peach_ice_cream",
   "name": "Peach Ice Cream",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/ice_cream_maker.json",
+  "produced_by": "/api/v2/machines/ice_cream_maker.json",
   "unlock_level": 83,
   "time_to_make": 180,
   "sell_price": 450.0,
@@ -12,7 +12,7 @@
       "name": "Cream",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/cream.json"
+        "detail": "/api/v2/machined_items/cream.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Honey",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/honey.json"
+        "detail": "/api/v2/machined_items/honey.json"
       }
     },
     {
@@ -28,14 +28,14 @@
       "name": "Peach",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/plants/peach.json"
+        "detail": "/api/v2/plants/peach.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/peach_ice_cream.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/peach_ice_cream.png",
-    "html_details": "/hay_day_ecosystem/details/details_peach_ice_cream.html"
+    "self": "/api/v2/machined_items/peach_ice_cream.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/peach_ice_cream.png",
+    "html_details": "/details/details_peach_ice_cream.html"
   }
 }

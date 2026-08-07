@@ -1,7 +1,7 @@
 {
   "id": "bacon_donut",
   "name": "Bacon Donut",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/donut_maker.json",
+  "produced_by": "/api/v2/machines/donut_maker.json",
   "unlock_level": 88,
   "time_to_make": 30,
   "sell_price": 388.0,
@@ -12,7 +12,7 @@
       "name": "Plain Donut",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/plain_donut.json"
+        "detail": "/api/v2/machined_items/plain_donut.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Bacon",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/animal_items/bacon.json"
+        "detail": "/api/v2/animal_items/bacon.json"
       }
     },
     {
@@ -28,14 +28,14 @@
       "name": "Syrup",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/syrup.json"
+        "detail": "/api/v2/machined_items/syrup.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/bacon_donut.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/bacon_donut.png",
-    "html_details": "/hay_day_ecosystem/details/details_bacon_donut.html"
+    "self": "/api/v2/machined_items/bacon_donut.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/bacon_donut.png",
+    "html_details": "/details/details_bacon_donut.html"
   }
 }

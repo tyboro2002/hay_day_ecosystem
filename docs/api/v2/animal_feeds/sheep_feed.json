@@ -1,8 +1,8 @@
 {
   "id": "sheep_feed",
   "name": "Sheep Feed",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/feed_mill.json",
-  "feeds_animal": "/hay_day_ecosystem/api/v2/animals/sheep.json",
+  "produced_by": "/api/v2/machines/feed_mill.json",
+  "feeds_animal": "/api/v2/animals/sheep.json",
   "unlock_level": 16,
   "time_to_make": 30,
   "sell_price": 14.4,
@@ -14,7 +14,7 @@
       "name": "Wheat",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/wheat.json"
+        "detail": "/api/v2/crops/wheat.json"
       }
     },
     {
@@ -22,14 +22,14 @@
       "name": "Soybean",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/soybean.json"
+        "detail": "/api/v2/crops/soybean.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/animal_feeds/sheep_feed.json",
-    "collection": "/hay_day_ecosystem/api/v2/animal_feeds/index.json",
-    "image": "/hay_day_ecosystem/assets/items/sheep_feed.png",
-    "html_details": "/hay_day_ecosystem/details/details_sheep_feed.html"
+    "self": "/api/v2/animal_feeds/sheep_feed.json",
+    "collection": "/api/v2/animal_feeds/index.json",
+    "image": "/assets/items/sheep_feed.png",
+    "html_details": "/details/details_sheep_feed.html"
   }
 }

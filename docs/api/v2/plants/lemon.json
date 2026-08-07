@@ -1,15 +1,15 @@
 {
   "id": "lemon",
   "name": "Lemon",
-  "harvested_from": "/hay_day_ecosystem/api/v2/plant_structures/lemon_tree.json",
+  "harvested_from": "/api/v2/plant_structures/lemon_tree.json",
   "unlock_level": 66,
   "time_to_make": 1740,
   "sell_price": 66.0,
   "xp": 18,
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/plants/lemon.json",
-    "collection": "/hay_day_ecosystem/api/v2/plants/index.json",
-    "image": "/hay_day_ecosystem/assets/items/lemon.png",
-    "html_details": "/hay_day_ecosystem/details/details_lemon.html"
+    "self": "/api/v2/plants/lemon.json",
+    "collection": "/api/v2/plants/index.json",
+    "image": "/assets/items/lemon.png",
+    "html_details": "/details/details_lemon.html"
   }
 }

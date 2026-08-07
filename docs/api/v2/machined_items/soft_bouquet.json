@@ -1,7 +1,7 @@
 {
   "id": "soft_bouquet",
   "name": "Soft Bouquet",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/flower_shop.json",
+  "produced_by": "/api/v2/machines/flower_shop.json",
   "unlock_level": 93,
   "time_to_make": 30,
   "sell_price": 298.0,
@@ -12,7 +12,7 @@
       "name": "Peony",
       "quantity": 4,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/peony.json"
+        "detail": "/api/v2/crops/peony.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Cotton",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/cotton.json"
+        "detail": "/api/v2/crops/cotton.json"
       }
     },
     {
@@ -28,14 +28,14 @@
       "name": "Cotton Fabric",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/cotton_fabric.json"
+        "detail": "/api/v2/machined_items/cotton_fabric.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/soft_bouquet.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/soft_bouquet.png",
-    "html_details": "/hay_day_ecosystem/details/details_soft_bouquet.html"
+    "self": "/api/v2/machined_items/soft_bouquet.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/soft_bouquet.png",
+    "html_details": "/details/details_soft_bouquet.html"
   }
 }

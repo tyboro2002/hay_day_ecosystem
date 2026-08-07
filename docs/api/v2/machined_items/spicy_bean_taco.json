@@ -1,7 +1,7 @@
 {
   "id": "spicy_bean_taco",
   "name": "Spicy Bean Taco",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/taco_kitchen.json",
+  "produced_by": "/api/v2/machines/taco_kitchen.json",
   "unlock_level": 77,
   "time_to_make": 120,
   "sell_price": 453.0,
@@ -12,7 +12,7 @@
       "name": "Taco",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/taco.json"
+        "detail": "/api/v2/machined_items/taco.json"
       }
     },
     {
@@ -20,14 +20,14 @@
       "name": "Black Bean",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/black_bean.json"
+        "detail": "/api/v2/crops/black_bean.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/spicy_bean_taco.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/spicy_bean_taco.png",
-    "html_details": "/hay_day_ecosystem/details/details_spicy_bean_taco.html"
+    "self": "/api/v2/machined_items/spicy_bean_taco.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/spicy_bean_taco.png",
+    "html_details": "/details/details_spicy_bean_taco.html"
   }
 }

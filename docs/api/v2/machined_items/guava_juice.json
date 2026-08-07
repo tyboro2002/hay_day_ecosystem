@@ -1,7 +1,7 @@
 {
   "id": "guava_juice",
   "name": "Guava Juice",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/juice_press.json",
+  "produced_by": "/api/v2/machines/juice_press.json",
   "unlock_level": 104,
   "time_to_make": 55,
   "sell_price": 252.0,
@@ -12,14 +12,14 @@
       "name": "Guava",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/plants/guava.json"
+        "detail": "/api/v2/plants/guava.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/guava_juice.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/guava_juice.png",
-    "html_details": "/hay_day_ecosystem/details/details_guava_juice.html"
+    "self": "/api/v2/machined_items/guava_juice.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/guava_juice.png",
+    "html_details": "/details/details_guava_juice.html"
   }
 }

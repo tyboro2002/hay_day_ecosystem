@@ -1,7 +1,7 @@
 {
   "id": "breakfast_bowl",
   "name": "Breakfast Bowl",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/yogurt_maker.json",
+  "produced_by": "/api/v2/machines/yogurt_maker.json",
   "unlock_level": 119,
   "time_to_make": 50,
   "sell_price": 604.0,
@@ -12,7 +12,7 @@
       "name": "Plain Yogurt",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/plain_yogurt.json"
+        "detail": "/api/v2/machined_items/plain_yogurt.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Oats",
       "quantity": 4,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/oats.json"
+        "detail": "/api/v2/crops/oats.json"
       }
     },
     {
@@ -28,7 +28,7 @@
       "name": "Honey",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/honey.json"
+        "detail": "/api/v2/machined_items/honey.json"
       }
     },
     {
@@ -36,14 +36,14 @@
       "name": "Raspberry",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/plants/raspberry.json"
+        "detail": "/api/v2/plants/raspberry.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/breakfast_bowl.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/breakfast_bowl.png",
-    "html_details": "/hay_day_ecosystem/details/details_breakfast_bowl.html"
+    "self": "/api/v2/machined_items/breakfast_bowl.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/breakfast_bowl.png",
+    "html_details": "/details/details_breakfast_bowl.html"
   }
 }

@@ -1,7 +1,7 @@
 {
   "id": "colorful_candles",
   "name": "Colorful Candles",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/candle_maker.json",
+  "produced_by": "/api/v2/machines/candle_maker.json",
   "unlock_level": 84,
   "time_to_make": 110,
   "sell_price": 324.0,
@@ -12,7 +12,7 @@
       "name": "Beeswax",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/beeswax.json"
+        "detail": "/api/v2/machined_items/beeswax.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Raspberry",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/plants/raspberry.json"
+        "detail": "/api/v2/plants/raspberry.json"
       }
     },
     {
@@ -28,14 +28,14 @@
       "name": "Carrot",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/carrot.json"
+        "detail": "/api/v2/crops/carrot.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/colorful_candles.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/colorful_candles.png",
-    "html_details": "/hay_day_ecosystem/details/details_colorful_candles.html"
+    "self": "/api/v2/machined_items/colorful_candles.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/colorful_candles.png",
+    "html_details": "/details/details_colorful_candles.html"
   }
 }

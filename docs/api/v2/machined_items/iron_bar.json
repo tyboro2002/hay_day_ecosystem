@@ -1,7 +1,7 @@
 {
   "id": "iron_bar",
   "name": "Iron Bar",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/smelter.json",
+  "produced_by": "/api/v2/machines/smelter.json",
   "unlock_level": 34,
   "time_to_make": 420,
   "sell_price": 129.6,
@@ -12,14 +12,14 @@
       "name": "Iron Ore",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/special_items/iron_ore.json"
+        "detail": "/api/v2/special_items/iron_ore.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/iron_bar.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/iron_bar.png",
-    "html_details": "/hay_day_ecosystem/details/details_iron_bar.html"
+    "self": "/api/v2/machined_items/iron_bar.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/iron_bar.png",
+    "html_details": "/details/details_iron_bar.html"
   }
 }

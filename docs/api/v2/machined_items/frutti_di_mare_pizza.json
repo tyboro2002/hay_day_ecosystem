@@ -1,7 +1,7 @@
 {
   "id": "frutti_di_mare_pizza",
   "name": "Frutti Di Mare Pizza",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/bakery.json",
+  "produced_by": "/api/v2/machines/bakery.json",
   "unlock_level": 45,
   "time_to_make": 15,
   "sell_price": 403.2,
@@ -12,7 +12,7 @@
       "name": "Wheat",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/wheat.json"
+        "detail": "/api/v2/crops/wheat.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Cheese",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/cheese.json"
+        "detail": "/api/v2/machined_items/cheese.json"
       }
     },
     {
@@ -28,7 +28,7 @@
       "name": "Fish Fillet",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/animal_items/fish_fillet.json"
+        "detail": "/api/v2/animal_items/fish_fillet.json"
       }
     },
     {
@@ -36,14 +36,14 @@
       "name": "Lobster Tail",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/lobster_tail.json"
+        "detail": "/api/v2/machined_items/lobster_tail.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/frutti_di_mare_pizza.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/frutti_di_mare_pizza.png",
-    "html_details": "/hay_day_ecosystem/details/details_frutti_di_mare_pizza.html"
+    "self": "/api/v2/machined_items/frutti_di_mare_pizza.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/frutti_di_mare_pizza.png",
+    "html_details": "/details/details_frutti_di_mare_pizza.html"
   }
 }

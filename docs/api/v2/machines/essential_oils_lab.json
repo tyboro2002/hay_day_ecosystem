@@ -40,7 +40,7 @@
       "unlock_level": 68,
       "time_to_make_minutes": 10,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/lemon_essential_oil.json"
+        "detail": "/api/v2/machined_items/lemon_essential_oil.json"
       }
     },
     {
@@ -49,7 +49,7 @@
       "unlock_level": 74,
       "time_to_make_minutes": 10,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/chamomile_essential_oil.json"
+        "detail": "/api/v2/machined_items/chamomile_essential_oil.json"
       }
     },
     {
@@ -58,7 +58,7 @@
       "unlock_level": 80,
       "time_to_make_minutes": 20,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/ginger_essential_oil.json"
+        "detail": "/api/v2/machined_items/ginger_essential_oil.json"
       }
     },
     {
@@ -67,14 +67,14 @@
       "unlock_level": 85,
       "time_to_make_minutes": 15,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/mint_essential_oil.json"
+        "detail": "/api/v2/machined_items/mint_essential_oil.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machines/essential_oils_lab.json",
-    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
-    "image": "/hay_day_ecosystem/assets/machines/essential_oils_lab.png",
-    "html_details": "/hay_day_ecosystem/details/details_essential_oils_lab.html"
+    "self": "/api/v2/machines/essential_oils_lab.json",
+    "collection": "/api/v2/machines/index.json",
+    "image": "/assets/machines/essential_oils_lab.png",
+    "html_details": "/details/details_essential_oils_lab.html"
   }
 }

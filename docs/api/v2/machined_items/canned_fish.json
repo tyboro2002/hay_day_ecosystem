@@ -1,7 +1,7 @@
 {
   "id": "canned_fish",
   "name": "Canned Fish",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/preservation_station.json",
+  "produced_by": "/api/v2/machines/preservation_station.json",
   "unlock_level": 95,
   "time_to_make": 220,
   "sell_price": 471.0,
@@ -12,7 +12,7 @@
       "name": "Fish Fillet",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/animal_items/fish_fillet.json"
+        "detail": "/api/v2/animal_items/fish_fillet.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Chili Pepper",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/chili_pepper.json"
+        "detail": "/api/v2/crops/chili_pepper.json"
       }
     },
     {
@@ -28,14 +28,14 @@
       "name": "Olive Oil",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/olive_oil.json"
+        "detail": "/api/v2/machined_items/olive_oil.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/canned_fish.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/canned_fish.png",
-    "html_details": "/hay_day_ecosystem/details/details_canned_fish.html"
+    "self": "/api/v2/machined_items/canned_fish.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/canned_fish.png",
+    "html_details": "/details/details_canned_fish.html"
   }
 }

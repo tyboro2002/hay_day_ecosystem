@@ -1,7 +1,7 @@
 {
   "id": "baked_potato",
   "name": "Baked Potato",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/bbq_grill.json",
+  "produced_by": "/api/v2/machines/bbq_grill.json",
   "unlock_level": 35,
   "time_to_make": 35,
   "sell_price": 298.8,
@@ -12,7 +12,7 @@
       "name": "Cheese",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/cheese.json"
+        "detail": "/api/v2/machined_items/cheese.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Chili Pepper",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/chili_pepper.json"
+        "detail": "/api/v2/crops/chili_pepper.json"
       }
     },
     {
@@ -28,7 +28,7 @@
       "name": "Cream",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/cream.json"
+        "detail": "/api/v2/machined_items/cream.json"
       }
     },
     {
@@ -36,14 +36,14 @@
       "name": "Potato",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/potato.json"
+        "detail": "/api/v2/crops/potato.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/baked_potato.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/baked_potato.png",
-    "html_details": "/hay_day_ecosystem/details/details_baked_potato.html"
+    "self": "/api/v2/machined_items/baked_potato.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/baked_potato.png",
+    "html_details": "/details/details_baked_potato.html"
   }
 }

@@ -1,7 +1,7 @@
 {
   "id": "honey_soap",
   "name": "Honey Soap",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/bath_kiosk.json",
+  "produced_by": "/api/v2/machines/bath_kiosk.json",
   "unlock_level": 84,
   "time_to_make": 60,
   "sell_price": 327.0,
@@ -12,7 +12,7 @@
       "name": "Goat Milk",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/animal_items/goat_milk.json"
+        "detail": "/api/v2/animal_items/goat_milk.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Cacao",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/plants/cacao.json"
+        "detail": "/api/v2/plants/cacao.json"
       }
     },
     {
@@ -28,14 +28,14 @@
       "name": "Honey",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/honey.json"
+        "detail": "/api/v2/machined_items/honey.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/honey_soap.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/honey_soap.png",
-    "html_details": "/hay_day_ecosystem/details/details_honey_soap.html"
+    "self": "/api/v2/machined_items/honey_soap.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/honey_soap.png",
+    "html_details": "/details/details_honey_soap.html"
   }
 }

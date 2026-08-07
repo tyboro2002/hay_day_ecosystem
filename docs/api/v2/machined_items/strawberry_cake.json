@@ -1,7 +1,7 @@
 {
   "id": "strawberry_cake",
   "name": "Strawberry Cake",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/cake_oven.json",
+  "produced_by": "/api/v2/machines/cake_oven.json",
   "unlock_level": 35,
   "time_to_make": 180,
   "sell_price": 316.8,
@@ -12,7 +12,7 @@
       "name": "Cream",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/cream.json"
+        "detail": "/api/v2/machined_items/cream.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Strawberry",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/strawberry.json"
+        "detail": "/api/v2/crops/strawberry.json"
       }
     },
     {
@@ -28,7 +28,7 @@
       "name": "Wheat",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/wheat.json"
+        "detail": "/api/v2/crops/wheat.json"
       }
     },
     {
@@ -36,14 +36,14 @@
       "name": "White Sugar",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/white_sugar.json"
+        "detail": "/api/v2/machined_items/white_sugar.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/strawberry_cake.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/strawberry_cake.png",
-    "html_details": "/hay_day_ecosystem/details/details_strawberry_cake.html"
+    "self": "/api/v2/machined_items/strawberry_cake.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/strawberry_cake.png",
+    "html_details": "/details/details_strawberry_cake.html"
   }
 }

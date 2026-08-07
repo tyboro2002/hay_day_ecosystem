@@ -1,7 +1,7 @@
 {
   "id": "apple_porridge",
   "name": "Apple Porridge",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/porridge_bar.json",
+  "produced_by": "/api/v2/machines/porridge_bar.json",
   "unlock_level": 119,
   "time_to_make": 20,
   "sell_price": 522.0,
@@ -12,7 +12,7 @@
       "name": "Apple",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/plants/apple.json"
+        "detail": "/api/v2/plants/apple.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Apple Jam",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/apple_jam.json"
+        "detail": "/api/v2/machined_items/apple_jam.json"
       }
     },
     {
@@ -28,14 +28,14 @@
       "name": "Oats",
       "quantity": 4,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/oats.json"
+        "detail": "/api/v2/crops/oats.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/apple_porridge.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/apple_porridge.png",
-    "html_details": "/hay_day_ecosystem/details/details_apple_porridge.html"
+    "self": "/api/v2/machined_items/apple_porridge.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/apple_porridge.png",
+    "html_details": "/details/details_apple_porridge.html"
   }
 }

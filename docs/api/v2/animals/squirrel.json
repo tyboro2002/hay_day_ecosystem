@@ -2,13 +2,13 @@
   "id": "squirrel",
   "name": "Squirrel",
   "unlock_level": 62,
-  "housed_in": "/hay_day_ecosystem/api/v2/pens/squirrel_house.json",
-  "produces": "/hay_day_ecosystem/api/v2/animal_items/peanuts.json",
+  "housed_in": "/api/v2/pens/squirrel_house.json",
+  "produces": "/api/v2/animal_items/peanuts.json",
   "required_food": null,
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/animals/squirrel.json",
-    "collection": "/hay_day_ecosystem/api/v2/animals/index.json",
-    "image": "/hay_day_ecosystem/assets/animals/squirrel.png",
-    "html_details": "/hay_day_ecosystem/details/details_squirrel.html"
+    "self": "/api/v2/animals/squirrel.json",
+    "collection": "/api/v2/animals/index.json",
+    "image": "/assets/animals/squirrel.png",
+    "html_details": "/details/details_squirrel.html"
   }
 }

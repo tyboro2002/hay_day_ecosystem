@@ -1,12 +1,12 @@
 {
   "id": "lamb_pasture",
   "name": "Lamb Pasture",
-  "houses_animal": "/hay_day_ecosystem/api/v2/animals/lamb.json",
+  "houses_animal": "/api/v2/animals/lamb.json",
   "produces": [
     {
       "id": "lamb_chop",
       "name": "Lamb Chop",
-      "link": "/hay_day_ecosystem/api/v2/animal_items/lamb_chop.json"
+      "link": "/api/v2/animal_items/lamb_chop.json"
     }
   ],
   "max_capacity_per_pen": 5,
@@ -26,9 +26,9 @@
     500
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/pens/lamb_pasture.json",
-    "collection": "/hay_day_ecosystem/api/v2/pens/index.json",
-    "image": "/hay_day_ecosystem/assets/pens/lamb_pasture.png",
-    "html_details": "/hay_day_ecosystem/details/details_lamb_pasture.html"
+    "self": "/api/v2/pens/lamb_pasture.json",
+    "collection": "/api/v2/pens/index.json",
+    "image": "/assets/pens/lamb_pasture.png",
+    "html_details": "/details/details_lamb_pasture.html"
   }
 }

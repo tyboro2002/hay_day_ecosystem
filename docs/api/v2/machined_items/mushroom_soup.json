@@ -1,7 +1,7 @@
 {
   "id": "mushroom_soup",
   "name": "Mushroom Soup",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/soup_kitchen.json",
+  "produced_by": "/api/v2/machines/soup_kitchen.json",
   "unlock_level": 104,
   "time_to_make": 80,
   "sell_price": 176.0,
@@ -12,7 +12,7 @@
       "name": "Mushroom",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/mushroom.json"
+        "detail": "/api/v2/crops/mushroom.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Onion",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/onion.json"
+        "detail": "/api/v2/crops/onion.json"
       }
     },
     {
@@ -28,14 +28,14 @@
       "name": "Milk",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/animal_items/milk.json"
+        "detail": "/api/v2/animal_items/milk.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/mushroom_soup.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/mushroom_soup.png",
-    "html_details": "/hay_day_ecosystem/details/details_mushroom_soup.html"
+    "self": "/api/v2/machined_items/mushroom_soup.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/mushroom_soup.png",
+    "html_details": "/details/details_mushroom_soup.html"
   }
 }

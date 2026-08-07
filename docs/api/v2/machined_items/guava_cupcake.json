@@ -1,7 +1,7 @@
 {
   "id": "guava_cupcake",
   "name": "Guava Cupcake",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/cupcake_maker.json",
+  "produced_by": "/api/v2/machines/cupcake_maker.json",
   "unlock_level": 109,
   "time_to_make": 70,
   "sell_price": 583.0,
@@ -12,7 +12,7 @@
       "name": "Plain Cupcake",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/plain_cupcake.json"
+        "detail": "/api/v2/machined_items/plain_cupcake.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Guava",
       "quantity": 2,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/plants/guava.json"
+        "detail": "/api/v2/plants/guava.json"
       }
     },
     {
@@ -28,14 +28,14 @@
       "name": "Cream",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/cream.json"
+        "detail": "/api/v2/machined_items/cream.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/guava_cupcake.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/guava_cupcake.png",
-    "html_details": "/hay_day_ecosystem/details/details_guava_cupcake.html"
+    "self": "/api/v2/machined_items/guava_cupcake.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/guava_cupcake.png",
+    "html_details": "/details/details_guava_cupcake.html"
   }
 }

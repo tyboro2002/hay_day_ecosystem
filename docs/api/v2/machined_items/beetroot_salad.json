@@ -1,7 +1,7 @@
 {
   "id": "beetroot_salad",
   "name": "Beetroot Salad",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/salad_bar.json",
+  "produced_by": "/api/v2/machines/salad_bar.json",
   "unlock_level": 76,
   "time_to_make": 45,
   "sell_price": 234.0,
@@ -12,7 +12,7 @@
       "name": "Beetroot",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/beetroot.json"
+        "detail": "/api/v2/crops/beetroot.json"
       }
     },
     {
@@ -20,14 +20,14 @@
       "name": "Goat Cheese",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/goat_cheese.json"
+        "detail": "/api/v2/machined_items/goat_cheese.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/beetroot_salad.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/beetroot_salad.png",
-    "html_details": "/hay_day_ecosystem/details/details_beetroot_salad.html"
+    "self": "/api/v2/machined_items/beetroot_salad.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/beetroot_salad.png",
+    "html_details": "/details/details_beetroot_salad.html"
   }
 }

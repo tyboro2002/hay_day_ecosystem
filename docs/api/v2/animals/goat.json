@@ -2,13 +2,13 @@
   "id": "goat",
   "name": "Goat",
   "unlock_level": 32,
-  "housed_in": "/hay_day_ecosystem/api/v2/pens/goat_yard.json",
-  "produces": "/hay_day_ecosystem/api/v2/animal_items/goat_milk.json",
-  "required_food": "/hay_day_ecosystem/api/v2/animal_feeds/goat_feed.json",
+  "housed_in": "/api/v2/pens/goat_yard.json",
+  "produces": "/api/v2/animal_items/goat_milk.json",
+  "required_food": "/api/v2/animal_feeds/goat_feed.json",
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/animals/goat.json",
-    "collection": "/hay_day_ecosystem/api/v2/animals/index.json",
-    "image": "/hay_day_ecosystem/assets/animals/goat.png",
-    "html_details": "/hay_day_ecosystem/details/details_goat.html"
+    "self": "/api/v2/animals/goat.json",
+    "collection": "/api/v2/animals/index.json",
+    "image": "/assets/animals/goat.png",
+    "html_details": "/details/details_goat.html"
   }
 }

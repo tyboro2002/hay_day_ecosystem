@@ -1,15 +1,15 @@
 {
   "id": "pomegranate",
   "name": "Pomegranate",
-  "harvested_from": "/hay_day_ecosystem/api/v2/plant_structures/pomegranate_tree.json",
+  "harvested_from": "/api/v2/plant_structures/pomegranate_tree.json",
   "unlock_level": 107,
   "time_to_make": 1620,
   "sell_price": 111.0,
   "xp": 22,
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/plants/pomegranate.json",
-    "collection": "/hay_day_ecosystem/api/v2/plants/index.json",
-    "image": "/hay_day_ecosystem/assets/items/pomegranate.png",
-    "html_details": "/hay_day_ecosystem/details/details_pomegranate.html"
+    "self": "/api/v2/plants/pomegranate.json",
+    "collection": "/api/v2/plants/index.json",
+    "image": "/assets/items/pomegranate.png",
+    "html_details": "/details/details_pomegranate.html"
   }
 }

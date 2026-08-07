@@ -1,7 +1,7 @@
 {
   "id": "honey_tea",
   "name": "Honey Tea",
-  "produced_by": "/hay_day_ecosystem/api/v2/machines/tea_stand.json",
+  "produced_by": "/api/v2/machines/tea_stand.json",
   "unlock_level": 83,
   "time_to_make": 40,
   "sell_price": 313.0,
@@ -12,7 +12,7 @@
       "name": "Tea Leaf",
       "quantity": 3,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/crops/tea_leaf.json"
+        "detail": "/api/v2/crops/tea_leaf.json"
       }
     },
     {
@@ -20,14 +20,14 @@
       "name": "Honey",
       "quantity": 1,
       "links": {
-        "detail": "/hay_day_ecosystem/api/v2/machined_items/honey.json"
+        "detail": "/api/v2/machined_items/honey.json"
       }
     }
   ],
   "links": {
-    "self": "/hay_day_ecosystem/api/v2/machined_items/honey_tea.json",
-    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
-    "image": "/hay_day_ecosystem/assets/items/honey_tea.png",
-    "html_details": "/hay_day_ecosystem/details/details_honey_tea.html"
+    "self": "/api/v2/machined_items/honey_tea.json",
+    "collection": "/api/v2/machined_items/index.json",
+    "image": "/assets/items/honey_tea.png",
+    "html_details": "/details/details_honey_tea.html"
   }
 }
