@@ -1,7 +1,7 @@
 {
   "id": "asparagus_soup",
   "name": "Asparagus Soup",
-  "produced_by": "/api/v2/machines/soup_kitchen.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/soup_kitchen.json",
   "unlock_level": 51,
   "time_to_make": 60,
   "sell_price": 255.0,
@@ -12,7 +12,7 @@
       "name": "Asparagus",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/crops/asparagus.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/asparagus.json"
       }
     },
     {
@@ -20,14 +20,14 @@
       "name": "Cream",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/machined_items/cream.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cream.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/asparagus_soup.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/asparagus_soup.png",
-    "html_details": "/details/details_asparagus_soup.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/asparagus_soup.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/asparagus_soup.png",
+    "html_details": "/hay_day_ecosystem/details/details_asparagus_soup.html"
   }
 }

@@ -1,7 +1,7 @@
 {
   "id": "sesame_ice_cream",
   "name": "Sesame Ice Cream",
-  "produced_by": "/api/v2/machines/ice_cream_maker.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/ice_cream_maker.json",
   "unlock_level": 50,
   "time_to_make": 120,
   "sell_price": 176.4,
@@ -12,7 +12,7 @@
       "name": "Cream",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/cream.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cream.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Sesame",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/crops/sesame.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/sesame.json"
       }
     },
     {
@@ -28,14 +28,14 @@
       "name": "Brown Sugar",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/brown_sugar.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/brown_sugar.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/sesame_ice_cream.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/sesame_ice_cream.png",
-    "html_details": "/details/details_sesame_ice_cream.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/sesame_ice_cream.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/sesame_ice_cream.png",
+    "html_details": "/hay_day_ecosystem/details/details_sesame_ice_cream.html"
   }
 }

@@ -1,7 +1,7 @@
 {
   "id": "carrot_juice",
   "name": "Carrot Juice",
-  "produced_by": "/api/v2/machines/juice_press.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/juice_press.json",
   "unlock_level": 26,
   "time_to_make": 30,
   "sell_price": 46.8,
@@ -12,14 +12,14 @@
       "name": "Carrot",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/crops/carrot.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/carrot.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/carrot_juice.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/carrot_juice.png",
-    "html_details": "/details/details_carrot_juice.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/carrot_juice.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/carrot_juice.png",
+    "html_details": "/hay_day_ecosystem/details/details_carrot_juice.html"
   }
 }

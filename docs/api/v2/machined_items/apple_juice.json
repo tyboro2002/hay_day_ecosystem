@@ -1,7 +1,7 @@
 {
   "id": "apple_juice",
   "name": "Apple Juice",
-  "produced_by": "/api/v2/machines/juice_press.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/juice_press.json",
   "unlock_level": 28,
   "time_to_make": 120,
   "sell_price": 129.6,
@@ -12,14 +12,14 @@
       "name": "Apple",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/plants/apple.json"
+        "detail": "/hay_day_ecosystem/api/v2/plants/apple.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/apple_juice.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/apple_juice.png",
-    "html_details": "/details/details_apple_juice.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/apple_juice.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/apple_juice.png",
+    "html_details": "/hay_day_ecosystem/details/details_apple_juice.html"
   }
 }

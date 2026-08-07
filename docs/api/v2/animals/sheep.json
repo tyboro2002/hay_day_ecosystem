@@ -2,13 +2,13 @@
   "id": "sheep",
   "name": "Sheep",
   "unlock_level": 16,
-  "housed_in": "/api/v2/pens/sheep_pasture.json",
-  "produces": "/api/v2/animal_items/wool.json",
-  "required_food": "/api/v2/animal_feeds/sheep_feed.json",
+  "housed_in": "/hay_day_ecosystem/api/v2/pens/sheep_pasture.json",
+  "produces": "/hay_day_ecosystem/api/v2/animal_items/wool.json",
+  "required_food": "/hay_day_ecosystem/api/v2/animal_feeds/sheep_feed.json",
   "links": {
-    "self": "/api/v2/animals/sheep.json",
-    "collection": "/api/v2/animals/index.json",
-    "image": "/assets/animals/sheep.png",
-    "html_details": "/details/details_sheep.html"
+    "self": "/hay_day_ecosystem/api/v2/animals/sheep.json",
+    "collection": "/hay_day_ecosystem/api/v2/animals/index.json",
+    "image": "/hay_day_ecosystem/assets/animals/sheep.png",
+    "html_details": "/hay_day_ecosystem/details/details_sheep.html"
   }
 }

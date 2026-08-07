@@ -1,7 +1,7 @@
 {
   "id": "blt_salad",
   "name": "BLT Salad",
-  "produced_by": "/api/v2/machines/salad_bar.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/salad_bar.json",
   "unlock_level": 62,
   "time_to_make": 105,
   "sell_price": 723.0,
@@ -12,7 +12,7 @@
       "name": "Bacon",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/animal_items/bacon.json"
+        "detail": "/hay_day_ecosystem/api/v2/animal_items/bacon.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Lettuce",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/crops/lettuce.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/lettuce.json"
       }
     },
     {
@@ -28,7 +28,7 @@
       "name": "Roasted Tomatoes",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/roasted_tomatoes.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/roasted_tomatoes.json"
       }
     },
     {
@@ -36,14 +36,14 @@
       "name": "Mayonnaise",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/mayonnaise.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/mayonnaise.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/blt_salad.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/blt_salad.png",
-    "html_details": "/details/details_blt_salad.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/blt_salad.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/blt_salad.png",
+    "html_details": "/hay_day_ecosystem/details/details_blt_salad.html"
   }
 }

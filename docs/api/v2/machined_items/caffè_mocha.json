@@ -1,7 +1,7 @@
 {
   "id": "caff\u00e8_mocha",
   "name": "Caff\u00e8 Mocha",
-  "produced_by": "/api/v2/machines/coffee_kiosk.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/coffee_kiosk.json",
   "unlock_level": 45,
   "time_to_make": 15,
   "sell_price": 291.6,
@@ -12,7 +12,7 @@
       "name": "Coffee Bean",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/plants/coffee_bean.json"
+        "detail": "/hay_day_ecosystem/api/v2/plants/coffee_bean.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Cream",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/cream.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cream.json"
       }
     },
     {
@@ -28,14 +28,14 @@
       "name": "Cacao",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/plants/cacao.json"
+        "detail": "/hay_day_ecosystem/api/v2/plants/cacao.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/caff\u00e8_mocha.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/caff\u00e8_mocha.png",
-    "html_details": "/details/details_caff\u00e8_mocha.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/caff\u00e8_mocha.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/caff\u00e8_mocha.png",
+    "html_details": "/hay_day_ecosystem/details/details_caff\u00e8_mocha.html"
   }
 }

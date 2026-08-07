@@ -1,7 +1,7 @@
 {
   "id": "blueberry_chutney",
   "name": "Blueberry Chutney",
-  "produced_by": "/api/v2/machines/jam_maker.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/jam_maker.json",
   "unlock_level": 70,
   "time_to_make": 240,
   "sell_price": 579.0,
@@ -12,7 +12,7 @@
       "name": "Brown Sugar",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/brown_sugar.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/brown_sugar.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Lemon",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/plants/lemon.json"
+        "detail": "/hay_day_ecosystem/api/v2/plants/lemon.json"
       }
     },
     {
@@ -28,7 +28,7 @@
       "name": "Onion",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/crops/onion.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/onion.json"
       }
     },
     {
@@ -36,14 +36,14 @@
       "name": "Blueberry",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/plants/blueberry.json"
+        "detail": "/hay_day_ecosystem/api/v2/plants/blueberry.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/blueberry_chutney.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/blueberry_chutney.png",
-    "html_details": "/details/details_blueberry_chutney.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/blueberry_chutney.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/blueberry_chutney.png",
+    "html_details": "/hay_day_ecosystem/details/details_blueberry_chutney.html"
   }
 }

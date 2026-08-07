@@ -1,16 +1,16 @@
 {
   "id": "chili_pepper",
   "name": "Chili Pepper",
-  "planted_on": "/api/v2/fields/fields.json",
+  "planted_on": "/hay_day_ecosystem/api/v2/fields/fields.json",
   "unlock_level": 25,
   "time_to_make": 240,
   "sell_price": 36.0,
   "xp": 6,
   "yield_multiplier": 2,
   "links": {
-    "self": "/api/v2/crops/chili_pepper.json",
-    "collection": "/api/v2/crops/index.json",
-    "image": "/assets/items/chili_pepper.png",
-    "html_details": "/details/details_chili_pepper.html"
+    "self": "/hay_day_ecosystem/api/v2/crops/chili_pepper.json",
+    "collection": "/hay_day_ecosystem/api/v2/crops/index.json",
+    "image": "/hay_day_ecosystem/assets/items/chili_pepper.png",
+    "html_details": "/hay_day_ecosystem/details/details_chili_pepper.html"
   }
 }

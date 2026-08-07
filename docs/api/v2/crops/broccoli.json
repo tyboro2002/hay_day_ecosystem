@@ -1,16 +1,16 @@
 {
   "id": "broccoli",
   "name": "Broccoli",
-  "planted_on": "/api/v2/fields/fields.json",
+  "planted_on": "/hay_day_ecosystem/api/v2/fields/fields.json",
   "unlock_level": 83,
   "time_to_make": 90,
   "sell_price": 21.0,
   "xp": 4,
   "yield_multiplier": 2,
   "links": {
-    "self": "/api/v2/crops/broccoli.json",
-    "collection": "/api/v2/crops/index.json",
-    "image": "/assets/items/broccoli.png",
-    "html_details": "/details/details_broccoli.html"
+    "self": "/hay_day_ecosystem/api/v2/crops/broccoli.json",
+    "collection": "/hay_day_ecosystem/api/v2/crops/index.json",
+    "image": "/hay_day_ecosystem/assets/items/broccoli.png",
+    "html_details": "/hay_day_ecosystem/details/details_broccoli.html"
   }
 }

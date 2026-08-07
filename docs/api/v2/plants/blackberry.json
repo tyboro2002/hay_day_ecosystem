@@ -1,15 +1,15 @@
 {
   "id": "blackberry",
   "name": "Blackberry",
-  "harvested_from": "/api/v2/plant_structures/blackberry_bush.json",
+  "harvested_from": "/hay_day_ecosystem/api/v2/plant_structures/blackberry_bush.json",
   "unlock_level": 26,
   "time_to_make": 2040,
   "sell_price": 82.8,
   "xp": 16,
   "links": {
-    "self": "/api/v2/plants/blackberry.json",
-    "collection": "/api/v2/plants/index.json",
-    "image": "/assets/items/blackberry.png",
-    "html_details": "/details/details_blackberry.html"
+    "self": "/hay_day_ecosystem/api/v2/plants/blackberry.json",
+    "collection": "/hay_day_ecosystem/api/v2/plants/index.json",
+    "image": "/hay_day_ecosystem/assets/items/blackberry.png",
+    "html_details": "/hay_day_ecosystem/details/details_blackberry.html"
   }
 }

@@ -1,7 +1,7 @@
 {
   "id": "broccoli_pasta",
   "name": "Broccoli Pasta",
-  "produced_by": "/api/v2/machines/pasta_kitchen.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/pasta_kitchen.json",
   "unlock_level": 83,
   "time_to_make": 60,
   "sell_price": 345.0,
@@ -12,7 +12,7 @@
       "name": "Broccoli",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/crops/broccoli.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/broccoli.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Cheese",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/cheese.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cheese.json"
       }
     },
     {
@@ -28,14 +28,14 @@
       "name": "Fresh Pasta",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/machined_items/fresh_pasta.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/fresh_pasta.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/broccoli_pasta.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/broccoli_pasta.png",
-    "html_details": "/details/details_broccoli_pasta.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/broccoli_pasta.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/broccoli_pasta.png",
+    "html_details": "/hay_day_ecosystem/details/details_broccoli_pasta.html"
   }
 }

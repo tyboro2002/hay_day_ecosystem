@@ -44,7 +44,7 @@
       "unlock_level": 24,
       "time_to_make_minutes": 480,
       "links": {
-        "detail": "/api/v2/machined_items/silver_bar.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/silver_bar.json"
       }
     },
     {
@@ -53,7 +53,7 @@
       "unlock_level": 25,
       "time_to_make_minutes": 720,
       "links": {
-        "detail": "/api/v2/machined_items/gold_bar.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/gold_bar.json"
       }
     },
     {
@@ -62,7 +62,7 @@
       "unlock_level": 25,
       "time_to_make_minutes": 960,
       "links": {
-        "detail": "/api/v2/machined_items/platinum_bar.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/platinum_bar.json"
       }
     },
     {
@@ -71,7 +71,7 @@
       "unlock_level": 33,
       "time_to_make_minutes": 360,
       "links": {
-        "detail": "/api/v2/machined_items/refined_coal.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/refined_coal.json"
       }
     },
     {
@@ -80,14 +80,14 @@
       "unlock_level": 34,
       "time_to_make_minutes": 420,
       "links": {
-        "detail": "/api/v2/machined_items/iron_bar.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/iron_bar.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machines/smelter.json",
-    "collection": "/api/v2/machines/index.json",
-    "image": "/assets/machines/smelter.png",
-    "html_details": "/details/details_smelter.html"
+    "self": "/hay_day_ecosystem/api/v2/machines/smelter.json",
+    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
+    "image": "/hay_day_ecosystem/assets/machines/smelter.png",
+    "html_details": "/hay_day_ecosystem/details/details_smelter.html"
   }
 }

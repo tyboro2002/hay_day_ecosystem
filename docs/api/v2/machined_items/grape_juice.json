@@ -1,7 +1,7 @@
 {
   "id": "grape_juice",
   "name": "Grape Juice",
-  "produced_by": "/api/v2/machines/juice_press.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/juice_press.json",
   "unlock_level": 84,
   "time_to_make": 150,
   "sell_price": 104.0,
@@ -12,14 +12,14 @@
       "name": "Grapes",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/crops/grapes.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/grapes.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/grape_juice.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/grape_juice.png",
-    "html_details": "/details/details_grape_juice.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/grape_juice.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/grape_juice.png",
+    "html_details": "/hay_day_ecosystem/details/details_grape_juice.html"
   }
 }

@@ -1,7 +1,7 @@
 {
   "id": "fresh_diffuser",
   "name": "Fresh Diffuser",
-  "produced_by": "/api/v2/machines/perfumerie.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/perfumerie.json",
   "unlock_level": 110,
   "time_to_make": 20,
   "sell_price": 349.0,
@@ -12,7 +12,7 @@
       "name": "Ginger Essential Oil",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/ginger_essential_oil.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/ginger_essential_oil.json"
       }
     },
     {
@@ -20,14 +20,14 @@
       "name": "Mint Essential Oil",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/mint_essential_oil.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/mint_essential_oil.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/fresh_diffuser.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/fresh_diffuser.png",
-    "html_details": "/details/details_fresh_diffuser.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/fresh_diffuser.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/fresh_diffuser.png",
+    "html_details": "/hay_day_ecosystem/details/details_fresh_diffuser.html"
   }
 }

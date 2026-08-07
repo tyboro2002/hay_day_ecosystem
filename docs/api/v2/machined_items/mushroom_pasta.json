@@ -1,7 +1,7 @@
 {
   "id": "mushroom_pasta",
   "name": "Mushroom Pasta",
-  "produced_by": "/api/v2/machines/pasta_kitchen.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/pasta_kitchen.json",
   "unlock_level": 101,
   "time_to_make": 75,
   "sell_price": 280.0,
@@ -12,7 +12,7 @@
       "name": "Mushroom",
       "quantity": 5,
       "links": {
-        "detail": "/api/v2/crops/mushroom.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/mushroom.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Fresh Pasta",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/machined_items/fresh_pasta.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/fresh_pasta.json"
       }
     },
     {
@@ -28,14 +28,14 @@
       "name": "Goat Milk",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/animal_items/goat_milk.json"
+        "detail": "/hay_day_ecosystem/api/v2/animal_items/goat_milk.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/mushroom_pasta.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/mushroom_pasta.png",
-    "html_details": "/details/details_mushroom_pasta.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/mushroom_pasta.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/mushroom_pasta.png",
+    "html_details": "/hay_day_ecosystem/details/details_mushroom_pasta.html"
   }
 }

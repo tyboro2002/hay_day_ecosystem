@@ -1,7 +1,7 @@
 {
   "id": "quesadilla",
   "name": "Quesadilla",
-  "produced_by": "/api/v2/machines/taco_kitchen.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/taco_kitchen.json",
   "unlock_level": 82,
   "time_to_make": 60,
   "sell_price": 241.0,
@@ -12,7 +12,7 @@
       "name": "Chili Pepper",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/crops/chili_pepper.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/chili_pepper.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Cheese",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/cheese.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cheese.json"
       }
     },
     {
@@ -28,14 +28,14 @@
       "name": "Wheat",
       "quantity": 4,
       "links": {
-        "detail": "/api/v2/crops/wheat.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/wheat.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/quesadilla.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/quesadilla.png",
-    "html_details": "/details/details_quesadilla.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/quesadilla.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/quesadilla.png",
+    "html_details": "/hay_day_ecosystem/details/details_quesadilla.html"
   }
 }

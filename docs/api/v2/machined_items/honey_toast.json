@@ -1,7 +1,7 @@
 {
   "id": "honey_toast",
   "name": "Honey Toast",
-  "produced_by": "/api/v2/machines/sandwich_bar.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/sandwich_bar.json",
   "unlock_level": 69,
   "time_to_make": 60,
   "sell_price": 255.0,
@@ -12,7 +12,7 @@
       "name": "Bread",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/bread.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/bread.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Egg",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/animal_items/egg.json"
+        "detail": "/hay_day_ecosystem/api/v2/animal_items/egg.json"
       }
     },
     {
@@ -28,7 +28,7 @@
       "name": "Milk",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/animal_items/milk.json"
+        "detail": "/hay_day_ecosystem/api/v2/animal_items/milk.json"
       }
     },
     {
@@ -36,14 +36,14 @@
       "name": "Honey",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/honey.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/honey.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/honey_toast.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/honey_toast.png",
-    "html_details": "/details/details_honey_toast.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/honey_toast.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/honey_toast.png",
+    "html_details": "/hay_day_ecosystem/details/details_honey_toast.html"
   }
 }

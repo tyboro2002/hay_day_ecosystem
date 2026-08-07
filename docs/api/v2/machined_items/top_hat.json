@@ -1,7 +1,7 @@
 {
   "id": "top_hat",
   "name": "Top Hat",
-  "produced_by": "/api/v2/machines/hat_maker.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/hat_maker.json",
   "unlock_level": 72,
   "time_to_make": 210,
   "sell_price": 619.0,
@@ -12,7 +12,7 @@
       "name": "Cotton Fabric",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/machined_items/cotton_fabric.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cotton_fabric.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Refined coal",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/refined_coal.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/refined_coal.json"
       }
     },
     {
@@ -28,14 +28,14 @@
       "name": "Duck Feather",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/duck_feather.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/duck_feather.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/top_hat.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/top_hat.png",
-    "html_details": "/details/details_top_hat.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/top_hat.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/top_hat.png",
+    "html_details": "/hay_day_ecosystem/details/details_top_hat.html"
   }
 }

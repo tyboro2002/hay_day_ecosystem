@@ -1,7 +1,7 @@
 {
   "id": "raspberry_muffin",
   "name": "Raspberry Muffin",
-  "produced_by": "/api/v2/machines/bakery.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/bakery.json",
   "unlock_level": 19,
   "time_to_make": 45,
   "sell_price": 140.4,
@@ -12,7 +12,7 @@
       "name": "Wheat",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/crops/wheat.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/wheat.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Egg",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/animal_items/egg.json"
+        "detail": "/hay_day_ecosystem/api/v2/animal_items/egg.json"
       }
     },
     {
@@ -28,14 +28,14 @@
       "name": "Raspberry",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/plants/raspberry.json"
+        "detail": "/hay_day_ecosystem/api/v2/plants/raspberry.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/raspberry_muffin.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/raspberry_muffin.png",
-    "html_details": "/details/details_raspberry_muffin.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/raspberry_muffin.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/raspberry_muffin.png",
+    "html_details": "/hay_day_ecosystem/details/details_raspberry_muffin.html"
   }
 }

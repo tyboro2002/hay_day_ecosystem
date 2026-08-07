@@ -1,7 +1,7 @@
 {
   "id": "buttered_popcorn",
   "name": "Buttered Popcorn",
-  "produced_by": "/api/v2/machines/popcorn_pot.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/popcorn_pot.json",
   "unlock_level": 16,
   "time_to_make": 60,
   "sell_price": 126.0,
@@ -12,7 +12,7 @@
       "name": "Corn",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/crops/corn.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/corn.json"
       }
     },
     {
@@ -20,14 +20,14 @@
       "name": "Butter",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/butter.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/butter.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/buttered_popcorn.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/buttered_popcorn.png",
-    "html_details": "/details/details_buttered_popcorn.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/buttered_popcorn.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/buttered_popcorn.png",
+    "html_details": "/hay_day_ecosystem/details/details_buttered_popcorn.html"
   }
 }

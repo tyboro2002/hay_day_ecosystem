@@ -1,16 +1,16 @@
 {
   "id": "peony",
   "name": "Peony",
-  "planted_on": "/api/v2/fields/fields.json",
+  "planted_on": "/hay_day_ecosystem/api/v2/fields/fields.json",
   "unlock_level": 82,
   "time_to_make": 240,
   "sell_price": 36.0,
   "xp": 7,
   "yield_multiplier": 2,
   "links": {
-    "self": "/api/v2/crops/peony.json",
-    "collection": "/api/v2/crops/index.json",
-    "image": "/assets/items/peony.png",
-    "html_details": "/details/details_peony.html"
+    "self": "/hay_day_ecosystem/api/v2/crops/peony.json",
+    "collection": "/hay_day_ecosystem/api/v2/crops/index.json",
+    "image": "/hay_day_ecosystem/assets/items/peony.png",
+    "html_details": "/hay_day_ecosystem/details/details_peony.html"
   }
 }

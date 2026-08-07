@@ -1,16 +1,16 @@
 {
   "id": "clay",
   "name": "Clay",
-  "planted_on": "/api/v2/fields/fields.json",
+  "planted_on": "/hay_day_ecosystem/api/v2/fields/fields.json",
   "unlock_level": 94,
   "time_to_make": 110,
   "sell_price": 18.0,
   "xp": 5,
   "yield_multiplier": 2,
   "links": {
-    "self": "/api/v2/crops/clay.json",
-    "collection": "/api/v2/crops/index.json",
-    "image": "/assets/items/clay.png",
-    "html_details": "/details/details_clay.html"
+    "self": "/hay_day_ecosystem/api/v2/crops/clay.json",
+    "collection": "/hay_day_ecosystem/api/v2/crops/index.json",
+    "image": "/hay_day_ecosystem/assets/items/clay.png",
+    "html_details": "/hay_day_ecosystem/details/details_clay.html"
   }
 }

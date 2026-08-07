@@ -1,7 +1,7 @@
 {
   "id": "butter",
   "name": "Butter",
-  "produced_by": "/api/v2/machines/dairy.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/dairy.json",
   "unlock_level": 9,
   "time_to_make": 30,
   "sell_price": 82.8,
@@ -12,14 +12,14 @@
       "name": "Milk",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/animal_items/milk.json"
+        "detail": "/hay_day_ecosystem/api/v2/animal_items/milk.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/butter.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/butter.png",
-    "html_details": "/details/details_butter.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/butter.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/butter.png",
+    "html_details": "/hay_day_ecosystem/details/details_butter.html"
   }
 }

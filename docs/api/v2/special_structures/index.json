@@ -5,21 +5,21 @@
       "id": "mine",
       "name": "Mine",
       "links": {
-        "detail": "/api/v2/special_structures/mine.json",
-        "image": "/assets/special_structures/mine.png"
+        "detail": "/hay_day_ecosystem/api/v2/special_structures/mine.json",
+        "image": "/hay_day_ecosystem/assets/special_structures/mine.png"
       }
     },
     {
       "id": "fishing_lake",
       "name": "Fishing Lake",
       "links": {
-        "detail": "/api/v2/special_structures/fishing_lake.json",
-        "image": "/assets/special_structures/fishing_lake.png"
+        "detail": "/hay_day_ecosystem/api/v2/special_structures/fishing_lake.json",
+        "image": "/hay_day_ecosystem/assets/special_structures/fishing_lake.png"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/special_structures/index.json",
-    "parent": "/api/v2/index.json"
+    "self": "/hay_day_ecosystem/api/v2/special_structures/index.json",
+    "parent": "/hay_day_ecosystem/api/v2/index.json"
   }
 }

@@ -1,7 +1,7 @@
 {
   "id": "spicy_pizza",
   "name": "Spicy pizza",
-  "produced_by": "/api/v2/machines/bakery.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/bakery.json",
   "unlock_level": 37,
   "time_to_make": 15,
   "sell_price": 226.8,
@@ -12,7 +12,7 @@
       "name": "Wheat",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/crops/wheat.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/wheat.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Tomato",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/crops/tomato.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/tomato.json"
       }
     },
     {
@@ -28,7 +28,7 @@
       "name": "Cheese",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/cheese.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cheese.json"
       }
     },
     {
@@ -36,14 +36,14 @@
       "name": "Chili Pepper",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/crops/chili_pepper.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/chili_pepper.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/spicy_pizza.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/spicy_pizza.png",
-    "html_details": "/details/details_spicy_pizza.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/spicy_pizza.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/spicy_pizza.png",
+    "html_details": "/hay_day_ecosystem/details/details_spicy_pizza.html"
   }
 }

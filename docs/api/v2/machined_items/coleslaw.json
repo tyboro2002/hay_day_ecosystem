@@ -1,7 +1,7 @@
 {
   "id": "coleslaw",
   "name": "Coleslaw",
-  "produced_by": "/api/v2/machines/salad_bar.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/salad_bar.json",
   "unlock_level": 75,
   "time_to_make": 75,
   "sell_price": 468.0,
@@ -12,7 +12,7 @@
       "name": "Cabbage",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/crops/cabbage.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/cabbage.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Carrot",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/crops/carrot.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/carrot.json"
       }
     },
     {
@@ -28,14 +28,14 @@
       "name": "Mayonnaise",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/mayonnaise.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/mayonnaise.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/coleslaw.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/coleslaw.png",
-    "html_details": "/details/details_coleslaw.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/coleslaw.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/coleslaw.png",
+    "html_details": "/hay_day_ecosystem/details/details_coleslaw.html"
   }
 }

@@ -1,7 +1,7 @@
 {
   "id": "peanut_butter_and_jelly_sandwich",
   "name": "Peanut Butter and Jelly Sandwich",
-  "produced_by": "/api/v2/machines/sandwich_bar.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/sandwich_bar.json",
   "unlock_level": 71,
   "time_to_make": 25,
   "sell_price": 601.0,
@@ -12,7 +12,7 @@
       "name": "Bread",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/machined_items/bread.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/bread.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Raspberry Jam",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/raspberry_jam.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/raspberry_jam.json"
       }
     },
     {
@@ -28,14 +28,14 @@
       "name": "Peanuts",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/animal_items/peanuts.json"
+        "detail": "/hay_day_ecosystem/api/v2/animal_items/peanuts.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/peanut_butter_and_jelly_sandwich.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/peanut_butter_and_jelly_sandwich.png",
-    "html_details": "/details/details_peanut_butter_and_jelly_sandwich.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/peanut_butter_and_jelly_sandwich.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/peanut_butter_and_jelly_sandwich.png",
+    "html_details": "/hay_day_ecosystem/details/details_peanut_butter_and_jelly_sandwich.html"
   }
 }

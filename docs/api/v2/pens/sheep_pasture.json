@@ -1,12 +1,12 @@
 {
   "id": "sheep_pasture",
   "name": "Sheep Pasture",
-  "houses_animal": "/api/v2/animals/sheep.json",
+  "houses_animal": "/hay_day_ecosystem/api/v2/animals/sheep.json",
   "produces": [
     {
       "id": "wool",
       "name": "Wool",
-      "link": "/api/v2/animal_items/wool.json"
+      "link": "/hay_day_ecosystem/api/v2/animal_items/wool.json"
     }
   ],
   "max_capacity_per_pen": 5,
@@ -30,9 +30,9 @@
     300
   ],
   "links": {
-    "self": "/api/v2/pens/sheep_pasture.json",
-    "collection": "/api/v2/pens/index.json",
-    "image": "/assets/pens/sheep_pasture.png",
-    "html_details": "/details/details_sheep_pasture.html"
+    "self": "/hay_day_ecosystem/api/v2/pens/sheep_pasture.json",
+    "collection": "/hay_day_ecosystem/api/v2/pens/index.json",
+    "image": "/hay_day_ecosystem/assets/pens/sheep_pasture.png",
+    "html_details": "/hay_day_ecosystem/details/details_sheep_pasture.html"
   }
 }

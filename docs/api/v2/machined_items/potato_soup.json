@@ -1,7 +1,7 @@
 {
   "id": "potato_soup",
   "name": "Potato Soup",
-  "produced_by": "/api/v2/machines/soup_kitchen.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/soup_kitchen.json",
   "unlock_level": 78,
   "time_to_make": 150,
   "sell_price": 255.0,
@@ -12,7 +12,7 @@
       "name": "Potato",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/crops/potato.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/potato.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Onion",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/crops/onion.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/onion.json"
       }
     },
     {
@@ -28,14 +28,14 @@
       "name": "Milk",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/animal_items/milk.json"
+        "detail": "/hay_day_ecosystem/api/v2/animal_items/milk.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/potato_soup.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/potato_soup.png",
-    "html_details": "/details/details_potato_soup.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/potato_soup.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/potato_soup.png",
+    "html_details": "/hay_day_ecosystem/details/details_potato_soup.html"
   }
 }

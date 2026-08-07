@@ -1,7 +1,7 @@
 {
   "id": "sun_hat",
   "name": "Sun Hat",
-  "produced_by": "/api/v2/machines/hat_maker.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/hat_maker.json",
   "unlock_level": 74,
   "time_to_make": 150,
   "sell_price": 558.0,
@@ -12,7 +12,7 @@
       "name": "Wool",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/animal_items/wool.json"
+        "detail": "/hay_day_ecosystem/api/v2/animal_items/wool.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Indigo",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/crops/indigo.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/indigo.json"
       }
     },
     {
@@ -28,7 +28,7 @@
       "name": "Duck Feather",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/machined_items/duck_feather.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/duck_feather.json"
       }
     },
     {
@@ -36,14 +36,14 @@
       "name": "Raspberry",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/plants/raspberry.json"
+        "detail": "/hay_day_ecosystem/api/v2/plants/raspberry.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/sun_hat.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/sun_hat.png",
-    "html_details": "/details/details_sun_hat.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/sun_hat.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/sun_hat.png",
+    "html_details": "/hay_day_ecosystem/details/details_sun_hat.html"
   }
 }

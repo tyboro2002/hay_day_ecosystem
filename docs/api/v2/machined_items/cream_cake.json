@@ -1,7 +1,7 @@
 {
   "id": "cream_cake",
   "name": "Cream Cake",
-  "produced_by": "/api/v2/machines/cake_oven.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/cake_oven.json",
   "unlock_level": 23,
   "time_to_make": 180,
   "sell_price": 219.6,
@@ -12,7 +12,7 @@
       "name": "Wheat",
       "quantity": 5,
       "links": {
-        "detail": "/api/v2/crops/wheat.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/wheat.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Cream",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/cream.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cream.json"
       }
     },
     {
@@ -28,14 +28,14 @@
       "name": "White Sugar",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/white_sugar.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/white_sugar.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/cream_cake.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/cream_cake.png",
-    "html_details": "/details/details_cream_cake.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/cream_cake.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/cream_cake.png",
+    "html_details": "/hay_day_ecosystem/details/details_cream_cake.html"
   }
 }

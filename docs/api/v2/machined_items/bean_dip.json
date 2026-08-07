@@ -1,7 +1,7 @@
 {
   "id": "bean_dip",
   "name": "Bean Dip",
-  "produced_by": "/api/v2/machines/sauce_maker.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/sauce_maker.json",
   "unlock_level": 54,
   "time_to_make": 40,
   "sell_price": 453.0,
@@ -12,7 +12,7 @@
       "name": "Black Bean",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/crops/black_bean.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/black_bean.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Tomato",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/crops/tomato.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/tomato.json"
       }
     },
     {
@@ -28,14 +28,14 @@
       "name": "Chili Pepper",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/crops/chili_pepper.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/chili_pepper.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/bean_dip.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/bean_dip.png",
-    "html_details": "/details/details_bean_dip.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/bean_dip.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/bean_dip.png",
+    "html_details": "/hay_day_ecosystem/details/details_bean_dip.html"
   }
 }

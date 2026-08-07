@@ -1,7 +1,7 @@
 {
   "id": "pillow",
   "name": "Pillow",
-  "produced_by": "/api/v2/machines/sewing_machine.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/sewing_machine.json",
   "unlock_level": 51,
   "time_to_make": 180,
   "sell_price": 676.0,
@@ -12,7 +12,7 @@
       "name": "Cotton Fabric",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/machined_items/cotton_fabric.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cotton_fabric.json"
       }
     },
     {
@@ -20,14 +20,14 @@
       "name": "Duck Feather",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/machined_items/duck_feather.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/duck_feather.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/pillow.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/pillow.png",
-    "html_details": "/details/details_pillow.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/pillow.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/pillow.png",
+    "html_details": "/hay_day_ecosystem/details/details_pillow.html"
   }
 }

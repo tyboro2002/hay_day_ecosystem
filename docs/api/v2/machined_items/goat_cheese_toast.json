@@ -1,7 +1,7 @@
 {
   "id": "goat_cheese_toast",
   "name": "Goat Cheese Toast",
-  "produced_by": "/api/v2/machines/sandwich_bar.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/sandwich_bar.json",
   "unlock_level": 92,
   "time_to_make": 50,
   "sell_price": 302.0,
@@ -12,7 +12,7 @@
       "name": "Grapes",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/crops/grapes.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/grapes.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Goat Cheese",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/goat_cheese.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/goat_cheese.json"
       }
     },
     {
@@ -28,14 +28,14 @@
       "name": "Bread",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/bread.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/bread.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/goat_cheese_toast.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/goat_cheese_toast.png",
-    "html_details": "/details/details_goat_cheese_toast.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/goat_cheese_toast.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/goat_cheese_toast.png",
+    "html_details": "/hay_day_ecosystem/details/details_goat_cheese_toast.html"
   }
 }

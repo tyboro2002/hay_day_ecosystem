@@ -1,7 +1,7 @@
 {
   "id": "crunchy_donut",
   "name": "Crunchy Donut",
-  "produced_by": "/api/v2/machines/donut_maker.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/donut_maker.json",
   "unlock_level": 82,
   "time_to_make": 30,
   "sell_price": 594.0,
@@ -12,7 +12,7 @@
       "name": "Plain Donut",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/plain_donut.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/plain_donut.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Cacao",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/plants/cacao.json"
+        "detail": "/hay_day_ecosystem/api/v2/plants/cacao.json"
       }
     },
     {
@@ -28,14 +28,14 @@
       "name": "Peanuts",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/animal_items/peanuts.json"
+        "detail": "/hay_day_ecosystem/api/v2/animal_items/peanuts.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/crunchy_donut.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/crunchy_donut.png",
-    "html_details": "/details/details_crunchy_donut.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/crunchy_donut.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/crunchy_donut.png",
+    "html_details": "/hay_day_ecosystem/details/details_crunchy_donut.html"
   }
 }

@@ -1,7 +1,7 @@
 {
   "id": "gold_bar",
   "name": "Gold Bar",
-  "produced_by": "/api/v2/machines/smelter.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/smelter.json",
   "unlock_level": 25,
   "time_to_make": 720,
   "sell_price": 180.0,
@@ -12,14 +12,14 @@
       "name": "Gold Ore",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/special_items/gold_ore.json"
+        "detail": "/hay_day_ecosystem/api/v2/special_items/gold_ore.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/gold_bar.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/gold_bar.png",
-    "html_details": "/details/details_gold_bar.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/gold_bar.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/gold_bar.png",
+    "html_details": "/hay_day_ecosystem/details/details_gold_bar.html"
   }
 }

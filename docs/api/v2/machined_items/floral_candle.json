@@ -1,7 +1,7 @@
 {
   "id": "floral_candle",
   "name": "Floral Candle",
-  "produced_by": "/api/v2/machines/candle_maker.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/candle_maker.json",
   "unlock_level": 95,
   "time_to_make": 120,
   "sell_price": 442.0,
@@ -12,7 +12,7 @@
       "name": "Beeswax",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/beeswax.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/beeswax.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Peony",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/crops/peony.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/peony.json"
       }
     },
     {
@@ -28,7 +28,7 @@
       "name": "Sunflower",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/crops/sunflower.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/sunflower.json"
       }
     },
     {
@@ -36,14 +36,14 @@
       "name": "Indigo",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/crops/indigo.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/indigo.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/floral_candle.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/floral_candle.png",
-    "html_details": "/details/details_floral_candle.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/floral_candle.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/floral_candle.png",
+    "html_details": "/hay_day_ecosystem/details/details_floral_candle.html"
   }
 }

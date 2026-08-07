@@ -1,16 +1,16 @@
 {
   "id": "asparagus",
   "name": "Asparagus",
-  "planted_on": "/api/v2/fields/fields.json",
+  "planted_on": "/hay_day_ecosystem/api/v2/fields/fields.json",
   "unlock_level": 49,
   "time_to_make": 360,
   "sell_price": 43.2,
   "xp": 8,
   "yield_multiplier": 2,
   "links": {
-    "self": "/api/v2/crops/asparagus.json",
-    "collection": "/api/v2/crops/index.json",
-    "image": "/assets/items/asparagus.png",
-    "html_details": "/details/details_asparagus.html"
+    "self": "/hay_day_ecosystem/api/v2/crops/asparagus.json",
+    "collection": "/hay_day_ecosystem/api/v2/crops/index.json",
+    "image": "/hay_day_ecosystem/assets/items/asparagus.png",
+    "html_details": "/hay_day_ecosystem/details/details_asparagus.html"
   }
 }

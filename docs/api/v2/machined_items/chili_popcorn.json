@@ -1,7 +1,7 @@
 {
   "id": "chili_popcorn",
   "name": "Chili Popcorn",
-  "produced_by": "/api/v2/machines/popcorn_pot.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/popcorn_pot.json",
   "unlock_level": 25,
   "time_to_make": 120,
   "sell_price": 122.4,
@@ -12,7 +12,7 @@
       "name": "Corn",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/crops/corn.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/corn.json"
       }
     },
     {
@@ -20,14 +20,14 @@
       "name": "Chili Pepper",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/crops/chili_pepper.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/chili_pepper.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/chili_popcorn.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/chili_popcorn.png",
-    "html_details": "/details/details_chili_popcorn.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/chili_popcorn.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/chili_popcorn.png",
+    "html_details": "/hay_day_ecosystem/details/details_chili_popcorn.html"
   }
 }

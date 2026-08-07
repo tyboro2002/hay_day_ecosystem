@@ -1,7 +1,7 @@
 {
   "id": "fruit_sorbet",
   "name": "Fruit Sorbet",
-  "produced_by": "/api/v2/machines/ice_cream_maker.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/ice_cream_maker.json",
   "unlock_level": 106,
   "time_to_make": 60,
   "sell_price": 518.0,
@@ -12,7 +12,7 @@
       "name": "Guava",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/plants/guava.json"
+        "detail": "/hay_day_ecosystem/api/v2/plants/guava.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Passion Fruit",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/crops/passion_fruit.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/passion_fruit.json"
       }
     },
     {
@@ -28,7 +28,7 @@
       "name": "Mango",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/plants/mango.json"
+        "detail": "/hay_day_ecosystem/api/v2/plants/mango.json"
       }
     },
     {
@@ -36,14 +36,14 @@
       "name": "White Sugar",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/machined_items/white_sugar.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/white_sugar.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/fruit_sorbet.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/fruit_sorbet.png",
-    "html_details": "/details/details_fruit_sorbet.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/fruit_sorbet.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/fruit_sorbet.png",
+    "html_details": "/hay_day_ecosystem/details/details_fruit_sorbet.html"
   }
 }

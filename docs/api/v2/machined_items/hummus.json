@@ -1,7 +1,7 @@
 {
   "id": "hummus",
   "name": "Hummus",
-  "produced_by": "/api/v2/machines/sauce_maker.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/sauce_maker.json",
   "unlock_level": 95,
   "time_to_make": 30,
   "sell_price": 277.0,
@@ -12,7 +12,7 @@
       "name": "Chickpea",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/crops/chickpea.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/chickpea.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Lemon",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/plants/lemon.json"
+        "detail": "/hay_day_ecosystem/api/v2/plants/lemon.json"
       }
     },
     {
@@ -28,14 +28,14 @@
       "name": "Garlic",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/crops/garlic.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/garlic.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/hummus.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/hummus.png",
-    "html_details": "/details/details_hummus.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/hummus.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/hummus.png",
+    "html_details": "/hay_day_ecosystem/details/details_hummus.html"
   }
 }

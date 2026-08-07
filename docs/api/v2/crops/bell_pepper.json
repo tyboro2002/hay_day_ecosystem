@@ -1,16 +1,16 @@
 {
   "id": "bell_pepper",
   "name": "Bell Pepper",
-  "planted_on": "/api/v2/fields/fields.json",
+  "planted_on": "/hay_day_ecosystem/api/v2/fields/fields.json",
   "unlock_level": 74,
   "time_to_make": 270,
   "sell_price": 36.0,
   "xp": 7,
   "yield_multiplier": 2,
   "links": {
-    "self": "/api/v2/crops/bell_pepper.json",
-    "collection": "/api/v2/crops/index.json",
-    "image": "/assets/items/bell_pepper.png",
-    "html_details": "/details/details_bell_pepper.html"
+    "self": "/hay_day_ecosystem/api/v2/crops/bell_pepper.json",
+    "collection": "/hay_day_ecosystem/api/v2/crops/index.json",
+    "image": "/hay_day_ecosystem/assets/items/bell_pepper.png",
+    "html_details": "/hay_day_ecosystem/details/details_bell_pepper.html"
   }
 }

@@ -1,7 +1,7 @@
 {
   "id": "passion_fruit_juice",
   "name": "Passion Fruit Juice",
-  "produced_by": "/api/v2/machines/juice_press.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/juice_press.json",
   "unlock_level": 88,
   "time_to_make": 45,
   "sell_price": 64.0,
@@ -12,14 +12,14 @@
       "name": "Passion Fruit",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/crops/passion_fruit.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/passion_fruit.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/passion_fruit_juice.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/passion_fruit_juice.png",
-    "html_details": "/details/details_passion_fruit_juice.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/passion_fruit_juice.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/passion_fruit_juice.png",
+    "html_details": "/hay_day_ecosystem/details/details_passion_fruit_juice.html"
   }
 }

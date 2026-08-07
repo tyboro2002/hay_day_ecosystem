@@ -1,7 +1,7 @@
 {
   "id": "feta_salad",
   "name": "Feta Salad",
-  "produced_by": "/api/v2/machines/salad_bar.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/salad_bar.json",
   "unlock_level": 58,
   "time_to_make": 120,
   "sell_price": 745.0,
@@ -12,7 +12,7 @@
       "name": "Goat Cheese",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/machined_items/goat_cheese.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/goat_cheese.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Lettuce",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/crops/lettuce.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/lettuce.json"
       }
     },
     {
@@ -28,7 +28,7 @@
       "name": "Olive",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/plants/olive.json"
+        "detail": "/hay_day_ecosystem/api/v2/plants/olive.json"
       }
     },
     {
@@ -36,14 +36,14 @@
       "name": "Roasted Tomatoes",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/roasted_tomatoes.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/roasted_tomatoes.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/feta_salad.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/feta_salad.png",
-    "html_details": "/details/details_feta_salad.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/feta_salad.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/feta_salad.png",
+    "html_details": "/hay_day_ecosystem/details/details_feta_salad.html"
   }
 }

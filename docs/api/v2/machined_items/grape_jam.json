@@ -1,7 +1,7 @@
 {
   "id": "grape_jam",
   "name": "Grape Jam",
-  "produced_by": "/api/v2/machines/jam_maker.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/jam_maker.json",
   "unlock_level": 85,
   "time_to_make": 390,
   "sell_price": 162.0,
@@ -12,14 +12,14 @@
       "name": "Grapes",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/crops/grapes.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/grapes.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/grape_jam.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/grape_jam.png",
-    "html_details": "/details/details_grape_jam.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/grape_jam.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/grape_jam.png",
+    "html_details": "/hay_day_ecosystem/details/details_grape_jam.html"
   }
 }

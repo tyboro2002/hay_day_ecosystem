@@ -1,7 +1,7 @@
 {
   "id": "blueberry_waffles",
   "name": "Blueberry Waffles",
-  "produced_by": "/api/v2/machines/waffle_maker.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/waffle_maker.json",
   "unlock_level": 118,
   "time_to_make": 42,
   "sell_price": 669.0,
@@ -12,7 +12,7 @@
       "name": "Plain Waffles",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/plain_waffles.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/plain_waffles.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Cacao",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/plants/cacao.json"
+        "detail": "/hay_day_ecosystem/api/v2/plants/cacao.json"
       }
     },
     {
@@ -28,7 +28,7 @@
       "name": "Milk",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/animal_items/milk.json"
+        "detail": "/hay_day_ecosystem/api/v2/animal_items/milk.json"
       }
     },
     {
@@ -36,14 +36,14 @@
       "name": "Blueberry",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/plants/blueberry.json"
+        "detail": "/hay_day_ecosystem/api/v2/plants/blueberry.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/blueberry_waffles.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/blueberry_waffles.png",
-    "html_details": "/details/details_blueberry_waffles.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/blueberry_waffles.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/blueberry_waffles.png",
+    "html_details": "/hay_day_ecosystem/details/details_blueberry_waffles.html"
   }
 }

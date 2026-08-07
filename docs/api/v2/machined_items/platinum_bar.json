@@ -1,7 +1,7 @@
 {
   "id": "platinum_bar",
   "name": "Platinum Bar",
-  "produced_by": "/api/v2/machines/smelter.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/smelter.json",
   "unlock_level": 25,
   "time_to_make": 960,
   "sell_price": 205.2,
@@ -12,14 +12,14 @@
       "name": "Platinum Ore",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/special_items/platinum_ore.json"
+        "detail": "/hay_day_ecosystem/api/v2/special_items/platinum_ore.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/platinum_bar.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/platinum_bar.png",
-    "html_details": "/details/details_platinum_bar.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/platinum_bar.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/platinum_bar.png",
+    "html_details": "/hay_day_ecosystem/details/details_platinum_bar.html"
   }
 }

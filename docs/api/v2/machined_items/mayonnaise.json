@@ -1,7 +1,7 @@
 {
   "id": "mayonnaise",
   "name": "Mayonnaise",
-  "produced_by": "/api/v2/machines/sauce_maker.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/sauce_maker.json",
   "unlock_level": 62,
   "time_to_make": 15,
   "sell_price": 367.0,
@@ -12,7 +12,7 @@
       "name": "Egg",
       "quantity": 4,
       "links": {
-        "detail": "/api/v2/animal_items/egg.json"
+        "detail": "/hay_day_ecosystem/api/v2/animal_items/egg.json"
       }
     },
     {
@@ -20,14 +20,14 @@
       "name": "Olive Oil",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/olive_oil.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/olive_oil.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/mayonnaise.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/mayonnaise.png",
-    "html_details": "/details/details_mayonnaise.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/mayonnaise.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/mayonnaise.png",
+    "html_details": "/hay_day_ecosystem/details/details_mayonnaise.html"
   }
 }

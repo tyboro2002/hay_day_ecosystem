@@ -1,7 +1,7 @@
 {
   "id": "sesame_brittle",
   "name": "Sesame Brittle",
-  "produced_by": "/api/v2/machines/candy_machine.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/candy_machine.json",
   "unlock_level": 78,
   "time_to_make": 60,
   "sell_price": 270.0,
@@ -12,7 +12,7 @@
       "name": "Sesame",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/crops/sesame.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/sesame.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Garlic",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/crops/garlic.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/garlic.json"
       }
     },
     {
@@ -28,14 +28,14 @@
       "name": "Honey",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/honey.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/honey.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/sesame_brittle.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/sesame_brittle.png",
-    "html_details": "/details/details_sesame_brittle.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/sesame_brittle.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/sesame_brittle.png",
+    "html_details": "/hay_day_ecosystem/details/details_sesame_brittle.html"
   }
 }

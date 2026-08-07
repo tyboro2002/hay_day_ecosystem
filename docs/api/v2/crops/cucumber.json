@@ -1,16 +1,16 @@
 {
   "id": "cucumber",
   "name": "Cucumber",
-  "planted_on": "/api/v2/fields/fields.json",
+  "planted_on": "/hay_day_ecosystem/api/v2/fields/fields.json",
   "unlock_level": 70,
   "time_to_make": 35,
   "sell_price": 14.0,
   "xp": 3,
   "yield_multiplier": 2,
   "links": {
-    "self": "/api/v2/crops/cucumber.json",
-    "collection": "/api/v2/crops/index.json",
-    "image": "/assets/items/cucumber.png",
-    "html_details": "/details/details_cucumber.html"
+    "self": "/hay_day_ecosystem/api/v2/crops/cucumber.json",
+    "collection": "/hay_day_ecosystem/api/v2/crops/index.json",
+    "image": "/hay_day_ecosystem/assets/items/cucumber.png",
+    "html_details": "/hay_day_ecosystem/details/details_cucumber.html"
   }
 }

@@ -1,7 +1,7 @@
 {
   "id": "blue_sweater",
   "name": "Blue Sweater",
-  "produced_by": "/api/v2/machines/loom.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/loom.json",
   "unlock_level": 20,
   "time_to_make": 180,
   "sell_price": 208.8,
@@ -12,7 +12,7 @@
       "name": "Wool",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/animal_items/wool.json"
+        "detail": "/hay_day_ecosystem/api/v2/animal_items/wool.json"
       }
     },
     {
@@ -20,14 +20,14 @@
       "name": "Indigo",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/crops/indigo.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/indigo.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/blue_sweater.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/blue_sweater.png",
-    "html_details": "/details/details_blue_sweater.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/blue_sweater.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/blue_sweater.png",
+    "html_details": "/hay_day_ecosystem/details/details_blue_sweater.html"
   }
 }

@@ -2,13 +2,13 @@
   "id": "pig",
   "name": "Pig",
   "unlock_level": 10,
-  "housed_in": "/api/v2/pens/pig_pen.json",
-  "produces": "/api/v2/animal_items/bacon.json",
-  "required_food": "/api/v2/animal_feeds/pig_feed.json",
+  "housed_in": "/hay_day_ecosystem/api/v2/pens/pig_pen.json",
+  "produces": "/hay_day_ecosystem/api/v2/animal_items/bacon.json",
+  "required_food": "/hay_day_ecosystem/api/v2/animal_feeds/pig_feed.json",
   "links": {
-    "self": "/api/v2/animals/pig.json",
-    "collection": "/api/v2/animals/index.json",
-    "image": "/assets/animals/pig.png",
-    "html_details": "/details/details_pig.html"
+    "self": "/hay_day_ecosystem/api/v2/animals/pig.json",
+    "collection": "/hay_day_ecosystem/api/v2/animals/index.json",
+    "image": "/hay_day_ecosystem/assets/animals/pig.png",
+    "html_details": "/hay_day_ecosystem/details/details_pig.html"
   }
 }

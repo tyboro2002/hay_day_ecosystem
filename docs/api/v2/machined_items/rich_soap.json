@@ -1,7 +1,7 @@
 {
   "id": "rich_soap",
   "name": "Rich Soap",
-  "produced_by": "/api/v2/machines/bath_kiosk.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/bath_kiosk.json",
   "unlock_level": 121,
   "time_to_make": 70,
   "sell_price": 266.0,
@@ -12,7 +12,7 @@
       "name": "Oats",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/crops/oats.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/oats.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Pomegranate",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/plants/pomegranate.json"
+        "detail": "/hay_day_ecosystem/api/v2/plants/pomegranate.json"
       }
     },
     {
@@ -28,14 +28,14 @@
       "name": "Coconut",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/plants/coconut.json"
+        "detail": "/hay_day_ecosystem/api/v2/plants/coconut.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/rich_soap.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/rich_soap.png",
-    "html_details": "/details/details_rich_soap.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/rich_soap.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/rich_soap.png",
+    "html_details": "/hay_day_ecosystem/details/details_rich_soap.html"
   }
 }

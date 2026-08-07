@@ -1,7 +1,7 @@
 {
   "id": "black_sesame_smoothie",
   "name": "Black Sesame Smoothie",
-  "produced_by": "/api/v2/machines/smoothie_mixer.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/smoothie_mixer.json",
   "unlock_level": 93,
   "time_to_make": 45,
   "sell_price": 313.0,
@@ -12,7 +12,7 @@
       "name": "Sesame",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/crops/sesame.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/sesame.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Banana",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/plants/banana.json"
+        "detail": "/hay_day_ecosystem/api/v2/plants/banana.json"
       }
     },
     {
@@ -28,14 +28,14 @@
       "name": "Goat Milk",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/animal_items/goat_milk.json"
+        "detail": "/hay_day_ecosystem/api/v2/animal_items/goat_milk.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/black_sesame_smoothie.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/black_sesame_smoothie.png",
-    "html_details": "/details/details_black_sesame_smoothie.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/black_sesame_smoothie.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/black_sesame_smoothie.png",
+    "html_details": "/hay_day_ecosystem/details/details_black_sesame_smoothie.html"
   }
 }

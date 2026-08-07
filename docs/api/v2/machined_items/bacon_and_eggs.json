@@ -1,7 +1,7 @@
 {
   "id": "bacon_and_eggs",
   "name": "Bacon And Eggs",
-  "produced_by": "/api/v2/machines/bbq_grill.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/bbq_grill.json",
   "unlock_level": 11,
   "time_to_make": 60,
   "sell_price": 201.6,
@@ -12,7 +12,7 @@
       "name": "Egg",
       "quantity": 4,
       "links": {
-        "detail": "/api/v2/animal_items/egg.json"
+        "detail": "/hay_day_ecosystem/api/v2/animal_items/egg.json"
       }
     },
     {
@@ -20,14 +20,14 @@
       "name": "Bacon",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/animal_items/bacon.json"
+        "detail": "/hay_day_ecosystem/api/v2/animal_items/bacon.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/bacon_and_eggs.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/bacon_and_eggs.png",
-    "html_details": "/details/details_bacon_and_eggs.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/bacon_and_eggs.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/bacon_and_eggs.png",
+    "html_details": "/hay_day_ecosystem/details/details_bacon_and_eggs.html"
   }
 }

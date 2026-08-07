@@ -1,7 +1,7 @@
 {
   "id": "cucumber_sandwich",
   "name": "Cucumber Sandwich",
-  "produced_by": "/api/v2/machines/sandwich_bar.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/sandwich_bar.json",
   "unlock_level": 79,
   "time_to_make": 35,
   "sell_price": 464.0,
@@ -12,7 +12,7 @@
       "name": "Cucumber",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/crops/cucumber.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/cucumber.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Bread",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/machined_items/bread.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/bread.json"
       }
     },
     {
@@ -28,14 +28,14 @@
       "name": "Mayonnaise",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/mayonnaise.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/mayonnaise.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/cucumber_sandwich.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/cucumber_sandwich.png",
-    "html_details": "/details/details_cucumber_sandwich.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/cucumber_sandwich.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/cucumber_sandwich.png",
+    "html_details": "/hay_day_ecosystem/details/details_cucumber_sandwich.html"
   }
 }

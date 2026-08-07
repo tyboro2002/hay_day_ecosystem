@@ -1,7 +1,7 @@
 {
   "id": "cocoa_smoothie",
   "name": "Cocoa Smoothie",
-  "produced_by": "/api/v2/machines/smoothie_mixer.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/smoothie_mixer.json",
   "unlock_level": 100,
   "time_to_make": 40,
   "sell_price": 511.0,
@@ -12,7 +12,7 @@
       "name": "Cacao",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/plants/cacao.json"
+        "detail": "/hay_day_ecosystem/api/v2/plants/cacao.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Banana",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/plants/banana.json"
+        "detail": "/hay_day_ecosystem/api/v2/plants/banana.json"
       }
     },
     {
@@ -28,14 +28,14 @@
       "name": "Milk",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/animal_items/milk.json"
+        "detail": "/hay_day_ecosystem/api/v2/animal_items/milk.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/cocoa_smoothie.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/cocoa_smoothie.png",
-    "html_details": "/details/details_cocoa_smoothie.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/cocoa_smoothie.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/cocoa_smoothie.png",
+    "html_details": "/hay_day_ecosystem/details/details_cocoa_smoothie.html"
   }
 }

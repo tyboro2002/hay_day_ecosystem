@@ -1,7 +1,7 @@
 {
   "id": "cherry_popsicle",
   "name": "Cherry Popsicle",
-  "produced_by": "/api/v2/machines/ice_cream_maker.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/ice_cream_maker.json",
   "unlock_level": 33,
   "time_to_make": 180,
   "sell_price": 352.8,
@@ -12,7 +12,7 @@
       "name": "Cherry Juice",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/cherry_juice.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cherry_juice.json"
       }
     },
     {
@@ -20,14 +20,14 @@
       "name": "Syrup",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/syrup.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/syrup.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/cherry_popsicle.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/cherry_popsicle.png",
-    "html_details": "/details/details_cherry_popsicle.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/cherry_popsicle.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/cherry_popsicle.png",
+    "html_details": "/hay_day_ecosystem/details/details_cherry_popsicle.html"
   }
 }

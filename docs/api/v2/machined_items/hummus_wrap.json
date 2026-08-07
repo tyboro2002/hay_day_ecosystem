@@ -1,7 +1,7 @@
 {
   "id": "hummus_wrap",
   "name": "Hummus Wrap",
-  "produced_by": "/api/v2/machines/sandwich_bar.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/sandwich_bar.json",
   "unlock_level": 109,
   "time_to_make": 30,
   "sell_price": 374.0,
@@ -12,7 +12,7 @@
       "name": "Hummus",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/hummus.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/hummus.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Bread",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/machined_items/bread.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/bread.json"
       }
     },
     {
@@ -28,14 +28,14 @@
       "name": "Lettuce",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/crops/lettuce.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/lettuce.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/hummus_wrap.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/hummus_wrap.png",
-    "html_details": "/details/details_hummus_wrap.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/hummus_wrap.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/hummus_wrap.png",
+    "html_details": "/hay_day_ecosystem/details/details_hummus_wrap.html"
   }
 }

@@ -1,7 +1,7 @@
 {
   "id": "cucumber_smoothie",
   "name": "Cucumber Smoothie",
-  "produced_by": "/api/v2/machines/smoothie_mixer.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/smoothie_mixer.json",
   "unlock_level": 70,
   "time_to_make": 40,
   "sell_price": 266.0,
@@ -12,7 +12,7 @@
       "name": "Cucumber",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/crops/cucumber.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/cucumber.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Honey",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/honey.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/honey.json"
       }
     },
     {
@@ -28,14 +28,14 @@
       "name": "Pineapple",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/crops/pineapple.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/pineapple.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/cucumber_smoothie.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/cucumber_smoothie.png",
-    "html_details": "/details/details_cucumber_smoothie.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/cucumber_smoothie.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/cucumber_smoothie.png",
+    "html_details": "/hay_day_ecosystem/details/details_cucumber_smoothie.html"
   }
 }

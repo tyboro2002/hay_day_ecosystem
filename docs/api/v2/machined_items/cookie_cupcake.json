@@ -1,7 +1,7 @@
 {
   "id": "cookie_cupcake",
   "name": "Cookie Cupcake",
-  "produced_by": "/api/v2/machines/cupcake_maker.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/cupcake_maker.json",
   "unlock_level": 114,
   "time_to_make": 120,
   "sell_price": 712.0,
@@ -12,7 +12,7 @@
       "name": "Plain Cupcake",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/plain_cupcake.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/plain_cupcake.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Cream",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/machined_items/cream.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cream.json"
       }
     },
     {
@@ -28,7 +28,7 @@
       "name": "Cookie",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/machined_items/cookie.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cookie.json"
       }
     },
     {
@@ -36,14 +36,14 @@
       "name": "Cacao",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/plants/cacao.json"
+        "detail": "/hay_day_ecosystem/api/v2/plants/cacao.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/cookie_cupcake.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/cookie_cupcake.png",
-    "html_details": "/details/details_cookie_cupcake.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/cookie_cupcake.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/cookie_cupcake.png",
+    "html_details": "/hay_day_ecosystem/details/details_cookie_cupcake.html"
   }
 }

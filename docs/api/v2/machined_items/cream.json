@@ -1,7 +1,7 @@
 {
   "id": "cream",
   "name": "Cream",
-  "produced_by": "/api/v2/machines/dairy.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/dairy.json",
   "unlock_level": 6,
   "time_to_make": 20,
   "sell_price": 50.4,
@@ -12,14 +12,14 @@
       "name": "Milk",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/animal_items/milk.json"
+        "detail": "/hay_day_ecosystem/api/v2/animal_items/milk.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/cream.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/cream.png",
-    "html_details": "/details/details_cream.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/cream.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/cream.png",
+    "html_details": "/hay_day_ecosystem/details/details_cream.html"
   }
 }

@@ -40,7 +40,7 @@
       "unlock_level": 56,
       "time_to_make_minutes": 60,
       "links": {
-        "detail": "/api/v2/machined_items/sushi_roll.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/sushi_roll.json"
       }
     },
     {
@@ -49,7 +49,7 @@
       "unlock_level": 59,
       "time_to_make_minutes": 60,
       "links": {
-        "detail": "/api/v2/machined_items/lobster_sushi.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/lobster_sushi.json"
       }
     },
     {
@@ -58,7 +58,7 @@
       "unlock_level": 63,
       "time_to_make_minutes": 120,
       "links": {
-        "detail": "/api/v2/machined_items/egg_sushi.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/egg_sushi.json"
       }
     },
     {
@@ -67,7 +67,7 @@
       "unlock_level": 76,
       "time_to_make_minutes": 90,
       "links": {
-        "detail": "/api/v2/machined_items/big_sushi_roll.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/big_sushi_roll.json"
       }
     },
     {
@@ -76,14 +76,14 @@
       "unlock_level": 110,
       "time_to_make_minutes": 45,
       "links": {
-        "detail": "/api/v2/machined_items/rice_ball.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/rice_ball.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machines/sushi_bar.json",
-    "collection": "/api/v2/machines/index.json",
-    "image": "/assets/machines/sushi_bar.png",
-    "html_details": "/details/details_sushi_bar.html"
+    "self": "/hay_day_ecosystem/api/v2/machines/sushi_bar.json",
+    "collection": "/hay_day_ecosystem/api/v2/machines/index.json",
+    "image": "/hay_day_ecosystem/assets/machines/sushi_bar.png",
+    "html_details": "/hay_day_ecosystem/details/details_sushi_bar.html"
   }
 }

@@ -1,16 +1,16 @@
 {
   "id": "chamomile",
   "name": "Chamomile",
-  "planted_on": "/api/v2/fields/fields.json",
+  "planted_on": "/hay_day_ecosystem/api/v2/fields/fields.json",
   "unlock_level": 45,
   "time_to_make": 20,
   "sell_price": 10.8,
   "xp": 2,
   "yield_multiplier": 2,
   "links": {
-    "self": "/api/v2/crops/chamomile.json",
-    "collection": "/api/v2/crops/index.json",
-    "image": "/assets/items/chamomile.png",
-    "html_details": "/details/details_chamomile.html"
+    "self": "/hay_day_ecosystem/api/v2/crops/chamomile.json",
+    "collection": "/hay_day_ecosystem/api/v2/crops/index.json",
+    "image": "/hay_day_ecosystem/assets/items/chamomile.png",
+    "html_details": "/hay_day_ecosystem/details/details_chamomile.html"
   }
 }

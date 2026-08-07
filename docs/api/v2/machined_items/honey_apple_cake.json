@@ -1,7 +1,7 @@
 {
   "id": "honey_apple_cake",
   "name": "Honey Apple Cake",
-  "produced_by": "/api/v2/machines/cake_oven.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/cake_oven.json",
   "unlock_level": 42,
   "time_to_make": 200,
   "sell_price": 482.4,
@@ -12,7 +12,7 @@
       "name": "Honey",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/machined_items/honey.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/honey.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Apple",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/plants/apple.json"
+        "detail": "/hay_day_ecosystem/api/v2/plants/apple.json"
       }
     },
     {
@@ -28,7 +28,7 @@
       "name": "Egg",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/animal_items/egg.json"
+        "detail": "/hay_day_ecosystem/api/v2/animal_items/egg.json"
       }
     },
     {
@@ -36,14 +36,14 @@
       "name": "Wheat",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/crops/wheat.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/wheat.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/honey_apple_cake.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/honey_apple_cake.png",
-    "html_details": "/details/details_honey_apple_cake.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/honey_apple_cake.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/honey_apple_cake.png",
+    "html_details": "/hay_day_ecosystem/details/details_honey_apple_cake.html"
   }
 }

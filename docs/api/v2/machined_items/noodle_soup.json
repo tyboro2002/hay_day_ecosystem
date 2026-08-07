@@ -1,7 +1,7 @@
 {
   "id": "noodle_soup",
   "name": "Noodle Soup",
-  "produced_by": "/api/v2/machines/soup_kitchen.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/soup_kitchen.json",
   "unlock_level": 73,
   "time_to_make": 120,
   "sell_price": 432.0,
@@ -12,7 +12,7 @@
       "name": "Carrot",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/crops/carrot.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/carrot.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Chili Pepper",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/crops/chili_pepper.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/chili_pepper.json"
       }
     },
     {
@@ -28,7 +28,7 @@
       "name": "Egg",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/animal_items/egg.json"
+        "detail": "/hay_day_ecosystem/api/v2/animal_items/egg.json"
       }
     },
     {
@@ -36,14 +36,14 @@
       "name": "Rice Noodles",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/machined_items/rice_noodles.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/rice_noodles.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/noodle_soup.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/noodle_soup.png",
-    "html_details": "/details/details_noodle_soup.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/noodle_soup.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/noodle_soup.png",
+    "html_details": "/hay_day_ecosystem/details/details_noodle_soup.html"
   }
 }

@@ -1,7 +1,7 @@
 {
   "id": "candy_bouquet",
   "name": "Candy Bouquet",
-  "produced_by": "/api/v2/machines/flower_shop.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/flower_shop.json",
   "unlock_level": 90,
   "time_to_make": 20,
   "sell_price": 554.0,
@@ -12,7 +12,7 @@
       "name": "Peony",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/crops/peony.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/peony.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Caramel Apple",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/caramel_apple.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/caramel_apple.json"
       }
     },
     {
@@ -28,14 +28,14 @@
       "name": "Toffee",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/toffee.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/toffee.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/candy_bouquet.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/candy_bouquet.png",
-    "html_details": "/details/details_candy_bouquet.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/candy_bouquet.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/candy_bouquet.png",
+    "html_details": "/hay_day_ecosystem/details/details_candy_bouquet.html"
   }
 }

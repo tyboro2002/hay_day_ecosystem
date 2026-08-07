@@ -1,7 +1,7 @@
 {
   "id": "rice_omelet",
   "name": "Rice Omelet",
-  "produced_by": "/api/v2/machines/omelet_station.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/omelet_station.json",
   "unlock_level": 83,
   "time_to_make": 120,
   "sell_price": 572.0,
@@ -12,7 +12,7 @@
       "name": "Egg",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/animal_items/egg.json"
+        "detail": "/hay_day_ecosystem/api/v2/animal_items/egg.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Rice",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/crops/rice.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/rice.json"
       }
     },
     {
@@ -28,14 +28,14 @@
       "name": "Tomato Sauce",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/machined_items/tomato_sauce.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/tomato_sauce.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/rice_omelet.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/rice_omelet.png",
-    "html_details": "/details/details_rice_omelet.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/rice_omelet.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/rice_omelet.png",
+    "html_details": "/hay_day_ecosystem/details/details_rice_omelet.html"
   }
 }

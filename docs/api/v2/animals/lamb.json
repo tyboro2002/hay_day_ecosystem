@@ -2,13 +2,13 @@
   "id": "lamb",
   "name": "Lamb",
   "unlock_level": 25,
-  "housed_in": "/api/v2/pens/lamb_pasture.json",
-  "produces": "/api/v2/animal_items/lamb_chop.json",
-  "required_food": "/api/v2/animal_feeds/lamb_feed.json",
+  "housed_in": "/hay_day_ecosystem/api/v2/pens/lamb_pasture.json",
+  "produces": "/hay_day_ecosystem/api/v2/animal_items/lamb_chop.json",
+  "required_food": "/hay_day_ecosystem/api/v2/animal_feeds/lamb_feed.json",
   "links": {
-    "self": "/api/v2/animals/lamb.json",
-    "collection": "/api/v2/animals/index.json",
-    "image": "/assets/animals/lamb.png",
-    "html_details": "/details/details_lamb.html"
+    "self": "/hay_day_ecosystem/api/v2/animals/lamb.json",
+    "collection": "/hay_day_ecosystem/api/v2/animals/index.json",
+    "image": "/hay_day_ecosystem/assets/animals/lamb.png",
+    "html_details": "/hay_day_ecosystem/details/details_lamb.html"
   }
 }

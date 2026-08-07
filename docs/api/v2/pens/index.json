@@ -5,8 +5,8 @@
       "id": "chicken_coop",
       "name": "Chicken Coop",
       "links": {
-        "detail": "/api/v2/pens/chicken_coop.json",
-        "image": "/assets/pens/chicken_coop.png"
+        "detail": "/hay_day_ecosystem/api/v2/pens/chicken_coop.json",
+        "image": "/hay_day_ecosystem/assets/pens/chicken_coop.png"
       },
       "costs": [
         5,
@@ -18,8 +18,8 @@
       "id": "cow_pasture",
       "name": "Cow Pasture",
       "links": {
-        "detail": "/api/v2/pens/cow_pasture.json",
-        "image": "/assets/pens/cow_pasture.png"
+        "detail": "/hay_day_ecosystem/api/v2/pens/cow_pasture.json",
+        "image": "/hay_day_ecosystem/assets/pens/cow_pasture.png"
       },
       "costs": [
         20,
@@ -31,8 +31,8 @@
       "id": "pig_pen",
       "name": "Pig Pen",
       "links": {
-        "detail": "/api/v2/pens/pig_pen.json",
-        "image": "/assets/pens/pig_pen.png"
+        "detail": "/hay_day_ecosystem/api/v2/pens/pig_pen.json",
+        "image": "/hay_day_ecosystem/assets/pens/pig_pen.png"
       },
       "costs": [
         150,
@@ -44,8 +44,8 @@
       "id": "sheep_pasture",
       "name": "Sheep Pasture",
       "links": {
-        "detail": "/api/v2/pens/sheep_pasture.json",
-        "image": "/assets/pens/sheep_pasture.png"
+        "detail": "/hay_day_ecosystem/api/v2/pens/sheep_pasture.json",
+        "image": "/hay_day_ecosystem/assets/pens/sheep_pasture.png"
       },
       "costs": [
         300,
@@ -57,8 +57,8 @@
       "id": "lamb_pasture",
       "name": "Lamb Pasture",
       "links": {
-        "detail": "/api/v2/pens/lamb_pasture.json",
-        "image": "/assets/pens/lamb_pasture.png"
+        "detail": "/hay_day_ecosystem/api/v2/pens/lamb_pasture.json",
+        "image": "/hay_day_ecosystem/assets/pens/lamb_pasture.png"
       },
       "costs": [
         500,
@@ -70,8 +70,8 @@
       "id": "goat_yard",
       "name": "Goat Yard",
       "links": {
-        "detail": "/api/v2/pens/goat_yard.json",
-        "image": "/assets/pens/goat_yard.png"
+        "detail": "/hay_day_ecosystem/api/v2/pens/goat_yard.json",
+        "image": "/hay_day_ecosystem/assets/pens/goat_yard.png"
       },
       "costs": [
         1000,
@@ -83,8 +83,8 @@
       "id": "beehive_tree",
       "name": "Beehive Tree",
       "links": {
-        "detail": "/api/v2/pens/beehive_tree.json",
-        "image": "/assets/pens/beehive_tree.png"
+        "detail": "/hay_day_ecosystem/api/v2/pens/beehive_tree.json",
+        "image": "/hay_day_ecosystem/assets/pens/beehive_tree.png"
       },
       "costs": [
         4000
@@ -94,8 +94,8 @@
       "id": "squirrel_house",
       "name": "Squirrel House",
       "links": {
-        "detail": "/api/v2/pens/squirrel_house.json",
-        "image": "/assets/pens/squirrel_house.png"
+        "detail": "/hay_day_ecosystem/api/v2/pens/squirrel_house.json",
+        "image": "/hay_day_ecosystem/assets/pens/squirrel_house.png"
       },
       "costs": [
         45000
@@ -103,7 +103,7 @@
     }
   ],
   "links": {
-    "self": "/api/v2/pens/index.json",
-    "parent": "/api/v2/index.json"
+    "self": "/hay_day_ecosystem/api/v2/pens/index.json",
+    "parent": "/hay_day_ecosystem/api/v2/index.json"
   }
 }

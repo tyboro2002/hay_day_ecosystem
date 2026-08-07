@@ -1,7 +1,7 @@
 {
   "id": "lemon_cake",
   "name": "Lemon Cake",
-  "produced_by": "/api/v2/machines/cake_oven.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/cake_oven.json",
   "unlock_level": 68,
   "time_to_make": 150,
   "sell_price": 896.0,
@@ -12,7 +12,7 @@
       "name": "Lemon Curd",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/machined_items/lemon_curd.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/lemon_curd.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Egg",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/animal_items/egg.json"
+        "detail": "/hay_day_ecosystem/api/v2/animal_items/egg.json"
       }
     },
     {
@@ -28,7 +28,7 @@
       "name": "Cream",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/cream.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/cream.json"
       }
     },
     {
@@ -36,14 +36,14 @@
       "name": "Wheat",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/crops/wheat.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/wheat.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/lemon_cake.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/lemon_cake.png",
-    "html_details": "/details/details_lemon_cake.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/lemon_cake.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/lemon_cake.png",
+    "html_details": "/hay_day_ecosystem/details/details_lemon_cake.html"
   }
 }

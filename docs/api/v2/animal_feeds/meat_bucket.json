@@ -1,7 +1,7 @@
 {
   "id": "meat_bucket",
   "name": "Meat Bucket",
-  "produced_by": "/api/v2/machines/feed_mill.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/feed_mill.json",
   "feeds_animal": null,
   "unlock_level": 34,
   "time_to_make": 45,
@@ -14,7 +14,7 @@
       "name": "Fish Fillet",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/animal_items/fish_fillet.json"
+        "detail": "/hay_day_ecosystem/api/v2/animal_items/fish_fillet.json"
       }
     },
     {
@@ -22,14 +22,14 @@
       "name": "Carrot",
       "quantity": 5,
       "links": {
-        "detail": "/api/v2/crops/carrot.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/carrot.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/animal_feeds/meat_bucket.json",
-    "collection": "/api/v2/animal_feeds/index.json",
-    "image": "/assets/items/meat_bucket.png",
-    "html_details": "/details/details_meat_bucket.html"
+    "self": "/hay_day_ecosystem/api/v2/animal_feeds/meat_bucket.json",
+    "collection": "/hay_day_ecosystem/api/v2/animal_feeds/index.json",
+    "image": "/hay_day_ecosystem/assets/items/meat_bucket.png",
+    "html_details": "/hay_day_ecosystem/details/details_meat_bucket.html"
   }
 }

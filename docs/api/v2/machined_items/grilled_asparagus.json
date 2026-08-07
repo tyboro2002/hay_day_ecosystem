@@ -1,7 +1,7 @@
 {
   "id": "grilled_asparagus",
   "name": "Grilled Asparagus",
-  "produced_by": "/api/v2/machines/bbq_grill.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/bbq_grill.json",
   "unlock_level": 67,
   "time_to_make": 75,
   "sell_price": 486.0,
@@ -12,7 +12,7 @@
       "name": "Asparagus",
       "quantity": 5,
       "links": {
-        "detail": "/api/v2/crops/asparagus.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/asparagus.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Bacon",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/animal_items/bacon.json"
+        "detail": "/hay_day_ecosystem/api/v2/animal_items/bacon.json"
       }
     },
     {
@@ -28,14 +28,14 @@
       "name": "Lemon",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/plants/lemon.json"
+        "detail": "/hay_day_ecosystem/api/v2/plants/lemon.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/grilled_asparagus.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/grilled_asparagus.png",
-    "html_details": "/details/details_grilled_asparagus.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/grilled_asparagus.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/grilled_asparagus.png",
+    "html_details": "/hay_day_ecosystem/details/details_grilled_asparagus.html"
   }
 }

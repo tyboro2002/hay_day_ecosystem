@@ -1,7 +1,7 @@
 {
   "id": "bean_salad",
   "name": "Bean Salad",
-  "produced_by": "/api/v2/machines/salad_bar.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/salad_bar.json",
   "unlock_level": 58,
   "time_to_make": 60,
   "sell_price": 169.0,
@@ -12,7 +12,7 @@
       "name": "Black Bean",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/crops/black_bean.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/black_bean.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Lettuce",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/crops/lettuce.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/lettuce.json"
       }
     },
     {
@@ -28,7 +28,7 @@
       "name": "Tomato",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/crops/tomato.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/tomato.json"
       }
     },
     {
@@ -36,14 +36,14 @@
       "name": "Corn",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/crops/corn.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/corn.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/bean_salad.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/bean_salad.png",
-    "html_details": "/details/details_bean_salad.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/bean_salad.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/bean_salad.png",
+    "html_details": "/hay_day_ecosystem/details/details_bean_salad.html"
   }
 }

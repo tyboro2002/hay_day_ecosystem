@@ -1,16 +1,16 @@
 {
   "id": "tea_leaf",
   "name": "Tea Leaf",
-  "planted_on": "/api/v2/fields/fields.json",
+  "planted_on": "/hay_day_ecosystem/api/v2/fields/fields.json",
   "unlock_level": 80,
   "time_to_make": 390,
   "sell_price": 43.0,
   "xp": 9,
   "yield_multiplier": 2,
   "links": {
-    "self": "/api/v2/crops/tea_leaf.json",
-    "collection": "/api/v2/crops/index.json",
-    "image": "/assets/items/tea_leaf.png",
-    "html_details": "/details/details_tea_leaf.html"
+    "self": "/hay_day_ecosystem/api/v2/crops/tea_leaf.json",
+    "collection": "/hay_day_ecosystem/api/v2/crops/index.json",
+    "image": "/hay_day_ecosystem/assets/items/tea_leaf.png",
+    "html_details": "/hay_day_ecosystem/details/details_tea_leaf.html"
   }
 }

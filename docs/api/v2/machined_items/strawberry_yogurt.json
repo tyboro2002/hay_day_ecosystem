@@ -1,7 +1,7 @@
 {
   "id": "strawberry_yogurt",
   "name": "Strawberry Yogurt",
-  "produced_by": "/api/v2/machines/yogurt_maker.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/yogurt_maker.json",
   "unlock_level": 105,
   "time_to_make": 40,
   "sell_price": 529.0,
@@ -12,7 +12,7 @@
       "name": "Plain Yogurt",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/plain_yogurt.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/plain_yogurt.json"
       }
     },
     {
@@ -20,14 +20,14 @@
       "name": "Strawberry Jam",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/strawberry_jam.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/strawberry_jam.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/strawberry_yogurt.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/strawberry_yogurt.png",
-    "html_details": "/details/details_strawberry_yogurt.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/strawberry_yogurt.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/strawberry_yogurt.png",
+    "html_details": "/hay_day_ecosystem/details/details_strawberry_yogurt.html"
   }
 }

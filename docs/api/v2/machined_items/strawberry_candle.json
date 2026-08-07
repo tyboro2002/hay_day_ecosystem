@@ -1,7 +1,7 @@
 {
   "id": "strawberry_candle",
   "name": "Strawberry Candle",
-  "produced_by": "/api/v2/machines/candle_maker.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/candle_maker.json",
   "unlock_level": 48,
   "time_to_make": 120,
   "sell_price": 370.8,
@@ -12,7 +12,7 @@
       "name": "Beeswax",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/beeswax.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/beeswax.json"
       }
     },
     {
@@ -20,14 +20,14 @@
       "name": "Strawberry",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/crops/strawberry.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/strawberry.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/strawberry_candle.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/strawberry_candle.png",
-    "html_details": "/details/details_strawberry_candle.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/strawberry_candle.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/strawberry_candle.png",
+    "html_details": "/hay_day_ecosystem/details/details_strawberry_candle.html"
   }
 }

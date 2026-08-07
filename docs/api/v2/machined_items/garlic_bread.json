@@ -1,7 +1,7 @@
 {
   "id": "garlic_bread",
   "name": "Garlic Bread",
-  "produced_by": "/api/v2/machines/bbq_grill.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/bbq_grill.json",
   "unlock_level": 60,
   "time_to_make": 15,
   "sell_price": 198.0,
@@ -12,7 +12,7 @@
       "name": "Bread",
       "quantity": 2,
       "links": {
-        "detail": "/api/v2/machined_items/bread.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/bread.json"
       }
     },
     {
@@ -20,7 +20,7 @@
       "name": "Butter",
       "quantity": 1,
       "links": {
-        "detail": "/api/v2/machined_items/butter.json"
+        "detail": "/hay_day_ecosystem/api/v2/machined_items/butter.json"
       }
     },
     {
@@ -28,14 +28,14 @@
       "name": "Garlic",
       "quantity": 4,
       "links": {
-        "detail": "/api/v2/crops/garlic.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/garlic.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/garlic_bread.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/garlic_bread.png",
-    "html_details": "/details/details_garlic_bread.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/garlic_bread.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/garlic_bread.png",
+    "html_details": "/hay_day_ecosystem/details/details_garlic_bread.html"
   }
 }

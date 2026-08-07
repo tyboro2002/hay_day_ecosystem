@@ -1,16 +1,16 @@
 {
   "id": "peanuts",
   "name": "Peanuts",
-  "collected_from": "/api/v2/pens/squirrel_house.json",
-  "produced_by_animal": "/api/v2/animals/squirrel.json",
+  "collected_from": "/hay_day_ecosystem/api/v2/pens/squirrel_house.json",
+  "produced_by_animal": "/hay_day_ecosystem/api/v2/animals/squirrel.json",
   "unlock_level": 62,
   "time_to_make": 300,
   "sell_price": 234.0,
   "xp": 43,
   "links": {
-    "self": "/api/v2/animal_items/peanuts.json",
-    "collection": "/api/v2/animal_items/index.json",
-    "image": "/assets/items/peanuts.png",
-    "html_details": "/details/details_peanuts.html"
+    "self": "/hay_day_ecosystem/api/v2/animal_items/peanuts.json",
+    "collection": "/hay_day_ecosystem/api/v2/animal_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/peanuts.png",
+    "html_details": "/hay_day_ecosystem/details/details_peanuts.html"
   }
 }

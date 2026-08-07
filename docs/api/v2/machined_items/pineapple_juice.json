@@ -1,7 +1,7 @@
 {
   "id": "pineapple_juice",
   "name": "Pineapple Juice",
-  "produced_by": "/api/v2/machines/juice_press.json",
+  "produced_by": "/hay_day_ecosystem/api/v2/machines/juice_press.json",
   "unlock_level": 52,
   "time_to_make": 180,
   "sell_price": 68.0,
@@ -12,14 +12,14 @@
       "name": "Pineapple",
       "quantity": 3,
       "links": {
-        "detail": "/api/v2/crops/pineapple.json"
+        "detail": "/hay_day_ecosystem/api/v2/crops/pineapple.json"
       }
     }
   ],
   "links": {
-    "self": "/api/v2/machined_items/pineapple_juice.json",
-    "collection": "/api/v2/machined_items/index.json",
-    "image": "/assets/items/pineapple_juice.png",
-    "html_details": "/details/details_pineapple_juice.html"
+    "self": "/hay_day_ecosystem/api/v2/machined_items/pineapple_juice.json",
+    "collection": "/hay_day_ecosystem/api/v2/machined_items/index.json",
+    "image": "/hay_day_ecosystem/assets/items/pineapple_juice.png",
+    "html_details": "/hay_day_ecosystem/details/details_pineapple_juice.html"
   }
 }
