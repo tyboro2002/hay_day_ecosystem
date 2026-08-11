@@ -138,8 +138,8 @@
             <div class="level-filter-container">
                 <div class="level-slider-group">
                     <label for="levelRange">Filter Level:</label>
-                    <input type="range" id="levelRange" class="level-slider" min="1" max="126" value="53" oninput="filterByLevel(this.value)">
-                    <span id="levelDisplay" class="level-badge">Lvl 53</span>
+                    <input type="range" id="levelRange" class="level-slider" min="1" max="126" value="54" oninput="filterByLevel(this.value)">
+                    <span id="levelDisplay" class="level-badge">Lvl 54</span>
                 </div>
                 <div id="unlockedCount" class="item-count-badge">Showing all items</div>
             </div>
@@ -23613,8 +23613,8 @@
             document.addEventListener("DOMContentLoaded", function() {
                 const slider = document.getElementById("levelRange");
                 const initialLevel = window.HayDayLevelFilterPersistence
-                    ? window.HayDayLevelFilterPersistence.readStoredLevel(parseInt(slider.value || "53", 10), parseInt(slider.max || "126", 10))
-                    : parseInt(slider.value || "53", 10);
+                    ? window.HayDayLevelFilterPersistence.readStoredLevel(parseInt(slider.value || "54", 10), parseInt(slider.max || "126", 10))
+                    : parseInt(slider.value || "54", 10);
                 slider.value = String(initialLevel);
                 filterByLevel(slider.value);
             });
