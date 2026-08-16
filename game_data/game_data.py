@@ -65,6 +65,25 @@ for item_name, item_obj in ITEMS.items():
         item_obj.ingredients = linked_ingredients
 
 # =====================================================================
+# 2. THE STRUCTURE REMOVAL TOOL LINKER
+# =====================================================================
+# Replaces string tool names (e.g., "Saw") with direct object pointers
+for struct_name, struct_obj in STRUCTURES.items():
+    if hasattr(
+        struct_obj, "removal_tool"
+    ) and isinstance(
+        struct_obj.removal_tool, str
+    ):
+        resolved_tool_obj = ITEMS.get(struct_obj.removal_tool)
+
+        if resolved_tool_obj:
+            struct_obj.removal_tool = resolved_tool_obj
+        else:
+            print(
+                f"[Warning] Could not resolve removal tool '{struct_obj.removal_tool}' for structure '{struct_name}'"
+            )
+
+# =====================================================================
 # DIAGNOSTIC CHECK
 # =====================================================================
 if __name__ == "__main__":
@@ -98,4 +117,13 @@ if __name__ == "__main__":
         for obj_key, quantity in ice_cream.ingredients.items():
             print(f"    - Requires {quantity}x {obj_key.name} (Verified Object Type: {type(obj_key).__name__})")
 
+    print("\n[STRUCTURE REMOVAL TOOL LINKER SANITY CHECK]")
+    apple_tree = STRUCTURES.get("Apple Tree")
+    if apple_tree and apple_tree.removal_tool:
+        tool = apple_tree.removal_tool
+        print(f"  ↳ Structure: {apple_tree.name}")
+        print(f"  ↳ Removal Tool Object: {tool.name}")
+        print(f"  ↳ Tool Price: {tool.sell_price} coins")
+        print(f"  ↳ Object Type: {type(tool).__name__}")
+        
     print("\n==================================================")

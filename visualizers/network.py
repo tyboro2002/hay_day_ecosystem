@@ -68,7 +68,7 @@ def generate_interactive_farm_graph(output_filename=f"{outp}/{outp_file}"):
                 first_word_item = item_name.lower().split()[0]
                 if item_name.lower() in name.lower() or first_word_item in name.lower():
                     prods.append(item)
-        generate_detail_page_plantable_structure(name, prods)
+        generate_detail_page_plantable_structure(name, prods, plant_obj)
 
     for name, spec_obj in INFRASTRUCTURE["special_structures"].items():
         detail_url = f"{detail_dir}/details_{name.lower().replace(' ', '_')}.html"
@@ -313,57 +313,86 @@ def generate_interactive_farm_graph(output_filename=f"{outp}/{outp_file}"):
     print(f"API generated")
 
 def generate_detail_page_item(name, item_obj, filename):
-    item_unlock_lvl = getattr(item_obj, 'unlock_level', 1)
+    item_unlock_lvl = getattr(item_obj, "unlock_level", 1)
 
     item_img_base64 = get_base64_asset(name, "items", base_path="../")
-    if item_img_base64:
-        img_tag = f"""
+    img_tag = (
+        f"""
         <div class="item-img-wrapper" id="mainMachineWrapper" data-unlock-level="{item_unlock_lvl}">
             <span class="main-lock-badge">Requires Lvl {item_unlock_lvl}</span>
             <img class="item-image" src="{item_img_base64}" alt="{name}">
         </div>
         """
-    else:
-        img_tag = ""
+        if item_img_base64
+        else ""
+    )
 
-    sell_price = getattr(item_obj, 'sell_price', 'N/A')
+    sell_price = getattr(item_obj, "sell_price", "N/A")
     if sell_price is None:
-        sell_price = 'N/A'
+        sell_price = "N/A"
 
     coin_b64 = get_base64_asset("coin", "items", base_path="../")
-    coin_img = f'<img src="{coin_b64}" alt="coins" style="width: 18px; height: 18px; object-fit: contain; vertical-align: middle; margin-left: 3px; margin-top: -2px; display: inline-block;">' if coin_b64 else " Coins"
+    coin_img = (
+        f'<img src="{coin_b64}" alt="coins" style="width: 18px; height: 18px;'
+        ' object-fit: contain; vertical-align: middle; margin-left: 3px;'
+        ' margin-top: -2px; display: inline-block;">'
+        if coin_b64
+        else " Coins"
+    )
 
-    price_display = f"{sell_price}{coin_img}" if sell_price != 'N/A' else "Unsellable"
+    price_display = (
+        f"{sell_price}{coin_img}" if sell_price != "N/A" else "Unsellable"
+    )
 
     producer_name = None
     producer_folder = None
     producer_unlock_lvl = 1
     class_type = type(item_obj).__name__
 
-    if hasattr(item_obj, 'machine') and item_obj.machine:
+    if hasattr(item_obj, "machine") and item_obj.machine:
         producer_name = item_obj.machine.name
         producer_folder = "machines"
-        producer_unlock_lvl = getattr(item_obj.machine, 'unlock_level', 1)
+        producer_unlock_lvl = getattr(item_obj.machine, "unlock_level", 1)
     else:
         for animal_name, animal_obj in LIVESTOCK.items():
-            if hasattr(animal_obj, 'produces_item') and animal_obj.produces_item:
-                if animal_obj.produces_item.name.lower().strip() == name.lower().strip():
+            if (
+                hasattr(animal_obj, "produces_item")
+                and animal_obj.produces_item
+            ):
+                if (
+                    animal_obj.produces_item.name.lower().strip()
+                    == name.lower().strip()
+                ):
                     producer_name = animal_name
                     producer_folder = "animals"
-                    producer_unlock_lvl = getattr(animal_obj, 'unlock_level', 1)
+                    producer_unlock_lvl = getattr(animal_obj, "unlock_level", 1)
                     break
 
     if not producer_name:
-        if hasattr(item_obj, 'planted_on') and item_obj.planted_on:
+        if hasattr(item_obj, "planted_on") and item_obj.planted_on:
             field_obj = item_obj.planted_on
-            producer_name = field_obj.name if hasattr(field_obj, 'name') else "Fields"
+            producer_name = (
+                field_obj.name if hasattr(field_obj, "name") else "Fields"
+            )
             producer_folder = "fields"
-            producer_unlock_lvl = getattr(field_obj, 'unlock_level', 1)
-        elif class_type == "PlantableItem" and hasattr(item_obj, 'structure') and item_obj.structure:
+            producer_unlock_lvl = getattr(field_obj, "unlock_level", 1)
+        elif (
+            class_type == "PlantableItem"
+            and hasattr(item_obj, "structure")
+            and item_obj.structure
+        ):
             producer_name = item_obj.structure.name
             producer_folder = "plant_structures"
-            producer_unlock_lvl = getattr(item_obj.structure, 'unlock_level', 1)
-        elif name in ["Silver Ore", "Gold Ore", "Platinum Ore", "Iron Ore", "Coal"]:
+            producer_unlock_lvl = getattr(
+                item_obj.structure, "unlock_level", 1
+            )
+        elif name in [
+            "Silver Ore",
+            "Gold Ore",
+            "Platinum Ore",
+            "Iron Ore",
+            "Coal",
+        ]:
             producer_name = "Mine"
             producer_folder = "special_structures"
             producer_unlock_lvl = 1
@@ -374,7 +403,9 @@ def generate_detail_page_item(name, item_obj, filename):
 
     producer_html = ""
     if producer_name and producer_folder:
-        producer_img = get_base64_asset(producer_name, producer_folder, base_path="../")
+        producer_img = get_base64_asset(
+            producer_name, producer_folder, base_path="../"
+        )
         producer_url = f"details_{producer_name.lower().replace(' ', '_')}.html"
         producer_html = f"""
         <div class="producer-section">
@@ -386,7 +417,7 @@ def generate_detail_page_item(name, item_obj, filename):
         </div>
         """
 
-    raw_duration = getattr(item_obj, 'time_to_make', None)
+    raw_duration = getattr(item_obj, "time_to_make", None)
     time_display_html = ""
     if raw_duration:
         formatted_time = format_duration(raw_duration)
@@ -394,43 +425,57 @@ def generate_detail_page_item(name, item_obj, filename):
             time_display_html = f'<div class="price" style="background:#1e1e1e; border-color:#3498db; color:#3498db; margin-bottom: 0;">⏱️ {formatted_time}</div>'
 
     ingredients_dict = {}
-    if hasattr(item_obj, 'ingredients') and item_obj.ingredients:
+    if hasattr(item_obj, "ingredients") and item_obj.ingredients:
         for ing_item, qty in item_obj.ingredients.items():
             ingredients_dict[ing_item] = qty
 
     associated_feed = None
     for animal_name, animal_obj in LIVESTOCK.items():
-        if hasattr(animal_obj, 'produces_item') and animal_obj.produces_item:
-            if animal_obj.produces_item.name.lower().strip() == name.lower().strip():
-                if hasattr(animal_obj, 'required_food') and animal_obj.required_food:
+        if hasattr(animal_obj, "produces_item") and animal_obj.produces_item:
+            if (
+                animal_obj.produces_item.name.lower().strip()
+                == name.lower().strip()
+            ):
+                if (
+                    hasattr(animal_obj, "required_food")
+                    and animal_obj.required_food
+                ):
                     associated_feed = animal_obj.required_food
                     ingredients_dict[associated_feed] = 1
                     break
 
+    # --- PLANTABLE STRUCTURE & REMOVAL TOOL CHECK ---
+    plant_struct = getattr(item_obj, "structure", None)
+
     ingredients_html = ""
     total_ingredient_cost = 0
-    has_ingredients = len(ingredients_dict) > 0
+    has_ingredients = (len(ingredients_dict) > 0) or (plant_struct is not None)
     unsellable_ingredients = False
 
     if has_ingredients:
+        # 1. Standard recipe ingredients & animal feed
         for ing_item, qty in ingredients_dict.items():
             ing_name = ing_item.name
             ing_img = get_base64_asset(ing_name, "items", base_path="../")
             ing_url = f"details_{ing_name.lower().replace(' ', '_')}.html"
-            ing_unlock_lvl = getattr(ing_item, 'unlock_level', 1)
+            ing_unlock_lvl = getattr(ing_item, "unlock_level", 1)
             qty_str = f"x{qty:.1f}" if isinstance(qty, float) else f"x{qty}"
 
-            ing_price = getattr(ing_item, 'sell_price', 'N/A')
+            ing_price = getattr(ing_item, "sell_price", "N/A")
             if ing_price is None:
-                ing_price = 'N/A'
+                ing_price = "N/A"
 
-            if ing_price == 'N/A':
+            if ing_price == "N/A":
                 unsellable_ingredients = True
             else:
                 total_ingredient_cost += ing_price * qty
 
             is_feed = associated_feed and ing_name == associated_feed.name
-            badge_style = 'style="background-color: #2ecc71; color: #ffffff;"' if is_feed else ""
+            badge_style = (
+                'style="background-color: #2ecc71; color: #ffffff;"'
+                if is_feed
+                else ""
+            )
 
             ingredients_html += f"""
             <a class="grid-item" href="{ing_url}" data-unlock-level="{ing_unlock_lvl}">
@@ -440,11 +485,106 @@ def generate_detail_page_item(name, item_obj, filename):
                 <div class="name">{ing_name}</div>
             </a>
             """
+
+        # 2. Plantable structure purchase & removal tool fractional cost
+        if plant_struct:
+            total_yield = (
+                sum(plant_struct.harvest_schedule)
+                if hasattr(plant_struct, "harvest_schedule")
+                and plant_struct.harvest_schedule
+                else 13
+            )
+
+            struct_cost_per_item = (
+                plant_struct.coin_cost / total_yield if total_yield > 0 else 0
+            )
+            total_ingredient_cost += struct_cost_per_item
+            struct_img = get_base64_asset(
+                plant_struct.name, "plant_structures", base_path="../"
+            )
+            struct_url = (
+                f"details_{plant_struct.name.lower().replace(' ', '_')}.html"
+            )
+            struct_unlock_lvl = getattr(plant_struct, "unlock_level", 1)
+
+            ingredients_html += f"""
+            <a class="grid-item" href="{struct_url}" data-unlock-level="{struct_unlock_lvl}">
+                <span class="lock-badge">🔒 Lvl {struct_unlock_lvl}</span>
+                <div class="qty-badge" style="background-color: #f39c12; color: #ffffff;">1/{total_yield}</div>
+                <img src="{struct_img}" alt="{plant_struct.name}">
+                <div class="name">{plant_struct.name}</div>
+            </a>
+            """
+
+            if (
+                hasattr(plant_struct, "removal_tool")
+                and plant_struct.removal_tool
+            ):
+                tool_item = plant_struct.removal_tool
+                tool_name = tool_item.name
+                tool_price = getattr(tool_item, "sell_price", 0) or 0
+                tool_cost_per_item = (
+                    tool_price / total_yield if total_yield > 0 else 0
+                )
+
+                total_ingredient_cost += tool_cost_per_item
+
+                tool_img = get_base64_asset(tool_name, "items", base_path="../")
+                tool_url = f"details_{tool_name.lower().replace(' ', '_')}.html"
+                tool_unlock_lvl = getattr(tool_item, "unlock_level", 1)
+
+                ingredients_html += f"""
+                <a class="grid-item" href="{tool_url}" data-unlock-level="{tool_unlock_lvl}">
+                    <span class="lock-badge">🔒 Lvl {tool_unlock_lvl}</span>
+                    <div class="qty-badge" style="background-color: #e74c3c; color: #ffffff;">1/{total_yield}</div>
+                    <img src="{tool_img}" alt="{tool_name}">
+                    <div class="name">{tool_name}</div>
+                </a>
+                """
     else:
-        ingredients_html = '<div class="no-items">🌾 Raw Material (Requires no ingredients)</div>'
+        ingredients_html = '<div class="no-items">Raw Material (Requires no ingredients)</div>'
+
+    # --- DETAILED BREAKDOWN FOR STRUCTURES & TOOLS ---
+    struct_breakdown_html = ""
+    if plant_struct:
+        total_yield = (
+            sum(plant_struct.harvest_schedule)
+            if hasattr(plant_struct, "harvest_schedule")
+            and plant_struct.harvest_schedule
+            else 13
+        )
+        struct_cost = plant_struct.coin_cost
+        struct_share = struct_cost / total_yield if total_yield > 0 else 0.0
+
+        tool_name = "None"
+        tool_cost = 0.0
+        tool_share = 0.0
+
+        if (
+            hasattr(plant_struct, "removal_tool")
+            and plant_struct.removal_tool
+        ):
+            tool_item = plant_struct.removal_tool
+            tool_name = tool_item.name
+            tool_cost = getattr(tool_item, "sell_price", 0) or 0.0
+            tool_share = tool_cost / total_yield if total_yield > 0 else 0.0
+
+        struct_breakdown_html = f"""
+        <div class="cost-breakdown-details" style="font-size: 0.85em; color: #bbb; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 8px; margin-top: 10px; width: 100%; text-align: left;">
+            <div style="font-weight: 600; color: #ddd; margin-bottom: 4px;">Cost Allocation (1/{total_yield} share of total structure yield):</div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 2px;">
+                <span>{plant_struct.name} Purchase</span>
+                <span>{struct_cost:.0f}{coin_img} ÷ {total_yield} = <strong>{struct_share:.1f}{coin_img}</strong></span>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+                <span>{tool_name} Removal Tool</span>
+                <span>{tool_cost:.0f}{coin_img} ÷ {total_yield} = <strong>{tool_share:.1f}{coin_img}</strong></span>
+            </div>
+        </div>
+        """
 
     profit_html = ""
-    if sell_price == 'N/A':
+    if sell_price == "N/A":
         profit_html = """
         <div class="financial-summary">
             <div class="fin-col profit-neutral" style="width: 100%;">
@@ -455,7 +595,13 @@ def generate_detail_page_item(name, item_obj, filename):
         """
     elif not has_ingredients:
         coin_b64 = get_base64_asset("coin", "items", base_path="../")
-        coin_img_html = f'<img src="{coin_b64}" alt="coins" style="width: 18px; height: 18px; object-fit: contain; vertical-align: middle; margin-left: 3px; margin-top: -2px; display: inline-block;">' if coin_b64 else "Coins"
+        coin_img_html = (
+            f'<img src="{coin_b64}" alt="coins" style="width: 18px; height:'
+            " 18px; object-fit: contain; vertical-align: middle; margin-left:"
+            ' 3px; margin-top: -2px; display: inline-block;">'
+            if coin_b64
+            else "Coins"
+        )
 
         profit_html = f"""
         <div class="financial-summary">
@@ -478,33 +624,55 @@ def generate_detail_page_item(name, item_obj, filename):
         """
     else:
         net_profit = sell_price - total_ingredient_cost
-        percentage_yield = (net_profit / total_ingredient_cost) * 100 if total_ingredient_cost > 0 else 100.0
+        percentage_yield = (
+            (net_profit / total_ingredient_cost) * 100
+            if total_ingredient_cost > 0
+            else 100.0
+        )
         pct_str = f"{percentage_yield:+.1f}%"
 
         if net_profit > 0:
-            status_class, status_icon, status_label, val_prefix = "profit-positive", "📈", "Net Profit", "+"
+            status_class, status_icon, status_label, val_prefix = (
+                "profit-positive",
+                "📈",
+                "Net Profit",
+                "+",
+            )
         elif net_profit < 0:
-            status_class, status_icon, status_label, val_prefix = "profit-negative", "📉", "Net Loss", ""
+            status_class, status_icon, status_label, val_prefix = (
+                "profit-negative",
+                "📉",
+                "Net Loss",
+                "",
+            )
         else:
-            status_class, status_icon, status_label, val_prefix = "profit-neutral", "⚖️", "Break-even", "±"
+            status_class, status_icon, status_label, val_prefix = (
+                "profit-neutral",
+                "⚖️",
+                "Break-even",
+                "±",
+            )
 
         profit_html = f"""
-        <div class="financial-summary">
-            <div class="fin-col">
-                <span class="fin-label">Cost of Materials</span>
-                <span class="fin-val">💰 {total_ingredient_cost:.0f}</span>
+        <div class="financial-summary" style="flex-direction: column; align-items: stretch;">
+            <div style="display: flex; justify-content: space-between; width: 100%;">
+                <div class="fin-col">
+                    <span class="fin-label">Cost of Materials</span>
+                    <span class="fin-val">💰 {total_ingredient_cost:.1f}</span>
+                </div>
+                <div class="fin-col {status_class}">
+                    <span class="fin-label">{status_label}</span>
+                    <span class="fin-val">{status_icon} {val_prefix}{net_profit:.1f} ({pct_str})</span>
+                </div>
             </div>
-            <div class="fin-col {status_class}">
-                <span class="fin-label">{status_label}</span>
-                <span class="fin-val">{status_icon} {val_prefix}{net_profit:.0f} ({pct_str})</span>
-            </div>
+            {struct_breakdown_html}
         </div>
         """
 
     used_in_html = ""
     used_in_list = []
     for other_name, other_item in ITEMS.items():
-        if hasattr(other_item, 'ingredients') and other_item.ingredients:
+        if hasattr(other_item, "ingredients") and other_item.ingredients:
             for ing_item, qty in other_item.ingredients.items():
                 if ing_item.name.lower().strip() == name.lower().strip():
                     used_in_list.append((other_name, other_item, qty))
@@ -514,7 +682,7 @@ def generate_detail_page_item(name, item_obj, filename):
         for recipe_name, recipe_obj, qty in used_in_list:
             recipe_img = get_base64_asset(recipe_name, "items", base_path="../")
             recipe_url = f"details_{recipe_name.lower().replace(' ', '_')}.html"
-            recipe_unlock_lvl = getattr(recipe_obj, 'unlock_level', 1)
+            recipe_unlock_lvl = getattr(recipe_obj, "unlock_level", 1)
             qty_str = f"x{qty:.1f}" if isinstance(qty, float) else f"x{qty}"
 
             used_in_html += f"""
@@ -528,18 +696,28 @@ def generate_detail_page_item(name, item_obj, filename):
     else:
         used_in_html = '<div class="no-items">📦 Final Product (Not used in other recipes)</div>'
 
-    price_breakdown_html = templates.render_price_breakdown_component(name, sell_price, base_path="../")
+    price_breakdown_html = templates.render_price_breakdown_component(
+        name, sell_price, base_path="../"
+    )
 
     html_content = templates.render_item_page(
-        name=name, img_tag=img_tag, price_display=price_display,
-        time_display_html=time_display_html, producer_html=producer_html,
-        profit_html=profit_html, price_breakdown_html=price_breakdown_html,
-        ingredients_html=ingredients_html, used_in_html=used_in_html,
-        back_target=outp_file, unlock_schedule=item_unlock_lvl
+        name=name,
+        img_tag=img_tag,
+        price_display=price_display,
+        time_display_html=time_display_html,
+        producer_html=producer_html,
+        profit_html=profit_html,
+        price_breakdown_html=price_breakdown_html,
+        ingredients_html=ingredients_html,
+        used_in_html=used_in_html,
+        back_target=outp_file,
+        unlock_schedule=item_unlock_lvl,
     )
 
     os.makedirs(os.path.join(outp, "details"), exist_ok=True)
-    with open(os.path.join(outp, "details", filename), "w", encoding="utf-8") as f:
+    with open(
+        os.path.join(outp, "details", filename), "w", encoding="utf-8"
+    ) as f:
         f.write(html_content)
 
 
@@ -712,16 +890,28 @@ def generate_detail_page_pen(name, residents, pen_obj=None):
 
 def generate_detail_page_plantable_structure(name, prods, plant_obj=None):
     # Determine schedule or base unlock level
-    full_schedule = getattr(plant_obj, 'full_unlock_schedule', None) if plant_obj else None
+    full_schedule = getattr(plant_obj, "full_unlock_schedule", None) if plant_obj else None
 
     if full_schedule:
         plant_unlock_lvl = full_schedule[0][0]
     else:
         # Fallback to structure object's unlock level or lowest produced crop's unlock level (default 1)
-        plant_unlock_lvl = getattr(plant_obj, 'unlock_level', None)
+        plant_unlock_lvl = getattr(plant_obj, "unlock_level", None)
         if plant_unlock_lvl is None:
-            plant_unlock_lvl = min([getattr(p, 'unlock_level', 1) for p in prods]) if prods else 1
+            plant_unlock_lvl = (
+                min([getattr(p, "unlock_level", 1) for p in prods]) if prods else 1
+            )
         full_schedule = plant_unlock_lvl
+
+    # --- COIN ASSET HELPER ---
+    coin_b64 = get_base64_asset("coin", "items", base_path="../")
+    coin_img = (
+        f'<img src="{coin_b64}" alt="coins" style="width: 18px; height: 18px;'
+        ' object-fit: contain; vertical-align: middle; margin-left: 3px;'
+        ' margin-top: -2px; display: inline-block;">'
+        if coin_b64
+        else " Coins"
+    )
 
     img_base64 = get_base64_asset(name, "plant_structures", base_path="../")
     if img_base64:
@@ -739,10 +929,10 @@ def generate_detail_page_plantable_structure(name, prods, plant_obj=None):
         for prod_item in prods:
             prod_img = get_base64_asset(prod_item.name, "items", base_path="../")
             prod_url = f"details_{prod_item.name.lower().replace(' ', '_')}.html"
-            prod_unlock_lvl = getattr(prod_item, 'unlock_level', 1)
+            prod_unlock_lvl = getattr(prod_item, "unlock_level", 1)
 
             time_lbl = ""
-            raw_time = getattr(prod_item, 'time_to_make', None)
+            raw_time = getattr(prod_item, "time_to_make", None)
             if raw_time:
                 formatted_time = format_duration(raw_time)
                 if formatted_time:
@@ -759,19 +949,89 @@ def generate_detail_page_plantable_structure(name, prods, plant_obj=None):
     else:
         produces_html = '<div class="no-items">💤 Nothing grown here.</div>'
 
+    # --- CLICKABLE REMOVAL TOOL COMPONENT ---
+    removal_tool_html = ""
+    tool_item = getattr(plant_obj, "removal_tool", None) if plant_obj else None
+    if tool_item:
+        tool_name = tool_item.name
+        tool_img = get_base64_asset(tool_name, "items", base_path="../")
+        tool_url = f"details_{tool_name.lower().replace(' ', '_')}.html"
+        tool_unlock_lvl = getattr(tool_item, "unlock_level", 1)
+
+        removal_tool_html = f"""
+        <div class="removal-tool-section" style="margin-top: 24px;">
+            <div class="section-title" style="margin-top: 20px;">
+                REMOVAL TOOL REQUIRED
+            </div>
+            <a class="grid-item" href="{tool_url}" data-unlock-level="{tool_unlock_lvl}" style="max-width: 220px;">
+                <span class="lock-badge">🔒 Lvl {tool_unlock_lvl}</span>
+                <img src="{tool_img}" alt="{tool_name}">
+                <div class="name">{tool_name}</div>
+            </a>
+        </div>
+        """
+
+    # --- HARVEST SCHEDULE BREAKDOWN COMPONENT ---
+    harvest_schedule_html = ""
+    harvest_schedule = getattr(plant_obj, "harvest_schedule", None) if plant_obj else None
+
+    if harvest_schedule and prods:
+        primary_prod = prods[0]
+        prod_name = primary_prod.name
+        prod_img = get_base64_asset(prod_name, "items", base_path="../")
+        prod_url = f"details_{prod_name.lower().replace(' ', '_')}.html"
+
+        rows_html = ""
+        total_items = sum(harvest_schedule)
+
+        for idx, amount in enumerate(harvest_schedule, 1):
+            is_last = idx == len(harvest_schedule)
+            border_style = "" if is_last else "border-bottom: 1px solid rgba(255,255,255,0.05);"
+
+            rows_html += f"""
+            <div class="schedule-row" style="display: flex; justify-content: space-between; align-items: center; padding: 10px 12px; {border_style}">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <a href="{prod_url}" style="display: inline-flex; align-items: center; text-decoration: none; transition: transform 0.15s ease;">
+                        <img src="{prod_img}" alt="{prod_name}" style="width: 24px; height: 24px; object-fit: contain;">
+                    </a>
+                    <span style="color: #ddd; font-weight: 500; font-size: 0.95em;">Harvest #{idx}</span>
+                </div>
+                <div style="font-weight: bold; color: #2ecc71; font-size: 1em; display: flex; align-items: center; gap: 4px;">
+                    +{amount}
+                    <img src="{prod_img}" alt="{prod_name}" style="width: 18px; height: 18px; object-fit: contain;">
+                </div>
+            </div>
+            """
+
+        harvest_schedule_html = f"""
+        <div class="bulk-cost-card" style="background: #1c1c1c; border-radius: 12px; padding: 16px; margin-top: 24px; border: 1px solid rgba(255,255,255,0.08);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px;">
+                <span style="color: #f39c12; font-weight: bold; font-size: 0.85em; text-transform: uppercase; letter-spacing: 0.8px;">HARVEST SCHEDULE</span>
+                <span style="color: #aaa; font-size: 0.85em;">Total Yield: <strong style="color: #fff;">{total_items}</strong></span>
+            </div>
+            <div class="schedule-rows" style="display: flex; flex-direction: column;">
+                {rows_html}
+            </div>
+        </div>
+        """
+
     # Generate schedule section if a schedule list is available
     unlock_schedule_html = ""
     if isinstance(full_schedule, list) and len(full_schedule) > 0:
-        unlock_schedule_html = generate_unlock_schedule_component(full_schedule, name, asset_folder="plant_structures", base_path="../")
+        unlock_schedule_html = generate_unlock_schedule_component(
+            full_schedule, name, asset_folder="plant_structures", base_path="../"
+        )
 
     filename = f"details_{name.lower().replace(' ', '_')}.html"
     html_content = templates.render_plantable_structure_page(
         name=name,
         img_tag=img_tag,
         produces_html=produces_html,
+        removal_tool_html=removal_tool_html,
+        harvest_schedule_html=harvest_schedule_html,
         back_target=outp_file,
         unlock_schedule=full_schedule,
-        unlock_schedule_html=unlock_schedule_html
+        unlock_schedule_html=unlock_schedule_html,
     )
 
     os.makedirs(os.path.join(outp, "details"), exist_ok=True)

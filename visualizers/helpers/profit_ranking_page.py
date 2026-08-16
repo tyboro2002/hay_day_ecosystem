@@ -1,26 +1,64 @@
 import os
 
 from calculators.profitability import analyze_value_added
-from game_data.game_data import DIAMOND_COST
+from game_data.game_data import (
+    ANIMAL_ITEMS,
+    CROPS,
+    CURRENT_LEVEL,
+    DIAMOND_COST,
+    FEEDS,
+    MACHINED_ITEMS,
+    MAX_LEVEL,
+    PLANTS,
+)
 from visualizers.helpers.formatting import get_base64_asset
-from visualizers.helpers.templates import DISCLAIMER_FOOTER, render_level_filter_persistence_script
-from game_data.game_data import MAX_LEVEL, CURRENT_LEVEL
+from visualizers.helpers.templates import (
+    DISCLAIMER_FOOTER,
+    render_level_filter_persistence_script,
+)
+
+
+def get_item_category(item_name):
+    """Categorizes an item name based on game_data registry mappings."""
+    if item_name in CROPS:
+        return "crops", "Crops"
+    elif item_name in PLANTS:
+        return "plants", "Plants & Orchards"
+    elif item_name in ANIMAL_ITEMS:
+        return "animal_items", "Animal Products"
+    elif item_name in FEEDS:
+        return "feeds", "Animal Feeds"
+    elif item_name in MACHINED_ITEMS:
+        return "machined_items", "Machined Goods"
+    return "other", "Other"
 
 
 def generate_profitability_ranking_page(outp, detail_dir):
-    """Generates a complete, interactive HTML ranking report with scannable tables."""
+    """Generates a complete, interactive HTML ranking report with aligned filters and scannable tables."""
     data = analyze_value_added(silent=True)
 
     # Fetch global coin image asset for dynamic inline use
-    coin_b64 = get_base64_asset("coin", "items")  # Resolves path items/coin.png via system asset helpers
-    coin_img_html = f'<img class="coin-icon" src="{coin_b64}" alt="coins">' if coin_b64 else "coins"
-    coin_per_h_html = f'<span class="coin-rate">{coin_img_html}/h</span>' if coin_b64 else "coins/h"
+    coin_b64 = get_base64_asset("coin", "items")
+    coin_img_html = (
+        f'<img class="coin-icon" src="{coin_b64}" alt="coins">'
+        if coin_b64
+        else "coins"
+    )
+    coin_per_h_html = (
+        f'<span class="coin-rate">{coin_img_html}/h</span>'
+        if coin_b64
+        else "coins/h"
+    )
 
     # Sort data variations
     by_max_price = sorted(data, key=lambda x: x["final_price"], reverse=True)
     by_value = sorted(data, key=lambda x: x["value_added"], reverse=True)
     by_pph = sorted(data, key=lambda x: x["pph"], reverse=True)
-    by_roi = sorted([x for x in data if x["direct_cost"] > 0], key=lambda x: x["roi"], reverse=True)
+    by_roi = sorted(
+        [x for x in data if x["direct_cost"] > 0],
+        key=lambda x: x["roi"],
+        reverse=True,
+    )
 
     def build_table_rows(dataset, score_type):
         rows_html = ""
@@ -28,25 +66,46 @@ def generate_profitability_ranking_page(outp, detail_dir):
             warning = "⚠️" if item["value_added"] < 0 else ""
 
             # Retrieve item unlock level (defaults to 1 if not present)
-            unlock_level = item.get("unlock_level", getattr(item.get("item_obj", None), "unlock_level", 1))
-            # print(item["name"], unlock_level)
+            unlock_level = item.get(
+                "unlock_level",
+                getattr(item.get("item_obj", None), "unlock_level", 1),
+            )
+
+            # Determine category key for JS filtering
+            category_key, _ = get_item_category(item["name"])
 
             # Retrieve the base64 string for the item's image
-            img_base64 = get_base64_asset(item['name'], "items")
-            img_tag = f'<img class="table-item-img" src="{img_base64}" alt="{item["name"]}">' if img_base64 else ""
+            img_base64 = get_base64_asset(item["name"], "items")
+            img_tag = (
+                f'<img class="table-item-img" src="{img_base64}"'
+                f' alt="{item["name"]}">'
+                if img_base64
+                else ""
+            )
 
             # Format custom metrics based on table column scope
             if score_type == "value":
-                metric_td = f'<td style="white-space:nowrap;"><b>{item["value_added"]:+.1f}</b>{coin_img_html}</td>'
+                metric_td = (
+                    '<td style="white-space:nowrap;">'
+                    f'<b>{item["value_added"]:+.1f}</b>{coin_img_html}</td>'
+                )
             elif score_type == "pph":
-                metric_td = f'<td style="white-space:nowrap;"><b>{item["pph"]:+.1f}</b>{coin_per_h_html}</td>'
+                metric_td = (
+                    '<td style="white-space:nowrap;">'
+                    f'<b>{item["pph"]:+.1f}</b>{coin_per_h_html}</td>'
+                )
+            elif score_type == "max_price":
+                metric_td = (
+                    '<td style="white-space:nowrap;">'
+                    f'<b>{item["value_added"]:+.1f}</b>{coin_img_html}</td>'
+                )
             else:
                 metric_td = f"<td><b>{item['roi']:.1f}%</b></td>"
 
             clean_filename = f"{detail_dir}/details_{item['name'].lower().replace(' ', '_').replace('-', '_')}.html"
 
             rows_html += f"""
-            <tr class="item-row" data-unlock-level="{unlock_level}">
+            <tr class="item-row" data-unlock-level="{unlock_level}" data-category="{category_key}">
                 <td class="item-name-cell">
                     {warning}
                     <a href="{clean_filename}" class="item-link">
@@ -74,7 +133,7 @@ def generate_profitability_ranking_page(outp, detail_dir):
             h1 {{ color: #e67e22; text-align: center; margin-bottom: 5px; }}
             p.subtitle {{ text-align: center; color: #888; margin-bottom: 30px; }}
 
-            /* Level Filter Slider Section */
+            /* Control Panel Section */
             .level-filter-container {{
                 max-width: 1000px;
                 margin: 0 auto 20px auto;
@@ -83,9 +142,15 @@ def generate_profitability_ranking_page(outp, detail_dir):
                 border-radius: 6px;
                 padding: 15px 20px;
                 display: flex;
+                flex-direction: column;
+                gap: 12px;
+            }}
+            .filter-row {{
+                display: flex;
                 align-items: center;
                 justify-content: space-between;
-                gap: 20px;
+                gap: 15px;
+                width: 100%;
             }}
             .level-slider-group {{
                 display: flex;
@@ -111,9 +176,37 @@ def generate_profitability_ranking_page(outp, detail_dir):
                 border-radius: 12px;
                 font-weight: bold;
                 font-size: 0.9rem;
-                min-width: 70px;
+                min-width: 60px;
                 text-align: center;
             }}
+
+            /* Category Filter Dropdown Styling */
+            .category-filter-group {{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin-left: auto;
+            }}
+            .category-filter-group label {{
+                font-weight: bold;
+                color: #e67e22;
+                white-space: nowrap;
+            }}
+            .category-select {{
+                background-color: #1a1a1a;
+                color: #e0e0e0;
+                border: 1px solid #444;
+                border-radius: 4px;
+                padding: 6px 12px;
+                font-size: 0.9rem;
+                cursor: pointer;
+                outline: none;
+                transition: border-color 0.2s ease;
+            }}
+            .category-select:hover, .category-select:focus {{
+                border-color: #e67e22;
+            }}
+
             .item-count-badge {{
                 font-size: 0.85rem;
                 color: #aaa;
@@ -121,6 +214,7 @@ def generate_profitability_ranking_page(outp, detail_dir):
                 padding: 4px 10px;
                 border-radius: 4px;
                 border: 1px solid #333;
+                white-space: nowrap;
             }}
 
             /* Diamond Cost Notice Banner */
@@ -187,7 +281,7 @@ def generate_profitability_ranking_page(outp, detail_dir):
             .item-link {{ display: inline-flex; align-items: center; gap: 10px; color: inherit; text-decoration: none; }}
             .item-link:hover, .item-link:visited, .item-link:active {{ color: inherit; text-decoration: none; }}
 
-            /* Global footer styles match inside template variables */
+            /* Global footer styles */
             .sc-disclaimer-footer {{ margin-top: 40px; color: #666; font-size: 0.8rem; text-align: center; line-height: 1.4; }}
             .sc-disclaimer-footer a {{ color: #3498db; text-decoration: none; }}
             .sc-disclaimer-footer a:hover {{ text-decoration: underline; }}
@@ -199,14 +293,32 @@ def generate_profitability_ranking_page(outp, detail_dir):
             <a class="back-btn" href="index.html">⬅ Back to Farm Map</a>
             <h1>Profit Analytics</h1>
 
-            <!-- Dynamic Level Selector Control -->
+            <!-- Dynamic Level Selector & Category Filter Control -->
             <div class="level-filter-container">
-                <div class="level-slider-group">
-                    <label for="levelRange">Filter Level:</label>
-                    <input type="range" id="levelRange" class="level-slider" min="1" max="{MAX_LEVEL}" value="{CURRENT_LEVEL}" oninput="filterByLevel(this.value)">
-                    <span id="levelDisplay" class="level-badge">Lvl {CURRENT_LEVEL}</span>
+                <!-- Row 1: Level Slider & Item Counter -->
+                <div class="filter-row">
+                    <div class="level-slider-group">
+                        <label for="levelRange">Filter Level:</label>
+                        <input type="range" id="levelRange" class="level-slider" min="1" max="{MAX_LEVEL}" value="{CURRENT_LEVEL}" oninput="applyFilters()">
+                        <span id="levelDisplay" class="level-badge">Lvl {CURRENT_LEVEL}</span>
+                    </div>
+                    <div id="unlockedCount" class="item-count-badge">Showing all items</div>
                 </div>
-                <div id="unlockedCount" class="item-count-badge">Showing all items</div>
+
+                <!-- Row 2: Category Dropdown (Right-aligned to flush with unlockedCount above) -->
+                <div class="filter-row">
+                    <div class="category-filter-group">
+                        <label for="categorySelect">Category:</label>
+                        <select id="categorySelect" class="category-select" onchange="applyFilters()">
+                            <option value="all">All Categories</option>
+                            <option value="crops">Crops</option>
+                            <option value="plants">Plants & Orchards</option>
+                            <option value="animal_items">Animal Products</option>
+                            <option value="feeds">Animal Feeds</option>
+                            <option value="machined_items">Machined Goods</option>
+                        </select>
+                    </div>
+                </div>
             </div>
 
             <!-- Dynamic Diamond Cost Disclaimer Banner -->
@@ -269,10 +381,9 @@ def generate_profitability_ranking_page(outp, detail_dir):
                         <tbody>{build_table_rows(by_roi, "roi")}</tbody>
                     </table>
                 </div>
-                
-                
-                <!-- PANEL 4: VALUE ADDED -->
-                <div id="max-price-tab" class="content-panel active">
+
+                <!-- PANEL 4: MAX PRICE -->
+                <div id="max-price-tab" class="content-panel">
                     <h3>Sorted by Max Market Price</h3>
                     <div class="metric-context">
                         <b>Calculation:</b> <code>Max Roadside Price</code>.
@@ -283,7 +394,7 @@ def generate_profitability_ranking_page(outp, detail_dir):
                         <thead>
                             <tr><th>Item Name</th><th>Req Lvl</th><th>Max Price</th><th>Material Costs</th><th>Craft Time</th><th>Value Added</th></tr>
                         </thead>
-                        <tbody>{build_table_rows(by_max_price, "max price")}</tbody>
+                        <tbody>{build_table_rows(by_max_price, "max_price")}</tbody>
                     </table>
                 </div>
             </div>
@@ -304,17 +415,23 @@ def generate_profitability_ranking_page(outp, detail_dir):
                 evt.currentTarget.classList.add("active");
             }}
 
-            function filterByLevel(selectedLevel) {{
-                selectedLevel = parseInt(selectedLevel);
+            function applyFilters() {{
+                const selectedLevel = parseInt(document.getElementById("levelRange").value, 10);
+                const selectedCategory = document.getElementById("categorySelect").value;
+
                 document.getElementById("levelDisplay").innerText = "Lvl " + selectedLevel;
 
                 let rows = document.querySelectorAll(".item-row");
                 let visibleCount = 0;
-                let activePanelRows = 0;
 
                 rows.forEach(row => {{
                     let itemLevel = parseInt(row.getAttribute("data-unlock-level")) || 1;
-                    if (itemLevel <= selectedLevel) {{
+                    let itemCategory = row.getAttribute("data-category") || "";
+
+                    let matchLevel = itemLevel <= selectedLevel;
+                    let matchCategory = (selectedCategory === "all") || (itemCategory === selectedCategory);
+
+                    if (matchLevel && matchCategory) {{
                         row.style.display = "";
                         visibleCount++;
                     }} else {{
@@ -322,9 +439,9 @@ def generate_profitability_ranking_page(outp, detail_dir):
                     }}
                 }});
 
-                // Divide visible count by 3 (since items appear in all 3 tabs)
-                let uniqueVisible = Math.floor(visibleCount / 3);
-                document.getElementById("unlockedCount").innerText = "Unlocked items: " + uniqueVisible;
+                // Divide total matching table rows by 4 (since items are replicated across all 4 tab panels)
+                let uniqueVisible = Math.floor(visibleCount / 4);
+                document.getElementById("unlockedCount").innerText = "Showing items: " + uniqueVisible;
 
                 if (window.HayDayLevelFilterPersistence) {{
                     window.HayDayLevelFilterPersistence.writeStoredLevel(selectedLevel);
@@ -338,7 +455,7 @@ def generate_profitability_ranking_page(outp, detail_dir):
                     ? window.HayDayLevelFilterPersistence.readStoredLevel(parseInt(slider.value || "{CURRENT_LEVEL}", 10), parseInt(slider.max || "{MAX_LEVEL}", 10))
                     : parseInt(slider.value || "{CURRENT_LEVEL}", 10);
                 slider.value = String(initialLevel);
-                filterByLevel(slider.value);
+                applyFilters();
             }});
         </script>
     </body>

@@ -190,12 +190,21 @@ class Animal:
         return self.pen.max_animal_capacity_at_level(player_level)
 
 class PlantableStructure:
-    def __init__(self, name, coin_cost, unlock_level=1, max_harvests=4):
+    def __init__(self, name, coin_cost, unlock_level=1, harvest_schedule=None, removal_tool=None,):
         self.name = name
         self.coin_cost = coin_cost  # Cost to buy the tree/bush seed from the shop
         self.unlock_level = unlock_level
-        self.max_harvests = max_harvests
+        # Default Hay Day harvest schedule (2, 3, 4, 4 items per harvest)
+        self.harvest_schedule = (
+            list(harvest_schedule)
+            if harvest_schedule is not None
+            else [2, 3, 4, 4]
+        )
+        self.max_harvests = len(self.harvest_schedule)
         self.product = None  # Will hold the PlantableItem instance it grows
+        self.removal_tool = (
+            removal_tool  # Matches key in SPECIAL_ITEMS (e.g., "Axe" or "Saw")
+        )
 
     def is_unlocked(self, player_level):
         return player_level >= self.unlock_level

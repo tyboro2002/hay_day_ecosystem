@@ -224,13 +224,30 @@
         </div>
 
         
-        <div class="financial-summary">
-            <div class="fin-col profit-positive" style="width: 100%;">
-                <span class="fin-label">Production Status</span>
-                <span class="fin-val" style="display: inline-flex; align-items: center; vertical-align: middle;">
-                    🌱 Pure Profit (+97.0<img src="../assets/items/coin.png" alt="coins" style="width: 18px; height: 18px; object-fit: contain; vertical-align: middle; margin-left: 3px; margin-top: -2px; display: inline-block;"> / 100%)
-                </span>
+        <div class="financial-summary" style="flex-direction: column; align-items: stretch;">
+            <div style="display: flex; justify-content: space-between; width: 100%;">
+                <div class="fin-col">
+                    <span class="fin-label">Cost of Materials</span>
+                    <span class="fin-val">💰 59.5</span>
+                </div>
+                <div class="fin-col profit-positive">
+                    <span class="fin-label">Net Profit</span>
+                    <span class="fin-val">📈 +37.5 (+62.9%)</span>
+                </div>
             </div>
+            
+        <div class="cost-breakdown-details" style="font-size: 0.85em; color: #bbb; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 8px; margin-top: 10px; width: 100%; text-align: left;">
+            <div style="font-weight: 600; color: #ddd; margin-bottom: 4px;">Cost Allocation (1/13 share of total structure yield):</div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 2px;">
+                <span>Orange Tree Purchase</span>
+                <span>720<img src="../assets/items/coin.png" alt="coins" style="width: 18px; height: 18px; object-fit: contain; vertical-align: middle; margin-left: 3px; margin-top: -2px; display: inline-block;"> ÷ 13 = <strong>55.4<img src="../assets/items/coin.png" alt="coins" style="width: 18px; height: 18px; object-fit: contain; vertical-align: middle; margin-left: 3px; margin-top: -2px; display: inline-block;"></strong></span>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+                <span>Saw Removal Tool</span>
+                <span>54<img src="../assets/items/coin.png" alt="coins" style="width: 18px; height: 18px; object-fit: contain; vertical-align: middle; margin-left: 3px; margin-top: -2px; display: inline-block;"> ÷ 13 = <strong>4.2<img src="../assets/items/coin.png" alt="coins" style="width: 18px; height: 18px; object-fit: contain; vertical-align: middle; margin-left: 3px; margin-top: -2px; display: inline-block;"></strong></span>
+            </div>
+        </div>
+        
         </div>
         
 
@@ -372,7 +389,21 @@
 
         <div class="section-title" style="margin-top: 20px;">Ingredients Required</div>
         <div class="grid">
-            <div class="no-items">🌾 Raw Material (Requires no ingredients)</div>
+            
+            <a class="grid-item" href="details_orange_tree.html" data-unlock-level="71">
+                <span class="lock-badge">🔒 Lvl 71</span>
+                <div class="qty-badge" style="background-color: #f39c12; color: #ffffff;">1/13</div>
+                <img src="../assets/plant_structures/orange_tree.png" alt="Orange Tree">
+                <div class="name">Orange Tree</div>
+            </a>
+            
+                <a class="grid-item" href="details_saw.html" data-unlock-level="5">
+                    <span class="lock-badge">🔒 Lvl 5</span>
+                    <div class="qty-badge" style="background-color: #e74c3c; color: #ffffff;">1/13</div>
+                    <img src="../assets/items/saw.png" alt="Saw">
+                    <div class="name">Saw</div>
+                </a>
+                
         </div>
 
         <div class="section-title">Used in Recipes</div>
