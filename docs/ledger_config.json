@@ -1,0 +1,273 @@
+{
+  "transferStrategy": "max_storage",
+  "daily_limit": 80,
+  "dailyUsed": 0,
+  "activeFarmId": "f1",
+  "groups": [
+    {
+      "id": "Silo",
+      "name": "Silo Materials",
+      "image": "assets/storage/silo.png"
+    },
+    {
+      "id": "Barn",
+      "name": "Barn Materials",
+      "image": "assets/storage/barn.png"
+    },
+    {
+      "id": "Land",
+      "name": "Land Expansion",
+      "image": "assets/extra/plot_locked.png"
+    },
+    {
+      "id": "Town",
+      "name": "Town",
+      "image": "assets/extra/town_hall.png"
+    }
+  ],
+  "items": [
+    {
+      "id": "nail",
+      "name": "Nails",
+      "group": "Silo",
+      "image": "assets/items/nail.png",
+      "price": 270,
+      "min_level": 1
+    },
+    {
+      "id": "screw",
+      "name": "Screws",
+      "group": "Silo",
+      "image": "assets/items/screw.png",
+      "price": 270,
+      "min_level": 1
+    },
+    {
+      "id": "wood_panel",
+      "name": "Wood Panels",
+      "group": "Silo",
+      "image": "assets/items/wood_panel.png",
+      "price": 270,
+      "min_level": 1
+    },
+    {
+      "id": "bolt",
+      "name": "Bolts",
+      "group": "Barn",
+      "image": "assets/items/bolt.png",
+      "price": 270,
+      "min_level": 1
+    },
+    {
+      "id": "plank",
+      "name": "Planks",
+      "group": "Barn",
+      "image": "assets/items/plank.png",
+      "price": 270,
+      "min_level": 1
+    },
+    {
+      "id": "duct_tape",
+      "name": "Duct Tape",
+      "group": "Barn",
+      "image": "assets/items/duct_tape.png",
+      "price": 270,
+      "min_level": 1
+    },
+    {
+      "id": "land_deed",
+      "name": "Land Deed",
+      "group": "Land",
+      "image": "assets/items/land_deed.png",
+      "price": 403,
+      "min_level": 22
+    },
+    {
+      "id": "mallet",
+      "name": "Mallet",
+      "group": "Land",
+      "image": "assets/items/mallet.png",
+      "price": 403,
+      "min_level": 22
+    },
+    {
+      "id": "marker_stake",
+      "name": "Marker Stake",
+      "group": "Land",
+      "image": "assets/items/marker_stake.png",
+      "price": 403,
+      "min_level": 22
+    },
+    {
+      "id": "map_piece",
+      "name": "Map Piece",
+      "group": "Town",
+      "image": "assets/items/map_piece.png",
+      "price": 342,
+      "min_level": 34
+    },
+    {
+      "id": "hammer",
+      "name": "Hammer",
+      "group": "Town",
+      "image": "assets/items/hammer.png",
+      "price": 342,
+      "min_level": 34
+    },
+    {
+      "id": "stone_block",
+      "name": "Stone Block",
+      "group": "Town",
+      "image": "assets/items/stone_block.png",
+      "price": 342,
+      "min_level": 34
+    },
+    {
+      "id": "paint_bucket",
+      "name": "Paint Bucket",
+      "group": "Town",
+      "image": "assets/items/paint_bucket.png",
+      "price": 342,
+      "min_level": 34
+    },
+    {
+      "id": "tar_bucket",
+      "name": "Tar Bucket",
+      "group": "Town",
+      "image": "assets/items/tar_bucket.png",
+      "price": 342,
+      "min_level": 34
+    },
+    {
+      "id": "hand_drill",
+      "name": "Hand Drill",
+      "group": "Town",
+      "image": "assets/items/hand_drill.png",
+      "price": 342,
+      "min_level": 34
+    },
+    {
+      "id": "brick",
+      "name": "Brick",
+      "group": "Town",
+      "image": "assets/items/brick.png",
+      "price": 342,
+      "min_level": 34
+    }
+  ],
+  "farms": [
+    {
+      "id": "f1",
+      "name": "main",
+      "isMain": true,
+      "level": 55,
+      "coins": 3908,
+      "maxStorage": 900,
+      "inventory": {
+        "nail": 24,
+        "screw": 27,
+        "wood_panel": 30,
+        "bolt": 53,
+        "plank": 33,
+        "duct_tape": 83,
+        "land_deed": 18,
+        "mallet": 28,
+        "marker_stake": 8,
+        "map_piece": 21,
+        "hammer": 6,
+        "stone_block": 6,
+        "paint_bucket": 19,
+        "tar_bucket": 22,
+        "hand_drill": 8,
+        "brick": 6
+      }
+    },
+    {
+      "id": "f2",
+      "name": "baby2",
+      "isMain": false,
+      "level": 22,
+      "coins": 75485,
+      "maxStorage": 175,
+      "inventory": {
+        "nail": 3,
+        "screw": 0,
+        "wood_panel": 2,
+        "bolt": 0,
+        "plank": 0,
+        "duct_tape": 0,
+        "land_deed": 0,
+        "mallet": 1,
+        "marker_stake": 1,
+        "map_piece": 0,
+        "hammer": 0,
+        "stone_block": 0,
+        "paint_bucket": 0,
+        "tar_bucket": 0,
+        "hand_drill": 0,
+        "brick": 0
+      }
+    },
+    {
+      "id": "f3",
+      "name": "baby3",
+      "isMain": false,
+      "level": 7,
+      "coins": 71865,
+      "maxStorage": 100,
+      "inventory": {
+        "nail": 11,
+        "screw": 4,
+        "wood_panel": 5,
+        "bolt": 3,
+        "plank": 1,
+        "duct_tape": 0,
+        "land_deed": 0,
+        "mallet": 0,
+        "marker_stake": 0,
+        "map_piece": 0,
+        "hammer": 0,
+        "stone_block": 0,
+        "paint_bucket": 0,
+        "tar_bucket": 0,
+        "hand_drill": 0,
+        "brick": 0
+      }
+    },
+    {
+      "id": "f4",
+      "name": "baby4",
+      "isMain": false,
+      "level": 7,
+      "coins": 78622,
+      "maxStorage": 125,
+      "inventory": {
+        "nail": 0,
+        "screw": 2,
+        "wood_panel": 0,
+        "bolt": 0,
+        "plank": 1,
+        "duct_tape": 0,
+        "land_deed": 0,
+        "mallet": 0,
+        "marker_stake": 0,
+        "map_piece": 0,
+        "hammer": 0,
+        "stone_block": 0,
+        "paint_bucket": 0,
+        "tar_bucket": 0,
+        "hand_drill": 0,
+        "brick": 0
+      }
+    }
+  ],
+  "needed": {
+    "Silo": 35,
+    "Barn": 35,
+    "Land": 12,
+    "Town": 11
+  },
+  "collapsedGroups": {
+    "Town": true
+  }
+}

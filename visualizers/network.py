@@ -15,6 +15,7 @@ from visualizers.helpers.dirt_newspaper_countdown_page import generate_daily_dir
 from visualizers.helpers.formatting import format_duration, get_base64_asset
 import visualizers.helpers.formatting as formatting
 from visualizers.helpers.generate_static_api import build_static_api
+from visualizers.helpers.ledger import generate_ledger
 from visualizers.helpers.templates import generate_unlock_schedule_component
 from visualizers.helpers.overnight_profit_page import generate_overnight_page
 from visualizers.helpers.profit_ranking_page import generate_profitability_ranking_page
@@ -311,6 +312,9 @@ def generate_interactive_farm_graph(output_filename=f"{outp}/{outp_file}"):
 
     build_static_api()
     print(f"API generated")
+
+    generate_ledger()
+    print("ledger generated")
 
 def generate_detail_page_item(name, item_obj, filename):
     item_unlock_lvl = getattr(item_obj, "unlock_level", 1)

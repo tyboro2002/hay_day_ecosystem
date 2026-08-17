@@ -302,13 +302,23 @@ def process_plant_structure(plant_structure_id, plant_structure_name, plant_stru
 
         produced_plant_link = f"{base_path_v2}/{plants_dir_v2}/{product_id}.json"
 
+    removal_tool_link = None
+    if getattr(plant_structure_obj, 'removal_tool', None):
+        tool_obj = plant_structure_obj.removal_tool
+        tool_name = getattr(tool_obj, 'name', str(tool_obj))
+        tool_id = tool_name.lower().replace(" ", "_").replace("-", "_")
+
+        removal_tool_link = f"{base_path_v2}/{special_items_dir_v2}/{tool_id}.json"
+
     return {
         "id": plant_structure_id,
         "name": plant_structure_name,
         "coin_cost": getattr(plant_structure_obj, 'coin_cost', None),
         "unlock_level": getattr(plant_structure_obj, 'unlock_level', None),
         "max_harvests": getattr(plant_structure_obj, 'max_harvests', 4),
+        "harvest_schedule": getattr(plant_structure_obj, 'harvest_schedule', [2, 3, 4, 4]),
         "produces": produced_plant_link,
+        "removal_tool": removal_tool_link,
         "links": {
             "self": f"{base_path_v2}/{plant_structures_dir_v2}/{plant_structure_id}.json",
             "collection": f"{base_path_v2}/{plant_structures_dir_v2}/index.json",

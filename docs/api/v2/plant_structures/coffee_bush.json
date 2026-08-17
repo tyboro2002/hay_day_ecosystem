@@ -4,7 +4,14 @@
   "coin_cost": 375,
   "unlock_level": 42,
   "max_harvests": 4,
+  "harvest_schedule": [
+    2,
+    3,
+    4,
+    4
+  ],
   "produces": "/hay_day_ecosystem/api/v2/plants/coffee_bean.json",
+  "removal_tool": "/hay_day_ecosystem/api/v2/special_items/axe.json",
   "links": {
     "self": "/hay_day_ecosystem/api/v2/plant_structures/coffee_bush.json",
     "collection": "/hay_day_ecosystem/api/v2/plant_structures/index.json",

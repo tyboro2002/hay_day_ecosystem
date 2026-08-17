@@ -4,7 +4,14 @@
   "coin_cost": 800,
   "unlock_level": 88,
   "max_harvests": 4,
+  "harvest_schedule": [
+    2,
+    3,
+    4,
+    4
+  ],
   "produces": "/hay_day_ecosystem/api/v2/plants/banana.json",
+  "removal_tool": "/hay_day_ecosystem/api/v2/special_items/saw.json",
   "links": {
     "self": "/hay_day_ecosystem/api/v2/plant_structures/banana_tree.json",
     "collection": "/hay_day_ecosystem/api/v2/plant_structures/index.json",
