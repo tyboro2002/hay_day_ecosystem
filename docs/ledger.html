@@ -678,6 +678,26 @@ Enter quantity bought:`, "10");
 
   function renderSummaries(mainFarm) {
     let summaryHtml = '';
+    
+    // Total Available Across All Farms
+    summaryHtml += `<tr><td style="text-align:left;"><b>Total Stock</b></td>`;
+    appState.groups.forEach(group => {
+      const groupItems = appState.items.filter(i => i.group === group.id);
+      const isCollapsed = appState.collapsedGroups && appState.collapsedGroups[group.id];
+    
+      if (isCollapsed) {
+        const totalGroupStock = groupItems.reduce((acc, item) => {
+          return acc + appState.farms.reduce((fAcc, f) => fAcc + (f.inventory[item.id] || 0), 0);
+        }, 0);
+        summaryHtml += `<td class="cell-collapsed"><b>${totalGroupStock}</b></td>`;
+      } else {
+        groupItems.forEach(item => {
+          const totalItemStock = appState.farms.reduce((acc, f) => acc + (f.inventory[item.id] || 0), 0);
+          summaryHtml += `<td><b>${totalItemStock}</b></td>`;
+        });
+      }
+    });
+    summaryHtml += `<td colspan="4"></td></tr>`;
 
     // Row 1: Needed
     summaryHtml += `<tr><td style="text-align:left;"><b>Needed</b></td>`;
