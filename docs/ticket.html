@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hay Day Ticket & Shopping Grid Calculator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <style>
+        :root {
+            color-scheme: dark;
+            --bg-1: #0f172a;
+            --bg-2: #111827;
+            --panel: rgba(17, 24, 39, 0.78);
+            --panel-border: rgba(148, 163, 184, 0.18);
+            --text: #e5e7eb;
+            --muted: #94a3b8;
+            --accent: #f59e0b;
+            --accent-2: #fb7185;
+            --shadow: rgba(0, 0, 0, 0.35);
+        }
+
+        * { box-sizing: border-box; }
+
+        html, body {
+            margin: 0;
+            width: 100%;
+            min-height: 100vh;
+            font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+            background:
+                radial-gradient(circle at top left, rgba(245, 158, 11, 0.16), transparent 30%),
+                radial-gradient(circle at bottom right, rgba(251, 113, 133, 0.13), transparent 28%),
+                var(--bg-1);
+            background-attachment: fixed;
+            color: var(--text);
+        }
+
+        body { padding: 24px 24px 60px; }
+        .wrap { max-width: 1200px; margin: 0 auto; }
+        header { margin-bottom: 24px; }
+        h1 { margin: 0 0 8px; font-size: clamp(1.8rem, 3vw, 2.8rem); letter-spacing: -0.04em; }
+        .subtitle { margin: 0; color: var(--muted); font-size: 0.95rem; }
+
+        .layout-grid {
+            display: grid;
+            grid-template-columns: 1fr 440px;
+            gap: 24px;
+            align-items: start;
+        }
+
+        @media (max-width: 900px) {
+            .layout-grid { grid-template-columns: 1fr; }
+        }
+
+        .card {
+            background: var(--panel);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--panel-border);
+            border-radius: 24px;
+            padding: 24px;
+            box-shadow: 0 20px 60px var(--shadow);
+        }
+
+        .filter-input, input[type="number"] {
+            background: rgba(15, 23, 42, 0.8);
+            color: var(--text);
+            border: 1px solid rgba(148, 163, 184, 0.25);
+            border-radius: 10px;
+            padding: 8px 12px;
+            font-size: 0.9rem;
+            outline: none;
+        }
+
+        .filter-input { width: 100%; margin-bottom: 12px; }
+        .filter-input:focus, input[type="number"]:focus { border-color: var(--accent); }
+
+        .asset-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+            gap: 10px;
+            max-height: 240px;
+            overflow-y: auto;
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(148, 163, 184, 0.15);
+            border-radius: 16px;
+            padding: 12px;
+            margin-bottom: 20px;
+        }
+
+        .asset-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 8px 6px;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            text-align: center;
+        }
+
+        .asset-card:hover {
+            background: rgba(245, 158, 11, 0.15);
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .asset-card.active {
+            background: rgba(245, 158, 11, 0.25);
+            border-color: var(--accent);
+            box-shadow: 0 0 10px rgba(245, 158, 11, 0.3);
+        }
+
+        .asset-card img { width: 40px; height: 40px; object-fit: contain; margin-bottom: 4px; }
+        .asset-card span { font-size: 0.7rem; color: var(--text); word-break: break-word; }
+
+        .row-list { display: flex; flex-direction: column; gap: 10px; }
+        .calc-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(15, 23, 42, 0.72);
+            border: 1px solid rgba(148, 163, 184, 0.16);
+            border-radius: 14px;
+            padding: 10px 14px;
+            flex-wrap: wrap;
+        }
+
+        .item-icon { width: 40px; height: 40px; object-fit: contain; }
+        .item-info { flex: 1; min-width: 120px; }
+        .item-title { font-weight: 600; font-size: 0.9rem; color: #fff; }
+        .item-sub { font-size: 0.75rem; color: var(--muted); display: block; }
+
+        .input-inline {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 2px;
+        }
+        .input-inline label { font-size: 0.65rem; color: var(--muted); text-transform: uppercase; }
+        .input-inline input { width: 75px; text-align: center; }
+
+        .btn-inline-max {
+            background: rgba(245, 158, 11, 0.15);
+            color: var(--accent);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+            border-radius: 10px;
+            height: 35px;
+            padding: 0 10px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.15s ease;
+        }
+        .btn-inline-max:hover {
+            background: rgba(245, 158, 11, 0.3);
+            border-color: var(--accent);
+        }
+
+        .btn-remove {
+            background: rgba(251, 113, 133, 0.15);
+            color: var(--accent-2);
+            border: 1px solid rgba(251, 113, 133, 0.3);
+            border-radius: 10px;
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .payment-section {
+            margin-top: 24px;
+            padding-top: 16px;
+            border-top: 1px dashed rgba(148, 163, 184, 0.2);
+        }
+
+        .payment-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .payment-header h3 {
+            margin: 0;
+            font-size: 0.95rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .payment-selected-info {
+            font-size: 0.8rem;
+            color: var(--muted);
+        }
+
+        .output-column { display: flex; flex-direction: column; gap: 28px; }
+
+        /* RECEIPT CARD STYLES */
+        .receipt-card {
+            background: #fefce8;
+            color: #1c1917;
+            padding: 24px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            position: relative;
+        }
+
+        .receipt-card::after {
+            content: "";
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: linear-gradient(-45deg, transparent 4px, #fefce8 0), linear-gradient(45deg, transparent 4px, #fefce8 0);
+            background-repeat: repeat-x;
+            background-size: 8px 8px;
+        }
+
+        .receipt-header { text-align: center; margin-bottom: 16px; border-bottom: 1px dashed #78716c; padding-bottom: 12px; }
+        .receipt-header h2 { margin: 0; font-size: 1.3rem; color: #1c1917; text-transform: uppercase; word-break: break-word; }
+        .receipt-header p { margin: 4px 0 0; font-size: 0.75rem; color: #57534e; }
+
+        .receipt-table { width: 100%; border-collapse: collapse; font-size: 0.8rem; margin-bottom: 12px; }
+        .receipt-table th { text-align: left; border-bottom: 1px solid #a8a29e; padding-bottom: 4px; }
+        .receipt-table td { padding: 6px 0; vertical-align: top; }
+        .receipt-table .num { text-align: right; }
+
+        .receipt-divider { border-top: 1px dashed #78716c; margin: 8px 0; }
+        .receipt-total { display: flex; justify-content: space-between; font-weight: bold; font-size: 1rem; margin-top: 8px; }
+
+        .receipt-payment {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            font-size: 0.85rem;
+            color: #854d0e;
+            margin-top: 6px;
+            padding-top: 6px;
+            border-top: 1px dashed #a8a29e;
+        }
+
+        /* VISUAL SHOPPING LIST TILES GRID WINDOW */
+        .shopping-grid-card {
+            background-color: #1e293b;
+            border: 1px solid var(--panel-border);
+            padding: 20px;
+            border-radius: 16px;
+            color: #fff;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+
+        .shopping-grid-header {
+            text-align: center;
+            margin-bottom: 14px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 8px;
+        }
+
+        .shopping-grid-header h3 {
+            margin: 0;
+            font-size: 1.2rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .shopping-grid-display {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+            background-color: rgba(15, 23, 42, 0.6);
+            border-radius: 12px;
+            padding: 8px;
+            min-height: 120px;
+        }
+
+        .grid-tile {
+            position: relative;
+            background-color: rgba(30, 41, 59, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            aspect-ratio: 1 / 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .grid-tile img {
+            width: 75%;
+            height: 75%;
+            object-fit: contain;
+        }
+
+        /* Multiplier Badge TOP LEFT */
+        .tile-mult-top-left {
+            position: absolute;
+            top: 4px;
+            left: 6px;
+            font-weight: 900;
+            font-size: 0.9rem;
+            color: #f59e0b;
+            text-shadow: 
+                -1px -1px 0 #000,  
+                 1px -1px 0 #000,
+                -1px  1px 0 #000,
+                 1px  1px 0 #000,
+                 2px 2px 3px rgba(0,0,0,0.9);
+            font-family: Impact, sans-serif;
+            letter-spacing: 0.5px;
+        }
+
+        /* Amount/Quantity Badge BOTTOM RIGHT */
+        .tile-qty-bottom-right {
+            position: absolute;
+            bottom: 3px;
+            right: 6px;
+            font-weight: 900;
+            font-size: 1.15rem;
+            color: #ffffff;
+            text-shadow: 
+                -1.5px -1.5px 0 #000,  
+                 1.5px -1.5px 0 #000,
+                -1.5px  1.5px 0 #000,
+                 1.5px  1.5px 0 #000,
+                 2px 2px 3px rgba(0,0,0,0.9);
+            font-family: Impact, sans-serif;
+            letter-spacing: 0.5px;
+        }
+
+        .shopping-grid-footer {
+            margin-top: 12px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: var(--muted);
+            border-top: 1px dashed rgba(255, 255, 255, 0.1);
+            padding-top: 8px;
+        }
+
+        .btn {
+            background: var(--accent);
+            color: #0f172a;
+            font-weight: 700;
+            padding: 10px 16px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: opacity 0.15s ease;
+            text-align: center;
+        }
+        .btn:hover { opacity: 0.9; }
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text);
+            border: 1px solid var(--panel-border);
+            width: 100%;
+            margin-top: 8px;
+        }
+
+        /* Disclaimer Footer Styling */
+        .sc-disclaimer-footer { margin-top: 40px; color: #666; font-size: 0.8rem; text-align: center; line-height: 1.4; }
+        .sc-disclaimer-footer a { color: #3498db; text-decoration: none; }
+        .sc-disclaimer-footer a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <main class="wrap">
+        <header>
+            <h1>Hay Day Order Ticket & Shopping Grid</h1>
+            <p class="subtitle">Select items, adjust quantities, and export both the text ticket and visual tiles window.</p>
+        </header>
+
+        <div class="layout-grid">
+            <section class="card">
+                <!-- Header Input -->
+                <input type="text" id="title-input" class="filter-input" placeholder="🏷️ Custom Header Title..." oninput="updateReceiptTitle(this.value)">
+
+                <!-- Item Picker -->
+                <input type="text" id="item-search" class="filter-input" placeholder="🔍 Search items by name or category..." oninput="renderAssetGrid()">
+                <div class="asset-grid" id="asset-picker-grid"></div>
+                <div class="row-list" id="basket-rows"></div>
+
+                <!-- Payment Selection Grid -->
+                <div class="payment-section">
+                    <div class="payment-header">
+                        <h3>💳 Pay With Item</h3>
+                        <span id="payment-selected-info" class="payment-selected-info">Selected: None</span>
+                    </div>
+                    <input type="text" id="payment-search" class="filter-input" placeholder="🔍 Search payment items..." oninput="renderPaymentGrid()">
+                    <div class="asset-grid" id="payment-picker-grid"></div>
+                </div>
+            </section>
+
+            <section class="output-column">
+                <!-- OUTPUT 1: ORDER TICKET RECEIPT -->
+                <div>
+                    <div class="receipt-card" id="ticket-canvas-node">
+                        <div class="receipt-header">
+                            <h2 id="receipt-title-display">ORDER TICKET</h2>
+                            <p id="receipt-date">Order Ticket</p>
+                        </div>
+
+                        <table class="receipt-table">
+                            <thead>
+                                <tr>
+                                    <th>Item</th>
+                                    <th class="num">Qty</th>
+                                    <th class="num">Base</th>
+                                    <th class="num">Mult</th>
+                                    <th class="num">Total</th>
+                                </tr>
+                            </thead>
+                            <tbody id="receipt-body">
+                                <tr>
+                                    <td colspan="5" style="text-align: center; color: #78716c; padding: 12px 0;">
+                                        No items added yet.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="receipt-divider"></div>
+                        <div class="receipt-total">
+                            <span>TOTAL:</span>
+                            <span id="receipt-grand-total">0 Coins</span>
+                        </div>
+
+                        <!-- Payment Display -->
+                        <div class="receipt-payment" id="receipt-payment-row" style="display: none;">
+                            <span>PAYMENT:</span>
+                            <span id="receipt-payment-text">0x Item</span>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-secondary" onclick="exportTicketCanvas()">Export Ticket Image</button>
+                </div>
+
+                <!-- OUTPUT 2: VISUAL TILES GRID WINDOW -->
+                <div>
+                    <div class="shopping-grid-card" id="shopping-canvas-node">
+                        <div class="shopping-grid-header">
+                            <h3 id="grid-title-display"></h3>
+                        </div>
+
+                        <!-- Visual Grid Display Container -->
+                        <div class="shopping-grid-display" id="visual-grid-tiles"></div>
+
+                        <div class="shopping-grid-footer">
+                            <span id="grid-display-payment">Payment: None</span>
+                            <span id="grid-display-total-items">(0 items total)</span>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-secondary" onclick="exportShoppingCanvas()">Export Visual Grid Image</button>
+                </div>
+            </section>
+        </div>
+
+        
+<div class="sc-disclaimer-footer">
+    <div style="margin-bottom: 6px; font-weight: bold;">
+        <a href="general_profitability.html">Profit Rankings</a> | 
+        <a href="overnight_strategies.html">Overnight Strategy</a> |
+        <a href="calculator.html">Calculator</a> |
+        <a href="ledger.html">Ledger</a> |
+        <a href="ticket.html">Ticket</a>
+    </div>
+    <hr style="border: 0; border-top: 1px solid #444; margin: 6px 0;">
+    This material is unofficial and is not endorsed by Supercell. For more information see <a href="https://www.supercell.com/fan-content-policy" target="_blank">Supercell's Fan Content Policy</a>.
+</div>
+
+    </main>
+
+    <script>
+        const EMBEDDED_ITEMS = [{"id": "help", "name": "help", "category": "Custom Items", "default_price": 500, "max_base_price": 500, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/extra/help.png"}, {"id": "bem_set", "name": "BEM Set", "category": "Custom Items", "default_price": 356000, "max_base_price": 356000, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/extra/BEM_set.png"}, {"id": "sem_set", "name": "SEM Set", "category": "Custom Items", "default_price": 133500, "max_base_price": 133500, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/extra/SEM_set.png"}, {"id": "lem_set", "name": "LEM Set", "category": "Custom Items", "default_price": 133500, "max_base_price": 133500, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/extra/LEM_set.png"}, {"id": "tem_set", "name": "TEM Set", "category": "Custom Items", "default_price": 133500, "max_base_price": 133500, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/extra/TEM_set.png"}, {"id": "wheat", "name": "Wheat", "category": "Crops", "default_price": 3.6, "max_base_price": 3.6, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/wheat.png"}, {"id": "corn", "name": "Corn", "category": "Crops", "default_price": 7.2, "max_base_price": 7.2, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/corn.png"}, {"id": "carrot", "name": "Carrot", "category": "Crops", "default_price": 7.2, "max_base_price": 7.2, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/carrot.png"}, {"id": "sugarcane", "name": "Sugarcane", "category": "Crops", "default_price": 14.4, "max_base_price": 14.4, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/sugarcane.png"}, {"id": "soybean", "name": "Soybean", "category": "Crops", "default_price": 10.8, "max_base_price": 10.8, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/soybean.png"}, {"id": "indigo", "name": "Indigo", "category": "Crops", "default_price": 25.2, "max_base_price": 25.2, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/indigo.png"}, {"id": "pumpkin", "name": "Pumpkin", "category": "Crops", "default_price": 32.4, "max_base_price": 32.4, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/pumpkin.png"}, {"id": "black_bean", "name": "Black Bean", "category": "Crops", "default_price": 7.2, "max_base_price": 7.2, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/black_bean.png"}, {"id": "chili_pepper", "name": "Chili Pepper", "category": "Crops", "default_price": 36.0, "max_base_price": 36.0, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/chili_pepper.png"}, {"id": "cotton", "name": "Cotton", "category": "Crops", "default_price": 28.8, "max_base_price": 28.8, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/cotton.png"}, {"id": "tomato", "name": "Tomato", "category": "Crops", "default_price": 43.2, "max_base_price": 43.2, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/tomato.png"}, {"id": "strawberry", "name": "Strawberry", "category": "Crops", "default_price": 50.4, "max_base_price": 50.4, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/strawberry.png"}, {"id": "potato", "name": "Potato", "category": "Crops", "default_price": 36.0, "max_base_price": 36.0, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/potato.png"}, {"id": "chamomile", "name": "Chamomile", "category": "Crops", "default_price": 10.8, "max_base_price": 10.8, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/chamomile.png"}, {"id": "asparagus", "name": "Asparagus", "category": "Crops", "default_price": 43.2, "max_base_price": 43.2, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/asparagus.png"}, {"id": "sesame", "name": "Sesame", "category": "Crops", "default_price": 18.0, "max_base_price": 18.0, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/sesame.png"}, {"id": "pineapple", "name": "Pineapple", "category": "Crops", "default_price": 14.0, "max_base_price": 14.0, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/pineapple.png"}, {"id": "lily", "name": "Lily", "category": "Crops", "default_price": 21.0, "max_base_price": 21.0, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/lily.png"}, {"id": "rice", "name": "Rice", "category": "Crops", "default_price": 18.0, "max_base_price": 18.0, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/rice.png"}, {"id": "lettuce", "name": "Lettuce", "category": "Crops", "default_price": 32.0, "max_base_price": 32.0, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/lettuce.png"}, {"id": "garlic", "name": "Garlic", "category": "Crops", "default_price": 14.0, "max_base_price": 14.0, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/garlic.png"}, {"id": "sunflower", "name": "Sunflower", "category": "Crops", "default_price": 21.0, "max_base_price": 21.0, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/sunflower.png"}, {"id": "cabbage", "name": "Cabbage", "category": "Crops", "default_price": 18.0, "max_base_price": 18.0, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/cabbage.png"}, {"id": "onion", "name": "Onion", "category": "Crops", "default_price": 39.0, "max_base_price": 39.0, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/onion.png"}, {"id": "cucumber", "name": "Cucumber", "category": "Crops", "default_price": 14.0, "max_base_price": 14.0, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/cucumber.png"}, {"id": "beetroot", "name": "Beetroot", "category": "Crops", "default_price": 14.0, "max_base_price": 14.0, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/beetroot.png"}, {"id": "bell_pepper", "name": "Bell Pepper", "category": "Crops", "default_price": 36.0, "max_base_price": 36.0, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/bell_pepper.png"}, {"id": "ginger", "name": "Ginger", "category": "Crops", "default_price": 28.0, "max_base_price": 28.0, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/ginger.png"}, {"id": "tea_leaf", "name": "Tea Leaf", "category": "Crops", "default_price": 43.0, "max_base_price": 43.0, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/tea_leaf.png"}, {"id": "peony", "name": "Peony", "category": "Crops", "default_price": 36.0, "max_base_price": 36.0, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/peony.png"}, {"id": "broccoli", "name": "Broccoli", "category": "Crops", "default_price": 21.0, "max_base_price": 21.0, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/broccoli.png"}, {"id": "grapes", "name": "Grapes", "category": "Crops", "default_price": 32.0, "max_base_price": 32.0, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/grapes.png"}, {"id": "mint", "name": "Mint", "category": "Crops", "default_price": 32.0, "max_base_price": 32.0, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/mint.png"}, {"id": "passion_fruit", "name": "Passion Fruit", "category": "Crops", "default_price": 18.0, "max_base_price": 18.0, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/passion_fruit.png"}, {"id": "mushroom", "name": "Mushroom", "category": "Crops", "default_price": 10.0, "max_base_price": 10.0, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/mushroom.png"}, {"id": "eggplant", "name": "Eggplant", "category": "Crops", "default_price": 14.0, "max_base_price": 14.0, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/eggplant.png"}, {"id": "watermelon", "name": "Watermelon", "category": "Crops", "default_price": 39.0, "max_base_price": 39.0, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/watermelon.png"}, {"id": "clay", "name": "Clay", "category": "Crops", "default_price": 18.0, "max_base_price": 18.0, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/clay.png"}, {"id": "chickpea", "name": "Chickpea", "category": "Crops", "default_price": 18.0, "max_base_price": 18.0, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/chickpea.png"}, {"id": "oats", "name": "Oats", "category": "Crops", "default_price": 7.0, "max_base_price": 7.0, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/oats.png"}, {"id": "apple", "name": "Apple", "category": "Plants", "default_price": 39.6, "max_base_price": 39.6, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/apple.png"}, {"id": "raspberry", "name": "Raspberry", "category": "Plants", "default_price": 46.8, "max_base_price": 46.8, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/raspberry.png"}, {"id": "cherry", "name": "Cherry", "category": "Plants", "default_price": 68.4, "max_base_price": 68.4, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/cherry.png"}, {"id": "blackberry", "name": "Blackberry", "category": "Plants", "default_price": 82.8, "max_base_price": 82.8, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/blackberry.png"}, {"id": "blueberry", "name": "Blueberry", "category": "Plants", "default_price": 82.8, "max_base_price": 82.8, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/blueberry.png"}, {"id": "cacao", "name": "Cacao", "category": "Plants", "default_price": 86.4, "max_base_price": 86.4, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/cacao.png"}, {"id": "coffee_bean", "name": "Coffee Bean", "category": "Plants", "default_price": 64.8, "max_base_price": 64.8, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/coffee_bean.png"}, {"id": "olive", "name": "Olive", "category": "Plants", "default_price": 82.0, "max_base_price": 82.0, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/olive.png"}, {"id": "lemon", "name": "Lemon", "category": "Plants", "default_price": 66.0, "max_base_price": 66.0, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/lemon.png"}, {"id": "orange", "name": "Orange", "category": "Plants", "default_price": 97.0, "max_base_price": 97.0, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/orange.png"}, {"id": "peach", "name": "Peach", "category": "Plants", "default_price": 100.0, "max_base_price": 100.0, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/peach.png"}, {"id": "banana", "name": "Banana", "category": "Plants", "default_price": 104.0, "max_base_price": 104.0, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/banana.png"}, {"id": "plum", "name": "Plum", "category": "Plants", "default_price": 82.0, "max_base_price": 82.0, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/plum.png"}, {"id": "mango", "name": "Mango", "category": "Plants", "default_price": 100.0, "max_base_price": 100.0, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/mango.png"}, {"id": "coconut", "name": "Coconut", "category": "Plants", "default_price": 108.0, "max_base_price": 108.0, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/coconut.png"}, {"id": "guava", "name": "Guava", "category": "Plants", "default_price": 111.0, "max_base_price": 111.0, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/guava.png"}, {"id": "pomegranate", "name": "Pomegranate", "category": "Plants", "default_price": 111.0, "max_base_price": 111.0, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/pomegranate.png"}, {"id": "egg", "name": "Egg", "category": "Animal Items", "default_price": 18.0, "max_base_price": 18.0, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/egg.png"}, {"id": "milk", "name": "Milk", "category": "Animal Items", "default_price": 32.4, "max_base_price": 32.4, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/milk.png"}, {"id": "bacon", "name": "Bacon", "category": "Animal Items", "default_price": 50.4, "max_base_price": 50.4, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/bacon.png"}, {"id": "wool", "name": "Wool", "category": "Animal Items", "default_price": 54.0, "max_base_price": 54.0, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/wool.png"}, {"id": "lamb_chop", "name": "Lamb Chop", "category": "Animal Items", "default_price": 36.0, "max_base_price": 36.0, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/lamb_chop.png"}, {"id": "fish_fillet", "name": "Fish Fillet", "category": "Animal Items", "default_price": 54.0, "max_base_price": 54.0, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/fish_fillet.png"}, {"id": "goat_milk", "name": "Goat Milk", "category": "Animal Items", "default_price": 64.8, "max_base_price": 64.8, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/goat_milk.png"}, {"id": "honeycomb", "name": "Honeycomb", "category": "Animal Items", "default_price": 68.4, "max_base_price": 68.4, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/honeycomb.png"}, {"id": "peanuts", "name": "Peanuts", "category": "Animal Items", "default_price": 234.0, "max_base_price": 234.0, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/peanuts.png"}, {"id": "bread", "name": "Bread", "category": "Machined Items", "default_price": 21.6, "max_base_price": 21.6, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/bread.png"}, {"id": "corn_bread", "name": "Corn Bread", "category": "Machined Items", "default_price": 72.0, "max_base_price": 72.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/corn_bread.png"}, {"id": "cookie", "name": "Cookie", "category": "Machined Items", "default_price": 104.4, "max_base_price": 104.4, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/cookie.png"}, {"id": "raspberry_muffin", "name": "Raspberry Muffin", "category": "Machined Items", "default_price": 140.4, "max_base_price": 140.4, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/raspberry_muffin.png"}, {"id": "blackberry_muffin", "name": "Blackberry Muffin", "category": "Machined Items", "default_price": 226.8, "max_base_price": 226.8, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/blackberry_muffin.png"}, {"id": "pizza", "name": "Pizza", "category": "Machined Items", "default_price": 190.8, "max_base_price": 190.8, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/pizza.png"}, {"id": "blueberry_muffin", "name": "Blueberry muffin", "category": "Machined Items", "default_price": 230.4, "max_base_price": 230.4, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/blueberry_muffin.png"}, {"id": "spicy_pizza", "name": "Spicy pizza", "category": "Machined Items", "default_price": 226.8, "max_base_price": 226.8, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/spicy_pizza.png"}, {"id": "potato_bread", "name": "Potato Bread", "category": "Machined Items", "default_price": 284.4, "max_base_price": 284.4, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/potato_bread.png"}, {"id": "frutti_di_mare_pizza", "name": "Frutti Di Mare Pizza", "category": "Machined Items", "default_price": 403.2, "max_base_price": 403.2, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/frutti_di_mare_pizza.png"}, {"id": "gingerbread_cookie", "name": "Gingerbread Cookie", "category": "Machined Items", "default_price": 273.0, "max_base_price": 273.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/gingerbread_cookie.png"}, {"id": "banana_bread", "name": "Banana Bread", "category": "Machined Items", "default_price": 424.0, "max_base_price": 424.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/banana_bread.png"}, {"id": "macaroon", "name": "Macaroon", "category": "Machined Items", "default_price": 421.0, "max_base_price": 421.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/macaroon.png"}, {"id": "pineapple_coconut_bars", "name": "Pineapple Coconut Bars", "category": "Machined Items", "default_price": 284.0, "max_base_price": 284.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/pineapple_coconut_bars.png"}, {"id": "cream", "name": "Cream", "category": "Machined Items", "default_price": 50.4, "max_base_price": 50.4, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/cream.png"}, {"id": "butter", "name": "Butter", "category": "Machined Items", "default_price": 82.8, "max_base_price": 82.8, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/butter.png"}, {"id": "cheese", "name": "Cheese", "category": "Machined Items", "default_price": 122.4, "max_base_price": 122.4, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/cheese.png"}, {"id": "goat_cheese", "name": "Goat Cheese", "category": "Machined Items", "default_price": 162.0, "max_base_price": 162.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/goat_cheese.png"}, {"id": "brown_sugar", "name": "Brown Sugar", "category": "Machined Items", "default_price": 32.4, "max_base_price": 32.4, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/brown_sugar.png"}, {"id": "white_sugar", "name": "White Sugar", "category": "Machined Items", "default_price": 50.4, "max_base_price": 50.4, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/white_sugar.png"}, {"id": "syrup", "name": "Syrup", "category": "Machined Items", "default_price": 90.0, "max_base_price": 90.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/syrup.png"}, {"id": "popcorn", "name": "Popcorn", "category": "Machined Items", "default_price": 32.4, "max_base_price": 32.4, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/popcorn.png"}, {"id": "buttered_popcorn", "name": "Buttered Popcorn", "category": "Machined Items", "default_price": 126.0, "max_base_price": 126.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/buttered_popcorn.png"}, {"id": "chili_popcorn", "name": "Chili Popcorn", "category": "Machined Items", "default_price": 122.4, "max_base_price": 122.4, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/chili_popcorn.png"}, {"id": "honey_popcorn", "name": "Honey Popcorn", "category": "Machined Items", "default_price": 360.0, "max_base_price": 360.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/honey_popcorn.png"}, {"id": "chocolate_popcorn", "name": "Chocolate Popcorn", "category": "Machined Items", "default_price": 248.4, "max_base_price": 248.4, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/chocolate_popcorn.png"}, {"id": "snack_mix", "name": "Snack Mix", "category": "Machined Items", "default_price": 309.0, "max_base_price": 309.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/snack_mix.png"}, {"id": "pancake", "name": "Pancake", "category": "Machined Items", "default_price": 108.0, "max_base_price": 108.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/pancake.png"}, {"id": "bacon_and_eggs", "name": "Bacon And Eggs", "category": "Machined Items", "default_price": 201.6, "max_base_price": 201.6, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/bacon_and_eggs.png"}, {"id": "hamburger", "name": "Hamburger", "category": "Machined Items", "default_price": 180.0, "max_base_price": 180.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/hamburger.png"}, {"id": "grilled_lamb_skewer", "name": "Grilled Lamb Skewer", "category": "Machined Items", "default_price": 90.0, "max_base_price": 90.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/grilled_lamb_skewer.png"}, {"id": "fish_burger", "name": "Fish Burger", "category": "Machined Items", "default_price": 226.8, "max_base_price": 226.8, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/fish_burger.png"}, {"id": "roasted_tomatoes", "name": "Roasted Tomatoes", "category": "Machined Items", "default_price": 118.8, "max_base_price": 118.8, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/roasted_tomatoes.png"}, {"id": "baked_potato", "name": "Baked Potato", "category": "Machined Items", "default_price": 298.8, "max_base_price": 298.8, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/baked_potato.png"}, {"id": "fish_and_chips", "name": "Fish And Chips", "category": "Machined Items", "default_price": 244.8, "max_base_price": 244.8, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/fish_and_chips.png"}, {"id": "lobster_skewer", "name": "Lobster Skewer", "category": "Machined Items", "default_price": 417.6, "max_base_price": 417.6, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/lobster_skewer.png"}, {"id": "garlic_bread", "name": "Garlic Bread", "category": "Machined Items", "default_price": 198.0, "max_base_price": 198.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/garlic_bread.png"}, {"id": "grilled_asparagus", "name": "Grilled Asparagus", "category": "Machined Items", "default_price": 486.0, "max_base_price": 486.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/grilled_asparagus.png"}, {"id": "grilled_onion", "name": "Grilled Onion", "category": "Machined Items", "default_price": 190.0, "max_base_price": 190.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/grilled_onion.png"}, {"id": "winter_veggies", "name": "Winter Veggies", "category": "Machined Items", "default_price": 198.0, "max_base_price": 198.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/winter_veggies.png"}, {"id": "stuffed_peppers", "name": "Stuffed Peppers", "category": "Machined Items", "default_price": 352.0, "max_base_price": 352.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/stuffed_peppers.png"}, {"id": "grilled_eggplant", "name": "Grilled Eggplant", "category": "Machined Items", "default_price": 324.0, "max_base_price": 324.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/grilled_eggplant.png"}, {"id": "banana_pancakes", "name": "Banana Pancakes", "category": "Machined Items", "default_price": 352.0, "max_base_price": 352.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/banana_pancakes.png"}, {"id": "fish_skewer", "name": "Fish Skewer", "category": "Machined Items", "default_price": 176.0, "max_base_price": 176.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/fish_skewer.png"}, {"id": "carrot_pie", "name": "Carrot Pie", "category": "Machined Items", "default_price": 82.8, "max_base_price": 82.8, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/carrot_pie.png"}, {"id": "pumpkin_pie", "name": "Pumpkin Pie", "category": "Machined Items", "default_price": 158.4, "max_base_price": 158.4, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/pumpkin_pie.png"}, {"id": "bacon_pie", "name": "Bacon Pie", "category": "Machined Items", "default_price": 219.6, "max_base_price": 219.6, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/bacon_pie.png"}, {"id": "apple_pie", "name": "Apple Pie", "category": "Machined Items", "default_price": 270.0, "max_base_price": 270.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/apple_pie.png"}, {"id": "fish_pie", "name": "Fish Pie", "category": "Machined Items", "default_price": 226.8, "max_base_price": 226.8, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/fish_pie.png"}, {"id": "feta_pie", "name": "Feta Pie", "category": "Machined Items", "default_price": 223.2, "max_base_price": 223.2, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/feta_pie.png"}, {"id": "casserole", "name": "Casserole", "category": "Machined Items", "default_price": 367.2, "max_base_price": 367.2, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/casserole.png"}, {"id": "shepherd's_pie", "name": "Shepherd's Pie", "category": "Machined Items", "default_price": 280.8, "max_base_price": 280.8, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/shepherd's_pie.png"}, {"id": "asparagus_quiche", "name": "Asparagus Quiche", "category": "Machined Items", "default_price": 302.4, "max_base_price": 302.4, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/asparagus_quiche.png"}, {"id": "chocolate_pie", "name": "Chocolate Pie", "category": "Machined Items", "default_price": 514.0, "max_base_price": 514.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/chocolate_pie.png"}, {"id": "lemon_pie", "name": "Lemon Pie", "category": "Machined Items", "default_price": 446.0, "max_base_price": 446.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/lemon_pie.png"}, {"id": "peach_tart", "name": "Peach Tart", "category": "Machined Items", "default_price": 435.0, "max_base_price": 435.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/peach_tart.png"}, {"id": "passion_fruit_pie", "name": "Passion Fruit Pie", "category": "Machined Items", "default_price": 111.0, "max_base_price": 111.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/passion_fruit_pie.png"}, {"id": "mushroom_pot_pie", "name": "Mushroom Pot Pie", "category": "Machined Items", "default_price": 162.0, "max_base_price": 162.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/mushroom_pot_pie.png"}, {"id": "eggplant_parmesan", "name": "Eggplant Parmesan", "category": "Machined Items", "default_price": 442.0, "max_base_price": 442.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/eggplant_parmesan.png"}, {"id": "sweater", "name": "Sweater", "category": "Machined Items", "default_price": 151.2, "max_base_price": 151.2, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/sweater.png"}, {"id": "cotton_fabric", "name": "Cotton Fabric", "category": "Machined Items", "default_price": 108.0, "max_base_price": 108.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/cotton_fabric.png"}, {"id": "blue_woolly_hat", "name": "Blue Woolly Hat", "category": "Machined Items", "default_price": 111.6, "max_base_price": 111.6, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/blue_woolly_hat.png"}, {"id": "blue_sweater", "name": "Blue Sweater", "category": "Machined Items", "default_price": 208.8, "max_base_price": 208.8, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/blue_sweater.png"}, {"id": "red_scarf", "name": "Red Scarf", "category": "Machined Items", "default_price": 288.0, "max_base_price": 288.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/red_scarf.png"}, {"id": "flower_shawl", "name": "Flower Shawl", "category": "Machined Items", "default_price": 295.0, "max_base_price": 295.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/flower_shawl.png"}, {"id": "cotton_shirt", "name": "Cotton Shirt", "category": "Machined Items", "default_price": 241.2, "max_base_price": 241.2, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/cotton_shirt.png"}, {"id": "wooly_chaps", "name": "Wooly Chaps", "category": "Machined Items", "default_price": 309.6, "max_base_price": 309.6, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/wooly_chaps.png"}, {"id": "violet_dress", "name": "Violet Dress", "category": "Machined Items", "default_price": 327.6, "max_base_price": 327.6, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/violet_dress.png"}, {"id": "soothing_pad", "name": "Soothing Pad", "category": "Machined Items", "default_price": 324.0, "max_base_price": 324.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/soothing_pad.png"}, {"id": "pillow", "name": "Pillow", "category": "Machined Items", "default_price": 676.0, "max_base_price": 676.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/pillow.png"}, {"id": "blanket", "name": "Blanket", "category": "Machined Items", "default_price": 1098.0, "max_base_price": 1098.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/blanket.png"}, {"id": "carrot_cake", "name": "Carrot Cake", "category": "Machined Items", "default_price": 165.6, "max_base_price": 165.6, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/carrot_cake.png"}, {"id": "cream_cake", "name": "Cream Cake", "category": "Machined Items", "default_price": 219.6, "max_base_price": 219.6, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/cream_cake.png"}, {"id": "red_berry_cake", "name": "Red Berry Cake", "category": "Machined Items", "default_price": 255.6, "max_base_price": 255.6, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/red_berry_cake.png"}, {"id": "cheesecake", "name": "Cheesecake", "category": "Machined Items", "default_price": 284.4, "max_base_price": 284.4, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/cheesecake.png"}, {"id": "blueberry_cheesecake", "name": "Blueberry Cheesecake", "category": "Machined Items", "default_price": 500.4, "max_base_price": 500.4, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/blueberry_cheesecake.png"}, {"id": "strawberry_cake", "name": "Strawberry Cake", "category": "Machined Items", "default_price": 316.8, "max_base_price": 316.8, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/strawberry_cake.png"}, {"id": "chocolate_cake", "name": "Chocolate Cake", "category": "Machined Items", "default_price": 320.4, "max_base_price": 320.4, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/chocolate_cake.png"}, {"id": "potato_feta_cake", "name": "Potato Feta Cake", "category": "Machined Items", "default_price": 309.6, "max_base_price": 309.6, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/potato_feta_cake.png"}, {"id": "honey_apple_cake", "name": "Honey Apple Cake", "category": "Machined Items", "default_price": 482.4, "max_base_price": 482.4, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/honey_apple_cake.png"}, {"id": "fancy_cake", "name": "Fancy Cake", "category": "Machined Items", "default_price": 450.0, "max_base_price": 450.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/fancy_cake.png"}, {"id": "pineapple_cake", "name": "Pineapple Cake", "category": "Machined Items", "default_price": 259.0, "max_base_price": 259.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/pineapple_cake.png"}, {"id": "lemon_cake", "name": "Lemon Cake", "category": "Machined Items", "default_price": 896.0, "max_base_price": 896.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/lemon_cake.png"}, {"id": "fruit_cake", "name": "Fruit Cake", "category": "Machined Items", "default_price": 450.0, "max_base_price": 450.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/fruit_cake.png"}, {"id": "chocolate_roll", "name": "Chocolate Roll", "category": "Machined Items", "default_price": 604.0, "max_base_price": 604.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/chocolate_roll.png"}, {"id": "pomegranate_cake", "name": "Pomegranate Cake", "category": "Machined Items", "default_price": 316.0, "max_base_price": 316.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/pomegranate_cake.png"}, {"id": "silver_bar", "name": "Silver Bar", "category": "Machined Items", "default_price": 147.6, "max_base_price": 147.6, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/silver_bar.png"}, {"id": "gold_bar", "name": "Gold Bar", "category": "Machined Items", "default_price": 180.0, "max_base_price": 180.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/gold_bar.png"}, {"id": "platinum_bar", "name": "Platinum Bar", "category": "Machined Items", "default_price": 205.2, "max_base_price": 205.2, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/platinum_bar.png"}, {"id": "refined_coal", "name": "Refined coal", "category": "Machined Items", "default_price": 108.0, "max_base_price": 108.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/refined_coal.png"}, {"id": "iron_bar", "name": "Iron Bar", "category": "Machined Items", "default_price": 129.6, "max_base_price": 129.6, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/iron_bar.png"}, {"id": "carrot_juice", "name": "Carrot Juice", "category": "Machined Items", "default_price": 46.8, "max_base_price": 46.8, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/carrot_juice.png"}, {"id": "apple_juice", "name": "Apple Juice", "category": "Machined Items", "default_price": 129.6, "max_base_price": 129.6, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/apple_juice.png"}, {"id": "cherry_juice", "name": "Cherry Juice", "category": "Machined Items", "default_price": 216.0, "max_base_price": 216.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/cherry_juice.png"}, {"id": "tomato_juice", "name": "Tomato Juice", "category": "Machined Items", "default_price": 162.0, "max_base_price": 162.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/tomato_juice.png"}, {"id": "berry_juice", "name": "Berry Juice", "category": "Machined Items", "default_price": 205.2, "max_base_price": 205.2, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/berry_juice.png"}, {"id": "pineapple_juice", "name": "Pineapple Juice", "category": "Machined Items", "default_price": 68.0, "max_base_price": 68.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/pineapple_juice.png"}, {"id": "orange_juice", "name": "Orange Juice", "category": "Machined Items", "default_price": 234.0, "max_base_price": 234.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/orange_juice.png"}, {"id": "grape_juice", "name": "Grape Juice", "category": "Machined Items", "default_price": 104.0, "max_base_price": 104.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/grape_juice.png"}, {"id": "passion_fruit_juice", "name": "Passion Fruit Juice", "category": "Machined Items", "default_price": 64.0, "max_base_price": 64.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/passion_fruit_juice.png"}, {"id": "watermelon_juice", "name": "Watermelon Juice", "category": "Machined Items", "default_price": 108.0, "max_base_price": 108.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/watermelon_juice.png"}, {"id": "mango_juice", "name": "Mango Juice", "category": "Machined Items", "default_price": 230.0, "max_base_price": 230.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/mango_juice.png"}, {"id": "guava_juice", "name": "Guava Juice", "category": "Machined Items", "default_price": 252.0, "max_base_price": 252.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/guava_juice.png"}, {"id": "vanilla_ice_cream", "name": "Vanilla Ice Cream", "category": "Machined Items", "default_price": 172.8, "max_base_price": 172.8, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/vanilla_ice_cream.png"}, {"id": "cherry_popsicle", "name": "Cherry Popsicle", "category": "Machined Items", "default_price": 352.8, "max_base_price": 352.8, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/cherry_popsicle.png"}, {"id": "strawberry_ice_cream", "name": "Strawberry Ice Cream", "category": "Machined Items", "default_price": 331.2, "max_base_price": 331.2, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/strawberry_ice_cream.png"}, {"id": "chocolate_ice_cream", "name": "Chocolate Ice Cream", "category": "Machined Items", "default_price": 342.0, "max_base_price": 342.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/chocolate_ice_cream.png"}, {"id": "sesame_ice_cream", "name": "Sesame Ice Cream", "category": "Machined Items", "default_price": 176.4, "max_base_price": 176.4, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/sesame_ice_cream.png"}, {"id": "peanut_butter_milkshake", "name": "Peanut Butter Milkshake", "category": "Machined Items", "default_price": 619.0, "max_base_price": 619.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/peanut_butter_milkshake.png"}, {"id": "orange_sorbet", "name": "Orange Sorbet", "category": "Machined Items", "default_price": 399.0, "max_base_price": 399.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/orange_sorbet.png"}, {"id": "affogato", "name": "Affogato", "category": "Machined Items", "default_price": 435.0, "max_base_price": 435.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/affogato.png"}, {"id": "peach_ice_cream", "name": "Peach Ice Cream", "category": "Machined Items", "default_price": 450.0, "max_base_price": 450.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/peach_ice_cream.png"}, {"id": "mint_ice_cream", "name": "Mint Ice Cream", "category": "Machined Items", "default_price": 288.0, "max_base_price": 288.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/mint_ice_cream.png"}, {"id": "banana_split", "name": "Banana Split", "category": "Machined Items", "default_price": 403.0, "max_base_price": 403.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/banana_split.png"}, {"id": "coconut_ice_cream", "name": "Coconut Ice Cream", "category": "Machined Items", "default_price": 320.0, "max_base_price": 320.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/coconut_ice_cream.png"}, {"id": "fruit_sorbet", "name": "Fruit Sorbet", "category": "Machined Items", "default_price": 518.0, "max_base_price": 518.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/fruit_sorbet.png"}, {"id": "lamb_doner_wrap", "name": "Lamb doner wrap", "category": "Machined Items", "default_price": 172.8, "max_base_price": 172.8, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/lamb_doner_wrap.png"}, {"id": "spicy_bean_doner", "name": "Spicy bean doner", "category": "Machined Items", "default_price": 471.6, "max_base_price": 471.6, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/spicy_bean_doner.png"}, {"id": "tower_doner_supreme", "name": "Tower Doner Supreme", "category": "Machined Items", "default_price": 356.0, "max_base_price": 356.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/tower_doner_supreme.png"}, {"id": "apple_jam", "name": "Apple Jam", "category": "Machined Items", "default_price": 219.6, "max_base_price": 219.6, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/apple_jam.png"}, {"id": "raspberry_jam", "name": "Raspberry Jam", "category": "Machined Items", "default_price": 252.0, "max_base_price": 252.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/raspberry_jam.png"}, {"id": "blackberry_jam", "name": "Blackberry Jam", "category": "Machined Items", "default_price": 388.8, "max_base_price": 388.8, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/blackberry_jam.png"}, {"id": "cherry_jam", "name": "Cherry Jam", "category": "Machined Items", "default_price": 334.8, "max_base_price": 334.8, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/cherry_jam.png"}, {"id": "strawberry_jam", "name": "Strawberry Jam", "category": "Machined Items", "default_price": 270.0, "max_base_price": 270.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/strawberry_jam.png"}, {"id": "blueberry_chutney", "name": "Blueberry Chutney", "category": "Machined Items", "default_price": 579.0, "max_base_price": 579.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/blueberry_chutney.png"}, {"id": "marmalade", "name": "Marmalade", "category": "Machined Items", "default_price": 457.0, "max_base_price": 457.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/marmalade.png"}, {"id": "peach_jam", "name": "Peach Jam", "category": "Machined Items", "default_price": 464.0, "max_base_price": 464.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/peach_jam.png"}, {"id": "grape_jam", "name": "Grape Jam", "category": "Machined Items", "default_price": 162.0, "max_base_price": 162.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/grape_jam.png"}, {"id": "plum_jam", "name": "Plum Jam", "category": "Machined Items", "default_price": 385.0, "max_base_price": 385.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/plum_jam.png"}, {"id": "passion_fruit_jam", "name": "Passion Fruit Jam", "category": "Machined Items", "default_price": 118.0, "max_base_price": 118.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/passion_fruit_jam.png"}, {"id": "bracelet", "name": "Bracelet", "category": "Machined Items", "default_price": 514.8, "max_base_price": 514.8, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/bracelet.png"}, {"id": "necklace", "name": "Necklace", "category": "Machined Items", "default_price": 727.2, "max_base_price": 727.2, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/necklace.png"}, {"id": "diamond_ring", "name": "Diamond Ring", "category": "Machined Items", "default_price": 824.4, "max_base_price": 824.4, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/diamond_ring.png"}, {"id": "iron_bracelet", "name": "Iron Bracelet", "category": "Machined Items", "default_price": 658.8, "max_base_price": 658.8, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/iron_bracelet.png"}, {"id": "flower_pendant", "name": "Flower Pendant", "category": "Machined Items", "default_price": 698.0, "max_base_price": 698.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/flower_pendant.png"}, {"id": "honey", "name": "Honey", "category": "Machined Items", "default_price": 154.8, "max_base_price": 154.8, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/honey.png"}, {"id": "beeswax", "name": "Beeswax", "category": "Machined Items", "default_price": 234.0, "max_base_price": 234.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/beeswax.png"}, {"id": "espresso", "name": "Espresso", "category": "Machined Items", "default_price": 248.4, "max_base_price": 248.4, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/espresso.png"}, {"id": "caff\u00e8_latte", "name": "Caff\u00e8 Latte", "category": "Machined Items", "default_price": 219.6, "max_base_price": 219.6, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/caff\u00e8_latte.png"}, {"id": "caff\u00e8_mocha", "name": "Caff\u00e8 Mocha", "category": "Machined Items", "default_price": 291.6, "max_base_price": 291.6, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/caff\u00e8_mocha.png"}, {"id": "raspberry_mocha", "name": "Raspberry Mocha", "category": "Machined Items", "default_price": 259.2, "max_base_price": 259.2, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/raspberry_mocha.png"}, {"id": "hot_chocolate", "name": "Hot Chocolate", "category": "Machined Items", "default_price": 316.8, "max_base_price": 316.8, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/hot_chocolate.png"}, {"id": "caramel_latte", "name": "Caramel Latte", "category": "Machined Items", "default_price": 345.0, "max_base_price": 345.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/caramel_latte.png"}, {"id": "iced_banana_latte", "name": "Iced Banana Latte", "category": "Machined Items", "default_price": 277.0, "max_base_price": 277.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/iced_banana_latte.png"}, {"id": "lobster_tail", "name": "Lobster Tail", "category": "Machined Items", "default_price": 201.6, "max_base_price": 201.6, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/lobster_tail.png"}, {"id": "lobster_soup", "name": "Lobster Soup", "category": "Machined Items", "default_price": 612.0, "max_base_price": 612.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/lobster_soup.png"}, {"id": "lamb_soup", "name": "Lamb Soup", "category": "Machined Items", "default_price": 180.0, "max_base_price": 180.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/lamb_soup.png"}, {"id": "tomato_soup", "name": "Tomato Soup", "category": "Machined Items", "default_price": 478.8, "max_base_price": 478.8, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/tomato_soup.png"}, {"id": "pumpkin_soup", "name": "Pumpkin Soup", "category": "Machined Items", "default_price": 392.4, "max_base_price": 392.4, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/pumpkin_soup.png"}, {"id": "asparagus_soup", "name": "Asparagus Soup", "category": "Machined Items", "default_price": 255.0, "max_base_price": 255.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/asparagus_soup.png"}, {"id": "fish_soup", "name": "Fish Soup", "category": "Machined Items", "default_price": 298.0, "max_base_price": 298.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/fish_soup.png"}, {"id": "cabbage_soup", "name": "Cabbage Soup", "category": "Machined Items", "default_price": 270.0, "max_base_price": 270.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/cabbage_soup.png"}, {"id": "onion_soup", "name": "Onion Soup", "category": "Machined Items", "default_price": 327.0, "max_base_price": 327.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/onion_soup.png"}, {"id": "noodle_soup", "name": "Noodle Soup", "category": "Machined Items", "default_price": 432.0, "max_base_price": 432.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/noodle_soup.png"}, {"id": "potato_soup", "name": "Potato Soup", "category": "Machined Items", "default_price": 255.0, "max_base_price": 255.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/potato_soup.png"}, {"id": "bell_pepper_soup", "name": "Bell Pepper Soup", "category": "Machined Items", "default_price": 439.0, "max_base_price": 439.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/bell_pepper_soup.png"}, {"id": "broccoli_soup", "name": "Broccoli Soup", "category": "Machined Items", "default_price": 237.0, "max_base_price": 237.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/broccoli_soup.png"}, {"id": "mushroom_soup", "name": "Mushroom Soup", "category": "Machined Items", "default_price": 176.0, "max_base_price": 176.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/mushroom_soup.png"}, {"id": "strawberry_candle", "name": "Strawberry Candle", "category": "Machined Items", "default_price": 370.8, "max_base_price": 370.8, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/strawberry_candle.png"}, {"id": "raspberry_candle", "name": "Raspberry Candle", "category": "Machined Items", "default_price": 360.0, "max_base_price": 360.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/raspberry_candle.png"}, {"id": "lemon_candle", "name": "Lemon Candle", "category": "Machined Items", "default_price": 457.0, "max_base_price": 457.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/lemon_candle.png"}, {"id": "colorful_candles", "name": "Colorful Candles", "category": "Machined Items", "default_price": 324.0, "max_base_price": 324.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/colorful_candles.png"}, {"id": "floral_candle", "name": "Floral Candle", "category": "Machined Items", "default_price": 442.0, "max_base_price": 442.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/floral_candle.png"}, {"id": "rustic_bouquet", "name": "Rustic Bouquet", "category": "Machined Items", "default_price": 208.8, "max_base_price": 208.8, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/rustic_bouquet.png"}, {"id": "bright_bouquet", "name": "Bright Bouquet", "category": "Machined Items", "default_price": 338.0, "max_base_price": 338.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/bright_bouquet.png"}, {"id": "gracious_bouquet", "name": "Gracious Bouquet", "category": "Machined Items", "default_price": 500.0, "max_base_price": 500.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/gracious_bouquet.png"}, {"id": "candy_bouquet", "name": "Candy Bouquet", "category": "Machined Items", "default_price": 554.0, "max_base_price": 554.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/candy_bouquet.png"}, {"id": "birthday_bouquet", "name": "Birthday Bouquet", "category": "Machined Items", "default_price": 349.0, "max_base_price": 349.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/birthday_bouquet.png"}, {"id": "soft_bouquet", "name": "Soft Bouquet", "category": "Machined Items", "default_price": 298.0, "max_base_price": 298.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/soft_bouquet.png"}, {"id": "veggie_bouquet", "name": "Veggie Bouquet", "category": "Machined Items", "default_price": 352.0, "max_base_price": 352.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/veggie_bouquet.png"}, {"id": "duck_feather", "name": "Duck Feather", "category": "Machined Items", "default_price": 140.4, "max_base_price": 140.4, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/duck_feather.png"}, {"id": "caramel_apple", "name": "Caramel Apple", "category": "Machined Items", "default_price": 255.0, "max_base_price": 255.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/caramel_apple.png"}, {"id": "toffee", "name": "Toffee", "category": "Machined Items", "default_price": 176.0, "max_base_price": 176.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/toffee.png"}, {"id": "chocolate", "name": "Chocolate", "category": "Machined Items", "default_price": 460.0, "max_base_price": 460.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/chocolate.png"}, {"id": "lollipop", "name": "Lollipop", "category": "Machined Items", "default_price": 342.0, "max_base_price": 342.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/lollipop.png"}, {"id": "jelly_beans", "name": "Jelly Beans", "category": "Machined Items", "default_price": 684.0, "max_base_price": 684.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/jelly_beans.png"}, {"id": "honey_peanuts", "name": "Honey Peanuts", "category": "Machined Items", "default_price": 468.0, "max_base_price": 468.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/honey_peanuts.png"}, {"id": "cotton_candy", "name": "Cotton Candy", "category": "Machined Items", "default_price": 226.0, "max_base_price": 226.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/cotton_candy.png"}, {"id": "sesame_brittle", "name": "Sesame Brittle", "category": "Machined Items", "default_price": 270.0, "max_base_price": 270.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/sesame_brittle.png"}, {"id": "soy_sauce", "name": "Soy Sauce", "category": "Machined Items", "default_price": 154.0, "max_base_price": 154.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/soy_sauce.png"}, {"id": "bean_dip", "name": "Bean Dip", "category": "Machined Items", "default_price": 453.0, "max_base_price": 453.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/bean_dip.png"}, {"id": "olive_oil", "name": "Olive Oil", "category": "Machined Items", "default_price": 277.0, "max_base_price": 277.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/olive_oil.png"}, {"id": "mayonnaise", "name": "Mayonnaise", "category": "Machined Items", "default_price": 367.0, "max_base_price": 367.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/mayonnaise.png"}, {"id": "lemon_curd", "name": "Lemon Curd", "category": "Machined Items", "default_price": 378.0, "max_base_price": 378.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/lemon_curd.png"}, {"id": "olive_dip", "name": "Olive Dip", "category": "Machined Items", "default_price": 468.0, "max_base_price": 468.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/olive_dip.png"}, {"id": "tomato_sauce", "name": "Tomato Sauce", "category": "Machined Items", "default_price": 230.0, "max_base_price": 230.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/tomato_sauce.png"}, {"id": "salsa", "name": "Salsa", "category": "Machined Items", "default_price": 252.0, "max_base_price": 252.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/salsa.png"}, {"id": "hummus", "name": "Hummus", "category": "Machined Items", "default_price": 277.0, "max_base_price": 277.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/hummus.png"}, {"id": "tart_dressing", "name": "Tart Dressing", "category": "Machined Items", "default_price": 288.0, "max_base_price": 288.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/tart_dressing.png"}, {"id": "sushi_roll", "name": "Sushi Roll", "category": "Machined Items", "default_price": 489.0, "max_base_price": 489.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/sushi_roll.png"}, {"id": "lobster_sushi", "name": "Lobster Sushi", "category": "Machined Items", "default_price": 637.0, "max_base_price": 637.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/lobster_sushi.png"}, {"id": "egg_sushi", "name": "Egg Sushi", "category": "Machined Items", "default_price": 550.0, "max_base_price": 550.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/egg_sushi.png"}, {"id": "big_sushi_roll", "name": "Big Sushi Roll", "category": "Machined Items", "default_price": 648.0, "max_base_price": 648.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/big_sushi_roll.png"}, {"id": "rice_ball", "name": "Rice Ball", "category": "Machined Items", "default_price": 464.0, "max_base_price": 464.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/rice_ball.png"}, {"id": "feta_salad", "name": "Feta Salad", "category": "Machined Items", "default_price": 745.0, "max_base_price": 745.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/feta_salad.png"}, {"id": "bean_salad", "name": "Bean Salad", "category": "Machined Items", "default_price": 169.0, "max_base_price": 169.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/bean_salad.png"}, {"id": "blt_salad", "name": "BLT Salad", "category": "Machined Items", "default_price": 723.0, "max_base_price": 723.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/blt_salad.png"}, {"id": "seafood_salad", "name": "Seafood Salad", "category": "Machined Items", "default_price": 763.0, "max_base_price": 763.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/seafood_salad.png"}, {"id": "pasta_salad", "name": "Pasta Salad", "category": "Machined Items", "default_price": 759.0, "max_base_price": 759.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/pasta_salad.png"}, {"id": "veggie_platter", "name": "Veggie Platter", "category": "Machined Items", "default_price": 266.0, "max_base_price": 266.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/veggie_platter.png"}, {"id": "coleslaw", "name": "Coleslaw", "category": "Machined Items", "default_price": 468.0, "max_base_price": 468.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/coleslaw.png"}, {"id": "beetroot_salad", "name": "Beetroot Salad", "category": "Machined Items", "default_price": 234.0, "max_base_price": 234.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/beetroot_salad.png"}, {"id": "summer_rolls", "name": "Summer Rolls", "category": "Machined Items", "default_price": 319.0, "max_base_price": 319.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/summer_rolls.png"}, {"id": "fruit_salad", "name": "Fruit Salad", "category": "Machined Items", "default_price": 597.0, "max_base_price": 597.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/fruit_salad.png"}, {"id": "summer_salad", "name": "Summer Salad", "category": "Machined Items", "default_price": 554.0, "max_base_price": 554.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/summer_salad.png"}, {"id": "mushroom_salad", "name": "Mushroom Salad", "category": "Machined Items", "default_price": 216.0, "max_base_price": 216.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/mushroom_salad.png"}, {"id": "orange_salad", "name": "Orange Salad", "category": "Machined Items", "default_price": 558.0, "max_base_price": 558.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/orange_salad.png"}, {"id": "veggie_bagel", "name": "Veggie Bagel", "category": "Machined Items", "default_price": 532.0, "max_base_price": 532.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/veggie_bagel.png"}, {"id": "bacon_toast", "name": "Bacon Toast", "category": "Machined Items", "default_price": 648.0, "max_base_price": 648.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/bacon_toast.png"}, {"id": "egg_sandwich", "name": "Egg Sandwich", "category": "Machined Items", "default_price": 583.0, "max_base_price": 583.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/egg_sandwich.png"}, {"id": "honey_toast", "name": "Honey Toast", "category": "Machined Items", "default_price": 255.0, "max_base_price": 255.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/honey_toast.png"}, {"id": "peanut_butter_and_jelly_sandwich", "name": "Peanut Butter and Jelly Sandwich", "category": "Machined Items", "default_price": 601.0, "max_base_price": 601.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/peanut_butter_and_jelly_sandwich.png"}, {"id": "cucumber_sandwich", "name": "Cucumber Sandwich", "category": "Machined Items", "default_price": 464.0, "max_base_price": 464.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/cucumber_sandwich.png"}, {"id": "onion_melt", "name": "Onion Melt", "category": "Machined Items", "default_price": 417.0, "max_base_price": 417.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/onion_melt.png"}, {"id": "goat_cheese_toast", "name": "Goat Cheese Toast", "category": "Machined Items", "default_price": 302.0, "max_base_price": 302.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/goat_cheese_toast.png"}, {"id": "hummus_wrap", "name": "Hummus Wrap", "category": "Machined Items", "default_price": 374.0, "max_base_price": 374.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/hummus_wrap.png"}, {"id": "berry_smoothie", "name": "Berry Smoothie", "category": "Machined Items", "default_price": 547.0, "max_base_price": 547.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/berry_smoothie.png"}, {"id": "green_smoothie", "name": "Green Smoothie", "category": "Machined Items", "default_price": 320.0, "max_base_price": 320.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/green_smoothie.png"}, {"id": "yogurt_smoothie", "name": "Yogurt Smoothie", "category": "Machined Items", "default_price": 349.0, "max_base_price": 349.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/yogurt_smoothie.png"}, {"id": "cucumber_smoothie", "name": "Cucumber Smoothie", "category": "Machined Items", "default_price": 266.0, "max_base_price": 266.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/cucumber_smoothie.png"}, {"id": "mixed_smoothie", "name": "Mixed Smoothie", "category": "Machined Items", "default_price": 504.0, "max_base_price": 504.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/mixed_smoothie.png"}, {"id": "black_sesame_smoothie", "name": "Black Sesame Smoothie", "category": "Machined Items", "default_price": 313.0, "max_base_price": 313.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/black_sesame_smoothie.png"}, {"id": "cocoa_smoothie", "name": "Cocoa Smoothie", "category": "Machined Items", "default_price": 511.0, "max_base_price": 511.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/cocoa_smoothie.png"}, {"id": "plum_smoothie", "name": "Plum Smoothie", "category": "Machined Items", "default_price": 475.0, "max_base_price": 475.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/plum_smoothie.png"}, {"id": "tropical_smoothie", "name": "Tropical Smoothie", "category": "Machined Items", "default_price": 522.0, "max_base_price": 522.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/tropical_smoothie.png"}, {"id": "fresh_pasta", "name": "Fresh Pasta", "category": "Machined Items", "default_price": 43.0, "max_base_price": 43.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/fresh_pasta.png"}, {"id": "rice_noodles", "name": "Rice Noodles", "category": "Machined Items", "default_price": 100.0, "max_base_price": 100.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/rice_noodles.png"}, {"id": "lemon_essential_oil", "name": "Lemon Essential Oil", "category": "Machined Items", "default_price": 288.0, "max_base_price": 288.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/lemon_essential_oil.png"}, {"id": "chamomile_essential_oil", "name": "Chamomile Essential Oil", "category": "Machined Items", "default_price": 72.0, "max_base_price": 72.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/chamomile_essential_oil.png"}, {"id": "ginger_essential_oil", "name": "Ginger Essential Oil", "category": "Machined Items", "default_price": 162.0, "max_base_price": 162.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/ginger_essential_oil.png"}, {"id": "mint_essential_oil", "name": "Mint Essential Oil", "category": "Machined Items", "default_price": 172.0, "max_base_price": 172.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/mint_essential_oil.png"}, {"id": "fried_rice", "name": "Fried Rice", "category": "Machined Items", "default_price": 205.0, "max_base_price": 205.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/fried_rice.png"}, {"id": "lamb_stir_fry", "name": "Lamb Stir Fry", "category": "Machined Items", "default_price": 270.0, "max_base_price": 270.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/lamb_stir_fry.png"}, {"id": "spicy_fish", "name": "Spicy Fish", "category": "Machined Items", "default_price": 543.0, "max_base_price": 543.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/spicy_fish.png"}, {"id": "peanut_noodles", "name": "Peanut Noodles", "category": "Machined Items", "default_price": 597.0, "max_base_price": 597.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/peanut_noodles.png"}, {"id": "tofu_stir_fry", "name": "Tofu Stir Fry", "category": "Machined Items", "default_price": 306.0, "max_base_price": 306.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/tofu_stir_fry.png"}, {"id": "cloche_hat", "name": "Cloche Hat", "category": "Machined Items", "default_price": 468.0, "max_base_price": 468.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/cloche_hat.png"}, {"id": "top_hat", "name": "Top Hat", "category": "Machined Items", "default_price": 619.0, "max_base_price": 619.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/top_hat.png"}, {"id": "sun_hat", "name": "Sun Hat", "category": "Machined Items", "default_price": 558.0, "max_base_price": 558.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/sun_hat.png"}, {"id": "flower_crown", "name": "Flower Crown", "category": "Machined Items", "default_price": 331.0, "max_base_price": 331.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/flower_crown.png"}, {"id": "gnocchi", "name": "Gnocchi", "category": "Machined Items", "default_price": 475.0, "max_base_price": 475.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/gnocchi.png"}, {"id": "veggie_lasagna", "name": "Veggie Lasagna", "category": "Machined Items", "default_price": 532.0, "max_base_price": 532.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/veggie_lasagna.png"}, {"id": "lobster_pasta", "name": "Lobster Pasta", "category": "Machined Items", "default_price": 637.0, "max_base_price": 637.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/lobster_pasta.png"}, {"id": "pasta_carbonara", "name": "Pasta Carbonara", "category": "Machined Items", "default_price": 410.0, "max_base_price": 410.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/pasta_carbonara.png"}, {"id": "broccoli_pasta", "name": "Broccoli Pasta", "category": "Machined Items", "default_price": 345.0, "max_base_price": 345.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/broccoli_pasta.png"}, {"id": "spicy_pasta", "name": "Spicy Pasta", "category": "Machined Items", "default_price": 576.0, "max_base_price": 576.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/spicy_pasta.png"}, {"id": "mushroom_pasta", "name": "Mushroom Pasta", "category": "Machined Items", "default_price": 280.0, "max_base_price": 280.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/mushroom_pasta.png"}, {"id": "hot_dog", "name": "Hot Dog", "category": "Machined Items", "default_price": 370.0, "max_base_price": 370.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/hot_dog.png"}, {"id": "tofu_dog", "name": "Tofu Dog", "category": "Machined Items", "default_price": 367.0, "max_base_price": 367.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/tofu_dog.png"}, {"id": "corn_dog", "name": "Corn Dog", "category": "Machined Items", "default_price": 529.0, "max_base_price": 529.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/corn_dog.png"}, {"id": "onion_dog", "name": "Onion Dog", "category": "Machined Items", "default_price": 306.0, "max_base_price": 306.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/onion_dog.png"}, {"id": "plain_donut", "name": "Plain Donut", "category": "Machined Items", "default_price": 129.0, "max_base_price": 129.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/plain_donut.png"}, {"id": "sprinkled_donut", "name": "Sprinkled Donut", "category": "Machined Items", "default_price": 313.0, "max_base_price": 313.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/sprinkled_donut.png"}, {"id": "crunchy_donut", "name": "Crunchy Donut", "category": "Machined Items", "default_price": 594.0, "max_base_price": 594.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/crunchy_donut.png"}, {"id": "cream_donut", "name": "Cream Donut", "category": "Machined Items", "default_price": 230.0, "max_base_price": 230.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/cream_donut.png"}, {"id": "bacon_donut", "name": "Bacon Donut", "category": "Machined Items", "default_price": 388.0, "max_base_price": 388.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/bacon_donut.png"}, {"id": "filled_donut", "name": "Filled Donut", "category": "Machined Items", "default_price": 403.0, "max_base_price": 403.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/filled_donut.png"}, {"id": "taco", "name": "Taco", "category": "Machined Items", "default_price": 331.0, "max_base_price": 331.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/taco.png"}, {"id": "spicy_bean_taco", "name": "Spicy Bean Taco", "category": "Machined Items", "default_price": 453.0, "max_base_price": 453.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/spicy_bean_taco.png"}, {"id": "fish_taco", "name": "Fish Taco", "category": "Machined Items", "default_price": 392.0, "max_base_price": 392.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/fish_taco.png"}, {"id": "quesadilla", "name": "Quesadilla", "category": "Machined Items", "default_price": 241.0, "max_base_price": 241.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/quesadilla.png"}, {"id": "nachos", "name": "Nachos", "category": "Machined Items", "default_price": 432.0, "max_base_price": 432.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/nachos.png"}, {"id": "colourful_omelet", "name": "Colourful Omelet", "category": "Machined Items", "default_price": 136.0, "max_base_price": 136.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/colourful_omelet.png"}, {"id": "spring_omelet", "name": "Spring Omelet", "category": "Machined Items", "default_price": 230.0, "max_base_price": 230.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/spring_omelet.png"}, {"id": "cheese_omelet", "name": "Cheese Omelet", "category": "Machined Items", "default_price": 464.0, "max_base_price": 464.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/cheese_omelet.png"}, {"id": "rice_omelet", "name": "Rice Omelet", "category": "Machined Items", "default_price": 572.0, "max_base_price": 572.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/rice_omelet.png"}, {"id": "potato_omelet", "name": "Potato Omelet", "category": "Machined Items", "default_price": 270.0, "max_base_price": 270.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/potato_omelet.png"}, {"id": "green_tea", "name": "Green Tea", "category": "Machined Items", "default_price": 241.0, "max_base_price": 241.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/green_tea.png"}, {"id": "milk_tea", "name": "Milk Tea", "category": "Machined Items", "default_price": 190.0, "max_base_price": 190.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/milk_tea.png"}, {"id": "honey_tea", "name": "Honey Tea", "category": "Machined Items", "default_price": 313.0, "max_base_price": 313.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/honey_tea.png"}, {"id": "lemon_tea", "name": "Lemon Tea", "category": "Machined Items", "default_price": 241.0, "max_base_price": 241.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/lemon_tea.png"}, {"id": "apple_ginger_tea", "name": "Apple Ginger Tea", "category": "Machined Items", "default_price": 169.0, "max_base_price": 169.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/apple_ginger_tea.png"}, {"id": "orange_tea", "name": "Orange Tea", "category": "Machined Items", "default_price": 255.0, "max_base_price": 255.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/orange_tea.png"}, {"id": "iced_tea", "name": "Iced Tea", "category": "Machined Items", "default_price": 252.0, "max_base_price": 252.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/iced_tea.png"}, {"id": "mint_tea", "name": "Mint Tea", "category": "Machined Items", "default_price": 255.0, "max_base_price": 255.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/mint_tea.png"}, {"id": "chamomile_tea", "name": "Chamomile Tea", "category": "Machined Items", "default_price": 144.0, "max_base_price": 144.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/chamomile_tea.png"}, {"id": "pomegranate_tea", "name": "Pomegranate Tea", "category": "Machined Items", "default_price": 313.0, "max_base_price": 313.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/pomegranate_tea.png"}, {"id": "chocolate_fondue", "name": "Chocolate Fondue", "category": "Machined Items", "default_price": 626.0, "max_base_price": 626.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/chocolate_fondue.png"}, {"id": "bacon_fondue", "name": "Bacon Fondue", "category": "Machined Items", "default_price": 507.0, "max_base_price": 507.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/bacon_fondue.png"}, {"id": "cheese_fondue", "name": "Cheese Fondue", "category": "Machined Items", "default_price": 493.0, "max_base_price": 493.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/cheese_fondue.png"}, {"id": "tropical_fondue", "name": "Tropical Fondue", "category": "Machined Items", "default_price": 417.0, "max_base_price": 417.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/tropical_fondue.png"}, {"id": "honey_soap", "name": "Honey Soap", "category": "Machined Items", "default_price": 327.0, "max_base_price": 327.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/honey_soap.png"}, {"id": "lemon_lotion", "name": "Lemon Lotion", "category": "Machined Items", "default_price": 403.0, "max_base_price": 403.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/lemon_lotion.png"}, {"id": "exfoliating_soap", "name": "Exfoliating Soap", "category": "Machined Items", "default_price": 363.0, "max_base_price": 363.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/exfoliating_soap.png"}, {"id": "honey_face_mask", "name": "Honey Face Mask", "category": "Machined Items", "default_price": 320.0, "max_base_price": 320.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/honey_face_mask.png"}, {"id": "rich_soap", "name": "Rich Soap", "category": "Machined Items", "default_price": 266.0, "max_base_price": 266.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/rich_soap.png"}, {"id": "bacon_fries", "name": "Bacon Fries", "category": "Machined Items", "default_price": 302.0, "max_base_price": 302.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/bacon_fries.png"}, {"id": "hand_pies", "name": "Hand Pies", "category": "Machined Items", "default_price": 295.0, "max_base_price": 295.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/hand_pies.png"}, {"id": "chili_poppers", "name": "Chili Poppers", "category": "Machined Items", "default_price": 406.0, "max_base_price": 406.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/chili_poppers.png"}, {"id": "falafel", "name": "Falafel", "category": "Machined Items", "default_price": 226.0, "max_base_price": 226.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/falafel.png"}, {"id": "fried_candy_bar", "name": "Fried Candy Bar", "category": "Machined Items", "default_price": 658.0, "max_base_price": 658.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/fried_candy_bar.png"}, {"id": "samosa", "name": "Samosa", "category": "Machined Items", "default_price": 223.0, "max_base_price": 223.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/samosa.png"}, {"id": "pickles", "name": "Pickles", "category": "Machined Items", "default_price": 270.0, "max_base_price": 270.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/pickles.png"}, {"id": "canned_fish", "name": "Canned Fish", "category": "Machined Items", "default_price": 471.0, "max_base_price": 471.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/canned_fish.png"}, {"id": "kimchi", "name": "Kimchi", "category": "Machined Items", "default_price": 219.0, "max_base_price": 219.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/kimchi.png"}, {"id": "dried_fruit", "name": "Dried Fruit", "category": "Machined Items", "default_price": 266.0, "max_base_price": 266.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/dried_fruit.png"}, {"id": "guava_compote", "name": "Guava Compote", "category": "Machined Items", "default_price": 421.0, "max_base_price": 421.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/guava_compote.png"}, {"id": "tea_pot", "name": "Tea Pot", "category": "Machined Items", "default_price": 219.0, "max_base_price": 219.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/tea_pot.png"}, {"id": "potted_plant", "name": "Potted Plant", "category": "Machined Items", "default_price": 151.0, "max_base_price": 151.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/potted_plant.png"}, {"id": "clay_mug", "name": "Clay Mug", "category": "Machined Items", "default_price": 212.0, "max_base_price": 212.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/clay_mug.png"}, {"id": "rich_fudge", "name": "Rich Fudge", "category": "Machined Items", "default_price": 644.0, "max_base_price": 644.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/rich_fudge.png"}, {"id": "mint_fudge", "name": "Mint Fudge", "category": "Machined Items", "default_price": 552.0, "max_base_price": 552.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/mint_fudge.png"}, {"id": "chili_fudge", "name": "Chili Fudge", "category": "Machined Items", "default_price": 540.0, "max_base_price": 540.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/chili_fudge.png"}, {"id": "lemon_fudge", "name": "Lemon Fudge", "category": "Machined Items", "default_price": 590.0, "max_base_price": 590.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/lemon_fudge.png"}, {"id": "peanut_fudge", "name": "Peanut Fudge", "category": "Machined Items", "default_price": 1141.0, "max_base_price": 1141.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/peanut_fudge.png"}, {"id": "plain_yogurt", "name": "Plain Yogurt", "category": "Machined Items", "default_price": 234.0, "max_base_price": 234.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/plain_yogurt.png"}, {"id": "strawberry_yogurt", "name": "Strawberry Yogurt", "category": "Machined Items", "default_price": 529.0, "max_base_price": 529.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/strawberry_yogurt.png"}, {"id": "tropical_yogurt", "name": "Tropical Yogurt", "category": "Machined Items", "default_price": 457.0, "max_base_price": 457.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/tropical_yogurt.png"}, {"id": "breakfast_bowl", "name": "Breakfast Bowl", "category": "Machined Items", "default_price": 604.0, "max_base_price": 604.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/breakfast_bowl.png"}, {"id": "chickpea_stew", "name": "Chickpea Stew", "category": "Machined Items", "default_price": 284.0, "max_base_price": 284.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/chickpea_stew.png"}, {"id": "chili_stew", "name": "Chili Stew", "category": "Machined Items", "default_price": 370.0, "max_base_price": 370.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/chili_stew.png"}, {"id": "winter_stew", "name": "Winter Stew", "category": "Machined Items", "default_price": 295.0, "max_base_price": 295.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/winter_stew.png"}, {"id": "plain_cupcake", "name": "Plain Cupcake", "category": "Machined Items", "default_price": 280.0, "max_base_price": 280.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/plain_cupcake.png"}, {"id": "guava_cupcake", "name": "Guava Cupcake", "category": "Machined Items", "default_price": 583.0, "max_base_price": 583.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/guava_cupcake.png"}, {"id": "tropical_cupcake", "name": "Tropical Cupcake", "category": "Machined Items", "default_price": 572.0, "max_base_price": 572.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/tropical_cupcake.png"}, {"id": "cookie_cupcake", "name": "Cookie Cupcake", "category": "Machined Items", "default_price": 712.0, "max_base_price": 712.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/cookie_cupcake.png"}, {"id": "fresh_diffuser", "name": "Fresh Diffuser", "category": "Machined Items", "default_price": 349.0, "max_base_price": 349.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/fresh_diffuser.png"}, {"id": "zesty_perfume", "name": "Zesty Perfume", "category": "Machined Items", "default_price": 388.0, "max_base_price": 388.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/zesty_perfume.png"}, {"id": "calming_diffuser", "name": "Calming Diffuser", "category": "Machined Items", "default_price": 169.0, "max_base_price": 169.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/calming_diffuser.png"}, {"id": "plain_waffles", "name": "Plain Waffles", "category": "Machined Items", "default_price": 198.0, "max_base_price": 198.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/plain_waffles.png"}, {"id": "berry_waffles", "name": "Berry Waffles", "category": "Machined Items", "default_price": 604.0, "max_base_price": 604.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/berry_waffles.png"}, {"id": "chocolate_waffles", "name": "Chocolate Waffles", "category": "Machined Items", "default_price": 637.0, "max_base_price": 637.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/chocolate_waffles.png"}, {"id": "blueberry_waffles", "name": "Blueberry Waffles", "category": "Machined Items", "default_price": 669.0, "max_base_price": 669.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/blueberry_waffles.png"}, {"id": "breakfast_waffles", "name": "Breakfast Waffles", "category": "Machined Items", "default_price": 424.0, "max_base_price": 424.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/breakfast_waffles.png"}, {"id": "apple_porridge", "name": "Apple Porridge", "category": "Machined Items", "default_price": 522.0, "max_base_price": 522.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/apple_porridge.png"}, {"id": "sweet_porridge", "name": "Sweet Porridge", "category": "Machined Items", "default_price": 460.0, "max_base_price": 460.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/sweet_porridge.png"}, {"id": "fresh_porridge", "name": "Fresh Porridge", "category": "Machined Items", "default_price": 435.0, "max_base_price": 435.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/fresh_porridge.png"}, {"id": "vanilla_milkshake", "name": "Vanilla Milkshake", "category": "Machined Items", "default_price": 673.0, "max_base_price": 673.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/vanilla_milkshake.png"}, {"id": "mocha_milkshake", "name": "Mocha Milkshake", "category": "Machined Items", "default_price": 856.0, "max_base_price": 856.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/mocha_milkshake.png"}, {"id": "fruity_milkshake", "name": "Fruity Milkshake", "category": "Machined Items", "default_price": 759.0, "max_base_price": 759.0, "max_multiplier": 5.0, "default_mult": 5.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/fruity_milkshake.png"}, {"id": "chicken_feed", "name": "Chicken Feed", "category": "Animal Feeds", "default_price": 7.2, "max_base_price": 7.2, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/chicken_feed.png"}, {"id": "cow_feed", "name": "Cow Feed", "category": "Animal Feeds", "default_price": 14.4, "max_base_price": 14.4, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/cow_feed.png"}, {"id": "pig_feed", "name": "Pig Feed", "category": "Animal Feeds", "default_price": 14.4, "max_base_price": 14.4, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/pig_feed.png"}, {"id": "sheep_feed", "name": "Sheep Feed", "category": "Animal Feeds", "default_price": 14.4, "max_base_price": 14.4, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/sheep_feed.png"}, {"id": "lamb_feed", "name": "Lamb Feed", "category": "Animal Feeds", "default_price": 18.0, "max_base_price": 18.0, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/lamb_feed.png"}, {"id": "goat_feed", "name": "Goat Feed", "category": "Animal Feeds", "default_price": 14.4, "max_base_price": 14.4, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/goat_feed.png"}, {"id": "wheat_bundle", "name": "Wheat Bundle", "category": "Animal Feeds", "default_price": 50.4, "max_base_price": 50.4, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/wheat_bundle.png"}, {"id": "meat_bucket", "name": "Meat Bucket", "category": "Animal Feeds", "default_price": 72.0, "max_base_price": 72.0, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/meat_bucket.png"}, {"id": "axe", "name": "Axe", "category": "Special Items", "default_price": 36.0, "max_base_price": 500, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/axe.png"}, {"id": "saw", "name": "Saw", "category": "Special Items", "default_price": 54.0, "max_base_price": 500, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/saw.png"}, {"id": "dynamite", "name": "Dynamite", "category": "Special Items", "default_price": 25.2, "max_base_price": 500, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/dynamite.png"}, {"id": "tnt", "name": "TNT", "category": "Special Items", "default_price": 72.0, "max_base_price": 500, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/tnt.png"}, {"id": "shovel", "name": "Shovel", "category": "Special Items", "default_price": 108.0, "max_base_price": 750, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/shovel.png"}, {"id": "silver_ore", "name": "Silver Ore", "category": "Special Items", "default_price": 18.0, "max_base_price": 18.0, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/silver_ore.png"}, {"id": "gold_ore", "name": "Gold Ore", "category": "Special Items", "default_price": 21.6, "max_base_price": 21.6, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/gold_ore.png"}, {"id": "platinum_ore", "name": "Platinum Ore", "category": "Special Items", "default_price": 32.4, "max_base_price": 32.4, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/platinum_ore.png"}, {"id": "coal", "name": "Coal", "category": "Special Items", "default_price": 10.8, "max_base_price": 10.8, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/coal.png"}, {"id": "iron_ore", "name": "Iron Ore", "category": "Special Items", "default_price": 14.4, "max_base_price": 14.4, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/iron_ore.png"}, {"id": "nail", "name": "Nail", "category": "Special Items", "default_price": 270.0, "max_base_price": 1500, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/nail.png"}, {"id": "screw", "name": "Screw", "category": "Special Items", "default_price": 270.0, "max_base_price": 1500, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/screw.png"}, {"id": "wood_panel", "name": "Wood Panel", "category": "Special Items", "default_price": 270.0, "max_base_price": 1500, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/wood_panel.png"}, {"id": "bolt", "name": "Bolt", "category": "Special Items", "default_price": 270.0, "max_base_price": 4000, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/bolt.png"}, {"id": "plank", "name": "Plank", "category": "Special Items", "default_price": 270.0, "max_base_price": 4000, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/plank.png"}, {"id": "duct_tape", "name": "Duct Tape", "category": "Special Items", "default_price": 270.0, "max_base_price": 4000, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/duct_tape.png"}, {"id": "land_deed", "name": "Land Deed", "category": "Special Items", "default_price": 403.2, "max_base_price": 1500, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/land_deed.png"}, {"id": "mallet", "name": "Mallet", "category": "Special Items", "default_price": 403.2, "max_base_price": 1500, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/mallet.png"}, {"id": "marker_stake", "name": "Marker Stake", "category": "Special Items", "default_price": 403.2, "max_base_price": 1500, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/marker_stake.png"}, {"id": "map_piece", "name": "Map Piece", "category": "Special Items", "default_price": 450.0, "max_base_price": 1500, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/map_piece.png"}, {"id": "stone_block", "name": "Stone Block", "category": "Special Items", "default_price": 342.0, "max_base_price": 1500, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/stone_block.png"}, {"id": "hammer", "name": "Hammer", "category": "Special Items", "default_price": 342.0, "max_base_price": 1500, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/hammer.png"}, {"id": "paint_bucket", "name": "Paint Bucket", "category": "Special Items", "default_price": 342.0, "max_base_price": 1500, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/paint_bucket.png"}, {"id": "tar_bucket", "name": "Tar Bucket", "category": "Special Items", "default_price": 342.0, "max_base_price": 1500, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/tar_bucket.png"}, {"id": "hand_drill", "name": "Hand Drill", "category": "Special Items", "default_price": 342.0, "max_base_price": 1500, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/hand_drill.png"}, {"id": "brick", "name": "Brick", "category": "Special Items", "default_price": 342.0, "max_base_price": 1500, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/brick.png"}, {"id": "diamond", "name": "Diamond", "category": "Special Items", "default_price": 0, "max_base_price": 0, "max_multiplier": 1.0, "default_mult": 1.0, "image": "https://tyboro2002.github.io/hay_day_ecosystem/assets/items/diamond.png"}];
+        let activeBasket = [];
+        let selectedPaymentItemId = null;
+
+        function init() {
+            document.getElementById("receipt-date").innerText = `Order Date: ${new Date().toLocaleDateString()}`;
+
+            const savedTitle = localStorage.getItem("receiptTitle") || "";
+            document.getElementById("title-input").value = savedTitle;
+
+            const defaultItem = EMBEDDED_ITEMS.find(i => i.name.toLowerCase() === "diamond ring");
+            if (defaultItem) {
+                selectedPaymentItemId = defaultItem.id;
+                document.getElementById("payment-selected-info").innerText = `Selected: ${defaultItem.name} (Base: ${defaultItem.max_base_price})`;
+            }
+
+            renderAssetGrid();
+            renderPaymentGrid();
+            updateTitleDisplay();
+            updateAllCalculations();
+        }
+
+        function updateReceiptTitle(val) {
+            localStorage.setItem("receiptTitle", val);
+            updateTitleDisplay();
+        }
+
+        function updateTitleDisplay() {
+            const rawTitle = document.getElementById("title-input").value.trim();
+            const ticketTitleDisplay = document.getElementById("receipt-title-display");
+            const gridTitleDisplay = document.getElementById("grid-title-display");
+
+            const finalTitle = rawTitle !== "" ? rawTitle : "ORDER TICKET";
+
+            ticketTitleDisplay.innerText = finalTitle;
+            gridTitleDisplay.innerText = rawTitle !== "" ? `${rawTitle}` : "SHOPPING LIST";
+        }
+
+        function renderAssetGrid() {
+            const query = document.getElementById("item-search").value.toLowerCase().trim();
+            const grid = document.getElementById("asset-picker-grid");
+
+            const filtered = EMBEDDED_ITEMS.filter(item => 
+                item.name.toLowerCase().includes(query) || 
+                item.category.toLowerCase().includes(query)
+            );
+
+            grid.innerHTML = filtered.map(item => `
+                <div class="asset-card" onclick="addItemToBasket('${item.id}')">
+                    <img src="${item.image}" alt="${item.name}" crossorigin="anonymous" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'40\' height=\'40\'/>'">
+                    <span>${item.name}</span>
+                </div>
+            `).join("");
+        }
+
+        function renderPaymentGrid() {
+            const query = document.getElementById("payment-search").value.toLowerCase().trim();
+            const grid = document.getElementById("payment-picker-grid");
+
+            const filtered = EMBEDDED_ITEMS.filter(item => 
+                item.name.toLowerCase().includes(query) || 
+                item.category.toLowerCase().includes(query)
+            );
+
+            grid.innerHTML = filtered.map(item => {
+                const isActive = item.id === selectedPaymentItemId ? "active" : "";
+                return `
+                    <div class="asset-card ${isActive}" onclick="selectPaymentItem('${item.id}')">
+                        <img src="${item.image}" alt="${item.name}" crossorigin="anonymous" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'40\' height=\'40\'/>'">
+                        <span>${item.name}</span>
+                    </div>
+                `;
+            }).join("");
+        }
+
+        function selectPaymentItem(itemId) {
+            if (selectedPaymentItemId === itemId) {
+                const defaultItem = EMBEDDED_ITEMS.find(i => i.name.toLowerCase() === "diamond ring");
+                if (defaultItem) {
+                    selectedPaymentItemId = defaultItem.id;
+                    document.getElementById("payment-selected-info").innerText = `Selected: ${defaultItem.name} (Base: ${defaultItem.max_base_price})`;
+                } else {
+                    selectedPaymentItemId = null;
+                    document.getElementById("payment-selected-info").innerText = "Selected: None";
+                }
+            } else {
+                selectedPaymentItemId = itemId;
+                const item = EMBEDDED_ITEMS.find(i => i.id === itemId);
+                if (item) {
+                    document.getElementById("payment-selected-info").innerText = `Selected: ${item.name} (Base: ${item.max_base_price})`;
+                }
+            }
+            renderPaymentGrid();
+            updateAllCalculations();
+        }
+
+        function addItemToBasket(itemId) {
+            const existing = activeBasket.find(i => i.id === itemId);
+            if (existing) {
+                existing.qty += 1;
+            } else {
+                const rawItem = EMBEDDED_ITEMS.find(i => i.id === itemId);
+                if (!rawItem) return;
+                activeBasket.push({
+                    id: rawItem.id,
+                    name: rawItem.name,
+                    image: rawItem.image,
+                    maxBasePrice: rawItem.max_base_price,
+                    overridePrice: Math.min(rawItem.default_price, rawItem.max_base_price),
+                    maxMultiplier: rawItem.max_multiplier,
+                    multiplier: rawItem.default_mult,
+                    qty: 1
+                });
+            }
+            renderBasketRows();
+            updateAllCalculations();
+        }
+
+        function renderBasketRows() {
+            const container = document.getElementById("basket-rows");
+            container.innerHTML = "";
+
+            activeBasket.forEach((item, index) => {
+                const row = document.createElement("div");
+                row.className = "calc-row";
+                row.innerHTML = `
+                    <img class="item-icon" src="${item.image}" crossorigin="anonymous">
+                    <div class="item-info">
+                        <span class="item-title">${item.name}</span>
+                        <span class="item-sub">Max Base: ${item.maxBasePrice} | Max Mult: ${item.maxMultiplier}x</span>
+                    </div>
+                    <div class="input-inline">
+                        <label>Base Price</label>
+                        <input type="number" step="1" max="${item.maxBasePrice}" value="${item.overridePrice}" oninput="updateItemBasePrice(${index}, this)">
+                    </div>
+                    <div class="input-inline">
+                        <label>Multiplier</label>
+                        <input type="number" step="0.1" min="0" max="${item.maxMultiplier}" value="${item.multiplier}" oninput="updateItemMultiplier(${index}, this)">
+                    </div>
+                    <div class="input-inline">
+                        <label>Qty</label>
+                        <input type="number" min="1" value="${item.qty}" oninput="updateItemQty(${index}, this.value)">
+                    </div>
+                    <div class="input-inline">
+                        <label style="visibility:hidden;">Max</label>
+                        <button class="btn-inline-max" onclick="maxOutItem(${index})">MAX</button>
+                    </div>
+                    <div class="input-inline">
+                        <label style="visibility:hidden;">Del</label>
+                        <button class="btn-remove" onclick="removeBasketItem(${index})">✕</button>
+                    </div>
+                `;
+                container.appendChild(row);
+            });
+        }
+
+        function maxOutItem(index) {
+            const item = activeBasket[index];
+            item.overridePrice = item.maxBasePrice;
+            item.multiplier = item.maxMultiplier;
+            renderBasketRows();
+            updateAllCalculations();
+        }
+
+        function updateItemBasePrice(index, inputEl) {
+            const item = activeBasket[index];
+            let val = parseFloat(inputEl.value) || 0;
+            if (val > item.maxBasePrice) {
+                val = item.maxBasePrice;
+                inputEl.value = val;
+            }
+            item.overridePrice = val;
+            updateAllCalculations();
+        }
+
+        function updateItemMultiplier(index, inputEl) {
+            const item = activeBasket[index];
+            let val = parseFloat(inputEl.value) || 0;
+            if (val > item.maxMultiplier) {
+                val = item.maxMultiplier;
+                inputEl.value = val;
+            }
+            item.multiplier = val;
+            updateAllCalculations();
+        }
+
+        function updateItemQty(index, val) {
+            activeBasket[index].qty = parseInt(val) || 0;
+            updateAllCalculations();
+        }
+
+        function removeBasketItem(index) {
+            activeBasket.splice(index, 1);
+            renderBasketRows();
+            updateAllCalculations();
+        }
+
+        function updateAllCalculations() {
+            const receiptBody = document.getElementById("receipt-body");
+            const visualGridTiles = document.getElementById("visual-grid-tiles");
+
+            let grandTotal = 0;
+            let totalItemsCount = 0;
+
+            if (activeBasket.length === 0) {
+                receiptBody.innerHTML = `
+                    <tr>
+                        <td colspan="5" style="text-align: center; color: #78716c; padding: 12px 0;">
+                            No items added yet.
+                        </td>
+                    </tr>
+                `;
+                visualGridTiles.innerHTML = "";
+            } else {
+                receiptBody.innerHTML = activeBasket.map(item => {
+                    const unitPrice = item.overridePrice * item.multiplier;
+                    const lineTotal = unitPrice * item.qty;
+                    grandTotal += lineTotal;
+
+                    return `
+                        <tr>
+                            <td>${item.name}</td>
+                            <td class="num">${item.qty}</td>
+                            <td class="num">${Math.round(item.overridePrice).toLocaleString()}</td>
+                            <td class="num">${item.multiplier}x</td>
+                            <td class="num">${Math.round(lineTotal).toLocaleString()}</td>
+                        </tr>
+                    `;
+                }).join("");
+
+                visualGridTiles.innerHTML = activeBasket.map(item => {
+                    totalItemsCount += item.qty;
+                    return `
+                        <div class="grid-tile">
+                            <span class="tile-mult-top-left">${item.multiplier}x</span>
+                            <img src="${item.image}" alt="${item.name}" crossorigin="anonymous">
+                            <span class="tile-qty-bottom-right">${item.qty}</span>
+                        </div>
+                    `;
+                }).join("");
+            }
+
+            const roundedGrandTotal = Math.round(grandTotal);
+            document.getElementById("receipt-grand-total").textContent = `${roundedGrandTotal.toLocaleString()} Coins`;
+
+            const paymentRow = document.getElementById("receipt-payment-row");
+            const paymentText = document.getElementById("receipt-payment-text");
+            const gridPaymentText = document.getElementById("grid-display-payment");
+
+            let paymentDisplayString = "Payment: None";
+
+            if (selectedPaymentItemId && roundedGrandTotal > 0) {
+                const paymentItem = EMBEDDED_ITEMS.find(i => i.id === selectedPaymentItemId);
+                if (paymentItem && paymentItem.max_base_price > 0) {
+                    const basePrice = paymentItem.max_base_price;
+                    const count = Math.floor(roundedGrandTotal / basePrice);
+                    const remainder = roundedGrandTotal % basePrice;
+
+                    paymentDisplayString = `${count.toLocaleString()}x ${paymentItem.name}`;
+                    if (remainder > 0) {
+                        paymentDisplayString += ` + ${remainder.toLocaleString()} coins`;
+                    }
+
+                    paymentText.textContent = paymentDisplayString;
+                    paymentRow.style.display = "flex";
+                } else {
+                    paymentRow.style.display = "none";
+                }
+            } else {
+                paymentRow.style.display = "none";
+            }
+
+            gridPaymentText.textContent = `Payment: ${paymentDisplayString}`;
+            document.getElementById("grid-display-total-items").textContent = `(${totalItemsCount.toLocaleString()} items total)`;
+        }
+
+        /* Export Ticket Image with CORS settings enabled */
+        async function exportTicketCanvas() {
+            const node = document.getElementById("ticket-canvas-node");
+            const canvas = await html2canvas(node, { scale: 2, useCORS: true, allowTaint: true });
+            canvas.toBlob(async (blob) => {
+                const item = new ClipboardItem({ "image/png": blob });
+                await navigator.clipboard.write([item]);
+                alert("Order Ticket image copied to clipboard!");
+            });
+        }
+
+        /* Export Visual Tiles Window Image without white corner artifacts */
+        async function exportShoppingCanvas() {
+            const node = document.getElementById("shopping-canvas-node");
+            const canvas = await html2canvas(node, { 
+                scale: 2, 
+                useCORS: true, 
+                allowTaint: true,
+                backgroundColor: null // Ensures rounded outer corners export as transparent instead of white background
+            });
+            canvas.toBlob(async (blob) => {
+                const item = new ClipboardItem({ "image/png": blob });
+                await navigator.clipboard.write([item]);
+                alert("Shopping Grid image copied to clipboard!");
+            });
+        }
+
+        window.onload = init;
+    </script>
+</body>
+</html>
